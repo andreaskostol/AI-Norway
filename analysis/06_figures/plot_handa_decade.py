@@ -27,6 +27,10 @@ import matplotlib.dates as mdates
 from matplotlib.lines import Line2D
 import pandas as pd
 
+from seasonal import seasonal_adjust       # shared X-11 core (for the SA twins)
+
+SEAS_FROM, SEAS_TO = "2021-01-16", "2024-12-16"   # SA factor-estimation window
+
 BASE_DIR = os.path.join(os.path.dirname(__file__), "..", "..")
 PARSED = os.path.join(BASE_DIR, "microdata-output",
                       "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv")
@@ -62,7 +66,7 @@ def healy_style():
     })
 
 
-def build_series(counts, handa, qcol):
+def build_series(counts, handa, qcol, adjust=False):
     m = handa[handa[qcol].notna()][["yrke4", qcol]].copy()
     m["ai_q"] = m[qcol].astype(float).astype(int)
     d = counts.merge(m[["yrke4", "ai_q"]], on="yrke4", how="inner")
@@ -71,6 +75,15 @@ def build_series(counts, handa, qcol):
     by_all = d.groupby(["date", "age_group"], as_index=False)["count"].sum()
     by_all["ai_q"] = "all"
     s = pd.concat([by_q, by_all], ignore_index=True)
+    if adjust:                                 # seasonally adjust each (age, quintile) series
+        parts = []                             # collect the adjusted pieces
+        for (ag, q), g in s.groupby(["age_group", "ai_q"]):   # one series at a time
+            g = seasonal_adjust(g[["date", "count"]].rename(columns={"count": "value"}),
+                                SEAS_FROM, SEAS_TO)            # remove frozen factors
+            g = g.rename(columns={"value": "count"})          # back to the count name
+            g["age_group"] = ag; g["ai_q"] = q                # restore the group keys
+            parts.append(g)                                   # stash the adjusted series
+        s = pd.concat(parts, ignore_index=True)               # reassemble the long frame
     ref = (s[s["date"] == NORM_DATE].set_index(["age_group", "ai_q"])["count"]
            .rename("_ref"))
     s = s.merge(ref, left_on=["age_group", "ai_q"], right_index=True, how="left")
@@ -121,9 +134,13 @@ def main():
         ["date", "yrke4", "alder_gr", "value"]
     ].rename(columns={"alder_gr": "age_group", "value": "count"})
     handa = pd.read_csv(HANDA, dtype={"styrk08": str}).rename(columns={"styrk08": "yrke4"})
+    # Seasonally adjusted twins shown in the body (filenames referenced in the paper).
+    sa_names = {"q_automation_share": "figure_age_by_quintile_handa_auto_sa.pdf",
+                "q_augmentation_share": "figure_age_by_quintile_handa_aug_sa.pdf"}
     for qcol, out_name in MEASURES.items():
-        s = build_series(counts, handa, qcol)
-        plot_measure(s, out_name)
+        plot_measure(build_series(counts, handa, qcol), out_name)              # raw (appendix)
+        plot_measure(build_series(counts, handa, qcol, adjust=True),           # SA (body)
+                     sa_names[qcol])
 
 
 if __name__ == "__main__":

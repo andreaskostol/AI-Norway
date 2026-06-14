@@ -23,6 +23,11 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import pandas as pd
 
+from seasonal import seasonal_adjust       # shared X-11 core (for the SA twin)
+
+NORM_DATE = "2022-10-16"                    # October 2022 = 1.0 (paper convention)
+SEAS_FROM, SEAS_TO = "2021-01-16", "2024-12-16"   # SA factor-estimation window
+
 BASE_DIR = os.path.join(os.path.dirname(__file__), "..", "..")
 DATA = os.path.join(BASE_DIR, "analysis", "output", "figure_data",
                     "fig_selected_occ_by_age.csv")
@@ -53,20 +58,34 @@ def healy_style():
     })
 
 
-def main():
-    os.makedirs(FIG_DIR, exist_ok=True)
-    healy_style()
-    df = pd.read_csv(DATA, dtype={"age_group": str})
-    df["dt"] = pd.to_datetime(df["date"])
+def add_y(df, adjust):
+    """Add column 'y' = the series to plot: raw emp_index, or an SA index."""
+    if not adjust:                                  # raw variant: use the precomputed index
+        df = df.copy()                              # do not mutate the caller's frame
+        df["y"] = df["emp_index"]                   # raw employment index (Oct 2022 = 1.0)
+        return df
+    parts = []                                      # collect SA series per occ x age
+    for (grp, a), g in df.groupby(["occ_group", "age_group"]):  # one series at a time
+        g = g.sort_values("date").copy()            # date order for the adjustment
+        sa = seasonal_adjust(g[["date", "count"]].rename(columns={"count": "value"}),
+                             SEAS_FROM, SEAS_TO)     # remove frozen seasonal factors
+        base = sa.loc[sa["date"] == NORM_DATE, "value"].iloc[0]  # SA October 2022 level
+        g["y"] = sa["value"].to_numpy() / base      # index the SA series to Oct 2022 = 1.0
+        parts.append(g)                             # stash this series
+    return pd.concat(parts, ignore_index=True)      # reassemble the long frame
 
+
+def make(df, adjust, out_name):
+    """Draw the four-panel occupations figure, seasonally adjusted or raw."""
+    df = add_y(df, adjust)                           # choose raw vs SA series
     fig, axes = plt.subplots(2, 2, figsize=(12, 10))
     for ax, grp in zip(axes.flatten(), PANEL_ORDER):
         g = df[df["occ_group"] == grp]
         for a in ["1", "2", "3", "4"]:
             s = g[g["age_group"] == a].sort_values("dt")
             if len(s):
-                ax.plot(s["dt"], s["emp_index"], color=AGE_COLORS[a], linewidth=1.6)
-                ax.annotate(AGE_LABELS[a], xy=(s["dt"].iloc[-1], s["emp_index"].iloc[-1]),
+                ax.plot(s["dt"], s["y"], color=AGE_COLORS[a], linewidth=1.6)
+                ax.annotate(AGE_LABELS[a], xy=(s["dt"].iloc[-1], s["y"].iloc[-1]),
                             xytext=(5, 0), textcoords="offset points",
                             fontsize=16, color=AGE_COLORS[a], va="center",
                             annotation_clip=False)
@@ -79,10 +98,20 @@ def main():
 
     fig.autofmt_xdate(rotation=0, ha="center")
     fig.tight_layout()
-    out = os.path.join(FIG_DIR, "figure1_occupations_by_age.pdf")
+    out = os.path.join(FIG_DIR, out_name)
     fig.savefig(out, dpi=200, bbox_inches="tight")
     plt.close(fig)
     print(f"Saved {out}")
+
+
+def main():
+    os.makedirs(FIG_DIR, exist_ok=True)
+    healy_style()
+    df = pd.read_csv(DATA, dtype={"age_group": str})
+    df["dt"] = pd.to_datetime(df["date"])
+
+    make(df, adjust=True,  out_name="figure_occupations_by_age_sa.pdf")  # body figure (SA)
+    make(df, adjust=False, out_name="figure1_occupations_by_age.pdf")    # appendix twin (raw)
 
 
 if __name__ == "__main__":

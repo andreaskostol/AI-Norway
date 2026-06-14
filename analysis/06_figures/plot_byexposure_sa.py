@@ -59,23 +59,15 @@ def healy_style():
     })
 
 
-def main():
-    os.makedirs(FIG_DIR, exist_ok=True)               # ensure the output dir exists
-    healy_style()                                     # apply the house style
-
-    df = pd.read_csv(DATA, dtype={"age_group": str, "ai_q": str})  # read figure data
-    df = df[df["sector"] == 2]                         # private sector only
-    df = df[df["ai_q"].isin(["1", "2", "3", "4", "5"])]  # drop the pooled 'all' rows
-
-    # Pool headcount across the four decade age groups -> one series per quintile.
-    pooled = (df.groupby(["date", "ai_q"], as_index=False)["employment"].sum())
-
+def make(pooled, adjust, out_name):
+    """Draw the by-exposure figure, seasonally adjusted (adjust=True) or raw."""
     fig, ax = plt.subplots(figsize=(10, 6))           # single-panel figure
     for q in range(1, 6):                              # one line per quintile Q1..Q5
-        s = pooled[pooled["ai_q"] == str(q)].sort_values("date").copy()  # this quintile
-        s = seasonal_adjust(                           # seasonally adjust the headcount
-            s[["date", "employment"]].rename(columns={"employment": "value"}),
-            SEAS_FROM, SEAS_TO)
+        s = pooled[pooled["ai_q"] == str(q)].copy()    # this quintile
+        s = s[["date", "employment"]].rename(columns={"employment": "value"})  # rename col
+        if adjust:                                     # seasonally adjusted variant
+            s = seasonal_adjust(s, SEAS_FROM, SEAS_TO)  # remove frozen seasonal factors
+        s = s.sort_values("date")                      # ensure date order for indexing
         base = s.loc[s["date"] == NORM_DATE, "value"]  # October 2022 level
         idx = s["value"].to_numpy() / float(base.iloc[0])  # index to Oct 2022 = 1.0
         dt = pd.to_datetime(s["date"])                 # x-axis dates
@@ -88,16 +80,32 @@ def main():
     ax.axhline(y=1.0, color="#AAAAAA", linestyle="-", linewidth=0.5)  # reference line
     ax.axvline(x=CHATGPT, color="#555555", linestyle="--",           # ChatGPT marker
                linewidth=0.7, alpha=0.8)
-    ax.set_ylabel("Employment index (Oct 2022 = 1.0), seasonally adjusted")  # y label
+    ax.set_ylabel("Employment index (Oct 2022 = 1.0)" +              # y label, note basis
+                  (", seasonally adjusted" if adjust else ""))
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))  # year tick labels
     ax.xaxis.set_major_locator(mdates.YearLocator())          # one tick per year
     ax.set_xlim(right=dt.iloc[-1] + pd.Timedelta(days=180))   # room for end labels
 
     fig.tight_layout()                                 # trim whitespace
-    out = os.path.join(FIG_DIR, "figure_emp_byexposure_sa.pdf")  # output path
+    out = os.path.join(FIG_DIR, out_name)              # output path
     fig.savefig(out, dpi=200, bbox_inches="tight")     # write the PDF
     plt.close(fig)                                      # free the figure
     print(f"Saved {out}")                               # progress message
+
+
+def main():
+    os.makedirs(FIG_DIR, exist_ok=True)               # ensure the output dir exists
+    healy_style()                                     # apply the house style
+
+    df = pd.read_csv(DATA, dtype={"age_group": str, "ai_q": str})  # read figure data
+    df = df[df["sector"] == 2]                         # private sector only
+    df = df[df["ai_q"].isin(["1", "2", "3", "4", "5"])]  # drop the pooled 'all' rows
+
+    # Pool headcount across the four decade age groups -> one series per quintile.
+    pooled = (df.groupby(["date", "ai_q"], as_index=False)["employment"].sum())
+
+    make(pooled, adjust=True,  out_name="figure_emp_byexposure_sa.pdf")  # body figure (SA)
+    make(pooled, adjust=False, out_name="figure_emp_byexposure.pdf")     # appendix twin (raw)
 
 
 if __name__ == "__main__":

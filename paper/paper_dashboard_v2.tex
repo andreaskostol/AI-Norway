@@ -37,6 +37,10 @@
 \usepackage{threeparttable}
 \usepackage{tabularx}
 
+% Placeholder for the HonestDiD result sentence; filled in after the
+% sensitivity analysis is run (see Section "Robust Inference").
+\newcommand{\honestdidresult}[1]{}
+
 % Title
 \title{\textbf{AI Exposure and Age-Differentiated Employment:\\Evidence from Norwegian Register Data}\thanks{This research has received support from the Norwegian Research Council (grant no.\ 280350). Administrative registers made available by Statistics Norway and data from microdata.no have been essential.}}
 \author{
@@ -67,7 +71,7 @@ Using Norwegian population administrative data from 2021 through 2026, we docume
 \section{Introduction}
 \label{sec:introduction}
 
-Is generative AI reshaping employment patterns? A growing literature investigates a post-2022 age gradient in occupations most exposed to artificial intelligence: employment of young workers declines relative to older workers, while no such gradient appears in less-exposed occupations. \cite{brynjolfsson2025} find this pattern in US payroll data,\footnote{\citet{brynjolfsson2025} use ADP private payroll records on 3.5--5 million workers per month (January 2021--September 2025) and a Poisson event study with firm-by-quintile and firm-by-time fixed effects. Workers aged 22--25 in the most AI-exposed occupational quintile decline by about 15 log points relative to the least-exposed quintile, the effect is concentrated in automation-exposed occupations under the \citet{handa2025} classification, and wages show little divergence.} \cite{lodefalk2026} document a similar gradient in Sweden,\footnote{\citet{lodefalk2026} replicate the design on Swedish employer--employee data (January 2019--June 2025) with employer-by-quartile and employer-by-month fixed effects and the DAIOE generative-AI index of \citet{engberg2024}. The youngest (22--25) in the most-exposed quartile fall 5.5 percent by 2025H1 while the oldest gain 1.3 percent; a Platsbanken job-postings analysis attributes part of the decline to monetary tightening after the April 2022 Riksbank hike.} and \cite{teeselink2025} reports consistent UK evidence.\footnote{\citet{teeselink2025} finds, in UK Revelio Labs data, that a one-standard-deviation increase in LLM exposure lowers employment by 0.3 percent, concentrated in junior and high-wage positions. \citet{teeselink2026} report that AI exposure reduces job postings across 39 countries, more so where employment protection is stricter. Reported magnitudes use different units and baselines and are not directly comparable.} On the other hand, \cite{humlum2026} and \cite{kauhanen2026} report null patterns from Denmark and Finland.\footnote{\citet{humlum2026} compare AI-chatbot adopters to non-adopters in Danish registers plus two roughly 25,000-person surveys and find precise nulls on earnings and employment (ruling out hours effects above 2 percent at encouraged-use workplaces), though their Appendix~D.2 documents aggregate early-career declines that mirror the US; their firm-level design shows workplace adoption does not drive these declines. \citet{kauhanen2026} replicate \citet{brynjolfsson2025} on Finnish registers and attribute observed trends to demographics rather than AI, consistent with earlier Finnish nulls \citep{kauhanen2024, kauhanen2025}.}
+Artificial intelligence is advancing rapidly and could reshape the labor market. The tools keep improving, but firms take time to adopt them and to reorganize how work is done, so the labor-market effects may arrive gradually rather than all at once, showing up first in which jobs are advertised, then in who gets hired, and eventually in which age groups grow more slowly. A growing body of research asks whether such a shift is already visible in the employment of young workers in the most AI-exposed occupations, and reaches mixed conclusions across countries. Detecting a gradual process of this kind requires observing the labor market at high frequency. We build a monthly AI labor market index for Norway, the companion to this paper's analysis \citep{kiindeksen2026}, that tracks employment by occupation, age, and AI exposure continuously, month by month, and we use it to ask whether a post-2022 age gradient in AI-exposed occupations appears in Norwegian register data.
 
 We document Norwegian employment patterns as a reference point for this literature. Using population-level register data from the Norwegian employer reporting system for 2021 to 2026, we construct monthly employment series at the level of cells defined by occupation, age group, sector, and AI exposure quintile, indexed to October 2022, the month preceding the November 30, 2022 release of ChatGPT, and rank occupations by the Eloundou et al.\ GPT-4 exposure measure. We focus on the youngest workers. Their employment renews through new entry rather than through the slow turnover of an incumbent stock, so it is the margin where AI-related changes in hiring would appear first and the one least confounded by demographic composition. Selected high-exposure occupations show falling employment among the youngest, but across the full exposure distribution the most-exposed quintile does not separate clearly from the least-exposed for workers aged 21 to 30. In the narrower 22 to 25 group, a replication of the Brynjolfsson et al.\ design shows the most-exposed and least-exposed quintiles tracking each other through early 2025 and then diverging, with the gap widening to about 35 log points by early 2026.
 
@@ -77,9 +81,17 @@ The data cover the entire employed population at monthly frequency, with age ass
 
 Norway is also a setting where AI tools have diffused rapidly. A 2026 Microsoft report ranks Norway third globally in population-level AI usage, after the UAE and Singapore \citep{microsoft2026ai}. OECD data for 2025 place Norway first among 33 European countries for AI use at work \citep{oecd2026ai}. At the enterprise level, the share of Norwegian firms (10 or more employees) reporting AI use rose from 11 percent in 2021 to 30 percent in 2025 \citep{ssb2025ikt}, placing Norway well above the EU average of 20 percent; the Nordic countries are among the leading European countries in enterprise adoption \citep{bick2026}. Internet access (99 percent) and OECD top-five broadband density provide the infrastructure for rapid diffusion \citep{oecd2024digitalnorway}. If AI-related labor market effects are present, a high-adoption economy is where they would appear first.
 
+The international evidence on this age gradient is mixed. \citet{brynjolfsson2025} document it in US payroll data,\footnote{\citet{brynjolfsson2025} use ADP private payroll records on 3.5--5 million workers per month (January 2021--September 2025) and a Poisson event study with firm-by-quintile and firm-by-time fixed effects. Workers aged 22--25 in the most AI-exposed occupational quintile decline by about 15 log points relative to the least-exposed quintile, the effect is concentrated in automation-exposed occupations under the \citet{handa2025} classification, and wages show little divergence.} \citet{lodefalk2026} in Sweden,\footnote{\citet{lodefalk2026} replicate the design on Swedish employer--employee data (January 2019--June 2025) with employer-by-quartile and employer-by-month fixed effects and the DAIOE generative-AI index of \citet{engberg2024}. The youngest (22--25) in the most-exposed quartile fall 5.5 percent by 2025H1 while the oldest gain 1.3 percent; a Platsbanken job-postings analysis attributes part of the decline to monetary tightening after the April 2022 Riksbank hike.} and \citet{teeselink2025} in the UK.\footnote{\citet{teeselink2025} finds, in UK Revelio Labs data, that a one-standard-deviation increase in LLM exposure lowers employment by 0.3 percent, concentrated in junior and high-wage positions. \citet{teeselink2026} report that AI exposure reduces job postings across 39 countries, more so where employment protection is stricter. Reported magnitudes use different units and baselines and are not directly comparable.} Others report null or demographically driven patterns: \citet{humlum2026} for Denmark and \citet{kauhanen2026} for Finland.\footnote{\citet{humlum2026} compare AI-chatbot adopters to non-adopters in Danish registers plus two roughly 25,000-person surveys and find precise nulls on earnings and employment (ruling out hours effects above 2 percent at encouraged-use workplaces), though their Appendix~D.2 documents aggregate early-career declines that mirror the US; their firm-level design shows workplace adoption does not drive these declines. \citet{kauhanen2026} replicate \citet{brynjolfsson2025} on Finnish registers and attribute observed trends to demographics rather than AI, consistent with earlier Finnish nulls \citep{kauhanen2024, kauhanen2025}.} Most of this evidence ends in 2025, and no consensus has emerged on whether the early-career gradient is an AI effect or a reflection of demographics and the macroeconomic cycle.
+
+We contribute to this literature in two ways. First, we extend the evidence to early 2026 with an up-to-date, population-level analysis for a leading AI-adopting economy, covering the months in which most existing studies end. Second, the high-frequency design lets us isolate the period after agentic AI tools became widely available in 2025: by re-normalizing the series to early 2025 we estimate the employment response specific to this newer, more capable generation of tools, separately from the assistant-style tools that dominate the earlier window.
+
+The paper proceeds as follows. Section~\ref{sec:data} describes the register data, the AI exposure measures, and our empirical approach. Section~\ref{sec:results} presents the descriptive evidence. Section~\ref{sec:regression} reports the regression analysis: the quintile difference-in-differences estimates, the age heterogeneity, the automation-versus-augmentation and agentic-AI extensions, and a sensitivity analysis for violations of parallel trends. Section~\ref{sec:discussion} discusses the findings in cross-country context and Section~\ref{sec:conclusion} concludes.
+
 
 % =============================================================================
 \section{Data, Measures, and Approach}\label{sec:data}
+
+This section describes the three ingredients of the analysis: the Norwegian register data, the institutional setting that shapes how AI exposure would show up in employment, and the occupation-level AI exposure measures, together with the normalization and quintile construction we use throughout.
 
 \subsection{Norwegian Labor Market Data}\label{sec:data:labor}
 
@@ -175,129 +187,123 @@ The AI exposure measures and crosswalk files used in this paper are publicly ava
 % =============================================================================
 \section{Descriptive Evidence}\label{sec:results}
 
-\subsection{Employment in Selected Occupations}\label{sec:results:occupations}
-
-Figure~\ref{fig:occupations_by_age} displays employment in four occupations, the same case studies shown on the companion kiindeksen.no dashboard: software developers and customer service agents, both highly exposed to AI, and electricians and home health aides, two low-exposure occupations that serve as a benchmark.\footnote{STYRK-08 (= ISCO-08) codes: software developers 2512--2514 and 2519; customer service agents 4222; electricians 7411; home health aides 5322.} Each panel plots private-sector employment per capita indexed to October 2022 = 1, separately by decade age group, with a vertical line marking the public release of ChatGPT on November 30, 2022.
-
-In software development the 21--30 series falls to about 0.82 by early 2026, while the 31--40 and 51--60 series rise to roughly 1.11--1.12 and the 41--50 series is flat. Customer service agents show a milder version of the same shape: the 21--30 series ends near 0.97 while the older groups end higher (31--40 near 1.27). The two low-exposure occupations show no young-worker decline: electricians aged 21--30 end near 1.01, with the other age groups within a few points of the baseline, and home health aides grow across every age group, the youngest most of all.
-
-In the high-exposure occupations the youngest workers lose ground relative to older workers, the case-study pattern reported in \citet{brynjolfsson2025}, while the low-exposure occupations show no such gap. Section~\ref{sec:results:quintiles} incorporates all occupations systematically and finds that the young-worker decline does not generalize across the exposure distribution.
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=\textwidth]{../analysis/output/figures/figure1_occupations_by_age.pdf}
-  \caption{Employment in selected occupations, by decade age group.}
-  \label{fig:occupations_by_age}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Private-sector employment per capita (headcount divided by resident population in the age group), indexed to October 2022 = 1. Panels show the kiindeksen.no case-study occupations: software developers (STYRK-08 2512--2514, 2519) and customer service agents (4222), both high-exposure, and electricians (7411) and home health aides (5322), both low-exposure. The vertical dashed line marks November 30, 2022 (ChatGPT release).\end{minipage}
-\end{figure}
-
-
-\subsection{Employment by AI Exposure Quintile}\label{sec:results:quintiles}
-
-The case studies above examine occupations chosen for their AI relevance. A more systematic approach ranks all occupations by their AI exposure score and examines whether high-exposure occupations exhibit different employment trends than low-exposure occupations. We assign each occupation to a quintile based on its Eloundou et al.\ GPT-4 exposure score, from Q1 (least exposed) to Q5 (most exposed), and plot normalized employment by quintile within each age group.
-
-Figure~\ref{fig:age_by_quintile} plots quintile-by-age employment for the private sector, indexed to October 2022. Each of the four panels is one decade age group, with quintile lines running from light blue (Q1, least exposed) to dark blue (Q5, most exposed) and a red line for the overall age-group trend.
-
-The most-exposed occupations do not lose ground among the youngest workers: in the 21--30 group the Q5 series tracks Q1 after the ChatGPT release, so the systematic exposure ranking does not reproduce the decline seen in the selected occupations. Among the older groups the Q5 series runs above Q1 at 31--40, ends a few points below at 41--50, and shows no clear separation at 51--60; these older movements are smaller than the pre-period swings discussed in Section~\ref{sec:robustness:pretrends}.
-
-
-\begin{figure}[tp]
-  \centering
-  \includegraphics[width=\textwidth]{../analysis/output/figures/figure_emp_decade_private.pdf}
-  \caption{Employment by AI-exposure quintile and decade age group, private sector.}
-  \label{fig:age_by_quintile}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Private-sector employment per capita (headcount divided by resident population in the age group), indexed to October 2022 = 1. Occupations are ranked by the Eloundou et al.\ GPT-4 exposure score. Q1 (lightest) = least exposed; Q5 (darkest) = most exposed. Red line = overall age-group trend. Vertical dashed line marks the November 2022 ChatGPT release.\end{minipage}
-\end{figure}
-
-
-The companion automation and augmentation quintile plots based on the Handa et al.\ decomposition are reported in Appendix Figures~\ref{fig:age_by_quintile_handa_auto} and~\ref{fig:age_by_quintile_handa_aug}.
-
+This section presents the descriptive employment evidence: we first explain the seasonal adjustment that underlies every figure, then trace employment across the AI-exposure distribution as a whole, in selected occupations, and by age, and close with the automation--augmentation split and a set of secondary outcomes. The main text plots seasonally adjusted series; the matching raw series are collected in Appendix~A and can also be explored, with user-adjustable smoothing, on the companion dashboard \citep{kiindeksen2026}.
 
 \subsection{Seasonal Adjustment}\label{sec:results:sa}
 
-Norwegian employment series carry a strong seasonal pattern, with a January dip and a summer peak. The figures above plot the series without seasonal adjustment, which is adequate for visual comparison over multi-year horizons but folds the calendar-month pattern into any short-horizon comparison. To match the seasonally adjusted series shown on the companion dashboard, we reproduce the main employment figures after removing a frozen seasonal component.
+We begin with seasonal adjustment because it shapes every figure that follows. Norwegian employment carries a strong seasonal pattern, a January dip and a summer peak, that folds the calendar month into any short-horizon comparison. The pre-ChatGPT reference month (October 2022) and the most recent month of data sit in different parts of the calendar, so the raw change between them mixes the AI question with this seasonal gap. We therefore plot seasonally adjusted series in the main text and relegate the raw series to Appendix~A.
 
-The adjustment is a transparent X-11 core, applied to each series in logs: the trend is a centred $2\times12$ moving average (thirteen months, half weight on the two endpoints), the seasonal factor for each calendar month is the average log-deviation from trend over January 2021--December 2024, and these factors are then frozen and subtracted from every month. Freezing the factors on the pre-2025 window keeps any later AI-related movement from leaking into the seasonal pattern. This is the same procedure used for the seasonally adjusted series on kiindeksen.no.
+The adjustment is a transparent X-11 core, applied to each series in logs: the trend is a centred $2\times12$ moving average (thirteen months, half weight on the two endpoints), the seasonal factor for each calendar month is the average log-deviation from trend over January 2021--December 2024, and these factors are then frozen and subtracted from every month. Freezing the factors on the pre-2025 window keeps any later AI-related movement from leaking into the seasonal pattern. This is the same procedure used for the seasonally adjusted series on kiindeksen.no, where a reader can also apply moving-average smoothing interactively.
 
-Figure~\ref{fig:byexposure_sa} shows seasonally adjusted employment by exposure quintile pooled over ages 21--60, and Figure~\ref{fig:age_by_quintile_sa} gives the adjusted decade-age panels alongside the raw panels of Figure~\ref{fig:age_by_quintile}. The adjusted series tell the same story as the raw ones: the most-exposed quintile does not separate clearly from the least-exposed.
+\subsection{Employment by AI Exposure Quintile}\label{sec:results:quintiles}
+
+We start with the exposure distribution as a whole. We rank every four-digit occupation by its Eloundou et al.\ GPT-4 exposure score, assign it to a quintile from Q1 (least exposed) to Q5 (most exposed), pool all private-sector workers aged 21--60, and plot seasonally adjusted employment by quintile indexed to October 2022.
+
+Figure~\ref{fig:byexposure_sa} shows the result. The most-exposed quintile does not pull away from the least-exposed after the ChatGPT release: the five series move together through the sample, and the Q5--Q1 gap at the data edge is small. The systematic exposure ranking thus shows little of the separation one would expect if AI were reshaping employment across the exposure distribution. The raw counterpart is Appendix Figure~\ref{fig:byexposure_raw}.
 
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=0.8\textwidth]{../analysis/output/figures/figure_emp_byexposure_sa.pdf}
+  \includegraphics[width=0.85\textwidth]{../analysis/output/figures/figure_emp_byexposure_sa.pdf}
   \caption{Employment by AI-exposure quintile, all ages 21--60, private sector, seasonally adjusted.}
   \label{fig:byexposure_sa}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Private-sector headcount pooled over ages 21--60, seasonally adjusted with a frozen X-11 core (factors estimated 2021--2024), indexed to October 2022 = 1. Occupations are ranked by the Eloundou et al.\ GPT-4 exposure score. This is the paper analog of the kiindeksen.no headline ``Sysselsetting etter KI-eksponering'' figure.\end{minipage}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Private-sector headcount pooled over ages 21--60, seasonally adjusted with a frozen X-11 core (factors estimated 2021--2024), indexed to October 2022 = 1. Occupations are ranked by the Eloundou et al.\ GPT-4 exposure score. Q1 (lightest) = least exposed; Q5 (darkest) = most exposed. This is the paper analog of the kiindeksen.no headline ``Sysselsetting etter KI-eksponering'' figure. The raw (unadjusted) series is Appendix Figure~\ref{fig:byexposure_raw}.\end{minipage}
 \end{figure}
+
+\subsection{Employment in Selected Occupations}\label{sec:results:occupations}
+
+Having seen the aggregate, we turn to four occupations chosen for their AI relevance, the case studies shown on the companion dashboard: software developers and customer service agents, both highly exposed to AI, and electricians and home health aides, two low-exposure occupations that serve as a benchmark.\footnote{STYRK-08 (= ISCO-08) codes: software developers 2512--2514 and 2519; customer service agents 4222; electricians 7411; home health aides 5322.} The four differ sharply in measured exposure: software developers and customer service agents sit in the top Eloundou quintile and also rank high on the Handa et al.\ usage and automation measures, whereas electricians and home health aides fall in the bottom quintiles on all three measures, so the contrast does not depend on which exposure measure one uses.
+
+Figure~\ref{fig:occupations_by_age} plots seasonally adjusted private-sector employment per capita by decade age group, indexed to October 2022. The age groups already differ before the ChatGPT release: in software development the youngest workers are on a flat-to-declining path well before November 2022, while the older groups are still rising, so part of the post-2022 young-worker gap continues a pre-existing trend. After the release the gap widens. In software development the 21--30 series falls to roughly 0.8 by early 2026 while the 31--40 and 51--60 series rise to about 1.1 and the 41--50 series is flat. Customer service agents show a milder version of the same shape, the youngest ending near the baseline while older groups end higher. The two low-exposure occupations show no young-worker decline: electricians aged 21--30 end close to the baseline and home health aides grow across every age group, the youngest most of all.
+
+In the high-exposure occupations the youngest workers lose ground relative to older workers, the case-study pattern reported in \citet{brynjolfsson2025}, while the low-exposure occupations show no such gap. Section~\ref{sec:results:agequintile} incorporates all occupations systematically and finds that the young-worker decline does not generalize across the exposure distribution. The raw series are in Appendix Figure~\ref{fig:occupations_raw}.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=\textwidth]{../analysis/output/figures/figure_occupations_by_age_sa.pdf}
+  \caption{Employment in selected occupations, by decade age group, seasonally adjusted.}
+  \label{fig:occupations_by_age}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Private-sector employment per capita (headcount divided by resident population in the age group), seasonally adjusted (frozen X-11, factors estimated 2021--2024) and indexed to October 2022 = 1. Panels show the kiindeksen.no case-study occupations: software developers (STYRK-08 2512--2514, 2519) and customer service agents (4222), both high-exposure, and electricians (7411) and home health aides (5322), both low-exposure. The vertical dashed line marks November 30, 2022 (ChatGPT release). The raw (unadjusted) series is Appendix Figure~\ref{fig:occupations_raw}.\end{minipage}
+\end{figure}
+
+\subsection{Employment by Age and Exposure Quintile}\label{sec:results:agequintile}
+
+We now combine the two cuts, ranking all occupations by exposure and following each quintile separately within each decade age group, so that the case-study contrast can be checked against the whole exposure distribution. Each of the four panels is one decade age group, with quintile lines running from light blue (Q1, least exposed) to dark blue (Q5, most exposed) and a red line for the overall age-group trend.
+
+Figure~\ref{fig:age_by_quintile} plots seasonally adjusted employment by quintile and age group. The most-exposed occupations do not lose ground among the youngest workers: in the 21--30 group the Q5 series tracks Q1 after the ChatGPT release, so the systematic exposure ranking does not reproduce the decline seen in the selected occupations. Among the older groups the Q5 series runs above Q1 at 31--40, ends a few points below at 41--50, and shows no clear separation at 51--60; these older movements are smaller than the pre-period swings discussed in Section~\ref{sec:regression:robust}. The raw panels are in Appendix Figure~\ref{fig:age_by_quintile_raw}.
 
 \begin{figure}[tp]
   \centering
   \includegraphics[width=\textwidth]{../analysis/output/figures/figure_emp_decade_private_sa.pdf}
   \caption{Employment by AI-exposure quintile and decade age group, private sector, seasonally adjusted.}
-  \label{fig:age_by_quintile_sa}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Seasonally adjusted headcount, the adjusted analog of Figure~\ref{fig:age_by_quintile} (which plots the unadjusted per-capita series); frozen X-11 adjustment with factors estimated 2021--2024, indexed to October 2022 = 1. Q1 (lightest) = least exposed; Q5 (darkest) = most exposed.\end{minipage}
+  \label{fig:age_by_quintile}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Private-sector headcount, seasonally adjusted with a frozen X-11 core (factors estimated 2021--2024), indexed to October 2022 = 1. Occupations are ranked by the Eloundou et al.\ GPT-4 exposure score. Q1 (lightest) = least exposed; Q5 (darkest) = most exposed. Red line = overall age-group trend. Vertical dashed line marks the November 2022 ChatGPT release. The raw (unadjusted) per-capita series is Appendix Figure~\ref{fig:age_by_quintile_raw}.\end{minipage}
 \end{figure}
-
 
 \subsection{Automation versus Augmentation}\label{sec:results:auto_aug}
 
-We follow \citet{brynjolfsson2025} on the automation-vs-augmentation split. Ranking the youngest workers by Handa automation share gives a modest negative gradient (Appendix Figure~\ref{fig:age_by_quintile_handa_auto}); ranking them by augmentation share gives no gradient at all (Appendix Figure~\ref{fig:age_by_quintile_handa_aug}). This pattern is more consistent with automation than with augmentation, but the Handa classification only captures conversation mode, not what workers actually do on the job. An occupation scored as ``automation-exposed'' through conversation mode may in practice use AI for augmentation.
+We next split AI exposure into automation and augmentation, following the \citet{handa2025} decomposition of observed Claude.ai usage into directive task delegation (automation) and collaborative iteration (augmentation), which may carry opposite labor-market implications. We rank occupations separately by each share and plot seasonally adjusted employment by quintile within each age group.
 
-
-\subsection{Sector Heterogeneity}\label{sec:results:sectors}
-
-The exposure patterns documented in Figure~\ref{fig:age_by_quintile} are private-sector patterns. The public sector shows no exposure gradient in any age group, in either the raw (Appendix Figure~\ref{fig:emp_public}) or the seasonally adjusted series (Appendix Figure~\ref{fig:emp_public_sa}).
-
-The public-sector null could reflect slower adoption, hiring insulated from market conditions, stronger employment protection, or a different occupational mix; we cannot separate these from the aggregate data. The adoption channel does have some support: \citet{riksrevisjonen2024} report that fewer than half of about 200 state agencies have any experience developing or using AI, under a definition that excludes off-the-shelf tools such as ChatGPT, so theoretical exposure in the public sector does not translate into implementation. The public sector is dominated by health, education, and administration; private high-exposure occupations cluster in IT, finance, and business services.
-
-
-\subsection{Wages and Other Outcomes}\label{sec:results:wages}
-
-Figure~\ref{fig:kontantlonn_by_quintile} displays monthly cash earnings by Eloundou et al.\ exposure quintile and age group. Strong seasonal patterns dominate the wage plots: June earnings rise to about 1.6 times the baseline because of statutory holiday pay, and December earnings to about 1.2 because of year-end bonuses. The indexed series show no divergence by exposure quintile, and the within-firm difference-in-differences estimates (Table~\ref{tab:did_firmfe}) show no large earnings movement. \citet{brynjolfsson2025} and \citet{humlum2026} find no wage divergence over a similar horizon in the US and Denmark. Norway's two-tier bargaining system \citep{bhuller2022} with sectoral wage floors and strong employment protection make the quantity margin the more likely site of adjustment.
-
-Three additional outcomes are reported in the appendix: contracted position percentage (Figure~\ref{fig:stillingspst_by_quintile}), overtime hours (Figure~\ref{fig:overtid_by_quintile}), and the share of new jobs (Figure~\ref{fig:nyjobb_by_quintile}). None shows a differential trend by exposure quintile.
+Ranking the youngest workers by automation share gives a modest negative gradient (Figure~\ref{fig:handa_auto_sa}); ranking them by augmentation share gives no gradient at all (Figure~\ref{fig:handa_aug_sa}). This pattern is more consistent with automation than with augmentation, though the Handa classification captures conversation mode rather than what workers do on the job, so an occupation scored as automation-exposed may in practice use AI for augmentation. From the second half of 2025, after agentic coding tools became available, the most-exposed automation quintile begins to separate more visibly among the youngest workers; we defer this emerging pattern to the regression analysis (Section~\ref{sec:regression:agentic}), which re-normalizes the series to isolate the agentic period. The raw automation and augmentation panels are in Appendix Figures~\ref{fig:age_by_quintile_handa_auto} and~\ref{fig:age_by_quintile_handa_aug}.
 
 \begin{figure}[tp]
   \centering
-  \includegraphics[width=\textwidth]{../analysis/output/figures/figure_kontantlonn_decade_private.pdf}
-  \caption{Monthly cash earnings by AI-exposure quintile and decade age group, private sector.}
-  \label{fig:kontantlonn_by_quintile}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Mean monthly cash earnings, indexed to October 2022 = 1. Occupations are ranked by the Eloundou et al.\ exposure score. Strong seasonal patterns (December bonuses, June holiday pay) are visible in all panels.\end{minipage}
+  \includegraphics[width=\textwidth]{../analysis/output/figures/figure_age_by_quintile_handa_auto_sa.pdf}
+  \caption{Employment by Handa et al.\ automation-exposure quintile and decade age group, private sector, seasonally adjusted.}
+  \label{fig:handa_auto_sa}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Private-sector headcount, seasonally adjusted (frozen X-11, factors estimated 2021--2024), indexed to October 2022 = 1. Occupations are ranked by the Handa et al.\ automation share. Q1 (lightest) = least exposed; Q5 (darkest) = most exposed. The raw series is Appendix Figure~\ref{fig:age_by_quintile_handa_auto}.\end{minipage}
 \end{figure}
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=\textwidth]{../analysis/output/figures/figure_age_by_quintile_handa_aug_sa.pdf}
+  \caption{Employment by Handa et al.\ augmentation-exposure quintile and decade age group, private sector, seasonally adjusted.}
+  \label{fig:handa_aug_sa}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Private-sector headcount, seasonally adjusted (frozen X-11, factors estimated 2021--2024), indexed to October 2022 = 1. Occupations are ranked by the Handa et al.\ augmentation share. Q1 (lightest) = least exposed; Q5 (darkest) = most exposed. The raw series is Appendix Figure~\ref{fig:age_by_quintile_handa_aug}.\end{minipage}
+\end{figure}
+
+\subsection{Extensions}\label{sec:results:extensions}
+
+We close the descriptive evidence with three extensions, the public sector, cash earnings, and a set of job-quality and entry margins, whose figures are collected in Appendix~A.
+
+The exposure patterns above are private-sector patterns; the public sector shows no exposure gradient in any age group, in either the raw or the seasonally adjusted series (Appendix Figures~\ref{fig:emp_public} and~\ref{fig:emp_public_sa}). The public-sector null could reflect slower adoption, hiring insulated from market conditions, stronger employment protection, or a different occupational mix, and the aggregate data cannot separate these. The adoption channel has some support: \citet{riksrevisjonen2024} report that fewer than half of about 200 state agencies have any experience developing or using AI, under a definition that excludes off-the-shelf tools such as ChatGPT. The public sector is dominated by health, education, and administration, while private high-exposure occupations cluster in IT, finance, and business services.
+
+Cash earnings show no divergence by exposure quintile (Appendix Figure~\ref{fig:kontantlonn_by_quintile}); the wage plots are dominated by seasonal patterns (June holiday pay, December bonuses), and the within-firm difference-in-differences estimates (Table~\ref{tab:did_firmfe}) show no large earnings movement. \citet{brynjolfsson2025} and \citet{humlum2026} likewise find no wage divergence over a similar horizon in the US and Denmark. Norway's two-tier bargaining system \citep{bhuller2022}, with sectoral wage floors and strong employment protection, makes the quantity margin the more likely site of adjustment.
+
+The remaining outcomes tell the same story. Contracted position percentage (Appendix Figure~\ref{fig:stillingspst_by_quintile}), overtime hours (Appendix Figure~\ref{fig:overtid_by_quintile}), and the share of new jobs (Appendix Figure~\ref{fig:nyjobb_by_quintile}) show no differential trend by exposure quintile, so the absence of an exposure gradient is not confined to the headline employment count.
 
 
 % =============================================================================
 \section{Regression Analysis}\label{sec:regression}
 
-The descriptive series show little systematic separation across the exposure distribution. We summarize that cross-section here and then turn to the panel event studies. Table~\ref{tab:quintile_change} reports, for all private-sector workers aged 21--60, the mean employment change from October 2022 to the last month of data by exposure quintile, together with the Q5$-$Q1 ``double difference''. Each occupation is one observation, weighted by its October 2022 employment so the quintile means match the headcount aggregation used by the companion dashboard \citep{kiindeksen2026}; standard errors are heteroskedasticity-robust across occupations. On the seasonally adjusted series the double difference is essentially zero and statistically insignificant, so the most-exposed quintile has not grown differently from the least-exposed since ChatGPT. The raw series show a larger positive gap, but that reflects the October-versus-February calendar-month comparison that the seasonal adjustment removes.
+This section turns the descriptive series into regression estimates: a cross-sectional quintile analysis, age-by-quintile difference-in-differences, the within-firm and individual-level estimates, the automation--augmentation and agentic-AI extensions, and a sensitivity analysis that confronts the non-flat pre-trends directly.
+
+\subsection{Quintile Analysis}\label{sec:regression:quintile}
+
+We begin with a compact cross-section of the whole exposure distribution. Following \citet{yagan2019}, we measure each occupation's employment hysteresis as the proportional change from its pre-ChatGPT baseline,
+\[
+\Delta_j \;=\; \frac{\text{emp}_{j,\text{last}} - \text{emp}_{j,\text{Oct }2022}}{\text{emp}_{j,\text{Oct }2022}},
+\]
+where $\text{emp}_{j,\text{last}}$ is occupation $j$'s seasonally adjusted private-sector headcount in the last month of data (February 2026) and the denominator is its October 2022 level. We regress $\Delta_j$ on exposure-quintile dummies, weighting each occupation by its October 2022 employment so the quintile means reproduce the headcount aggregation used by the companion index \citep{kiindeksen2026}, with heteroskedasticity-robust standard errors across occupations.
+
+Table~\ref{tab:quintile_yagan} reports the result. The top row is the employment-weighted mean change in each quintile; the bottom row is the double difference relative to Q1, the least-exposed quintile, which serves as the base. The most-exposed quintile has not grown differently from the least-exposed since ChatGPT: the Q5$-$Q1 double difference is small and statistically insignificant.
 
 \begin{table}[tp]
   \centering
-  \caption{Employment change by AI-exposure quintile, October 2022 to February 2026, all ages 21--60, private sector.}
-  \label{tab:quintile_change}
-  \input{../analysis/output/tables/table_quintile_change}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Each occupation's private-sector headcount change from October 2022 to the last month (February 2026), pooled over ages 21--60, regressed on exposure-quintile dummies and weighted by October 2022 employment, so the per-quintile means reproduce the headcount aggregation of the companion index. Panel~A uses the seasonally adjusted series (the same X-11 adjustment as the kiindeksen.no dashboard); Panel~B is unadjusted. ``Q5$-$Q1 (DD)'' is the double difference between the most- and least-exposed quintiles. Heteroskedasticity-robust standard errors in parentheses. $^{*}$, $^{**}$, $^{***}$ denote significance at the 10, 5, and 1 percent levels.\end{minipage}
+  \caption{Employment change by AI-exposure quintile, October 2022 to February 2026, all ages 21--60, private sector, seasonally adjusted.}
+  \label{tab:quintile_yagan}
+  \input{../analysis/output/tables/table_quintile_yagan}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Yagan employment-hysteresis change $\Delta_j = (\text{emp}_{j,\text{Feb }2026}-\text{emp}_{j,\text{Oct }2022})/\text{emp}_{j,\text{Oct }2022}$ for each occupation's seasonally adjusted private-sector headcount, pooled over ages 21--60. The top row is the employment-weighted mean change by exposure quintile (occupations ranked by the Eloundou et al.\ GPT-4 score); the bottom row is the double difference relative to Q1 (the base quintile, hence no entry), with heteroskedasticity-robust standard errors in parentheses. Occupations are weighted by October 2022 employment, reproducing the headcount aggregation of the companion index. $^{*}$, $^{**}$, $^{***}$ denote significance at the 10, 5, and 1 percent levels.\end{minipage}
 \end{table}
 
-Table~\ref{tab:did_cell} reports the corresponding difference-in-differences estimates: the average post-October-2022 change in each quintile relative to Q1 (the least-exposed quintile), by age group, for employment and new hires. For the youngest workers the most-exposed quintiles are not statistically distinguishable from Q1, and new hires show no systematic gradient in any age group. Among the older groups the employment estimate is positive at 31--40 (Q5 about $+0.078$ log points, $p<0.01$) and a small, insignificant negative at 41--50 ($-0.015$). Because pre-trends differ across these groups (Section~\ref{sec:robustness:pretrends}), we read these post-period summaries as descriptive. An insignificant estimate here is an absence of a detectable gradient, not evidence that exposure has no effect.
+\subsection{Age Heterogeneity}\label{sec:regression:age}
 
-\begin{table}[tp]
-  \centering
-  \caption{Cell-level difference-in-differences by AI-exposure quintile, private sector.}
-  \label{tab:did_cell}
-  \input{../analysis/output/tables/table3_did_cell}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Each entry is the post-October-2022 change in the indicated quintile relative to Q1 (least exposed), by decade age group. Employment and new hires are Poisson. Occupation and month fixed effects; standard errors clustered by occupation. Sample 2021m1--2026m2. $^{*}$, $^{**}$, $^{***}$ denote $p<0.1$, $0.05$, $0.01$.\end{minipage}
-\end{table}
-
-
-\subsection{Poisson Regression Estimates}\label{sec:results:firmfe}
-
-The quintile series so far normalize employment by the population in each age group, the right denominator for asking whether cohort-level employment shifts away from AI-exposed occupations. We turn now to the worker counts and ask whether they reallocate across occupations. Following \citet{brynjolfsson2025}, we estimate Poisson event studies on the counts.
+The cross-section pools all ages; we now let the exposure gradient differ by decade age group, since the youngest workers are the margin of interest. The Poisson event study on the worker counts is our baseline specification, and the Yagan hysteresis outcome computed within age groups gives the same qualitative picture.
 
 The cell-level microdata are tabulated at the (occupation $\times$ age group $\times$ month) level. We estimate
 \[
 \log E[\text{count}_{j,a,t}] = \alpha_{j} + \beta_{t} + \gamma_{q,k},
 \]
-separately per decade age group~$a$ in the private sector, where $j$ indexes occupations and $q(j)$ is the Eloundou GPT-4 $\beta$ quintile of occupation~$j$. The occupation FE absorbs the permanent employment level of each occupation; the month FE absorbs the aggregate time path of the age cohort. Standard errors are clustered at occupation. Reference: Q1 and $k=-1$ (October 2022).
+separately per decade age group~$a$ in the private sector, where $j$ indexes occupations and $q(j)$ is the Eloundou GPT-4 quintile of occupation~$j$. The occupation fixed effect absorbs the permanent employment level of each occupation; the month fixed effect absorbs the aggregate time path of the age cohort. Standard errors are clustered at occupation, with Q1 and $k=-1$ (October 2022) as the reference.
 
 Figure~\ref{fig:microdata_poisson_grid} reports the resulting $\gamma_{q,k}$ for $q\in\{2,3,4,5\}$ across the four decade age groups, in log points. The path matches the indexed series in Figure~\ref{fig:age_by_quintile}. At 41--50 the Q5 path turns negative after October 2022, reaches about $-0.08$ log points by mid-2025, and ends near $-0.03$ by early 2026. At 21--30 the Q5 path is noisy and ends near zero; at 31--40 it rises to about $+0.15$; at 51--60 it stays near zero.
 
@@ -309,7 +315,20 @@ Figure~\ref{fig:microdata_poisson_grid} reports the resulting $\gamma_{q,k}$ for
   \label{fig:microdata_poisson_grid}
 \end{figure}
 
-The cell-level estimates absorb the average employment path of each occupation but do not separate reallocation \emph{within} firms from changes in the firm composition. Using the individual-level records, we estimate the within-firm composition design of \citet{brynjolfsson2025},
+Table~\ref{tab:did_cell} collapses the event study into a post-versus-pre difference-in-differences by age group, for employment and new hires. For the youngest workers the most-exposed quintiles are not statistically distinguishable from Q1, and new hires show no systematic gradient in any age group. Among the older groups the employment estimate is positive at 31--40 (Q5 about $+0.078$ log points, $p<0.01$) and a small, insignificant negative at 41--50 ($-0.015$). The Yagan hysteresis outcome computed within each age group gives the same signs. Because pre-trends differ across these groups (Section~\ref{sec:regression:robust}), we read these post-period summaries as descriptive: an insignificant estimate is an absence of a detectable gradient, not evidence that exposure has no effect.
+
+\begin{table}[tp]
+  \centering
+  \caption{Cell-level difference-in-differences by AI-exposure quintile and decade age group, private sector.}
+  \label{tab:did_cell}
+  \input{../analysis/output/tables/table3_did_cell}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Each entry is the post-October-2022 change in the indicated quintile relative to Q1 (least exposed), by decade age group. Employment and new hires are Poisson. Occupation and month fixed effects; standard errors clustered by occupation. Sample 2021m1--2026m2. $^{*}$, $^{**}$, $^{***}$ denote $p<0.1$, $0.05$, $0.01$.\end{minipage}
+\end{table}
+
+
+\subsection{Individual-Level Estimates}\label{sec:regression:firmfe}
+
+The cell-level estimates absorb the average employment path of each occupation but do not separate reallocation \emph{within} firms from changes in firm composition. Using the individual-level records, we estimate the within-firm composition design of \citet{brynjolfsson2025},
 \[
 \log E[\text{count}_{f,q,a,t}] = \alpha_{f,q} + \beta_{f,t} + \gamma_{q,k},
 \]
@@ -359,14 +378,62 @@ The estimate is stable along the chain. The data source contributes almost nothi
 
 % =============================================================================
 
-\subsection{Pre-Trends}\label{sec:robustness:pretrends}
+\subsection{Automation versus Augmentation}\label{sec:regression:autoaug}
 
-The event studies in Section~\ref{sec:results:firmfe} display the pre-ChatGPT period, and the pre-period coefficients are not flat. In the cell-level event study the most-exposed quintile's pre-period path moves over a peak-to-trough range of 0.11 to 0.18 log points across the four age groups, as large as or larger than the post-2022 movements, and joint tests reject parallel pre-trends in every age group in both the cell and firm-FE specifications. The pre-period also differs across age groups and across occupations: software developers aged 21--30 are already declining before November 2022 (Figure~\ref{fig:occupations_by_age}), while other occupations are flat.
+The descriptive split in Section~\ref{sec:results:auto_aug} suggested that any negative gradient is concentrated in automation-exposed rather than augmentation-exposed occupations. We test this distinction formally over the agentic window. For each occupation we compute the seasonally adjusted private-sector employment change from February 2025 to February 2026 and regress it on exposure-quintile dummies separately for the \citet{handa2025} automation and augmentation rankings, weighting each occupation by its February 2025 employment, with heteroskedasticity-robust standard errors.
 
-These pre-trends bear on interpretation. A difference-in-differences design, including the post-versus-pre estimates in Tables~\ref{tab:did_cell} and~\ref{tab:did_firmfe}, attributes the post-2022 change to the ChatGPT release under the assumption that the most- and least-exposed quintiles would otherwise have moved in parallel. That assumption is debatable here: the quintiles were already on diverging paths before November 2022, and the divergence differs by age group. A collapsed difference-in-differences can therefore read a continuation of a pre-existing trend as an AI effect, and the direction of the resulting bias need not be the same across age groups. We therefore treat the event studies as the primary evidence, read the difference-in-differences tables as summaries of the post-period rather than as causal estimates.
+Table~\ref{tab:aug_auto} reports the two rankings. Panel~A ranks occupations by augmentation share and Panel~B by automation share; in each panel the first row is the employment-weighted mean change by quintile and the second is the difference relative to Q1. The final row is the triple difference, the Q5$-$Q1 automation gradient minus the Q5$-$Q1 augmentation gradient, which tests directly whether automation exposure predicts a steeper employment decline than augmentation exposure over the agentic year.
+
+\begin{table}[tp]
+  \centering
+  \caption{Employment change by Handa augmentation and automation quintile, February 2025 to February 2026, all ages 21--60, private sector, seasonally adjusted.}
+  \label{tab:aug_auto}
+  \input{../analysis/output/tables/table_aug_auto}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Seasonally adjusted private-sector employment change from February 2025 to February 2026 for each occupation, pooled over ages 21--60, regressed on exposure-quintile dummies and weighted by February 2025 employment. Panel~A ranks occupations by the \citet{handa2025} augmentation share; Panel~B by the automation share. In each panel the first row is the employment-weighted mean change by quintile and the second is the difference relative to Q1 (the base, hence no entry), with heteroskedasticity-robust standard errors in parentheses. The final row reports the triple difference (the automation Q5$-$Q1 gradient minus the augmentation Q5$-$Q1 gradient) with its standard error. $^{*}$, $^{**}$, $^{***}$ denote significance at the 10, 5, and 1 percent levels.\end{minipage}
+\end{table}
+
+\subsection{Agentic AI}\label{sec:regression:agentic}
+
+The window studied so far is dominated by assistant-style chatbots, but a qualitative shift occurred in early 2025. Production-grade agentic AI, autonomous systems that plan, call tools, and execute multi-step tasks rather than answering a single prompt, became widely available around the middle of 2025. The length of software tasks a model completes at 50 percent success has roughly doubled every seven months, so by 2026 the frontier handles multi-hour tasks \citep{metr2025}. Under assistant-style use a worker checks each step of a production chain; under agentic use the worker checks only the final output, which can overturn the comparative-advantage logic that limited earlier adoption \citep{demirer2026}. This matters because theoretical exposure predicts actual adoption poorly: \citet{lindenlaub2026} show that an index based on comparative advantage accounts for about 60 percent of the cross-occupation variation in observed adoption, against 14 percent for an exposure-only model, and the two diverge for roughly 30 percent of workers. Limited adoption despite high exposure may be one reason the employment effects are muted through early 2025.
+
+To isolate the employment response specific to this newer generation of tools, we re-normalize every series to early 2025 and repeat the event-study analysis, so that $k=-1$ is the last pre-agentic month and the post-period covers the agentic window; the specification is otherwise identical to the baseline of Section~\ref{sec:regression:age}.\footnote{The re-normalization uses April 2025 as the reference month $k=-1$; results are similar for nearby reference months.} Figure~\ref{fig:agentic_es} reports the re-normalized Poisson event study by decade age group. Among the youngest workers the most-exposed quintile begins to fall below the least-exposed from the second half of 2025, the pattern foreshadowed in Section~\ref{sec:results:auto_aug}; the gap is recent and rests on few post-period months, so we assess its robustness in Section~\ref{sec:regression:robust}.
+
+\begin{figure}[tp]
+  \centering
+  \includegraphics[width=\textwidth]{../analysis/output/figures/figure_microdata_es_decade_agentic_preseas.pdf}
+  \caption{Poisson event-study coefficients by AI-exposure quintile and decade age group, private sector, re-normalized to the agentic window.}
+  \label{fig:agentic_es}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Coefficients $\gamma_{q,k}$ for $q\in\{2,\dots,5\}$ relative to $q=1$, in log points, from the cell-level Poisson event study of Section~\ref{sec:regression:age} re-normalized so that the reference month $k=-1$ is April 2025; the pre-period series is seasonally adjusted. Private sector, sample 2021m1--2026m2. Shaded bands: 95\% confidence intervals clustered at occupation.\end{minipage}
+\end{figure}
+
+\subsection{Robust Inference}\label{sec:regression:robust}
+
+We close by confronting the non-flat pre-trends directly and asking how robust the post-2022 estimates are to them. The event studies above display the pre-ChatGPT period, and the pre-period coefficients are not flat. In the cell-level event study the most-exposed quintile's pre-period path moves over a peak-to-trough range of 0.11 to 0.18 log points across the four age groups, as large as or larger than the post-2022 movements, and joint tests reject parallel pre-trends in every age group in both the cell and firm-FE specifications. The pre-period also differs across age groups and across occupations: software developers aged 21--30 are already declining before November 2022 (Figure~\ref{fig:occupations_by_age}), while other occupations are flat.
+
+These pre-trends bear on interpretation. A difference-in-differences design, including the post-versus-pre estimates in Tables~\ref{tab:did_cell} and~\ref{tab:did_firmfe}, attributes the post-2022 change to the ChatGPT release under the assumption that the most- and least-exposed quintiles would otherwise have moved in parallel. That assumption is debatable here: the quintiles were already on diverging paths before November 2022, and the divergence differs by age group. A collapsed difference-in-differences can therefore read a continuation of a pre-existing trend as an AI effect, and the direction of the resulting bias need not be the same across age groups.
+
+The non-flat pre-period motivates a sensitivity analysis using the honest difference-in-differences approach of \citet{rambachan2023}. This method does not require us to decide whether the parallel-trends assumption is exactly true or false. Instead, it asks how large the post-ChatGPT violation of parallel trends would have to be to overturn the estimated exposure gradient. The method uses the pre-treatment event-study coefficients to discipline the amount of post-treatment confounding that is allowed, and constructs confidence intervals that are valid under the chosen restriction.
+
+We apply the procedure to the Q5-versus-Q1 event-study coefficients from the private-sector Poisson specifications. The main target is the average post-ChatGPT employment difference for workers aged 21--30. In the appendix, we repeat the exercise for the 22--25 Brynjolfsson-style sample, where the Q5--Q1 gap opens only from spring 2025.\footnote{The 22--25 sample uses the exported event-study coefficients and their standard errors; lacking the full variance-covariance matrix of those coefficients, we approximate it as diagonal, which ignores correlation across the event-study coefficients and should be read as indicative.} Because the employment register is measured around the 16th of each month and ChatGPT was released on November 30, 2022, we treat December 2022 as the first post period and use November 2022 as the reference month.
+
+Our preferred sensitivity parameter is the relative-magnitude bound $\bar{M}$. The benchmark value $\bar{M}=1$ allows the post-ChatGPT violation of parallel trends to be as large as the largest violation observed in the pre-ChatGPT period. We also report results for $\bar{M}\in\{0,0.5,1,1.5,2\}$, where $\bar{M}=0$ corresponds to exact parallel trends and $\bar{M}=2$ allows post-period violations twice as large as the worst pre-period violation. We report the breakdown value of $\bar{M}$, the largest value for which the conclusion remains statistically significant.
+
+This exercise is a robustness check on the causal interpretation, not a new source of identification. If the robust confidence intervals include zero for values of $\bar{M}$ near one, then the post-2022 exposure gradient is not robust to violations of parallel trends of the size already visible before ChatGPT. If the intervals remain one-sided for $\bar{M}\geq 1$, then the corresponding result is more robust than the visual pre-trends alone would suggest.
+
+Table~\ref{tab:honest_did} reports the HonestDiD confidence intervals for the main 21--30 sample. The conventional interval already includes zero, so the robust relative-magnitude intervals include zero at the benchmark $\bar{M}=1$ and at every other value, and the breakdown value is zero. For the youngest workers the systematic exposure-quintile result is therefore a precise null: there is no post-ChatGPT employment gradient for the relative-magnitude restriction to overturn, rather than a negative effect whose robustness is in question. This is consistent with the descriptive series, in which the most-exposed quintile does not separate from the least-exposed.
+
+\begin{table}[tp]
+  \centering
+  \caption{HonestDiD sensitivity of the Q5-vs-Q1 employment effect to violations of parallel trends, ages 21--30, private sector.}
+  \label{tab:honest_did}
+  \input{../analysis/output/tables/table_honest_did}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Robust 95\% confidence intervals for the average post-ChatGPT Q5-vs-Q1 employment difference, ages 21--30, private sector, under the relative-magnitude restriction of \citet{rambachan2023}. $\bar{M}=0$ imposes exact parallel trends; $\bar{M}=1$ allows post-period violations as large as the worst pre-period violation. ``Breakdown'' is the largest $\bar{M}$ for which the interval excludes zero. ``Original'' is the conventional 95\% interval. Computed from the cell-level Poisson event study of Section~\ref{sec:regression:age}.\end{minipage}
+\end{table}
 
 % =============================================================================
 \section{Discussion}\label{sec:discussion}
+
+This section places the Norwegian results in cross-country context, weighs the non-AI explanations that could generate the same age--exposure gradient, and draws out the implications for how AI-related adjustment is likely to surface in a high-adoption, centrally bargained economy.
 
 \subsection{Cross-Country Comparison}\label{sec:discussion:crosscountry}
 
@@ -395,13 +462,6 @@ The exposure patterns in Figure~\ref{fig:age_by_quintile} are relative: any nega
 \subsection{Implications}\label{sec:discussion:implications}
 
 The public-sector null and the limited wage response are consistent with Norway's two-tier bargaining system \citep{bhuller2022} channelling any AI-related adjustment toward the quantity margin in the private sector. Downward-rigid wage floors limit short-run wage adjustment; the locally negotiated drift channel could deliver a wage response over a longer horizon. The systematic exposure-quintile evidence does not show the young-worker displacement reported for the US and Sweden, and the field has not converged on a standard ``AI exposure'' definition, so the results should be read with that measurement uncertainty in mind.
-
-
-\subsection{Agentic AI and the Post-ChatGPT Window}\label{sec:discussion:agentic}
-
-Our exposure measure captures the theoretical capability of large language models, not their take-up in workplaces. \citet{lindenlaub2026} show that occupation-level exposure predicts actual AI adoption poorly: an index based on comparative advantage, which weighs AI productivity against its cost and against worker pay, accounts for about 60 percent of the cross-occupation variation in observed adoption, against 14 percent for an exposure-only model, and the two diverge for roughly 30 percent of workers. Limited adoption despite high exposure may be one reason the post-2022 employment effects in our data are muted through early 2025.
-
-The window we primarily study also predates the most capable systems. The length of software tasks a model completes at 50 percent success has roughly doubled every seven months, so by 2026 the frontier handles multi-hour tasks \citep{metr2025}. The qualitative shift is toward agentic AI, autonomous systems that plan, use tools, and execute multi-step tasks. Under assistant-style use a worker checks each step of a production chain; under agentic use the worker checks only the final output, which can overturn the comparative-advantage logic that limited earlier adoption \citep{demirer2026}. Production-grade agentic coding tools arrived around the middle of 2025. The gap that opens for the youngest workers from spring 2025 (Appendix~B) coincides with this transition, though we should be cautious in its interpretation. If adoption rises as capability and comparative advantage shift, the labor-market effects of agentic systems could be larger than those of the assistant-style tools that dominate our sample.
 
 
 % =============================================================================
@@ -449,6 +509,31 @@ AI-related adjustment, the post-COVID correction in technology hiring, and suppl
   \label{fig:cohort_sizes}
 \end{figure}
 
+% --- raw (unadjusted) twins of the main-text descriptive figures ------------
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.85\textwidth]{../analysis/output/figures/figure_emp_byexposure.pdf}
+  \caption{Employment by AI-exposure quintile, all ages 21--60, private sector, raw (unadjusted).}
+  \label{fig:byexposure_raw}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Raw (not seasonally adjusted) twin of Figure~\ref{fig:byexposure_sa}; private-sector headcount pooled over ages 21--60, indexed to October 2022 = 1. Occupations are ranked by the Eloundou et al.\ GPT-4 score. The same series, with user-adjustable smoothing, is on the companion dashboard \citep{kiindeksen2026}.\end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{../analysis/output/figures/figure1_occupations_by_age.pdf}
+  \caption{Employment in selected occupations, by decade age group, raw (unadjusted).}
+  \label{fig:occupations_raw}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Raw (not seasonally adjusted) twin of Figure~\ref{fig:occupations_by_age}; private-sector employment per capita, indexed to October 2022 = 1, for the kiindeksen.no case-study occupations. The same series, with user-adjustable smoothing, is on the companion dashboard \citep{kiindeksen2026}.\end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{../analysis/output/figures/figure_emp_decade_private.pdf}
+  \caption{Employment by AI-exposure quintile and decade age group, private sector, raw (unadjusted).}
+  \label{fig:age_by_quintile_raw}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Raw (not seasonally adjusted) twin of Figure~\ref{fig:age_by_quintile}; private-sector employment per capita, indexed to October 2022 = 1. Occupations are ranked by the Eloundou et al.\ GPT-4 score. Q1 (lightest) = least exposed; Q5 (darkest) = most exposed. The same series, with user-adjustable smoothing, is on the companion dashboard \citep{kiindeksen2026}.\end{minipage}
+\end{figure}
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\textwidth]{../analysis/output/figures/figure5b_age_by_quintile_handa.pdf}
@@ -463,6 +548,14 @@ AI-related adjustment, the post-COVID correction in technology hiring, and suppl
   \caption{Employment by Handa et al.\ augmentation-exposure quintile and decade age group, private sector.}
   \label{fig:age_by_quintile_handa_aug}
   \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Private-sector employment indexed to October 2022 = 1. Occupations are ranked by the Handa et al.\ augmentation share.\end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{../analysis/output/figures/figure_kontantlonn_decade_private.pdf}
+  \caption{Monthly cash earnings by AI-exposure quintile and decade age group, private sector.}
+  \label{fig:kontantlonn_by_quintile}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Mean monthly cash earnings, indexed to October 2022 = 1. Occupations are ranked by the Eloundou et al.\ exposure score. Strong seasonal patterns (December bonuses, June holiday pay) are visible in all panels.\end{minipage}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -549,6 +642,16 @@ Figure~\ref{fig:bcc_es} reports the Poisson event study. For workers aged 22--25
   \label{fig:bcc_es}
   \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Q5-vs-Q1 Poisson event-study coefficients, in log points, by six age bins from 22--25 to 50--55, relative to October 2022. Firm fixed effects; standard errors clustered at the firm. Shaded bands: 95\% confidence intervals. Sample 2021m1--2026m2. Dashed line marks the November 2022 ChatGPT release.\end{minipage}
 \end{figure}
+
+We subject the 22--25 event study to the same honest difference-in-differences sensitivity analysis as the main 21--30 sample (Section~\ref{sec:regression:robust}), applied to the Q5-vs-Q1 firm-FE coefficients. Because only the point estimates and standard errors of these coefficients are exported from the secure server, we approximate their variance-covariance matrix as diagonal; the result in Table~\ref{tab:honest_did_bcc} is therefore indicative rather than exact. The conventional interval excludes zero, but the result is not robust: allowing post-period violations even half as large as the worst pre-ChatGPT violation ($\bar{M}=0.5$) already returns an interval that includes zero, and the breakdown value is essentially zero. The late-opening 22--25 gap is thus significant only under exact parallel trends, consistent with reading the recent divergence as an emerging pattern to monitor rather than an identified effect.
+
+\begin{table}[htbp]
+  \centering
+  \caption{HonestDiD sensitivity of the Q5-vs-Q1 employment effect, ages 22--25 (Brynjolfsson-style sample, diagonal-covariance approximation).}
+  \label{tab:honest_did_bcc}
+  \input{../analysis/output/tables/table_honest_did_bcc}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Robust 95\% confidence intervals for the average post-ChatGPT Q5-vs-Q1 employment difference, ages 22--25, under the relative-magnitude restriction of \citet{rambachan2023}. Computed from the exported firm-FE event-study coefficients and standard errors with a \emph{diagonal} variance-covariance approximation (the full matrix is not exported), so the intervals are indicative. $\bar{M}=0$ is exact parallel trends; ``Breakdown'' is the largest $\bar{M}$ for which the interval excludes zero. Intervals at higher $\bar{M}$ are truncated at the sensitivity search grid ($\pm1.5$).\end{minipage}
+\end{table}
 
 \begin{figure}[htbp]
   \centering
