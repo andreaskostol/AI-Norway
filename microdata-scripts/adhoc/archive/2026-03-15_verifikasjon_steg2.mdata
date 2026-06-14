@@ -1,0 +1,4 @@
+require no.ssb.fdb:51 as db
+create-dataset test2
+import db/ARBLONN_ARB_ARBMARK_STATUS 2025-01-16 as arbstatus
+tabulate arbstatus

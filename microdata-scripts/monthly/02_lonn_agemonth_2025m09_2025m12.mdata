@@ -1,0 +1,135 @@
+require no.ssb.fdb:52 as db
+
+create-dataset kobling
+import db/ARBEIDSFORHOLD_PERSON as personid
+
+create-dataset pers
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+
+create-dataset y2025m09
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-09-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2025-09-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2025-09-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2025-09-16 as timelonn
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m09
+use pers
+merge fodtaarmd into y2025m09 on personid
+
+use y2025m09
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 9
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+delete-dataset y2025m09
+
+create-dataset y2025m10
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-10-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2025-10-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2025-10-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2025-10-16 as timelonn
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m10
+use pers
+merge fodtaarmd into y2025m10 on personid
+
+use y2025m10
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 10
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+delete-dataset y2025m10
+
+create-dataset y2025m11
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-11-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2025-11-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2025-11-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2025-11-16 as timelonn
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m11
+use pers
+merge fodtaarmd into y2025m11 on personid
+
+use y2025m11
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 11
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+delete-dataset y2025m11
+
+create-dataset y2025m12
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-12-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2025-12-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2025-12-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2025-12-16 as timelonn
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m12
+use pers
+merge fodtaarmd into y2025m12 on personid
+
+use y2025m12
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 12
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+delete-dataset y2025m12

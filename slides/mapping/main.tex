@@ -1,0 +1,107 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+% Theme: Metropolis (TeX Live >= 2017). Fallback note below.
+\usetheme{metropolis}
+\metroset{numbering=none, progressbar=foot, sectionpage=progressbar}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{ragged2e}
+
+\input{tikz_macros}
+
+% Single accent color matching paper's hyperref blue
+\definecolor{accent}{HTML}{1F4E79}
+\setbeamercolor{progress bar}{fg=accent}
+\setbeamercolor{title separator}{fg=accent}
+\setbeamercolor{frametitle}{bg=accent}
+\setbeamercolor{alerted text}{fg=accent}
+
+% Helper: caption-style footer under a frame
+\newcommand{\sourceline}[1]{%
+  \par\medskip
+  {\scriptsize\itshape\color{black!55} #1\par}%
+}
+
+\title{Mapping AI Exposure to Norwegian Occupations}
+\subtitle{Construction of four exposure measures on STYRK-08}
+\author{Øystein Hernæs\inst{1} \and Andreas R.\ Kostøl\inst{2}}
+\institute{\inst{1}Frisch Centre \and \inst{2}BI Norwegian Business School}
+\date{May 2026}
+
+\begin{document}
+
+\maketitle
+
+% ---------------------------------------------------------------
+\begin{frame}{Roadmap}
+\begin{itemize}\setlength{\itemsep}{6pt}
+  \item \textbf{Eloundou et al.\ (2024):} task-level LLM exposure rated by humans and GPT-4
+  \item \textbf{Handa et al.\ (2025):} revealed usage from Claude.ai conversations
+  \item \textbf{Felten et al.\ (2021):} AI progress on the abilities required by each occupation
+  \item \textbf{Anthropic (2026):} time-weighted observed Claude usage at occupation level
+\end{itemize}
+\vspace{1em}
+Common destination: a 4-digit STYRK-08 score for every Norwegian occupation.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Why a mapping step is needed}
+\begin{itemize}\setlength{\itemsep}{8pt}
+  \item All four measures are built on US occupation codes (SOC).
+  \item Norwegian register data use STYRK-08.
+  \item STYRK-08 $\equiv$ ISCO-08 at 4 digits (SSB Notater 17/2011).
+  \item Bridge: SOC $\to$ ISCO-08 via BLS crosswalk (Aug 2012, rev.\ June 2015).
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+\input{onet_intro}
+
+% ---------------------------------------------------------------
+\section{Eloundou et al.\ (2024)}
+\input{eloundou}
+\input{eloundou_examples}
+\input{eloundou_manytoone}
+\input{eloundou_distribution}
+
+% ---------------------------------------------------------------
+\section{Handa et al.\ (2025)}
+\input{handa}
+
+% ---------------------------------------------------------------
+\section{Felten et al.\ (2021)}
+\input{felten}
+
+% ---------------------------------------------------------------
+\section{Anthropic (2026)}
+\input{anthropic}
+
+% ---------------------------------------------------------------
+\section*{Comparison}
+
+\begin{frame}{Four measures, one destination}
+\centering\small
+\begin{tabular}{lllc}
+\toprule
+Measure & Input unit & US code system & STYRK coverage \\
+\midrule
+Eloundou (2024)   & O*NET task ($E_1$, $E_2$)              & SOC 2018 & 97.5\,\% \\
+Handa (2025)      & Claude conversation $\to$ O*NET task   & SOC 2010 & 86.5\,\% \\
+Felten (2021)     & O*NET ability $\times$ AI progress     & SOC 2010 & 95.8\,\% \\
+Anthropic (2026)  & Time-weighted Claude usage             & SOC 2010 & 95.3\,\% \\
+\bottomrule
+\end{tabular}
+\vspace{1em}
+
+\justifying\small
+All four measures reach STYRK-08 via the BLS SOC$\to$ISCO crosswalk. They differ in the input unit (task vs.\ ability vs.\ conversation), in whether exposure is theoretical or revealed, and in whether automation and augmentation are separated.
+\end{frame}
+
+\end{document}

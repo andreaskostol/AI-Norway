@@ -1,0 +1,31 @@
+require no.ssb.fdb:51 as db
+
+create-dataset jobber
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-01-16 as yrke
+
+generate yrke4 = substr(yrke, 1, 4)
+
+create-dataset kobling
+import db/ARBEIDSFORHOLD_PERSON as personid
+merge personid into jobber
+
+create-dataset personer
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+generate alder = 2025 - int(fodtaarmd / 100)
+
+use personer
+merge alder into jobber on personid
+
+use jobber
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+
+tabulate yrke4 alder_gr, flatten

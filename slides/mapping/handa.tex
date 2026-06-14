@@ -1,0 +1,82 @@
+% Handa et al. (2025): Anthropic Economic Index, revealed Claude usage
+
+\begin{frame}{What Handa et al.\ measure}
+\begin{itemize}\setlength{\itemsep}{6pt}
+  \item Sample of Claude.ai conversations classified into O*NET tasks
+  \item Occupation exposure $=$ share of conversations matched to that occupation's tasks
+  \item Each conversation also classified as:
+  \begin{itemize}
+    \item \textbf{automation:} directive, user issues a request, accepts the output
+    \item \textbf{augmentation:} iterative feedback, refinement
+  \end{itemize}
+  \item Released as the Anthropic Economic Index (April 2025)
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{The code chain}
+\centering
+\begin{tikzpicture}[node distance=1.0cm and 1.6cm]
+  \node[codebox=cTASK] (conv) {\cbox{cTASK}{Claude conv.}{millions}{classified}};
+  \node[codebox=cTASK, right=of conv] (task) {\cbox{cTASK}{O*NET task}{1808, 1809, \dots}{Pharmacists}};
+  \node[codebox=cSOC10, right=of task] (soc10) {\cbox{cSOC10}{SOC 2010}{29-1051}{Pharmacists}};
+  \node[codebox=cSTYRK, right=of soc10] (styrk) {\cbox{cSTYRK}{STYRK-08}{2262}{Farmasøyter}};
+
+  \draw[chain] (conv) -- node[arrowlabel]{classify} (task);
+  \draw[chain] (task) -- node[arrowlabel]{aggregate} (soc10);
+  \draw[chain] (soc10) -- node[arrowlabel]{BLS 2012} (styrk);
+\end{tikzpicture}
+
+\vspace{1.5em}
+No SOC 2018 step: the Anthropic Economic Index reports occupation labels on SOC 2010.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Worked example: Pharmacists (SOC 29-1051)}
+\centering\scriptsize
+\begin{tabular}{p{7.5cm}cccc}
+\toprule
+O*NET task & share & directive & feedback $+$ iter. & \\
+\midrule
+Provide info on drug interactions and side effects               & 0.0762 & 0.081 & 0.036 & \\
+Assess identity, strength, or purity of medications              & 0.0412 & 0.112 & 0.060 & \\
+Compound and dispense medications                                & 0.0123 & 0.167 & 0.000 & \\
+Publish educational information for pharmacists or patients     & 0.0091 & 0.000 & 0.000 & \\
+Plan procedures for mixing, packaging, or labeling pharmaceuticals & 0.0041 & 0.000 & 0.000 & \\
+Provide services for patient management of conditions            & 0.0036 & 0.000 & 0.000 & \\
+Analyze prescribing trends to monitor patient compliance         & 0.0016 & 0.000 & 0.000 & \\
+\multicolumn{2}{l}{\itshape \dots\ 13 of 20 tasks below threshold} & & & \\
+\midrule
+\textbf{Occupation overall exposure} & \textbf{0.1482} & & & \\
+\multicolumn{4}{l}{\textbf{Automation share $=$ 0.097, augmentation share $=$ 0.903 (Q4 overall)}} & \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.4em}
+Task coverage: 7 of 20 tasks matched in the Claude conversation sample (35\,\%).
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Worked example: many-to-one mapping}
+\centering
+\begin{tikzpicture}[node distance=0.4cm and 0.5cm]
+  \node[codebox=cSOC10] (a) {\cbox{cSOC10}{SOC 2010}{11-1011}{Chief Exec.}};
+  \node[codebox=cSOC10, right=of a] (b) {\cbox{cSOC10}{SOC 2010}{11-1021}{Gen.\ \& Ops}};
+  \node[codebox=cSOC10, right=of b] (c) {\cbox{cSOC10}{SOC 2010}{11-9161}{Emergency Mgr.}};
+
+  \node[codebox=cSTYRK, below=1.2cm of b, minimum width=4.2cm] (s) {\cbox{cSTYRK}{STYRK-08}{1112}{Adm.\ direktører \quad \textbf{exposure $=0.070$, Q3}}};
+
+  \draw[chain] (a) -- (s);
+  \draw[chain] (b) -- (s);
+  \draw[chain] (c) -- (s);
+\end{tikzpicture}
+
+\vspace{0.3em}
+\footnotesize
+\begin{itemize}\setlength{\itemsep}{1pt}
+  \item Three SOC 2010 codes converge to STYRK 1112; share weights pool across all three
+  \item 19 of 89 underlying tasks match a Claude conversation (21\,\% coverage)
+  \item Automation share $0.532$, augmentation share $0.468$
+  \item Generalist penalty: only $18.3\,\%$ of O*NET tasks appear in Claude conversations
+\end{itemize}
+\end{frame}

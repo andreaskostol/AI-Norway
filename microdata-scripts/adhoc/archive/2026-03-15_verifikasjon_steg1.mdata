@@ -1,0 +1,4 @@
+require no.ssb.fdb:51 as db
+create-dataset test1
+import db/BEFOLKNING_KJOENN as kjoenn
+tabulate kjoenn

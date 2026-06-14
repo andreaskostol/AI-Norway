@@ -1,0 +1,451 @@
+SyssGrpIKT_code,SyssGrpIKT_label,NACE2007_code,NACE2007_label,ContentsCode_code,ContentsCode_label,Tid_code,Tid_label,value
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,20
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,19
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,19
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,19
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,18
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,19
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,17
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,20
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,21
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,24
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,23
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,22
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,25
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,24
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,23
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,20
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,22
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,21
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,7
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,7
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,6
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,7
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,6
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,6
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,6
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,7
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,5
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,10
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,15
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,10
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,14
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,22
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,16
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,12
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,17
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,23
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,29
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,29
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,34
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,32
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,30
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,31
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,22
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,35
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,30
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,10
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,8
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,10
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,9
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,12
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,13
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,9
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,11
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,24
+00,Alle sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,21
+00,Alle sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,17
+00,Alle sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,13
+00,Alle sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,14
+00,Alle sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,11
+00,Alle sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,16
+00,Alle sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,12
+00,Alle sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,15
+00,Alle sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,12
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,8
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,10
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,7
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,7
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,8
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,7
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,8
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,9
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,9
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,75
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,74
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,60
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,73
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,63
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,71
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,66
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,74
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,72
+00,Alle sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,23
+00,Alle sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,25
+00,Alle sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,31
+00,Alle sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,22
+00,Alle sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,24
+00,Alle sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,23
+00,Alle sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,21
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,22
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,25
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,12
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,12
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,12
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,12
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,11
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,12
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,10
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,14
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,15
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,13
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,11
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,11
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,16
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,7
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,10
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,10
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,11
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,7
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,4
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,4
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,3
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,5
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,3
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,4
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,4
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,5
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,0
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,5
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,13
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,2
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,4
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,19
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,5
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,3
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,9
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,15
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,18
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,21
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,24
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,22
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,20
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,21
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,14
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,27
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,24
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,8
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,5
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,6
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,7
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,10
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,10
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,8
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,9
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,25
+02,10-19 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,15
+02,10-19 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,6
+02,10-19 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,4
+02,10-19 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,5
+02,10-19 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,0
+02,10-19 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,7
+02,10-19 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,7
+02,10-19 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,8
+02,10-19 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,5
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,6
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,9
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,5
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,5
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,3
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,4
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,5
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,8
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,7
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,68
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,64
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,46
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,68
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,50
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,73
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,59
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,70
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,59
+02,10-19 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,15
+02,10-19 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,18
+02,10-19 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,24
+02,10-19 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,13
+02,10-19 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,15
+02,10-19 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,15
+02,10-19 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,14
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,16
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,18
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,21
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,20
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,20
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,18
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,19
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,19
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,18
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,19
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,19
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,17
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,15
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,14
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,16
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,23
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,19
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,18
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,17
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,14
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,10
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,9
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,7
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,7
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,6
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,6
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,5
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,7
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,7
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,9
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,10
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,12
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,20
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,14
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,22
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,20
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,20
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,30
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,35
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,28
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,35
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,33
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,32
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,31
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,23
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,39
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,26
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,11
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,10
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,13
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,4
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,12
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,18
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,6
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,7
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,17
+03,20-49 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,19
+03,20-49 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,19
+03,20-49 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,12
+03,20-49 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,11
+03,20-49 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,10
+03,20-49 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,16
+03,20-49 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,14
+03,20-49 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,16
+03,20-49 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,10
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,9
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,11
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,6
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,8
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,10
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,7
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,11
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,7
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,9
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,75
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,81
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,67
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,73
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,66
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,60
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,68
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,75
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,80
+03,20-49 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,26
+03,20-49 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,28
+03,20-49 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,35
+03,20-49 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,27
+03,20-49 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,27
+03,20-49 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,22
+03,20-49 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,25
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,20
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,23
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,33
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,32
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,34
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,34
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,35
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,33
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,26
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,32
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,35
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,32
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,35
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,34
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,38
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,36
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,30
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,22
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,32
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,36
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,17
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,10
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,13
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,12
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,12
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,13
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,12
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,14
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,16
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,31
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,26
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,31
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,43
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,43
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,36
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,29
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,42
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,33
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,49
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,50
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,58
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,57
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,60
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,63
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,42
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,48
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,49
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,16
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,19
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,21
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,18
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,18
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,18
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,9
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,24
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,20
+04,50-99 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,28
+04,50-99 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,32
+04,50-99 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,36
+04,50-99 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,36
+04,50-99 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,35
+04,50-99 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,34
+04,50-99 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,15
+04,50-99 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,22
+04,50-99 sysselsette,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,20
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,8
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,11
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,9
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,8
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,10
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,12
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,14
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,13
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,17
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,79
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,75
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,78
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,77
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,82
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,80
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,75
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,77
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,87
+04,50-99 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,39
+04,50-99 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,38
+04,50-99 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,39
+04,50-99 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,34
+04,50-99 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,38
+04,50-99 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,35
+04,50-99 sysselsette,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,30
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,38
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,41
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,56
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,57
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,61
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,61
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,61
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,61
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,50
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,58
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,56
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,69
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,69
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,70
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,72
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,73
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,74
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,59
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,68
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,65
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,37
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,42
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,42
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,39
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,37
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,37
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,29
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,38
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,34
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,35
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,51
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,62
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,59
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,73
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,63
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,40
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,60
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,58
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,75
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,74
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,85
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,87
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,79
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,79
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,70
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,71
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,69
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,35
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,30
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,42
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,44
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,43
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,43
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,38
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,42
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,41
+05,100 sysselsette eller fleire,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,54
+05,100 sysselsette eller fleire,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,59
+05,100 sysselsette eller fleire,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,56
+05,100 sysselsette eller fleire,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,57
+05,100 sysselsette eller fleire,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,59
+05,100 sysselsette eller fleire,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,57
+05,100 sysselsette eller fleire,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,41
+05,100 sysselsette eller fleire,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,53
+05,100 sysselsette eller fleire,49-53,Transport og lagring,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,57
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,35
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,26
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,43
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,42
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,57
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,53
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,46
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,52
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,35
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,95
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,93
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,87
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,94
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,89
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,90
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,82
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,87
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,92
+05,100 sysselsette eller fleire,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2014,2014,50
+05,100 sysselsette eller fleire,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2015,2015,51
+05,100 sysselsette eller fleire,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2016,2016,59
+05,100 sysselsette eller fleire,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2017,2017,54
+05,100 sysselsette eller fleire,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2018,2018,54
+05,100 sysselsette eller fleire,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2019,2019,56
+05,100 sysselsette eller fleire,68-74+77-82+95.1,"Anna tenesteyting, unntatt veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2020,2020,44
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2022,2022,55
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",SysselsetSpes,Føretaket sysselsett IKT-spesialistar,2024,2024,52

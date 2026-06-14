@@ -1,0 +1,11 @@
+require no.ssb.fdb:51 as db
+
+create-dataset test
+import db/ARBLONN_ARB_ANSETTELSESFORM 2025-01-16 as ansform
+
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+tabulate fast_jobb, flatten
+tabulate ansform, flatten
+tabulate ansform, nolabels flatten

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KI-indeksen — KI og det norske arbeidsmarkedet</title>
+<meta name="description" content="Månedlige indikatorer for hvordan kunstig intelligens påvirker sysselsetting i Norge, etter yrkers KI-eksponering og aldersgrupper. Bygget på registerdata fra A-ordningen.">
+<link rel="canonical" href="https://kiindeksen.no/">
+<link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
+<link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
+<link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
+<link rel="stylesheet" href="style.css?v=20260614b">
+<link rel="icon" href="assets/koja-mark.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-logos">
+      <a href="/" title="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI">
+        <img src="assets/ki-logo.png"
+             alt="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI"></a>
+    </div>
+    <nav class="site-nav">
+      <a href="#eksponering">Eksponering</a>
+      <a href="#alder">Alder</a>
+      <a href="#yrker">Yrkescase</a>
+      <a href="#bruk">KI-bruk</a>
+      <a href="#oppsummering">Oppsummering</a>
+      <a href="#metode">Metode</a>
+      <a href="#team">Team</a>
+      <a href="#data">Data</a>
+    </nav>
+    <div class="brand">
+      <a class="lang-toggle" href="/en/" hreflang="en" lang="en">English</a>
+      <p class="tagline">Månedlige indikatorer for kunstig intelligens og det norske arbeidsmarkedet</p>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+<aside class="toc" aria-label="Innhold">
+  <div class="toc-title">Innhold</div>
+  <nav id="toc-nav">
+    <a href="#intro">KI-indeksen</a>
+    <a href="#eksponering">1 · KI-eksponering</a>
+    <a href="#alder-eksponering">2 · Alder × eksponering</a>
+    <a href="#alder">3 · Alder</a>
+    <a href="#sammensetning">4 · Sammensetning</a>
+    <a href="#yrker">5–8 · Yrkescase</a>
+    <a href="#bruk-vekst">9 · Vekst etter KI-bruk</a>
+    <a href="#bruk">10–11 · KI-bruk</a>
+    <a href="#oppsummering">Siste 12 måneder</a>
+    <a href="#metode">Metode</a>
+    <a href="#team">Team</a>
+    <a href="#data">Last ned data</a>
+    <a href="#sitering">Siter KI-indeksen</a>
+  </nav>
+</aside>
+<div class="content">
+
+<section id="intro" class="hero">
+  <div class="container">
+    <h2 class="hero-title">Hvorfor KI-indeks?</h2>
+    <p class="lede">
+      Fordi kunstig intelligens utvikler seg raskt og kan ha store
+      konsekvenser for arbeidsmarkedet. Verktøyene blir stadig bedre,
+      men det tar tid før virksomheter tar dem i bruk og organiserer
+      arbeidet annerledes.
+      Derfor kan virkningen komme gradvis: først i hvilke jobber som
+      lyses ut, hvem som ansettes, eller hvilke aldersgrupper som vokser
+      saktere. KI-indeksen følger slike endringer løpende, måned for
+      måned.
+    </p>
+    <div class="quick-summary">
+      <h3>For den utålmodige leseren</h3>
+      <p class="quick-scope">Alle tall på siden gjelder lønnstakere i
+        <strong>norsk privat sektor</strong> (offentlig sektor inngår
+        ikke).</p>
+      <ul>
+        <li><strong>Ingen jobbkrise i Norge:</strong>
+          samlet sysselsetting i privat sektor vokser, og andelen
+          sysselsatte er stabil.</li>
+        <li id="qs-2"><strong>KI-indeksen er svakt positiv:</strong>
+          siden perioden før ChatGPT har samlet sysselsetting i de mest
+          KI-eksponerte yrkene vokst om lag like mye som i de minst
+          eksponerte.</li>
+        <li><strong>Men det er viktige forskjeller på tvers av
+          alder:</strong> blant de yngste (21–30 år) i de mest
+          KI-eksponerte yrkene har sysselsettingen falt, både
+          sammenlignet med unge i andre yrker og sammenlignet med eldre
+          arbeidstakere i de samme yrkene. Fallet har tiltatt det siste
+          året.</li>
+        <li><strong>To mekanismer virker i hver sin retning:</strong>
+          i yrkene der KI-bruken er mest augmenterende (KI hjelper
+          arbeidstakeren) har sysselsettingen vokst klart mer enn i
+          andre yrker siden ChatGPT-lanseringen, mens veksten har vært
+          klart svakere der bruken er mest automatiserende (KI utfører
+          oppgaven).</li>
+      </ul>
+    </div>
+    <p class="lede lede-secondary">
+      Indeksen følger sysselsettingen i norsk privat sektor med bruk av
+      <a href="https://www.microdata.no/" target="_blank"
+         rel="noopener">microdata.no</a>, tilrettelagt av SSB. Yrker er
+      gruppert etter hvor eksponert hvert yrke er for store
+      språkmodeller (<a href="https://www.science.org/doi/10.1126/science.adj0998"
+         target="_blank" rel="noopener">Eloundou m.fl. 2024</a>) og
+      etter arbeidstakernes alder — en norsk parallell til
+      Stanford Digital Economy Lab (DEL) sitt
+      <a href="https://digitaleconomy.stanford.edu/project/indicators/canaries-dashboard/"
+         target="_blank" rel="noopener">Canaries Dashboard</a>, bygget på
+      registerdata for hele populasjonen av private lønnstakere.
+    </p>
+    <div class="hero-grid" aria-label="KI-gapet: spredning i sysselsettingsvekst før og etter ChatGPT">
+      <div class="headline-card">
+        <div class="headline-label">KI-indeksen</div>
+        <div class="headline-value" id="headline-value">–</div>
+        <div class="headline-date" id="headline-date"></div>
+        <div class="headline-yoy" id="headline-yoy"></div>
+        <div class="headline-def">
+          KI-indeksen viser om jobbveksten siden ChatGPT har vært
+          sterkere eller svakere i yrkene der KI kan utføre flest
+          arbeidsoppgaver, sammenlignet med yrkene der KI kan utføre
+          færrest. Et positivt tall betyr at de mest KI-utsatte yrkene
+          har vokst mest; et negativt tall betyr at de har vokst minst
+          — et tidlig varsel om at KI kan fortrenge jobber.
+          <details class="def-details">
+            <summary>Slik beregnes tallet</summary>
+            Sysselsettingsvekst i de mest KI-eksponerte yrkene minus
+            veksten i de minst eksponerte: snittet av de tre siste
+            månedene mot nivået i oktober 2022, måneden rett før
+            ChatGPT. Vi bruker oktober 2022 som referanse for å unngå
+            den ulike gjeninnhentingen etter pandemien i 2021–2022.
+            Justeringen følger valget under.
+          </details>
+        </div>
+      </div>
+      <div id="chart-headline" class="chart chart-headline"></div>
+    </div>
+    <p class="kpi-note" id="kpi-note"></p>
+  </div>
+</section>
+
+<div class="controls-bar" id="controls-bar">
+  <div class="container controls-inner">
+    <div class="control">
+      <label for="sel-outcome">Utfall</label>
+      <button class="info-btn" type="button" data-term="utfall"
+              aria-label="Hva betyr dette?">?</button>
+      <select id="sel-outcome">
+        <option value="employment" selected>Sysselsetting</option>
+        <option value="hires">Nyansettelser</option>
+        <option value="wages">Lønn (FTE-justert)</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="sel-adjustment">Justering</label>
+      <button class="info-btn" type="button" data-term="justering"
+              aria-label="Hva betyr dette?">?</button>
+      <select id="sel-adjustment">
+        <option value="raw">Rå (ujustert)</option>
+        <option value="sa" selected>Sesongjustert</option>
+        <option value="percap">Per innbygger</option>
+        <option value="percap_sa">Per innbygger, sesongjustert</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="sel-smoothing">Glatting</label>
+      <button class="info-btn" type="button" data-term="glatting"
+              aria-label="Hva betyr dette?">?</button>
+      <select id="sel-smoothing">
+        <option value="1">Ingen</option>
+        <option value="3">3 mnd glidende snitt</option>
+        <option value="6" selected>6 mnd glidende snitt</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="sel-epoch">Referanse</label>
+      <button class="info-btn" type="button" data-term="referanse"
+              aria-label="Hva betyr dette?">?</button>
+      <select id="sel-epoch">
+        <option value="chatgpt" selected>ChatGPT (nov. 2022)</option>
+        <option value="claudecode">Agentisk KI – Claude Code (feb. 2025)</option>
+      </select>
+    </div>
+    <div class="control control-note" id="idx-note">
+      Indeks = 100 i november 2022 (lansering av ChatGPT)
+    </div>
+  </div>
+</div>
+
+<main class="container">
+
+  <section id="eksponering" class="chart-section">
+    <h2 id="title-exposure">1 · Sysselsetting etter KI-eksponering</h2>
+    <p class="chart-intro">
+      Figuren viser om jobbene der KI kan gjøre mest, utvikler seg
+      annerledes enn resten av arbeidsmarkedet. De 397 yrkene (STYRK-08)
+      med en eksponeringsskår fra
+      <a href="https://www.science.org/doi/10.1126/science.adj0998"
+         target="_blank" rel="noopener">Eloundou m.fl. (2024)</a>
+      er delt i fem like store grupper<button class="info-btn"
+        type="button" data-term="kvintil"
+        aria-label="Hva betyr dette?">?</button>, fra kvintil 1 (minst
+      eksponert for språkmodeller) til kvintil 5 (mest
+      eksponert)<button class="info-btn" type="button"
+        data-term="eksponering"
+        aria-label="Hva betyr dette?">?</button>. Linjene
+      viser hver gruppes utfall — sysselsetting, nyansettelser eller
+      FTE-justert gjennomsnittslønn, etter valget øverst — indeksert til
+      100 i november 2022<button class="info-btn" type="button"
+        data-term="indeks" aria-label="Hva betyr dette?">?</button>.
+      Hvis en linje ligger lavere enn de andre, har den gruppen hatt
+      svakere utvikling siden ChatGPT kom. Den bratte oppgangen i
+      2021–2022 (skyggelagt felt) er gjeninnhentingen i arbeidsmarkedet
+      etter pandemien; fordi den løftet alle gruppene, brukes oktober
+      2022 — ikke hele perioden — som referanse for KI-indeksen.
+    </p>
+    <div id="chart-by-exposure" class="chart chart-tall"></div>
+  </section>
+
+  <section id="alder-eksponering" class="chart-section">
+    <h2>2 · Alder × KI-eksponering</h2>
+    <p class="chart-intro">
+      Hvis KI særlig påvirker dem med minst arbeidserfaring, bør
+      utslagene synes først blant de unge i de mest eksponerte yrkene.
+      Velg en aldersgruppe og se utviklingen per eksponeringskvintil.
+    </p>
+    <div class="btn-row" id="age-facet-buttons" role="tablist"></div>
+    <div id="chart-age-by-exposure" class="chart chart-tall"></div>
+  </section>
+
+  <section id="alder" class="chart-section">
+    <h2 id="title-age">3 · Sysselsetting etter alder</h2>
+    <p class="chart-intro">
+      Samme utvalg av yrker, gruppert etter arbeidstakernes alder. Hvis
+      KI først fortrenger dem med minst erfaring, er det de yngste
+      gruppene som er «kanarifuglene i kullgruven».
+    </p>
+    <div id="chart-by-age" class="chart"></div>
+  </section>
+
+  <section id="sammensetning" class="chart-section">
+    <h2>4 · Sysselsettingsandeler i november 2022</h2>
+    <p class="chart-intro">
+      Hver gruppes andel av samlet sysselsetting i utvalget i november
+      2022. I motsetning til det amerikanske ADP-panelet, der to
+      tredjedeler av sysselsettingen ligger i de to mest eksponerte
+      kvintilene, er norsk privat sysselsetting nokså jevnt fordelt.
+    </p>
+    <div id="chart-composition" class="chart chart-short"></div>
+  </section>
+
+  <section id="yrker" class="chart-section">
+    <h2>Yrkescase</h2>
+    <p class="chart-intro">
+      Fire yrker som ofte trekkes fram i diskusjonen om KI og arbeid:
+      programvareutviklere og kundebehandlere (høy eksponering),
+      elektrikere og hjemmehjelpere (lav eksponering).
+      Indeks per aldersgruppe innenfor yrket.
+    </p>
+
+    <h3>5 · Programvareutviklere</h3>
+    <div id="chart-occ-software_developers" class="chart chart-occ"></div>
+    <p class="chart-footnote">STYRK-08 2512–2514 og 2519. Om lag 26 000
+      ansatte i privat sektor (21–60 år) i november 2022. Høy
+      KI-eksponering.</p>
+
+    <h3>6 · Kundebehandlere</h3>
+    <div id="chart-occ-customer_service" class="chart chart-occ"></div>
+    <p class="chart-footnote">STYRK-08 4222 (kundesentermedarbeidere).
+      Om lag 4 000 ansatte i basismåneden; seriene for de eldste gruppene
+      bygger på få personer og er volatile. Høy KI-eksponering.</p>
+
+    <h3>7 · Elektrikere</h3>
+    <div id="chart-occ-electricians" class="chart chart-occ"></div>
+    <p class="chart-footnote">STYRK-08 7411. Håndverksyrke med lav
+      KI-eksponering.</p>
+
+    <h3>8 · Hjemmehjelpere</h3>
+    <div id="chart-occ-home_health_aides" class="chart chart-occ"></div>
+    <p class="chart-footnote">STYRK-08 5322. Om lag 9 000 ansatte i
+      privat sektor i basismåneden; den store kommunale delen av yrket
+      inngår ikke. Lav KI-eksponering.</p>
+  </section>
+
+  <section id="bruk-vekst" class="chart-section">
+    <h2>9 · Vekst etter KI-bruk</h2>
+    <p class="chart-intro" id="usage-summary-subtitle"></p>
+    <div id="usage-infographic" class="infographic"></div>
+    <p class="chart-footnote">
+      Yrker gruppert etter andelen av yrkets Claude-forespørsler som er
+      automatiserende (øverst) hhv. augmenterende (nederst), jf.
+      figur 10 under. Sysselsetting, alle aldre samlet; justeringen
+      følger valget øverst. Kilde:
+      <a href="https://www.anthropic.com/economic-index" target="_blank"
+         rel="noopener">Anthropic Economic Index</a>
+      (<a href="https://arxiv.org/abs/2503.04761" target="_blank"
+         rel="noopener">Handa m.fl. 2025</a>).
+    </p>
+  </section>
+
+  <section id="bruk" class="chart-section">
+    <h2>10 · Sysselsetting etter KI-bruk</h2>
+    <p class="chart-intro">
+      Eksponeringsmålene er anslag på hva språkmodeller <em>kan</em>
+      gjøre. Her grupperes yrkene i stedet etter observert bruk av Claude
+      (<a href="https://www.anthropic.com/economic-index" target="_blank"
+         rel="noopener">Anthropic Economic Index</a>,
+      <a href="https://arxiv.org/abs/2503.04761" target="_blank"
+         rel="noopener">Handa m.fl. 2025</a>): andelen av yrkets
+      forespørsler som er <strong>automatiserende</strong> (modellen
+      utfører oppgaven) eller <strong>augmenterende</strong> (modellen
+      hjelper til). «Ingen bruk» er yrker under spørringsterskelen.
+    </p>
+    <div class="control-row">
+      <div class="control">
+        <label for="sel-usage-pattern">Bruksmønster</label>
+        <select id="sel-usage-pattern">
+          <option value="Automation" selected>Automatisering</option>
+          <option value="Augmentation">Augmentering</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="sel-usage-age">Aldersgruppe</label>
+        <select id="sel-usage-age"></select>
+      </div>
+    </div>
+    <div id="chart-usage" class="chart chart-tall"></div>
+    <h3>11 · Andeler etter bruksgruppe</h3>
+    <p class="chart-intro">
+      Hver gruppes andel av samlet sysselsetting ved
+      normaliseringstidspunktet, for bruksmønsteret valgt ovenfor.
+    </p>
+    <div id="chart-usage-composition" class="chart chart-short"></div>
+  </section>
+
+  <section id="oppsummering" class="chart-section">
+    <h2 id="summary-title">Siste 12 måneder: Før og etter agentisk AI</h2>
+    <p class="chart-intro" id="summary-subtitle"></p>
+    <div id="summary-infographic" class="infographic"></div>
+    <p class="chart-footnote">
+      Punktene viser endring siste tolv måneder per gruppe; den vannrette
+      linjen er spennet mellom gruppene. Utfallsvalget
+      øverst gjelder også her. Kilde: KI-indeksen (kiindeksen.no),
+      A-ordningen via
+      <a href="https://www.microdata.no/" target="_blank"
+         rel="noopener">microdata.no</a>,
+      <a href="https://www.science.org/doi/10.1126/science.adj0998"
+         target="_blank" rel="noopener">Eloundou m.fl. (2024)</a>.
+    </p>
+  </section>
+
+  <section id="metode" class="prose-section">
+    <h2>Metode</h2>
+    <p>
+      Datagrunnlaget er A-ordningen via
+      <a href="https://www.microdata.no/" target="_blank"
+         rel="noopener">microdata.no</a>: hele populasjonen
+      av lønnstakere i norsk privat sektor, månedlig fra januar 2021, i
+      aldersgruppene 21–30, 31–40, 41–50 og 51–60 år. Yrkene kobles til
+      KI-eksponering fra
+      <a href="https://www.science.org/doi/10.1126/science.adj0998"
+         target="_blank" rel="noopener">Eloundou m.fl. (2024)</a>
+      og til observert Claude-bruk fra
+      <a href="https://www.anthropic.com/economic-index" target="_blank"
+         rel="noopener">Anthropic Economic Index</a>. Som standard vises
+      seriene sesongjustert og glattet med 6 måneders glidende snitt;
+      rå serier, annen glatting og befolkningsjusterte varianter
+      (per innbygger) kan velges øverst. Utvid punktene under for
+      fullstendige detaljer.
+    </p>
+
+    <details class="method-details">
+      <summary>Datagrunnlag og avgrensning</summary>
+      <p>
+        A-ordningen er arbeidsgivernes månedlige rapportering av alle
+        arbeidsforhold til myndighetene; vi bruker den via
+        microdata.no, tilrettelagt av SSB. Utvalget er alle lønnstakere
+        i privat sektor, 21–60 år. Referanseperioden for hver måned er
+        uken som inneholder den 16. «Canaries-utvalget» er de 397
+        STYRK-08-yrkeskodene som har en eksponeringsskår; det dekker
+        det store flertallet av privat sysselsetting.
+      </p>
+    </details>
+
+    <details class="method-details">
+      <summary>KI-eksponering og bruksgrupper</summary>
+      <p>
+        Hvert yrke (firesifret STYRK-08) er koblet til eksponeringsmålet
+        «beta» fra
+        <a href="https://www.science.org/doi/10.1126/science.adj0998"
+           target="_blank" rel="noopener">Eloundou m.fl. (2024,
+        <em>Science</em>)</a> via
+        yrkeskodeverkene ISCO-08 og SOC. Beta måler hvor stor andel av
+        yrkets oppgaver som kan utføres vesentlig raskere med store
+        språkmodeller og tilhørende programvare. Kvintilene er
+        likevektet per yrke (ikke sysselsettingsvektet), samme
+        konstruksjon som i DEL-dashboardet. Bruksgruppene i figur 9–11
+        bygger i stedet på observert bruk: andelen av yrkets
+        Claude-forespørsler som er klassifisert som automatiserende
+        hhv. augmenterende i Anthropic Economic Index
+        (<a href="https://arxiv.org/abs/2503.04761" target="_blank"
+           rel="noopener">Handa m.fl. 2025</a>), gruppert som i
+        <a href="https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
+           target="_blank" rel="noopener">Brynjolfsson, Chandar og Chen
+        (2025)</a>.
+      </p>
+    </details>
+
+    <details class="method-details">
+      <summary>Utfall: sysselsetting, nyansettelser og lønn</summary>
+      <p>
+        <em>Sysselsetting</em> er antall lønnstakere i gruppen.
+        <em>Nyansettelser</em> er antall jobber med registrert
+        startdato i vinduet mellom forrige og gjeldende månedlige
+        referansedato; serien er sterkt sesongpreget, så glidende
+        snitt eller sesongjustert visning anbefales. <em>Lønn</em> er
+        gruppens gjennomsnittlige kontantlønn per måned, vektet opp
+        til fulltidsekvivalent (FTE) med hver yrke-alder-celles
+        gjennomsnittlige stillingsprosent — slik at en deltidsstilling
+        teller som sin andel av et årsverk og lønnsendringer ikke
+        blandes med endringer i arbeidstid; lønnsseriene er nominelle.
+        Alle serier indekseres til 100 i referansemåneden (november
+        2022, eller februar 2025 når Claude Code er valgt).
+      </p>
+    </details>
+
+    <details class="method-details">
+      <summary>Sesongjustering</summary>
+      <p>
+        Norske arbeidsmarkedsserier har sterk sesongvariasjon (blant
+        annet januardippen i a-ordningen og sommertoppen i
+        nyansettelser). Sesongjusteringen er en transparent
+        X-11-kjerne, beregnet separat for hver serie:
+      </p>
+      <ol>
+        <li>Serien tas i logaritmer, slik at sesongmønsteret behandles
+          som multiplikativt.</li>
+        <li>Trenden estimeres med et sentrert 2×12-glidende snitt
+          (13 måneder, halv vekt på endepunktene), som per konstruksjon
+          er sesongfritt.</li>
+        <li>Sesongfaktoren for hver kalendermåned er gjennomsnittet av
+          avvikene fra trenden for den måneden, normalisert til å
+          summere til null — justeringen flytter ikke nivået.</li>
+        <li>Faktorene er estimert på januar 2021–desember 2024 og
+          deretter <strong>frosset</strong>: nye måneder endrer ikke
+          historien (releasene er stabile årganger), og en eventuell
+          KI-effekt etter 2024 kan ikke lekke inn i sesongfaktorene og
+          bli justert bort.</li>
+      </ol>
+      <p>
+        Innebygd kontroll: tolvmånedersendringer sammenligner samme
+        kalendermåned og er sesongfrie av konstruksjon; i gjeldende
+        release er de praktisk talt identiske beregnet på rå og
+        sesongjusterte serier (korrelasjon 1,000).
+      </p>
+    </details>
+
+    <details class="method-details">
+      <summary>Befolkningsjustering (per innbygger)</summary>
+      <p>
+        Befolkningen vokser ulikt på tvers av aldersgrupper, så rene
+        headcount-serier blander arbeidsmarkedsendringer med demografi:
+        en gruppe kan ha flere sysselsatte rett og slett fordi det er
+        blitt flere personer i alderen. Per innbygger-variantene deler
+        derfor antall sysselsatte på den bosatte befolkningen i samme
+        aldersgruppe (<a href="https://www.ssb.no/statbank/table/07459"
+           target="_blank" rel="noopener">SSB tabell 07459</a>,
+        kvartalstall interpolert til
+        måned; for serier som dekker alle aldre brukes samlet
+        befolkning 21–60 år). Indeksen måler da jobber per person —
+        sysselsettingsraten — i stedet for antall jobber. Eksempel:
+        unge og eldre i samlede headcount-tall kan se svært ulike ut
+        selv når sysselsettings<em>raten</em> deres utvikler seg likt.
+      </p>
+    </details>
+
+    <details class="method-details">
+      <summary>Glatting</summary>
+      <p>
+        Glattingen er et sentrert glidende snitt over 3 eller 6
+        måneder, beregnet i nettleseren. Ved endepunktene brukes den
+        delen av vinduet som finnes, slik at siste måned alltid vises.
+        Glatting og sesongjustering kan kombineres fritt;
+        standardvisningen er sesongjustert med 6 måneders snitt.
+      </p>
+    </details>
+
+    <details class="method-details">
+      <summary>Forskjeller fra DEL-dashboardet</summary>
+      <p>
+        DEL bruker et balansert panel på ~25&nbsp;000 amerikanske
+        firmaer med ADP-lønnsdata; vi bruker hele den norske
+        populasjonen av private lønnstakere uten utvalgsseleksjon.
+        Aldersgruppene våre er tiårsgrupper (deres er finere).
+        Sammensetningen er svært ulik: i ADP-panelet ligger 66 prosent
+        av sysselsettingen i de to mest eksponerte kvintilene, i Norge
+        omtrent 40 prosent. Aggregerte sammenligninger på tvers av
+        landene må ta hensyn til dette. DEL publiserer kun rå serier;
+        sesong- og befolkningsjusteringen er våre tillegg, og de rå
+        seriene våre reproduserer deres metode eksakt.
+      </p>
+    </details>
+
+    <details class="method-details">
+      <summary>Reviderbarhet og releaser</summary>
+      <p>
+        A-ordningen kan revidere ferske måneder. Hver månedlige
+        datarelease arkiveres derfor som en egen årgang («vintage») og
+        endres ikke i ettertid; nettsiden viser alltid siste release,
+        og alle tidligere kan lastes ned.
+      </p>
+    </details>
+
+    <p id="paper-ref">
+      KI-indeksen utarbeides av <a href="#team">Øystein Hernæs
+      (Frischsenteret) og Andreas R. Kostøl (Handelshøyskolen BI)</a>.
+      En forskningsartikkel med fullstendig metodebeskrivelse og
+      analyse er under arbeid, se
+      <a href="#sitering">siteringsinformasjon</a>. Kontakt:
+      <a href="mailto:andreas.r.kostol@bi.no">andreas.r.kostol@bi.no</a>.
+    </p>
+  </section>
+
+  <section id="team" class="prose-section">
+    <h2>Team</h2>
+    <p>
+      KI-indeksen er et samarbeid mellom Frischsenteret og
+      Handelshøyskolen BI.
+    </p>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="assets/team/oystein-hernaes.jpg" alt="Øystein Hernæs">
+        <div>
+          <h3>Øystein Hernæs</h3>
+          <p class="team-role">Seniorforsker, Frischsenteret</p>
+          <p class="team-links">
+            <a href="https://frischsenteret.no/person-details/?person_id=oysteimh"
+               target="_blank" rel="noopener">Frischsenteret</a> ·
+            <a href="https://sites.google.com/site/oeysteinmhernaes/"
+               target="_blank" rel="noopener">Hjemmeside</a> ·
+            <a href="https://scholar.google.com/citations?user=dNIe1mYAAAAJ"
+               target="_blank" rel="noopener">Google Scholar</a> ·
+            <a href="https://www.linkedin.com/in/%C3%B8ystein-hern%C3%A6s-a526402/"
+               target="_blank" rel="noopener">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="assets/team/andreas-kostol.jpg" alt="Andreas R. Kostøl">
+        <div>
+          <h3>Andreas R. Kostøl</h3>
+          <p class="team-role">Førsteamanuensis, Handelshøyskolen BI</p>
+          <p class="team-links">
+            <a href="https://www.bi.no/om-bi/ansatte/institutt-for-samfunnsokonomi/andreas-ravndal-kostol/"
+               target="_blank" rel="noopener">BI</a> ·
+            <a href="https://www.andreaskostol.no/"
+               target="_blank" rel="noopener">Hjemmeside</a> ·
+            <a href="https://scholar.google.com/citations?user=d3J86oQAAAAJ"
+               target="_blank" rel="noopener">Google Scholar</a> ·
+            <a href="https://www.linkedin.com/in/andreas-kostol-19b388b9/"
+               target="_blank" rel="noopener">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="data" class="prose-section">
+    <h2>Last ned data</h2>
+    <p>
+      Alle seriene kan lastes ned som CSV, i samme format som
+      DEL-dashboardets datapakker (pluss en
+      <code>adjustment</code>-kolonne). Gjeldende release:
+      <strong id="release-label"></strong>. Hver pakke inneholder
+      tidsserien, tolvmånedersendring, annualisert vekst og en
+      data dictionary.
+    </p>
+    <div id="download-list" class="download-grid"></div>
+    <p class="chart-footnote">
+      Dataene kan fritt brukes med kildehenvisning til KI-indeksen
+      (kiindeksen.no), se <a href="#sitering">siteringsinformasjon</a>.
+      Underliggende kilder: A-ordningen via
+      <a href="https://www.microdata.no/" target="_blank"
+         rel="noopener">microdata.no</a>,
+      <a href="https://www.science.org/doi/10.1126/science.adj0998"
+         target="_blank" rel="noopener">Eloundou m.fl. (2024)</a>,
+      <a href="https://www.anthropic.com/economic-index" target="_blank"
+         rel="noopener">Anthropic Economic Index</a>,
+      <a href="https://www.ssb.no/" target="_blank"
+         rel="noopener">SSB</a>.
+    </p>
+  </section>
+
+  <section id="sitering" class="prose-section">
+    <h2>Siter KI-indeksen</h2>
+    <p>
+      Figurer og tall kan brukes fritt med kildehenvisning. Slik
+      siterer du dashbordet og forskningsartikkelen:
+    </p>
+    <div class="cite-card">
+      <div class="cite-head">
+        <h3>Dashbordet</h3>
+        <div class="cite-actions">
+          <button class="copy-btn" type="button"
+                  data-copy="cite-dash-txt">Kopier sitering</button>
+          <button class="copy-btn" type="button"
+                  data-copy="cite-dash-bib">Kopier BibTeX</button>
+        </div>
+      </div>
+      <p class="cite-text" id="cite-dash-txt">Hernæs, Øystein og
+        Andreas R. Kostøl (2026). <em>KI-indeksen: Kunstig intelligens
+        og det norske arbeidsmarkedet</em>. https://kiindeksen.no.
+        Hentet <span class="cite-date">…</span>.</p>
+      <details class="cite-bib">
+        <summary>BibTeX</summary>
+<pre id="cite-dash-bib">@misc{kiindeksen2026,
+  author       = {Hern{\ae}s, {\O}ystein and Kost{\o}l, Andreas R.},
+  title        = {KI-indeksen: Kunstig intelligens og det norske arbeidsmarkedet},
+  year         = {2026},
+  howpublished = {\url{https://kiindeksen.no}},
+  note         = {Hentet {{DATO}}}
+}</pre>
+      </details>
+    </div>
+    <div class="cite-card">
+      <div class="cite-head">
+        <h3>Forskningsartikkelen</h3>
+        <div class="cite-actions">
+          <button class="copy-btn" type="button"
+                  data-copy="cite-paper-txt">Kopier sitering</button>
+          <button class="copy-btn" type="button"
+                  data-copy="cite-paper-bib">Kopier BibTeX</button>
+        </div>
+      </div>
+      <p class="cite-text" id="cite-paper-txt">Hernæs, Øystein and
+        Andreas R. Kostøl (2026). “AI Exposure and Age-Differentiated
+        Employment: Evidence from Norwegian Register Data”. Under
+        arbeid (working paper).</p>
+      <details class="cite-bib">
+        <summary>BibTeX</summary>
+<pre id="cite-paper-bib">@unpublished{hernaeskostol2026ai,
+  author = {Hern{\ae}s, {\O}ystein and Kost{\o}l, Andreas R.},
+  title  = {AI Exposure and Age-Differentiated Employment: Evidence from Norwegian Register Data},
+  year   = {2026},
+  note   = {Working paper}
+}</pre>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+</div><!-- .content -->
+</div><!-- .layout -->
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      KI-indeksen · Øystein Hernæs (Frischsenteret) og
+      Andreas R. Kostøl (Handelshøyskolen BI) ·
+      Data: A-ordningen via microdata.no · Oppdateres månedlig ·
+      <a href="om.html">Om KI-indeksen</a>
+    </p>
+  </div>
+</footer>
+
+<script src="vendor/echarts.min.js"></script>
+<script src="app.js?v=20260614b"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+\begin{table}[H]\centering
+\caption{Yagan-style CA pooled DiD on private-sector new hires = round(count $\times$ ny\_jobb) (Yagan diff ($y_{c,t} - \overline{y_c}_{,\mathrm{pre}}$)), by age group}
+\label{tab:ca_did_yagan_combined_nyjobb_diff}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{3}{c}{ChatGPT (ref.\ Oct 2022)} & \multicolumn{3}{c}{Agentic (ref.\ Apr 2025)} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel A: ages 21–30}} \\
+Exposure $\times$ Post & -4.7100 &  & -5.6390 & +23.0324** &  & +27.9764** \\
+ & (4.6825) &  & (5.8423) & (10.0647) &  & (14.1482) \\
+ln wage $\times$ Post &  & +2.1116 & +5.5129 &  & -15.1645 & -31.6293 \\
+ &  & (10.0346) & (12.1178) &  & (26.2532) & (32.4656) \\
+Exp $\times$ wage $\times$ Post &  &  & +7.5723 &  &  & -38.4680 \\
+ &  &  & (10.4672) &  &  & (29.0041) \\
+\quad Observations & \multicolumn{3}{c}{18,616} & \multicolumn{3}{c}{11,552} \\
+\quad Occupations & \multicolumn{3}{c}{358} & \multicolumn{3}{c}{361} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel B: ages 31–40}} \\
+Exposure $\times$ Post & -0.1252 &  & +1.7169 & +10.0633*** &  & +11.7314*** \\
+ & (3.9874) &  & (4.3529) & (3.5186) &  & (3.4760) \\
+ln wage $\times$ Post &  & -2.7287 & -3.6658 &  & +2.5155 & -3.1882 \\
+ &  & (3.4756) & (3.9337) &  & (4.5000) & (3.8451) \\
+Exp $\times$ wage $\times$ Post &  &  & -2.2254 &  &  & -8.0172* \\
+ &  &  & (5.3667) &  &  & (4.6885) \\
+\quad Observations & \multicolumn{3}{c}{18,980} & \multicolumn{3}{c}{11,584} \\
+\quad Occupations & \multicolumn{3}{c}{365} & \multicolumn{3}{c}{362} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel C: ages 41–50}} \\
+Exposure $\times$ Post & +0.2847 &  & +1.2034 & +0.3910 &  & -1.0741 \\
+ & (3.0890) &  & (3.4605) & (3.8201) &  & (4.3568) \\
+ln wage $\times$ Post &  & -0.9200 & -1.4254 &  & +2.4440 & +1.8732 \\
+ &  & (3.1278) & (3.5214) &  & (3.7678) & (4.1547) \\
+Exp $\times$ wage $\times$ Post &  &  & +2.2490 &  &  & -11.6123** \\
+ &  &  & (4.5499) &  &  & (4.8880) \\
+\quad Observations & \multicolumn{3}{c}{18,928} & \multicolumn{3}{c}{11,456} \\
+\quad Occupations & \multicolumn{3}{c}{364} & \multicolumn{3}{c}{358} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel D: ages 51–60}} \\
+Exposure $\times$ Post & -0.5597 &  & -1.3437 & +0.0665 &  & -0.0909 \\
+ & (1.8535) &  & (1.8877) & (2.7592) &  & (2.8521) \\
+ln wage $\times$ Post &  & +0.9360 & +1.6091 &  & -0.7534 & -0.8701 \\
+ &  & (2.0481) & (2.1265) &  & (3.0459) & (3.1832) \\
+Exp $\times$ wage $\times$ Post &  &  & +0.2985 &  &  & -6.9906* \\
+ &  &  & (2.1715) &  &  & (4.0028) \\
+\quad Observations & \multicolumn{3}{c}{18,512} & \multicolumn{3}{c}{11,264} \\
+\quad Occupations & \multicolumn{3}{c}{356} & \multicolumn{3}{c}{352} \\
+\midrule
+Occupation FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Month FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{\linewidth}\vspace{2pt}\footnotesize
+\emph{Notes:} Linear OLS (\texttt{fixest::feols}) on the microdata.no cell aggregates (private sector, sektor = 2). Outcome demeaned at the (yrke4, age) cell level by the mean over the 12-month pre-window $k \in [-12, -1]$, then either differenced (Yagan diff ($y_{c,t} - \overline{y_c}_{,\mathrm{pre}}$)) or ratioed. Columns (1)--(3): ChatGPT window (Oct 2022 $=k{=}{-}1$, through 2025m4); (4)--(6): agentic (Apr 2025 $=k{=}{-}1$, from 2023m7). Each coefficient is the average post-period effect relative to the reference month ($k{=}{-}1$); each pre-period month enters as a separate control. M1 = exposure only, M2 = ln wage only, M3 = both $+$ interaction. Treatments standardized: $z(\text{exp})$ = Eloundou $\beta$ (pooled), $z(\text{lnw})$ = ln full-time-equivalent wage (pre-ChatGPT, within age group). Cells weighted by the pre-window baseline mean count. Occupation $+$ month FE; SE clustered at occupation in parentheses. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{minipage}
+\end{table}

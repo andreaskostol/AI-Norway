@@ -1,0 +1,8 @@
+require no.ssb.fdb:52 as db
+create-dataset pilot2
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-11-16 as yrke
+import db/REGSYS_FRTK_ID_SSB 2024-11-16 as frtk
+generate har_frtk = 0
+replace har_frtk = 1 if !sysmiss(frtk)
+tabulate har_frtk, flatten
+summarize frtk

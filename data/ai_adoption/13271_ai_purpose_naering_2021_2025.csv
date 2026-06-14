@@ -1,0 +1,1387 @@
+SyssGrpIKT_code,SyssGrpIKT_label,NACE2007_code,NACE2007_label,ContentsCode_code,ContentsCode_label,Tid_code,Tid_label,value
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2021,2021,21
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2023,2023,18
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2024,2024,32
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2025,2025,29
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2021,2021,26
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2023,2023,21
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2024,2024,16
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2025,2025,21
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,31
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",StyringForetak,Styring av føretak,2021,2021,19
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2021,2021,9
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2023,2023,10
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2024,2024,15
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2025,2025,5
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2021,2021,24
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2023,2023,28
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2024,2024,25
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2025,2025,25
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",HRrekrutt,HR eller rekruttering,2021,2021,6
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,19
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,21
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,33
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,22
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,18
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,15
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,43
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,42
+00,Alle sysselsette,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,34
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2021,2021,10
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2023,2023,9
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2024,2024,14
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2025,2025,12
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2021,2021,41
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2023,2023,39
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2024,2024,20
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2025,2025,14
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,18
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",StyringForetak,Styring av føretak,2021,2021,18
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2021,2021,20
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2023,2023,17
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2024,2024,7
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2025,2025,4
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2021,2021,20
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2023,2023,34
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2024,2024,22
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2025,2025,26
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",HRrekrutt,HR eller rekruttering,2021,2021,5
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,20
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,20
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,30
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,19
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,15
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,17
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,38
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,30
+00,Alle sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,29
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2021,2021,12
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2023,2023,8
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2024,2024,22
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2025,2025,22
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2021,2021,25
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2023,2023,16
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2024,2024,12
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2025,2025,11
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,28
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,StyringForetak,Styring av føretak,2021,2021,18
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2021,2021,9
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2023,2023,3
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2024,2024,5
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2025,2025,2
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2021,2021,31
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2023,2023,11
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2024,2024,6
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2025,2025,18
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,HRrekrutt,HR eller rekruttering,2021,2021,5
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,9
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,23
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,29
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,12
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,12
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,10
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,45
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,38
+00,Alle sysselsette,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,36
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,28
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,7
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,34
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,38
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,41
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,22
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,2
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,14
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,11
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,StyringForetak,Styring av føretak,2021,2021,9
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2021,2021,13
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2023,2023,3
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2024,2024,5
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2025,2025,10
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,27
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,7
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,16
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,11
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,7
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,28
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,13
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,28
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,1
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,2
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,1
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,48
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,30
+00,Alle sysselsette,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,20
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,35
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,8
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,14
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,24
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,31
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,16
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,5
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,5
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,26
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,StyringForetak,Styring av føretak,2021,2021,19
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2021,2021,9
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2023,2023,14
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2024,2024,6
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2025,2025,6
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,27
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,26
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,19
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,26
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,6
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,9
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,16
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,31
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,2
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,19
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,4
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,48
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,28
+00,Alle sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,33
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,36
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,32
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,77
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,68
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,20
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,15
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,6
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,45
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,11
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,StyringForetak,Styring av føretak,2021,2021,19
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2021,2021,11
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2023,2023,33
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2024,2024,69
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2025,2025,9
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,10
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,19
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,67
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,44
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,19
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,21
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,9
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,57
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,8
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,6
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,7
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,44
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,72
+00,Alle sysselsette,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,62
+00,Alle sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2021,2021,22
+00,Alle sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2023,2023,12
+00,Alle sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2024,2024,19
+00,Alle sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2025,2025,24
+00,Alle sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2021,2021,20
+00,Alle sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2023,2023,6
+00,Alle sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2024,2024,6
+00,Alle sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2025,2025,13
+00,Alle sysselsette,49-53,Transport og lagring,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,46
+00,Alle sysselsette,49-53,Transport og lagring,StyringForetak,Styring av føretak,2021,2021,32
+00,Alle sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2021,2021,28
+00,Alle sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2023,2023,32
+00,Alle sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2024,2024,19
+00,Alle sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2025,2025,14
+00,Alle sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2021,2021,15
+00,Alle sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2023,2023,41
+00,Alle sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2024,2024,12
+00,Alle sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2025,2025,27
+00,Alle sysselsette,49-53,Transport og lagring,HRrekrutt,HR eller rekruttering,2021,2021,0
+00,Alle sysselsette,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,26
+00,Alle sysselsette,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,18
+00,Alle sysselsette,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,21
+00,Alle sysselsette,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,21
+00,Alle sysselsette,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,16
+00,Alle sysselsette,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,6
+00,Alle sysselsette,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,72
+00,Alle sysselsette,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,40
+00,Alle sysselsette,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,27
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2021,2021,37
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2023,2023,22
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2024,2024,49
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2025,2025,48
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2021,2021,2
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2023,2023,3
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2024,2024,10
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2025,2025,18
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,39
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,StyringForetak,Styring av føretak,2021,2021,45
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2021,2021,9
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2023,2023,2
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2024,2024,7
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2025,2025,1
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2021,2021,20
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2023,2023,21
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2024,2024,10
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2025,2025,13
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,HRrekrutt,HR eller rekruttering,2021,2021,3
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,17
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,23
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,35
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,12
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,9
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,0
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,57
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,47
+00,Alle sysselsette,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,31
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2021,2021,31
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2023,2023,24
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2024,2024,28
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2025,2025,31
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2021,2021,30
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2023,2023,28
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2024,2024,24
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2025,2025,35
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,40
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,StyringForetak,Styring av føretak,2021,2021,25
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2021,2021,7
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2023,2023,5
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2024,2024,5
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2025,2025,3
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2021,2021,27
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2023,2023,33
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2024,2024,21
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2025,2025,33
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,HRrekrutt,HR eller rekruttering,2021,2021,5
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,21
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,31
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,34
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,33
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,34
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,36
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,27
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,36
+00,Alle sysselsette,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,30
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2021,2021,11
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2023,2023,21
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2024,2024,22
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2025,2025,25
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2021,2021,19
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2023,2023,18
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2024,2024,21
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2025,2025,20
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,36
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",StyringForetak,Styring av føretak,2021,2021,11
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2021,2021,5
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2023,2023,8
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2024,2024,5
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2025,2025,4
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2021,2021,26
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2023,2023,30
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2024,2024,19
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2025,2025,21
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",HRrekrutt,HR eller rekruttering,2021,2021,6
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,21
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,23
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,29
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,31
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,21
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,16
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,50
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,40
+00,Alle sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,30
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2021,2021,18
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2023,2023,15
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2024,2024,34
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2025,2025,35
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2021,2021,24
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2023,2023,24
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2024,2024,16
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2025,2025,25
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,27
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",StyringForetak,Styring av føretak,2021,2021,13
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2021,2021,8
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2023,2023,10
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2024,2024,21
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2025,2025,5
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2021,2021,22
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2023,2023,19
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2024,2024,24
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2025,2025,23
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",HRrekrutt,HR eller rekruttering,2021,2021,6
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,13
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,20
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,33
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,20
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,20
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,17
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,45
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,44
+02,10-19 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,36
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2021,2021,17
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2023,2023,0
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2024,2024,11
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2025,2025,13
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2021,2021,28
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2023,2023,31
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2024,2024,18
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2025,2025,4
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,11
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",StyringForetak,Styring av føretak,2021,2021,17
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2021,2021,24
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2023,2023,8
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2024,2024,4
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2025,2025,0
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2021,2021,0
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2023,2023,15
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2024,2024,4
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2025,2025,17
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",HRrekrutt,HR eller rekruttering,2021,2021,0
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,8
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,22
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,21
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,9
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,4
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,12
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,45
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,33
+02,10-19 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,23
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2021,2021,25
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2023,2023,13
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2024,2024,23
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2025,2025,32
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2021,2021,13
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2023,2023,13
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2024,2024,15
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2025,2025,14
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,38
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,StyringForetak,Styring av føretak,2021,2021,13
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2021,2021,25
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2023,2023,0
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2024,2024,8
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2025,2025,4
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2021,2021,38
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2023,2023,0
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2024,2024,0
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2025,2025,18
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,HRrekrutt,HR eller rekruttering,2021,2021,0
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,0
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,23
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,29
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,13
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,15
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,18
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,25
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,38
+02,10-19 sysselsette,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,43
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,0
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,33
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,40
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,33
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,0
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,20
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2023,2023,0
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2024,2024,0
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2025,2025,20
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,0
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,17
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,0
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,33
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,17
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,20
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,0
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,0
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,0
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,33
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,17
+02,10-19 sysselsette,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,20
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,30
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,0
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,8
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,22
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,40
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,22
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,8
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,4
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,10
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,StyringForetak,Styring av føretak,2021,2021,20
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2021,2021,0
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2023,2023,11
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2024,2024,0
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2025,2025,4
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,20
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,22
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,15
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,17
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,0
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,0
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,15
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,35
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,0
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,31
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,4
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,44
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,15
+02,10-19 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,39
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,29
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,25
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,82
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,71
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,21
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,0
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,7
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,51
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,7
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,StyringForetak,Styring av føretak,2021,2021,14
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2021,2021,7
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2023,2023,50
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2024,2024,75
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2025,2025,6
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,0
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,0
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,68
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,46
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,21
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,0
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,9
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,66
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,0
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,7
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,6
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,25
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,73
+02,10-19 sysselsette,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,69
+02,10-19 sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2023,2023,0
+02,10-19 sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2024,2024,0
+02,10-19 sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2025,2025,30
+02,10-19 sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2023,2023,0
+02,10-19 sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2024,2024,0
+02,10-19 sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2025,2025,10
+02,10-19 sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2023,2023,100
+02,10-19 sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2024,2024,0
+02,10-19 sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2025,2025,10
+02,10-19 sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2023,2023,0
+02,10-19 sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2024,2024,0
+02,10-19 sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2025,2025,10
+02,10-19 sysselsette,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,0
+02,10-19 sysselsette,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,0
+02,10-19 sysselsette,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,0
+02,10-19 sysselsette,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,0
+02,10-19 sysselsette,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,0
+02,10-19 sysselsette,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,10
+02,10-19 sysselsette,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,100
+02,10-19 sysselsette,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,100
+02,10-19 sysselsette,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,20
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2021,2021,0
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2023,2023,22
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2024,2024,32
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2025,2025,40
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2021,2021,0
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2023,2023,8
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2024,2024,3
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2025,2025,14
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,100
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,StyringForetak,Styring av føretak,2021,2021,0
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2021,2021,0
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2023,2023,0
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2024,2024,8
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2025,2025,0
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2021,2021,0
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2023,2023,0
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2024,2024,3
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2025,2025,8
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,HRrekrutt,HR eller rekruttering,2021,2021,0
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,39
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,15
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,28
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,22
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,12
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,0
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,61
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,27
+02,10-19 sysselsette,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,20
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2021,2021,22
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2023,2023,12
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2024,2024,22
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2025,2025,30
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2021,2021,29
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2023,2023,43
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2024,2024,21
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2025,2025,38
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,36
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,StyringForetak,Styring av føretak,2021,2021,19
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2021,2021,6
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2023,2023,5
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2024,2024,3
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2025,2025,2
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2021,2021,30
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2023,2023,22
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2024,2024,7
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2025,2025,36
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,HRrekrutt,HR eller rekruttering,2021,2021,4
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,21
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,34
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,34
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,29
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,33
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,41
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,29
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,32
+02,10-19 sysselsette,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,22
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2021,2021,5
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2023,2023,26
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2024,2024,20
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2025,2025,30
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2021,2021,19
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2023,2023,24
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2024,2024,27
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2025,2025,24
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,32
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",StyringForetak,Styring av føretak,2021,2021,5
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2021,2021,6
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2023,2023,10
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2024,2024,7
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2025,2025,7
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2021,2021,27
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2023,2023,35
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2024,2024,17
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2025,2025,16
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",HRrekrutt,HR eller rekruttering,2021,2021,5
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,14
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,22
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,27
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,35
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,26
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,18
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,61
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,44
+02,10-19 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,33
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2021,2021,21
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2023,2023,16
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2024,2024,31
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2025,2025,24
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2021,2021,25
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2023,2023,14
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2024,2024,12
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2025,2025,18
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,34
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",StyringForetak,Styring av føretak,2021,2021,22
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2021,2021,7
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2023,2023,8
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2024,2024,9
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2025,2025,3
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2021,2021,18
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2023,2023,24
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2024,2024,20
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2025,2025,22
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",HRrekrutt,HR eller rekruttering,2021,2021,4
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,20
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,17
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,30
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,20
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,16
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,12
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,42
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,39
+03,20-49 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,30
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2021,2021,7
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2023,2023,10
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2024,2024,21
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2025,2025,7
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2021,2021,22
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2023,2023,30
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2024,2024,12
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2025,2025,12
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,21
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",StyringForetak,Styring av føretak,2021,2021,7
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2021,2021,15
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2023,2023,17
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2024,2024,4
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2025,2025,2
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2021,2021,14
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2023,2023,26
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2024,2024,14
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2025,2025,20
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",HRrekrutt,HR eller rekruttering,2021,2021,7
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,13
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,9
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,30
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,14
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,16
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,16
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,36
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,21
+03,20-49 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,34
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2021,2021,5
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2023,2023,0
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2024,2024,32
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2025,2025,16
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2021,2021,32
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2023,2023,17
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2024,2024,11
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2025,2025,6
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,14
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,StyringForetak,Styring av føretak,2021,2021,27
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2021,2021,0
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2023,2023,0
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2024,2024,0
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2025,2025,2
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2021,2021,27
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2023,2023,17
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2024,2024,5
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2025,2025,10
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,HRrekrutt,HR eller rekruttering,2021,2021,9
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,17
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,21
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,24
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,17
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,11
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,4
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,67
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,21
+03,20-49 sysselsette,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,29
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,29
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,50
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,67
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,StyringForetak,Styring av føretak,2021,2021,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2021,2021,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2023,2023,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2024,2024,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2025,2025,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,33
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,17
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,33
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,0
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,100
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,43
+03,20-49 sysselsette,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,17
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,36
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,13
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,14
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,28
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,36
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,0
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,0
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,6
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,43
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,StyringForetak,Styring av føretak,2021,2021,14
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2021,2021,7
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2023,2023,13
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2024,2024,5
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2025,2025,6
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,29
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,13
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,14
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,34
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,7
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,13
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,10
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,28
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,0
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,10
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,3
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,63
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,33
+03,20-49 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,28
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,43
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,0
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,79
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,71
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,29
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,67
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,0
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,53
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,14
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,StyringForetak,Styring av føretak,2021,2021,29
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2021,2021,14
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2023,2023,0
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2024,2024,74
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2025,2025,12
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,14
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,0
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,79
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,53
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,29
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,67
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,5
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,53
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,33
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,5
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,18
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,100
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,84
+03,20-49 sysselsette,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,65
+03,20-49 sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2021,2021,33
+03,20-49 sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2023,2023,0
+03,20-49 sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2024,2024,10
+03,20-49 sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2025,2025,27
+03,20-49 sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2021,2021,0
+03,20-49 sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2023,2023,0
+03,20-49 sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2024,2024,0
+03,20-49 sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2025,2025,20
+03,20-49 sysselsette,49-53,Transport og lagring,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,67
+03,20-49 sysselsette,49-53,Transport og lagring,StyringForetak,Styring av føretak,2021,2021,33
+03,20-49 sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2021,2021,33
+03,20-49 sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2023,2023,20
+03,20-49 sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2024,2024,20
+03,20-49 sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2025,2025,20
+03,20-49 sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2021,2021,0
+03,20-49 sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2023,2023,60
+03,20-49 sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2024,2024,0
+03,20-49 sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2025,2025,40
+03,20-49 sysselsette,49-53,Transport og lagring,HRrekrutt,HR eller rekruttering,2021,2021,0
+03,20-49 sysselsette,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,40
+03,20-49 sysselsette,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,20
+03,20-49 sysselsette,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,40
+03,20-49 sysselsette,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,20
+03,20-49 sysselsette,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,20
+03,20-49 sysselsette,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,0
+03,20-49 sysselsette,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,80
+03,20-49 sysselsette,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,40
+03,20-49 sysselsette,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,33
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2021,2021,40
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2023,2023,7
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2024,2024,53
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2025,2025,44
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2021,2021,0
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2023,2023,0
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2024,2024,3
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2025,2025,20
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,20
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,StyringForetak,Styring av føretak,2021,2021,60
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2021,2021,20
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2023,2023,0
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2024,2024,3
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2025,2025,0
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2021,2021,0
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2023,2023,21
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2024,2024,6
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2025,2025,10
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,HRrekrutt,HR eller rekruttering,2021,2021,0
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,0
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,14
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,29
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,7
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,8
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,0
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,57
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,61
+03,20-49 sysselsette,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,15
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2021,2021,37
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2023,2023,29
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2024,2024,30
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2025,2025,29
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2021,2021,28
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2023,2023,18
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2024,2024,29
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2025,2025,32
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,41
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,StyringForetak,Styring av føretak,2021,2021,31
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2021,2021,6
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2023,2023,4
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2024,2024,2
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2025,2025,2
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2021,2021,16
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2023,2023,36
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2024,2024,28
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2025,2025,25
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,HRrekrutt,HR eller rekruttering,2021,2021,0
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,20
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,26
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,30
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,29
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,33
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,30
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,16
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,41
+03,20-49 sysselsette,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,33
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2021,2021,10
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2023,2023,20
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2024,2024,24
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2025,2025,19
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2021,2021,16
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2023,2023,6
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2024,2024,14
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2025,2025,15
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,47
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",StyringForetak,Styring av føretak,2021,2021,16
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2021,2021,3
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2023,2023,10
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2024,2024,2
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2025,2025,1
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2021,2021,16
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2023,2023,14
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2024,2024,14
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2025,2025,18
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",HRrekrutt,HR eller rekruttering,2021,2021,0
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,25
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,21
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,29
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,26
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,12
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,11
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,39
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,34
+03,20-49 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,24
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2021,2021,26
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2023,2023,25
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2024,2024,27
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2025,2025,25
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2021,2021,32
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2023,2023,19
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2024,2024,14
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2025,2025,13
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,31
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",StyringForetak,Styring av føretak,2021,2021,23
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2021,2021,11
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2023,2023,8
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2024,2024,6
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2025,2025,4
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2021,2021,30
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2023,2023,36
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2024,2024,24
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2025,2025,24
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",HRrekrutt,HR eller rekruttering,2021,2021,11
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,25
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,25
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,30
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,26
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,18
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,13
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,44
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,37
+04,50-99 sysselsette,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,33
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2021,2021,6
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2023,2023,21
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2024,2024,15
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2025,2025,12
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2021,2021,53
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2023,2023,42
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2024,2024,17
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2025,2025,9
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,14
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",StyringForetak,Styring av føretak,2021,2021,20
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2021,2021,11
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2023,2023,16
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2024,2024,4
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2025,2025,4
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2021,2021,19
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2023,2023,28
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2024,2024,28
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2025,2025,22
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",HRrekrutt,HR eller rekruttering,2021,2021,11
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,25
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,26
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,28
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,25
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,13
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,16
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,32
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,30
+04,50-99 sysselsette,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,29
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2021,2021,6
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2023,2023,8
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2024,2024,10
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2025,2025,17
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2021,2021,24
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2023,2023,23
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2024,2024,3
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2025,2025,7
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,47
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,StyringForetak,Styring av føretak,2021,2021,6
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2021,2021,6
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2023,2023,15
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2024,2024,3
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2025,2025,0
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2021,2021,24
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2023,2023,46
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2024,2024,13
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2025,2025,19
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,HRrekrutt,HR eller rekruttering,2021,2021,6
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,23
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,21
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,35
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,0
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,5
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,4
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,62
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,41
+04,50-99 sysselsette,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,32
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,100
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,50
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,40
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,13
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,0
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,25
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,0
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,0
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,0
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,StyringForetak,Styring av føretak,2021,2021,50
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2021,2021,50
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2023,2023,0
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2024,2024,20
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2025,2025,0
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,50
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,25
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,20
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,13
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,0
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,50
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,20
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,25
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,0
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,0
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,0
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,25
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,50
+04,50-99 sysselsette,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,25
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,71
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,19
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,20
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,21
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,14
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,19
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,4
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,4
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,43
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,StyringForetak,Styring av føretak,2021,2021,36
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2021,2021,7
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2023,2023,0
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2024,2024,4
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2025,2025,6
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,43
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,44
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,20
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,25
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,21
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,25
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,28
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,25
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,0
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,12
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,0
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,38
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,36
+04,50-99 sysselsette,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,19
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,100
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,100
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,44
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,69
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,0
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,0
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,0
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,25
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,0
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,StyringForetak,Styring av føretak,2021,2021,0
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2021,2021,50
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2023,2023,50
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2024,2024,0
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2025,2025,19
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,50
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,25
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,11
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,19
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,0
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,25
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,22
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,25
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,0
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,0
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,0
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,50
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,22
+04,50-99 sysselsette,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,25
+04,50-99 sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2021,2021,0
+04,50-99 sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2023,2023,13
+04,50-99 sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2024,2024,23
+04,50-99 sysselsette,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2025,2025,6
+04,50-99 sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2021,2021,33
+04,50-99 sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2023,2023,13
+04,50-99 sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2024,2024,0
+04,50-99 sysselsette,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2025,2025,6
+04,50-99 sysselsette,49-53,Transport og lagring,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,33
+04,50-99 sysselsette,49-53,Transport og lagring,StyringForetak,Styring av føretak,2021,2021,33
+04,50-99 sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2021,2021,33
+04,50-99 sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2023,2023,25
+04,50-99 sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2024,2024,15
+04,50-99 sysselsette,49-53,Transport og lagring,Logistikk,Logistikk,2025,2025,6
+04,50-99 sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2021,2021,33
+04,50-99 sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2023,2023,25
+04,50-99 sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2024,2024,23
+04,50-99 sysselsette,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2025,2025,33
+04,50-99 sysselsette,49-53,Transport og lagring,HRrekrutt,HR eller rekruttering,2021,2021,0
+04,50-99 sysselsette,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,13
+04,50-99 sysselsette,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,0
+04,50-99 sysselsette,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,17
+04,50-99 sysselsette,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,38
+04,50-99 sysselsette,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,8
+04,50-99 sysselsette,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,6
+04,50-99 sysselsette,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,75
+04,50-99 sysselsette,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,31
+04,50-99 sysselsette,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,28
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2021,2021,33
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2023,2023,27
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2024,2024,68
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2025,2025,66
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2021,2021,0
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2023,2023,0
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2024,2024,20
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2025,2025,9
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,33
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,StyringForetak,Styring av føretak,2021,2021,67
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2021,2021,0
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2023,2023,9
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2024,2024,8
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2025,2025,3
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2021,2021,67
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2023,2023,18
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2024,2024,16
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2025,2025,9
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,HRrekrutt,HR eller rekruttering,2021,2021,33
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,9
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,44
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,47
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,9
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,8
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,3
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,46
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,52
+04,50-99 sysselsette,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,63
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2021,2021,32
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2023,2023,33
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2024,2024,37
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2025,2025,36
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2021,2021,34
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2023,2023,16
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2024,2024,24
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2025,2025,28
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,39
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,StyringForetak,Styring av føretak,2021,2021,29
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2021,2021,11
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2023,2023,6
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2024,2024,13
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2025,2025,6
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2021,2021,21
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2023,2023,38
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2024,2024,33
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2025,2025,29
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,HRrekrutt,HR eller rekruttering,2021,2021,11
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,20
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,28
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,31
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,39
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,40
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,29
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,39
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,33
+04,50-99 sysselsette,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,37
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2021,2021,28
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2023,2023,17
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2024,2024,20
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2025,2025,19
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2021,2021,25
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2023,2023,14
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2024,2024,17
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2025,2025,14
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,31
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",StyringForetak,Styring av føretak,2021,2021,19
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2021,2021,10
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2023,2023,0
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2024,2024,3
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2025,2025,2
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2021,2021,39
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2023,2023,40
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2024,2024,27
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2025,2025,30
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",HRrekrutt,HR eller rekruttering,2021,2021,10
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,36
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,22
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,26
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,38
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,20
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,16
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,50
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,40
+04,50-99 sysselsette,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,33
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2021,2021,26
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2023,2023,20
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2024,2024,28
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",MforingSal,Marknadsføring eller sal,2025,2025,26
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2021,2021,31
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2023,2023,26
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2024,2024,21
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",ProdProsess,Produksjonsprosessar,2025,2025,23
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,33
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",StyringForetak,Styring av føretak,2021,2021,23
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2021,2021,16
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2023,2023,15
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2024,2024,13
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",Logistikk,Logistikk,2025,2025,8
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2021,2021,36
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2023,2023,44
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2024,2024,37
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",IKTtryggleik,IKT-tryggleik,2025,2025,40
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",HRrekrutt,HR eller rekruttering,2021,2021,8
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,24
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,31
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,39
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,23
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,21
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,18
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,41
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,43
+05,100 sysselsette eller fleire,Total-K,"Alle næringer, uten finansnæringene",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,37
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2021,2021,10
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2023,2023,6
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2024,2024,9
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",MforingSal,Marknadsføring eller sal,2025,2025,16
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2021,2021,54
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2023,2023,51
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2024,2024,33
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",ProdProsess,Produksjonsprosessar,2025,2025,28
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,24
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",StyringForetak,Styring av føretak,2021,2021,24
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2021,2021,24
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2023,2023,22
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2024,2024,15
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Logistikk,Logistikk,2025,2025,11
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2021,2021,36
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2023,2023,54
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2024,2024,43
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",IKTtryggleik,IKT-tryggleik,2025,2025,43
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",HRrekrutt,HR eller rekruttering,2021,2021,3
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,30
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,29
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,38
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,28
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,26
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,23
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,37
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,36
+05,100 sysselsette eller fleire,10-39,"Industri, kraftforsyning, vatn, avløp og renovasjon",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,27
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2021,2021,8
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2023,2023,5
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2024,2024,17
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,MforingSal,Marknadsføring eller sal,2025,2025,10
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2021,2021,39
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2023,2023,20
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2024,2024,13
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,ProdProsess,Produksjonsprosessar,2025,2025,16
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,39
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,StyringForetak,Styring av føretak,2021,2021,13
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2021,2021,4
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2023,2023,5
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2024,2024,7
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,Logistikk,Logistikk,2025,2025,2
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2021,2021,37
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2023,2023,16
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2024,2024,16
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,IKTtryggleik,IKT-tryggleik,2025,2025,36
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,HRrekrutt,HR eller rekruttering,2021,2021,4
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,19
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,26
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,39
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,16
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,13
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,10
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,77
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,58
+05,100 sysselsette eller fleire,41-43,Byggje- og anleggsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,42
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,45
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,8
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,38
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,33
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,18
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,8
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,16
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,28
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,30
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,StyringForetak,Styring av føretak,2021,2021,9
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2021,2021,18
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2023,2023,16
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2024,2024,20
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,Logistikk,Logistikk,2025,2025,7
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,9
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,24
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,38
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,29
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,21
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,28
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,20
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,39
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,8
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,11
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,3
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,54
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,35
+05,100 sysselsette eller fleire,45,Handel med og reparasjon av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,23
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,25
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,19
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,24
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,21
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,10
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,18
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,10
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,10
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,25
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,StyringForetak,Styring av føretak,2021,2021,14
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2021,2021,35
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2023,2023,39
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2024,2024,31
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,Logistikk,Logistikk,2025,2025,16
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,35
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,41
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,41
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,36
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,8
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,17
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,27
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,36
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,11
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,10
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,11
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,47
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,49
+05,100 sysselsette eller fleire,46,Agentur- og engroshandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,46
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2021,2021,50
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2023,2023,44
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2024,2024,36
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,MforingSal,Marknadsføring eller sal,2025,2025,49
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2021,2021,10
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2023,2023,12
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2024,2024,10
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,ProdProsess,Produksjonsprosessar,2025,2025,12
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,23
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,StyringForetak,Styring av føretak,2021,2021,31
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2021,2021,22
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2023,2023,23
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2024,2024,16
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,Logistikk,Logistikk,2025,2025,17
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2021,2021,41
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2023,2023,51
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2024,2024,44
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,IKTtryggleik,IKT-tryggleik,2025,2025,37
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,HRrekrutt,HR eller rekruttering,2021,2021,3
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,24
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,16
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,28
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,9
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,4
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,5
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,40
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,44
+05,100 sysselsette eller fleire,47,Detaljhandel med unntak av motorvogner,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,40
+05,100 sysselsette eller fleire,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2021,2021,24
+05,100 sysselsette eller fleire,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2023,2023,34
+05,100 sysselsette eller fleire,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2024,2024,37
+05,100 sysselsette eller fleire,49-53,Transport og lagring,MforingSal,Marknadsføring eller sal,2025,2025,18
+05,100 sysselsette eller fleire,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2021,2021,27
+05,100 sysselsette eller fleire,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2023,2023,14
+05,100 sysselsette eller fleire,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2024,2024,22
+05,100 sysselsette eller fleire,49-53,Transport og lagring,ProdProsess,Produksjonsprosessar,2025,2025,13
+05,100 sysselsette eller fleire,49-53,Transport og lagring,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,39
+05,100 sysselsette eller fleire,49-53,Transport og lagring,StyringForetak,Styring av føretak,2021,2021,31
+05,100 sysselsette eller fleire,49-53,Transport og lagring,Logistikk,Logistikk,2021,2021,22
+05,100 sysselsette eller fleire,49-53,Transport og lagring,Logistikk,Logistikk,2023,2023,18
+05,100 sysselsette eller fleire,49-53,Transport og lagring,Logistikk,Logistikk,2024,2024,26
+05,100 sysselsette eller fleire,49-53,Transport og lagring,Logistikk,Logistikk,2025,2025,18
+05,100 sysselsette eller fleire,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2021,2021,17
+05,100 sysselsette eller fleire,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2023,2023,47
+05,100 sysselsette eller fleire,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2024,2024,29
+05,100 sysselsette eller fleire,49-53,Transport og lagring,IKTtryggleik,IKT-tryggleik,2025,2025,37
+05,100 sysselsette eller fleire,49-53,Transport og lagring,HRrekrutt,HR eller rekruttering,2021,2021,0
+05,100 sysselsette eller fleire,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,29
+05,100 sysselsette eller fleire,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,30
+05,100 sysselsette eller fleire,49-53,Transport og lagring,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,34
+05,100 sysselsette eller fleire,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,23
+05,100 sysselsette eller fleire,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,21
+05,100 sysselsette eller fleire,49-53,Transport og lagring,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,9
+05,100 sysselsette eller fleire,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,45
+05,100 sysselsette eller fleire,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,26
+05,100 sysselsette eller fleire,49-53,Transport og lagring,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,33
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2021,2021,57
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2023,2023,42
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2024,2024,77
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,MforingSal,Marknadsføring eller sal,2025,2025,62
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2021,2021,8
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2023,2023,0
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2024,2024,46
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,ProdProsess,Produksjonsprosessar,2025,2025,39
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,34
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,StyringForetak,Styring av føretak,2021,2021,42
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2021,2021,0
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2023,2023,3
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2024,2024,8
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,Logistikk,Logistikk,2025,2025,3
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2021,2021,51
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2023,2023,65
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2024,2024,43
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,IKTtryggleik,IKT-tryggleik,2025,2025,37
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,HRrekrutt,HR eller rekruttering,2021,2021,0
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,5
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,55
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,54
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,0
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,6
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,0
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,54
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,75
+05,100 sysselsette eller fleire,55-56,Overnattings- og serveringsverksemd,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,69
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2021,2021,45
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2023,2023,31
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2024,2024,40
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,MforingSal,Marknadsføring eller sal,2025,2025,38
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2021,2021,35
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2023,2023,30
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2024,2024,23
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,ProdProsess,Produksjonsprosessar,2025,2025,37
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,49
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,StyringForetak,Styring av føretak,2021,2021,28
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2021,2021,8
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2023,2023,7
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2024,2024,15
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,Logistikk,Logistikk,2025,2025,5
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2021,2021,43
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2023,2023,46
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2024,2024,49
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,IKTtryggleik,IKT-tryggleik,2025,2025,52
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,HRrekrutt,HR eller rekruttering,2021,2021,14
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,26
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,39
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,44
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,42
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,39
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,37
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,34
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,41
+05,100 sysselsette eller fleire,58-63,Informasjon og kommunikasjon,Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,46
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2021,2021,18
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2023,2023,13
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2024,2024,26
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",MforingSal,Marknadsføring eller sal,2025,2025,24
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2021,2021,18
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2023,2023,19
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2024,2024,15
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",ProdProsess,Produksjonsprosessar,2025,2025,21
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",OrgAdmProsess,Organisering av administrasjonsprosessar,2021,2021,35
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",StyringForetak,Styring av føretak,2021,2021,18
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2021,2021,4
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2023,2023,6
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2024,2024,4
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Logistikk,Logistikk,2025,2025,3
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2021,2021,35
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2023,2023,33
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2024,2024,31
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",IKTtryggleik,IKT-tryggleik,2025,2025,39
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",HRrekrutt,HR eller rekruttering,2021,2021,16
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2023,2023,25
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2024,2024,30
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",AdminProsess,Organisering av administrasjonsprosessar eller styring av føretak,2025,2025,41
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2023,2023,23
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2024,2024,24
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",FoUinnov,Forsking og utvikling eller innovasjonsaktivitet (ekskludert forsking på KI),2025,2025,23
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2023,2023,36
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2024,2024,37
+05,100 sysselsette eller fleire,68-75+77-82+95.1,"Anna tenesteyting, inklusive veterinærtenester",Regnskap,Rekneskapsføring eller økonomistyring,2025,2025,33

@@ -1,0 +1,29 @@
+\section{Robustness}\label{sec:robustness}
+
+\subsection{Crosswalk Quality}\label{sec:robustness:crosswalk}
+
+The mapping from US SOC codes to Norwegian occupation codes introduces measurement error. When many SOC codes map to a single Norwegian code, the resulting exposure score is an average over heterogeneous US occupations that may not correspond well to the Norwegian occupation category. The fan-out metric, defined as the number of SOC codes contributing to a single Norwegian code, provides a measure of crosswalk quality. Higher fan-out implies a less precise mapping.
+
+Figure~\ref{fig:crosswalk_sensitivity} presents the Eloundou et al.\ quintile-by-age grid under three crosswalk quality restrictions. The first column uses all 397 mapped codes, replicating the baseline in Figure~\ref{fig:age_by_quintile}. The second column restricts to the 316 codes with fan-out of five or fewer, retaining approximately 80 percent of total employment. The third column applies the most restrictive filter, retaining only the 251 codes with fan-out of two or fewer, covering approximately 69 percent of employment.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{../analysis/output/figures/figureS1_eloundou_sensitivity.pdf}
+    \caption{Crosswalk quality sensitivity: Eloundou et al.\ exposure quintiles by age group under three fan-out restrictions. Left column: all 397 Norwegian occupation codes (baseline). Center column: fan-out $\leq 5$ (316 codes, approximately 80 percent of employment). Right column: fan-out $\leq 2$ (251 codes, approximately 69 percent of employment). All series indexed to October 2022 = 1. Fan-out denotes the number of SOC 2010 codes contributing to a single Norwegian code.}
+    \label{fig:crosswalk_sensitivity}
+\end{figure}
+
+The age-exposure gradient for the 22--25 group persists across all three specifications. Under the most restrictive filter, the series are noisier due to smaller cell sizes, but Q5 continues to decline relative to Q1 after late 2022. For older age groups, none of the three specifications produces a systematic quintile gradient. The gradient therefore persists in higher-quality crosswalk subsamples.
+
+
+\subsection{Population Adjustment}\label{sec:robustness:adjustment}
+
+All main figures report employment per capita rather than raw headcounts, dividing employment counts by the resident population in each age group (SSB table 07459, interpolated from annual to monthly). In addition, a composition adjustment holds the within-group age distribution fixed at its 2021-Q1 level, removing the effect of shifting age composition within broad age bins. The per-capita adjustment removes the mechanical decline from the cohort-size shrinkage noted in Section~\ref{sec:data:institutions}. For the core age groups 22--69, the composition adjustment factors are close to unity (within 0.1 percent), indicating that within-group age shifts are negligible over this period. For the youngest ($\leq$21) and oldest (70+) groups, the adjustment is more consequential (up to 5--6 percent). Appendix Figures~\ref{fig:occupations_unadjusted} and~\ref{fig:quintiles_unadjusted} show the raw headcount versions of Figures~\ref{fig:occupations_by_age} and~\ref{fig:age_by_quintile} for comparison with \citet{brynjolfsson2025}. The gradient survives unchanged; the per-capita adjustment compresses the age spread (the 22--25 software developer decline is 30 percent per capita versus 35 percent in raw headcounts).
+
+\paragraph{Additional caveats.} The Norwegian occupation coding is stable over 2021--2025 by design, but as AI-relevant occupations evolve, employers may shift how they classify ambiguous job titles, introducing a reclassification channel that runs in the opposite direction from the one we are after. 
+
+
+\subsection{Measure Concordance}\label{sec:robustness:concordance}
+
+The Q5--Q1 gradient for 22--25 year-olds is present across all four exposure measures, though magnitudes vary. Eloundou et al.\ and Felten et al.\ AIOE produce the most similar patterns, consistent with their high correlation reported in Table~\ref{tab:correlations}; both rank occupations on theoretical or ability-based AI capability. The Handa et al.\ measure produces a weaker gradient, consistent with its limited task coverage. The Anthropic \texttt{job\_exposure} measure produces intermediate results.
+

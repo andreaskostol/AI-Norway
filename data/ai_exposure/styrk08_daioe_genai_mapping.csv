@@ -1,0 +1,408 @@
+styrk08,styrk08_name,daioe_genai_2023,pctl_rank_genai,exposure_quartile,ssyk2012_matched,n_ssyk_matched
+0000,Uoppgitt / yrker som ikke kan identifiseres,,,,,0
+0110,Offiserer fra fenrik og høyere grad,,,,0110;0210,0
+0210,Befal med sersjant grad,,,,0210,0
+0310,Menige,,,,0310,0
+1111,Politikere,,,,1111,0
+1112,Toppledere i offentlig administrasjon,2.899789,62.53,3,1112,1
+1114,Toppledere i interesseorganisasjoner,3.146769,70.57,3,1113,1
+1120,Administrerende direktører,3.039446,66.54,3,1120;1792,2
+1211,Finans- og økonomisjefer,3.443274,80.50,4,1211;1212;1612,3
+1212,Personalsjefer,3.377857,78.72,4,1221;1222,2
+1213,Strategi- og planleggingssjefer,3.103991,68.73,3,1230;1291;1292;1341;1342;1591;1592;1741;1742,9
+1219,Andre administrative ledere,3.035272,66.59,3,1230;1291;1292;1351;1352,5
+1221,Salgs- og markedssjefer,3.634646,85.22,4,1251;1252,2
+1222,PR- og informasjonssjefer,3.750737,89.48,4,1241;1242,2
+1223,Forsknings- og utviklingsledere,3.294151,75.65,4,1291;1292;1331;1332,4
+1311,"Ledere i skogbruk, gartnerier mv.",1.678097,14.30,1,1380,1
+1312,Ledere innen akvakultur mv.,3.797183,91.61,4,1312,1
+1321,Ledere av industriproduksjon mv.,2.553945,49.64,3,1371;1372,2
+1322,Ledere av olje- og gassutvinning mv.,2.767958,56.15,3,1362,1
+1323,Ledere av bygge- og anleggsvirksomhet,2.767958,56.03,3,1361;1362,2
+1324,Ledere av logistikk og transport mv.,3.142701,70.22,3,1321;1322,2
+1330,Ledere av IKT-enheter,3.387414,78.19,4,1311;1312;1321;1322,4
+1341,Ledere av omsorgstjenester for barn,3.060605,67.14,3,1421;1422,2
+1342,Ledere av helsetjenester,2.983879,64.07,3,1511;1512;1521;1522,4
+1343,Ledere av eldreomsorg,2.885449,60.99,3,1531;1532,2
+1344,Ledere av sosialomsorg,2.855728,59.57,3,1521;1522,2
+1345,Ledere av utdanning og undervisning,2.975631,63.95,3,1411;1412;1491;1492,4
+1346,Ledere av forsikring og finansvirksomhet,3.129512,69.51,3,1611;1612,2
+1349,Andre ledere av produksjon og tjenesteyting,3.270509,75.18,4,1591;1592,2
+1411,Hotellsjefer,2.169910,39.25,2,1711;1712,2
+1412,Restaurantsjefer,2.003550,32.62,2,1721;1722,2
+1420,Varehandelssjefer,2.573937,51.01,3,1120;1731;1732;5221,4
+1431,"Sports-, rekreasjons- og kultursenterledere",2.838673,58.86,3,1741;1742,2
+1439,Andre daglige ledere i tjenesteytende virksomheter,3.111534,68.83,3,1322;1791;1792,3
+2111,Fysikere og astronomer,4.277737,98.46,4,2111,1
+2112,Meteorologer,4.187028,97.75,4,2112,1
+2113,Kjemikere,3.617943,86.64,4,2113,1
+2114,Geologer og geofysikere,3.527101,83.81,4,2114,1
+2120,"Matematikere, statistikere mv.",4.687046,99.53,4,2121;2122,2
+2131,"Biologer, botanikere, zoologer mv.",3.542535,84.75,4,2131;2132;2133,3
+2132,Sivilagronomer mv.,2.607694,52.72,3,2134;2135,2
+2133,Miljøvernrådgivere,3.362093,78.13,4,2183,1
+2141,Sivilingeniører (industri og produksjon),3.815065,92.08,4,2141,1
+2142,Sivilingeniører (bygg og anlegg),3.991532,94.92,4,2142,1
+2143,Sivilingeniører (miljøteknikk),3.362093,78.13,4,2183,1
+2144,Sivilingeniører (maskin- og marin-teknikk),3.771928,90.90,4,2144,1
+2145,Sivilingeniører (kjemi),4.289312,98.70,4,2145,1
+2146,"Sivilingeniører (geofag, petro-leumsteknologi, metallurgi mv.)",4.003551,95.15,4,2146,1
+2149,Andre sivilingeniører (unntatt elektroteknologi),3.795466,91.37,4,2149,1
+2151,Sivilingeniører (elkraftteknikk),3.894471,93.03,4,2143,1
+2152,Sivilingeniører (elektronikk),3.894471,93.03,4,2143,1
+2153,Sivilingeniører (telekommunikasjon),3.894471,93.03,4,2143,1
+2161,Sivilarkitekter,3.713262,89.95,4,2161,1
+2162,Landskapsarkitekter,3.746324,90.19,4,2162,1
+2163,Produkt- og klesdesignere,3.493253,82.15,4,2171;2179,2
+2164,Arealplanleggere,3.776350,91.13,4,2163,1
+2165,"Landmålere, kartografer mv.",3.215917,72.93,4,2164,1
+2166,Grafiske- og multimediadesignere,3.670654,86.76,4,2172;2173,2
+2211,Allmennpraktiserende leger,2.913553,62.11,3,2211;2212;2213;2219,4
+2212,Legespesialister,2.665468,52.36,3,2211,1
+2221,Spesialsykepleiere,2.167175,37.73,2,2221;2223;2224;2225;2226;2227;2228;2231;2232;2233;2234;2239,12
+2222,Jordmødre,2.333065,44.56,2,2222,1
+2223,Sykepleiere,2.156198,36.29,2,2223,1
+2224,Vernepleiere,2.156198,36.05,2,2224,1
+2250,Veterinærer,2.183929,41.02,2,2250,1
+2261,Tannleger,2.048402,33.92,2,2260,1
+2262,Farmasøyter,2.698913,54.49,3,2281,1
+2263,Helse- og miljørådgivere,2.848348,59.22,3,2181;3354,2
+2264,Fysioterapeuter,2.218513,41.96,2,2272,1
+2265,Ernæringsfysiologer,3.349995,77.19,4,2131;2282,2
+2266,Audiografer og logopeder,2.777438,56.38,3,2283,1
+2267,Ergoterapeuter,2.485524,48.23,3,2239;2284,2
+2269,Kiropraktorer mv.,2.831453,58.27,3,2271;2273;2289,3
+2310,Universitets- og høyskolelektorer/-lærere,3.708844,89.24,4,2311;2312;2313;2314;2319,5
+2320,Yrkesfaglærere,2.490179,48.35,3,2320,1
+2330,Lektorer mv. (videregående skole),3.231127,72.93,4,2330;2359,2
+2341,Grunnskolelærere,3.283060,75.77,4,2341,1
+2342,Førskole-/barnehagelærere,2.891533,61.70,3,2342;2343,2
+2351,Spesialister i pedagogikk,2.864817,60.17,3,2351,1
+2352,Spesiallærere / spesialpedagoger,2.864817,60.17,3,2351,1
+2353,Andre språklærere,3.184573,71.40,3,2359;3449,2
+2354,Andre musikklærere,3.184573,71.40,3,2359;3449,2
+2355,Andre lærere i estetiske fag,3.184573,71.40,3,2359;3449,2
+2356,Andre IKT-lærere,3.176639,71.04,3,3449,1
+2359,Andre lærere,3.184573,71.40,3,2359;3449,2
+2411,"Revisorer, regnskapsrådgivere",4.101269,96.69,4,2411;2412,2
+2412,Finans- og investeringsrådgivere,3.936766,93.38,4,2413;2414;2419;3311,4
+2413,Finansanalytikere,3.863704,91.73,4,2413;2419,2
+2421,Organisasjonsrådgivere mv.,3.985549,94.68,4,2421;2422,2
+2422,Høyere saksbehandlere i offentlig og privat virksomhet,3.480146,79.55,4,2419;2422;2661,3
+2423,Personal- og karriererådgivere,3.513048,83.45,4,2352;2423,2
+2424,Rådgivere innen kompetanseutvikling,3.326919,76.36,4,2423;3449,2
+2431,Reklame- og markedsføringsrådgivere,3.937684,93.81,4,1242;1252;2431,3
+2432,Informasjonsrådgivere,3.715021,87.59,4,1242;2432,2
+2433,Salgskonsulenter innen tekniske og medisinske produkter,3.537745,82.15,4,2431;3322,2
+2434,Salgskonsulenter innen IKT-produkter,3.189384,71.51,3,3322,1
+2511,Systemanalytikere/-arkitekter,4.207474,98.11,4,2511;2512,2
+2512,Programvareutviklere,4.304232,98.94,4,2512,1
+2513,Nett- og multimediautviklere,4.252047,98.47,4,2512;2513,2
+2514,Applikasjonsprogrammerere,4.304232,98.94,4,2512,1
+2519,Andre programvare- og applikasjonsutviklere,3.999652,95.00,4,1312;2514;2519,3
+2521,Databasedesignere og -administratorer,4.144423,96.81,4,2512;3513,2
+2522,Systemadministratorer,3.747943,88.77,4,2515;3513,2
+2523,Nettverksansvarlige,3.533034,84.52,4,3514,1
+2529,Sikkerhetsanalytikere mv.,4.074480,95.98,4,2516;2519,2
+2611,Jurister og advokater,3.379020,79.43,4,2611;2613,2
+2612,Dommere,3.653037,87.12,4,2612,1
+2619,Andre juridiske yrker,3.320583,77.42,4,2614;2615;2619,3
+2621,Arkivarer og kuratorer,3.593632,85.11,4,2621;2622,2
+2622,Bibliotekarer og andre informasjonsarbeidere,3.482620,81.91,4,2622,1
+2631,"Rådgivere/forskere, samfunnsøkonomi",4.378293,99.17,4,2415,1
+2632,"Rådgivere/forskere, samfunnsvitenskap",4.104556,97.04,4,2623,1
+2633,"Rådgivere/forskere, humanistiske fag",4.104556,97.04,4,2623,1
+2634,Psykologer,3.475467,81.33,4,2241;2242,2
+2635,Rådgivere innen sosiale fagfelt,2.712912,53.84,3,2661;2662;2669;2672,4
+2636,Geistlige yrker,2.894692,62.18,3,1540;2671,2
+2641,Forfattere mv.,4.740784,99.88,4,2641,1
+2642,Journalister,3.906141,93.50,4,2642,1
+2643,"Oversettere, tolker mv.",3.617114,86.41,4,2643,1
+2651,"Skulptører, kunstmalere og andre billedkunstnere",2.806006,60.17,3,2173;2651,2
+2652,"Dirigenter, komponister, musikere og sangere",2.960736,63.00,3,2652,1
+2653,Koreografer og dansere,1.393747,2.01,1,2653,1
+2654,Regissører,3.399568,79.79,4,2654,1
+2655,Skuespillere,3.119662,69.15,3,2655,1
+2656,Programledere i TV og radio,3.063519,67.49,3,3439,1
+2659,Andre utøvende kunstneriske yrker,3.063519,67.49,3,3439,1
+3112,Bygningsingeniører,2.828292,57.68,3,3112;3355,2
+3113,Elkraftingeniører,2.558014,50.00,3,3113,1
+3114,Elektronikkingeniører,2.558014,50.00,3,3113,1
+3115,Maskiningeniører,2.833274,58.75,3,3111;3114;3354;3355,4
+3116,Kjemiingeniører,2.683430,53.78,3,3115,1
+3117,"Ingeniører innen petroleum, bergverk og metallurgi",2.858359,59.93,3,3116,1
+3118,Tekniske tegnere,3.938790,93.74,4,3117,1
+3119,Andre ingeniører,2.683430,53.66,3,3115;3119,2
+3121,"Arbeidsleder, bergfag",1.963854,30.85,2,3121,1
+3122,"Arbeidsleder, industri",2.123658,35.58,2,3122,1
+3123,"Arbeidsleder, bygg og anlegg",2.390269,44.33,2,1361;1362;3121;7420,4
+3131,Energikontrolloperatører,2.174230,40.54,2,8191,1
+3132,Kontrolloperatører ved forbrennings- kjøle- og vannrenseanlegg mv.,2.174230,40.54,2,8191,1
+3133,Kontrolloperatører innen kjemisk prosessindustri,1.861604,25.89,2,8192,1
+3134,Kontrolloperatører ved olje- og naturgassraffineringsanlegg,1.861604,25.89,2,8192,1
+3135,Kontrolloperatører innen metallproduksjon,1.441407,4.14,1,8193,1
+3139,Andre prosesskontrolloperatører,2.693454,54.26,3,8199,1
+3141,Bioteknikere (ikke-medisinske laboratorier),1.954465,29.43,2,6210,1
+3142,Agroteknikere,2.431148,44.56,2,2134;3215;6113,3
+3143,Skogteknikere,2.518281,49.53,3,2135;3215,2
+3151,Skipsmaskinister,2.170904,39.60,2,3151,1
+3152,Dekksoffiserer og loser,2.239319,40.42,2,3152;5414,2
+3153,Flygere,1.914573,27.54,2,3153,1
+3154,Flygeledere,2.738324,55.20,3,3154,1
+3155,Teknikere innen luftfartssikkerhet,3.055610,66.55,3,3155,1
+3211,Radiografer mv.,2.163942,38.77,2,2235;3211,2
+3212,Bioingeniører,2.595111,50.95,3,3212,1
+3213,Reseptarer,2.514620,49.05,3,3213,1
+3214,Protese- og tannteknikere,2.430063,46.93,3,3214,1
+3230,Yrker innen alternativ medisin,2.208142,41.25,2,3230,1
+3240,Dyrepleiere,1.957070,29.67,2,3240,1
+3251,Tannpleiere,1.917191,27.90,2,3250;5350,2
+3254,Optikere,2.463748,47.40,3,5224,1
+3256,Helsesekretærer,,,,,0
+3257,Helse- og miljøkontrollører,2.666967,53.07,3,2182;3354;4430,3
+3258,Ambulansepersonell,1.516854,8.39,1,5326,1
+3259,Andre helseyrker,2.120541,37.35,2,3230;5349,2
+3311,Finansmeglere,3.802060,91.84,4,3311,1
+3312,Kundebehandlere lån og kreditt,3.322713,77.90,4,3312,1
+3313,Regnskapsførere,3.245786,72.57,4,3313;4430,2
+3315,Takstmenn,3.484852,82.15,4,3314,1
+3321,Forsikringsagenter,3.676582,87.59,4,3321,1
+3322,Selgere (engros),3.189384,71.51,3,3322,1
+3323,Innkjøpere,3.164618,71.04,3,1322;3111;3323,3
+3324,Handels- og skipsmeglere,3.163737,70.80,3,3331,1
+3331,Speditører og befraktere,3.163737,70.80,3,3331,1
+3332,Konferanse- og arrangementsplanleggere mv.,3.413496,80.02,4,3332,1
+3333,Arbeidsformidlere,2.851417,59.22,3,3333,1
+3334,Eiendomsmeglere og - forvaltere,3.200447,72.10,4,3334;3335,2
+3339,Andre yrker innen forretningstjenester,3.395458,79.46,4,3111;3312;3324;3332;3339,5
+3341,Arbeidsledere for kontorpersonell,3.167257,70.81,3,1322;3341;4117;4323,4
+3342,Advokatsekretær,3.488581,82.39,4,3342,1
+3343,Sjefssekretærer,3.124370,69.01,3,1230;3341;3343;3359;4119;4430;5151,7
+3351,Tollere,2.057515,34.17,2,3351;5413,2
+3352,Skattefunksjonærer,3.769988,90.66,4,3352,1
+3353,Saksbehandlere innen sosiale ytelser,3.226183,73.17,4,3353,1
+3354,"Saksbehandlere for førerkort, importlisenser mv.",2.902839,60.88,3,3354;3355;3359,3
+3355,Politibetjenter mv.,1.966816,31.56,2,3360,1
+3359,Andre yrker innen offentlig forvaltning,3.146720,70.33,3,3359,1
+3411,Privatetterforskere mv.,2.971569,63.63,3,3342;4430;5419,3
+3412,Miljøarbeidere innen sosiale fagfelt,2.328446,44.64,2,2663;3411;3423,3
+3413,Religiøse yrker,,,,3412,0
+3421,Idrettsutøvere,1.210117,0.12,1,3421,1
+3422,Trenere og idrettsdommere,2.171969,40.31,2,3422,1
+3423,Sports- og aktivitetsinstruktører,2.185885,40.62,2,3422;3423;3424,3
+3431,Fotografer og filmfotografer,2.635149,51.42,3,3431,1
+3432,Interiørdesignere og dekoratører,2.888679,61.35,3,3432,1
+3433,Tekniske konservatorer,2.171571,40.07,2,2651,1
+3434,Sjefskokker,1.966370,31.20,2,3451;3452,2
+3439,Andre yrker innen estetiske fag,3.063519,67.49,3,3439,1
+3511,"Driftsteknikere, IKT",3.283000,75.53,4,3511,1
+3512,"Brukerstøtte, IKT",3.051923,66.31,3,3512,1
+3513,"Nettverks- og systemteknikere, IKT",3.408017,80.02,4,3511;3514,2
+3514,Internett-teknikere,3.920090,93.62,4,3513;3515,2
+3521,Teknikere innen radio og tv,2.582715,50.24,3,3431;3521;3522,3
+3522,Teknikere innen telekom,2.558014,50.00,3,3113,1
+4110,Kontormedarbeidere,3.413844,78.37,4,4116;4119;4430,3
+4131,Stenografer mv.,3.757563,90.43,4,4119,1
+4132,Dataregistrere,3.757563,90.43,4,4119,1
+4211,"Kundebehandlere, bank og postkontor",2.904619,63.01,3,3312;5230,2
+4212,"Bingoverter, bookmakere mv.",2.532716,49.29,3,4211,1
+4213,Pantelånere mv.,3.256513,73.88,4,4212,1
+4214,Inkassomedarbeidere mv.,3.256513,73.88,4,4212,1
+4221,Reisebyråmedarbeidere mv.,3.232627,73.64,4,4221,1
+4222,Kundesentermedarbeidere,3.502438,82.62,4,4222,1
+4223,Sentralbordoperatører,2.622738,52.12,3,4223;5414,2
+4224,Hotellresepsjonister,2.904393,62.77,3,4224,1
+4225,Informasjonsskrankemedarbeidere,3.367532,78.13,4,4221;4222,2
+4226,Resepsjonister (ekskl. hotell),3.306201,76.24,4,4225,1
+4227,Intervjuere,3.369197,78.37,4,4226,1
+4229,Andre opplysningsmedarbeidere,,,,,0
+4311,Regnskapsmedarbeidere,3.816815,92.32,4,4111,1
+4312,Forsikrings- og finansmedarbeidere,3.703146,88.65,4,4113;4119,2
+4313,Lønningsmedarbeidere,4.098291,96.34,4,4112,1
+4321,Lagermedarbeidere og material-forvaltere,2.563244,51.42,3,1322;4321;4322,3
+4322,Logistikkmedarbeidere,2.953051,63.95,3,1322;4115;4322,3
+4323,Transportfunksjonærer,3.114825,68.91,3,4323,1
+4411,Bibliotekassistenter,2.747066,55.44,3,4410,1
+4412,Postbud og postsorterere,1.778954,20.92,1,4420,1
+4413,Kodere mv.,3.757563,90.43,4,4119,1
+4415,Arkivassistenter,2.747066,55.44,3,4410,1
+4416,Personalkontormedarbeidere,4.098291,96.34,4,4112,1
+5111,"Flyverter, båtverter mv.",1.850164,24.70,2,5111,1
+5112,Konduktører,2.064675,34.63,2,5112,1
+5113,Reiseledere og guider,2.609327,51.18,3,5113,1
+5120,Kokker,2.052581,34.16,2,5120,1
+5131,Servitører,1.787701,21.63,1,5131,1
+5132,Bartendere,1.788382,21.87,1,5132,1
+5141,Frisører,2.408486,46.69,3,5141,1
+5142,Kosmetologer mv.,2.384003,45.51,2,5142;5144;5149,3
+5151,Renholdsledere i bedrifter,2.874349,59.92,3,1292;5151,2
+5152,Husholdere,2.761833,55.67,3,5151,1
+5153,Vaktmestre,1.708964,17.38,1,5152,1
+5161,Astrologer mv.,2.273911,42.67,2,5169,1
+5163,Begravelsesbyrå- og krematoriearbeidere,1.917726,28.25,2,5161,1
+5164,Dyrepassere og - trenere mv.,1.973516,32.03,2,6121;6122;6129,3
+5165,Kjøreskolelærere,2.932734,62.45,3,1491;1492;3441,3
+5169,Andre personlige tjenesteytere,2.273911,42.67,2,5169,1
+5211,Torghandlere,2.612388,51.53,3,5230;9520,2
+5212,"Gateselgere, mat",2.738250,54.96,3,9520,1
+5221,Innehavere av kiosk/liten butikk,2.321822,43.50,2,1732;5221,2
+5222,Butikkavdelingssjefer,2.321822,43.50,2,1732;5221,2
+5223,Butikkmedarbeidere,2.260389,42.99,2,5222;5223;5226,3
+5230,Billettselgere,2.486525,48.11,3,5230,1
+5241,Mannekenger og modeller,2.823655,57.33,3,5241,1
+5242,Demonstrasjonsselgere,2.823655,57.33,3,5241,1
+5243,Dørselgere,2.823655,57.33,3,5241,1
+5244,Telefon- og nettselgere,3.080559,67.97,3,5242,1
+5245,Servicemedarbeidere (bensinstasjon),1.871471,26.12,2,5225,1
+5246,Gatekjøkken- og kafémedarbeidere mv.,1.726034,18.32,1,9413,1
+5249,Andre salgsmedarbeidere,2.227633,42.43,2,5226,1
+5311,Barnehage- og skolefritidsassistenter mv.,2.210320,39.48,2,5311;9119,2
+5312,Skoleassistenter,3.076729,67.73,3,5312,1
+5321,Helsefagarbeidere,1.818333,22.50,2,5321;5322;5323;5324;5325;5330;5341;5342;5349,9
+5322,Hjemmehjelper,2.137363,36.05,2,4430;5321;5330;5342;5343;5349,6
+5329,Andre pleiemedarbeidere,1.995556,32.03,2,5227;5349,2
+5411,Brannkonstabler,1.436493,3.90,1,5411,1
+5413,Fengselsbetjenter,1.484269,6.26,1,5412,1
+5414,Vektere,2.028851,33.34,2,3360;5413,2
+5419,Andre sikkerhetsarbeidere,2.641180,51.89,3,5419,1
+6111,Korn- og grønnsaksprodusenter,1.514933,7.92,1,6111,1
+6112,Frukt- og bærprodusenter,1.596515,11.11,1,1380;6111,2
+6113,Gartnere,1.607866,12.10,1,1380;6112;6113,3
+6114,"Kombinasjonsbrukere, nyttevekster",1.596515,11.11,1,1380;6111,2
+6121,Melke- og husdyrprodusenter,1.899661,27.60,2,1380;6121;6122;6129,4
+6122,Egg- og fjærfeprodusenter,1.825807,23.29,2,1380;6121,2
+6123,Birøktere mv.,1.825807,23.05,2,1380;6129,2
+6129,Andre dyreoppdrettere og røktere,1.825807,23.05,2,1380;6129,2
+6130,Plante- og husdyrprodusenter (kombinasjonsbruk),1.668508,13.83,1,1380;6130,2
+6210,Skogbrukere,1.954465,29.43,2,6210,1
+6221,Havbruksarbeidere,1.837360,24.23,2,6221,1
+6222,Fiskere,1.484865,6.50,1,6222,1
+6224,Fangstfolk,2.350463,45.04,2,2135,1
+7112,Murere,1.522627,8.27,1,7112;7114,2
+7113,Steinhoggere mv.,1.414243,3.19,1,8116,1
+7114,Betongarbeidere,1.527093,8.28,1,7113;7119,2
+7115,Tømrere og snekkere,2.178672,36.76,2,3522;7111;7522,3
+7119,Andre bygningsarbeidere,1.604863,11.62,1,7114;7116;7119,3
+7121,Taktekkere,1.220627,0.35,1,7121,1
+7122,Gulv- og flisleggere,1.532173,8.62,1,7112;7122,2
+7123,Gips- og sparklingsarbeidere,1.513067,7.68,1,7112,1
+7124,Isolatører mv.,1.500590,6.74,1,7123,1
+7125,Glassarbeidere,1.633546,12.41,1,7124,1
+7126,Rørleggere og VVS-montører,1.582272,10.52,1,7114;7125,2
+7127,Kuldemontører mv.,1.888035,27.07,2,7126,1
+7131,Malere og byggtapetserere,1.463137,4.85,1,7131,1
+7132,Overflatebehandlere og lakkerere,1.546067,9.34,1,7132,1
+7133,"Feiere, fasaderenholdere mv.",1.682595,14.78,1,7133;7134,1
+7211,Støpere,1.422090,3.66,1,7211,1
+7212,Sveisere,1.648248,12.88,1,7212,1
+7213,Kopper- og blikkenslagere,1.854571,25.30,2,7213;7214,2
+7214,Platearbeidere,1.399051,2.48,1,7215,1
+7215,Riggere og spleisere,1.399051,2.48,1,7215,1
+7221,Smeder,1.803955,23.52,2,7221,1
+7222,"Verktøymaker, låsesmeder mv.",2.336327,44.68,2,7222;7311,2
+7223,Metalldreiere mv.,1.695105,16.67,1,7223,1
+7224,Metallslipere,1.693755,16.43,1,7224,1
+7231,Bilmekanikere,1.710588,17.61,1,7231,1
+7232,Mekanikere innen flytekniske fag,1.945191,29.20,2,7232,1
+7233,Anleggsmaskin- og industrimekanikere,1.611133,11.70,1,7233,1
+7234,Sykkelreparatører mv.,1.710588,17.61,1,7231,1
+7311,Presisjonsinstrumentmakere og -reparatører,2.397360,46.45,2,7311,1
+7312,Musikkinstrumentmakere og -stemmere,1.872769,26.36,2,7319,1
+7313,"Gull- og sølvsmeder, gravører mv.",2.584893,50.47,3,7312,1
+7314,Keramikere mv.,1.872769,26.36,2,7319,1
+7315,Glasshåndverkere,1.872769,26.36,2,7319,1
+7316,Dekormalere mv.,1.872769,26.36,2,7319,1
+7317,Kunsthåndverkere i tre mv.,1.872769,26.36,2,7319,1
+7318,"Vevere, strikkere mv. (innen husflidsproduksjon)",2.022170,33.22,2,2651;7319,2
+7319,Andre kunsthåndverkere,1.872769,26.36,2,7319,1
+7321,Førtrykkere,3.207428,72.70,4,7321,1
+7322,Trykkere,1.936373,28.96,2,7322,1
+7323,Innbindere mv.,1.972062,30.26,2,2651;7323,2
+7411,Elektrikere,1.902852,27.30,2,7411,1
+7412,Automatikere,1.928530,28.72,2,7412,1
+7413,Energimontører,1.789398,22.10,1,7413,1
+7421,Serviceelektronikere,2.061305,34.40,2,7420,1
+7422,Tele- og IKT-installatører,2.061305,34.40,2,7420,1
+7511,"Slaktere, fiskehandlere mv.",1.469295,5.56,1,7611,1
+7512,"Bakere, konditorer mv.",2.499132,48.58,3,7612,1
+7513,Ystere mv. (gårdsproduksjon),1.837991,24.47,2,7619,1
+7514,"Saftere, syltere mv. (gårdsproduksjon)",1.837991,24.47,2,7619,1
+7515,Prøvesmakere og kvalitetsbedømmere av mat og drikke,2.008180,32.98,2,7613,1
+7522,Møbelsnekkere,1.954079,29.43,2,2651;7522,2
+7531,"Skreddere, buntmakere mv.",2.121728,35.34,2,7531,1
+7532,Gradører,2.121728,35.34,2,7531,1
+7534,Møbeltapetserere mv.,1.718186,17.14,1,7532;7533,2
+7535,Skinnberedere og garvere,1.516017,8.16,1,7534,1
+7536,Skomakere,1.516017,8.16,1,7534,1
+7541,Yrkesdykkere,1.536216,9.10,1,7115,1
+7542,Skytebaser og sprengningsarbeidere,1.703910,17.14,1,8115,1
+7543,Produkttestere (ikke matprodukter),,,,,0
+7544,Desinfeksjonsarbeidere og skadedyrbekjempere,1.682595,14.78,1,7134,1
+7549,Andre håndverkere,2.054991,32.51,2,5223;8189,2
+8111,Bergfagarbeidere,1.284871,0.59,1,8111,1
+8112,Prosessoperatører (oppredning),1.482485,6.03,1,8112,1
+8113,Operatører innen boring mv.,1.448095,4.37,1,8113,1
+8114,Operatører innen produksjon av betong mv.,1.606944,11.23,1,8114,1
+8121,Operatører innen metallurgiske prosessfag,1.465699,5.20,1,8122;8129,2
+8122,Operatører innen metallflatebehandling,1.647520,12.65,1,8121,1
+8131,Operatører innen kjemisk industri,1.836032,24.11,2,8131;8132,2
+8132,Operatører innen produksjon av fotofilm og -papir mv.,1.885673,26.83,2,8132,1
+8141,Operatører innen produksjon av gummiprodukter,1.506838,6.97,1,8141,1
+8142,Operatører innen plastprodukter,1.658415,13.12,1,8142,1
+8143,Operatører innen papirprodukter,1.562278,10.05,1,8143,1
+8151,Spinne- og nøstemaskinoperatører,1.578883,10.76,1,8159,1
+8152,Operatører innen tekstilproduksjon mv.,1.578883,10.76,1,8159,1
+8153,Industrisyere,1.578883,10.76,1,8159,1
+8154,Operatører innen tekstilbearbeiding,1.619717,11.94,1,8151,1
+8155,"Operatører innen pels, skinn- og lærbearbeiding",1.578883,10.76,1,8159,1
+8156,Operatører innen skinn og lærprodukter,1.578883,10.76,1,8159,1
+8157,Renseri- og vaskerimaskinoperatører,1.619717,11.94,1,8151,1
+8159,"Andre operatører innen produksjon av tekstiler, pels, skinn og lær",1.578883,10.76,1,8159,1
+8160,Operatører innen næringsmiddelproduksjon,1.791990,22.69,2,8161;8162;8163;8169,4
+8171,Operatører innen treforedling,1.666312,13.71,1,8171;8172,2
+8172,Operatører innen trelastproduksjon,1.525352,8.63,1,8173,1
+8181,Operatører innen glass- og keramisk produksjon,1.777740,20.69,1,8189,1
+8182,Fyrkjele- og turbinoperatører,2.174230,40.54,2,8191,1
+8183,"Pakke-, tappe- og etikettmaskinoperatører",1.576523,10.52,1,8181,1
+8189,Andre stasjonære maskinoperatører,1.772295,21.00,1,8189;8213;9629,3
+8211,Montører av mekaniske produkter,1.855389,25.65,2,8211,1
+8212,Montører av elektriske og elektroniske produkter,2.178272,40.78,2,8212,1
+8219,Andre montører,1.755072,19.74,1,8213;8214;8219,3
+8311,Lokomotiv og T-baneførere,1.569095,10.28,1,8311,1
+8312,Skiftekonduktører mv,1.832916,24.00,2,8312,1
+8322,"Bil-, drosje- og varebilførere",1.710917,17.49,1,8321;8329,2
+8331,Bussjåfører og trikkeførere,1.732333,18.56,1,8331,1
+8332,Lastebil- og trailersjåfører,1.854511,24.94,2,8332,1
+8341,Jordbruks- og skogbruksmaskinførere,1.342064,1.30,1,8341,1
+8342,Anleggsmaskinførere,1.333456,0.83,1,8342,1
+8343,Kran- og heisførere mv.,1.716498,17.85,1,8343,1
+8344,Truckførere,1.785967,21.16,1,8344,1
+8350,Dekks- og maskinmannskap (skip),1.375636,1.77,1,8350,1
+9111,Renholdere i private hjem,1.825842,22.34,1,9111;9119,2
+9112,Renholdere i bedrifter,1.561391,9.81,1,9111,1
+9122,Bilvaskere,1.397053,2.25,1,9120,1
+9123,Vinduspussere,1.397053,2.25,1,9120,1
+9129,Andre rengjørere,1.651156,13.36,1,7134;8151,2
+9211,Hjelpearbeidere i nyttevekstproduksjon,1.404588,2.96,1,9210,1
+9212,Hjelpearbeidere i husdyrproduksjon,1.404588,2.96,1,9210,1
+9213,Hjelpearbeidere i kombinasjonsbruk,1.404588,2.96,1,9210,1
+9214,Hjelpearbeidere i gartneri mv.,1.404588,2.96,1,9210,1
+9215,Hjelpearbeidere i skogbruk,1.404588,2.96,1,9210,1
+9216,Hjelpearbeidere innen havbruk,1.404588,2.96,1,9210,1
+9311,Hjelpearbeidere i bergverk,,,,,0
+9312,Hjelpearbeidere i anlegg,1.433867,4.96,1,7114;9310,2
+9313,Hjelpearbeidere i bygg,1.335546,1.06,1,9310,1
+9321,Håndpakkere mv.,1.457609,4.61,1,9320,1
+9329,Andre hjelpearbeidere i industri,1.457609,4.61,1,9320,1
+9331,Førere av ikke-motorisert kjøretøy,1.703721,16.90,1,8329,1
+9333,Laste- og lossearbeidere,1.712236,16.79,1,9331;9332,2
+9334,Varepåfyllere,1.756569,19.50,1,9332,1
+9412,Kjøkkenassistenter,1.419631,3.43,1,9412,1
+9510,Reklamedistributører mv.,1.599183,12.77,1,9120;9629,2
+9611,Renovasjonsarbeidere,1.879296,26.60,2,9610,1
+9612,Gjenvinningsarbeidere,1.879296,26.60,2,9610,1
+9613,Gatefeiere mv.,1.879296,26.60,2,9610,1
+9621,Bud mv.,1.696361,17.61,1,9621;9622;9629,3
+9622,Altmuligmann,1.809131,23.53,2,9622;9629,2
+9623,Måleravlesere mv.,1.801313,23.29,2,9629,1
+9629,Andre hjelpearbeidere,2.134403,34.56,2,4430;9622;9629,3

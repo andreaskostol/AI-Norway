@@ -1,0 +1,7 @@
+require no.ssb.fdb:51 as db
+
+create-dataset persontest
+import db/BEFOLKNING_STATUSKODE 2024-01-01 as regstatus
+keep if regstatus == '1'
+import db/REGSYS_ARB_YRKE_STYRK08 2024-01-01 as yrke
+tabulate yrke if substr(yrke, 1, 1) == '2', flatten

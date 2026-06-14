@@ -1,0 +1,74 @@
+require no.ssb.fdb:51 as db
+
+create-dataset jobber
+import db/ARBLONN_ARB_ARBMARK_STATUS 2025-01-16 as arbstatus
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-01-16 as yrke
+
+generate yrke4 = substr(yrke, 1, 4)
+
+create-dataset kobling
+import db/ARBEIDSFORHOLD_PERSON as personid
+merge personid into jobber
+
+create-dataset personer
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+generate alder = 2025 - int(fodtaarmd / 100)
+
+use personer
+merge alder into jobber on personid
+
+use jobber
+keep if alder >= 18 & alder < 70
+
+tabulate yrke4 if alder == 18, flatten
+tabulate yrke4 if alder == 19, flatten
+tabulate yrke4 if alder == 20, flatten
+tabulate yrke4 if alder == 21, flatten
+tabulate yrke4 if alder == 22, flatten
+tabulate yrke4 if alder == 23, flatten
+tabulate yrke4 if alder == 24, flatten
+tabulate yrke4 if alder == 25, flatten
+tabulate yrke4 if alder == 26, flatten
+tabulate yrke4 if alder == 27, flatten
+tabulate yrke4 if alder == 28, flatten
+tabulate yrke4 if alder == 29, flatten
+tabulate yrke4 if alder == 30, flatten
+tabulate yrke4 if alder == 31, flatten
+tabulate yrke4 if alder == 32, flatten
+tabulate yrke4 if alder == 33, flatten
+tabulate yrke4 if alder == 34, flatten
+tabulate yrke4 if alder == 35, flatten
+tabulate yrke4 if alder == 36, flatten
+tabulate yrke4 if alder == 37, flatten
+tabulate yrke4 if alder == 38, flatten
+tabulate yrke4 if alder == 39, flatten
+tabulate yrke4 if alder == 40, flatten
+tabulate yrke4 if alder == 41, flatten
+tabulate yrke4 if alder == 42, flatten
+tabulate yrke4 if alder == 43, flatten
+tabulate yrke4 if alder == 44, flatten
+tabulate yrke4 if alder == 45, flatten
+tabulate yrke4 if alder == 46, flatten
+tabulate yrke4 if alder == 47, flatten
+tabulate yrke4 if alder == 48, flatten
+tabulate yrke4 if alder == 49, flatten
+tabulate yrke4 if alder == 50, flatten
+tabulate yrke4 if alder == 51, flatten
+tabulate yrke4 if alder == 52, flatten
+tabulate yrke4 if alder == 53, flatten
+tabulate yrke4 if alder == 54, flatten
+tabulate yrke4 if alder == 55, flatten
+tabulate yrke4 if alder == 56, flatten
+tabulate yrke4 if alder == 57, flatten
+tabulate yrke4 if alder == 58, flatten
+tabulate yrke4 if alder == 59, flatten
+tabulate yrke4 if alder == 60, flatten
+tabulate yrke4 if alder == 61, flatten
+tabulate yrke4 if alder == 62, flatten
+tabulate yrke4 if alder == 63, flatten
+tabulate yrke4 if alder == 64, flatten
+tabulate yrke4 if alder == 65, flatten
+tabulate yrke4 if alder == 66, flatten
+tabulate yrke4 if alder == 67, flatten
+tabulate yrke4 if alder == 68, flatten
+tabulate yrke4 if alder == 69, flatten

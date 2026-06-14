@@ -1,0 +1,18 @@
+require no.ssb.fdb:51 as db
+
+create-dataset test3
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+generate alder = 2025 - int(fodtaarmd / 100)
+keep if alder >= 25 & alder <= 54
+
+import db/BEFOLKNING_KJOENN as kjoenn
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-01-16 as stillingspst
+
+generate sysselsatt = 0
+replace sysselsatt = 1 if stillingspst > 0
+
+tabulate sysselsatt kjoenn, flatten
+tabulate sysselsatt kjoenn, rowpct flatten

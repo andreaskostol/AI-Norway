@@ -1,0 +1,9 @@
+require no.ssb.fdb:52 as db
+
+create-dataset test
+import db/ARBLONN_ARB_START 2025-01-16 as startdato
+
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato >= 20089 & startdato <= 20119
+
+tabulate ny_jobb, flatten

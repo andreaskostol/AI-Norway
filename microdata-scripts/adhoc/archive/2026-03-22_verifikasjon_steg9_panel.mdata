@@ -1,0 +1,29 @@
+require no.ssb.fdb:51 as db
+
+create-dataset paneltest
+import db/BEFOLKNING_STATUSKODE 2024-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+generate alder = 2024 - int(fodtaarmd / 100)
+keep if alder >= 25 & alder <= 54
+
+import db/BEFOLKNING_KJOENN as kjoenn
+
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2024-01-16 as pst_jan
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2024-04-16 as pst_apr
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2024-07-16 as pst_jul
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2024-10-16 as pst_okt
+
+generate syss_jan = 0
+replace syss_jan = 1 if pst_jan > 0
+generate syss_apr = 0
+replace syss_apr = 1 if pst_apr > 0
+generate syss_jul = 0
+replace syss_jul = 1 if pst_jul > 0
+generate syss_okt = 0
+replace syss_okt = 1 if pst_okt > 0
+
+tabulate syss_jan kjoenn, flatten
+tabulate syss_apr kjoenn, flatten
+tabulate syss_jul kjoenn, flatten
+tabulate syss_okt kjoenn, flatten

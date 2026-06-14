@@ -1,0 +1,68 @@
+% Cell-level Poisson DiD: spec + event-study results
+
+\begin{frame}{Empirical specification}
+\begin{itemize}\setlength{\itemsep}{4pt}
+  \item Cells: (occupation $j$ $\times$ age group $a$ $\times$ month $t$), private sector
+  \item One Poisson PPML regression per decade age group:
+\end{itemize}
+\[
+\log E[\text{count}_{j,a,t}] = \alpha_{j} + \beta_{t} + \gamma_{q(j),\,k(t)}
+\]
+\begin{itemize}\setlength{\itemsep}{3pt}
+  \item $\alpha_j$: occupation FE, absorbs permanent occupation size
+  \item $\beta_t$: month FE, absorbs the aggregate age-cohort time path
+  \item $\gamma_{q,k}$: log-point change for quintile $q$ at event time $k$, relative to \textbf{Q3} (median exposure) and $k = -1$ (October 2022)
+  \item SE clustered at occupation
+\end{itemize}
+
+\vspace{0.2em}
+\footnotesize
+\textbf{Why Q3 reference?} Q1 (least exposed) is dominated by winter-construction seasonality. Q3 is the median exposure, les noise baseline.\quad
+\textbf{Why Poisson?} Counts with some zeros; $\log(0+x)$ biased. %Coefficients are log-points (small $\gamma \approx \%$).
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Cell-level event-study grid (Q3 reference)}
+\hypertarget{after-cell-did}{}
+\centering
+\includegraphics[height=5.8cm,keepaspectratio]{figure_microdata_poisson_es_grid_q3.pdf}
+
+\vspace{0.3em}
+\footnotesize
+Q1, Q2, Q4, Q5 plotted against Q3. Cell-level Poisson event-study coefficients by decade age group, private sector. Reference: October 2022 ($k=-1$).
+
+\vspace{0.3em}
+\hfill\hyperlink{cell-es-q1-detail}{\beamerbutton{Q1 reference (backup)}}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{AI capability is accelerating}
+\centering
+\includegraphics[height=5.8cm,keepaspectratio]{METR_time_horizon.JPG}
+
+\vspace{0.6em}
+\footnotesize
+Length of software tasks an LLM completes at 50\,\% success has roughly doubled every $\sim$7 months since GPT-2. By 2026, the frontier handles multi-hour tasks. Source: Model Evaluation \& Threat Research (METR).
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Why agentic AI is a separate window}
+\textbf{Mechanism.} Pre-agentic AI: AI helps with particular steps of a production chain, humans verify each step. Agentic AI: humans verify only the final output of a chain (Demirer, Horton, Immorlica \& Lucier 2026).
+
+\vspace{0.6em}
+\textbf{When did this happen?} Somewhat arbitrary, user cost falls gradually.
+\begin{itemize}\setlength{\itemsep}{2pt}\footnotesize
+  \item \textbf{Early 2024.} Devin demo (Mar 2024), Claude 3 Opus (Mar 2024), standardised function-calling APIs. Chaining technically possible but demo-grade.
+  \item \textbf{May 2025.} OpenAI Codex (\href{https://openai.com/index/introducing-codex/}{16 May 2025}) and Anthropic Claude 4 / Claude Code (\href{https://www.anthropic.com/news/claude-4}{22 May 2025}) make multi-step coding agents production-grade.
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Re-anchor to agentic AI (April 2025)}
+\centering
+\includegraphics[height=5.8cm,keepaspectratio]{figure_microdata_es_decade_agentic.pdf}
+
+\vspace{0.3em}
+\footnotesize
+Same Poisson DiD, re-anchored to April 2025 (last pre-agentic month). Pre-period 2023m1--2025m4, post 2025m5--2026m2. Cell-level, private sector. Q3 reference. 
+\end{frame}

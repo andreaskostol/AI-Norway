@@ -1,0 +1,14 @@
+% O*NET data structure: background for the four measures
+
+\begin{frame}{O*NET: the US occupation database underneath three of the four measures}
+\begin{itemize}\setlength{\itemsep}{6pt}
+  \item Maintained by the US Department of Labor; covers $\sim$1{,}000 occupations on SOC~2018 codes (O*NET-SOC 2019 taxonomy)
+  \item Each occupation has structured content:
+  \begin{itemize}
+    \item \textbf{Tasks:} discrete activities ($\sim 19{,}000$ across all occupations; Pharmacists: 21 tasks, e.g.\ ``review prescriptions for accuracy''). Tagged \emph{Core} or \emph{Supplemental}; no numerical weight.
+    \item \textbf{Abilities:} 52 underlying attributes (e.g.\ Deductive Reasoning, Manual Dexterity). Scored on prevalence and importance per occupation.
+    \item Also: skills, knowledge, work activities, work context (not used by the four measures here).
+  \end{itemize}
+  \item Eloundou et al.\ and Handa operate on \textbf{tasks}; Felten operates on \textbf{abilities}; Anthropic 2026 operates at the occupation level.
+\end{itemize}
+\end{frame}

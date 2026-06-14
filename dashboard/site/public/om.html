@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Om KI-indeksen — metode og kilder</title>
+<meta name="description" content="Om KI-indeksen: datagrunnlag (A-ordningen via microdata.no), KI-eksponeringsmål (Eloundou m.fl. 2024), utfall, glatting og forskjeller fra Stanford Digital Economy Lab sitt Canaries Dashboard.">
+<link rel="canonical" href="https://kiindeksen.no/om.html">
+<link rel="alternate" hreflang="nb" href="https://kiindeksen.no/om.html">
+<link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/about.html">
+<link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/om.html">
+<link rel="stylesheet" href="style.css?v=20260614b">
+<link rel="icon" href="assets/koja-mark.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <a class="lang-toggle" href="/en/about.html" hreflang="en" lang="en">English</a>
+      <p class="tagline"><a href="/" style="text-decoration:none;color:inherit">Månedlige indikatorer for kunstig intelligens og det norske arbeidsmarkedet</a></p>
+    </div>
+    <div class="header-logos">
+      <a href="/" title="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI">
+        <img src="assets/ki-logo.png"
+             alt="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI"></a>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="max-width: 1060px; margin: 0 auto;">
+
+  <section class="prose-section">
+    <h2>Om KI-indeksen</h2>
+    <p>
+      KI-indeksen er et månedlig oppdatert dashbord for hvordan kunstig
+      intelligens påvirker det norske arbeidsmarkedet, utarbeidet av
+      Øystein Hernæs (Frischsenteret) og Andreas R. Kostøl
+      (Handelshøyskolen BI). Indeksen følger sysselsetting,
+      nyansettelser og lønn i norsk privat sektor, gruppert etter
+      yrkenes KI-eksponering og arbeidstakernes alder — en norsk
+      parallell til Stanford Digital Economy Lab (DEL) sitt Canaries
+      Dashboard. Selve dashbordet finnes på
+      <a href="https://kiindeksen.no/">kiindeksen.no</a>.
+    </p>
+
+    <h2>Hovedfunn</h2>
+    <p class="chart-footnote">Per februar 2026 (release juni 2026);
+      oppdaterte tall på <a href="https://kiindeksen.no/">forsiden</a>.</p>
+    <ul>
+      <li><strong>Ingen jobbkrise i Norge:</strong> samlet sysselsetting
+        i privat sektor vokser, og andelen sysselsatte er stabil.</li>
+      <li><strong>KI-indeksen er svakt negativ (−0,2):</strong> siden
+        oktober 2022 (måneden før ChatGPT) har samlet sysselsetting i de
+        mest KI-eksponerte yrkene vokst med 0,1 %, mot +0,3 % i de minst
+        eksponerte yrkene.</li>
+      <li><strong>Men det er viktige forskjeller på tvers av
+        alder:</strong> blant de yngste (21–30 år) i de mest
+        KI-eksponerte yrkene har sysselsettingen falt, både sammenlignet
+        med unge i andre yrker og sammenlignet med eldre arbeidstakere i
+        de samme yrkene. Fallet har tiltatt det siste året.</li>
+      <li><strong>To mekanismer virker i hver sin retning:</strong>
+        i yrkene der KI-bruken er mest augmenterende (KI hjelper
+        arbeidstakeren) har sysselsettingen vokst klart mer enn i andre
+        yrker siden ChatGPT-lanseringen, mens veksten har vært klart
+        svakere der bruken er mest automatiserende (KI utfører
+        oppgaven).</li>
+    </ul>
+
+    <h2>Metode</h2>
+    <p>
+      Datagrunnlaget er A-ordningen via
+      <a href="https://www.microdata.no/" target="_blank"
+         rel="noopener">microdata.no</a>: hele populasjonen av
+      lønnstakere i privat sektor, månedlig fra januar 2021, i
+      aldersgruppene 21–30, 31–40, 41–50 og 51–60 år.
+      Referanseperioden for hver måned er uken som inneholder den 16.
+    </p>
+    <p>
+      <strong>KI-eksponering.</strong> Hvert yrke (firesifret STYRK-08)
+      er koblet til eksponeringsmålet «beta» fra
+      <a href="https://www.science.org/doi/10.1126/science.adj0998"
+         target="_blank" rel="noopener">Eloundou m.fl. (2024,
+      <em>Science</em>)</a> via yrkeskodeverkene ISCO-08 og SOC.
+      Kvintilene er likevektet per yrke, samme konstruksjon som i
+      DEL-dashboardet. Bruksgruppene bygger på
+      <a href="https://www.anthropic.com/economic-index" target="_blank"
+         rel="noopener">Anthropic Economic Index</a>
+      (<a href="https://arxiv.org/abs/2503.04761" target="_blank"
+         rel="noopener">Handa m.fl. 2025</a>) og følger grupperingen i
+      <a href="https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
+         target="_blank" rel="noopener">Brynjolfsson, Chandar og Chen
+      (2025)</a>.
+    </p>
+    <p>
+      <strong>Utfall.</strong> <em>Sysselsetting</em> er antall
+      lønnstakere i gruppen. <em>Nyansettelser</em> er antall jobber med
+      registrert startdato i vinduet mellom forrige og gjeldende
+      månedlige referansedato. <em>Lønn</em> er gruppens
+      gjennomsnittlige kontantlønn per måned, vektet opp til
+      fulltidsekvivalent (FTE) med hver yrke-alder-celles
+      gjennomsnittlige stillingsprosent — en deltidsstilling teller som
+      sin andel av et årsverk, slik at lønnsendringer ikke blandes med
+      endringer i arbeidstid; lønnsseriene er nominelle.
+    </p>
+    <p>
+      <strong>Glatting og sesongjustering.</strong> Figurene viser som
+      standard sesongjusterte serier glattet med et 6 måneders sentrert
+      glidende snitt; rå (ujusterte) serier — samme metode som DEL —
+      kan også velges. Sesongjusteringen er en X-11-kjerne i
+      logaritmer med faktorer estimert på 2021–2024 og deretter frosset.
+      I de nedlastbare datafilene finnes i tillegg befolkningsjusterte
+      varianter av hver serie (kolonnen <code>adjustment</code>).
+    </p>
+    <p>
+      <strong>Befolkningsjustering (per innbygger).</strong>
+      Befolkningen vokser ulikt på tvers av aldersgrupper, så
+      headcount-serier blander arbeidsmarkedsendringer med demografi.
+      Per innbygger-variantene deler antall sysselsatte på den bosatte
+      befolkningen i samme aldersgruppe
+      (<a href="https://www.ssb.no/statbank/table/07459" target="_blank"
+         rel="noopener">SSB tabell 07459</a>,
+      kvartalstall interpolert til måned), slik at indeksen måler
+      jobber per person i stedet for antall jobber. Alle varianter
+      ligger i de nedlastbare datafilene (kolonnen
+      <code>adjustment</code>).
+    </p>
+    <p>
+      <strong>Forskjeller fra DEL-dashboardet.</strong> DEL bruker et
+      balansert panel på ~25&nbsp;000 amerikanske firmaer med
+      ADP-lønnsdata; vi bruker hele den norske populasjonen av private
+      lønnstakere uten utvalgsseleksjon. Aldersgruppene er tiårsgrupper
+      (deres er finere). Sammensetningen er svært ulik: i ADP-panelet
+      ligger 66 prosent av sysselsettingen i de to mest eksponerte
+      kvintilene, i Norge omtrent 40 prosent.
+    </p>
+    <p>
+      <strong>Reviderbarhet.</strong> A-ordningen kan revidere ferske
+      måneder. Hver månedlige datarelease arkiveres derfor som en egen
+      årgang («vintage») og endres ikke i ettertid.
+    </p>
+
+    <h2>Sitering og kontakt</h2>
+    <p>
+      Data og figurer kan fritt brukes med kildehenvisning til
+      KI-indeksen (kiindeksen.no) — se
+      <a href="/#sitering">siteringsinformasjon med BibTeX</a>.
+      En forskningsartikkel med fullstendig
+      metodebeskrivelse og analyse er under arbeid: Hernæs, Øystein and
+      Andreas R. Kostøl (2026). “AI Exposure and Age-Differentiated
+      Employment: Evidence from Norwegian Register Data”. Kontakt:
+      <a href="mailto:andreas.r.kostol@bi.no">andreas.r.kostol@bi.no</a>.
+    </p>
+    <p><a href="/">← Til dashbordet</a> ·
+       <a href="/#data">Last ned data</a></p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      KI-indeksen · Øystein Hernæs (Frischsenteret) og
+      Andreas R. Kostøl (Handelshøyskolen BI) ·
+      Data: A-ordningen via microdata.no · Oppdateres månedlig
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

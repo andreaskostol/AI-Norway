@@ -1,0 +1,16 @@
+require no.ssb.fdb:51 as db
+
+create-dataset yrkestest
+import db/ARBLONN_ARB_ARBMARK_STATUS 2025-01-16 as arbstatus
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-01-16 as yrke
+
+generate yrke4 = substr(yrke, 1, 4)
+generate yrke1 = substr(yrke, 1, 1)
+
+tabulate yrke1, flatten
+
+generate ai_q = 0
+replace ai_q = 1 if inlist(yrke4, '7112', '7113', '7114', '7119', '7121', '7122', '7123', '7124', '7125', '7126')
+replace ai_q = 4 if inlist(yrke4, '2511', '2512', '2513', '2514', '2519', '2611', '2612', '2619', '2631', '2632')
+
+tabulate ai_q, flatten

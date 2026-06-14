@@ -1,0 +1,6 @@
+\beamer@sectionintoc {1}{Motivation}{2}{0}{1}
+\beamer@sectionintoc {2}{Data}{8}{0}{2}
+\beamer@sectionintoc {3}{Descriptive results}{32}{0}{3}
+\beamer@sectionintoc {4}{Cell-level difference-in-differences}{35}{0}{4}
+\beamer@sectionintoc {5}{Conclusion}{41}{0}{5}
+\beamer@sectionintoc {6}{Robustness}{43}{0}{6}

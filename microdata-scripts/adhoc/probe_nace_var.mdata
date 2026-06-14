@@ -1,0 +1,4 @@
+require no.ssb.fdb:52 as db
+create-dataset probe
+import db/REGSYS_VIRK_NACE1_SN07 2019-11-16 as nace
+summarize nace

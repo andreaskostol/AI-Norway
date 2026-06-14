@@ -1,0 +1,25 @@
+% Data and methodology
+
+\begin{frame}{Data: A-ordningen}
+\begin{itemize}\setlength{\itemsep}{6pt}
+  \item Norway's mandatory employer-reporting system; universe of formal employment.
+  \item Coverage: $\sim 3.1$ million workers per month, January 2021 through February 2026.
+  \item Variables used: 4-digit STYRK-08 occupation, age (monthly precision), institutional sector, cash earnings (\emph{kontantlønn}), position percentage, contracted hours, new-job flag.
+  \item Two analysis units:
+  \begin{itemize}
+    \item \textbf{Cell counts and means} (occupation $\times$ age $\times$ month $\times$ sector) for the descriptive series.
+    \item \textbf{Individual records} (firm $\times$ age $\times$ occupation $\times$ month) for the firm-FE design.
+  \end{itemize}
+  \item Index date: October 2022 = 1, the month before ChatGPT's public release.
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Constructing exposure quintiles}
+\begin{itemize}\setlength{\itemsep}{8pt}
+  \item Rank the 397 STYRK-08 codes that the Eloundou et al.\ mapping covers by $\beta$.
+  \item Assign each 4-digit code to one of five quintiles on the \emph{occupation} distribution.
+  \item Each code counts once, regardless of its employment share.
+  \item Quintile assignment is fixed throughout the period.
+\end{itemize}
+\end{frame}

@@ -1,0 +1,8 @@
+require no.ssb.fdb:51 as db
+
+create-dataset jobber
+import db/ARBLONN_ARB_ARBMARK_STATUS 2025-01-16 as arbstatus
+import db/ARBLONN_LONN_FAST 2025-01-16 as fastlonn
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-01-16 as yrke
+
+tabulate yrke, flatten

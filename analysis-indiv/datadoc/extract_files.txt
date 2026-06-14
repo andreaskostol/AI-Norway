@@ -1,0 +1,51 @@
+# DIRECTORY INVENTORY - Datadoc folder
+
+## Main Documentation Files
+
+1. CLAUDE.md - Markdown documentation of the project (main reference)
+2. inkonsekvenser_1191.md - Documentation of inconsistencies in 1191 data
+3. fd_trygd_forlopsfiler.md - Guide to FD-Trygd spell files
+4. metadata_1191.csv - Full metadata scan of all .dta files (59,185 rows - 1 row per variable per file)
+5. variabel_lookup.csv - Lookup of unique variables with SSB descriptions
+6. variabel_beskrivelser.csv - SSB variable definitions (6,505 rows)
+7. metadata_scan1191.csv - Another scan of metadata (scanned April 2026)
+8. metadata_scan7020.csv - Metadata scan for project 7020
+9. metadata_scanP4117.csv - Metadata scan for project P4117
+10. build_variable_lookup.py - Python script for building variable lookups
+11. scan_metadata.do - Stata program for scanning metadata
+12. inkonsekvenser_1191.pdf - PDF version of inconsistencies documentation
+13. desktop.ini - Windows system file
+14. .claude/settings.local.json - Claude settings
+
+## SSB Variable Lists Subfolder (variabellister_ssb/)
+29 Excel files documenting variables across different registers:
+- SSB_variabelliste_a-ordningen.xlsx
+- SSB_variabelliste_aksjonaerregisteret.xlsx
+- SSB_variabelliste_arbeidskonflikter.xlsx
+- SSB_variabelliste_atlto.xlsx
+- SSB_variabelliste_barnevern.xlsx
+- SSB_variabelliste_befolkning.xlsm
+- SSB_variabelliste_bof.xlsm
+- SSB_variabelliste_boforhold.xlsx
+- SSB_variabelliste_elhub.xlsx
+- SSB_variabelliste_FD-Trygd.xlsm
+- SSB_variabelliste_FDI.xlsx
+- SSB_variabelliste_fob.xlsx
+- SSB_variabelliste_helsepersonell.xlsx
+- SSB_variabelliste_inntekt.xlsx
+- SSB_variabelliste_introduksjonsordningen.xlsx
+- SSB_variabelliste_kapitaldatabasen.xlsx
+- SSB_variabelliste_kontantstotte.xlsx
+- SSB_variabelliste_krim.xlsx
+- SSB_variabelliste_lonn.xlsx
+- SSB_variabelliste_piaac.xlsx
+- SSB_variabelliste_regnskap.xlsx
+- SSB_variabelliste_skjermingsfradrag.xlsx
+- SSB_variabelliste_struktur.xlsx
+- SSB_variabelliste_sysselsetting.xlsm
+- SSB_variabelliste_sykefravaer.xlsx
+- SSB_variabelliste_UFATS.xlsx
+- SSB_variabelliste_utdanning.xlsm
+- SSB_variabelliste_utenrikshandel.xlsx
+- SSB_variabelliste_valg.xlsx
+

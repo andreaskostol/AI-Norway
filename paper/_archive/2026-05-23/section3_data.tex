@@ -1,0 +1,65 @@
+\section{Data, Measures, and Approach}\label{sec:data}
+
+\subsection{Norwegian Labor Market Data}\label{sec:data:labor}
+
+Our labor market data come from Norway's mandatory employer reporting system (the \emph{A-ordningen}), administered by the Norwegian Tax Administration. All employers in Norway must submit monthly reports covering every employment relationship between a worker and a firm (\emph{foretak}), including occupation codes, contracted hours, and earnings. The system covers the universe of formal employment, except self-employment, in Norway, approximately 3 million employment records per month. Our analysis covers the period January 2021 through January 2026.
+
+We access these records in two ways: First, through microdata.no, Statistics Norway's remote analysis platform for researchers. The platform provides access to population-level administrative registers and exports aggregated tabulations. All tabulations underlying the main analysis in this paper are computed on the platform and exported as cell-level tables. Second, on the Frisch Centre's secure data server. The individual-level records are updated only through July 2025.
+
+The main variable for our employment analysis is the 4-digit occupation code in the STYRK-08 classification. STYRK-08 is the Norwegian standard for occupation classification, and it is identical to the International Standard Classification of Occupations (ISCO-08) at the 4-digit level \citep{ssb2011styrk}. The AI exposure measures we use originate in the US Standard Occupational Classification (SOC) system and are mapped to ISCO-08 by the Bureau of Labor Statistics, which makes the ISCO-08 identity the basis for our crosswalk.
+
+We construct monthly employment counts by 4-digit occupation and age group for the period January 2021 through January 2026, with age computed at monthly precision (accounting for birth month). Age groups follow \citet{brynjolfsson2025} and are defined as 22--25, 26--30, 31--34, 35--40, 41--49, and 50 and older. We exclude individuals under age 22, as their labor market attachment is dominated by education transitions.
+
+In addition to employment per capita, we use several wage and job-characteristic variables: monthly cash earnings (kontantl{\o}nn), hourly wages (timel{\o}nn), contracted position percentage (stillingsprosent), overtime hours, and a new-job indicator.
+
+We decompose the labor market into three sectors based on institutional sector codes: state (codes 1110, 1120, 6100), municipal (codes 1510, 1520, 6500), and private (all remaining codes). The three sectors differ in wage-setting and adjustment mechanisms.
+
+
+\subsection{Institutional Context}\label{sec:data:institutions}
+
+Several features of the Norwegian labor market are relevant for interpreting AI exposure patterns. Norway's public sector employs approximately 30 percent of the workforce, split between state and municipal employers. Wage determination is centralized: unions and employer organizations negotiate sector-level agreements that compress the wage distribution relative to market-based systems such as the United States. Employment protection legislation is strong by international standards, with notice periods and restrictions on dismissal that slow labor market reallocation.
+
+The period we study coincides with a monetary policy tightening: Norges Bank raised the policy rate from zero percent in September 2021 to 4.5 percent by January 2024 (Figure~\ref{fig:macro_context}). This tightening affected labor demand broadly, and any AI-specific employment patterns need to be read against this macroeconomic background.
+
+A demographic factor also affects the youngest age group. The 22--25 cohort shrank by about 1 percent between 2022-Q1 and 2025-Q1 (Figure~\ref{fig:cohort_sizes}). Although small, this trend works in the same direction as any AI-related decline in young employment, so we adjust the headcount series by resident population to isolate per-capita changes.
+
+A small set of Norwegian reports document AI adoption and its early labor-market correlates. \citet{samfunnsok2026} surveys 4{,}294 firms and reports that the share using AI rises from 24 percent in 2023 to 55 percent in 2025, concentrated in ICT, finance, and professional services. \citet{menon2026} regresses occupation-level unemployment growth on a Claude-based exposure measure for 2022--2025 and reports a positive gradient and no wage relationship, without decomposition by age or sector. \citet{nifu2024} interviews members of public-sector unions and finds AI use that is exploratory and concentrated in augmentation rather than automation. \citet{riksrevisjonen2024} reports that more than half of Norwegian state agencies have no experience with AI tools, and \citet{nav2025} reviews the broader labor-market outlook without occupation-level adoption data.
+
+
+\subsection{AI Exposure Measures}\label{sec:data:ai}
+
+We use four measures of occupational AI exposure that differ in their conceptual basis, ranging from theoretical assessments of AI capability to revealed patterns of AI usage. Table~\ref{tab:measures} summarizes the four headline measures, and Table~\ref{tab:correlations} reports pairwise Spearman rank correlations ($\rho$). The correlation table also includes the Felten Language Modeling sub-index as a reference measure for cross-validation; the four headline measures correspond to rows (1), (2), (3), and (5).
+
+\paragraph{Eloundou et al.\ (2024), GPT-4 exposure.} \citet{eloundou2024} combine expert and GPT-4 assessments of each occupation's tasks to estimate the share of tasks for which access to a large language model (LLM) would reduce completion time by at least 50 percent. The occupation-level score, denoted $\beta$, is defined as $E_1 + 0.5 \times E_2$, where $E_1$ is the share of tasks directly exposed to an LLM and $E_2$ is the share exposed when complementary software is included. The measure captures theoretical LLM capability as assessed in early 2023. We map 397 STYRK-08 codes, covering 97.5 percent of all four-digit occupations in our data.
+
+\paragraph{Handa et al.\ (2025), Anthropic Economic Index.} \citet{handa2025} measure revealed AI usage patterns from a sample of Claude.ai conversations, with each conversation classified by O*NET task. The occupation-level score reflects the share of conversations associated with that occupation's tasks, decomposed into automation and augmentation modes as described in Section~\ref{sec:literature}. We map 352 STYRK-08 codes (86.5 percent coverage). The lower coverage reflects the concentration of observed Claude usage: the top seven task categories account for 22 percent of all conversations, leaving many occupations with negligible observed usage.
+
+\paragraph{Felten et al.\ (2021), AIOE.} \citet{felten2021} construct the AI Occupational Exposure (AIOE) index by linking AI application performance benchmarks (covering image recognition, language modeling, and other domains) to occupational abilities via O*NET. The occupation-level score is a weighted sum of AI progress on abilities relevant to each occupation. Unlike the other two measures, AIOE captures broad AI capability rather than LLM-specific exposure. We map 392 STYRK-08 codes (96.3 percent coverage).
+
+\paragraph{Anthropic (2026), job exposure.} The \texttt{job\_exposure} measure from \citet{anthropic2026} uses time-weighted observed Claude usage with an automation penalty. Released in March 2026, it postdates the analyses by \citet{brynjolfsson2025} and \citet{kauhanen2026}. We map 388 STYRK-08 codes (95.3 percent coverage).
+
+\medskip
+
+Table~\ref{tab:correlations} reports Spearman rank correlations among the four headline measures (rows (1), (2), (3), and (5)) and the Felten Language Modeling sub-index (row (4)), included as a reference. The pairwise correlations follow a clear pattern. The Eloundou et al.\ and Felten et al.\ AIOE measures correlate at $\rho = 0.890$, in line with both being theoretical or ability-based assessments of AI capability. The Eloundou et al.--Handa et al.\ correlation is lower ($\rho = 0.637$): revealed usage patterns rank occupations differently from theoretical capability. Occupations that AI could in principle transform are not always the ones where workers are currently using AI tools.
+
+\subsubsection*{Crosswalk Construction}
+
+All four measures originate in US SOC codes. The Handa et al.\ and Felten et al.\ measures use SOC 2010 codes directly. The Eloundou et al.\ measure uses SOC 2018 codes, which we first map to SOC 2010 using the official BLS crosswalk (November 2017). From SOC 2010, we apply the BLS SOC-to-ISCO crosswalk (August 2012, updated June 2015) to obtain ISCO-08 codes. Since STYRK-08 is identical to ISCO-08 at the 4-digit level \citep{ssb2011styrk}, this final step is an identity mapping.
+
+The BLS crosswalk contains partial matches: 38.8 percent of its rows are flagged as one-to-many or many-to-one mappings. When multiple SOC codes map to a single STYRK-08 code, we take the unweighted average of their exposure scores. We compute quality flags for each STYRK-08 code, including a partial-match indicator and the maximum fan-out, defined as the number of SOC codes contributing to a single STYRK-08 score. Of the 397 STYRK-08 codes with an Eloundou et al.\ score, 57.7 percent have at least one partial-match contributor.
+
+
+\subsection{Empirical Approach}\label{sec:data:approach}
+
+We construct normalized time series following the approach in \citet{brynjolfsson2025}, Figures 1--3. Each series is indexed to October 2022 = 1, the month immediately preceding ChatGPT's public release on November 30, 2022. For outcome $y$ in cell $c$ at month $t$, the normalized series is $\tilde{y}_{c,t} = y_{c,t} / y_{c,\text{Oct } 2022}$. Changes after October 2022 are expressed as proportional deviations from that pre-ChatGPT level.
+
+For each AI exposure measure, we rank all four-digit STYRK-08 occupation codes by their exposure score and assign them to quintiles, from quintile 1 (least exposed) to quintile 5 (most exposed). Quintiles are formed on the occupation distribution (each four-digit code counts once, regardless of its employment share) rather than on the employment-weighted distribution. Quintile assignment is performed separately for each measure, so an occupation may fall in different quintiles under different measures. We then aggregate employment counts and other outcomes within each quintile-by-age-group cell and construct the normalized time series.
+
+The primary outcome is employment per capita: headcount employment divided by the resident population in the corresponding age group (SSB table 07459, interpolated from annual to monthly), with a composition adjustment that holds the within-group age distribution fixed at its 2021-Q1 level. This adjustment removes two potential confounds: changing cohort sizes (the 22--25 cohort shrank by about 1 percent between 2022-Q1 and 2025-Q1) and compositional shifts within age groups. Raw headcount figures are reported in an appendix for comparability with \citet{brynjolfsson2025}. Secondary outcomes, available from 2021 onward, include monthly earnings, hourly wages, contracted position percentage, overtime hours, and the share of new jobs. We also decompose the employment series by sector (state, municipal, private) to examine whether patterns differ across institutional settings with different wage-setting mechanisms and adjustment speeds.
+
+\subsection*{Data Availability}
+
+The AI exposure measures and crosswalk files used in this paper are publicly available. The Eloundou et al.\ (2024) GPT-4 exposure scores are available at \url{https://github.com/felixbrunner/gpts-are-gpts} (supplementary data from the \textit{Science} article). The Handa et al.\ (2025) Anthropic Economic Index and the Anthropic (2026) \texttt{job\_exposure} measure are available at \url{https://github.com/anthropics/anthropic-economic-index}. The Felten et al.\ (2021) AIOE data are available as an appendix to the \textit{Strategic Management Journal} article. The BLS SOC-to-ISCO crosswalk is available at \url{https://www.bls.gov/soc/soccrosswalks.htm}. The STYRK-08 classification is documented by Statistics Norway at \url{https://www.ssb.no/klass/klassifikasjoner/7}. Norwegian labor market data are accessed through the microdata.no platform (\url{https://microdata.no}). The aggregated tabulations underlying our analysis are available from the authors upon request.
+
+\input{../analysis/output/tables/table1_measures}
+\input{../analysis/output/tables/table2_correlations}

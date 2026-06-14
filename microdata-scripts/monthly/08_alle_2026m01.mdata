@@ -1,0 +1,114 @@
+require no.ssb.fdb:53 as db
+
+create-dataset kobling
+import db/ARBEIDSFORHOLD_PERSON as personid
+
+create-dataset pers
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+
+create-dataset jobb_y2026m01
+import db/ARBLONN_ARB_YRKE_STYRK08 2026-01-16 as yrke
+import db/ARBLONN_FRTK_SEKTOR_2014 2026-01-16 as sektor
+import db/ARBLONN_LONN_KONTANT_IMP 2026-01-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2026-01-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2026-01-16 as timelonn
+import db/ARBLONN_LONN_OVERTID_TIMER 2026-01-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2026-01-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+generate sekt = 3
+replace sekt = 1 if sektor == '1110'
+replace sekt = 1 if sektor == '1120'
+replace sekt = 1 if sektor == '6100'
+replace sekt = 2 if sektor == '1510'
+replace sekt = 2 if sektor == '1520'
+replace sekt = 2 if sektor == '6500'
+
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20438 & startdato <= 20469
+
+use kobling
+merge personid into jobb_y2026m01
+use pers
+merge fodtaarmd into jobb_y2026m01 on personid
+
+use jobb_y2026m01
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2026 - birth_yr
+replace alder = alder - 1 if birth_mo > 1
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+
+tabulate yrke4 alder_gr, flatten
+
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+
+tabulate yrke4 alder_gr if sekt == 1, flatten
+tabulate yrke4 alder_gr if sekt == 2, flatten
+tabulate yrke4 alder_gr if sekt == 3, flatten
+
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+
+tabulate yrke4 alder_gr, summarize(kontantlonn) std flatten
+
+delete-dataset jobb_y2026m01
+
+create-dataset pers_y2026m01
+import db/BEFOLKNING_STATUSKODE 2026-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2026-01-16 as stillingspst
+generate alder = 2026 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate sysselsatt = 0
+replace sysselsatt = 1 if stillingspst > 0
+
+generate nus1 = substr(nudb, 1, 1)
+generate fag1 = substr(nudb, 2, 1)
+destring nus1
+destring fag1
+generate utd_lev = 0
+replace utd_lev = 1 if nus1 == 3
+replace utd_lev = 1 if nus1 == 4
+replace utd_lev = 2 if nus1 == 5
+replace utd_lev = 2 if nus1 == 6
+replace utd_lev = 3 if nus1 == 7
+replace utd_lev = 3 if nus1 == 8
+generate utd_gr = utd_lev * 10 + fag1
+replace utd_gr = 0 if utd_lev == 0
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+
+tabulate sysselsatt alder, flatten
+
+tabulate alder_gr utd_gr, flatten
+tabulate alder_gr nus3, flatten
+
+keep if sysselsatt == 1
+tabulate alder_gr utd_gr, flatten
+tabulate alder_gr nus3, flatten
+
+delete-dataset pers_y2026m01

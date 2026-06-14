@@ -1,0 +1,12 @@
+require no.ssb.fdb:52 as db
+
+create-dataset test
+import db/ARBLONN_ARB_START 2025-01-16 as startdato
+
+summarize startdato
+
+generate start_str = substr(startdato, 1, 10)
+tabulate start_str, flatten
+
+generate start4 = substr(startdato, 1, 4)
+tabulate start4, flatten

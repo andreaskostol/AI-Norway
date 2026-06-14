@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathpazo}           % Palatino font
+\usepackage[margin=1in]{geometry}
+\usepackage{setspace}
+\onehalfspacing
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{natbib}
+\bibliographystyle{aer}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue}
+\usepackage{amsmath}
+\usepackage{float}
+
+% For table notes
+\usepackage{threeparttable}
+\usepackage{tabularx}
+
+% Title
+\title{\textbf{AI Exposure and Age-Differentiated Employment:\\Evidence from Norwegian Register Data}}
+\author{
+  {\O}ystein Hern{\ae}s\thanks{Frisch Centre, Oslo, Norway. Email: o.m.hernas@frisch.uio.no.}
+  \and
+  Andreas R.\ Kost{\o}l\thanks{BI Norwegian Business School, Oslo, Norway. Email: andreas.r.kostol@bi.no}
+}
+\date{April 2026\\[6pt]\small Draft --- comments welcome}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+\noindent
+Using Norwegian population administrative data covering 2021 to 2026, we document age-differentiated employment patterns in occupations differentially exposed to artificial intelligence. We construct monthly employment-per-capita series at the cell defined by occupation, age group, month, and sector, indexed to October 2022 (the month before the November 30, 2022 release of ChatGPT). Across four AI exposure measures (theoretical, revealed usage, ability-based, and observed time-weighted), the most-exposed quintile of occupations declines by approximately 10 percentage points for workers aged 22--25, while the least-exposed quintile is roughly flat. In selected high-exposure occupations the decline for 22--25 year-olds reaches 30 percent (software developers, ICT systems analysts). Total employment for 22--25 year-olds is roughly flat over the period, so the most-exposed quintile's decline reflects reallocation across exposure quintiles rather than net job loss. Workers aged 31 and older show no exposure gradient. The gradient is stronger with theoretical and ability-based exposure than with revealed Claude usage, and stronger when occupations are ranked by Handa automation share than by augmentation share. The pattern is concentrated in the private sector; public-sector employment shows no corresponding gradient. Wages and other intensive-margin outcomes show no divergence by exposure quintile, consistent with adjustment on the hiring margin under Norway's two-tier bargaining system. The Norwegian patterns match the direction of US, Swedish, and UK findings and contrast with the Finnish null; they also complement the Danish finding that workplace AI chatbot adoption does not appear to drive an analogous aggregate decline.
+\end{abstract}
+
+\textbf{JEL:} J23, O33, J21
+
+\textbf{Keywords:} artificial intelligence, labor market, employment, AI exposure, Norway
+
+\clearpage
+\setcounter{page}{1}
+
+% ---------------------------------------------------------------
+% Sections
+% ---------------------------------------------------------------
+
+\input{section1_introduction}
+
+\input{section2_literature}
+
+\input{section3_data}
+
+\input{section4_results}
+
+\input{section5_robustness}
+
+\input{section6_discussion}
+
+\input{section7_conclusion}
+
+% ---------------------------------------------------------------
+% References
+% ---------------------------------------------------------------
+
+\clearpage
+\bibliography{references}
+
+% ---------------------------------------------------------------
+% Appendix
+% ---------------------------------------------------------------
+
+\input{appendix}
+
+\end{document}

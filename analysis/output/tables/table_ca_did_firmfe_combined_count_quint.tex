@@ -1,0 +1,58 @@
+\begin{table}[H]\centering
+\caption{Firm-FE CA pooled DiD on private-sector employment headcount, by age group (firm-quintile cell)}
+\label{tab:ca_did_firmfe_combined_count_quint}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{3}{c}{ChatGPT (ref.\ Oct 2022)} & \multicolumn{3}{c}{Agentic (ref.\ Apr 2025)} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel A: ages 21–30}} \\
+Exposure $\times$ Post & -0.0238 &  & -0.0020 & -0.0407 &  & -0.0128 \\
+ & (0.0775) &  & (0.0785) & (0.0711) &  & (0.0718) \\
+ln wage $\times$ Post &  & -0.0602 & -0.0274 &  & -0.0909* & -0.0624 \\
+ &  & (0.0492) & (0.0468) &  & (0.0494) & (0.0474) \\
+Exp $\times$ wage $\times$ Post &  &  & -0.1500*** &  &  & -0.1542*** \\
+ &  &  & (0.0408) &  &  & (0.0404) \\
+\quad Observations & \multicolumn{3}{c}{4,327,987} & \multicolumn{3}{c}{2,010,389} \\
+\quad Foretak (clusters) & \multicolumn{3}{c}{20,556} & \multicolumn{3}{c}{17,426} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel B: ages 31–40}} \\
+Exposure $\times$ Post & -0.1577*** &  & -0.1426*** & -0.1326*** &  & -0.1143*** \\
+ & (0.0449) &  & (0.0460) & (0.0411) &  & (0.0419) \\
+ln wage $\times$ Post &  & -0.1336*** & -0.0836** &  & -0.1323*** & -0.0856** \\
+ &  & (0.0357) & (0.0363) &  & (0.0352) & (0.0354) \\
+Exp $\times$ wage $\times$ Post &  &  & -0.1254*** &  &  & -0.1191*** \\
+ &  &  & (0.0354) &  &  & (0.0349) \\
+\quad Observations & \multicolumn{3}{c}{5,487,344} & \multicolumn{3}{c}{2,589,290} \\
+\quad Foretak (clusters) & \multicolumn{3}{c}{20,607} & \multicolumn{3}{c}{17,457} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel C: ages 41–50}} \\
+Exposure $\times$ Post & -0.1877*** &  & -0.1823*** & -0.1583*** &  & -0.1477*** \\
+ & (0.0404) &  & (0.0405) & (0.0371) &  & (0.0368) \\
+ln wage $\times$ Post &  & -0.1183*** & -0.0563 &  & -0.1196*** & -0.0611* \\
+ &  & (0.0327) & (0.0344) &  & (0.0334) & (0.0344) \\
+Exp $\times$ wage $\times$ Post &  &  & -0.1192*** &  &  & -0.1173*** \\
+ &  &  & (0.0358) &  &  & (0.0357) \\
+\quad Observations & \multicolumn{3}{c}{5,617,292} & \multicolumn{3}{c}{2,647,064} \\
+\quad Foretak (clusters) & \multicolumn{3}{c}{20,482} & \multicolumn{3}{c}{17,361} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel D: ages 51–60}} \\
+Exposure $\times$ Post & -0.2341*** &  & -0.2501*** & -0.2082*** &  & -0.2170*** \\
+ & (0.0402) &  & (0.0398) & (0.0361) &  & (0.0352) \\
+ln wage $\times$ Post &  & -0.1004*** & -0.0216 &  & -0.0955*** & -0.0213 \\
+ &  & (0.0280) & (0.0335) &  & (0.0283) & (0.0331) \\
+Exp $\times$ wage $\times$ Post &  &  & -0.1492*** &  &  & -0.1383*** \\
+ &  &  & (0.0303) &  &  & (0.0293) \\
+\quad Observations & \multicolumn{3}{c}{5,041,337} & \multicolumn{3}{c}{2,386,103} \\
+\quad Foretak (clusters) & \multicolumn{3}{c}{19,992} & \multicolumn{3}{c}{16,980} \\
+\midrule
+firm $\times$ quintile FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Firm $\times$ month FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{\linewidth}\vspace{2pt}\footnotesize
+\emph{Notes:} Poisson PPML (\texttt{fixest::fepois}) on the individual-level firm panel (private sector, \texttt{in\_headline\_priv}). Outcome: cell-level employment headcount summed within (foretak, occupation, age, month). Fixed effects: firm $\times$ quintile $+$ firm $\times$ month (BCC eq.\ 4.1 within-firm time-shock control). Columns (1)--(3): ChatGPT window (Oct 2022 $=k{=}{-}1$, through 2025m4); (4)--(6): agentic (Apr 2025 $=k{=}{-}1$, from 2023m7). Each coefficient is the average post-period effect relative to the reference month ($k{=}{-}1$); each pre-period month enters as a separate control. M1 = exposure only, M2 = ln wage only, M3 = both $+$ interaction. Treatments standardized: $z(\text{exp})$ = Eloundou $\beta$ (pooled across occupations), $z(\text{lnw})$ = ln full-time-equivalent wage within age group (pre-ChatGPT, native to the secure private sample). SE clustered at foretak in parentheses; coefficients are $\Delta\log$ per 1 SD. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{minipage}
+\end{table}

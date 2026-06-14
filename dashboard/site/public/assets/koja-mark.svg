@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Koja Datarobot">
+  <defs>
+    <linearGradient id="ki" x1="10" y1="10" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8aa1c1"/>
+      <stop offset="1" stop-color="#345989"/>
+    </linearGradient>
+  </defs>
+  <g stroke="url(#ki)" stroke-width="4.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- K = mountain peak -->
+    <path d="M16 15 V50"/>
+    <path d="M16 33 L33 13"/>
+    <path d="M16 33 L30 50"/>
+    <!-- I = cabin: gable roof + post + floor -->
+    <path d="M40 26 L47 15 L54 26"/>
+    <path d="M47 26 V50"/>
+    <path d="M41.5 50 H52.5"/>
+  </g>
+  <!-- glowing cabin window (warm tone from the photo) -->
+  <rect x="44.6" y="34" width="4.8" height="6" fill="#cf9a5c"/>
+</svg>

@@ -1,0 +1,32 @@
+require no.ssb.fdb:52 as db
+create-dataset personer
+import db/REGSYS_VIRK_NACE1_SN07 2024-11-16 as nace
+generate nace2 = substr(nace, 1, 2)
+create-dataset jobber
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-11-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+create-dataset kobling
+import db/ARBEIDSFORHOLD_PERSON as personid
+merge personid into jobber
+use personer
+merge nace2 into jobber on personid
+use jobber
+generate hv = 0
+replace hv = 1 if yrke4 == '2411'
+replace hv = 1 if yrke4 == '4311'
+replace hv = 1 if yrke4 == '4222'
+replace hv = 1 if yrke4 == '2412'
+replace hv = 1 if yrke4 == '2423'
+replace hv = 1 if yrke4 == '3511'
+replace hv = 1 if yrke4 == '3512'
+replace hv = 1 if yrke4 == '3513'
+replace hv = 1 if yrke4 == '2642'
+replace hv = 1 if yrke4 == '2611'
+replace hv = 1 if yrke4 == '2431'
+replace hv = 1 if yrke4 == '4110'
+replace hv = 1 if yrke4 == '2512'
+replace hv = 1 if yrke4 == '2514'
+replace hv = 1 if yrke4 == '2330'
+replace hv = 1 if yrke4 == '2341'
+keep if hv == 1
+tabulate yrke4 nace2, flatten

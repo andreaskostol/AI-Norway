@@ -1,0 +1,367 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.12) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(interaction_results.tex
+LaTeX2e <2023-11-01>
+L3 programming layer <2024-01-04>
+
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/base\arti
+cle.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/base\size
+11.clo))
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/base\inpu
+tenc.sty)
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/base\font
+enc.sty)
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\a
+msmath.sty
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\a
+mstext.sty
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\a
+msgen.sty))
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\a
+msbsy.sty)
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\a
+msopn.sty))
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\
+booktabs.sty)
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/graphics\
+graphicx.sty
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/graphics\
+keyval.sty)
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/graphics\
+graphics.sty
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/graphics\
+trig.sty)
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/graphics-
+cfg\graphics.cfg)
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/graphics-
+def\pdftex.def)))
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/caption\c
+aption.sty
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/caption\c
+aption3.sty))
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/float\flo
+at.sty)
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/geometry\
+geometry.sty
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/generic/iftex\i
+fvtex.sty
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/generic/iftex\i
+ftex.sty))
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/geometry\
+geometry.cfg))
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/l3backend
+\l3backend-pdftex.def)
+No file interaction_results.aux.
+
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/context/base/mk
+ii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+)
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-
+pkg\epstopdf-base.sty
+(C:\Users\Øystein M. Hernæs\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\
+epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+[1{C:/Users/Øystein M. Hernæs/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.ma
+p}] [2 <./figures/figure_ca_es_grid_stdexp.pdf>] [3 <./figures/figure_ca_es_dec
+ade_agentic_stdexp.pdf>] [4 <./figures/figure_ca_es_grid_stdexp_nyjobb.pdf>]
+[5 <./figures/figure_ca_es_decade_agentic_stdexp_nyjobb.pdf>]
+(tables/table_ca_did_age1.tex) (tables/table_ca_did_age2.tex)
+(tables/table_ca_did_age3.tex) (tables/table_ca_did_age4.tex) [6] [7] [8]
+(tables/table_ca_did_age1_nyjobb.tex) (tables/table_ca_did_age2_nyjobb.tex)
+(tables/table_ca_did_age3_nyjobb.tex) (tables/table_ca_did_age4_nyjobb.tex)
+[9] [10] [11] (interaction_results.aux)Trying to make PK font ecrm0900 at 600 DPI...
+The METFAONT mode is: ljfour
+Creating ecrm0900.pk...
+Running miktex-mf.exe...
+This is METAFONT, Version 2.71828182 (MiKTeX 23.12)
+
+
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\ecrm0900.mf
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exbase.mf)
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\ecrm.mf
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exroman.mf
+ Ok
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exaccess.mf
+ Ok)
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\expseudo.mf
+ Ok)
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exruwest.mf
+ Ok [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202] [203]
+[204] [205] [206] [207] [208] [209] [210] [211] [212] [213] [214] [215]
+[216] [217] [218] [219] [220] [221] [222] [223])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrlwest.mf
+ Ok [224] [225] [226] [227] [228] [229] [230] [231] [232] [233] [234] [235]
+[236] [237] [238] [239] [240] [241] [242] [243] [244] [245] [246] [247]
+[248] [249] [250] [251] [252] [253] [254] [255])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrueast.mf
+ Ok [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139]
+[140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151]
+[152] [153] [154] [155] [156] [157])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrleast.mf
+ Ok [158] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170]
+[171] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182]
+[183] [184] [185] [186] [187] [188])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exbraces.mf
+ Ok [94] [126] [23] [40] [41] [60] [124] [62] [91] [93] [92] [123] [125]
+[95] [127] [32])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\expunct.mf
+ Ok [14] [15] [19] [20] [13] [18] [33] [39] [42] [43] [44] [46] [47] [58]
+[59] [61] [96] [189] [17] [45] [16] [21] [22])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exaccent.mf
+ Ok [0] [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exsign.mf
+ Ok [24] [34] [35] [36] [37] [64] [191] [159])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrlig.mf
+ Ok [25] [26] [28] [27] [29] [30] [31])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exromp.mf
+ Ok [38] [63] [190])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrulett.mf
+ Ok [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
+[79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrllett.mf
+ Ok [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108]
+[109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
+[121] [122])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrdigit.mf
+ Ok [48] [49] [50] [51] [52] [53] [54] [55] [56] [57])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrligtb.mf
+ Ok) ) ) )
+(some charht values had to be adjusted by as much as 0.07498pt)
+Font metrics written on ecrm0900.tfm.
+Output written on ecrm0900.600gf (256 characters, 46448 bytes).
+Transcript written on ecrm0900.log.
+Running miktex-gftopk.exe...
+This is GFtoPK, Version 2.4 (MiKTeX 23.12)
+'METAFONT output 2026.06.08:1346'
+46448 bytes packed to 21356 bytes.
+Installing "C:\Users\Øystein M. Hernæs\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm0900.pk"...
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) <C:\Users\Øystein M. Hernæs\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/
+ec/dpi600\ecrm0900.pk>Trying to make PK font ecti0900 at 600 DPI...
+The METFAONT mode is: ljfour
+Creating ecti0900.pk...
+Running miktex-mf.exe...
+This is METAFONT, Version 2.71828182 (MiKTeX 23.12)
+
+
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\ecti0900.mf
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exbase.mf)
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\ecti.mf
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\extextit.mf
+ Ok
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exaccess.mf
+ Ok)
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\expseudo.mf
+ Ok)
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exileast.mf
+ Ok [158] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170]
+[171] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182]
+[183] [184] [185] [186] [187] [188])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exilwest.mf
+ Ok [224] [225] [226] [227] [228] [229] [230] [231] [232] [233] [234] [235]
+[236] [237] [238] [239] [240] [241] [242] [243] [244] [245] [246] [247]
+[248] [249] [250] [251] [252] [253] [254] [255])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exruwest.mf
+ Ok [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202] [203]
+[204] [205] [206] [207] [208] [209] [210] [211] [212] [213] [214] [215]
+[216] [217] [218] [219] [220] [221] [222] [223])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrueast.mf
+ Ok [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139]
+[140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151]
+[152] [153] [154] [155] [156] [157])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exbraces.mf
+ Ok [94] [126] [23] [40] [41] [60] [124] [62] [91] [93] [92] [123] [125]
+[95] [127] [32])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\expunct.mf
+ Ok [14] [15] [19] [20] [13] [18] [33] [39] [42] [43] [44] [46] [47] [58]
+[59] [61] [96] [189] [17] [45] [16] [21] [22])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exaccent.mf
+ Ok [0] [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exsign.mf
+ Ok [24] [34] [35] [36] [37] [64] [191] [159])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exilig.mf
+ Ok [25] [26] [27] [28] [29] [30] [31])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exitalp.mf
+ Ok [38] [63] [190])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrulett.mf
+ Ok [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
+[79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exillett.mf
+ Ok [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108]
+[109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
+[121] [122])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exidigit.mf
+ Ok [48] [49] [50] [51] [52] [53] [54] [55] [56] [57])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exiligtb.mf
+ Ok) ) ) )
+Font metrics written on ecti0900.tfm.
+Output written on ecti0900.600gf (256 characters, 48652 bytes).
+Transcript written on ecti0900.log.
+Running miktex-gftopk.exe...
+This is GFtoPK, Version 2.4 (MiKTeX 23.12)
+'METAFONT output 2026.06.08:1346'
+48652 bytes packed to 28820 bytes.
+Installing "C:\Users\Øystein M. Hernæs\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk"...
+ <C:\Users\Øystein M. Hernæs\AppData\Local\MiKTeX\fonts
+/pk/ljfour/jknappen/ec/dpi600\ecti0900.pk> <C:\Users\Øystein M. Hernæs\AppDat
+a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1000.pk> <C:\Users\Øyste
+in M. Hernæs\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1200.
+pk> <C:\Users\Øystein M. Hernæs\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen
+/ec/dpi600\ecbx1440.pk> <C:\Users\Øystein M. Hernæs\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi600\ecti1095.pk> <C:\Users\Øystein M. Hernæs\AppDa
+ta\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1095.pk> <C:\Users\Øyst
+ein M. Hernæs\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200
+.pk>Trying to make PK font ecrm1728 at 600 DPI...
+The METFAONT mode is: ljfour
+Creating ecrm1728.pk...
+Running miktex-mf.exe...
+This is METAFONT, Version 2.71828182 (MiKTeX 23.12)
+
+
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\ecrm1728.mf
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exbase.mf)
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\ecrm.mf
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exroman.mf
+ Ok
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exaccess.mf
+ Ok)
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\expseudo.mf
+ Ok)
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exruwest.mf
+ Ok [192] [193] [194] [195] [196] [197] [198] [199] [200] [201] [202] [203]
+[204] [205] [206] [207] [208] [209] [210] [211] [212] [213] [214] [215]
+[216] [217] [218] [219] [220] [221] [222] [223])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrlwest.mf
+ Ok [224] [225] [226] [227] [228] [229] [230] [231] [232] [233] [234] [235]
+[236] [237] [238] [239] [240] [241] [242] [243] [244] [245] [246] [247]
+[248] [249] [250] [251] [252] [253] [254] [255])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrueast.mf
+ Ok [128] [129] [130] [131] [132] [133] [134] [135] [136] [137] [138] [139]
+[140] [141] [142] [143] [144] [145] [146] [147] [148] [149] [150] [151]
+[152] [153] [154] [155] [156] [157])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrleast.mf
+ Ok [158] [160] [161] [162] [163] [164] [165] [166] [167] [168] [169] [170]
+[171] [172] [173] [174] [175] [176] [177] [178] [179] [180] [181] [182]
+[183] [184] [185] [186] [187] [188])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exbraces.mf
+ Ok [94] [126] [23] [40] [41] [60] [124] [62] [91] [93] [92] [123] [125]
+[95] [127] [32])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\expunct.mf
+ Ok [14] [15] [19] [20] [13] [18] [33] [39] [42] [43] [44] [46] [47] [58]
+[59] [61] [96] [189] [17] [45] [16] [21] [22])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exaccent.mf
+ Ok [0] [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exsign.mf
+ Ok [24] [34] [35] [36] [37] [64] [191] [159])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrlig.mf
+ Ok [25] [26] [28] [27] [29] [30] [31])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exromp.mf
+ Ok [38] [63] [190])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrulett.mf
+ Ok [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
+[79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrllett.mf
+ Ok [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107] [108]
+[109] [110] [111] [112] [113] [114] [115] [116] [117] [118] [119] [120]
+[121] [122])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrdigit.mf
+ Ok [48] [49] [50] [51] [52] [53] [54] [55] [56] [57])
+(C:\Users\^^c3^^98ystein M. Hern^^c3^^a6s\AppData\Local\Programs\MiKTeX\fonts/s
+ource/jknappen/ec\exrligtb.mf
+ Ok) ) ) )
+(some charht values had to be adjusted by as much as 0.0972pt)
+Font metrics written on ecrm1728.tfm.
+Output written on ecrm1728.600gf (256 characters, 84608 bytes).
+Transcript written on ecrm1728.log.
+Running miktex-gftopk.exe...
+This is GFtoPK, Version 2.4 (MiKTeX 23.12)
+'METAFONT output 2026.06.08:1346'
+84608 bytes packed to 42516 bytes.
+Installing "C:\Users\Øystein M. Hernæs\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk"...
+ <C:\Users\Øystein M. Hernæs\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappe
+n/ec/dpi600\ecrm1728.pk><C:/Users/Øystein M. Hernæs/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Øystein M. Hernæs/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/
+Øystein M. Hernæs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb><C:/Users/Øystein M. Hernæs/AppData/Local/Programs/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Øystein M. Hernæs/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Øystein M. 
+Hernæs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+C:/Users/Øystein M. Hernæs/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
+msfonts/cm/cmr9.pfb><C:/Users/Øystein M. Hernæs/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Øystein M. Hernæs/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Øys
+tein M. Hernæs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+sy9.pfb>
+Output written on interaction_results.pdf (11 pages, 388995 bytes).
+Transcript written on interaction_results.log.

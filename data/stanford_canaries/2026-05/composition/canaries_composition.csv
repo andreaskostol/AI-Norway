@@ -1,0 +1,31 @@
+observation_date,Age Group,Share,Exposure Group
+2022-11-01,Early Career 1 (22-25),0.5783,Quintile 1 (least exposed)
+2022-11-01,Early Career 2 (26-30),0.7844,Quintile 1 (least exposed)
+2022-11-01,Developing (31-34),0.6372,Quintile 1 (least exposed)
+2022-11-01,Mid-Career 1 (35-40),0.8801,Quintile 1 (least exposed)
+2022-11-01,Mid-Career 2 (41-49),1.281,Quintile 1 (least exposed)
+2022-11-01,Senior (50+),2.253,Quintile 1 (least exposed)
+2022-11-01,Early Career 1 (22-25),1.31,Quintile 2
+2022-11-01,Early Career 2 (26-30),1.822,Quintile 2
+2022-11-01,Developing (31-34),1.451,Quintile 2
+2022-11-01,Mid-Career 1 (35-40),1.9109999999999998,Quintile 2
+2022-11-01,Mid-Career 2 (41-49),2.603,Quintile 2
+2022-11-01,Senior (50+),4.589,Quintile 2
+2022-11-01,Early Career 1 (22-25),1.2409999999999999,Quintile 3
+2022-11-01,Early Career 2 (26-30),1.908,Quintile 3
+2022-11-01,Developing (31-34),1.5270000000000001,Quintile 3
+2022-11-01,Mid-Career 1 (35-40),1.999,Quintile 3
+2022-11-01,Mid-Career 2 (41-49),2.6710000000000003,Quintile 3
+2022-11-01,Senior (50+),4.537,Quintile 3
+2022-11-01,Early Career 1 (22-25),1.423,Quintile 4
+2022-11-01,Early Career 2 (26-30),3.075,Quintile 4
+2022-11-01,Developing (31-34),3.076,Quintile 4
+2022-11-01,Mid-Career 1 (35-40),4.614,Quintile 4
+2022-11-01,Mid-Career 2 (41-49),6.2379999999999995,Quintile 4
+2022-11-01,Senior (50+),9.296,Quintile 4
+2022-11-01,Early Career 1 (22-25),2.726,Quintile 5 (most exposed)
+2022-11-01,Early Career 2 (26-30),5.047,Quintile 5 (most exposed)
+2022-11-01,Developing (31-34),4.228,Quintile 5 (most exposed)
+2022-11-01,Mid-Career 1 (35-40),5.83,Quintile 5 (most exposed)
+2022-11-01,Mid-Career 2 (41-49),7.901,Quintile 5 (most exposed)
+2022-11-01,Senior (50+),12.559999999999999,Quintile 5 (most exposed)

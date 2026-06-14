@@ -1,0 +1,28 @@
+\begin{table}[htbp]\centering
+\caption{AI exposure, wage, and private-sector employment headcount: ages 51–60}
+\label{tab:ca_did_age4}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{3}{c}{ChatGPT (ref.\ Oct 2022)} & \multicolumn{3}{c}{Agentic (ref.\ Apr 2025)} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+Exposure $\times$ Post & +0.0076 &  & +0.0030 & -0.0095*** &  & -0.0067*** \\
+ & (0.0054) &  & (0.0060) & (0.0019) &  & (0.0019) \\
+ln wage $\times$ Post &  & +0.0108** & +0.0092 &  & -0.0074*** & -0.0050** \\
+ &  & (0.0053) & (0.0060) &  & (0.0021) & (0.0022) \\
+Exp $\times$ wage $\times$ Post &  &  & +0.0005 &  &  & +0.0091*** \\
+ &  &  & (0.0088) &  &  & (0.0023) \\
+\midrule
+Occupation FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Month FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Observations & 20,176 & 20,176 & 20,176 & 12,352 & 12,352 & 12,352 \\
+Occupations (clusters) & 388 & 388 & 388 & 386 & 386 & 386 \\
+Pseudo $R^2$ & 0.9941 & 0.9941 & 0.9942 & 0.9950 & 0.9950 & 0.9950 \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{\linewidth}\vspace{2pt}\footnotesize
+\emph{Notes:} Poisson PPML (cell-level employment headcount, private sector). Columns (1)--(3) anchor the event window on ChatGPT (Oct 2022 = $k{=}{-}1$, through 2025m4); (4)--(6) on agentic AI (Apr 2025 = $k{=}{-}1$, from 2023m7). Each coefficient is the average post-period effect relative to the reference month ($k{=}{-}1$), with each pre-period month as a separate control. Treatments are standardized within age group: $z(\text{exp})$ = Eloundou $\beta$, $z(\text{lnw})$ = ln full-time -equivalent wage (kontantl\o nn$/$stillingsprosent, pre-ChatGPT). Occupation and month fixed effects; SE clustered at occupation in parentheses. Coefficients are $\Delta\log$ employment per 1 SD. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{minipage}
+\end{table}

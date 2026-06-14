@@ -1,0 +1,66 @@
+% Shared TikZ styles and macros for the exposure-mapping slides.
+
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric, fit, backgrounds, calc}
+
+% Color palette: one color per code system.
+\definecolor{cSTYRK}{HTML}{1F4E79}   % STYRK / ISCO (identity): deep blue
+\definecolor{cSOC10}{HTML}{C55A11}   % SOC 2010: orange
+\definecolor{cSOC18}{HTML}{ED7D31}   % SOC 2018: light orange
+\definecolor{cTASK}{HTML}{548235}    % O*NET task: green
+\definecolor{cABIL}{HTML}{7030A0}    % O*NET ability: purple
+\definecolor{cSCORE}{HTML}{000000}   % final score: black
+
+% A code-system box: \codebox{color}{label}{code}{title}
+%   label = "STYRK-08", "SOC 2010", "ISCO-08", ...
+%   code  = "2262", "29-1051", ...
+%   title = "Pharmacists" / Norwegian name
+\tikzset{
+  codebox/.style={
+    draw=#1, line width=0.6pt,
+    rounded corners=2pt,
+    inner sep=3pt,
+    fill=#1!8,
+    text=black,
+    align=center,
+    minimum width=2.4cm,
+    minimum height=0.85cm,
+    font=\footnotesize
+  },
+  taskbox/.style={
+    codebox=cTASK,
+    minimum width=4cm,
+    align=left,
+    font=\scriptsize
+  },
+  chain/.style={
+    -{Stealth[length=2mm,width=1.6mm]},
+    line width=0.8pt,
+    draw=black!50
+  },
+  arrowlabel/.style={
+    font=\scriptsize\itshape,
+    text=black!60,
+    midway,
+    above=2pt,
+    fill=white,
+    inner sep=1pt
+  }
+}
+
+% \cbox{color}{label}{code}{title}
+\newcommand{\cbox}[4]{%
+  \begin{tabular}{c}%
+    {\scriptsize\color{#1!85!black}\textbf{#2}}\\[-1pt]%
+    {\bfseries #3}\\[-1pt]%
+    {\scriptsize #4}%
+  \end{tabular}%
+}
+
+% Task-table row highlights for Eloundou task scores (requires colortbl).
+%   \rR{task}{E}{beta} = score 1.0 row (E_1), light red
+%   \rO{task}{E}{beta} = score 0.5 row (E_2), light orange
+% Score 0.0 rows are written plain (no cellcolor).
+\definecolor{taskRed}{HTML}{FBDADA}
+\definecolor{taskOrange}{HTML}{FFE8CC}
+\newcommand{\rR}[3]{\cellcolor{taskRed}#1 & \cellcolor{taskRed}#2 & \cellcolor{taskRed}#3}
+\newcommand{\rO}[3]{\cellcolor{taskOrange}#1 & \cellcolor{taskOrange}#2 & \cellcolor{taskOrange}#3}

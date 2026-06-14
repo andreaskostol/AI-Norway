@@ -1,0 +1,106 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex.fmt)
+ restricted \write18 enabled.
+entering extended mode
+(interaction_results.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-02-20>
+(C:\Program Files\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Program Files\MiKTeX\tex/latex/base\size11.clo))
+(C:\Program Files\MiKTeX\tex/latex/base\inputenc.sty)
+(C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty)
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+For additional information on amsmath, use the `?' option.
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty))
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty)
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty))
+(C:\Program Files\MiKTeX\tex/latex/booktabs\booktabs.sty)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
+(C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty)
+(C:\Program Files\MiKTeX\tex/latex/graphics\graphics.sty
+(C:\Program Files\MiKTeX\tex/latex/graphics\trig.sty)
+(C:\Program Files\MiKTeX\tex/latex/graphics-cfg\graphics.cfg)
+(C:\Program Files\MiKTeX\tex/latex/graphics-def\pdftex.def)))
+(C:\Program Files\MiKTeX\tex/latex/caption\caption.sty
+(C:\Program Files\MiKTeX\tex/latex/caption\caption3.sty))
+(C:\Program Files\MiKTeX\tex/latex/float\float.sty)
+(C:\Program Files\MiKTeX\tex/latex/geometry\geometry.sty
+(C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
+(C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty))
+(C:\Program Files\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def)
+(interaction_results.aux)
+(C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
+(C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+[1{C:/Users/oysteimh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Progr
+am Files/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2 <./figures/intera
+ction/figure_ca_es_grid_stdexp.pdf> <./figures/interaction/figure_ca_es_decade_
+agentic_stdexp.pdf>] [3 <./figures/interaction/figure_ca_es_grid_stdexp_nyjobb.
+pdf> <./figures/interaction/figure_ca_es_decade_agentic_stdexp_nyjobb.pdf>]
+(tables/table_ca_did_combined.tex) [4] (tables/table_ca_did_combined_nyjobb.tex
+) [5] [6] [7 <./figures/interaction/figure_ca_es_grid_stdexp_olslog.pdf> <./fig
+ures/interaction/figure_ca_es_decade_agentic_stdexp_olslog.pdf>]
+(tables/table_ca_did_combined_olslog.tex) [8] [9] [10 <./figures/interaction/fi
+gure_ca_es_grid_stdexp_nyjobb_olslog.pdf> <./figures/interaction/figure_ca_es_d
+ecade_agentic_stdexp_nyjobb_olslog.pdf>]
+(tables/table_ca_did_combined_nyjobb_olslog.tex) [11]
+(C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd) [12] [13 <./figures/interact
+ion/figure_ca_es_firmfe_grid_count_occ.pdf> <./figures/interaction/figure_ca_es
+_firmfe_decade_agentic_count_occ.pdf>] [14 <./figures/interaction/figure_ca_es_
+firmfe_grid_nyjobb_occ.pdf> <./figures/interaction/figure_ca_es_firmfe_decade_a
+gentic_nyjobb_occ.pdf>] (tables/table_ca_did_firmfe_combined_count_occ.tex)
+[15{C:/Program Files/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+[16] (tables/table_ca_did_firmfe_combined_nyjobb_occ.tex) [17] [18] [19 <./figu
+res/interaction/figure_ca_es_yagan_grid_count.pdf> <./figures/interaction/figur
+e_ca_es_yagan_agentic_count.pdf>] [20 <./figures/interaction/figure_ca_es_yagan
+_grid_nyjobb.pdf> <./figures/interaction/figure_ca_es_yagan_agentic_nyjobb.pdf>
+] (tables/table_ca_did_yagan_combined_count.tex) [21] [22]
+(tables/table_ca_did_yagan_combined_nyjobb.tex) [23] [24] [25 <./figures/intera
+ction/figure_ca_es_yoy_grid_count.pdf> <./figures/interaction/figure_ca_es_yoy_
+agentic_count.pdf>] [26 <./figures/interaction/figure_ca_es_yoy_grid_nyjobb.pdf
+> <./figures/interaction/figure_ca_es_yoy_agentic_nyjobb.pdf>]
+(tables/table_ca_did_yoy_combined_count.tex) [27] [28]
+(tables/table_ca_did_yoy_combined_nyjobb.tex) [29]
+Overfull \hbox (19.12683pt too wide) in paragraph at lines 399--406
+\T1/cmr/m/n/10.95 128(7), 2505--2558. The relative-outcome spec-i-fi-ca-tion (e
+q. (2): $\OML/cmm/m/it/10.95 e[] \OMS/cmsy/m/n/10.95 ^^Q [][] ^^@ [] [][] [][]$
+\T1/cmr/m/n/10.95 ,
+[30] (interaction_results.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+(see the transcript file for additional information)<C:/Program Files/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmmi10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfo
+nts/cm/cmr6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program 
+Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Program Files/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfbx1095.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/cm-super/sfbx1200.pfb><C:/Program Files/MiKTeX
+/fonts/type1/public/cm-super/sfbx1440.pfb><C:/Program Files/MiKTeX/fonts/type1/
+public/cm-super/sfrm0800.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-sup
+er/sfrm0900.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfrm1000.p
+fb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfrm1095.pfb><C:/Progra
+m Files/MiKTeX/fonts/type1/public/cm-super/sfrm1200.pfb><C:/Program Files/MiKTe
+X/fonts/type1/public/cm-super/sfrm1728.pfb><C:/Program Files/MiKTeX/fonts/type1
+/public/cm-super/sfti0900.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-su
+per/sfti1000.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfti1095.
+pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sftt0900.pfb><C:/Progr
+am Files/MiKTeX/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on interaction_results.pdf (30 pages, 1471212 bytes).
+Transcript written on interaction_results.log.
+pdflatex: major issue: So far, no MiKTeX administrator has checked for updates.

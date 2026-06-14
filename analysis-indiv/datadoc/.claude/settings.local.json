@@ -1,0 +1,46 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -L --max-time 15 https://raw.githubusercontent.com/statisticsnorway/microdata-metadata-service/master/README.md)",
+      "Bash(curl -s -L --max-time 15 https://raw.githubusercontent.com/statisticsnorway/microdata-tools/master/README.md)",
+      "Bash(curl -s -o /dev/null -w \"URL: https://microdata.no/discovery/api/variables\\\\nHTTP: %{http_code}\\\\nContent-Type: %{content_type}\\\\nSize: %{size_download}\\\\n\" --max-time 15 \"https://microdata.no/discovery/api/variables\")",
+      "Bash(curl -s --max-time 15 \"https://microdata.no/discovery/api/variables\")",
+      "Bash(curl -sL \"https://www.ssb.no/data-til-forskning/utlan-av-data-til-forskere/variabellister\" -o /tmp/ssb_variabellister.html)",
+      "Bash(curl -s -o /dev/null -w \"URL: https://microdata.no/api/variables\\\\nHTTP: %{http_code}\\\\nContent-Type: %{content_type}\\\\nSize: %{size_download}\\\\n\" --max-time 15 \"https://microdata.no/api/variables\")",
+      "Bash(curl -s --max-time 15 \"https://microdata.no/api/variables\")",
+      "Bash(curl -sL \"https://www.ssb.no/data-til-forskning/utlan-av-data-til-forskere\" -o /tmp/ssb_utlan.html)",
+      "Bash(curl -s -o /dev/null -w \"URL: https://metadata.microdata.no/variables\\\\nHTTP: %{http_code}\\\\nContent-Type: %{content_type}\\\\nSize: %{size_download}\\\\n\" --max-time 15 \"https://metadata.microdata.no/variables\")",
+      "Bash(curl -s --max-time 15 \"https://metadata.microdata.no/variables\")",
+      "Bash(curl -sL \"https://skatteetaten.github.io/api-dokumentasjon/en/anvendelsesomraader/ameldingen\" -o /tmp/skatt_ameldingen.html)",
+      "Bash(curl -s -o /dev/null -w \"URL: https://microdata.no/discovery/api/metadata\\\\nHTTP: %{http_code}\\\\nContent-Type: %{content_type}\\\\nSize: %{size_download}\\\\n\" --max-time 15 \"https://microdata.no/discovery/api/metadata\")",
+      "Bash(curl -s --max-time 15 \"https://microdata.no/discovery/api/metadata\")",
+      "Bash(curl -s --max-time 15 \"https://microdata.no/discovery/_next/static/chunks/pages/index-738dd3900b158976.js\")",
+      "Bash(curl -s --max-time 15 \"https://microdata.no/discovery/_next/static/chunks/pages/_app-8da633e3c71b80b3.js\")",
+      "Bash(curl -s -L --max-time 15 \"https://api.github.com/repos/statisticsnorway/microdata-datastore-api/contents/datastore_api\")",
+      "Bash(python3 -c \"import sys,json; [print\\(x['name']\\) for x in json.load\\(sys.stdin\\)]\")",
+      "Bash(curl -sL https://www.ssb.no/data-til-forskning/utlan-av-data-til-forskere/variabellister -o C:/Users/simenm/AppData/Local/Temp/ssb_vl.html)",
+      "Bash(curl -s --max-time 15 \"https://microdata.no/discovery/_next/static/OO6ngE4u4zPjG9D_BCnKR/_buildManifest.js\")",
+      "Bash(curl -s --max-time 15 \"https://microdata.no/discovery/_next/static/chunks/pages/variables-a6fa7c939f059190.js\")",
+      "Bash(curl -sL https://www.ssb.no/data-til-forskning/utlan-av-data-til-forskere -o C:/Users/simenm/AppData/Local/Temp/ssb_utlan.html)",
+      "Bash(curl -sL https://skatteetaten.github.io/api-dokumentasjon/en/anvendelsesomraader/ameldingen -o C:/Users/simenm/AppData/Local/Temp/skatt_aml.html)",
+      "Bash(curl -s --max-time 15 \"https://microdata.no/discovery/_next/data/OO6ngE4u4zPjG9D_BCnKR/no/variables.json?sortBy=NAME&sortType=ASC\")",
+      "Bash(python3 -c \" import sys, json data = json.load\\(sys.stdin\\) props = data.get\\('pageProps', {}\\) print\\('Keys in pageProps:', list\\(props.keys\\(\\)\\)\\) sr = props.get\\('searchResult', {}\\) if sr: print\\('Keys in searchResult:', list\\(sr.keys\\(\\)\\)\\) print\\('totalCount:', sr.get\\('totalCount'\\)\\) print\\('hitCount:', sr.get\\('hitCount'\\)\\) print\\('pageSize:', sr.get\\('pageSize'\\)\\) ds = sr.get\\('dataStructures', []\\) if ds: print\\('First item keys:', list\\(ds[0].keys\\(\\)\\)\\) print\\('First item name:', ds[0].get\\('name'\\)\\) print\\('Number of items on page:', len\\(ds\\)\\) \")",
+      "Bash(python3 -c \"import sys,json; data=json.load\\(sys.stdin\\); props=data.get\\('pageProps',{}\\); print\\('Keys:', list\\(props.keys\\(\\)\\)\\); sr=props.get\\('searchResult',{}\\); print\\('SR keys:', list\\(sr.keys\\(\\)\\) if sr else 'none'\\); print\\('totalCount:', sr.get\\('totalCount',''\\)\\); print\\('hitCount:', sr.get\\('hitCount',''\\)\\); print\\('pageSize:', sr.get\\('pageSize',''\\)\\); ds=sr.get\\('dataStructures',[]\\); print\\('items on page:', len\\(ds\\)\\); print\\('first name:', ds[0].get\\('name',''\\) if ds else ''\\)\")",
+      "Bash(python -c ':*)",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); props=data.get\\('pageProps',{}\\); print\\('Keys:', list\\(props.keys\\(\\)\\)\\); sr=props.get\\('searchResult',{}\\); print\\('SR keys:', list\\(sr.keys\\(\\)\\) if sr else 'none'\\); print\\('totalCount:', sr.get\\('totalCount',''\\)\\); print\\('hitCount:', sr.get\\('hitCount',''\\)\\); print\\('pageSize:', sr.get\\('pageSize',''\\)\\); ds=sr.get\\('dataStructures',[]\\); print\\('items on page:', len\\(ds\\)\\); print\\('first name:', ds[0].get\\('name',''\\) if ds else ''\\)\")",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); props=data['pageProps']; d=props.get\\('data',{}\\); print\\('data keys:', list\\(d.keys\\(\\)\\) if isinstance\\(d,dict\\) else type\\(d\\)\\); cfg=props.get\\('cfg',{}\\); print\\('cfg:', cfg\\); print\\('basePath:', props.get\\('basePath',''\\)\\); print\\('loggedIn:', props.get\\('loggedIn',''\\)\\); print\\('draftAccess:', props.get\\('draftAccess',''\\)\\)\")",
+      "Bash(curl -sL https://www.ssb.no/data-til-forskning/utlan-av-data-til-forskere/variabellister/__TRACKED_VAR__)",
+      "Bash(curl -s --max-time 15 \"https://microdata.no/discovery/_next/data/OO6ngE4u4zPjG9D_BCnKR/no/variables.json?sortBy=NAME&sortType=ASC&pageSize=1000\")",
+      "Bash(cat)",
+      "Bash(bash download_all.sh)",
+      "Bash(curl -sS -L -o \"SSB_variabelliste_kontantstotte.xlsx\" \"https://www.ssb.no/data-til-forskning/utlan-av-data-til-forskere/variabellister/_/attachment/inline/d0e50dd1-5f5e-4e62-b147-dba9d4b5871f:fc23a2b335b70b471f90ad6d2c4736c5827d3bac/SSB_variabelliste_kontantst%C3%B8tte.xlsx\")",
+      "Bash(curl -sS -L -o \"SSB_variabelliste_atlto.xlsx\" \"https://www.ssb.no/data-til-forskning/utlan-av-data-til-forskere/variabellister/arbeidsmarked/_/attachment/download/125c8582-c38d-4334-89c0-cc16652d5234:2d4203fe2c133e5ea58a433d55997725602c6953/SSB_variabelliste_atlto.xlsx\")",
+      "Bash(python build_variable_lookup.py)",
+      "Read(//c/Users/simenm/.claude/**)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\simenm\\Frischsenteret Dropbox\\Simen simen.markussen@gmail.com\\datadoc\\variabellister_ssb",
+      "C:\\Users\\simenm\\.claude"
+    ]
+  }
+}

@@ -1,0 +1,314 @@
+PWD C:\Users\oysteimh\Frischsenteret Dropbox\Øystein Hernæs\Research Hernaes\AI-Norway\analysis\output
+INPUT C:\Users\oysteimh\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT interaction_results.tex
+OUTPUT interaction_results.log
+INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size11.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size11.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size11.clo
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\inputenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm1095.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsmath.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amstext.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsgen.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsbsy.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\amsmath\amsopn.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\booktabs\booktabs.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\caption\caption.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\caption\caption3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT .\interaction_results.aux
+INPUT .\interaction_results.aux
+INPUT interaction_results.aux
+OUTPUT interaction_results.aux
+INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX\tex\context\base\mkii\supp-pdf.mkii
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\epstopdf-pkg\epstopdf-base.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\00miktex\epstopdf-sys.cfg
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm1728.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm1200.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecti1095.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm0800.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm0600.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecbx1095.tfm
+OUTPUT interaction_results.pdf
+INPUT C:\Users\oysteimh\AppData\Local\MiKTeX\fonts\map\pdftex\pdftex.map
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\cm-super\cm-super-t1.enc
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm1440.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecbx1440.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecbx1200.tfm
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp.pdf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm1000.tfm
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_nyjobb.pdf
+INPUT .\tables\table_ca_did_combined.tex
+INPUT .\tables\table_ca_did_combined.tex
+INPUT tables\table_ca_did_combined.tex
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx5.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecti1000.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm0900.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecti0900.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm0500.tfm
+INPUT .\tables\table_ca_did_combined_nyjobb.tex
+INPUT .\tables\table_ca_did_combined_nyjobb.tex
+INPUT tables\table_ca_did_combined_nyjobb.tex
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_olslog.pdf
+INPUT .\tables\table_ca_did_combined_olslog.tex
+INPUT .\tables\table_ca_did_combined_olslog.tex
+INPUT tables\table_ca_did_combined_olslog.tex
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_nyjobb_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_nyjobb_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_nyjobb_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_nyjobb_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_grid_stdexp_nyjobb_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_nyjobb_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_nyjobb_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_nyjobb_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_nyjobb_olslog.pdf
+INPUT .\figures\interaction\figure_ca_es_decade_agentic_stdexp_nyjobb_olslog.pdf
+INPUT .\tables\table_ca_did_combined_nyjobb_olslog.tex
+INPUT .\tables\table_ca_did_combined_nyjobb_olslog.tex
+INPUT tables\table_ca_did_combined_nyjobb_olslog.tex
+INPUT C:\Program Files\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\base\t1cmtt.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ectt1095.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmbx12.tfm
+INPUT .\figures\interaction\figure_ca_es_firmfe_grid_count_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_grid_count_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_grid_count_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_grid_count_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_grid_count_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_decade_agentic_count_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_decade_agentic_count_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_decade_agentic_count_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_decade_agentic_count_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_decade_agentic_count_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_grid_nyjobb_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_grid_nyjobb_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_grid_nyjobb_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_grid_nyjobb_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_grid_nyjobb_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_decade_agentic_nyjobb_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_decade_agentic_nyjobb_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_decade_agentic_nyjobb_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_decade_agentic_nyjobb_occ.pdf
+INPUT .\figures\interaction\figure_ca_es_firmfe_decade_agentic_nyjobb_occ.pdf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\tcrm1095.tfm
+INPUT .\tables\table_ca_did_firmfe_combined_count_occ.tex
+INPUT .\tables\table_ca_did_firmfe_combined_count_occ.tex
+INPUT tables\table_ca_did_firmfe_combined_count_occ.tex
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ectt0900.tfm
+INPUT C:\Program Files\MiKTeX\fonts\enc\dvips\cm-super\cm-super-ts1.enc
+INPUT .\tables\table_ca_did_firmfe_combined_nyjobb_occ.tex
+INPUT .\tables\table_ca_did_firmfe_combined_nyjobb_occ.tex
+INPUT tables\table_ca_did_firmfe_combined_nyjobb_occ.tex
+INPUT .\figures\interaction\figure_ca_es_yagan_grid_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_grid_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_grid_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_grid_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_grid_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_agentic_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_agentic_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_agentic_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_agentic_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_agentic_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_grid_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_grid_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_grid_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_grid_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_grid_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_agentic_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_agentic_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_agentic_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_agentic_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yagan_agentic_nyjobb.pdf
+INPUT .\tables\table_ca_did_yagan_combined_count.tex
+INPUT .\tables\table_ca_did_yagan_combined_count.tex
+INPUT tables\table_ca_did_yagan_combined_count.tex
+INPUT .\tables\table_ca_did_yagan_combined_nyjobb.tex
+INPUT .\tables\table_ca_did_yagan_combined_nyjobb.tex
+INPUT tables\table_ca_did_yagan_combined_nyjobb.tex
+INPUT .\figures\interaction\figure_ca_es_yoy_grid_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_grid_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_grid_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_grid_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_grid_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_agentic_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_agentic_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_agentic_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_agentic_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_agentic_count.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_grid_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_grid_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_grid_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_grid_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_grid_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_agentic_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_agentic_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_agentic_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_agentic_nyjobb.pdf
+INPUT .\figures\interaction\figure_ca_es_yoy_agentic_nyjobb.pdf
+INPUT .\tables\table_ca_did_yoy_combined_count.tex
+INPUT .\tables\table_ca_did_yoy_combined_count.tex
+INPUT tables\table_ca_did_yoy_combined_count.tex
+INPUT .\tables\table_ca_did_yoy_combined_nyjobb.tex
+INPUT .\tables\table_ca_did_yoy_combined_nyjobb.tex
+INPUT tables\table_ca_did_yoy_combined_nyjobb.tex
+INPUT interaction_results.aux
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmex10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmmi9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr7.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmr9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy10.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy6.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy8.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy9.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfbx1095.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfbx1095.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfbx1200.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfbx1200.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfbx1440.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfbx1440.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfrm0800.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfrm0800.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfrm0900.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfrm0900.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfrm1000.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfrm1000.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfrm1095.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfrm1095.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfrm1200.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfrm1200.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfrm1728.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfrm1728.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfti0900.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfti0900.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfti1000.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfti1000.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfti1095.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sfti1095.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sftt0900.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sftt0900.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sftt1095.pfb
+INPUT C:\Program Files\MiKTeX\fonts\type1\public\cm-super\sftt1095.pfb

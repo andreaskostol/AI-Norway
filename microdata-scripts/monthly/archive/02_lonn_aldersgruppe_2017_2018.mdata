@@ -1,0 +1,780 @@
+require no.ssb.fdb:51 as db
+
+create-dataset kobling
+import db/ARBEIDSFORHOLD_PERSON as personid
+
+create-dataset pers2017
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+generate alder = 2017 - int(fodtaarmd / 100)
+
+create-dataset pers2018
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+generate alder = 2018 - int(fodtaarmd / 100)
+
+create-dataset y2017m01
+import db/ARBLONN_ARB_YRKE_STYRK08 2017-01-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2017-01-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2017-01-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2017-01-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2017-01-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2017m01
+use pers2017
+merge alder into y2017m01 on personid
+
+use y2017m01
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2017m01
+
+create-dataset y2017m02
+import db/ARBLONN_ARB_YRKE_STYRK08 2017-02-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2017-02-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2017-02-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2017-02-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2017-02-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2017m02
+use pers2017
+merge alder into y2017m02 on personid
+
+use y2017m02
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2017m02
+
+create-dataset y2017m03
+import db/ARBLONN_ARB_YRKE_STYRK08 2017-03-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2017-03-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2017-03-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2017-03-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2017-03-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2017m03
+use pers2017
+merge alder into y2017m03 on personid
+
+use y2017m03
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2017m03
+
+create-dataset y2017m04
+import db/ARBLONN_ARB_YRKE_STYRK08 2017-04-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2017-04-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2017-04-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2017-04-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2017-04-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2017m04
+use pers2017
+merge alder into y2017m04 on personid
+
+use y2017m04
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2017m04
+
+create-dataset y2017m05
+import db/ARBLONN_ARB_YRKE_STYRK08 2017-05-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2017-05-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2017-05-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2017-05-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2017-05-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2017m05
+use pers2017
+merge alder into y2017m05 on personid
+
+use y2017m05
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2017m05
+
+create-dataset y2017m06
+import db/ARBLONN_ARB_YRKE_STYRK08 2017-06-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2017-06-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2017-06-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2017-06-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2017-06-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2017m06
+use pers2017
+merge alder into y2017m06 on personid
+
+use y2017m06
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2017m06
+
+create-dataset y2017m07
+import db/ARBLONN_ARB_YRKE_STYRK08 2017-07-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2017-07-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2017-07-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2017-07-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2017-07-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2017m07
+use pers2017
+merge alder into y2017m07 on personid
+
+use y2017m07
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2017m07
+
+create-dataset y2017m08
+import db/ARBLONN_ARB_YRKE_STYRK08 2017-08-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2017-08-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2017-08-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2017-08-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2017-08-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2017m08
+use pers2017
+merge alder into y2017m08 on personid
+
+use y2017m08
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2017m08
+
+create-dataset y2017m09
+import db/ARBLONN_ARB_YRKE_STYRK08 2017-09-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2017-09-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2017-09-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2017-09-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2017-09-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2017m09
+use pers2017
+merge alder into y2017m09 on personid
+
+use y2017m09
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2017m09
+
+create-dataset y2017m10
+import db/ARBLONN_ARB_YRKE_STYRK08 2017-10-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2017-10-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2017-10-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2017-10-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2017-10-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2017m10
+use pers2017
+merge alder into y2017m10 on personid
+
+use y2017m10
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2017m10
+
+create-dataset y2017m11
+import db/ARBLONN_ARB_YRKE_STYRK08 2017-11-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2017-11-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2017-11-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2017-11-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2017-11-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2017m11
+use pers2017
+merge alder into y2017m11 on personid
+
+use y2017m11
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2017m11
+
+create-dataset y2017m12
+import db/ARBLONN_ARB_YRKE_STYRK08 2017-12-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2017-12-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2017-12-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2017-12-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2017-12-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2017m12
+use pers2017
+merge alder into y2017m12 on personid
+
+use y2017m12
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2017m12
+
+create-dataset y2018m01
+import db/ARBLONN_ARB_YRKE_STYRK08 2018-01-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2018-01-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2018-01-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2018-01-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2018-01-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2018m01
+use pers2018
+merge alder into y2018m01 on personid
+
+use y2018m01
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2018m01
+
+create-dataset y2018m02
+import db/ARBLONN_ARB_YRKE_STYRK08 2018-02-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2018-02-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2018-02-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2018-02-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2018-02-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2018m02
+use pers2018
+merge alder into y2018m02 on personid
+
+use y2018m02
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2018m02
+
+create-dataset y2018m03
+import db/ARBLONN_ARB_YRKE_STYRK08 2018-03-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2018-03-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2018-03-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2018-03-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2018-03-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2018m03
+use pers2018
+merge alder into y2018m03 on personid
+
+use y2018m03
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2018m03
+
+create-dataset y2018m04
+import db/ARBLONN_ARB_YRKE_STYRK08 2018-04-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2018-04-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2018-04-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2018-04-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2018-04-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2018m04
+use pers2018
+merge alder into y2018m04 on personid
+
+use y2018m04
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2018m04
+
+create-dataset y2018m05
+import db/ARBLONN_ARB_YRKE_STYRK08 2018-05-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2018-05-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2018-05-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2018-05-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2018-05-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2018m05
+use pers2018
+merge alder into y2018m05 on personid
+
+use y2018m05
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2018m05
+
+create-dataset y2018m06
+import db/ARBLONN_ARB_YRKE_STYRK08 2018-06-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2018-06-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2018-06-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2018-06-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2018-06-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2018m06
+use pers2018
+merge alder into y2018m06 on personid
+
+use y2018m06
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2018m06
+
+create-dataset y2018m07
+import db/ARBLONN_ARB_YRKE_STYRK08 2018-07-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2018-07-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2018-07-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2018-07-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2018-07-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2018m07
+use pers2018
+merge alder into y2018m07 on personid
+
+use y2018m07
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2018m07
+
+create-dataset y2018m08
+import db/ARBLONN_ARB_YRKE_STYRK08 2018-08-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2018-08-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2018-08-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2018-08-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2018-08-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2018m08
+use pers2018
+merge alder into y2018m08 on personid
+
+use y2018m08
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2018m08
+
+create-dataset y2018m09
+import db/ARBLONN_ARB_YRKE_STYRK08 2018-09-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2018-09-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2018-09-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2018-09-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2018-09-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2018m09
+use pers2018
+merge alder into y2018m09 on personid
+
+use y2018m09
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2018m09
+
+create-dataset y2018m10
+import db/ARBLONN_ARB_YRKE_STYRK08 2018-10-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2018-10-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2018-10-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2018-10-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2018-10-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2018m10
+use pers2018
+merge alder into y2018m10 on personid
+
+use y2018m10
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2018m10
+
+create-dataset y2018m11
+import db/ARBLONN_ARB_YRKE_STYRK08 2018-11-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2018-11-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2018-11-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2018-11-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2018-11-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2018m11
+use pers2018
+merge alder into y2018m11 on personid
+
+use y2018m11
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2018m11
+
+create-dataset y2018m12
+import db/ARBLONN_ARB_YRKE_STYRK08 2018-12-16 as yrke
+import db/ARBLONN_LONN_KONTANT_IMP 2018-12-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2018-12-16 as stillingspst
+import db/ARBLONN_LONN_TIME 2018-12-16 as timelonn
+import db/ARBLONN_ARB_ANSETTELSESFORM 2018-12-16 as ansform
+generate yrke4 = substr(yrke, 1, 4)
+generate fast_jobb = 0
+replace fast_jobb = 1 if ansform == 'fast'
+
+use kobling
+merge personid into y2018m12
+use pers2018
+merge alder into y2018m12 on personid
+
+use y2018m12
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr, summarize(timelonn) flatten
+tabulate yrke4 alder_gr, summarize(fast_jobb) flatten
+delete-dataset y2018m12

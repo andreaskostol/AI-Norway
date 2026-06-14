@@ -1,0 +1,55 @@
+\begin{table}[H]\centering
+\caption{Interaction specifications compared: AI exposure, wage, and private-sector new hires (ChatGPT (ref.\ Oct 2022)).}
+\label{tab:ca_int_chatgpt_nyjobb}
+\small
+\begin{tabular}{lccccc}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) \\
+ & raw product & rect.\ ${>}$mean & rect.\ ${>}{+}1$SD & corner $p75$ & corner $p80$ \\
+\midrule
+\multicolumn{6}{@{}l}{\textit{Panel: ages 21–30}} \\
+Exposure $\times$ Post & -0.0230 & -0.0031 & -0.0232 & -0.0092 & -0.0167 \\
+ & (0.0276) & (0.0290) & (0.0276) & (0.0261) & (0.0287) \\
+ln wage $\times$ Post & -0.0061 & +0.0099 & -0.0069 & +0.0056 & +0.0004 \\
+ & (0.0266) & (0.0284) & (0.0252) & (0.0255) & (0.0257) \\
+Interaction $\times$ Post & +0.0007 & -0.0514 & +0.2582 & -0.0468* & -0.0326** \\
+ & (0.0338) & (0.0418) & (0.2049) & (0.0250) & (0.0151) \\
+\quad Observations & \multicolumn{5}{c}{19,188 \quad (occ.\ 369)} \\
+\quad Pseudo $R^2$ & 0.9168 & 0.9168 & 0.9163 & 0.9165 & 0.9163 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Panel: ages 31–40}} \\
+Exposure $\times$ Post & +0.0193 & +0.0653* & +0.0309 & +0.0238 & +0.0331 \\
+ & (0.0319) & (0.0393) & (0.0289) & (0.0303) & (0.0300) \\
+ln wage $\times$ Post & -0.0327 & +0.0215 & -0.0205 & -0.0141 & -0.0121 \\
+ & (0.0284) & (0.0438) & (0.0309) & (0.0341) & (0.0323) \\
+Interaction $\times$ Post & -0.0790* & -0.1137** & -0.0467** & -0.0385 & -0.0626*** \\
+ & (0.0477) & (0.0458) & (0.0225) & (0.0273) & (0.0243) \\
+\quad Observations & \multicolumn{5}{c}{19,136 \quad (occ.\ 368)} \\
+\quad Pseudo $R^2$ & 0.8712 & 0.8710 & 0.8709 & 0.8709 & 0.8710 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Panel: ages 41–50}} \\
+Exposure $\times$ Post & +0.0002 & +0.0379 & +0.0122 & +0.0030 & +0.0139 \\
+ & (0.0276) & (0.0381) & (0.0265) & (0.0279) & (0.0276) \\
+ln wage $\times$ Post & -0.0178 & +0.0248 & -0.0105 & -0.0093 & -0.0048 \\
+ & (0.0311) & (0.0477) & (0.0331) & (0.0373) & (0.0344) \\
+Interaction $\times$ Post & -0.0597 & -0.0927* & -0.0440* & -0.0126 & -0.0519** \\
+ & (0.0494) & (0.0495) & (0.0245) & (0.0293) & (0.0264) \\
+\quad Observations & \multicolumn{5}{c}{19,084 \quad (occ.\ 367)} \\
+\quad Pseudo $R^2$ & 0.8487 & 0.8485 & 0.8483 & 0.8484 & 0.8484 \\
+\addlinespace
+\multicolumn{6}{@{}l}{\textit{Panel: ages 51–60}} \\
+Exposure $\times$ Post & -0.0004 & +0.0182 & +0.0051 & -0.0037 & +0.0010 \\
+ & (0.0253) & (0.0389) & (0.0287) & (0.0292) & (0.0293) \\
+ln wage $\times$ Post & -0.0131 & +0.0040 & -0.0153 & -0.0307 & -0.0181 \\
+ & (0.0436) & (0.0575) & (0.0428) & (0.0489) & (0.0440) \\
+Interaction $\times$ Post & -0.0537 & -0.0431 & -0.0030 & +0.0430 & +0.0190 \\
+ & (0.0559) & (0.0561) & (0.0191) & (0.0312) & (0.0221) \\
+\quad Observations & \multicolumn{5}{c}{18,980 \quad (occ.\ 365)} \\
+\quad Pseudo $R^2$ & 0.8192 & 0.8191 & 0.8190 & 0.8191 & 0.8190 \\
+\addlinespace
+\bottomrule
+\end{tabular}
+\begin{minipage}{\linewidth}\vspace{2pt}\footnotesize
+\emph{Notes:} Poisson PPML, cell-level new hires, private sector. Each column is one model: the free linear gradients $z(\text{exp})\times$Post and $z(\text{lnw})\times$Post are always included; only the \emph{interaction} term changes. (1) raw product $z(\text{exp})z(\text{lnw})$; (2) rectified $\max\{z(\text{exp}),0\}\max\{z(\text{lnw}),0\}$; (3) rectified at $+1$ SD; (4)--(5) joint upper-quartile / quintile corner dummies. Coefficients are average post-period effects vs.\ the reference month ($k{=}{-}1$), each pre-month a separate control. All effects shown per 1 SD of the construct ($\Delta\log$ per SD). Occupation and month FE; SE clustered at occupation in parentheses. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{minipage}
+\end{table}

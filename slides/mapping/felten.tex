@@ -1,0 +1,80 @@
+% Felten et al. (2021): AI Occupational Exposure (AIOE)
+
+\begin{frame}{What Felten et al.\ measure}
+\begin{itemize}\setlength{\itemsep}{6pt}
+  \item Ten AI application benchmarks track progress over time:
+  \begin{itemize}
+    \item image recognition, language modeling, speech recognition, reading comprehension, translation, abstract strategy games, real-time video games, visual Q\&A, image generation, instrumental track recognition
+  \end{itemize}
+  \item Each O*NET ability is rated for relevance to every AI application
+  \item AIOE for an occupation $=$ sum over abilities of (ability prevalence + importance) $\times$ AI progress on that ability
+  \item Language Modeling sub-index restricts to the LM benchmark only
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{The code chain}
+\centering
+\begin{tikzpicture}[node distance=1.0cm and 1.6cm]
+  \node[codebox=cTASK] (ai) {\cbox{cTASK}{AI applications}{10 benchmarks}{progress over time}};
+  \node[codebox=cABIL, below=of ai] (ab) {\cbox{cABIL}{O*NET ability}{52 abilities}{per occupation}};
+
+  \node[codebox=cSOC10, right=2.6cm of $(ai)!0.5!(ab)$] (soc) {\cbox{cSOC10}{SOC 2010}{29-1051}{Pharmacists}};
+  \node[codebox=cSTYRK, right=of soc] (s) {\cbox{cSTYRK}{STYRK-08}{2262}{Farmasøyter}};
+
+  \draw[chain] (ai) -- (soc);
+  \draw[chain] (ab) -- (soc);
+  \draw[chain] (soc) -- node[arrowlabel]{BLS 2012} (s);
+\end{tikzpicture}
+
+\vspace{1em}
+Two inputs (AI progress, ability importance) combine at the SOC level. The downstream chain is identical to the other measures.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Worked example: Pharmacists (SOC 29-1051)}
+\centering\scriptsize
+AI progress score for selected O*NET abilities (from Appendix D):
+
+\vspace{0.4em}
+\begin{tabular}{lcccc}
+\toprule
+O*NET ability & Language Modeling & Reading Compr.\ & Image Recognition & Avg.\ across 10 apps \\
+\midrule
+Deductive Reasoning      & 0.80 & 0.87 & 0.65 & 0.73 \\
+Inductive Reasoning      & 0.79 & 0.84 & 0.69 & 0.73 \\
+Written Comprehension    & 0.83 & 0.91 & 0.57 & 0.64 \\
+Oral Comprehension       & 0.91 & 0.69 & 0.37 & 0.61 \\
+Number Facility          & 0.50 & 0.64 & 0.67 & 0.63 \\
+Information Ordering     & 0.85 & 0.92 & 0.87 & 0.88 \\
+Memorization             & 0.86 & 0.93 & 0.83 & 0.84 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.5em}
+\justifying\small
+AIOE weights these AI-progress scores by each ability's prevalence and importance in the occupation (from O*NET). For Pharmacists, the weighted sum gives:
+
+\vspace{0.4em}
+\centering
+\textbf{AIOE $= 0.606$ (Q4)} \quad LM sub-index $= 0.571$ \quad Image-Gen sub-index $= 0.478$
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Many-to-one mapping}
+\centering
+\begin{tikzpicture}[node distance=0.4cm and 0.5cm]
+  \node[codebox=cSOC10] (a) {\cbox{cSOC10}{SOC 2010}{11-1011}{Chief Exec. \\ AIOE $=1.334$}};
+  \node[codebox=cSOC10, right=of a] (b) {\cbox{cSOC10}{SOC 2010}{11-1021}{Gen.\ \& Ops \\ AIOE $=0.575$}};
+  \node[codebox=cSOC10, right=of b] (c) {\cbox{cSOC10}{SOC 2010}{11-9161}{Emergency \\ AIOE $=1.031$}};
+
+  \node[codebox=cSTYRK, below=1.2cm of b, minimum width=4.2cm] (s) {\cbox{cSTYRK}{STYRK-08}{1112}{Adm.\ direktører \quad \textbf{AIOE $=0.980$, Q4}}};
+
+  \draw[chain] (a) -- (s);
+  \draw[chain] (b) -- (s);
+  \draw[chain] (c) -- (s);
+\end{tikzpicture}
+
+\vspace{0.6em}
+Unweighted mean across the three contributing SOC 2010 codes: $(1.334 + 0.575 + 1.031)/3 = 0.980$. The same averaging rule applies for Eloundou and Handa.
+\end{frame}

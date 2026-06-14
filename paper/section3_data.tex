@@ -1,0 +1,84 @@
+\section{Data, Measures, and Approach}\label{sec:data}
+
+\subsection{Norwegian Labor Market Data}\label{sec:data:labor}
+
+Our labor market data come from the \emph{A-ordningen}, Norway's coordinated employer reporting system. Every Norwegian employer submits a monthly report of all employment relationships, wages, and tax withholdings. The Norwegian Tax Administration administers the system on behalf of Statistics Norway and the Norwegian Labour and Welfare Administration. Statistics Norway compiles the reports into the ARBLONN register, which covers the universe of formal employment in Norway except self-employment, approximately 3.1 million employment records per month \citep{ssb_arblonn_doc}. We access the data through microdata.no, Statistics Norway's remote analysis platform, which provides programmatic access to population-level registers and exports aggregated cell-level tables.
+
+\paragraph{Reference period and inclusion rules.}
+ARBLONN is a monthly status register. The reference period is the week containing the 16th of each month, almost always week 3 \citep{ssb_klassifisering}. On microdata.no, every monthly observation is stamped to the 16th (\texttt{YYYY-MM-16}). An employment relationship is included in month $t$ if its start date is on or before the last day of the reference week and either no end date is recorded or the end date is on or after the first day of the reference week. Two further rules apply. First, when cash earnings are reported for the calendar month but cannot be linked to a contemporaneous or prior-month employment relationship, Statistics Norway constructs a fictional employment relationship and classifies the worker as employed. Second, when wage is paid in the month after an employment relationship ends, the relationship is retained for the last month in which it covered the reference week. As a result, monthly counts cover slightly more workers than a strict snapshot on the 16th would.
+
+\paragraph{Variables.}
+The unit of observation is a person--firm pair in a given month. Statistics Norway aggregates wage components reported by the same employer for the same person into a single person--firm record \citep{ssb_klassifisering}. Table~\ref{tab:arblonn_variables} lists the variables we use; all are measured at the 16th of the month.
+
+\begin{table}[htbp]
+\centering
+\caption{ARBLONN variables used in the analysis}
+\label{tab:arblonn_variables}
+\footnotesize
+\begin{tabular}{p{4.2cm}p{10cm}}
+\toprule
+Variable & Description \\
+\midrule
+Occupation code & Four-digit STYRK-08 code for the employment relationship; identical to the International Standard Classification of Occupations (ISCO-08) at the four-digit level \citep{ssb2011styrk}. \\[4pt]
+Cash earnings & Total cash compensation paid by the employer during the calendar month, gross of tax; includes base salary, fixed and irregular supplements, bonuses, overtime pay, and severance. \\[4pt]
+Hourly wage & Hourly wage reported by the employer. \\[4pt]
+Contracted position percentage & Contracted hours as a share of full-time, with 100 representing full-time employment. \\[4pt]
+Overtime hours & Overtime hours reported by the employer for the calendar month. \\[4pt]
+Start date & Contractual start date of the employment relationship active on the 16th. We define a new-job indicator equal to one if the start date falls within the 30 days ending on the 16th of month $t$. \\[4pt]
+Institutional sector & Four-digit code from Statistics Norway's Business Register, collapsed into state (codes 1110, 1120, 6100), municipal (codes 1510, 1520, 6500), and private (all other codes). \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Sample.}
+Age is computed at monthly precision by subtracting birth year from calendar year and decrementing by one if the birth month exceeds the current month. Workers are assigned to four decade age groups: 21--30 (early career), 31--40, 41--50, and 51--60 (senior). We exclude individuals under age 21, whose labor market attachment is dominated by education transitions, and those over 60, who are affected by retirement timing. The sample period is January 2021 through February 2026.
+
+
+\subsection{Institutional Context}\label{sec:data:institutions}
+
+Several features of the Norwegian labor market are relevant for interpreting AI exposure patterns. Norway's public sector employs approximately 30 percent of the workforce, split between state and municipal employers. Wage determination is centralized: unions and employer organizations negotiate sector-level agreements that compress the wage distribution relative to market-based systems such as the United States. Employment protection legislation is strong by international standards, with notice periods and restrictions on dismissal that slow labor market reallocation.
+
+The period we study coincides with a monetary policy tightening: Norges Bank raised the policy rate from zero percent in September 2021 to 4.5 percent by January 2024 (Figure~\ref{fig:macro_context}). This tightening affected labor demand broadly, and any AI-specific employment patterns need to be read against this macroeconomic background.
+
+A demographic factor also affects the youngest age group. The early-career cohort shrank slightly between 2022-Q1 and 2025-Q1 (Figure~\ref{fig:cohort_sizes}). Although small, this trend works in the same direction as any AI-related decline in young employment, and should be kept in mind when reading the indexed series.
+
+A small set of Norwegian reports document AI adoption and its early labor-market correlates. \citet{samfunnsok2026} surveys 4{,}294 firms and reports that the share using AI rises from 24 percent in 2023 to 55 percent in 2025, concentrated in ICT, finance, and professional services. \citet{menon2026} regresses occupation-level unemployment growth on a Claude-based exposure measure for 2022--2025 and reports a positive gradient and no wage relationship, without decomposition by age or sector. \citet{nifu2024} interviews members of public-sector unions and finds AI use that is exploratory and concentrated in augmentation rather than automation. \citet{riksrevisjonen2024} reports that more than half of Norwegian state agencies have no experience with AI tools, and \citet{nav2025} reviews the broader labor-market outlook without occupation-level adoption data.
+
+
+\subsection{AI Exposure Measures}\label{sec:data:ai}
+
+Our main measure of occupational AI exposure is the Eloundou et al.\ (2024) GPT-4 exposure score. As a complement, the appendix uses the Handa et al.\ (2025) automation and augmentation shares, which capture revealed patterns of AI usage. Table~\ref{tab:measures} summarizes these measures.
+
+\paragraph{Eloundou et al.\ (2024), GPT-4 exposure.} \citet{eloundou2024} combine expert and GPT-4 assessments of each occupation's tasks to estimate the share of tasks for which access to a large language model (LLM) would reduce completion time by at least 50 percent. The occupation-level score, denoted $\beta$, is defined as $E_1 + 0.5 \times E_2$, where $E_1$ is the share of tasks directly exposed to an LLM and $E_2$ is the share exposed when complementary software is included. The measure captures theoretical LLM capability as assessed in early 2023. We map 397 STYRK-08 codes, covering 97.5 percent of all four-digit occupations in our data.
+
+\paragraph{Handa et al.\ (2025), Anthropic Economic Index.} \citet{handa2025} measure revealed AI usage patterns from a sample of Claude.ai conversations, with each conversation classified by O*NET task. The occupation-level score reflects the share of conversations associated with that occupation's tasks, decomposed into automation and augmentation modes as described in Section~\ref{sec:literature}. We map 352 STYRK-08 codes (86.5 percent coverage). The lower coverage reflects the concentration of observed Claude usage: the top seven task categories account for 22 percent of all conversations, leaving many occupations with negligible observed usage.
+
+\subsubsection*{Crosswalk Construction}
+
+Both measures originate in US SOC codes. The Handa et al.\ measure uses SOC 2010 codes directly. The Eloundou et al.\ measure uses SOC 2018 codes, which we first map to SOC 2010 using the official BLS crosswalk (November 2017). From SOC 2010, we apply the BLS SOC-to-ISCO crosswalk (August 2012, updated June 2015) to obtain ISCO-08 codes. Since STYRK-08 is identical to ISCO-08 at the 4-digit level \citep{ssb2011styrk}, this final step is an identity mapping.
+
+The BLS crosswalk contains partial matches: 38.8 percent of its rows are flagged as one-to-many or many-to-one mappings. When multiple SOC codes map to a single STYRK-08 code, we take the unweighted average of their exposure scores. We compute quality flags for each STYRK-08 code, including a partial-match indicator and the maximum fan-out, defined as the number of SOC codes contributing to a single STYRK-08 score. Of the 397 STYRK-08 codes with an Eloundou et al.\ score, 57.7 percent have at least one partial-match contributor.
+
+
+\subsection{Empirical Approach}\label{sec:data:approach}
+
+We construct normalized time series following the approach in \citet{brynjolfsson2025}, Figures 1--3. Each series is indexed to October 2022 = 1, the month immediately preceding ChatGPT's public release on November 30, 2022. For outcome $y$ in cell $c$ at month $t$, the normalized series is $\tilde{y}_{c,t} = y_{c,t} / y_{c,\text{Oct } 2022}$. Changes after October 2022 are expressed as proportional deviations from that pre-ChatGPT level.
+
+For each AI exposure measure, we rank all four-digit STYRK-08 occupation codes by their exposure score and assign them to quintiles, from quintile 1 (least exposed) to quintile 5 (most exposed). Quintiles are formed on the occupation distribution (each four-digit code counts once, regardless of its employment share) rather than on the employment-weighted distribution. Quintile assignment is performed separately for each measure, so an occupation may fall in different quintiles under different measures. We then aggregate employment counts and other outcomes within each quintile-by-age-group cell and construct the normalized time series.
+
+The primary outcome is employment indexed to October 2022, by decade age group and exposure quintile. Headline results are for the private sector, where AI-exposed occupations cluster; the public sector is reported in the appendix. Secondary outcomes, available from 2021 onward, include monthly earnings, hourly wages, contracted position percentage, overtime hours, and the share of new jobs.
+
+\begin{table}[htbp]
+\centering
+\caption{Five largest occupations by AI-exposure quintile, April 2025.}
+\label{tab:quintile_top_occ}
+\footnotesize
+\input{../analysis/output/tables/table_quintile_top_occ}
+\begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Occupations are ranked by the Eloundou et al.\ exposure score. Employment is the April 2025 headcount across both sectors and decade age groups 21--60; share is the occupation's percentage of the quintile's total employment. Occupation titles are the official English ISCO-08 labels.\end{minipage}
+\end{table}
+
+\subsection*{Data Availability}
+
+The AI exposure measures and crosswalk files used in this paper are publicly available. The Eloundou et al.\ (2024) GPT-4 exposure scores are available at \url{https://github.com/openai/GPTs-are-GPTs} (the file \texttt{data/occ\_level.csv}, supplementary data from the \textit{Science} article). The Handa et al.\ (2025) Anthropic Economic Index and the Anthropic (2026) \texttt{job\_exposure} measure are available at \url{https://github.com/anthropics/anthropic-economic-index}. The Felten et al.\ (2021) AIOE data are available as an appendix to the \textit{Strategic Management Journal} article. The BLS SOC-to-ISCO crosswalk is available at \url{https://www.bls.gov/soc/soccrosswalks.htm}. The STYRK-08 classification is documented by Statistics Norway at \url{https://www.ssb.no/klass/klassifikasjoner/7}. Norwegian labor market data are accessed through the microdata.no platform (\url{https://microdata.no}). The aggregated tabulations underlying our analysis are available from the authors upon request.
+
+\input{../analysis/output/tables/table1_measures}

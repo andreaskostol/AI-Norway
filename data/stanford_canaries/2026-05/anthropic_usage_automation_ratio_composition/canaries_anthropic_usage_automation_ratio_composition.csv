@@ -1,0 +1,37 @@
+observation_date,Age Group,Share,Usage Group
+2022-11-01,Early Career 1 (22-25),0.44349999999999995,No usage
+2022-11-01,Early Career 2 (26-30),0.6105,No usage
+2022-11-01,Developing (31-34),0.5033,No usage
+2022-11-01,Mid-Career 1 (35-40),0.6828,No usage
+2022-11-01,Mid-Career 2 (41-49),0.9737000000000001,No usage
+2022-11-01,Senior (50+),1.6480000000000001,No usage
+2022-11-01,Early Career 1 (22-25),0.7549,Quintile 1 (least usage)
+2022-11-01,Early Career 2 (26-30),1.193,Quintile 1 (least usage)
+2022-11-01,Developing (31-34),0.9812,Quintile 1 (least usage)
+2022-11-01,Mid-Career 1 (35-40),1.312,Quintile 1 (least usage)
+2022-11-01,Mid-Career 2 (41-49),1.763,Quintile 1 (least usage)
+2022-11-01,Senior (50+),2.92,Quintile 1 (least usage)
+2022-11-01,Early Career 1 (22-25),0.6034,Quintile 2
+2022-11-01,Early Career 2 (26-30),1.1520000000000001,Quintile 2
+2022-11-01,Developing (31-34),1.026,Quintile 2
+2022-11-01,Mid-Career 1 (35-40),1.409,Quintile 2
+2022-11-01,Mid-Career 2 (41-49),1.871,Quintile 2
+2022-11-01,Senior (50+),3.007,Quintile 2
+2022-11-01,Early Career 1 (22-25),1.587,Quintile 3
+2022-11-01,Early Career 2 (26-30),2.76,Quintile 3
+2022-11-01,Developing (31-34),2.528,Quintile 3
+2022-11-01,Mid-Career 1 (35-40),3.769,Quintile 3
+2022-11-01,Mid-Career 2 (41-49),5.391,Quintile 3
+2022-11-01,Senior (50+),8.849,Quintile 3
+2022-11-01,Early Career 1 (22-25),1.367,Quintile 4
+2022-11-01,Early Career 2 (26-30),2.414,Quintile 4
+2022-11-01,Developing (31-34),2.062,Quintile 4
+2022-11-01,Mid-Career 1 (35-40),2.8369999999999997,Quintile 4
+2022-11-01,Mid-Career 2 (41-49),3.739,Quintile 4
+2022-11-01,Senior (50+),5.947,Quintile 4
+2022-11-01,Early Career 1 (22-25),2.52,Quintile 5 (most usage)
+2022-11-01,Early Career 2 (26-30),4.5089999999999995,Quintile 5 (most usage)
+2022-11-01,Developing (31-34),3.823,Quintile 5 (most usage)
+2022-11-01,Mid-Career 1 (35-40),5.231,Quintile 5 (most usage)
+2022-11-01,Mid-Career 2 (41-49),6.959999999999999,Quintile 5 (most usage)
+2022-11-01,Senior (50+),10.85,Quintile 5 (most usage)

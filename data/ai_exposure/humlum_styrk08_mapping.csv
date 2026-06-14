@@ -1,0 +1,26 @@
+hv_occupation,styrk08_code,styrk08_label_en,confidence,note
+accountants,2411,Accountants,high,"H&V ""Revisions- og regnskabsmedarbejder"". ISCO 2411 covers accountants and auditors."
+customer_support,4222,Contact centre information clerks,high,"H&V ""Kundesupport"". Primary code; some workers may also be 5244 (contact centre salespersons)."
+customer_support,5244,Contact centre salespersons,medium,"Secondary code if customer support also handles outbound sales."
+financial_advisors,2412,Financial and investment advisers,high,"H&V ""Økonomisk rådgiver""."
+hr,2423,Personnel and careers professionals,high,"H&V ""HR-medarbejder"". Excludes HR managers (1212)."
+it_support,3511,Information and communications technology operations technicians,high,"H&V ""IT-supporter"". 35xx group."
+it_support,3512,Information and communications technology user support technicians,high,"Likely the most common IT-support code."
+it_support,3513,Computer network and systems technicians,high,
+it_support,3514,Web technicians,medium,
+journalists,2642,Journalists,high,"H&V ""Journalist""."
+legal,2611,Lawyers,high,"H&V ""Juridisk medarbejder"". Covers lawyers."
+legal,2612,Judges,low,"H&V says ""legal professionals"" — judges are typically excluded from labor-market mobility samples but ISCO-included."
+legal,2619,Legal professionals not elsewhere classified,medium,
+marketing,2431,Advertising and marketing professionals,high,"H&V ""Marketingmedarbejder""."
+office_clerks,4110,General office clerks,high,"H&V ""Kontoransat eller sekretær""."
+office_clerks,4120,Secretaries (general),high,
+office_clerks,4131,Typists and word processing operators,medium,
+software_developers,2512,Software developers,high,"H&V ""Softwareudvikler""."
+software_developers,2513,Web and multimedia developers,high,
+software_developers,2514,Applications programmers,high,
+software_developers,2519,"Software and applications developers and analysts, not elsewhere classified",medium,
+teachers,2330,Secondary education teachers,high,"H&V ""Lærer"". Task list (prepare students, adapt teaching methods, classroom mgmt) matches primary/secondary."
+teachers,2341,Primary school teachers,high,
+teachers,2342,Early childhood educators,low,"Possibly excluded — task list emphasizes ""prepare students for later grades""."
+teachers,2320,Vocational education teachers,medium,

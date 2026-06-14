@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About the AI Labor Market Index — method and sources</title>
+<meta name="description" content="About the AI Labor Market Index: data source (the A-ordningen via microdata.no), AI exposure measure (Eloundou et al. 2024), outcomes, smoothing and differences from Stanford Digital Economy Lab's Canaries Dashboard.">
+<link rel="canonical" href="https://kiindeksen.no/en/about.html">
+<link rel="alternate" hreflang="nb" href="https://kiindeksen.no/om.html">
+<link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/about.html">
+<link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/om.html">
+<link rel="stylesheet" href="/style.css?v=20260614b">
+<link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <a class="lang-toggle" href="/om.html" hreflang="nb" lang="nb">Norsk</a>
+      <p class="tagline"><a href="/en/" style="text-decoration:none;color:inherit">Monthly indicators on artificial intelligence and the Norwegian labor market</a></p>
+    </div>
+    <div class="header-logos">
+      <a href="/en/" title="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School">
+        <img src="/assets/ki-logo.png"
+             alt="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School"></a>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="max-width: 1060px; margin: 0 auto;">
+
+  <section class="prose-section">
+    <h2>About the AI Labor Market Index</h2>
+    <p>
+      The AI Labor Market Index is a monthly dashboard of how artificial
+      intelligence is affecting the Norwegian labor market, produced by
+      Øystein Hernæs (Frisch Centre) and Andreas R. Kostøl (BI Norwegian
+      Business School). The index tracks employment, new hires and pay in
+      the Norwegian private sector, grouped by occupations' AI exposure and
+      workers' age — a Norwegian parallel to Stanford Digital Economy Lab
+      (DEL)'s Canaries Dashboard. The dashboard itself is at
+      <a href="https://kiindeksen.no/en/">kiindeksen.no/en</a>.
+    </p>
+
+    <h2>Key findings</h2>
+    <p class="chart-footnote">As of February 2026 (June 2026 release);
+      up-to-date figures on the <a href="https://kiindeksen.no/en/">front
+      page</a>.</p>
+    <ul>
+      <li><strong>No job crisis in Norway:</strong> total private-sector
+        employment is growing, and the employment rate is stable.</li>
+      <li><strong>The AI Labor Market Index is slightly negative
+        (−0.2):</strong> since October 2022 (the month before ChatGPT),
+        total employment in the most AI-exposed occupations has grown by
+        0.1%, versus +0.3% in the least exposed occupations.</li>
+      <li><strong>But there are important differences across
+        age:</strong> among the youngest (21–30) in the most AI-exposed
+        occupations, employment has fallen — both relative to young people
+        in other occupations and relative to older workers in the same
+        occupations. The decline has intensified over the past year.</li>
+      <li><strong>Two mechanisms pull in opposite directions:</strong>
+        in occupations where AI usage is most augmenting (AI assists the
+        worker), employment has grown clearly more than in other
+        occupations since the launch of ChatGPT, while growth has been
+        clearly weaker where usage is most automating (AI performs the
+        task).</li>
+    </ul>
+
+    <h2>Method</h2>
+    <p>
+      The data source is the A-ordningen (employers' monthly reporting) via
+      <a href="https://www.microdata.no/" target="_blank"
+         rel="noopener">microdata.no</a>: the entire population of
+      wage earners in the private sector, monthly from January 2021, in the
+      age groups 21–30, 31–40, 41–50 and 51–60. The reference period for
+      each month is the week containing the 16th.
+    </p>
+    <p>
+      <strong>AI exposure.</strong> Each occupation (four-digit STYRK-08)
+      is linked to the exposure measure “beta” from
+      <a href="https://www.science.org/doi/10.1126/science.adj0998"
+         target="_blank" rel="noopener">Eloundou et al. (2024,
+      <em>Science</em>)</a> via the occupation classifications ISCO-08 and
+      SOC. The quintiles are equally weighted per occupation, the same
+      construction as in the DEL dashboard. The usage groups are based on
+      the <a href="https://www.anthropic.com/economic-index" target="_blank"
+         rel="noopener">Anthropic Economic Index</a>
+      (<a href="https://arxiv.org/abs/2503.04761" target="_blank"
+         rel="noopener">Handa et al. 2025</a>) and follow the grouping in
+      <a href="https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
+         target="_blank" rel="noopener">Brynjolfsson, Chandar and Chen
+      (2025)</a>.
+    </p>
+    <p>
+      <strong>Outcomes.</strong> <em>Employment</em> is the number of
+      wage earners in the group. <em>New hires</em> is the number of jobs
+      with a registered start date in the window between the previous and
+      current monthly reference date. <em>Pay</em> is the group's average
+      monthly cash pay, scaled up to full-time equivalent (FTE) using each
+      occupation-age cell's average contracted hours — a part-time position
+      counts as its share of a full-time year, so that pay changes are not
+      conflated with changes in working time; the pay series are nominal.
+    </p>
+    <p>
+      <strong>Smoothing and seasonal adjustment.</strong> By default the
+      figures show seasonally adjusted series smoothed with a 6-month
+      centered moving average; raw (unadjusted) series — the same method as
+      DEL — can also be chosen. The seasonal adjustment is an X-11 core in
+      logarithms with factors estimated on 2021–2024 and then frozen. The
+      downloadable data files additionally contain population-adjusted
+      variants of each series (the <code>adjustment</code> column).
+    </p>
+    <p>
+      <strong>Population adjustment (per capita).</strong> The population
+      grows differently across age groups, so headcount series mix
+      labor-market changes with demographics. The per capita variants
+      divide the number employed by the resident population in the same
+      age group
+      (<a href="https://www.ssb.no/statbank/table/07459" target="_blank"
+         rel="noopener">SSB table 07459</a>, quarterly figures interpolated
+      to month), so that the index measures jobs per person rather than the
+      number of jobs. All variants are in the downloadable data files (the
+      <code>adjustment</code> column).
+    </p>
+    <p>
+      <strong>Differences from the DEL dashboard.</strong> DEL uses a
+      balanced panel of ~25,000 U.S. firms with ADP payroll data; we use
+      the entire Norwegian population of private-sector wage earners
+      without sample selection. The age groups are decade groups (theirs
+      are finer). The composition is very different: in the ADP panel 66
+      percent of employment sits in the two most exposed quintiles, in
+      Norway about 40 percent.
+    </p>
+    <p>
+      <strong>Revisability.</strong> The A-ordningen can revise recent
+      months. Each monthly data release is therefore archived as its own
+      vintage and is not changed afterwards.
+    </p>
+
+    <h2>Citation and contact</h2>
+    <p>
+      Data and figures may be used freely with attribution to the AI Labor
+      Market Index (kiindeksen.no) — see
+      <a href="/en/#sitering">citation information with BibTeX</a>.
+      A research paper with a full methodological description and analysis
+      is in progress: Hernæs, Øystein and Andreas R. Kostøl (2026). “AI
+      Exposure and Age-Differentiated Employment: Evidence from Norwegian
+      Register Data”. Contact:
+      <a href="mailto:andreas.r.kostol@bi.no">andreas.r.kostol@bi.no</a>.
+    </p>
+    <p><a href="/en/">← To the dashboard</a> ·
+       <a href="/en/#data">Download data</a></p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      The AI Labor Market Index · Øystein Hernæs (Frisch Centre) and
+      Andreas R. Kostøl (BI Norwegian Business School) ·
+      Data: the A-ordningen via microdata.no · Updated monthly
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

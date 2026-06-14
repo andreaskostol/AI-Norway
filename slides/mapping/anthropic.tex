@@ -1,0 +1,48 @@
+% Anthropic (2026): job_exposure measure
+
+\begin{frame}{What the Anthropic 2026 \texttt{job\_exposure} measure tracks}
+\begin{itemize}\setlength{\itemsep}{6pt}
+  \item Time-weighted Claude usage at the occupation level
+  \item Penalty applied to directive (automation) conversations
+  \item Released by Anthropic in March 2026 as an update to the Anthropic Economic Index
+  \item Distinguishes itself from Handa by using time weights rather than conversation shares, and by re-weighting toward augmentation
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{The code chain}
+\centering
+\begin{tikzpicture}[node distance=1.0cm and 1.8cm]
+  \node[codebox=cTASK] (claude) {\cbox{cTASK}{Claude usage}{time-weighted}{automation penalty}};
+  \node[codebox=cSOC10, right=of claude] (soc) {\cbox{cSOC10}{SOC 2010}{29-1051}{Pharmacists}};
+  \node[codebox=cSTYRK, right=of soc] (s) {\cbox{cSTYRK}{STYRK-08}{2262}{Farmasøyter}};
+
+  \draw[chain] (claude) -- node[arrowlabel]{occ.\ level} (soc);
+  \draw[chain] (soc) -- node[arrowlabel]{BLS 2012} (s);
+\end{tikzpicture}
+
+\vspace{1.5em}
+The public release reports a single \texttt{observed\_exposure} score per occupation; the task-level decomposition is not exposed.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Worked example and cross-measure comparison}
+\centering\small
+\begin{tabular}{lcc}
+\toprule
+\multicolumn{3}{c}{\textbf{STYRK 2262, Farmasøyter (Pharmacists, SOC 29-1051)}} \\
+\midrule
+Anthropic \texttt{job\_exposure} & 0.090 & Q4 \\
+\addlinespace
+Handa overall exposure           & 0.148 & Q4 \\
+\quad automation share           & 0.097 & Q1 \\
+\quad augmentation share         & 0.903 & Q5 \\
+Eloundou $\beta$                  & 0.429 & Q4 \\
+Felten AIOE                      & 0.606 & Q4 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.8em}
+\justifying\small
+Same occupation, same SOC code, same one-to-one mapping to STYRK 2262. Different scores reflect different underlying inputs: theoretical task exposure, ability-based AI progress, observed conversation shares, time-weighted usage. The quintile assignment is Q4 across all four measures here, but level differences would matter for any cardinal comparison.
+\end{frame}

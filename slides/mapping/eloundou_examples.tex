@@ -1,0 +1,266 @@
+% Worked examples for the five additional one-to-one occupations from the
+% "Other one-to-one mappings" slide. Each occupation gets a chain slide and a
+% full task-list slide, except STYRK 3511 (Driftsteknikere, IKT), where the
+% SOC 2010 → 2018 re-coding fans out to nine O*NET specialties.
+
+% =================================================================
+% STYRK 7115: Tømrere og snekkere (Carpenters)
+% =================================================================
+\begin{frame}{Worked example: Tømrere og snekkere (STYRK 7115)}
+\centering
+\begin{tikzpicture}[node distance=1.0cm and 1.1cm]
+  \node[codebox=cTASK] (task) {\cbox{cTASK}{O*NET task}{29 tasks}{$E_0/E_1/E_2$}};
+  \node[codebox=cSOC18, right=of task] (soc18) {\cbox{cSOC18}{SOC 2018}{47-2031}{Carpenters}};
+  \node[codebox=cSOC10, right=of soc18] (soc10) {\cbox{cSOC10}{SOC 2010}{47-2031}{Carpenters}};
+  \node[codebox=cSTYRK, right=of soc10] (isco) {\cbox{cSTYRK}{ISCO-08}{7115}{Carpenters}};
+
+  \draw[chain] (task) -- node[arrowlabel]{average} (soc18);
+  \draw[chain] (soc18) -- node[arrowlabel]{1$\to$1} (soc10);
+  \draw[chain] (soc10) -- node[arrowlabel]{1$\to$1} (isco);
+\end{tikzpicture}
+
+\vspace{0.8em}
+STYRK 7115 is Tømrere og snekkere. Same 6-digit SOC in both vintages, one O*NET specialty, 29 tasks. Mostly $E_0$: physical work dominates.
+\end{frame}
+
+% task table
+\begin{frame}{Task-level scoring: Carpenters (SOC 47-2031, 29 tasks)}
+\centering\tiny
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{p{5.4cm}cc @{\hspace{0.3cm}} p{5.4cm}cc}
+\toprule
+O*NET task & $E$ & $\beta$ & O*NET task & $E$ & $\beta$ \\
+\midrule
+Follow safety rules and regulations           & $E_0$ & 0.0 & Dig or direct digging of post holes        & $E_0$ & 0.0 \\
+Measure and mark cutting lines on materials   & $E_0$ & 0.0 & Cover subfloors with building paper        & $E_0$ & 0.0 \\
+Assemble and fasten materials                 & $E_0$ & 0.0 & Construct forms or chutes for concrete     & $E_0$ & 0.0 \\
+\rO{Study specifications in blueprints}{$E_2$}{0.5}            & \rO{Arrange for subcontractors}{$E_2$}{0.5} \\
+Shape or cut materials to measurements        & $E_0$ & 0.0 & Build or repair cabinets, doors, floors    & $E_0$ & 0.0 \\
+Verify trueness with plumb bob and level      & $E_0$ & 0.0 & Finish surfaces of woodwork or wallboard   & $E_0$ & 0.0 \\
+\rO{Inspect ceiling/floor tile, wall coverings}{$E_2$}{0.5}    & \rO{Select and order lumber and materials}{$E_2$}{0.5} \\
+Erect scaffolding or ladders                  & $E_0$ & 0.0 & Work with or remove hazardous material     & $E_0$ & 0.0 \\
+Install windows, frames, fixtures             & $E_0$ & 0.0 & Fill cracks or defects in plaster          & $E_0$ & 0.0 \\
+\rR{Maintain records, present written reports}{$E_1$}{1.0}     & \rO{Prepare cost estimates for clients}{$E_2$}{0.5} \\
+Remove damaged or defective parts             & $E_0$ & 0.0 & Perform minor plumbing or concrete work    & $E_0$ & 0.0 \\
+\rO{Maintain job records, schedule work crew}{$E_2$}{0.5}      & Apply shock-absorbing or sound-deadening   & $E_0$ & 0.0 \\
+Anchor and brace forms and structures         & $E_0$ & 0.0 & Examine structural timbers for decay       & $E_0$ & 0.0 \\
+Bore boltholes in timber/masonry/concrete     & $E_0$ & 0.0 & Build sleds from logs and timbers          & $E_0$ & 0.0 \\
+Install rough door/window frames, subflooring & $E_0$ & 0.0 &                                            &       &      \\
+\midrule
+\multicolumn{6}{l}{\textbf{Counts:} 22 $E_0$ \quad 1 $E_1$ \quad 6 $E_2$ \qquad
+                   \textbf{SOC $\beta$ (mean of 29 tasks): \;0.138 (Q2)}} \\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+
+% =================================================================
+% STYRK 2330: Lektorer videregående (Secondary teachers)
+% =================================================================
+\begin{frame}{Worked example: Lektorer videregående (STYRK 2330)}
+\centering
+\begin{tikzpicture}[node distance=1.0cm and 1.1cm]
+  \node[codebox=cTASK] (task) {\cbox{cTASK}{O*NET task}{32 tasks}{$E_0/E_1/E_2$}};
+  \node[codebox=cSOC18, right=of task] (soc18) {\cbox{cSOC18}{SOC 2018}{25-2031}{Sec.\ teachers}};
+  \node[codebox=cSOC10, right=of soc18] (soc10) {\cbox{cSOC10}{SOC 2010}{25-2031}{Sec.\ teachers}};
+  \node[codebox=cSTYRK, right=of soc10] (isco) {\cbox{cSTYRK}{ISCO-08}{2330}{Sec.\ teachers}};
+
+  \draw[chain] (task) -- node[arrowlabel]{average} (soc18);
+  \draw[chain] (soc18) -- node[arrowlabel]{1$\to$1} (soc10);
+  \draw[chain] (soc10) -- node[arrowlabel]{1$\to$1} (isco);
+\end{tikzpicture}
+
+\vspace{0.8em}
+STYRK 2330 is Lektorer mv.\ (videregående skole). One O*NET specialty, 32 tasks. Most are $E_2$ (LLM with software is enough) and reflect classroom and administrative work.
+\end{frame}
+
+% task table
+\begin{frame}{Task-level scoring: Secondary teachers (SOC 25-2031, 32 tasks)}
+\centering\tiny
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular}{p{5.4cm}cc @{\hspace{0.3cm}} p{5.4cm}cc}
+\toprule
+O*NET task & $E$ & $\beta$ & O*NET task & $E$ & $\beta$ \\
+\midrule
+\rO{Instruct through lectures, discussions}{$E_2$}{0.5}          & Plan and conduct field trips                & $E_0$ & 0.0 \\
+Establish rules of student behavior             & $E_0$ & 0.0 & Sponsor extracurricular activities          & $E_0$ & 0.0 \\
+\rO{Prepare materials and classrooms}{$E_2$}{0.5}                & \rO{Perform administrative duties}{$E_2$}{0.5} \\
+\rO{Adapt teaching to varying abilities}{$E_2$}{0.5}             & \rO{Prepare and implement remedial programs}{$E_2$}{0.5} \\
+\rO{Observe and evaluate students' performance}{$E_2$}{0.5}      & Attend professional meetings and workshops  & $E_0$ & 0.0 \\
+\rO{Establish clear objectives for lessons}{$E_2$}{0.5}          & \rO{Use computers and audiovisual aids}{$E_2$}{0.5} \\
+\rO{Prepare students for later grades}{$E_2$}{0.5}               & \rO{Select, store, order, or use class materials}{$E_2$}{0.5} \\
+\rO{Prepare, administer, and grade tests}{$E_2$}{0.5}            & \rO{Collaborate with other teachers}{$E_2$}{0.5} \\
+\rO{Maintain accurate, complete records}{$E_2$}{0.5}             & \rO{Plan and supervise projects, field studies}{$E_2$}{0.5} \\
+Enforce attendance and progression rules        & $E_0$ & 0.0 & Meet with professionals on programs         & $E_0$ & 0.0 \\
+Instruct and monitor use of equipment           & $E_0$ & 0.0 & \rO{Guide and counsel students}{$E_2$}{0.5} \\
+\rO{Prepare content for diverse-needs students}{$E_2$}{0.5}      & Confer with parents on progress             & $E_0$ & 0.0 \\
+\rO{Assign and grade class work and homework}{$E_2$}{0.5}        & \rO{Meet with administrators on instruction}{$E_2$}{0.5} \\
+\rO{Prepare reports on student progress}{$E_2$}{0.5}             & \rO{Prepare for assigned classes}{$E_2$}{0.5} \\
+\rR{Keep informed about developments in education}{$E_1$}{1.0}   & \rO{Provide disabled students with devices}{$E_2$}{0.5} \\
+\rO{Prepare objectives and outlines}{$E_2$}{0.5}                 & Administer standardized tests               & $E_0$ & 0.0 \\
+\midrule
+\multicolumn{6}{l}{\textbf{Counts:} 12 $E_0$ \quad 1 $E_1$ \quad 19 $E_2$ \qquad
+                   \textbf{SOC $\beta$ (mean of 32 tasks): \;0.328 (Q3)}} \\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+
+% =================================================================
+% STYRK 2611: Jurister og advokater (Lawyers)
+% =================================================================
+\begin{frame}{Worked example: Jurister og advokater (STYRK 2611)}
+\centering
+\begin{tikzpicture}[node distance=1.0cm and 1.1cm]
+  \node[codebox=cTASK] (task) {\cbox{cTASK}{O*NET task}{22 tasks}{$E_0/E_1/E_2$}};
+  \node[codebox=cSOC18, right=of task] (soc18) {\cbox{cSOC18}{SOC 2018}{23-1011}{Lawyers}};
+  \node[codebox=cSOC10, right=of soc18] (soc10) {\cbox{cSOC10}{SOC 2010}{23-1011}{Lawyers}};
+  \node[codebox=cSTYRK, right=of soc10] (isco) {\cbox{cSTYRK}{ISCO-08}{2611}{Lawyers}};
+
+  \draw[chain] (task) -- node[arrowlabel]{average} (soc18);
+  \draw[chain] (soc18) -- node[arrowlabel]{1$\to$1} (soc10);
+  \draw[chain] (soc10) -- node[arrowlabel]{1$\to$1} (isco);
+\end{tikzpicture}
+
+\vspace{0.8em}
+STYRK 2611 is Jurister og advokater. One O*NET specialty, 22 tasks. Nearly all tasks are $E_2$: text-heavy work where LLM plus software can substitute.
+\end{frame}
+
+% task table
+\begin{frame}{Task-level scoring: Lawyers (SOC 23-1011, 22 tasks)}
+\centering\tiny
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{p{5.4cm}cc @{\hspace{0.3cm}} p{5.4cm}cc}
+\toprule
+O*NET task & $E$ & $\beta$ & O*NET task & $E$ & $\beta$ \\
+\midrule
+\rO{Advise clients on legal rights}{$E_2$}{0.5}              & Confer with colleagues with specialties   & $E_0$ & 0.0 \\
+Represent clients in court or in hearings   & $E_0$ & 0.0 & \rO{Examine legal data for advisability}{$E_2$}{0.5} \\
+Select jurors, argue motions, meet judges   & $E_0$ & 0.0 & \rO{Search and examine public records}{$E_2$}{0.5} \\
+\rO{Study Constitution, statutes, decisions}{$E_2$}{0.5}     & \rO{Act as trustee, guardian, or executor}{$E_2$}{0.5} \\
+\rO{Prepare legal briefs and opinions}{$E_2$}{0.5}           & \rO{Help establish company legal policies}{$E_2$}{0.5} \\
+\rO{Interpret laws, rulings, regulations}{$E_2$}{0.5}        & \rO{Negotiate settlements of civil disputes}{$E_2$}{0.5} \\
+\rO{Prepare and draft legal documents}{$E_2$}{0.5}           & \rO{Probate wills, represent estate executors}{$E_2$}{0.5} \\
+\rO{Present and summarize cases to judges}{$E_2$}{0.5}       & \rO{Work in environmental, public health law}{$E_2$}{0.5} \\
+\rO{Gather evidence by interviewing clients}{$E_2$}{0.5}     & \rO{Perform administrative and management}{$E_2$}{0.5} \\
+\rO{Analyze the probable outcomes of cases}{$E_2$}{0.5}      & \rO{Supervise legal assistants}{$E_2$}{0.5} \\
+\rO{Evaluate findings; develop defense strategy}{$E_2$}{0.5} & \rO{Provide pro bono services}{$E_2$}{0.5} \\
+\midrule
+\multicolumn{6}{l}{\textbf{Counts:} 3 $E_0$ \quad 0 $E_1$ \quad 19 $E_2$ \qquad
+                   \textbf{SOC $\beta$ (mean of 22 tasks): \;0.432 (Q4)}} \\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+
+% =================================================================
+% STYRK 2631: Forskere/rådgivere, samf.økonomi (Economists)
+% =================================================================
+\begin{frame}{Worked example: Forskere/rådgivere, samf.økonomi (STYRK 2631)}
+\centering
+\begin{tikzpicture}[node distance=0.7cm and 1.1cm]
+  \node[codebox=cTASK] (t1) {\cbox{cTASK}{O*NET}{19-3011.00}{Economists, 13 tasks}};
+  \node[codebox=cTASK, below=of t1] (t2) {\cbox{cTASK}{O*NET}{19-3011.01}{Environmental econ., 20 tasks}};
+
+  \node[codebox=cSOC18, right=2cm of $(t1)!0.5!(t2)$] (soc18) {\cbox{cSOC18}{SOC 2018}{19-3011}{Economists}};
+  \node[codebox=cSOC10, right=of soc18] (soc10) {\cbox{cSOC10}{SOC 2010}{19-3011}{Economists}};
+  \node[codebox=cSTYRK, right=of soc10] (isco) {\cbox{cSTYRK}{ISCO-08}{2631}{Economists}};
+
+  \draw[chain] (t1) -- node[arrowlabel,above]{$\beta = 0.500$} (soc18);
+  \draw[chain] (t2) -- node[arrowlabel,below]{$\beta = 0.600$} (soc18);
+  \draw[chain] (soc18) -- node[arrowlabel]{1$\to$1} (soc10);
+  \draw[chain] (soc10) -- node[arrowlabel]{1$\to$1} (isco);
+\end{tikzpicture}
+
+\vspace{0.5em}
+Two O*NET specialties roll up to one SOC 2018 code. The SOC-level $\beta$ averages the two specialty means: $(0.500 + 0.600)/2 = 0.550$, regardless of how many tasks each specialty contains.
+\end{frame}
+
+% task table
+\begin{frame}{Task-level scoring: Economists (SOC 19-3011, 33 tasks across 2 specialties)}
+\centering\tiny
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.0}
+\begin{tabular}{p{5.4cm}cc @{\hspace{0.3cm}} p{5.4cm}cc}
+\toprule
+\multicolumn{3}{l}{\textbf{19-3011.00 Economists (13 tasks)}} & \multicolumn{3}{l}{\textbf{19-3011.01 Env.\ Economists (20 tasks)}} \\
+\midrule
+\rO{Study economic and statistical data}{$E_2$}{0.5}           & \rO{Prepare and deliver presentations}{$E_2$}{0.5} \\
+\rO{Conduct research on economic issues}{$E_2$}{0.5}           & \rO{Develop programs or policy recommendations}{$E_2$}{0.5} \\
+\rO{Compile, analyze, report data}{$E_2$}{0.5}                 & \rO{Develop economic models and forecasts}{$E_2$}{0.5} \\
+\rO{Supervise research projects}{$E_2$}{0.5}                   & \rO{Demonstrate economic benefits of policies}{$E_2$}{0.5} \\
+\rO{Teach theories and methods of economics}{$E_2$}{0.5}       & \rO{Conduct research on environmental relations}{$E_2$}{0.5} \\
+\rO{Study impacts of public policies}{$E_2$}{0.5}              & \rR{Perform complex mathematical analyses}{$E_1$}{1.0} \\
+\rO{Formulate recommendations and plans}{$E_2$}{0.5}           & \rR{Write social, legal, economic impact reports}{$E_1$}{1.0} \\
+\rO{Explain economic impact of policies}{$E_2$}{0.5}           & \rO{Teach courses in environmental economics}{$E_2$}{0.5} \\
+\rO{Provide advice and consultation}{$E_2$}{0.5}               & \rO{Develop programs to promote sustainability}{$E_2$}{0.5} \\
+\rO{Forecast production and consumption}{$E_2$}{0.5}           & \rO{Develop systems for analyzing data}{$E_2$}{0.5} \\
+\rO{Develop economic guidelines and standards}{$E_2$}{0.5}     & \rR{Write research proposals and grants}{$E_1$}{1.0} \\
+\rO{Testify at regulatory or legislative hearings}{$E_2$}{0.5} & \rO{Examine exhaustibility of natural resources}{$E_2$}{0.5} \\
+\rO{Provide litigation support}{$E_2$}{0.5}                    & \rO{Monitor or analyze market and env.\ trends}{$E_2$}{0.5} \\
+\rR{Write technical documents or articles}{$E_1$}{1.0}         & \rO{Develop environmental research project plans}{$E_2$}{0.5} \\
+                                              &       &     & \rO{Conduct research on economic, env.\ topics}{$E_2$}{0.5} \\
+                                              &       &     & \rO{Collect and analyze data on env.\ impact}{$E_2$}{0.5} \\
+                                              &       &     & \rO{Assess costs and benefits of activities}{$E_2$}{0.5} \\
+                                              &       &     & \rO{Identify environmentally friendly business}{$E_2$}{0.5} \\
+                                              &       &     & \rO{Interpret indicators of ecosystem health}{$E_2$}{0.5} \\
+                                              &       &     & \rO{Collaborate with researchers across fields}{$E_2$}{0.5} \\
+\midrule
+\multicolumn{3}{l}{\textbf{Specialty mean:} \;0.500} & \multicolumn{3}{l}{\textbf{Specialty mean:} \;0.600} \\
+\multicolumn{6}{l}{\textbf{SOC $\beta$} $= (0.500 + 0.600)/2 = $ \textbf{0.550 (Q5)}} \\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+
+% =================================================================
+% STYRK 3511: Driftsteknikere, IKT (special: SOC re-coding fan-out)
+% =================================================================
+\begin{frame}{Worked example: Driftsteknikere, IKT (STYRK 3511)}
+\centering
+\begin{tikzpicture}[node distance=0.9cm and 0.9cm]
+  \node[codebox=cTASK] (task) {\cbox{cTASK}{O*NET tasks}{9 specialties}{215 tasks}};
+  \node[codebox=cSOC18, right=of task] (soc18) {\cbox{cSOC18}{SOC 2018}{15-1299}{Computer Occ., All Other}};
+  \node[codebox=cSOC10, right=of soc18] (soc10) {\cbox{cSOC10}{SOC 2010}{43-9011}{Computer Operators}};
+  \node[codebox=cSTYRK, right=of soc10] (isco) {\cbox{cSTYRK}{ISCO-08}{3511}{ICT ops technicians}};
+
+  \draw[chain] (task) -- node[arrowlabel]{average} (soc18);
+  \draw[chain] (soc18) -- node[arrowlabel]{retitled} (soc10);
+  \draw[chain] (soc10) -- node[arrowlabel]{1$\to$1} (isco);
+\end{tikzpicture}
+
+\vspace{0.6em}
+\footnotesize
+The SOC 2010 → 2018 re-coding turned ``Computer Operators'' into the catch-all ``Computer Occupations, All Other'' (15-1299), which contains nine sub-specialties. The Eloundou et al.\ pipeline averages those nine specialty means; tasks are not aggregated directly.
+\end{frame}
+
+% specialty table
+\begin{frame}{Specialty-level scoring: Computer Occupations, All Other (15-1299)}
+\centering\small
+\setlength{\tabcolsep}{6pt}
+\renewcommand{\arraystretch}{1.05}
+\begin{tabular}{lp{5.5cm}cc}
+\toprule
+O*NET-SOC & Title & N tasks & specialty $\beta$ \\
+\midrule
+15-1299.01 & Web Administrators                            & 23 & 0.913 \\
+15-1299.02 & Geographic Information Systems Technologists  & 27 & 0.593 \\
+15-1299.03 & Document Management Specialists               & 18 & 0.611 \\
+15-1299.04 & Penetration Testers                           & 22 & 0.795 \\
+15-1299.05 & Information Security Engineers                & 20 & 0.675 \\
+15-1299.06 & Digital Forensics Analysts                    & 20 & 0.725 \\
+15-1299.07 & Blockchain Engineers                          & 17 & 0.971 \\
+15-1299.08 & Computer Systems Engineers/Architects         & 28 & 0.768 \\
+15-1299.09 & Information Technology Project Managers       & 21 & 0.571 \\
+\midrule
+\multicolumn{4}{l}{\textbf{SOC $\beta$ (mean of 9 specialties): \;0.736 (Q5)}} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.7em}
+\footnotesize
+The 9 specialties carry exposure scores ranging from 0.57 to 0.97. The Norwegian title ``Driftsteknikere, IKT'' best matches Web Administrators or Computer Systems Engineers/Architects; the score that lands on STYRK 3511 is an average over a wider set of computing roles.
+\end{frame}

@@ -1,0 +1,18 @@
+require no.ssb.fdb:51 as db
+
+create-dataset personer
+import db/BEFOLKNING_KJOENN as kjoenn
+
+create-dataset jobber
+import db/ARBLONN_ARB_ARBMARK_STATUS 2025-01-16 as arbstatus
+import db/ARBLONN_LONN_FAST 2025-01-16 as fastlonn
+
+create-dataset kobling
+import db/ARBEIDSFORHOLD_PERSON as personid
+merge personid into jobber
+
+use personer
+merge kjoenn into jobber on personid
+
+use jobber
+tabulate kjoenn, summarize(fastlonn) flatten

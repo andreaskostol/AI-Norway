@@ -1,0 +1,284 @@
+require no.ssb.fdb:51 as db
+
+create-dataset kobling
+import db/ARBEIDSFORHOLD_PERSON as personid
+
+create-dataset pers2015
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+generate alder = 2015 - int(fodtaarmd / 100)
+
+create-dataset y2015m01
+import db/ARBLONN_ARB_YRKE_STYRK08 2015-01-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2015m01
+use pers2015
+merge alder into y2015m01 on personid
+
+use y2015m01
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, flatten
+delete-dataset y2015m01
+
+create-dataset y2015m02
+import db/ARBLONN_ARB_YRKE_STYRK08 2015-02-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2015m02
+use pers2015
+merge alder into y2015m02 on personid
+
+use y2015m02
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, flatten
+delete-dataset y2015m02
+
+create-dataset y2015m03
+import db/ARBLONN_ARB_YRKE_STYRK08 2015-03-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2015m03
+use pers2015
+merge alder into y2015m03 on personid
+
+use y2015m03
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, flatten
+delete-dataset y2015m03
+
+create-dataset y2015m04
+import db/ARBLONN_ARB_YRKE_STYRK08 2015-04-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2015m04
+use pers2015
+merge alder into y2015m04 on personid
+
+use y2015m04
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, flatten
+delete-dataset y2015m04
+
+create-dataset y2015m05
+import db/ARBLONN_ARB_YRKE_STYRK08 2015-05-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2015m05
+use pers2015
+merge alder into y2015m05 on personid
+
+use y2015m05
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, flatten
+delete-dataset y2015m05
+
+create-dataset y2015m06
+import db/ARBLONN_ARB_YRKE_STYRK08 2015-06-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2015m06
+use pers2015
+merge alder into y2015m06 on personid
+
+use y2015m06
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, flatten
+delete-dataset y2015m06
+
+create-dataset y2015m07
+import db/ARBLONN_ARB_YRKE_STYRK08 2015-07-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2015m07
+use pers2015
+merge alder into y2015m07 on personid
+
+use y2015m07
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, flatten
+delete-dataset y2015m07
+
+create-dataset y2015m08
+import db/ARBLONN_ARB_YRKE_STYRK08 2015-08-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2015m08
+use pers2015
+merge alder into y2015m08 on personid
+
+use y2015m08
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, flatten
+delete-dataset y2015m08
+
+create-dataset y2015m09
+import db/ARBLONN_ARB_YRKE_STYRK08 2015-09-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2015m09
+use pers2015
+merge alder into y2015m09 on personid
+
+use y2015m09
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, flatten
+delete-dataset y2015m09
+
+create-dataset y2015m10
+import db/ARBLONN_ARB_YRKE_STYRK08 2015-10-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2015m10
+use pers2015
+merge alder into y2015m10 on personid
+
+use y2015m10
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, flatten
+delete-dataset y2015m10
+
+create-dataset y2015m11
+import db/ARBLONN_ARB_YRKE_STYRK08 2015-11-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2015m11
+use pers2015
+merge alder into y2015m11 on personid
+
+use y2015m11
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, flatten
+delete-dataset y2015m11
+
+create-dataset y2015m12
+import db/ARBLONN_ARB_YRKE_STYRK08 2015-12-16 as yrke
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2015m12
+use pers2015
+merge alder into y2015m12 on personid
+
+use y2015m12
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+tabulate yrke4 alder_gr, flatten
+delete-dataset y2015m12

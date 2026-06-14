@@ -1,0 +1,102 @@
+% Eloundou et al. (2024): task-level LLM exposure
+
+\begin{frame}{What Eloundou et al.\ measure}
+\begin{itemize}\setlength{\itemsep}{6pt}
+  \item Each O*NET task rated by humans and GPT-4 on three categories:
+  \begin{itemize}
+    \item[$E_0$] no exposure
+    \item[$E_1$] LLM alone reduces task time by $\geq 50\%$
+    \item[$E_2$] LLM with complementary software reduces task time by $\geq 50\%$
+  \end{itemize}
+  \item Task-level score:\quad
+        $\beta_{\text{task}} = 0$ if $E_0$,\;\; $1$ if $E_1$,\;\; $0.5$ if $E_2$
+  \item Occupation score: $\beta_{\text{occ}}$ = \textbf{unweighted} mean of $\beta_{\text{task}}$ across the occupation's tasks
+  \item O*NET tags tasks as Core / Supplemental; Eloundou et al.\ do not re-weight by either
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{The code chain}
+\centering
+\begin{tikzpicture}[node distance=1.0cm and 1.1cm]
+  \node[codebox=cTASK] (task) {\cbox{cTASK}{O*NET task}{8823, \dots}{rated $E_0/E_1/E_2$}};
+  \node[codebox=cSOC18, right=of task] (soc18) {\cbox{cSOC18}{SOC 2018}{29-1051}{Pharmacists}};
+  \node[codebox=cSOC10, right=of soc18] (soc10) {\cbox{cSOC10}{SOC 2010}{29-1051}{Pharmacists}};
+  \node[codebox=cSTYRK, right=of soc10] (isco) {\cbox{cSTYRK}{ISCO-08}{2262}{Pharmacists}};
+
+  \draw[chain] (task) -- node[arrowlabel]{average} (soc18);
+  \draw[chain] (soc18) -- node[arrowlabel]{BLS 2017} (soc10);
+  \draw[chain] (soc10) -- node[arrowlabel]{BLS 2012} (isco);
+\end{tikzpicture}
+
+\vspace{1em}
+ISCO-08 $=$ STYRK-08 at 4 digits (SSB Notater 17/2011). STYRK 2262 is Farmasøyter.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Worked example: Pharmacists (one-to-one mapping)}
+\centering
+\begin{tikzpicture}[node distance=1.0cm and 1.1cm]
+  \node[codebox=cTASK] (task) {\cbox{cTASK}{O*NET task}{21 tasks}{$E_0/E_1/E_2$ ratings}};
+  \node[codebox=cSOC18, right=of task] (soc18) {\cbox{cSOC18}{SOC 2018}{29-1051}{Pharmacists}};
+  \node[codebox=cSOC10, right=of soc18] (soc10) {\cbox{cSOC10}{SOC 2010}{29-1051}{Pharmacists}};
+  \node[codebox=cSTYRK, right=of soc10] (isco) {\cbox{cSTYRK}{ISCO-08}{2262}{Pharmacists}};
+
+  \draw[chain] (task) -- node[arrowlabel]{average} (soc18);
+  \draw[chain] (soc18) -- node[arrowlabel]{1$\to$1} (soc10);
+  \draw[chain] (soc10) -- node[arrowlabel]{1$\to$1} (isco);
+\end{tikzpicture}
+
+\vspace{1em}
+\begin{itemize}\setlength{\itemsep}{4pt}
+  \item Pharmacists carry the same 6-digit SOC in both vintages: 29-1051
+  \item BLS crosswalk sends 29-1051 to a single ISCO-08 code (2262)
+  \item Norwegian STYRK 2262 is Farmasøyter, no Norway-specific re-coding
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Task-level scoring for Pharmacists (SOC 29-1051, all 21 tasks)}
+\centering\scriptsize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{0.95}
+\begin{tabular}{p{5.5cm}cc @{\hspace{0.7cm}} p{5.5cm}cc}
+\toprule
+O*NET task & $E$ & $\beta$ & O*NET task & $E$ & $\beta$ \\
+\midrule
+\rO{Review prescriptions for accuracy}{$E_2$}{0.5}             & \rO{Refer patients to other professionals}{$E_2$}{0.5} \\
+Assess identity, strength, purity of meds     & $E_0$ & 0.0 & \rO{Work in hospitals/clinics or for HMOs}{$E_2$}{0.5} \\
+\rO{Provide info on drug interactions}{$E_2$}{0.5}             & \rR{Update or troubleshoot pharmacy databases}{$E_1$}{1.0} \\
+\rO{Analyze prescribing trends}{$E_2$}{0.5}                    & \rO{Manage pharmacy operations, hire, supervise}{$E_2$}{0.5} \\
+\rO{Maintain pharmacy files and patient profiles}{$E_2$}{0.5}  & Prepare sterile solutions                           & $E_0$ & 0.0 \\
+\rO{Collaborate with other health professionals}{$E_2$}{0.5}   & Offer health promotion / prevention activities      & $E_0$ & 0.0 \\
+Plan procedures for mixing and labeling       & $E_0$ & 0.0 & Assay radiopharmaceuticals                          & $E_0$ & 0.0 \\
+\rO{Order and purchase pharmaceutical supplies}{$E_2$}{0.5}    & \rR{Publish educational information}{$E_1$}{1.0} \\
+Compound and dispense medications             & $E_0$ & 0.0 & & & \\
+\rO{Contact insurance companies on billing}{$E_2$}{0.5}        & \multicolumn{3}{l}{\textbf{Counts:} 6 $E_0$ \quad 3 $E_1$ \quad 12 $E_2$} \\
+\rO{Advise customers on medication brands}{$E_2$}{0.5}         & & & \\
+\rR{Teach pharmacy students serving as interns}{$E_1$}{1.0}    & \multicolumn{3}{l}{\textbf{Occupation $\beta$ (mean of 21):} \;\; \textbf{0.4286 (Q4)}} \\
+\rO{Provide services for diabetes, asthma, etc.}{$E_2$}{0.5}   & & & \\
+\bottomrule
+\end{tabular}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Other one-to-one mappings (large Norwegian occupations)}
+\centering\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{llp{4.4cm}rcc}
+\toprule
+STYRK & Norwegian title & SOC 2010 (US title) & employed & $\beta_{\text{occ}}$ & Q \\
+\midrule
+7115 & Tømrere og snekkere               & 47-2031 Carpenters                  & 47{,}106 & 0.144 & 2 \\
+2330 & Lektorer (videregående skole)     & 25-2031 Secondary teachers          & 31{,}155 & 0.333 & 3 \\
+2611 & Jurister og advokater             & 23-1011 Lawyers                     & 11{,}808 & 0.425 & 4 \\
+2631 & Forskere/rådgivere, samf.økonomi  & 19-3011 Economists                  &  1{,}282 & 0.553 & 5 \\
+3511 & Driftsteknikere, IKT              & 43-9011 Computer Operators          & 16{,}517 & 0.736 & 5 \\
+\bottomrule
+\end{tabular}
+
+\vspace{1em}
+All five are clean one-to-one in the BLS crosswalk. Exposure spans Q2 to Q5: carpenters at the bottom, ICT operations technicians at the top. SOC titles do not always match the Norwegian title literally (e.g.\ ``Computer Operators'' vs.\ ``Driftsteknikere, IKT'').
+\end{frame}

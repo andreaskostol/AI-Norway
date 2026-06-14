@@ -1,0 +1,29 @@
+% Firm fixed effects: spec + event study.
+% NOTE: These frames live in the Backup section. Coefficients and grid
+% figure are still on Q1 reference; re-run on Q3 reference (and the
+% agentic window) pending before promoting back to main flow.
+
+\begin{frame}{Validation: within-firm reallocation}
+\begin{itemize}\setlength{\itemsep}{6pt}
+  \item The cell-level gradient could reflect compositional shifts across firms rather than within-firm reallocation.
+  \item We re-estimate on individual-level register data with firm $\times$ time fixed effects, as in Brynjolfsson--Chandar--Chen.
+  \item Individual-level data is a snapshot; we use it to validate the cell-level pattern, not for time-tracking.
+\end{itemize}
+
+\vspace{0.6em}
+\textbf{Specification.} Poisson PPML with firm $\times$ age, firm $\times$ month, age $\times$ month fixed effects. Triple-difference on $\text{Young}_a \times \text{Post}_t \times \text{Exposure}_q$. Sample: private \emph{foretak}, $\geq 20$ workers in ages 22--55, 2021m1--2025m7. SE clustered at \emph{foretak}.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Event study by age bin (legacy: Q5 vs Q1)}
+\hypertarget{after-firmfe-es}{}
+\centering
+\includegraphics[height=5.8cm,keepaspectratio]{firm_fe_es_q5_by_age_poisson.pdf}
+
+\vspace{0.3em}
+\footnotesize
+22--25 flat with wide CIs. Ages 26--30, 31--34, 35--40 drift up to $+8$ to $+10$ log points by mid-2025. Ages 41--49 and 50--55 are flat to slightly negative ($-3$ to $-5$). Reference $k = -1$ (October 2022).
+
+\vspace{0.3em}
+\hfill\hyperlink{firmfe-grid-detail}{\beamerbutton{Full Q2--Q5 grid}}
+\end{frame}

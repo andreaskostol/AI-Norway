@@ -1,0 +1,408 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{caption}
+\captionsetup[figure]{skip=3pt,font=small}
+\usepackage{float}
+\usepackage[margin=1.4cm]{geometry}
+\graphicspath{{figures/}{figures/interaction/}}
+
+\title{AI exposure, wage, and the comparative-advantage interaction:\\
+       private-sector employment and hiring, by age group\\[4pt]
+       \large with within-firm (firm-FE) robustness}
+\author{AI-Norway}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\noindent
+This note collects the comparative-advantage (CA) results for two outcomes:
+\emph{count} (cell employment headcount) and \emph{nyjobb} (new hires
+$=\text{round}(\text{count}\times\text{ny\_jobb})$, cells with count $\ge 10$).
+The full model interacts standardized exposure $z(\text{exp})$, standardized
+log full-time-equivalent wage $z(\text{lnw})$, and their product with event-time
+(figures) or with $\text{Post}=\mathbf{1}\{k\ge 0\}$ (tables). Poisson PPML,
+occupation $+$ month fixed effects, SE clustered at occupation, private sector.
+
+\paragraph{Why this interaction.}
+Standard exposure measures capture AI's \emph{absolute} advantage in a task
+--- whether AI can plausibly perform it. Lindenlaub, Oh, Rodríguez \&
+Veldkamp (2026, henceforth LORV) emphasize that actual adoption is governed
+by AI's \emph{comparative} advantage relative to the worker performing the
+task. In their model, AI replaces labor in task $k$ when
+\begin{equation}
+  \underbrace{\frac{Z_{ik}^{\text{worker}}}{w_{io}}}_{\text{worker
+       productivity per }\$}
+  \;<\;
+  \underbrace{\frac{Z_k^{\text{AI}}}{r_k}}_{\text{AI
+       productivity per }\$},
+  \label{eq:lorv}
+\end{equation}
+where $Z_{ik}^{\text{worker}}, Z_k^{\text{AI}}$ are worker and AI
+productivity in task $k$, $w_{io}$ is the worker's wage, and $r_k$ is the
+user cost of AI in task $k$. Exposure indices proxy the numerator on the
+right (AI's productivity $Z_k^{\text{AI}}$); the wage $w_{io}$ enters the
+denominator on the left. Both shifts move the inequality toward AI
+adoption, so the \textbf{combination} of high exposure \textbf{and} high
+wage creates the strongest incentive to actually automate: AI's productivity
+gain is large and the labor it would replace is expensive. In a
+representative German linked employer--employee dataset LORV show that this
+comparative-advantage logic predicts roughly 60\% of cross-occupation
+variation in observed AI adoption, against only 14\% for an exposure-only
+model.
+
+This is the structural rationale for our interaction term
+$z(\text{exp})\times z(\text{lnw})$: it captures the
+comparative-advantage hotspots where adoption (and therefore any
+labor-market displacement) should be concentrated. Read in this light,
+\emph{M1} (exposure only) measures absolute advantage; \emph{M2} (wage
+only) is the labor-side cost margin; \emph{M3} (full) adds the
+comparative-advantage margin. The event-time figures plot the same three
+paths over $k$, with a black reference line for $M1$ to make the
+comparative-advantage margin visible.
+
+% =====================================================================
+\clearpage
+\section{Event studies (Poisson PPML, all terms)}
+
+\subsection{Employment (count)}
+\begin{figure}[H]\centering
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_grid_stdexp.pdf}\\[4pt]
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_decade_agentic_stdexp.pdf}
+  \caption{Employment (count): CA event study --- ChatGPT anchor (top),
+           agentic anchor (bottom).}
+\end{figure}
+
+\clearpage
+\subsection{New hires (nyjobb)}
+\begin{figure}[H]\centering
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_grid_stdexp_nyjobb.pdf}\\[4pt]
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_decade_agentic_stdexp_nyjobb.pdf}
+  \caption{New hires (nyjobb): CA event study --- ChatGPT anchor (top),
+           agentic anchor (bottom).}
+\end{figure}
+
+% =====================================================================
+\clearpage
+\section{Pooled post-treatment estimates (Poisson PPML DiD)}
+
+\subsection{Employment (count)}
+\input{tables/table_ca_did_combined.tex}
+
+\clearpage
+\subsection{New hires (nyjobb)}
+\input{tables/table_ca_did_combined_nyjobb.tex}
+
+% =====================================================================
+\clearpage
+\section{Log-employment OLS (alternative estimator)}
+
+\noindent
+Sections 1--2 use Poisson PPML on counts (robust to zero cells; implicitly
+employment-weighted). This section uses an alternative estimator: \emph{OLS on
+log employment}, with occupation and month fixed effects. To keep it
+employment-representative --- comparable to PPML --- each cell is weighted by the
+occupation $\times$ age group's \emph{baseline} (pre-period) employment, and
+zero-employment cells are dropped (logs).
+
+\subsection{Event study}
+\begin{figure}[H]\centering
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_grid_stdexp_olslog.pdf}\\[4pt]
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_decade_agentic_stdexp_olslog.pdf}
+  \caption{Log employment (OLS, baseline-weighted): CA event study ---
+           ChatGPT anchor (top), agentic anchor (bottom).}
+\end{figure}
+
+\clearpage
+\subsection{Pooled post-treatment (DiD)}
+\input{tables/table_ca_did_combined_olslog.tex}
+
+% =====================================================================
+\clearpage
+\section{Log new-hires OLS (alternative estimator)}
+
+\noindent
+The same OLS-on-logs estimator applied to new hires. Because hires are a small
+flow, taking logs drops cell-months with zero hires (a selected subsample);
+PPML in Section~2 handles these directly and is preferred for hires. Weighted by
+baseline (pre-period) hires.
+
+\subsection{Event study}
+\begin{figure}[H]\centering
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_grid_stdexp_nyjobb_olslog.pdf}\\[4pt]
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_decade_agentic_stdexp_nyjobb_olslog.pdf}
+  \caption{Log new hires (OLS, baseline-weighted): CA event study ---
+           ChatGPT anchor (top), agentic anchor (bottom).}
+\end{figure}
+
+\clearpage
+\subsection{Pooled post-treatment (DiD)}
+\input{tables/table_ca_did_combined_nyjobb_olslog.tex}
+
+% =====================================================================
+\clearpage
+\section{Firm-FE event studies (Poisson PPML, within-firm)}
+
+\noindent
+Sections 1--4 fit the CA model on the microdata.no aggregate cell panel
+(occupation $+$ month FE). This chapter replicates the same specification on
+the secure-server individual-level firm panel and substitutes the
+Brynjolfsson--Chandar--Chen (BCC) eq.\ 4.1 fixed-effect structure: firm
+$\times$ occupation $+$ firm $\times$ month. The firm $\times$ month FE
+absorbs every firm-level time shock (sector, geography, demand, etc.); the
+firm $\times$ occupation FE absorbs firm-specific occupation baselines. The
+treatment paths $i(k, z_{\text{exp}}) + i(k, z_{\text{wage}})
++ i(k, z_{\text{exp$\times$wage}})$ survive the FE because they vary by
+occupation $\times$ time within firm-month --- BCC's within-firm
+differential-exposure identification.
+\medskip
+
+\noindent
+The exposure-cell is \textbf{firm $\times$ occupation}, the
+continuous-treatment-faithful spec: the cell coincides with the level at
+which $z_{\text{exp}}/z_{\text{wage}}$ vary, so it absorbs firm-occupation
+baselines (subsuming a plain occupation FE). It identifies off firms with
+$\geq 2$ occupations in the same age-month. This is the within-firm
+robustness check that the cell-level paths in \S\S1--4 are not driven by
+between-firm sorting on occupation.
+\medskip
+
+\noindent
+Sample: \texttt{in\_headline\_priv} (private sector, $\geq 20$ workers in
+the age window per active month), 21--30 / 31--40 / 41--50 / 51--60 decade
+bins. SE clustered at foretak. The observation counts reported in the
+tables are the fepois pre-fit sample size (after singleton-FE and
+all-zero outcome drops that fepois removes before estimation), so they
+are smaller than the raw panel counts in the firm $\times$ month panel.
+$z_{\text{exp}}$ is the Eloundou GPT-4 $\beta$ pooled across occupations,
+identical to \S\S1--4. $z_{\text{wage}}$ is computed natively on the
+secure private sample (pre-ChatGPT employment-weighted log FTE wage
+per occupation $\times$ age, z-scored within age), so the wage object
+is the secure-sample analogue of \S1's wage rather than the identical
+vector.
+
+\subsection{Employment (count), firm $\times$ occupation FE}
+\begin{figure}[H]\centering
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_firmfe_grid_count_occ.pdf}\\[4pt]
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_firmfe_decade_agentic_count_occ.pdf}
+  \caption{Firm-FE CA event study, employment (count), firm $\times$
+           occupation cell --- ChatGPT anchor (top), agentic anchor (bottom).}
+\end{figure}
+
+\clearpage
+\subsection{New hires (nyjobb), firm $\times$ occupation FE}
+\begin{figure}[H]\centering
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_firmfe_grid_nyjobb_occ.pdf}\\[4pt]
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_firmfe_decade_agentic_nyjobb_occ.pdf}
+  \caption{Firm-FE CA event study, new hires (nyjobb), firm $\times$
+           occupation cell --- ChatGPT anchor (top), agentic anchor (bottom).}
+\end{figure}
+
+% =====================================================================
+\clearpage
+\section{Firm-FE pooled DiD (Poisson PPML, within-firm)}
+
+\noindent
+Pooled post-treatment analogue of Section 5, mirroring Section 2's table
+format. Each pre-period month enters as its own control level; all post
+months collapse to ``POST'' with the reference month ($k=-1$) omitted, so
+each POST coefficient is the average post-period effect relative to the
+reference month. Three nested specifications per (timing, age) cell:
+\begin{itemize}\setlength{\itemsep}{1pt}
+  \item \textbf{M1} (\emph{exp}): $z_{\text{exp}} \cdot \text{Post}$ only.
+  \item \textbf{M2} (\emph{wage}): $z_{\text{wage}} \cdot \text{Post}$ only.
+  \item \textbf{M3} (\emph{full}): $z_{\text{exp}}\,\text{Post} +
+        z_{\text{wage}}\,\text{Post} + (z_{\text{exp}} z_{\text{wage}})
+        \,\text{Post}$.
+\end{itemize}
+
+\subsection{Employment (count), firm $\times$ occupation FE}
+\input{tables/table_ca_did_firmfe_combined_count_occ.tex}
+
+\clearpage
+\subsection{New hires (nyjobb), firm $\times$ occupation FE}
+\input{tables/table_ca_did_firmfe_combined_nyjobb_occ.tex}
+
+% =====================================================================
+\clearpage
+\section{Yagan-style event studies (microdata.no, linear OLS)}
+
+\noindent
+Sections 1--6 indexed every series to a single reference month ($k=-1$,
+i.e.\ either Oct 2022 for ChatGPT or Apr 2025 for the agentic anchor).
+This chapter replaces that single-month index with the
+Yagan-(2020)-style ratio against a \emph{12-month pre-window} mean
+baseline. For each cell $c = (\text{yrke4}, \text{alder\_gr})$ in the
+private sector and each anchor, with $\overline{y}_c$ the mean of $y$
+over $k\in[-12,-1]$:
+\begin{equation*}
+  y^{\mathrm{ratio}}_{c,t}=\frac{y_{c,t}}{\overline{y}_c}\quad
+  (1 = \text{baseline, $1.05 = +5\%$ above baseline}).
+\end{equation*}
+Pre-windows: \emph{chatgpt} = 2021m11--2022m10, \emph{agentic} =
+2024m05--2025m04. The 12-month window gives a smoother, less
+anomaly-prone \emph{denominator} than picking the single reference
+month $k=-1$. It does \emph{not} absorb seasonality, however: the
+denominator $\overline{y}_c$ is a scalar per cell, so any
+calendar-month pattern in the numerator $y_{c,t}$ propagates directly
+into $y^{\mathrm{ratio}}_{c,t}$ (a high-employment month divided by
+the year's mean is still high). Sections~9--10 implement a
+same-month-of-year ratio that does remove seasonality. The current
+ratio is the cell-level analog of Yagan's Fig.~6B individual-level
+$\mathrm{EARNINGS}_{i,2015}/\overline{\mathrm{EARNINGS}}_{i,\mathrm{pre}}$
+construction.
+\medskip
+
+\noindent
+Cells with $\overline{y}_c = 0$ are dropped (the ratio is undefined and
+feols rejects zero weights). Linear OLS (\texttt{fixest::feols}) on
+$y^{\mathrm{ratio}}$ with $z(\text{exp})\times\text{event-time}$,
+$z(\text{lnw})\times\text{event-time}$ and their three-way interaction.
+Cells are weighted by the same $\overline{y}_c$ that defines the
+denominator, so each cell-month contributes in proportion to the
+cell's pre-window average headcount: a 5000-worker cell counts 500
+times more than a 10-worker cell. This is the cell-aggregate analog
+of the equal-weight-per-individual convention in Yagan's regressions
+and is what makes the recovered coefficients an employment-weighted
+average ratio change per SD of treatment. Occupation and month FE; SE
+clustered at occupation. Same FE structure and identifying variation
+(within-occupation $\times$ time interactions with the standardized
+treatments) as Section~1; only the estimator (OLS vs.\ PPML) and the
+outcome ($y^{\mathrm{ratio}}$ vs.\ raw count $y$) differ.
+
+\subsection{Employment (count)}
+\begin{figure}[H]\centering
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_yagan_grid_count.pdf}\\[4pt]
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_yagan_agentic_count.pdf}
+  \caption{Yagan-ratio CA event study, employment headcount ---
+           ChatGPT anchor (top), agentic anchor (bottom). Coefficients
+           are $\Delta(y / \overline{y}_c^{\,\mathrm{pre}})$ per SD.}
+\end{figure}
+
+\clearpage
+\subsection{New hires (nyjobb)}
+\begin{figure}[H]\centering
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_yagan_grid_nyjobb.pdf}\\[4pt]
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_yagan_agentic_nyjobb.pdf}
+  \caption{Yagan-ratio CA event study, new hires --- ChatGPT anchor
+           (top), agentic anchor (bottom). Coefficients are
+           $\Delta(y / \overline{y}_c^{\,\mathrm{pre}})$ per SD.}
+\end{figure}
+
+% =====================================================================
+\clearpage
+\section{Yagan-style pooled DiD (microdata.no, linear OLS)}
+
+\noindent
+Pooled-DiD counterpart to Section~7, mirroring Section~2's table format.
+Each pre-period month enters as its own control level; all post months
+collapse to ``POST'' with the reference month ($k=-1$) omitted, so each
+POST coefficient is the average post-period effect on the Yagan ratio.
+M1 = exposure only, M2 = ln wage only, M3 = both $+$ interaction.
+
+\subsection{Employment (count)}
+\input{tables/table_ca_did_yagan_combined_count.tex}
+
+\clearpage
+\subsection{New hires (nyjobb)}
+\input{tables/table_ca_did_yagan_combined_nyjobb.tex}
+
+% =====================================================================
+\clearpage
+\section{Robustness: YoY-matched event studies (microdata.no, linear OLS)}
+
+\noindent
+Sections~7--8 used the \emph{mean} of $y$ over the 12-month pre-window as
+the baseline for each cell. This chapter is a robustness check that
+replaces that pooled-mean baseline with a \emph{same-month-of-year}
+match inside the same 12-month pre-window. Concretely, for each
+cell $c$ and post-period month $t$, the baseline is the unique
+pre-window observation $y_{c, m(t)}$ where $m(t)$ has the same
+month-of-year as $t$:
+\begin{equation*}
+  y^{\mathrm{YoY}}_{c,t}=\frac{y_{c,t}}{y_{c, m(t)}},
+\end{equation*}
+with $m(t)\in\{$2021m11, $\ldots,$ 2022m10$\}$ for ChatGPT and
+$\{$2024m05, $\ldots,$ 2025m04$\}$ for agentic.
+\medskip
+
+\noindent
+This strips out seasonality (sysselsetting, hires and wages all have
+strong calendar-month patterns) without leaving the pre-treatment
+window: the baseline is \emph{anchored} at the 12-month pre-window and
+reused each year, so it never gets contaminated by post-treatment
+observations even at $k \geq 12$. By construction $y^{\mathrm{YoY}} = 1$
+for every $k \in [-12,-1]$ (numerator and denominator are the same
+observation), so pre-period event-time coefficients inside the
+baseline window are mechanically zero --- there is no cross-occupation
+variation in the LHS to identify off. Pre-trend tests therefore have
+to use $k < -12$, where the baseline lies twelve months ahead of the
+data month. Cells with baseline $y = 0$ are dropped (ratio undefined;
+feols rejects zero weights). Estimator, FE structure, weights and
+cluster are identical to Section~7 (linear OLS, occupation $+$ month
+FE, cells weighted by the pre-window baseline count, SE clustered at
+occupation); only the construction of the ratio's denominator differs.
+
+\subsection{Employment (count)}
+\begin{figure}[H]\centering
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_yoy_grid_count.pdf}\\[4pt]
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_yoy_agentic_count.pdf}
+  \caption{YoY-matched CA event study, employment headcount ---
+           ChatGPT anchor (top), agentic anchor (bottom). Coefficients
+           are $\Delta(y_{c,t}/y_{c, m(t)})$ per SD.}
+\end{figure}
+
+\clearpage
+\subsection{New hires (nyjobb)}
+\begin{figure}[H]\centering
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_yoy_grid_nyjobb.pdf}\\[4pt]
+  \includegraphics[width=\textwidth,height=0.42\textheight,keepaspectratio]{figure_ca_es_yoy_agentic_nyjobb.pdf}
+  \caption{YoY-matched CA event study, new hires --- ChatGPT anchor
+           (top), agentic anchor (bottom). Coefficients are
+           $\Delta(y_{c,t}/y_{c, m(t)})$ per SD.}
+\end{figure}
+
+% =====================================================================
+\clearpage
+\section{Robustness: YoY-matched pooled DiD (microdata.no, linear OLS)}
+
+\noindent
+Pooled-DiD counterpart to Section~9, mirroring Section~8's table format.
+Same kk encoding as Sections~2 and~8: each pre-period month is its own
+control level, all post months collapse to ``POST'' with the reference
+month ($k=-1$) omitted. The POST coefficient is the average post-period
+effect on the YoY ratio.
+
+\subsection{Employment (count)}
+\input{tables/table_ca_did_yoy_combined_count.tex}
+
+\clearpage
+\subsection{New hires (nyjobb)}
+\input{tables/table_ca_did_yoy_combined_nyjobb.tex}
+
+% =====================================================================
+\clearpage
+\section*{References}
+
+\begin{description}
+  \item[LORV (2026)] Lindenlaub, I., R. Oh, M.~A. Rodríguez \& L. Veldkamp.
+  ``Beyond Exposure: Predicting AI Adoption Based on Comparative
+  Advantage.'' Working paper, May 22, 2026. Documents the gap between AI
+  exposure and observed adoption in German DiWaBe-IEB linked data, derives
+  the task-level adoption condition in equation~\eqref{eq:lorv}, and shows
+  that a comparative-advantage index accounts for 60\% of cross-occupation
+  adoption variation versus 14\% for exposure alone.
+  \item[Yagan (2020)] Yagan, D. ``Employment Hysteresis from the Great
+  Recession.'' \emph{Journal of Political Economy}, 128(7), 2505--2558.
+  The relative-outcome specification (eq.~(2): $e_{it} \equiv
+  \mathrm{EMPLOYED}_{it} - \tfrac{1}{8}\sum_{s=1999}^{2006}
+  \mathrm{EMPLOYED}_{is}$, see also Fig.~4C for earnings and Fig.~6B for
+  the ratio variant) used in Sections~7--8 above as the cell-level
+  Yagan-diff and Yagan-ratio outcomes.
+\end{description}
+
+\end{document}

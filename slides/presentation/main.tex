@@ -1,0 +1,78 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+% Theme: Metropolis (TeX Live >= 2017).
+\usetheme{metropolis}
+\metroset{numbering=none, progressbar=foot, sectionpage=progressbar}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{ragged2e}
+
+\input{tikz_macros}
+
+% Look up figures and reused inputs from the mapping deck
+\graphicspath{{./}{../mapping/}{../../analysis/output/figures/}}
+
+% Accent color matching the paper
+\definecolor{accent}{HTML}{1F4E79}
+\setbeamercolor{progress bar}{fg=accent}
+\setbeamercolor{title separator}{fg=accent}
+\setbeamercolor{frametitle}{bg=accent}
+\setbeamercolor{alerted text}{fg=accent}
+
+\title{AI Exposure and Age-Differentiated Employment}
+\subtitle{Evidence from Norwegian Register Data}
+\author{Øystein Hernæs\inst{1} \and Andreas R.\ Kostøl\inst{2}}
+\institute{\inst{1}Frisch Centre \and \inst{2}BI Norwegian Business School}
+\date{June 2026, \emph{Very preliminary work}}
+
+\begin{document}
+
+\maketitle
+
+% ---------------------------------------------------------------
+\section{Motivation}
+\input{01_motivation}
+
+% ---------------------------------------------------------------
+\section{Data}
+\input{02_data_methodology}
+
+% ---------------------------------------------------------------
+%\section{Why Eloundou}
+\input{03_eloundou_focus}
+
+% ---------------------------------------------------------------
+%\section{Mapping AI exposure to STYRK-08}
+\input{04_mapping}
+
+
+% ---------------------------------------------------------------
+\section{Descriptive results}
+\input{05_results_descriptive}
+
+% ---------------------------------------------------------------
+\section{Cell-level difference-in-differences}
+\input{06_results_diffindiff}
+
+% ---------------------------------------------------------------
+\section{Conclusion}
+\input{10_conclusion}
+
+% ---------------------------------------------------------------
+\section{Robustness}
+\input{08_robustness}
+
+
+% ---------------------------------------------------------------
+\section*{Backup}
+\input{07_firmfe}    % firm-FE demoted to backup pending Q3-reference re-run
+\input{90_backup}
+
+\end{document}

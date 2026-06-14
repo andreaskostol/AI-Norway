@@ -1,0 +1,301 @@
+require no.ssb.fdb:52 as db
+
+create-dataset m202501
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-01-16 as stillingspst
+generate alder = 2025 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+tabulate alder_gr nus3, flatten
+keep if stillingspst > 0
+tabulate alder_gr nus3, flatten
+delete-dataset m202501
+
+
+create-dataset m202502
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-02-16 as stillingspst
+generate alder = 2025 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+tabulate alder_gr nus3, flatten
+keep if stillingspst > 0
+tabulate alder_gr nus3, flatten
+delete-dataset m202502
+
+
+create-dataset m202503
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-03-16 as stillingspst
+generate alder = 2025 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+tabulate alder_gr nus3, flatten
+keep if stillingspst > 0
+tabulate alder_gr nus3, flatten
+delete-dataset m202503
+
+
+create-dataset m202504
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-04-16 as stillingspst
+generate alder = 2025 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+tabulate alder_gr nus3, flatten
+keep if stillingspst > 0
+tabulate alder_gr nus3, flatten
+delete-dataset m202504
+
+
+create-dataset m202505
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-05-16 as stillingspst
+generate alder = 2025 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+tabulate alder_gr nus3, flatten
+keep if stillingspst > 0
+tabulate alder_gr nus3, flatten
+delete-dataset m202505
+
+
+create-dataset m202506
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-06-16 as stillingspst
+generate alder = 2025 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+tabulate alder_gr nus3, flatten
+keep if stillingspst > 0
+tabulate alder_gr nus3, flatten
+delete-dataset m202506
+
+
+create-dataset m202507
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-07-16 as stillingspst
+generate alder = 2025 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+tabulate alder_gr nus3, flatten
+keep if stillingspst > 0
+tabulate alder_gr nus3, flatten
+delete-dataset m202507
+
+
+create-dataset m202508
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-08-16 as stillingspst
+generate alder = 2025 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+tabulate alder_gr nus3, flatten
+keep if stillingspst > 0
+tabulate alder_gr nus3, flatten
+delete-dataset m202508
+
+
+create-dataset m202509
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-09-16 as stillingspst
+generate alder = 2025 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+tabulate alder_gr nus3, flatten
+keep if stillingspst > 0
+tabulate alder_gr nus3, flatten
+delete-dataset m202509
+
+
+create-dataset m202510
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-10-16 as stillingspst
+generate alder = 2025 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+tabulate alder_gr nus3, flatten
+keep if stillingspst > 0
+tabulate alder_gr nus3, flatten
+delete-dataset m202510
+
+
+create-dataset m202511
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-11-16 as stillingspst
+generate alder = 2025 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+tabulate alder_gr nus3, flatten
+keep if stillingspst > 0
+tabulate alder_gr nus3, flatten
+delete-dataset m202511
+
+
+create-dataset m202512
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+import db/NUDB_BU 2024-07-01 as nudb
+import db/ARBLONN_PERS_SUM_STILLINGSPST 2025-12-16 as stillingspst
+generate alder = 2025 - int(fodtaarmd / 100)
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate nus3 = substr(nudb, 1, 3)
+destring nus3
+tabulate alder_gr nus3, flatten
+keep if stillingspst > 0
+tabulate alder_gr nus3, flatten
+delete-dataset m202512
+

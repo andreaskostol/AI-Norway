@@ -1,0 +1,75 @@
+# LaTeX build artifacts
+paper/*.aux
+paper/*.bbl
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.synctex.gz
+paper/*.toc
+paper/*.tex.tmp.*
+slides/*.aux
+slides/*.log
+slides/*.nav
+slides/*.out
+slides/*.snm
+slides/*.toc
+slides/*.vrb
+
+# Literature — copyright, never commit anything here
+literature/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~
+*.tmp.*
+
+# Private notes — local only, never pushed
+private/
+
+# Register-data outputs from the secure server — confidential, never pushed.
+# Covers the live drop and any dated archive snapshot, wherever it sits.
+**/from_secure_server/
+**/from_secure_server_*/
+
+# Root LaTeX build artifacts (main.tex compiles here)
+/main.aux
+/main.log
+/main.out
+/main.pdf
+/main.synctex.gz
+/texput.log
+
+# Dropbox folder-icon marker
+Icon?
+
+# Claude runtime state — settings.json is tracked explicitly below
+.claude/settings.local.json
+.claude/projects/
+.claude/todos/
+.claude/shell-snapshots/
+.claude/statsig/
+.claude/ide/
+.claude/commands/
+
+# Claude Code local config — not for the public repo
+.claude/
+
+# Register-derived data tables — not published (size + confidentiality).
+# Aggregated dashboard series live at kiindeksen.no/#data instead.
+microdata-output/
+/data/[0-9][0-9]_*.csv

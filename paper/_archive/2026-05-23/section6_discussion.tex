@@ -1,0 +1,33 @@
+\section{Discussion}\label{sec:discussion}
+
+\subsection{Cross-Country Comparison}\label{sec:discussion:crosscountry}
+
+Table~\ref{tab:crosscountry} situates the Norwegian patterns within the cross-country evidence reviewed in Section~\ref{sec:literature}. The table separates descriptive time series (Panel~A) from formal econometric estimates (Panel~B), because several studies employ both approaches and the magnitudes often differ.
+
+All five countries with descriptive analyses show an early-career decline in AI-exposed occupations, with the exception of Finland. The Norwegian per-capita decline of approximately 30 percent for young software developers is between the US ($-20\%$, \citealp{brynjolfsson2025}) and the Swedish raw figure ($-44\%$, \citealp{lodefalk2026}). The Finnish null \citep{kauhanen2026} is attributed to demographics.
+
+When formal methods control for firm-level confounders, the magnitudes tend to be smaller. \citet{brynjolfsson2025} find $-16$ log points in a Poisson event study with firm fixed effects, compared with larger raw occupation-level declines. \citet{lodefalk2026} find $-5.5\%$ within employer by 2025H1, and their job-posting analysis suggests that much of the aggregate decline in AI-exposed occupations reflects the Riksbank rate cycle. \citet{humlum2026} document an aggregate Danish decline in early-career employment that resembles the US and Norwegian patterns, but their firm-level difference-in-differences, the only study with individual-level AI adoption data, does not find that workplace AI chatbot adoption drives the decline, bounding the earnings effect at less than 2 to 3 percent.
+
+The gap between descriptive and formal estimates need not imply that AI plays no role. Formal methods absorb variation that may include both confounders and genuine AI effects operating through channels other than direct firm-level adoption (for example, competitive pressure from AI-adopting rivals, or supply-side reallocation by workers anticipating AI disruption). Nonetheless, the pattern suggests that aggregate descriptive trends, including those we report for Norway, should be interpreted with caution. Part of the observed decline may reflect concurrent forces such as monetary tightening, post-COVID corrections, or seniority dynamics rather than AI-specific adjustment. At the industry level, \citet{bick2026} find no clear evidence that AI adoption is associated with employment changes in either Europe or the US, consistent with the wage and employment nulls in \citet{humlum2026}. Norway, Sweden, Denmark, and Finland share similar labor market institutions, yet the formal results differ across countries, so institutional structure alone does not explain the heterogeneity.
+
+\input{../analysis/output/tables/table3_crosscountry}
+
+
+\subsection{Alternative Explanations}\label{sec:discussion:alternatives}
+
+Four non-AI channels could produce the same age-by-exposure gradient, and the aggregate data cannot fully separate them.
+
+\paragraph{Post-COVID technology correction.} Software, data analysis, and digital services hired aggressively from 2020 through 2022, disproportionately absorbing young workers. The subsequent correction, as pandemic-era demand for digital services normalized, would reproduce the post-2022 pattern with no AI involvement. The 22--25 software developer line in Section~\ref{sec:results} starts to slope down before ChatGPT's release, consistent with this channel.
+
+\paragraph{Monetary tightening.} The Norges Bank rate cycle (Section~\ref{sec:data:institutions}) overlaps the post-ChatGPT window. Higher rates depress labor demand in finance, real estate, construction, and technology, sectors that also overlap substantially with the high-exposure quintiles, and that shed junior workers first. The public-sector null fits a market-driven story but cannot separate AI from rates at the aggregate level.
+
+\paragraph{Seniority dynamics.} In any downturn, employers in technology-intensive sectors retain experienced workers and cut entry-level hiring, producing a mechanical age gradient. Separating this from AI-driven substitution requires within-firm variation, which is exactly what the firm-FE design in Section~\ref{sec:results:firmfe} provides. There, the within-firm Q5-vs-Q1 coefficient for 22--25 is near zero, so the cohort-level Q5 decline runs through which firms are hiring rather than which workers existing firms retain. That pattern fits hiring freezes better than internal substitution.
+
+\paragraph{Supply-side reallocation.} Workers entering the labor market after 2022 may be avoiding occupations they perceive as exposed to AI. This would generate the same young-worker pattern in exposed occupations through worker choice rather than employer substitution.
+
+The Q5--Q1 gradient is a relative pattern within the 22--25 age band; the overall 22--25 line in Figure~\ref{fig:age_by_quintile} is roughly flat, so Q5 losses are largely offset by Q1--Q4 stability. The aggregate data alone cannot distinguish occupational reallocation among young workers from outright exit. The four channels above and the AI channel can all be operating at once.
+
+
+\subsection{Implications}\label{sec:discussion:implications}
+
+The public-sector null and the wage null are consistent with Norway's two-tier bargaining system \citep{bhuller2022} channelling any AI-related adjustment toward the hiring margin in the private sector. Downward-rigid wage floors limit short-run wage adjustment; the locally negotiated drift channel could deliver a wage response over a longer horizon. The qualitative pattern holds across all four exposure measures despite their different conceptual foundations, while magnitudes vary with measure choice; the field has not converged on a standard ``AI exposure'' definition, and the results should be read with that measurement uncertainty in mind.

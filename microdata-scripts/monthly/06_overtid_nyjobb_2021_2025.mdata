@@ -1,0 +1,1987 @@
+require no.ssb.fdb:52 as db
+
+create-dataset kobling
+import db/ARBEIDSFORHOLD_PERSON as personid
+
+create-dataset pers
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+
+create-dataset y2021m01
+import db/ARBLONN_ARB_YRKE_STYRK08 2021-01-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2021-01-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2021-01-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2021m01
+use pers
+merge fodtaarmd into y2021m01 on personid
+
+use y2021m01
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2021 - birth_yr
+replace alder = alder - 1 if birth_mo > 1
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18612 & startdato <= 18643
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2021m01
+
+create-dataset y2021m02
+import db/ARBLONN_ARB_YRKE_STYRK08 2021-02-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2021-02-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2021-02-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2021m02
+use pers
+merge fodtaarmd into y2021m02 on personid
+
+use y2021m02
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2021 - birth_yr
+replace alder = alder - 1 if birth_mo > 2
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18643 & startdato <= 18674
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2021m02
+
+create-dataset y2021m03
+import db/ARBLONN_ARB_YRKE_STYRK08 2021-03-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2021-03-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2021-03-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2021m03
+use pers
+merge fodtaarmd into y2021m03 on personid
+
+use y2021m03
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2021 - birth_yr
+replace alder = alder - 1 if birth_mo > 3
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18674 & startdato <= 18702
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2021m03
+
+create-dataset y2021m04
+import db/ARBLONN_ARB_YRKE_STYRK08 2021-04-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2021-04-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2021-04-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2021m04
+use pers
+merge fodtaarmd into y2021m04 on personid
+
+use y2021m04
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2021 - birth_yr
+replace alder = alder - 1 if birth_mo > 4
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18702 & startdato <= 18733
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2021m04
+
+create-dataset y2021m05
+import db/ARBLONN_ARB_YRKE_STYRK08 2021-05-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2021-05-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2021-05-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2021m05
+use pers
+merge fodtaarmd into y2021m05 on personid
+
+use y2021m05
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2021 - birth_yr
+replace alder = alder - 1 if birth_mo > 5
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18733 & startdato <= 18763
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2021m05
+
+create-dataset y2021m06
+import db/ARBLONN_ARB_YRKE_STYRK08 2021-06-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2021-06-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2021-06-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2021m06
+use pers
+merge fodtaarmd into y2021m06 on personid
+
+use y2021m06
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2021 - birth_yr
+replace alder = alder - 1 if birth_mo > 6
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18763 & startdato <= 18794
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2021m06
+
+create-dataset y2021m07
+import db/ARBLONN_ARB_YRKE_STYRK08 2021-07-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2021-07-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2021-07-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2021m07
+use pers
+merge fodtaarmd into y2021m07 on personid
+
+use y2021m07
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2021 - birth_yr
+replace alder = alder - 1 if birth_mo > 7
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18794 & startdato <= 18824
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2021m07
+
+create-dataset y2021m08
+import db/ARBLONN_ARB_YRKE_STYRK08 2021-08-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2021-08-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2021-08-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2021m08
+use pers
+merge fodtaarmd into y2021m08 on personid
+
+use y2021m08
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2021 - birth_yr
+replace alder = alder - 1 if birth_mo > 8
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18824 & startdato <= 18855
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2021m08
+
+create-dataset y2021m09
+import db/ARBLONN_ARB_YRKE_STYRK08 2021-09-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2021-09-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2021-09-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2021m09
+use pers
+merge fodtaarmd into y2021m09 on personid
+
+use y2021m09
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2021 - birth_yr
+replace alder = alder - 1 if birth_mo > 9
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18855 & startdato <= 18886
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2021m09
+
+create-dataset y2021m10
+import db/ARBLONN_ARB_YRKE_STYRK08 2021-10-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2021-10-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2021-10-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2021m10
+use pers
+merge fodtaarmd into y2021m10 on personid
+
+use y2021m10
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2021 - birth_yr
+replace alder = alder - 1 if birth_mo > 10
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18886 & startdato <= 18916
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2021m10
+
+create-dataset y2021m11
+import db/ARBLONN_ARB_YRKE_STYRK08 2021-11-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2021-11-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2021-11-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2021m11
+use pers
+merge fodtaarmd into y2021m11 on personid
+
+use y2021m11
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2021 - birth_yr
+replace alder = alder - 1 if birth_mo > 11
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18916 & startdato <= 18947
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2021m11
+
+create-dataset y2021m12
+import db/ARBLONN_ARB_YRKE_STYRK08 2021-12-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2021-12-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2021-12-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2021m12
+use pers
+merge fodtaarmd into y2021m12 on personid
+
+use y2021m12
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2021 - birth_yr
+replace alder = alder - 1 if birth_mo > 12
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18947 & startdato <= 18977
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2021m12
+
+create-dataset y2022m01
+import db/ARBLONN_ARB_YRKE_STYRK08 2022-01-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2022-01-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2022-01-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2022m01
+use pers
+merge fodtaarmd into y2022m01 on personid
+
+use y2022m01
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2022 - birth_yr
+replace alder = alder - 1 if birth_mo > 1
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 18977 & startdato <= 19008
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2022m01
+
+create-dataset y2022m02
+import db/ARBLONN_ARB_YRKE_STYRK08 2022-02-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2022-02-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2022-02-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2022m02
+use pers
+merge fodtaarmd into y2022m02 on personid
+
+use y2022m02
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2022 - birth_yr
+replace alder = alder - 1 if birth_mo > 2
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19008 & startdato <= 19039
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2022m02
+
+create-dataset y2022m03
+import db/ARBLONN_ARB_YRKE_STYRK08 2022-03-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2022-03-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2022-03-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2022m03
+use pers
+merge fodtaarmd into y2022m03 on personid
+
+use y2022m03
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2022 - birth_yr
+replace alder = alder - 1 if birth_mo > 3
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19039 & startdato <= 19067
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2022m03
+
+create-dataset y2022m04
+import db/ARBLONN_ARB_YRKE_STYRK08 2022-04-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2022-04-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2022-04-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2022m04
+use pers
+merge fodtaarmd into y2022m04 on personid
+
+use y2022m04
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2022 - birth_yr
+replace alder = alder - 1 if birth_mo > 4
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19067 & startdato <= 19098
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2022m04
+
+create-dataset y2022m05
+import db/ARBLONN_ARB_YRKE_STYRK08 2022-05-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2022-05-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2022-05-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2022m05
+use pers
+merge fodtaarmd into y2022m05 on personid
+
+use y2022m05
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2022 - birth_yr
+replace alder = alder - 1 if birth_mo > 5
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19098 & startdato <= 19128
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2022m05
+
+create-dataset y2022m06
+import db/ARBLONN_ARB_YRKE_STYRK08 2022-06-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2022-06-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2022-06-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2022m06
+use pers
+merge fodtaarmd into y2022m06 on personid
+
+use y2022m06
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2022 - birth_yr
+replace alder = alder - 1 if birth_mo > 6
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19128 & startdato <= 19159
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2022m06
+
+create-dataset y2022m07
+import db/ARBLONN_ARB_YRKE_STYRK08 2022-07-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2022-07-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2022-07-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2022m07
+use pers
+merge fodtaarmd into y2022m07 on personid
+
+use y2022m07
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2022 - birth_yr
+replace alder = alder - 1 if birth_mo > 7
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19159 & startdato <= 19189
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2022m07
+
+create-dataset y2022m08
+import db/ARBLONN_ARB_YRKE_STYRK08 2022-08-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2022-08-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2022-08-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2022m08
+use pers
+merge fodtaarmd into y2022m08 on personid
+
+use y2022m08
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2022 - birth_yr
+replace alder = alder - 1 if birth_mo > 8
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19189 & startdato <= 19220
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2022m08
+
+create-dataset y2022m09
+import db/ARBLONN_ARB_YRKE_STYRK08 2022-09-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2022-09-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2022-09-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2022m09
+use pers
+merge fodtaarmd into y2022m09 on personid
+
+use y2022m09
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2022 - birth_yr
+replace alder = alder - 1 if birth_mo > 9
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19220 & startdato <= 19251
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2022m09
+
+create-dataset y2022m10
+import db/ARBLONN_ARB_YRKE_STYRK08 2022-10-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2022-10-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2022-10-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2022m10
+use pers
+merge fodtaarmd into y2022m10 on personid
+
+use y2022m10
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2022 - birth_yr
+replace alder = alder - 1 if birth_mo > 10
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19251 & startdato <= 19281
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2022m10
+
+create-dataset y2022m11
+import db/ARBLONN_ARB_YRKE_STYRK08 2022-11-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2022-11-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2022-11-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2022m11
+use pers
+merge fodtaarmd into y2022m11 on personid
+
+use y2022m11
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2022 - birth_yr
+replace alder = alder - 1 if birth_mo > 11
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19281 & startdato <= 19312
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2022m11
+
+create-dataset y2022m12
+import db/ARBLONN_ARB_YRKE_STYRK08 2022-12-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2022-12-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2022-12-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2022m12
+use pers
+merge fodtaarmd into y2022m12 on personid
+
+use y2022m12
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2022 - birth_yr
+replace alder = alder - 1 if birth_mo > 12
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19312 & startdato <= 19342
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2022m12
+
+create-dataset y2023m01
+import db/ARBLONN_ARB_YRKE_STYRK08 2023-01-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2023-01-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2023-01-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2023m01
+use pers
+merge fodtaarmd into y2023m01 on personid
+
+use y2023m01
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2023 - birth_yr
+replace alder = alder - 1 if birth_mo > 1
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19342 & startdato <= 19373
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2023m01
+
+create-dataset y2023m02
+import db/ARBLONN_ARB_YRKE_STYRK08 2023-02-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2023-02-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2023-02-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2023m02
+use pers
+merge fodtaarmd into y2023m02 on personid
+
+use y2023m02
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2023 - birth_yr
+replace alder = alder - 1 if birth_mo > 2
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19373 & startdato <= 19404
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2023m02
+
+create-dataset y2023m03
+import db/ARBLONN_ARB_YRKE_STYRK08 2023-03-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2023-03-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2023-03-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2023m03
+use pers
+merge fodtaarmd into y2023m03 on personid
+
+use y2023m03
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2023 - birth_yr
+replace alder = alder - 1 if birth_mo > 3
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19404 & startdato <= 19432
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2023m03
+
+create-dataset y2023m04
+import db/ARBLONN_ARB_YRKE_STYRK08 2023-04-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2023-04-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2023-04-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2023m04
+use pers
+merge fodtaarmd into y2023m04 on personid
+
+use y2023m04
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2023 - birth_yr
+replace alder = alder - 1 if birth_mo > 4
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19432 & startdato <= 19463
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2023m04
+
+create-dataset y2023m05
+import db/ARBLONN_ARB_YRKE_STYRK08 2023-05-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2023-05-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2023-05-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2023m05
+use pers
+merge fodtaarmd into y2023m05 on personid
+
+use y2023m05
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2023 - birth_yr
+replace alder = alder - 1 if birth_mo > 5
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19463 & startdato <= 19493
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2023m05
+
+create-dataset y2023m06
+import db/ARBLONN_ARB_YRKE_STYRK08 2023-06-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2023-06-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2023-06-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2023m06
+use pers
+merge fodtaarmd into y2023m06 on personid
+
+use y2023m06
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2023 - birth_yr
+replace alder = alder - 1 if birth_mo > 6
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19493 & startdato <= 19524
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2023m06
+
+create-dataset y2023m07
+import db/ARBLONN_ARB_YRKE_STYRK08 2023-07-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2023-07-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2023-07-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2023m07
+use pers
+merge fodtaarmd into y2023m07 on personid
+
+use y2023m07
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2023 - birth_yr
+replace alder = alder - 1 if birth_mo > 7
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19524 & startdato <= 19554
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2023m07
+
+create-dataset y2023m08
+import db/ARBLONN_ARB_YRKE_STYRK08 2023-08-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2023-08-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2023-08-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2023m08
+use pers
+merge fodtaarmd into y2023m08 on personid
+
+use y2023m08
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2023 - birth_yr
+replace alder = alder - 1 if birth_mo > 8
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19554 & startdato <= 19585
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2023m08
+
+create-dataset y2023m09
+import db/ARBLONN_ARB_YRKE_STYRK08 2023-09-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2023-09-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2023-09-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2023m09
+use pers
+merge fodtaarmd into y2023m09 on personid
+
+use y2023m09
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2023 - birth_yr
+replace alder = alder - 1 if birth_mo > 9
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19585 & startdato <= 19616
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2023m09
+
+create-dataset y2023m10
+import db/ARBLONN_ARB_YRKE_STYRK08 2023-10-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2023-10-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2023-10-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2023m10
+use pers
+merge fodtaarmd into y2023m10 on personid
+
+use y2023m10
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2023 - birth_yr
+replace alder = alder - 1 if birth_mo > 10
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19616 & startdato <= 19646
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2023m10
+
+create-dataset y2023m11
+import db/ARBLONN_ARB_YRKE_STYRK08 2023-11-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2023-11-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2023-11-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2023m11
+use pers
+merge fodtaarmd into y2023m11 on personid
+
+use y2023m11
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2023 - birth_yr
+replace alder = alder - 1 if birth_mo > 11
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19646 & startdato <= 19677
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2023m11
+
+create-dataset y2023m12
+import db/ARBLONN_ARB_YRKE_STYRK08 2023-12-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2023-12-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2023-12-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2023m12
+use pers
+merge fodtaarmd into y2023m12 on personid
+
+use y2023m12
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2023 - birth_yr
+replace alder = alder - 1 if birth_mo > 12
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19677 & startdato <= 19707
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2023m12
+
+create-dataset y2024m01
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-01-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2024-01-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2024-01-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2024m01
+use pers
+merge fodtaarmd into y2024m01 on personid
+
+use y2024m01
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2024 - birth_yr
+replace alder = alder - 1 if birth_mo > 1
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19707 & startdato <= 19738
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2024m01
+
+create-dataset y2024m02
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-02-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2024-02-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2024-02-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2024m02
+use pers
+merge fodtaarmd into y2024m02 on personid
+
+use y2024m02
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2024 - birth_yr
+replace alder = alder - 1 if birth_mo > 2
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19738 & startdato <= 19769
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2024m02
+
+create-dataset y2024m03
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-03-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2024-03-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2024-03-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2024m03
+use pers
+merge fodtaarmd into y2024m03 on personid
+
+use y2024m03
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2024 - birth_yr
+replace alder = alder - 1 if birth_mo > 3
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19769 & startdato <= 19798
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2024m03
+
+create-dataset y2024m04
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-04-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2024-04-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2024-04-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2024m04
+use pers
+merge fodtaarmd into y2024m04 on personid
+
+use y2024m04
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2024 - birth_yr
+replace alder = alder - 1 if birth_mo > 4
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19798 & startdato <= 19829
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2024m04
+
+create-dataset y2024m05
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-05-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2024-05-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2024-05-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2024m05
+use pers
+merge fodtaarmd into y2024m05 on personid
+
+use y2024m05
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2024 - birth_yr
+replace alder = alder - 1 if birth_mo > 5
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19829 & startdato <= 19859
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2024m05
+
+create-dataset y2024m06
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-06-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2024-06-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2024-06-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2024m06
+use pers
+merge fodtaarmd into y2024m06 on personid
+
+use y2024m06
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2024 - birth_yr
+replace alder = alder - 1 if birth_mo > 6
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19859 & startdato <= 19890
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2024m06
+
+create-dataset y2024m07
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-07-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2024-07-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2024-07-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2024m07
+use pers
+merge fodtaarmd into y2024m07 on personid
+
+use y2024m07
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2024 - birth_yr
+replace alder = alder - 1 if birth_mo > 7
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19890 & startdato <= 19920
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2024m07
+
+create-dataset y2024m08
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-08-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2024-08-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2024-08-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2024m08
+use pers
+merge fodtaarmd into y2024m08 on personid
+
+use y2024m08
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2024 - birth_yr
+replace alder = alder - 1 if birth_mo > 8
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19920 & startdato <= 19951
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2024m08
+
+create-dataset y2024m09
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-09-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2024-09-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2024-09-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2024m09
+use pers
+merge fodtaarmd into y2024m09 on personid
+
+use y2024m09
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2024 - birth_yr
+replace alder = alder - 1 if birth_mo > 9
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19951 & startdato <= 19982
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2024m09
+
+create-dataset y2024m10
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-10-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2024-10-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2024-10-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2024m10
+use pers
+merge fodtaarmd into y2024m10 on personid
+
+use y2024m10
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2024 - birth_yr
+replace alder = alder - 1 if birth_mo > 10
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 19982 & startdato <= 20012
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2024m10
+
+create-dataset y2024m11
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-11-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2024-11-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2024-11-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2024m11
+use pers
+merge fodtaarmd into y2024m11 on personid
+
+use y2024m11
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2024 - birth_yr
+replace alder = alder - 1 if birth_mo > 11
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20012 & startdato <= 20043
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2024m11
+
+create-dataset y2024m12
+import db/ARBLONN_ARB_YRKE_STYRK08 2024-12-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2024-12-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2024-12-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2024m12
+use pers
+merge fodtaarmd into y2024m12 on personid
+
+use y2024m12
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2024 - birth_yr
+replace alder = alder - 1 if birth_mo > 12
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20043 & startdato <= 20073
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2024m12
+
+create-dataset y2025m01
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-01-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-01-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2025-01-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m01
+use pers
+merge fodtaarmd into y2025m01 on personid
+
+use y2025m01
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 1
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20073 & startdato <= 20104
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2025m01
+
+create-dataset y2025m02
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-02-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-02-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2025-02-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m02
+use pers
+merge fodtaarmd into y2025m02 on personid
+
+use y2025m02
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 2
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20104 & startdato <= 20135
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2025m02
+
+create-dataset y2025m03
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-03-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-03-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2025-03-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m03
+use pers
+merge fodtaarmd into y2025m03 on personid
+
+use y2025m03
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 3
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20135 & startdato <= 20163
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2025m03
+
+create-dataset y2025m04
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-04-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-04-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2025-04-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m04
+use pers
+merge fodtaarmd into y2025m04 on personid
+
+use y2025m04
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 4
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20163 & startdato <= 20194
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2025m04
+
+create-dataset y2025m05
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-05-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-05-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2025-05-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m05
+use pers
+merge fodtaarmd into y2025m05 on personid
+
+use y2025m05
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 5
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20194 & startdato <= 20224
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2025m05
+
+create-dataset y2025m06
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-06-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-06-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2025-06-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m06
+use pers
+merge fodtaarmd into y2025m06 on personid
+
+use y2025m06
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 6
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20224 & startdato <= 20255
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2025m06
+
+create-dataset y2025m07
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-07-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-07-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2025-07-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m07
+use pers
+merge fodtaarmd into y2025m07 on personid
+
+use y2025m07
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 7
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20255 & startdato <= 20285
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2025m07
+
+create-dataset y2025m08
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-08-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-08-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2025-08-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m08
+use pers
+merge fodtaarmd into y2025m08 on personid
+
+use y2025m08
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 8
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20285 & startdato <= 20316
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2025m08
+
+create-dataset y2025m09
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-09-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-09-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2025-09-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m09
+use pers
+merge fodtaarmd into y2025m09 on personid
+
+use y2025m09
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 9
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20316 & startdato <= 20347
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2025m09
+
+create-dataset y2025m10
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-10-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-10-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2025-10-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m10
+use pers
+merge fodtaarmd into y2025m10 on personid
+
+use y2025m10
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 10
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20347 & startdato <= 20377
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2025m10
+
+create-dataset y2025m11
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-11-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-11-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2025-11-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m11
+use pers
+merge fodtaarmd into y2025m11 on personid
+
+use y2025m11
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 11
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20377 & startdato <= 20408
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2025m11
+
+create-dataset y2025m12
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-12-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-12-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+import db/ARBLONN_ARB_START 2025-12-16 as startdato
+generate yrke4 = substr(yrke, 1, 4)
+
+use kobling
+merge personid into y2025m12
+use pers
+merge fodtaarmd into y2025m12 on personid
+
+use y2025m12
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2025 - birth_yr
+replace alder = alder - 1 if birth_mo > 12
+generate alder_gr = 0
+replace alder_gr = 1 if alder <= 21
+replace alder_gr = 2 if alder >= 22 & alder <= 25
+replace alder_gr = 3 if alder >= 26 & alder <= 30
+replace alder_gr = 4 if alder >= 31 & alder <= 34
+replace alder_gr = 5 if alder >= 35 & alder <= 40
+replace alder_gr = 6 if alder >= 41 & alder <= 49
+replace alder_gr = 7 if alder >= 50 & alder <= 59
+replace alder_gr = 8 if alder >= 60 & alder <= 69
+replace alder_gr = 9 if alder >= 70
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20408 & startdato <= 20438
+tabulate yrke4 alder_gr, summarize(overtid_timer) flatten
+tabulate yrke4 alder_gr, summarize(ny_jobb) flatten
+delete-dataset y2025m12

@@ -1,0 +1,18 @@
+require no.ssb.fdb:51 as db
+
+create-dataset utdtest
+import db/BEFOLKNING_STATUSKODE 2025-01-01 as regstatus
+keep if regstatus == '1'
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+generate alder = 2025 - int(fodtaarmd / 100)
+keep if alder >= 25 & alder <= 54
+import db/BEFOLKNING_KJOENN as kjoenn
+import db/NUDB_BU 2024-07-01 as utdnivaa
+generate utdnivaa1 = substr(utdnivaa, 1, 1)
+destring utdnivaa1
+
+define-labels utdlbl 0 'Ingen/foerskole' 1 'Barneskole' 2 'Ungdomsskole' 3 'Videregaaende' 4 'Fagskole' 5 'Univ lavere' 6 'Univ hoeyere' 7 'Univ lang' 8 'Forskerutd' 9 'Uoppgitt'
+assign-labels utdnivaa1 utdlbl
+
+tabulate utdnivaa1, flatten
+tabulate utdnivaa1 kjoenn, flatten

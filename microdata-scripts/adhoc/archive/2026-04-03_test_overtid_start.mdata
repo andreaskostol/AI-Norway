@@ -1,0 +1,21 @@
+require no.ssb.fdb:52 as db
+
+create-dataset test
+import db/ARBLONN_ARB_YRKE_STYRK08 2025-01-16 as yrke
+import db/ARBLONN_LONN_OVERTID_TIMER 2025-01-16 as overtid_timer
+import db/ARBLONN_ARB_START 2025-01-16 as startdato
+
+summarize overtid_timer
+
+generate yrke4 = substr(yrke, 1, 4)
+
+generate start_ym = substr(startdato, 1, 7)
+generate ny_jobb = 0
+replace ny_jobb = 1 if start_ym == '2025-01'
+
+generate har_overtid = 0
+replace har_overtid = 1 if overtid_timer > 0
+
+tabulate ny_jobb, flatten
+tabulate har_overtid, flatten
+tabulate ny_jobb har_overtid, flatten

@@ -1,0 +1,58 @@
+\begin{table}[H]\centering
+\caption{Yagan-style CA pooled DiD on private-sector employment headcount (Yagan diff ($y_{c,t} - \overline{y_c}_{,\mathrm{pre}}$)), by age group}
+\label{tab:ca_did_yagan_combined_count_diff}
+\small
+\begin{tabular}{lcccccc}
+\toprule
+ & \multicolumn{3}{c}{ChatGPT (ref.\ Oct 2022)} & \multicolumn{3}{c}{Agentic (ref.\ Apr 2025)} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel A: ages 21–30}} \\
+Exposure $\times$ Post & -1.6255 &  & -37.7636 & -18.4905 &  & +43.0823 \\
+ & (56.1583) &  & (71.8546) & (53.4352) &  & (88.3817) \\
+ln wage $\times$ Post &  & +132.6025 & +173.0132 &  & -219.7412 & -265.6007 \\
+ &  & (138.9523) & (162.6713) &  & (175.7899) & (218.5797) \\
+Exp $\times$ wage $\times$ Post &  &  & +147.7124 &  &  & -170.3994 \\
+ &  &  & (112.0686) &  &  & (160.5394) \\
+\quad Observations & \multicolumn{3}{c}{20,124} & \multicolumn{3}{c}{12,320} \\
+\quad Occupations & \multicolumn{3}{c}{387} & \multicolumn{3}{c}{385} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel B: ages 31–40}} \\
+Exposure $\times$ Post & +142.1038** &  & +89.6312* & -12.9195 &  & -3.7650 \\
+ & (55.4401) &  & (49.7981) & (12.4233) &  & (15.3669) \\
+ln wage $\times$ Post &  & +153.5876*** & +107.2499*** &  & -21.3242 & -20.1612 \\
+ &  & (43.6033) & (28.9021) &  & (19.4350) & (22.8421) \\
+Exp $\times$ wage $\times$ Post &  &  & -9.1694 &  &  & +9.3083 \\
+ &  &  & (33.1386) &  &  & (15.1788) \\
+\quad Observations & \multicolumn{3}{c}{20,072} & \multicolumn{3}{c}{12,320} \\
+\quad Occupations & \multicolumn{3}{c}{386} & \multicolumn{3}{c}{385} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel C: ages 41–50}} \\
+Exposure $\times$ Post & -0.6519 &  & -37.7439 & -52.1059*** &  & -30.4648** \\
+ & (51.2571) &  & (42.7641) & (17.2652) &  & (12.3245) \\
+ln wage $\times$ Post &  & +47.7947 & +65.3629 &  & -50.9785*** & -36.8391** \\
+ &  & (51.9613) & (44.9315) &  & (18.5463) & (17.7435) \\
+Exp $\times$ wage $\times$ Post &  &  & +34.4659 &  &  & +33.5014 \\
+ &  &  & (39.9191) &  &  & (20.7596) \\
+\quad Observations & \multicolumn{3}{c}{20,020} & \multicolumn{3}{c}{12,288} \\
+\quad Occupations & \multicolumn{3}{c}{385} & \multicolumn{3}{c}{384} \\
+\midrule
+\multicolumn{7}{@{}l}{\textit{Panel D: ages 51–60}} \\
+Exposure $\times$ Post & +10.6107 &  & -3.2656 & -43.4820*** &  & -27.9490*** \\
+ & (28.3044) &  & (23.1731) & (15.3076) &  & (9.0557) \\
+ln wage $\times$ Post &  & +36.0858 & +31.8668 &  & -37.5928** & -28.1754* \\
+ &  & (26.5137) & (24.3132) &  & (16.4946) & (14.8952) \\
+Exp $\times$ wage $\times$ Post &  &  & +47.2867 &  &  & +43.0401* \\
+ &  &  & (33.4910) &  &  & (22.9499) \\
+\quad Observations & \multicolumn{3}{c}{20,176} & \multicolumn{3}{c}{12,320} \\
+\quad Occupations & \multicolumn{3}{c}{388} & \multicolumn{3}{c}{385} \\
+\midrule
+Occupation FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Month FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\begin{minipage}{\linewidth}\vspace{2pt}\footnotesize
+\emph{Notes:} Linear OLS (\texttt{fixest::feols}) on the microdata.no cell aggregates (private sector, sektor = 2). Outcome demeaned at the (yrke4, age) cell level by the mean over the 12-month pre-window $k \in [-12, -1]$, then either differenced (Yagan diff ($y_{c,t} - \overline{y_c}_{,\mathrm{pre}}$)) or ratioed. Columns (1)--(3): ChatGPT window (Oct 2022 $=k{=}{-}1$, through 2025m4); (4)--(6): agentic (Apr 2025 $=k{=}{-}1$, from 2023m7). Each coefficient is the average post-period effect relative to the reference month ($k{=}{-}1$); each pre-period month enters as a separate control. M1 = exposure only, M2 = ln wage only, M3 = both $+$ interaction. Treatments standardized: $z(\text{exp})$ = Eloundou $\beta$ (pooled), $z(\text{lnw})$ = ln full-time-equivalent wage (pre-ChatGPT, within age group). Cells weighted by the pre-window baseline mean count. Occupation $+$ month FE; SE clustered at occupation in parentheses. $^{*}p<0.10$, $^{**}p<0.05$, $^{***}p<0.01$.
+\end{minipage}
+\end{table}

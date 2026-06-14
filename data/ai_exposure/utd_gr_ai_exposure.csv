@@ -1,0 +1,31 @@
+utd_gr,utd_label,ai_exposure,n_nus_codes,n_styrk_total
+10,"VGS, Almenne fag",0.3769,47,452
+11,"VGS, Humanistiske og estetiske fag",0.1994,231,453
+12,"VGS, Laererutd. og pedagogikk",0.3703,40,400
+13,"VGS, Samfunnsfag og juridiske fag",0.6115,63,221
+14,"VGS, Oekonomiske og adm. fag",0.5862,70,368
+15,"VGS, Naturvit., haandverk, teknikk",0.2449,506,2054
+16,"VGS, Helse-, sosial- og idrettsfag",0.4412,129,569
+17,"VGS, Primaernaeringsfag",0.2109,80,209
+18,"VGS, Samferdsels- og sikkerhetsfag",0.2625,101,244
+19,"VGS, Andre/uoppgitte fag",0.4648,5,32
+20,"Bachelor, Almenne fag",0.4355,6,180
+21,"Bachelor, Humanistiske og estetiske fag",0.4217,484,1276
+22,"Bachelor, Laererutd. og pedagogikk",0.4574,237,635
+23,"Bachelor, Samfunnsfag og juridiske fag",0.5585,194,422
+24,"Bachelor, Oekonomiske og adm. fag",0.4656,358,2511
+25,"Bachelor, Naturvit., haandverk, teknikk",0.4665,653,3080
+26,"Bachelor, Helse-, sosial- og idrettsfag",0.3865,437,1629
+27,"Bachelor, Primaernaeringsfag",0.2299,129,389
+28,"Bachelor, Samferdsels- og sikkerhetsfag",0.4046,129,291
+29,"Bachelor, Andre/uoppgitte fag",0.4987,8,435
+30,"Master+, Almenne fag",0.5066,4,94
+31,"Master+, Humanistiske og estetiske fag",0.5034,448,984
+32,"Master+, Laererutd. og pedagogikk",0.5053,186,576
+33,"Master+, Samfunnsfag og juridiske fag",0.6187,263,541
+34,"Master+, Oekonomiske og adm. fag",0.5813,104,1709
+35,"Master+, Naturvit., haandverk, teknikk",0.5718,527,2357
+36,"Master+, Helse-, sosial- og idrettsfag",0.4783,279,762
+37,"Master+, Primaernaeringsfag",0.3284,68,128
+38,"Master+, Samferdsels- og sikkerhetsfag",0.4883,56,151
+39,"Master+, Andre/uoppgitte fag",0.5097,6,51
