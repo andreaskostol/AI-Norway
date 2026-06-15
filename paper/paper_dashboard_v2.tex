@@ -215,14 +215,14 @@ Having seen the aggregate, we turn to four occupations chosen for their AI relev
 
 Figure~\ref{fig:occupations_by_age} plots seasonally adjusted private-sector employment per capita by decade age group, indexed to October 2022. The age groups already differ before the ChatGPT release: in software development the youngest workers are on a flat-to-declining path well before November 2022, while the older groups are still rising, so part of the post-2022 young-worker gap continues a pre-existing trend. After the release the gap widens. In software development the 21--30 series falls to roughly 0.8 by early 2026 while the 31--40 and 51--60 series rise to about 1.1 and the 41--50 series is flat. Customer service agents show a milder version of the same shape, the youngest ending near the baseline while older groups end higher. The two low-exposure occupations show no young-worker decline: electricians aged 21--30 end close to the baseline and home health aides grow across every age group, the youngest most of all.
 
-In the high-exposure occupations the youngest workers lose ground relative to older workers, the case-study pattern reported in \citet{brynjolfsson2025}, while the low-exposure occupations show no such gap. Section~\ref{sec:results:agequintile} incorporates all occupations systematically and finds that the young-worker decline does not generalize across the exposure distribution. The raw series are in Appendix Figure~\ref{fig:occupations_raw}.
+In the high-exposure occupations the youngest workers lose ground relative to older workers, the case-study pattern reported in \citet{brynjolfsson2025}, while the low-exposure occupations show no such gap. Section~\ref{sec:results:agequintile} incorporates all occupations systematically and finds that the young-worker decline does not generalize across the exposure distribution.
 
 \begin{figure}[tp]
   \centering
   \includegraphics[width=\textwidth]{../analysis/output/figures/figure_occupations_by_age_sa.pdf}
   \caption{Employment in selected occupations, by decade age group, seasonally adjusted.}
   \label{fig:occupations_by_age}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Private-sector employment per capita (headcount divided by resident population in the age group), seasonally adjusted (frozen X-11, factors estimated 2021--2024) and indexed to October 2022 = 1. Panels show the kiindeksen.no case-study occupations: software developers (STYRK-08 2512--2514, 2519) and customer service agents (4222), both high-exposure, and electricians (7411) and home health aides (5322), both low-exposure. The vertical dashed line marks November 30, 2022 (ChatGPT release). The raw (unadjusted) series is Appendix Figure~\ref{fig:occupations_raw}.\end{minipage}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Private-sector employment per capita (headcount divided by resident population in the age group), seasonally adjusted (frozen X-11, factors estimated 2021--2024) and indexed to October 2022 = 1. Panels show the kiindeksen.no case-study occupations: software developers (STYRK-08 2512--2514, 2519) and customer service agents (4222), both high-exposure, and electricians (7411) and home health aides (5322), both low-exposure. The vertical dashed line marks November 30, 2022 (ChatGPT release).\end{minipage}
 \end{figure}
 
 \subsection{Employment by Age and Exposure Quintile}\label{sec:results:agequintile}
@@ -512,14 +512,6 @@ AI-related adjustment, the post-COVID correction in technology hiring, and suppl
   \caption{Employment by AI-exposure quintile, all ages 21--60, private sector, raw (unadjusted).}
   \label{fig:byexposure_raw}
   \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Raw (not seasonally adjusted) twin of Figure~\ref{fig:byexposure_sa}; private-sector headcount pooled over ages 21--60, indexed to October 2022 = 1. Occupations are ranked by the Eloundou et al.\ GPT-4 score. The same series, with user-adjustable smoothing, is on the companion dashboard \citep{kiindeksen2026}.\end{minipage}
-\end{figure}
-
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=\textwidth]{../analysis/output/figures/figure1_occupations_by_age.pdf}
-  \caption{Employment in selected occupations, by decade age group, raw (unadjusted).}
-  \label{fig:occupations_raw}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Raw (not seasonally adjusted) twin of Figure~\ref{fig:occupations_by_age}; private-sector employment per capita, indexed to October 2022 = 1, for the kiindeksen.no case-study occupations. The same series, with user-adjustable smoothing, is on the companion dashboard \citep{kiindeksen2026}.\end{minipage}
 \end{figure}
 
 \begin{figure}[htbp]
