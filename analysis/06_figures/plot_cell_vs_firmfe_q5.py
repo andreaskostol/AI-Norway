@@ -62,6 +62,19 @@ def healy_style():
     })
 
 
+def _inject_ref(df, coef_col, se_col):
+    """Add the omitted reference point k=-1 (coef=0, se=0) per age where missing.
+    fepois drops the reference level, so the firm-FE CSV has no k=-1 row; without
+    this the firm-FE and difference lines skip the October-2022 baseline and fail
+    to anchor at 0 alongside the cell-level line."""
+    have = {int(a) for a in df.loc[df["k"] == -1, "age"].to_numpy()}
+    rows = [{"age": a, "k": -1, coef_col: 0.0, se_col: 0.0}
+            for a in {int(x) for x in df["age"].to_numpy()} if a not in have]
+    if rows:
+        df = pd.concat([df, pd.DataFrame(rows)], ignore_index=True)
+    return df
+
+
 def load_q5() -> pd.DataFrame:
     cell = pd.read_csv(CELL_CSV)
     firm = pd.read_csv(FIRM_CSV)
@@ -71,6 +84,8 @@ def load_q5() -> pd.DataFrame:
         columns={"coef": "coef_cell", "se": "se_cell"})
     firm = firm[["age", "k", "coef", "se"]].rename(
         columns={"coef": "coef_firm", "se": "se_firm"})
+    cell = _inject_ref(cell, "coef_cell", "se_cell")   # already anchored; no-op
+    firm = _inject_ref(firm, "coef_firm", "se_firm")   # fepois omits k=-1: anchor it
     m = pd.merge(cell, firm, on=["age", "k"], how="outer")
     m = m.sort_values(["age", "k"]).reset_index(drop=True)
     m["date"] = [BASE_DT + pd.DateOffset(months=int(k)) for k in m["k"]]

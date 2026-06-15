@@ -56,10 +56,27 @@ def healy_style():
     })
 
 
+def add_k_minus1_reference(d):
+    """Inject the omitted reference point k=-1 (coef=0, se=0) for each
+    (age_bin, ai_q) series. fepois drops the reference level, so the CSV has no
+    k=-1 row; without this the event-study lines skip the October-2022 baseline
+    and never anchor at 0 there (cf. _add_zero_reference in
+    analysis-indiv/code/plot_secure_server_results.py)."""
+    have = {(int(a), int(q))
+            for a, q in d.loc[d["k"] == -1, ["age_bin", "ai_q"]].to_numpy()}
+    combos = {(int(a), int(q)) for a, q in d[["age_bin", "ai_q"]].to_numpy()}
+    rows = [{"age_bin": a, "ai_q": q, "k": -1, "coef": 0.0, "se": 0.0}
+            for (a, q) in combos if (a, q) not in have]
+    if rows:
+        d = pd.concat([d, pd.DataFrame(rows)], ignore_index=True)
+    return d
+
+
 def main():
     os.makedirs(FIG_DIR, exist_ok=True)
     healy_style()
     d = pd.read_csv(COEF)
+    d = add_k_minus1_reference(d)
     d["hi"] = d["coef"] + 1.96 * d["se"]
     d["lo"] = d["coef"] - 1.96 * d["se"]
     d["date"] = [BASE_DT + pd.DateOffset(months=int(k)) for k in d["k"]]
