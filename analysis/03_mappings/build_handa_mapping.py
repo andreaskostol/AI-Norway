@@ -27,6 +27,7 @@ from pathlib import Path
 from collections import defaultdict
 
 import xlrd
+import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_DIR = BASE_DIR / 'data' / 'ai_exposure'
@@ -254,24 +255,23 @@ def main():
     print(f"  With partial SOC->ISCO match: {n_partial}")
     print(f"  With <10% task coverage: {n_low_cov}")
 
-    # Assign percentile ranks and quintiles for each measure
+    # Assign equal-frequency quintiles (each occupation counts once) for each
+    # measure. This is identical to the dashboard's rule in
+    # analysis/06_figures/plot_canaries_style_usage.py, so the paper and the
+    # companion dashboard bin occupations the same way: pd.qcut on the
+    # first-occurrence rank gives five equal-sized groups (~70 codes each), and
+    # pctl is the matching rank percentile (0-100). The earlier
+    # strict-less / pctl<=80 rule produced unequal groups and split borderline
+    # codes (e.g. STYRK 7115, automation_share 0.39474, exactly on the Q4/Q5
+    # cut) onto the opposite side from the dashboard.
     for measure in ['overall_exposure', 'automation_share', 'augmentation_share']:
-        vals_sorted = sorted(r[measure] for r in results)
-        n = len(vals_sorted)
-        for r in results:
-            rank = sum(1 for v in vals_sorted if v < r[measure])
-            pctl = 100 * rank / n
-            r[f'pctl_{measure}'] = round(pctl, 2)
-            if pctl <= 20:
-                r[f'q_{measure}'] = 1
-            elif pctl <= 40:
-                r[f'q_{measure}'] = 2
-            elif pctl <= 60:
-                r[f'q_{measure}'] = 3
-            elif pctl <= 80:
-                r[f'q_{measure}'] = 4
-            else:
-                r[f'q_{measure}'] = 5
+        vals = pd.Series([r[measure] for r in results], dtype=float)
+        ranks = vals.rank(method='first')
+        quint = pd.qcut(ranks, 5, labels=[1, 2, 3, 4, 5]).astype(int)
+        pctl = (ranks - 1) / (len(vals) - 1) * 100.0
+        for i, r in enumerate(results):
+            r[f'pctl_{measure}'] = round(float(pctl.iloc[i]), 2)
+            r[f'q_{measure}'] = int(quint.iloc[i])
 
     # Show distributions
     from collections import Counter

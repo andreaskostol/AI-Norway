@@ -46,6 +46,7 @@ Til `H:\Dokumenter\ai_norway_indiv\scripts\`:
 
 Til `F:\1191\<bruker>\ai_norway_indiv\data\` (NB: ny disk — F:\1191, ikke F:\1183):
 - `data/ai_exposure/styrk08_eloundou_beta_mapping.csv`
+- `data/ai_exposure/styrk08_handa_mapping.csv` (kreves av A1 — BCC-appendiks)
 - `data/macro/ssb_population_by_age_quarterly.csv`
 - `analysis-indiv/occupations_7digits_4digits.csv`
 
