@@ -35,7 +35,10 @@ FIG_DIR = os.path.join(BASE_DIR, "analysis", "output", "figures")
 
 CHATGPT = mdates.date2num(datetime(2022, 11, 1))
 AGE_LABELS = {"1": "21-30", "2": "31-40", "3": "41-50", "4": "51-60"}
-AGE_COLORS = {"1": "#0072B2", "2": "#E69F00", "3": "#009E73", "4": "#999999"}
+# Shades of grey, light (youngest) to dark (oldest).
+AGE_COLORS = {"1": "#AAAAAA", "2": "#777777", "3": "#555555", "4": "#1A1A1A"}
+# Dash the middle age group (41-50) to separate it from the other grey lines.
+AGE_LINESTYLES = {"1": "-", "2": "-", "3": "--", "4": "-"}
 # Panel order = the kiindeksen.no yrkescase occupations (see build_figure_data.py).
 PANEL_ORDER = ["Software developers", "Customer service agents",
                "Electricians", "Home health aides"]
@@ -84,7 +87,8 @@ def make(df, adjust, out_name):
         for a in ["1", "2", "3", "4"]:
             s = g[g["age_group"] == a].sort_values("dt")
             if len(s):
-                ax.plot(s["dt"], s["y"], color=AGE_COLORS[a], linewidth=1.6)
+                ax.plot(s["dt"], s["y"], color=AGE_COLORS[a], linewidth=1.6,
+                        linestyle=AGE_LINESTYLES[a])
                 ax.annotate(AGE_LABELS[a], xy=(s["dt"].iloc[-1], s["y"].iloc[-1]),
                             xytext=(5, 0), textcoords="offset points",
                             fontsize=16, color=AGE_COLORS[a], va="center",
@@ -94,7 +98,8 @@ def make(df, adjust, out_name):
         ax.set_title(grp)
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
         ax.xaxis.set_major_locator(mdates.YearLocator())
-        ax.set_ylim(0.7, 1.4)
+        # Let each panel autoscale so the full trend is always visible (home
+        # health aides 21-30 climbs above 1.6 and would otherwise be clipped).
 
     fig.autofmt_xdate(rotation=0, ha="center")
     fig.tight_layout()

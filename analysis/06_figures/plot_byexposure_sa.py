@@ -36,9 +36,10 @@ NORM_DATE = "2022-10-16"                   # October 2022 = 1.0 (paper conventio
 SEAS_FROM, SEAS_TO = "2021-01-16", "2024-12-16"   # SA factor-estimation window
 CHATGPT = mdates.date2num(datetime(2022, 11, 30))  # ChatGPT-launch marker
 
-# kiindeksen / Stanford Canaries quintile palette, Q1..Q5.
-QUINTILE_COLORS = {1: "#8C1515", 2: "#577590", 3: "#E54A2B",
-                   4: "#E6A817", 5: "#401415"}
+# Blue quintile ramp, Q1 (light) .. Q5 (dark) -- matches Figure 3
+# (plot_employment_decade.py) so the two exposure figures share a palette.
+QUINTILE_COLORS = {1: "#C6DBEF", 2: "#9ECAE1", 3: "#4292C6",
+                   4: "#2171B5", 5: "#08306B"}
 
 
 def healy_style():

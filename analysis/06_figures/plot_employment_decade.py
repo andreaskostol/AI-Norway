@@ -89,6 +89,11 @@ def plot_sector(df, sector, out_name, value_col="emp_index"):
     sub = df[df["sector"] == sector].copy()
     sub["dt"] = pd.to_datetime(sub["date"])
 
+    # Shared y-limits from all plotted series so every panel shows the full trend.
+    yv = sub[value_col].dropna()
+    ylo, yhi = float(yv.min()), float(yv.max())          # full data range
+    pad = max(0.02 * (yhi - ylo), 0.01)                  # small visual margin
+
     fig, axes = plt.subplots(2, 2, figsize=(12, 10))
     for ax, age in zip(axes.flatten(), AGE_ORDER):
         a = sub[sub["age_group"].astype(str) == age]
@@ -105,7 +110,7 @@ def plot_sector(df, sector, out_name, value_col="emp_index"):
         ax.set_title(AGE_TITLES[age])
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
         ax.xaxis.set_major_locator(mdates.YearLocator())
-        ax.set_ylim(0.8, 1.1)
+        ax.set_ylim(ylo - pad, yhi + pad)                # include the full trend
 
     handles = [
         Line2D([0], [0], color=QUINTILE_COLORS[1], lw=2.5, label="Q1 (least exposed)"),

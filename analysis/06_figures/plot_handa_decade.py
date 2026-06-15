@@ -92,33 +92,35 @@ def build_series(counts, handa, qcol, adjust=False):
     return s
 
 
-def plot_measure(s, out_name):
+def plot_measure(s, out_name, title):
     fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+    # Shared y-limits across panels so every panel shows the full trend (quintile
+    # lines only; the overall line is no longer drawn).
+    qy = s[s["ai_q"].isin([str(q) for q in range(1, 6)])]["idx"]
+    ylo, yhi = float(qy.min()), float(qy.max())          # full data range
+    pad = max(0.02 * (yhi - ylo), 0.01)                  # small visual margin
     for ax, age in zip(axes.flatten(), AGE_ORDER):
         a = s[s["age_group"] == age]
         for q in range(1, 6):
             ser = a[a["ai_q"] == str(q)].sort_values("dt")
             if len(ser):
                 ax.plot(ser["dt"], ser["idx"], color=QUINTILE_COLORS[q], linewidth=1.6)
-        ov = a[a["ai_q"] == "all"].sort_values("dt")
-        if len(ov):
-            ax.plot(ov["dt"], ov["idx"], color="red", linewidth=2.0)
         ax.axhline(y=1.0, color="#AAAAAA", linestyle="-", linewidth=0.5)
         ax.axvline(x=CHATGPT, color="#555555", linestyle="--", linewidth=0.7, alpha=0.8)
         ax.set_title(AGE_TITLES[age])
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
         ax.xaxis.set_major_locator(mdates.YearLocator())
-        ax.set_ylim(0.8, 1.15)
-    handles = [
+        ax.set_ylim(ylo - pad, yhi + pad)               # include the full trend
+    handles = [                                          # legend without "Overall"
         Line2D([0], [0], color=QUINTILE_COLORS[1], lw=2.5, label="Q1 (least exposed)"),
         Line2D([0], [0], color=QUINTILE_COLORS[3], lw=2.5, label="Q3"),
         Line2D([0], [0], color=QUINTILE_COLORS[5], lw=2.5, label="Q5 (most exposed)"),
-        Line2D([0], [0], color="red", lw=2.5, label="Overall"),
     ]
-    fig.legend(handles=handles, loc="upper center", ncol=4, frameon=False,
-               bbox_to_anchor=(0.5, 1.0), fontsize=20)
+    fig.legend(handles=handles, loc="upper center", ncol=3, frameon=False,
+               bbox_to_anchor=(0.5, 1.01), fontsize=20)
+    fig.suptitle(title, fontsize=24, fontweight="bold", y=1.10)  # figure title
     fig.autofmt_xdate(rotation=0, ha="center")
-    fig.tight_layout(rect=(0, 0, 1, 0.96))
+    fig.tight_layout(rect=(0, 0, 1, 0.95))
     out = os.path.join(FIG_DIR, out_name)
     fig.savefig(out, dpi=200, bbox_inches="tight")
     plt.close(fig)
@@ -137,10 +139,12 @@ def main():
     # Seasonally adjusted twins shown in the body (filenames referenced in the paper).
     sa_names = {"q_automation_share": "figure_age_by_quintile_handa_auto_sa.pdf",
                 "q_augmentation_share": "figure_age_by_quintile_handa_aug_sa.pdf"}
+    titles = {"q_automation_share": "Automation quintiles: Employment",
+              "q_augmentation_share": "Augmentation quintiles: Employment"}
     for qcol, out_name in MEASURES.items():
-        plot_measure(build_series(counts, handa, qcol), out_name)              # raw (appendix)
-        plot_measure(build_series(counts, handa, qcol, adjust=True),           # SA (body)
-                     sa_names[qcol])
+        plot_measure(build_series(counts, handa, qcol), out_name, titles[qcol])      # raw (appendix)
+        plot_measure(build_series(counts, handa, qcol, adjust=True),                 # SA (body)
+                     sa_names[qcol], titles[qcol])
 
 
 if __name__ == "__main__":
