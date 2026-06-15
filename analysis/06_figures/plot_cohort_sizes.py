@@ -1,5 +1,5 @@
 """
-Figure A1: Population in analysis age groups, 2021-2026.
+Figure A2: Resident population by decade age group, 2021-2026.
 
 Shows how the size of each age group changes over time, which can
 affect employment trends independently of any AI effect.
@@ -25,6 +25,9 @@ FIG_DIR = BASE_DIR / 'analysis' / 'output' / 'figures'
 
 CHATGPT_LAUNCH = datetime(2022, 11, 1)
 NORM_DATE = datetime(2022, 10, 1)
+# Plot the paper window only; the file extends back to 2019-Q1, but those
+# quarters exist solely as linear-interpolation anchors and are not shown.
+PLOT_START = datetime(2021, 1, 1)
 
 AGE_GROUPS = {
     '21\u201330': (21, 30),
@@ -72,8 +75,8 @@ def main():
         'axes.facecolor': 'white',
         'font.family': 'serif',
         'font.serif': ['Times New Roman', 'Times', 'DejaVu Serif'],
-        'font.size': 26,
-        'axes.titlesize': 32,
+        'font.size': 28,
+        'axes.titlesize': 34,
         'figure.titlesize': 36,
         'lines.linewidth': 2.0,
     })
@@ -81,16 +84,17 @@ def main():
     data = load_data()
 
     # --- Panel 1: Levels (thousands) ---
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(20, 7))
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
 
     for label in AGE_GROUPS:
         series = data[label]
-        dates, vals = zip(*sorted(series.items()))
+        dates, vals = zip(*[(d, v) for d, v in sorted(series.items())
+                            if d >= PLOT_START])
         vals_k = [v / 1000 for v in vals]
         ax1.plot(dates, vals_k, color=COLORS[label], linewidth=2.0)
         ax1.annotate(label, xy=(dates[-1], vals_k[-1]),
                      xytext=(8, 0), textcoords='offset points',
-                     fontsize=20, color=COLORS[label], va='center',
+                     fontsize=22, color=COLORS[label], va='center',
                      annotation_clip=False)
 
     ax1.axvline(x=CHATGPT_LAUNCH, color='#999999', linestyle=':',
@@ -115,12 +119,13 @@ def main():
         ref = series.get(norm_q)
         if not ref:
             continue
-        dates, vals = zip(*sorted(series.items()))
+        dates, vals = zip(*[(d, v) for d, v in sorted(series.items())
+                            if d >= PLOT_START])
         normed = [v / ref for v in vals]
         ax2.plot(dates, normed, color=COLORS[label], linewidth=2.0)
         ax2.annotate(label, xy=(dates[-1], normed[-1]),
                      xytext=(8, 0), textcoords='offset points',
-                     fontsize=20, color=COLORS[label], va='center',
+                     fontsize=22, color=COLORS[label], va='center',
                      annotation_clip=False)
 
     ax2.axhline(y=1.0, color='#AAAAAA', linestyle='-', linewidth=0.5)
