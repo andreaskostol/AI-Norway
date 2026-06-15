@@ -396,19 +396,21 @@ Table~\ref{tab:aug_auto} reports the two rankings. Panel~A ranks occupations by 
 
 The window studied so far is dominated by assistant-style chatbots, but a qualitative shift occurred in early 2025. Production-grade agentic AI, autonomous systems that plan, call tools, and execute multi-step tasks rather than answering a single prompt, became widely available around the middle of 2025. The length of software tasks a model completes at 50 percent success has roughly doubled every seven months, so by 2026 the frontier handles multi-hour tasks \citep{metr2025}. Under assistant-style use a worker checks each step of a production chain; under agentic use the worker checks only the final output, which can overturn the comparative-advantage logic that limited earlier adoption \citep{demirer2026}. This matters because theoretical exposure predicts actual adoption poorly: \citet{lindenlaub2026} show that an index based on comparative advantage accounts for about 60 percent of the cross-occupation variation in observed adoption, against 14 percent for an exposure-only model, and the two diverge for roughly 30 percent of workers. Limited adoption despite high exposure may be one reason the employment effects are muted through early 2025.
 
-To isolate the employment response specific to this newer generation of tools, we re-normalize every series to early 2025 and repeat the event-study analysis, so that $k=-1$ is the last pre-agentic month and the post-period covers the agentic window; the specification is otherwise identical to the baseline of Section~\ref{sec:regression:age}.\footnote{The re-normalization uses April 2025 as the reference month $k=-1$; results are similar for nearby reference months.} Figure~\ref{fig:agentic_es} reports the re-normalized Poisson event study by decade age group. Among the youngest workers the most-exposed quintile begins to fall below the least-exposed from the second half of 2025, the pattern foreshadowed in Section~\ref{sec:results:auto_aug}; the gap is recent and rests on few post-period months, so we assess its robustness in Section~\ref{sec:regression:robust}.
+To isolate the employment response specific to this newer generation of tools, we re-normalize every series to early 2025 and repeat the difference-in-differences, so that the reference period is the last pre-agentic month and the post-period covers the agentic window; the specification is otherwise identical to the baseline of Section~\ref{sec:regression:age}.\footnote{The re-normalization uses April 2025 as the reference month ($k=-1$); results are similar for nearby reference months.} Table~\ref{tab:agentic_did} reports the resulting agentic post-period employment effects by age group and exposure quintile, and the full re-normalized event study is plotted in Appendix Figure~\ref{fig:agentic_es}. Among the youngest workers the most-exposed quintile begins to fall below the least-exposed from the second half of 2025, the pattern foreshadowed in Section~\ref{sec:results:auto_aug}; the gap is recent and rests on few post-period months, so we assess its robustness in Section~\ref{sec:regression:robust}.
 
-\begin{figure}[tp]
+\begin{table}[tp]
   \centering
-  \includegraphics[width=\textwidth]{../analysis/output/figures/figure_microdata_es_decade_agentic_preseas.pdf}
-  \caption{Poisson event-study coefficients by AI-exposure quintile and decade age group, private sector, re-normalized to the agentic window.}
-  \label{fig:agentic_es}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Coefficients $\gamma_{q,k}$ for $q\in\{2,\dots,5\}$ relative to $q=1$, in log points, from the cell-level Poisson event study of Section~\ref{sec:regression:age} re-normalized so that the reference month $k=-1$ is April 2025; the pre-period series is seasonally adjusted. Private sector, sample 2021m1--2026m2. Shaded bands: 95\% confidence intervals clustered at occupation.\end{minipage}
-\end{figure}
+  \caption{Agentic AI: post-period employment effects by AI-exposure quintile and decade age group, private sector.}
+  \label{tab:agentic_did}
+  \input{../analysis/output/tables/table_agentic_did}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Each entry is the post-April-2025 change in the indicated quintile relative to Q1 (least exposed), by decade age group, from a cell-level Poisson difference-in-differences with occupation and month fixed effects estimated on the re-normalized (agentic) window: the reference period is April 2025 ($k=-1$) and all later months collapse to the post-period. Employment is Poisson; standard errors clustered by occupation in parentheses. Private sector, sample 2021m1--2026m2. $^{*}$, $^{**}$, $^{***}$ denote $p<0.1$, $0.05$, $0.01$.\end{minipage}
+\end{table}
 
 \subsection{Robust Inference}\label{sec:regression:robust}
 
 We close by confronting the non-flat pre-trends directly and asking how robust the post-2022 estimates are to them. The event studies above display the pre-ChatGPT period, and the pre-period coefficients are not flat. In the cell-level event study the most-exposed quintile's pre-period path moves over a peak-to-trough range of 0.11 to 0.18 log points across the four age groups, as large as or larger than the post-2022 movements, and joint tests reject parallel pre-trends in every age group in both the cell and firm-FE specifications. The pre-period also differs across age groups and across occupations: software developers aged 21--30 are already declining before November 2022 (Figure~\ref{fig:occupations_by_age}), while other occupations are flat.
+
+One concrete reason for caution is a post-COVID technology correction. Software, data analysis, and digital services hired aggressively from 2020 through 2022, disproportionately absorbing young workers. The subsequent correction, as pandemic-era demand for digital services normalized, would reproduce the post-2022 decline in selected occupations with no AI involvement; the 21--30 software developer line in Section~\ref{sec:results} starts to slope down before ChatGPT's release, consistent with this channel. A confound of this kind is exactly what a non-flat pre-trend reflects, which motivates the sensitivity analysis that follows.
 
 These pre-trends bear on interpretation. A difference-in-differences design, including the post-versus-pre estimates in Tables~\ref{tab:did_cell} and~\ref{tab:did_firmfe}, attributes the post-2022 change to the ChatGPT release under the assumption that the most- and least-exposed quintiles would otherwise have moved in parallel. That assumption is debatable here: the quintiles were already on diverging paths before November 2022, and the divergence differs by age group. A collapsed difference-in-differences can therefore read a continuation of a pre-existing trend as an AI effect, and the direction of the resulting bias need not be the same across age groups.
 
@@ -450,18 +452,21 @@ The gap between descriptive and formal estimates need not imply that AI plays no
 
 \subsection{Alternative Explanations}\label{sec:discussion:alternatives}
 
-Two non-AI channels could produce an age-by-exposure gradient, and the aggregate data cannot fully separate them.
-
-\paragraph{Post-COVID technology correction.} Software, data analysis, and digital services hired aggressively from 2020 through 2022, disproportionately absorbing young workers. The subsequent correction, as pandemic-era demand for digital services normalized, would reproduce the post-2022 decline in selected occupations with no AI involvement. The 21--30 software developer line in Section~\ref{sec:results} starts to slope down before ChatGPT's release, consistent with this channel.
+Beyond the post-COVID technology correction discussed in Section~\ref{sec:regression:robust}, a second non-AI channel could produce an age-by-exposure gradient, and the aggregate data cannot fully separate it from the AI channel.
 
 \paragraph{Supply-side reallocation.} Workers entering the labor market after 2022 may be avoiding occupations they perceive as exposed to AI. This would generate the same young-worker pattern in selected occupations through worker choice rather than employer substitution.
 
-The exposure patterns in Figure~\ref{fig:age_by_quintile} are relative: any negative separation at 41--50 is in the most-exposed quintile relative to the least-exposed, while the overall age-group line is roughly flat. The aggregate data alone cannot distinguish occupational reallocation from outright exit. The channels above and the AI channel can all be operating at once.
+The exposure patterns in Figure~\ref{fig:age_by_quintile} are relative: any negative separation at 41--50 is in the most-exposed quintile relative to the least-exposed, while the overall age-group line is roughly flat. The aggregate data alone cannot distinguish occupational reallocation from outright exit. These channels and the AI channel can all be operating at once.
 
 
 \subsection{Implications}\label{sec:discussion:implications}
 
 The public-sector null and the limited wage response are consistent with Norway's two-tier bargaining system \citep{bhuller2022} channelling any AI-related adjustment toward the quantity margin in the private sector. Downward-rigid wage floors limit short-run wage adjustment; the locally negotiated drift channel could deliver a wage response over a longer horizon. The systematic exposure-quintile evidence does not show the young-worker displacement reported for the US and Sweden, and the field has not converged on a standard ``AI exposure'' definition, so the results should be read with that measurement uncertainty in mind.
+
+
+\subsection{The Companion Dashboard}\label{sec:discussion:dashboard}
+
+The analysis in this paper is paired with a public companion dashboard, the AI labor market index at kiindeksen.no \citep{kiindeksen2026}, and the two are complementary. The paper fixes a sample window, a set of specifications, and a snapshot of conclusions; the dashboard publishes the underlying monthly series, indexed to October 2022 by occupation, age group, sector, and AI-exposure quintile, and refreshes them as each new month of A-ordningen data arrives. It is useful for three reasons. First, it keeps the evidence current: the patterns we flag as emerging, in particular the agentic-period divergence that rests on the final months of data, can be monitored as they either consolidate or fade, without waiting for a new draft. Second, it makes the descriptive evidence transparent and inspectable, letting a reader toggle seasonal adjustment and smoothing, switch exposure measure, and drill into individual occupations rather than the quintile aggregates shown here, so the figures in Section~\ref{sec:results} can be reproduced and probed directly. Third, it serves as a neutral public reference point for an active and unsettled debate, where high-frequency, population-level numbers for a leading AI-adopting economy are otherwise hard to come by. The dashboard does not replace the regression analysis, which supplies the identification discipline and inference the figures cannot, but it extends the descriptive half of the paper into a living series.
 
 
 % =============================================================================
@@ -596,6 +601,14 @@ AI-related adjustment, the post-COVID correction in technology hiring, and suppl
   \caption{Employment by AI-exposure quintile and decade age group, public sector, seasonally adjusted.}
   \label{fig:emp_public_sa}
   \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Seasonally adjusted counterpart of Figure~\ref{fig:emp_public}; public-sector headcount, frozen X-11 adjustment (factors estimated 2021--2024), indexed to October 2022 = 1. Q1 (lightest) = least exposed; Q5 (darkest) = most exposed.\end{minipage}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=\textwidth]{../analysis/output/figures/figure_microdata_es_decade_agentic_preseas.pdf}
+  \caption{Agentic AI, Poisson Estimates for Employment Changes.}
+  \label{fig:agentic_es}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Coefficients $\gamma_{q,k}$ for $q\in\{2,\dots,5\}$ relative to $q=1$, in log points, from the cell-level Poisson event study of Section~\ref{sec:regression:age} re-normalized so that the reference month $k=-1$ is April 2025; the pre-period series is seasonally adjusted. The collapsed post-period effects are reported in Table~\ref{tab:agentic_did}. Private sector, sample 2021m1--2026m2. Shaded bands: 95\% confidence intervals clustered at occupation.\end{minipage}
 \end{figure}
 
 
