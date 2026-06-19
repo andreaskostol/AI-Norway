@@ -54,7 +54,12 @@ def style():
         "axes.spines.right": False, "axes.grid": True, "grid.color": "#E2E2E2",
         "grid.linewidth": 0.6, "font.family": "serif",
         "font.serif": ["Times New Roman", "Times", "DejaVu Serif"],
-        "font.size": 12, "axes.titlesize": 13, "lines.linewidth": 1.5,
+        # These grids are drawn 15 in wide but embedded at \textwidth, so the
+        # on-page scale is ~0.4; sizes are set large so they stay legible after
+        # shrinking (consistent with the Appendix A population figure).
+        "font.size": 24, "axes.titlesize": 26, "axes.labelsize": 24,
+        "xtick.labelsize": 20, "ytick.labelsize": 20, "legend.fontsize": 20,
+        "figure.titlesize": 22, "lines.linewidth": 2.4,
     })
 
 
@@ -98,7 +103,7 @@ def fig2_eloundou(emp):
         ax.set_title(BCC_AGE[age])
     for ax in axes[:, 0]:
         ax.set_ylabel("Employment (Oct 2022 = 1)")
-    axes.flat[2].legend(fontsize=8, ncol=2, loc="upper left")
+    axes.flat[2].legend(fontsize=18, ncol=2, loc="upper left")
     fig.suptitle("BCC Fig 2 — employment by Eloundou exposure quintile, full-time private", y=1.01)
     _save(fig, "fig_bcc_2_eloundou.pdf")
 
@@ -112,7 +117,7 @@ def fig3_handa(emp):
         quintile_panel(ax, emp[(emp["measure"] == meas) & (emp["bcc_age"] == 1)], "count")
         ax.set_title(title)
     axes[0].set_ylabel("Employment (Oct 2022 = 1)")
-    axes[-1].legend(fontsize=8, ncol=2, loc="best")
+    axes[-1].legend(fontsize=18, ncol=2, loc="best")
     fig.suptitle("BCC Fig 3 — employment by Anthropic/Handa index, age 22-25, full-time private", y=1.02)
     _save(fig, "fig_bcc_3_handa.pdf")
 
@@ -126,9 +131,10 @@ def fig5_comp(wage, valcol, label, suffix, ymax=1.6):
     # (~1.5) visible while clipping the anomalous 2023-07 Q1 35-40 mean spike
     # (index ~2.6). sharey=True propagates to all panels.
     axes.flat[0].set_ylim(0.8, ymax)
+    short = label.split(" (")[0]                  # drop the winsorization parenthetical
     for ax in axes[:, 0]:
-        ax.set_ylabel(f"{label} (Oct 2022 = 1)")
-    axes.flat[2].legend(fontsize=8, ncol=2, loc="upper left")
+        ax.set_ylabel(f"{short} (Oct 2022 = 1)")  # full detail stays in the suptitle
+    axes.flat[2].legend(fontsize=18, ncol=2, loc="upper left")
     fig.suptitle(f"BCC Fig 5 — {label} (nominal) by exposure quintile, full-time private", y=1.01)
     _save(fig, f"fig_bcc_5_comp{suffix}.pdf")
 
@@ -160,7 +166,7 @@ def fig4_event_study(coef):
         ax.set_title(BCC_AGE[age])
     for ax in axes[:, 0]:
         ax.set_ylabel("γ_{q,k}  (log points, vs Q1)")
-    axes.flat[2].legend(fontsize=8, ncol=2, loc="best")
+    axes.flat[2].legend(fontsize=18, ncol=2, loc="best")
     fig.suptitle("BCC Fig 4 — Poisson firm-FE event study (count_ft, in_bcc_full), vs Q1, k=−1 = Oct 2022", y=1.01)
     _save(fig, "fig_bcc_4_es.pdf")
 
@@ -179,7 +185,7 @@ def fig1_occ(occ):
         fmt_axis(ax)
         ax.set_title(f"{lab} (normalized)")
     axes[0].set_ylabel("Headcount (Oct 2022 = 1)")
-    axes[-1].legend(title="Age", fontsize=9, loc="best")
+    axes[-1].legend(title="Age", fontsize=18, loc="best")
     fig.suptitle("BCC Fig 1 — occupation case studies by age, full-time private", y=1.02)
     _save(fig, "fig_bcc_1_occ.pdf")
 
