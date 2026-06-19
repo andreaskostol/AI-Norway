@@ -25,6 +25,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
+from matplotlib.ticker import MaxNLocator
 import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -82,6 +83,11 @@ def fmt_axis(ax):
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
 
 
+def ydense(ax, n=9):
+    """More y-axis tick labels (nice round values) on the index/coef panels."""
+    ax.yaxis.set_major_locator(MaxNLocator(nbins=n))
+
+
 def quintile_panel(ax, sub, valcol):
     """sub has columns group, k, <valcol>; draw 5 quintile lines + Overall."""
     sub = sub.rename(columns={valcol: "val"})
@@ -100,6 +106,7 @@ def fig2_eloundou(emp):
     fig, axes = plt.subplots(2, 3, figsize=(15, 8), sharex=True, sharey=True)
     for ax, age in zip(axes.flat, AGE_ORDER):
         quintile_panel(ax, e[e["bcc_age"] == age], "count")
+        ydense(ax)
         ax.set_title(BCC_AGE[age])
     for ax in axes[:, 0]:
         ax.set_ylabel("Employment (Oct 2022 = 1)")
@@ -115,6 +122,7 @@ def fig3_handa(emp):
     fig, axes = plt.subplots(1, 3, figsize=(16, 4.6), sharey=True)
     for ax, (meas, title) in zip(axes, panels):
         quintile_panel(ax, emp[(emp["measure"] == meas) & (emp["bcc_age"] == 1)], "count")
+        ydense(ax)
         ax.set_title(title)
     axes[0].set_ylabel("Employment (Oct 2022 = 1)")
     axes[-1].legend(fontsize=18, ncol=2, loc="best")
@@ -163,6 +171,7 @@ def fig4_event_study(coef):
         ax.axvline(K0, color="#555555", ls="--", lw=0.8)
         ax.xaxis.set_major_locator(mdates.YearLocator())
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
+        ydense(ax)
         ax.set_title(BCC_AGE[age])
     for ax in axes[:, 0]:
         ax.set_ylabel("γ_{q,k}  (log points, vs Q1)")
@@ -183,6 +192,7 @@ def fig1_occ(occ):
             if g is not None:
                 ax.plot(g["date"], g["idx"], color=ACOLOR[age], label=BCC_AGE[age])
         fmt_axis(ax)
+        ydense(ax)
         ax.set_title(f"{lab} (normalized)")
     axes[0].set_ylabel("Headcount (Oct 2022 = 1)")
     axes[-1].legend(title="Age", fontsize=18, loc="best")
