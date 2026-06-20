@@ -601,16 +601,16 @@ Because any AI-related adjustment is recent and occupation-specific, the questio
 \setcounter{table}{0}
 \renewcommand{\thetable}{B\arabic{table}}
 
-We replicate the design of \citet{brynjolfsson2025} on Norwegian register data, on the exact early-career definition used in the cross-country literature. The sample is full-time private-sector workers in foretak with at least 10 workers in each age group every month and at least 100 worker-months per firm-quintile-age cell, the balanced-panel construction used in their paper. Workers are placed in six age bins (22--25, 26--30, 31--34, 35--40, 41--49, 50--55) that match their 22--25 early-career definition, employment is indexed to October 2022, and occupations are ranked by the Eloundou GPT-4 quintile. This sample is smaller and more concentrated in larger firms than the main analysis, so its raw series move more than the population series in the main text.
+We replicate the design of \citet{brynjolfsson2025} on Norwegian register data, on the exact early-career definition used in the cross-country literature. Workers are placed in six age bins (22--25, 26--30, 31--34, 35--40, 41--49, 50--55) that match their 22--25 early-career definition, employment is indexed to October 2022, and occupations are ranked by the Eloundou GPT-4 quintile. The event study (Figure~\ref{fig:bcc_es}) uses the balanced-panel construction of their paper: full-time private-sector workers in foretak with at least 10 workers in each age group every month and at least 100 worker-months per firm-quintile-age cell, a sample smaller and more concentrated in larger firms than the main analysis. The descriptive figures (Figures~\ref{fig:bcc_occ}, \ref{fig:bcc_eloundou}, \ref{fig:bcc_handa} and~\ref{fig:bcc_comp}) instead use all full-time private-sector workers in these age bins, without the firm-balancing restriction; being narrower than the population series in the main text, their raw series move more.
 
-Figure~\ref{fig:bcc_es} reports the Poisson event study. For workers aged 22--25 the post-October-2022 average gap is small, about 3 log points, but it masks a clear time profile: the most-exposed and least-exposed quintiles track each other through early 2025, and from spring 2025 the most-exposed quintile falls below, with the gap widening to about 35 log points by February 2026. This widening rests on the final ten months of data, the confidence intervals are wide, and the joint pre-trend test rejects parallel trends, so it is an emerging pattern rather than an identified effect. The recent gap exceeds the 15 log points \citet{brynjolfsson2025} report for the United States, but the US gap opened earlier and over a far larger sample. The descriptive series behind the replication appear in Figures~\ref{fig:bcc_occ}--\ref{fig:bcc_comp}: selected occupations, the Eloundou exposure quintiles, the Handa usage split, and cash earnings.
+Figure~\ref{fig:bcc_es} reports the Poisson event study. For workers aged 22--25 the post-October-2022 average gap is small, about 3 log points, but it masks a clear time profile: the most-exposed and least-exposed quintiles track each other through early 2025, and from spring 2025 the most-exposed quintile falls below, with the gap widening to about 35 log points by February 2026. This widening rests on the final ten months of data, the confidence intervals are wide, and the joint pre-trend test rejects parallel trends, so it is an emerging pattern rather than an identified effect. The recent gap exceeds the 15 log points \citet{brynjolfsson2025} report for the United States, but the US gap opened earlier and over a far larger sample. The descriptive series behind the replication appear in Figures~\ref{fig:bcc_occ}, \ref{fig:bcc_eloundou}, \ref{fig:bcc_handa} and~\ref{fig:bcc_comp}: selected occupations, the Eloundou exposure quintiles, the Handa usage split, and cash earnings.
 
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=\textwidth]{../analysis-indiv/output/bcc_appendix/fig_bcc_1_occ.pdf}
   \caption{Employment in selected occupations by age group, Brynjolfsson et al.\ replication.}
   \label{fig:bcc_occ}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Employment indexed to October 2022 = 1, by age group, for software developers (ISCO-08 2512) and customer service (4222). Full-time private-sector workers in the balanced panel.\end{minipage}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Employment indexed to October 2022 = 1, by age group, for software developers (ISCO-08 2512) and customer service (4222). Full-time private-sector workers (descriptive sample, without the event study's firm-balancing restriction).\end{minipage}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -618,7 +618,7 @@ Figure~\ref{fig:bcc_es} reports the Poisson event study. For workers aged 22--25
   \includegraphics[width=\textwidth]{../analysis-indiv/output/bcc_appendix/fig_bcc_2_eloundou.pdf}
   \caption{Employment by Eloundou exposure quintile and age group, Brynjolfsson et al.\ replication.}
   \label{fig:bcc_eloundou}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Employment indexed to October 2022 = 1, by Eloundou GPT-4 quintile within each age group, with a pooled overall line. Full-time private-sector workers in the balanced panel.\end{minipage}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Employment indexed to October 2022 = 1, by Eloundou GPT-4 quintile within each age group, with a pooled overall line. Full-time private-sector workers (descriptive sample, without the event study's firm-balancing restriction).\end{minipage}
 \end{figure}
 
 \begin{figure}[htbp]
@@ -652,7 +652,7 @@ We subject the 22--25 event study to the same honest difference-in-differences s
   \includegraphics[width=\textwidth]{../analysis-indiv/output/bcc_appendix/fig_bcc_5_comp.pdf}
   \caption{Mean cash earnings by Eloundou exposure quintile and age group, Brynjolfsson et al.\ replication.}
   \label{fig:bcc_comp}
-  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Mean monthly cash earnings indexed to October 2022 = 1, by Eloundou GPT-4 quintile within each age group, with a pooled overall line. Full-time private-sector workers in the balanced panel.\end{minipage}
+  \begin{minipage}{\textwidth}\footnotesize\textit{Notes:} Mean monthly cash earnings indexed to October 2022 = 1, by Eloundou GPT-4 quintile within each age group, with a pooled overall line. Full-time private-sector workers (descriptive sample, without the event study's firm-balancing restriction).\end{minipage}
 \end{figure}
 
 \end{document}
