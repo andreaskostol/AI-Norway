@@ -109,7 +109,7 @@ def fig2_eloundou(emp):
         ydense(ax)
         ax.set_title(BCC_AGE[age])
     fig.supylabel("Employment", fontsize=24)          # one common y title
-    axes.flat[2].legend(fontsize=18, ncol=2, loc="upper left")
+    axes.flat[2].legend(fontsize=15, ncol=3, loc="lower center", framealpha=1.0)
     _save(fig, "fig_bcc_2_eloundou.pdf")
 
 
