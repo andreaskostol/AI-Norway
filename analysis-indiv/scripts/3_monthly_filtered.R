@@ -193,14 +193,23 @@ for (i in seq_len(nrow(mg))) {
     # --- Triple-diff binary age cut ---
     d[, young := as.integer(a_year >= AGE_MIN & a_year <= YOUNG_MAX)]
 
-    # --- New hire: employment relationship started this calendar month ---
-    # arb_start is a daily Stata %d date; haven reads it as Date. A new hire
-    # is a spell whose start month equals the status month (same definition
-    # as the cell-level ny_jobb from microdata.no ARBLONN_ARB_START).
+    # --- New hire: started in the ~month window ending on the status date ---
+    # Match microdata.no's cell-level ny_jobb EXACTLY: it flags ARBLONN_ARB_START
+    # in the window (16th of the previous month, 16th of the status month] -- the
+    # ~30 days ending on the 16th, NOT the calendar month (06_overtid_nyjobb_*.mdata
+    # uses `startdato > prev16 & startdato <= status16`). The calendar-month rule
+    # used here previously missed hires starting after the 16th and double-shifted
+    # the window, so the firm-FE new-hire outcome disagreed with the cell track and
+    # the paper. arb_start is a daily date; haven reads it as Date.
     stopifnot(inherits(d$arb_start, "Date"))
     d[, arb_start := as.IDate(arb_start)]
+    yy <- as.integer(y); mm <- as.integer(m)
+    status16 <- as.IDate(sprintf("%04d-%02d-16", yy, mm))           # the 16th, this month
+    prev16   <- as.IDate(sprintf("%04d-%02d-16",                    # the 16th, previous month
+                                 if (mm == 1L) yy - 1L else yy,
+                                 if (mm == 1L) 12L else mm - 1L))
     d[, ny_jobb := as.integer(!is.na(arb_start) &
-                              year(arb_start) == y & month(arb_start) == m)]
+                              arb_start > prev16 & arb_start <= status16)]
     n_missing_start <- d[is.na(arb_start), .N]
 
     # --- Keep only what 4_aggregate_cells.R needs ---
