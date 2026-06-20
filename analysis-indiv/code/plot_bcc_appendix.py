@@ -108,10 +108,8 @@ def fig2_eloundou(emp):
         quintile_panel(ax, e[e["bcc_age"] == age], "count")
         ydense(ax)
         ax.set_title(BCC_AGE[age])
-    for ax in axes[:, 0]:
-        ax.set_ylabel("Employment (Oct 2022 = 1)")
+    fig.supylabel("Employment", fontsize=24)          # one common y title
     axes.flat[2].legend(fontsize=18, ncol=2, loc="upper left")
-    fig.suptitle("BCC Fig 2 — employment by Eloundou exposure quintile, full-time private", y=1.01)
     _save(fig, "fig_bcc_2_eloundou.pdf")
 
 
@@ -124,9 +122,8 @@ def fig3_handa(emp):
         quintile_panel(ax, emp[(emp["measure"] == meas) & (emp["bcc_age"] == 1)], "count")
         ydense(ax)
         ax.set_title(title)
-    axes[0].set_ylabel("Employment (Oct 2022 = 1)")
+    fig.supylabel("Employment", fontsize=24)          # one common y title
     axes[-1].legend(fontsize=18, ncol=2, loc="best")
-    fig.suptitle("BCC Fig 3 — employment by Anthropic/Handa index, age 22-25, full-time private", y=1.02)
     _save(fig, "fig_bcc_3_handa.pdf")
 
 
@@ -140,10 +137,8 @@ def fig5_comp(wage, valcol, label, suffix, ymax=1.6):
     # (index ~2.6). sharey=True propagates to all panels.
     axes.flat[0].set_ylim(0.8, ymax)
     short = label.split(" (")[0]                  # drop the winsorization parenthetical
-    for ax in axes[:, 0]:
-        ax.set_ylabel(f"{short} (Oct 2022 = 1)")  # full detail stays in the suptitle
+    fig.supylabel(short, fontsize=24)             # one common y title; detail in caption
     axes.flat[2].legend(fontsize=18, ncol=2, loc="upper left")
-    fig.suptitle(f"BCC Fig 5 — {label} (nominal) by exposure quintile, full-time private", y=1.01)
     _save(fig, f"fig_bcc_5_comp{suffix}.pdf")
 
 
@@ -173,10 +168,8 @@ def fig4_event_study(coef):
         ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
         ydense(ax)
         ax.set_title(BCC_AGE[age])
-    for ax in axes[:, 0]:
-        ax.set_ylabel("γ_{q,k}  (log points, vs Q1)")
+    fig.supylabel("γ_{q,k}  (log points, vs Q1)", fontsize=24)   # one common y title
     axes.flat[2].legend(fontsize=18, ncol=2, loc="best")
-    fig.suptitle("BCC Fig 4 — Poisson firm-FE event study (count_ft, in_bcc_full), vs Q1, k=−1 = Oct 2022", y=1.01)
     _save(fig, "fig_bcc_4_es.pdf")
 
 
@@ -194,9 +187,8 @@ def fig1_occ(occ):
         fmt_axis(ax)
         ydense(ax)
         ax.set_title(f"{lab} (normalized)")
-    axes[0].set_ylabel("Headcount (Oct 2022 = 1)")
+    fig.supylabel("Headcount", fontsize=24)           # one common y title
     axes[-1].legend(title="Age", fontsize=18, loc="best")
-    fig.suptitle("BCC Fig 1 — occupation case studies by age, full-time private", y=1.02)
     _save(fig, "fig_bcc_1_occ.pdf")
 
 
