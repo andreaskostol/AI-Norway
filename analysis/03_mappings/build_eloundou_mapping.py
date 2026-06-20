@@ -3,8 +3,10 @@ Build Eloundou et al. (2024) GPT-4 beta exposure mapping to STYRK-08.
 
 Chain: O*NET-SOC 2018 -> SOC 2010 -> ISCO-08 -> STYRK-08
 
-Since STYRK-08 = ISCO-08 at the 4-digit level (SSB Notater 17/2011),
-the last step is a direct identity mapping.
+The last step matches overlapping 4-digit ISCO-08 codes to the official
+STYRK-08 list by code. STYRK-08 is based on ISCO-08 but includes Norwegian
+adaptations, so this is a filtered code match rather than a claim that the
+two classifications are exactly the same.
 
 Quality flags per STYRK-08 code:
   - n_soc_matched: number of SOC codes contributing to this STYRK code
@@ -43,6 +45,13 @@ OUTPUT_FILE = DATA_DIR / 'styrk08_eloundou_beta_mapping.csv'
 MANUAL_STYRK_MAP = {
     '2223': '2221',  # Sykepleiere -> Nursing professionals
     '2224': '2221',  # Vernepleiere -> Nursing professionals
+}
+
+# Manual corrections for Norwegian STYRK adaptations where the same 4-digit
+# BLS/ISCO code denotes a different occupation than the Norwegian STYRK code.
+MANUAL_STYRK_SOC_MAP = {
+    '2267': ['29-1122'],  # Ergoterapeuter -> Occupational Therapists
+    '2269': ['29-1011'],  # Kiropraktorer mv. -> Chiropractors
 }
 
 
@@ -132,7 +141,7 @@ def build_mapping():
     print(f"\n  SOC 2018 -> 2010: {len(soc2010_scores)} SOC 2010 codes, "
           f"{unmapped_18} SOC 2018 codes unmapped")
 
-    # Step 2: SOC 2010 -> ISCO-08 (= STYRK-08)
+    # Step 2: SOC 2010 -> ISCO-08 (then filtered to valid STYRK-08 codes)
     isco_contributions: dict[str, list[dict]] = defaultdict(list)
     unmapped_10 = 0
     for soc10, betas in soc2010_scores.items():
@@ -167,6 +176,33 @@ def build_mapping():
             'max_partial_fanout': max((c['fan_out'] for c in contribs if c['partial']), default=0),
             'manual_map': '',
         })
+
+    # Replace misleading same-code STYRK/ISCO matches with direct SOC sources.
+    manual_targets = set(MANUAL_STYRK_SOC_MAP)
+    results = [r for r in results if r['styrk08'] not in manual_targets]
+    for styrk_target, soc_sources in MANUAL_STYRK_SOC_MAP.items():
+        if styrk_target not in styrk_codes:
+            continue
+        betas = []
+        used_socs = []
+        for soc in soc_sources:
+            vals = soc2010_scores.get(soc)
+            if not vals:
+                continue
+            betas.append(sum(vals) / len(vals))
+            used_socs.append(soc)
+        if not betas:
+            print(f"  Manual SOC map skipped: {styrk_target} has no source scores")
+            continue
+        results.append({
+            'styrk08': styrk_target,
+            'eloundou_beta': round(sum(betas) / len(betas), 6),
+            'n_soc_matched': len(used_socs),
+            'has_partial_match': 0,
+            'max_partial_fanout': 0,
+            'manual_map': 'SOC:' + ';'.join(used_socs),
+        })
+        print(f"  Manual SOC map: {styrk_target} <- {';'.join(used_socs)}")
 
     # Apply manual mappings
     mapped_codes = {r['styrk08'] for r in results}

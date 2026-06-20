@@ -46,6 +46,13 @@ MANUAL_STYRK_MAP = {
     '2224': '2221',  # Vernepleiere -> Nursing professionals
 }
 
+# Manual corrections for Norwegian STYRK adaptations where the same 4-digit
+# BLS/ISCO code denotes a different occupation than the Norwegian STYRK code.
+MANUAL_STYRK_SOC_MAP = {
+    '2267': ['29-1122'],  # Ergoterapeuter -> Occupational Therapists
+    '2269': ['29-1011'],  # Kiropraktorer mv. -> Chiropractors
+}
+
 OUTPUT_FILE = DATA_DIR / 'styrk08_handa_mapping.csv'
 
 
@@ -183,7 +190,7 @@ def main():
             'n_tasks_total': len(all_tasks),
         }
 
-    # Step 2: SOC 2010 -> ISCO-08 (= STYRK-08)
+    # Step 2: SOC 2010 -> ISCO-08 (then filtered to valid STYRK-08 codes)
     print("\nLoading crosswalks...")
     soc10_to_isco, partial_flags = load_soc2010_to_isco08()
     styrk_codes = load_styrk08_codes()
@@ -226,6 +233,41 @@ def main():
             'max_partial_fanout': max((c['fan_out'] for c in contribs if c['partial']), default=0),
             'manual_map': '',
         })
+
+    # Replace misleading same-code STYRK/ISCO matches with direct SOC sources.
+    manual_targets = set(MANUAL_STYRK_SOC_MAP)
+    results = [r for r in results if r['styrk08'] not in manual_targets]
+    for styrk_target, soc_sources in MANUAL_STYRK_SOC_MAP.items():
+        if styrk_target not in styrk_codes:
+            continue
+        contribs = []
+        for soc in soc_sources:
+            scores = soc10_scores.get(soc)
+            if not scores:
+                continue
+            contrib = dict(scores)
+            contrib['soc'] = soc
+            contribs.append(contrib)
+        if not contribs:
+            print(f"  Manual SOC map skipped: {styrk_target} has no source scores")
+            continue
+        n = len(contribs)
+        results.append({
+            'styrk08': styrk_target,
+            'overall_exposure': sum(c['overall_exposure'] for c in contribs) / n,
+            'automation_share': sum(c['automation_share'] for c in contribs) / n,
+            'augmentation_share': sum(c['augmentation_share'] for c in contribs) / n,
+            'n_soc_matched': n,
+            'n_tasks_matched': sum(c['n_tasks_matched'] for c in contribs),
+            'n_tasks_total': sum(c['n_tasks_total'] for c in contribs),
+            'task_coverage': (sum(c['n_tasks_matched'] for c in contribs) /
+                              max(1, sum(c['n_tasks_total'] for c in contribs))),
+            'has_partial_match': 0,
+            'max_partial_fanout': 0,
+            'manual_map': 'SOC:' + ';'.join(c['soc'] for c in contribs),
+        })
+        print(f"  Manual SOC map: {styrk_target} <- "
+              f"{';'.join(c['soc'] for c in contribs)}")
 
     # Apply manual mappings for unmapped Norwegian STYRK codes
     mapped_codes = {r['styrk08'] for r in results}

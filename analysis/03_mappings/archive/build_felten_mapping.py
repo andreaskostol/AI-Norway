@@ -20,7 +20,7 @@ from collections import defaultdict
 import openpyxl
 import xlrd
 
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parents[3]
 DATA_DIR = BASE_DIR / 'data' / 'ai_exposure'
 FELTEN_DIR = DATA_DIR / 'felten'
 
@@ -36,6 +36,13 @@ OUTPUT_FILE = DATA_DIR / 'styrk08_felten_mapping.csv'
 MANUAL_STYRK_MAP = {
     '2223': '2221',  # Sykepleiere -> Nursing professionals
     '2224': '2221',  # Vernepleiere -> Nursing professionals
+}
+
+# Manual corrections for Norwegian STYRK adaptations where the same 4-digit
+# BLS/ISCO code denotes a different occupation than the Norwegian STYRK code.
+MANUAL_STYRK_SOC_MAP = {
+    '2267': ['29-1122'],  # Ergoterapeuter -> Occupational Therapists
+    '2269': ['29-1011'],  # Kiropraktorer mv. -> Chiropractors
 }
 
 
@@ -189,6 +196,32 @@ def main():
 
         r['manual_map'] = ''
         results.append(r)
+
+    # Replace misleading same-code STYRK/ISCO matches with direct SOC sources.
+    manual_targets = set(MANUAL_STYRK_SOC_MAP)
+    results = [r for r in results if r['styrk08'] not in manual_targets]
+    for styrk_target, soc_sources in MANUAL_STYRK_SOC_MAP.items():
+        if styrk_target not in styrk_codes:
+            continue
+        used_socs = [soc for soc in soc_sources if soc in aioe]
+        if not used_socs:
+            print(f"  Manual SOC map skipped: {styrk_target} has no source scores")
+            continue
+        results.append({
+            'styrk08': styrk_target,
+            'aioe': sum(aioe[soc] for soc in used_socs) / len(used_socs),
+            'aioe_lm': (sum(lm_s for soc in used_socs
+                            if (lm_s := aioe_lm.get(soc)) is not None) /
+                        max(1, sum(1 for soc in used_socs if soc in aioe_lm))),
+            'aioe_ig': (sum(ig_s for soc in used_socs
+                            if (ig_s := aioe_ig.get(soc)) is not None) /
+                        max(1, sum(1 for soc in used_socs if soc in aioe_ig))),
+            'n_soc_matched': len(used_socs),
+            'has_partial_match': 0,
+            'max_partial_fanout': 0,
+            'manual_map': 'SOC:' + ';'.join(used_socs),
+        })
+        print(f"  Manual SOC map: {styrk_target} <- {';'.join(used_socs)}")
 
     # Manual mappings
     mapped_codes = {r['styrk08'] for r in results}

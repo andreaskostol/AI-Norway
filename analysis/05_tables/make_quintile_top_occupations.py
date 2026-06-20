@@ -64,8 +64,7 @@ def load_employment():
 
 
 def load_titles():
-    # STYRK-08 = ISCO-08 at the four-digit level, so we label occupations with
-    # the official English ISCO-08 titles from the BLS SOC-ISCO crosswalk.
+    # Use official English ISCO-08 titles for overlapping STYRK/ISCO codes.
     isco = pd.read_excel(ISCO_FILE, dtype=str, header=6)
     isco = isco[["ISCO-08 Code", "ISCO-08 Title EN"]].dropna()
     isco = isco.rename(columns={"ISCO-08 Code": "yrke4", "ISCO-08 Title EN": "title"})
@@ -83,9 +82,10 @@ def main():
     d = emp.merge(exp, on="yrke4", how="inner")
     titles = load_titles()
     d = d.merge(titles, on="yrke4", how="left")
-    # STYRK-08 (Norway) 2223 = Sykepleiere has no 4-digit ISCO-08 analog (the 222
-    # nursing group deviates from ISCO); use the SSB STYRK-08 English title.
+    # STYRK-08 nursing-specific codes have no 4-digit ISCO-08 analog; use
+    # direct English labels.
     d.loc[d["yrke4"] == "2223", "title"] = "Nurses"
+    d.loc[d["yrke4"] == "2224", "title"] = "Social educators"
     d["title"] = d["title"].fillna("")
 
     qtot = d.groupby("quintile")["employment"].sum().to_dict()
