@@ -6,16 +6,17 @@
 # violation of parallel trends would have to be to overturn the estimated
 # exposure gradient, using the pre-period violations to set the scale.
 #
-# It reuses the estimation recipe of honest_did_full_preseas.R (preseasonal
-# offset, cell-level Poisson with occupation and month fixed effects, full
-# cluster vcov), but: (i) compares Q5 to Q1 (the paper's contrast) rather than
+# It uses the same cell-level Poisson event study as Section 4.2 (occupation and
+# month fixed effects, NO seasonal offset, cluster-robust vcov), but: (i) compares
+# Q5 to Q1 (the paper's contrast) rather than
 # Q5 to Q3; (ii) uses the relative-magnitude bound as the MAIN restriction, on
 # the grid Mbar in {0.5, 1, 1.5, 2}; (iii) adds the conventional ("original") CI,
 # which corresponds to exact parallel trends (Mbar = 0); and (iv) computes the
 # BREAKDOWN value -- the largest Mbar for which the robust CI still excludes zero.
 #
 # Reference month = October 2022 (k = -1), the same baseline as the rest of the
-# paper. Target = the average post-ChatGPT effect over 2023q1-2025q1.
+# paper. Target = the average post-ChatGPT effect over the FULL post period
+# (Nov 2022-Feb 2026), matching the POST dummy of microdata_did_cell.R (Sec 4.2).
 #
 # Output: analysis/output/tables/table_honest_did.tex (tabular fragment)
 #         analysis/output/coefficients/coef_honest_did_quintile.csv (numbers)
@@ -69,19 +70,10 @@ balance <- function(sub) {
 }
 d[, count := value]                                   # name the outcome 'count'
 
-# ---- preseasonal factors, then the event study (Q5 vs Q1) ------------------
-sub_seas <- balance(d[date >= SEAS_FROM & date <= SEAS_TO])   # pre-2025 window for SA
-fit_pre <- fepois(count ~ i(ai_q_f, t, ref = "1") | yrke4 + t + q_m_key,  # seasonal FE
-                  data = sub_seas, warn = FALSE, notes = FALSE)
-seas_fe <- fixef(fit_pre)[["q_m_key"]]                # quintile x month seasonal effects
-seas_dt <- data.table(q_m_key = names(seas_fe), seas = as.numeric(seas_fe))
-seas_dt[, q := sub("_.*", "", q_m_key)]               # quintile part of the key
-seas_dt[, seas := seas - mean(seas), by = q]          # demean within quintile (frozen factors)
-
+# ---- the event study (Q5 vs Q1), no seasonal offset (matches Section 4.2) ---
 sub <- balance(d)                                     # full-window balanced panel
-sub <- merge(sub, seas_dt[, .(q_m_key, seas)], by = "q_m_key", all.x = TRUE, sort = FALSE)
 fit <- fepois(count ~ i(k, ai_q_f, ref = -1, ref2 = "1") | yrke4 + k,  # Q5 vs Q1 by k
-              data = sub, offset = ~seas, cluster = ~yrke4, warn = FALSE, notes = FALSE)
+              data = sub, cluster = ~yrke4, warn = FALSE, notes = FALSE)
 
 kvec <- sort(unique(sub$k))                           # event-time points present
 nm <- sprintf("k::%d:ai_q_f::5", kvec)                # Q5-vs-Q1 coefficient names
@@ -112,11 +104,9 @@ pre_q  <- quarters[as.integer(sub("q.*", "", quarters)) * 4 +   # quarters stric
                    2022 * 4 + 4]                       # before 2022q4
 n_pre  <- length(pre_q)                                # number of pre-period quarters
 n_post <- length(quarters) - n_pre                     # number of post-period quarters
-target_q <- c("2023q1","2023q2","2023q3","2023q4","2024q1","2024q2",
-              "2024q3","2024q4","2025q1")              # the "average post-ChatGPT" window
-post_quarters <- quarters[(n_pre + 1):length(quarters)]      # post-period quarter labels
-l_vec <- as.numeric(post_quarters %in% target_q)       # 1 on target quarters, else 0
-l_vec <- l_vec / sum(l_vec)                            # average (weights sum to 1)
+l_vec  <- rep(1 / n_post, n_post)                      # target = average over ALL post quarters
+                                                       # (full Nov 2022-Feb 2026 window, matching
+                                                       # the POST dummy of microdata_did_cell.R)
 cat(sprintf("Pre quarters: %d  Post quarters: %d  Target quarters: %d\n",
             n_pre, n_post, sum(l_vec > 0)))
 
@@ -131,8 +121,8 @@ rm_at <- function(mb) {                                # RM CI at one or more Mb
     betahat = betahat, sigma = sigma,
     numPrePeriods = n_pre, numPostPeriods = n_post,
     bound = "deviation from parallel trends",          # relative-magnitudes restriction
-    Mbarvec = mb, l_vec = l_vec, gridPoints = 200L,
-    grid.lb = -1, grid.ub = 1)
+    Mbarvec = mb, l_vec = l_vec, gridPoints = 300L,
+    grid.lb = -2, grid.ub = 2)
 }
 rm_main <- as.data.table(rm_at(MBARVEC))               # CIs on the reported grid
 for (i in seq_len(nrow(rm_main)))                      # echo each grid point

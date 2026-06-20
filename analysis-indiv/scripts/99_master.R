@@ -162,6 +162,7 @@ OUTPUTS <- list(
     # A2 writes cells_bcc.rds to $DATA (not $OUTPUT) -> nothing to invalidate here.
     "A3_bcc_event_study.R" = c("coefficients/coef_bcc_event_study.csv",
                                "coefficients/coef_bcc_event_study_summary.csv",
+                               "coefficients/coef_bcc_event_study_q5vcov.csv",
                                "diagnostics/fixest_diag_A3_bcc_event_study.csv")
 )
 

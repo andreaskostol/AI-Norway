@@ -11,6 +11,9 @@
 # Inputs:  $DATA/cells_bcc.rds (from A2_bcc_panel.R)
 # Outputs: $output/coefficients/coef_bcc_event_study.csv
 #          $output/coefficients/coef_bcc_event_study_summary.csv
+#          $output/coefficients/coef_bcc_event_study_q5vcov.csv
+#              (full clustered vcov among the Q5 event-study coefficients, per
+#               bin -- feeds the exact honest-DiD sensitivity in Appendix B)
 #          $output/diagnostics/fixest_diag_A3_bcc_event_study.csv
 # =============================================================================
 
@@ -68,7 +71,7 @@ rm(d); gc()
 d_agg[, kshift := ym - YM_EVENT_ZERO]
 d_agg <- d_agg[kshift >= KMIN & kshift <= KMAX]
 
-coef_rows <- list(); summary_rows <- list(); diag_rows <- list()
+coef_rows <- list(); summary_rows <- list(); diag_rows <- list(); vcov_rows <- list()
 for (a in 1:N_BCC_BINS) {
     d_a <- d_agg[age_bin == a]
     n_a <- nrow(d_a); n_frtk_a <- uniqueN(d_a$frtk_id)
@@ -95,6 +98,20 @@ for (a in 1:N_BCC_BINS) {
     coef_rows[[length(coef_rows) + 1L]] <-
         cr[, .(sample, age_bin, k, ai_q, coef, se, n_obs, n_frtk)]
 
+    # Full clustered vcov among the Q5 (ai_q = 5) event-study coefficients, in
+    # long form. Exporting the whole matrix lets the local honest-DiD use the
+    # exact sigma (Appendix B) instead of a diagonal approximation built from the
+    # standard errors alone. The diagonal of this block equals the reported se^2.
+    q5 <- cr[ai_q == 5]
+    if (nrow(q5) > 1) {
+        Vq5 <- vcov(fit)[q5$name, q5$name, drop = FALSE]
+        gi <- CJ(i = seq_len(nrow(q5)), j = seq_len(nrow(q5)))
+        vcov_rows[[length(vcov_rows) + 1L]] <- data.table(
+            sample = "in_bcc_full", age_bin = a,
+            k_i = q5$k[gi$i], k_j = q5$k[gi$j],
+            cov = Vq5[cbind(gi$i, gi$j)])
+    }
+
     q5_pre <- cr[ai_q == 5 & k < -1]; q5_post <- cr[ai_q == 5 & k > -1]
     summary_rows[[length(summary_rows) + 1L]] <- data.table(
         sample = "in_bcc_full", age_bin = a,
@@ -111,6 +128,9 @@ if (nrow(out_summary) > 0) setorder(out_summary, age_bin)
 
 atomic_fwrite(out_coefs,   file.path(COEFS, "coef_bcc_event_study.csv"))
 atomic_fwrite(out_summary, file.path(COEFS, "coef_bcc_event_study_summary.csv"))
+if (length(vcov_rows) > 0)
+    atomic_fwrite(rbindlist(vcov_rows),
+                  file.path(COEFS, "coef_bcc_event_study_q5vcov.csv"))
 atomic_fwrite(rbindlist(diag_rows),
               file.path(DIAG, "fixest_diag_A3_bcc_event_study.csv"))
 cat(sprintf("\nSaved %d rows to coef_bcc_event_study.csv\n", nrow(out_coefs)))
