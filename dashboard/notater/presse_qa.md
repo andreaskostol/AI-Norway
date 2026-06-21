@@ -2,22 +2,30 @@
 
 Ferdigstilt etter to kritiske gjennomganger: faktasjekk mot release
 2026-06 (alle tall verifisert eller korrigert) og journalist-/
-kommunikasjonsgjennomgang. Utkastet ligger i presse_qa_utkast.md.
+kommunikasjonsgjennomgang.
 
 ## Tre budskap å lande
-1. Ingen jobbkrise: samlet sysselsetting vokser, også i KI-eksponerte yrker.
-2. Men døren inn til de mest KI-eksponerte yrkene er blitt trangere for
+
+1. Ingen jobbkrise: samlet sysselsetting er stabil, også i KI-eksponerte yrker.
+2. Men døren inn til de mest KI-eksponerte yrkene kan se ut til å ha blitt trangere for
    unge, og det har tiltatt det siste året.
 3. Vi bygger en månedlig monitor, så Norge kommer til å vite det raskt
-   hvis dette utvikler seg.
+   hvordan dette utvikler seg.
+
+Vi har nå fått en type teknologi som potensielt har enorme konsekvenser for samfunn og arbeidsliv.
+Løpende måling og forskning gir kunnskap om disse konsekvensene og behovet for omstilling.
+Unge arbeidstakere er antakelig der vi vil se konsekvensene først, derfor følger vi ekstra nøye med på dem.
+I tillegg er starten på arbeidslivet en kritisk fase som kan ha mye å si for et langt arbeidsliv.
 
 ## Innøvd énsetning (ja/nei-fellen: "Tar KI jobbene fra unge?")
+
 "Nei, KI tar ikke jobbene fra unge i Norge i dag. Men døren inn til de
-mest KI-utsatte yrkene er blitt trangere, og det følger vi nå måned for
+mest KI-utsatte yrkene kan se ut til å ha blitt trangere, og det følger vi nå måned for
 måned."
 
 ## Faste broer (tilbake til budskapene)
-- "Det store bildet er fortsatt at sysselsettingen vokser ..." (mot 1)
+
+- "Det store bildet er fortsatt at sysselsettingen er stabil..." (mot 1)
 - "Det vi kan si sikkert, er at færre unge slipper inn i de mest utsatte
   yrkene ..." (mot 2)
 - "Det er nettopp derfor vi bygger monitoren: neste oppdatering viser om
@@ -28,8 +36,9 @@ måned."
 ## A. Hovedfunn
 
 **1. Hva har dere funnet?**
-Sysselsettingen samlet holder seg godt, også i yrkene som er mest
-eksponert for KI. Men blant de yngste, 21-30 år, har sysselsettingen i de
+Sysselsettingen samlet holder seg godt, både på tvers av yrker med oppgaver
+som i større eller mindre grad kan utføres av kunstig intelligens, og på tvers
+av aldersgrupper. Men blant de yngste, 21-30 år, har sysselsettingen i de
 mest eksponerte yrkene falt med rundt 6 prosent siden ChatGPT kom, både
 sammenliknet med unge i andre yrker og med eldre i de samme yrkene. Og
 fallet har tiltatt det siste året.
@@ -41,9 +50,9 @@ eksponerte yrkene. Tolvmånedersfallet har doblet seg det siste året, fra
 2 til vel 4 prosent.
 
 **3. Er det KI som er årsaken?**
-Det kan vi ikke slå fast, og vi er nøye med å si det. Renteoppgangen,
-normaliseringen etter pandemien og vanlige ansiennitetsmekanismer kan
-alle bidra. Det vi ser, er at mønsteret er konsentrert i de mest
+Det kan vi ikke slå fast, og vi er nøye med å si det. Renteoppgangen og
+normaliseringen etter oppgangen etter pandemien kan
+bidra. Det vi ser, er at mønsteret er konsentrert i de mest
 KI-eksponerte yrkene og forsterket seg gjennom 2025, i en periode der
 rentene var på vei ned. Det er påfallende, men påfallende er ikke bevis.
 
@@ -75,10 +84,10 @@ og kontormedarbeiderne (4110) som eksempel, ikke 3313/4311 hver for seg.*
 ## B. Skepsis
 
 **6. Kan det ikke bare være renter og konjunktur?**
-Delvis, særlig for 2023-24, og det sier vi tydelig. Men innad i privat
-sektor, der alle møter samme rente, er fallet konsentrert i de mest
+Delvis. Men innad i privat sektor, der alle møter samme rente, er fallet konsentrert i de mest
 eksponerte yrkene, mens lite eksponerte yrker med samme rentefølsomhet
-vokser. Og forsterkningen kom i andre halvdel av 2025, mens rentene falt.
+vokser. Dette skjedde gjennom hele perioden med renteøkninger og høy vekst i 2022-23
+og forsterkningen kom i andre halvdel av 2025, mens rentene falt.
 
 **6b. I USA pekes det på hjemmekontor som forklaring på at unge sliter.
 Hva med det?**
@@ -93,15 +102,13 @@ yrkenes KI-eksponering så tett, eller hvorfor det tiltok i 2025.
 skiller dere KI fra den trenden?**
 Fordi vendepunktet er på feil sted for den forklaringen:
 kontormedarbeiderne vokste faktisk med nesten 9 prosent fra tidlig 2021
-og helt frem til høsten 2022, og snudde til fall akkurat da. En tjueårig
-trend lager ikke en knekk i akkurat det kvartalet.
+og helt frem til høsten 2022, og snudde til fall akkurat da. En tiårig
+trend kan knekke videre nedover, i så fall er spørsmålet hvorfor akkurat nå.
 
 **8. Danmark og Finland finner ingenting. Hvorfor skal vi tro på dere?**
 Danskene finner samme beskrivende mønster for unge som oss og
 amerikanerne. Det de avviser, er at bedriftenes egen chatbot-bruk
-forklarer det. Finland er reelt avvikende, og der ser demografi ut til å
-forklare mye. Vi sjekket samme felle hos oss: de unges kull i Norge er
-stabilt, så fallet er reelt, ikke demografi.
+forklarer det. Finland er reelt avvikende.
 
 **9. Dere vet ikke hvem som faktisk bruker KI?**
 Riktig, vi måler yrkenes eksponering, ikke den enkeltes bruk. Og som
@@ -127,8 +134,8 @@ Avkreftelse: at fallet flater ut når konjunkturene normaliseres, eller
 at det slutter å følge eksponeringsgraden. Bekreftelse: at det
 fortsetter å forsterke seg i takt med at KI-verktøyene blir bedre, på
 tvers av land, og mest der bruken er automatiserende. Det er nettopp det
-monitoren tester, måned for måned. Vi har forhåndsdefinert hva som skal
-til, og publiserer svaret uansett utfall.
+monitoren tester, måned for måned. Her vil også bedre data på faktisk bruk
+være veldig nyttig.
 
 **12. Hvis det ikke er noen krise, hvorfor skal vi skrive om dette?**
 Fordi inngangen til arbeidslivet er der strukturelle skift alltid synes
@@ -138,19 +145,22 @@ har inntruffet. Og alt avhenger av tempoet: går omstillingen gradvis,
 absorberer arbeidsmarkedet den; går den fort, trengs varselet tidlig.
 Venter man til det synes i ledighetskøen, er man tre år for sent ute.
 Vi tilbyr det motsatte av krisealarm: et løpende, etterprøvbart tall.
+(Kanarifugler ble historisk brukt i kullgruver for å varsle om dødelige, luktfrie
+gasser som karbonmonoksid (kullos) og metan. Fordi fuglene har en svært
+rask pustefrekvens, ble de påvirket av gassene og sluttet å synge eller
+falt av pinnen lenge før gruvearbeiderne merket fare.)
 
 **12b. Økonomene er jo dypt uenige om KI. Hvem har rett?**
 Det er nettopp poenget. En stor undersøkelse blant økonomer,
 KI-utviklere og profesjonelle prognosemakere i år viste at anslagene
-spriker enormt, og at nesten ingenting av uenigheten handler om hva
+spriker, og at nesten ingenting av uenigheten handler om hva
 teknologien kan: den handler om hvordan økonomien tilpasser seg. Det
-spørsmålet kan ikke avgjøres med flere prognoser, bare med løpende
-måling. Det er derfor KI-indeksen finnes.
+spørsmålet besvares best med løpende måling og analyser. Det er derfor KI-indeksen finnes.
 
 ## C. Konkret
 
 **13. Bør unge droppe IT-studier?**
-Nei. Utviklere i 30-årene og over 50 vokser solid, 10-14 prosent. KI ser
+Nei. Utviklere i 30-årene og over 50 vokser solid, 10-14 prosent. KI kan se
 ut til å gjøre erfarne utviklere mer verdifulle. Det som er endret, er
 terskelen inn: juniorrollen der man lærte yrket gjennom enkle oppgaver,
 er under press. Og her er det et paradoks fra forskningen: et stort
@@ -158,7 +168,7 @@ felteksperiment viste at KI-assistenter løfter produktiviteten mest hos
 de minst erfarne. KI kan altså hjelpe nybegynnere som er i jobb,
 samtidig som den reduserer behovet for å ansette dem. Kompetansen
 trengs fortsatt, men veien inn går trolig mer gjennom praksis, egne
-prosjekter og å lære KI-verktøyene godt.
+prosjekter og å lære KI-verktøyene godt. Og ved å være fleksibel og tilpasningsdyktig.
 
 **14. Hvilke yrker er mest utsatt, og hvilke tryggest?**
 Størst fall: kontor- og regnskapsmedarbeidere i alle aldre, og unge i
@@ -201,7 +211,7 @@ men det er slike brudd monitoren er bygget for å fange.
 Det måler ikke dagens tall: vi ser celler, ikke personer. Vi ser at
 veksten blant unge kommer i mindre eksponerte yrker, særlig omsorg, som
 er forenlig med omstilling heller enn utstøting. Individforløpene er
-neste steg, med data på SSBs sikre server.
+neste steg.
 
 **20. Hva sier du til en 23-åring med fersk regnskapsutdanning?**
 At kompetansen ikke er bortkastet, men at den må kombineres: de som
@@ -237,8 +247,9 @@ i Science; Anthropics offentlige bruksdata bruker vi kun som ett av
 flere supplerende mål, og funnene står seg uten dem.
 
 **25. Er dette fagfellevurdert? Hvorfor gå ut nå?**
+Dashboardet er deskriptivt og for alle. 
 Designet er det samme som i tre publiserte landstudier, tallgrunnlaget
-er etterprøvbart, og metodepapiret kommer i høst sammen med dataene. Vi
+er etterprøvbart, og metodepapiret kommer. Vi
 mener et tall offentligheten kan ettergå løpende er bedre enn taushet i
 to års reviewkø, og derfor publiserer vi metoden og avvikene like åpent
 som funnene. Og vær klar over at empirien internasjonalt spriker:
@@ -266,8 +277,11 @@ ingen enkeltbedrift lenger for å trene neste generasjon, men samfunnet
 trenger den fortsatt. Da er førstegangsrekruttering, lærlingordninger
 og praksisplasser i KI-utsatte yrker et naturlig tema for
 trepartssamarbeidet, og unge ledige fra disse yrkene bør raskt få
-tilbud om omstilling mot vekstyrkene. Det store bildet er fortsatt
-vekst; poenget er å bruke forspranget tallene gir.
+tilbud om omstilling mot vekstyrkene. Det gjelder også generelt: Avhengig
+av hvor raskt teknologien utvikler seg og tas i bruk, kan behovet for omstilling
+bli stort og gå raskt, da kommer NAV og arbeidsmarkedspolitikken generelt
+til å bli kjempeviktig. Det store bildet er fortsatt vekst; forhåpentlig kan vi bruke
+kunnskap fra tall som dette til å være bedre forberedt.
 
 **28. Bruker dere selv KI? Frykter du for din egen jobb?**
 Ja, daglig. Den har gjort oss raskere, og prosjektet hadde ikke vært
@@ -283,7 +297,9 @@ Privat sektor, alder 21-60, snitt desember 2025-februar 2026.
 Eksponering: Eloundou et al. (2024), kvintiler av yrkesfordelingen.
 
 ### Q5 (mest eksponert)
+
 Samlet: 315 447 sysselsatte. Størst:
+
 - Selgere (engros) (3322): 37 640
 - Kontormedarbeidere (4110): 32 796
 - Systemanalytikere/-arkitekter (2511): 22 009
@@ -292,13 +308,16 @@ Samlet: 315 447 sysselsatte. Størst:
 - Regnskapsmedarbeidere (4311): 13 663
 
 Størst per aldersgruppe:
+
 - 21-30: Kontormedarbeidere (7 744), Selgere (engros) (5 916), Andre programvare- og applikasjonsutviklere (4 525)
 - 31-40: Selgere (engros) (10 403), Kontormedarbeidere (8 408), Systemanalytikere/-arkitekter (7 735)
 - 41-50: Selgere (engros) (10 093), Kontormedarbeidere (7 705), Systemanalytikere/-arkitekter (5 996)
 - 51-60: Selgere (engros) (11 228), Kontormedarbeidere (8 939), Regnskapsførere (4 949)
 
 ### Q4
+
 Samlet: 311 870 sysselsatte. Størst:
+
 - Varehandelssjefer (1420): 29 866
 - Administrerende direktører (1120): 28 038
 - Sivilingeniører (bygg og anlegg) (2142): 18 958
@@ -307,13 +326,16 @@ Samlet: 311 870 sysselsatte. Størst:
 - Organisasjonsrådgivere mv. (2421): 11 684
 
 Størst per aldersgruppe:
+
 - 21-30: Varehandelssjefer (4 173), Hotellresepsjonister (3 365), Organisasjonsrådgivere mv. (3 080)
 - 31-40: Varehandelssjefer (8 759), Sivilingeniører (bygg og anlegg) (6 696), Administrerende direktører (5 205)
 - 41-50: Administrerende direktører (9 154), Varehandelssjefer (8 556), Sivilingeniører (bygg og anlegg) (5 029)
 - 51-60: Administrerende direktører (12 520), Varehandelssjefer (8 378), Salgs- og markedssjefer (4 728)
 
 ### Q3
+
 Samlet: 337 926 sysselsatte. Størst:
+
 - Butikkmedarbeidere (5223): 115 333
 - Lagermedarbeidere og material-forvaltere (4321): 29 423
 - Lastebil- og trailersjåfører (8332): 20 750
@@ -322,13 +344,16 @@ Samlet: 337 926 sysselsatte. Størst:
 - Ingeniører innen petroleum  bergverk og me... (3117): 12 315
 
 Størst per aldersgruppe:
+
 - 21-30: Butikkmedarbeidere (55 928), Lagermedarbeidere og material-forvaltere (8 643), Vektere (4 955)
 - 31-40: Butikkmedarbeidere (24 949), Lagermedarbeidere og material-forvaltere (8 204), Andre ingeniører (5 864)
 - 41-50: Butikkmedarbeidere (17 706), Lagermedarbeidere og material-forvaltere (6 632), Lastebil- og trailersjåfører (5 597)
 - 51-60: Butikkmedarbeidere (16 751), Lagermedarbeidere og material-forvaltere (5 943), Lastebil- og trailersjåfører (5 892)
 
 ### Q2
+
 Samlet: 256 998 sysselsatte. Størst:
+
 - Tømrere og snekkere (7115): 35 166
 - Barnehage- og skolefritidsassistenter mv. (5311): 30 944
 - Servitører (5131): 21 123
@@ -337,13 +362,16 @@ Samlet: 256 998 sysselsatte. Størst:
 - Førskole-/barnehagelærere (2342): 14 333
 
 Størst per aldersgruppe:
+
 - 21-30: Servitører (11 158), Barnehage- og skolefritidsassistenter mv. (10 879), Tømrere og snekkere (8 625)
 - 31-40: Tømrere og snekkere (9 691), Barnehage- og skolefritidsassistenter mv. (7 992), Kokker (5 280)
 - 41-50: Tømrere og snekkere (9 412), Barnehage- og skolefritidsassistenter mv. (6 758), Kokker (4 043)
 - 51-60: Tømrere og snekkere (7 438), Barnehage- og skolefritidsassistenter mv. (5 314), Anleggsmaskin- og industrimekanikere (3 554)
 
 ### Q1 (minst eksponert)
+
 Samlet: 313 890 sysselsatte. Størst:
+
 - Renholdere i bedrifter (9112): 40 279
 - Elektrikere (7411): 26 053
 - Operatører innen næringsmiddelproduksjon (8160): 23 301
@@ -352,6 +380,7 @@ Samlet: 313 890 sysselsatte. Størst:
 - Kjøkkenassistenter (9412): 12 564
 
 Størst per aldersgruppe:
+
 - 21-30: Elektrikere (10 679), Renholdere i bedrifter (6 609), Bilmekanikere (5 918)
 - 31-40: Renholdere i bedrifter (10 381), Elektrikere (6 832), Operatører innen næringsmiddelproduksjon (6 735)
 - 41-50: Renholdere i bedrifter (13 538), Operatører innen næringsmiddelproduksjon (6 194), Elektrikere (4 764)
