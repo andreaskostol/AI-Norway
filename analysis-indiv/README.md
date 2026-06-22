@@ -94,7 +94,7 @@ To force a clean rebuild, delete `$OUTPUT\_md_fragments\` and rerun prep.
 - **Outcomes:** employment, new hires (`count_new` from `arb_start`), log
   monthly wage; alt outcomes (position pct, base hours, overtime) in script 8.
 - **Per-age DiD (7b):** firm × quintile + firm × month FE, cluster foretak,
-  per decade age group (21-30, 31-40, 41-50, 51-60). Q3 reference.
+  per decade age group (21-30, 31-40, 41-50, 51-60). Q1 reference.
 - **Cell-spec comparison (7d):** the `microdata_did_cell.R` specification
   (yrke4 + month FE, cluster yrke4) on the SAME secure data — variants
   `restricted` (= 7b's sample) and `unrestricted_priv` (bridge to
@@ -112,7 +112,7 @@ To force a clean rebuild, delete `$OUTPUT\_md_fragments\` and rerun prep.
 - **Comparative-advantage replication (6e, 7c)**, compute-heavy, in the
   `heavy` group.
 - **Reference month:** October 2022 (event time k = −1); quintile reference
-  Q3 (median exposure) everywhere.
+  Q1 (least exposed) everywhere, matching the BCC convention.
 - **Sample (main run):** private-sector foretak (sekt = 3), all FT/PT
   (`in_headline_priv`). Flags `in_ft`, `in_ft_priv`, `in_bcc_full` are defined
   in `cells_flagged.rds` for robustness reruns.

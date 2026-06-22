@@ -31,6 +31,7 @@ from collections import defaultdict
 
 import openpyxl
 import xlrd
+import pandas as pd
 
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 DATA_DIR = BASE_DIR / 'data' / 'ai_exposure'
@@ -229,23 +230,22 @@ def build_mapping():
     n_partial = sum(1 for r in results if r['has_partial_match'])
     print(f"  With partial SOC->ISCO match: {n_partial}")
 
-    # Assign percentile ranks and quintiles
-    betas_sorted = sorted(r['eloundou_beta'] for r in results)
-    n = len(betas_sorted)
-    for r in results:
-        rank = sum(1 for b in betas_sorted if b < r['eloundou_beta'])
-        pctl = 100 * rank / n
-        r['pctl_rank'] = round(pctl, 2)
-        if pctl <= 20:
-            r['quintile'] = 1
-        elif pctl <= 40:
-            r['quintile'] = 2
-        elif pctl <= 60:
-            r['quintile'] = 3
-        elif pctl <= 80:
-            r['quintile'] = 4
-        else:
-            r['quintile'] = 5
+    # Assign equal-frequency quintiles (each occupation counts once), identical
+    # to the rule in build_handa_mapping.py / build_job_exposure_mapping.py and
+    # the companion dashboard (analysis/06_figures/plot_canaries_style_usage.py):
+    # pd.qcut on the first-occurrence rank gives five equal-sized groups, and
+    # pctl is the matching rank percentile (0-100). Codes are sorted by styrk08
+    # first so ties break deterministically, matching the dashboard. The earlier
+    # strict-less / pctl<=80 rule produced unequal groups and split borderline
+    # codes onto the opposite side from the dashboard.
+    results.sort(key=lambda r: r['styrk08'])
+    betas = pd.Series([r['eloundou_beta'] for r in results], dtype=float)
+    ranks = betas.rank(method='first')
+    quint = pd.qcut(ranks, 5, labels=[1, 2, 3, 4, 5]).astype(int)
+    pctl = (ranks - 1) / (len(betas) - 1) * 100.0
+    for i, r in enumerate(results):
+        r['pctl_rank'] = round(float(pctl.iloc[i]), 2)
+        r['quintile'] = int(quint.iloc[i])
 
     # Show quintile distribution
     from collections import Counter

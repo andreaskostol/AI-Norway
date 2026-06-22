@@ -11,7 +11,7 @@
 # bottom "difference vs Q1" row holding the double differences Q2..Q5 - Q1 with
 # heteroskedasticity-robust (HC1) standard errors (Q1 is the base, left blank).
 #
-# Input:  microdata-output/09_occ_agedecade_sektor_2021m01_2026m02_parsed.csv
+# Input:  microdata-output/09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv
 #         data/ai_exposure/styrk08_eloundou_beta_mapping.csv
 # Output: analysis/output/tables/table_quintile_yagan.tex  (tabular fragment only)
 #
@@ -25,7 +25,7 @@ base_dir <- "."                                      # run this script from the 
 source(file.path(base_dir, "analysis", "06_figures", "seasonal.R"))  # seasonal_adjust()
 
 parsed   <- file.path(base_dir, "microdata-output",  # parsed cell aggregates
-                      "09_occ_agedecade_sektor_2021m01_2026m02_parsed.csv")
+                      "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv")
 exp_file <- file.path(base_dir, "data", "ai_exposure",   # occupation -> quintile
                       "styrk08_eloundou_beta_mapping.csv")
 out_file <- file.path(base_dir, "analysis", "output", "tables",

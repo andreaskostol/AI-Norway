@@ -1,8 +1,9 @@
 """
 build_figure_data.py
 
-Stage-1 aggregation for the decade-age / sector figures. Reads the large
-parsed cell file once and writes compact tidy CSVs to
+Stage-1 aggregation for the decade-age / sector figures. Reads the parsed
+cell files (kpos extract for count/wage/hires/stillingspst, non-kpos extract
+for overtid_timer/timelonn) once and writes compact tidy CSVs to
 analysis/output/figure_data/. The plot scripts read only these and do no
 heavy aggregation themselves (see CLAUDE convention: estimation/prep ->
 artifacts -> presentation).
@@ -30,8 +31,17 @@ import os
 import pandas as pd
 
 BASE_DIR = os.path.join(os.path.dirname(__file__), "..", "..")
-PARSED = os.path.join(BASE_DIR, "microdata-output",
-                      "09_occ_agedecade_sektor_2021m01_2026m02_parsed.csv")
+# Primary source: the kpos (positive-cash-earnings) extract, matching the
+# paper's paid-employment count definition and the R event studies
+# (microdata_es_decade.R / microdata_did_cell.R both read the kpos file).
+PARSED_KPOS = os.path.join(BASE_DIR, "microdata-output",
+                           "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv")
+# Fallback for the two outcome variables absent from the kpos extract
+# (overtid_timer, timelonn): read from the non-kpos extract until they are
+# re-extracted in kpos form.
+PARSED_NONKPOS = os.path.join(BASE_DIR, "microdata-output",
+                              "09_occ_agedecade_sektor_2021m01_2026m02_parsed.csv")
+NONKPOS_ONLY_VARS = ["overtid_timer", "timelonn"]
 EXP_FILE = os.path.join(BASE_DIR, "data", "ai_exposure",
                         "styrk08_eloundou_beta_mapping.csv")
 OUT_DIR = os.path.join(BASE_DIR, "analysis", "output", "figure_data")
@@ -81,7 +91,12 @@ def add_index(df, value_col, group_cols, out_col):
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
 
-    df = pd.read_csv(PARSED, dtype={"yrke4": str, "alder_gr": str})
+    # count / kontantlonn / stillingspst / ny_jobb come from the kpos extract;
+    # overtid_timer and timelonn (not in kpos) come from the non-kpos extract.
+    df = pd.read_csv(PARSED_KPOS, dtype={"yrke4": str, "alder_gr": str})
+    df_extra = pd.read_csv(PARSED_NONKPOS, dtype={"yrke4": str, "alder_gr": str})
+    df_extra = df_extra[df_extra["variable"].isin(NONKPOS_ONLY_VARS)]
+    df = pd.concat([df, df_extra], ignore_index=True)
     df = df[df["alder_gr"].isin(AGE_KEEP)]
 
     exp = pd.read_csv(EXP_FILE, dtype={"styrk08": str})
