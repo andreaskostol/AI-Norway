@@ -1,0 +1,29 @@
+\begin{table}[htbp]
+\centering
+\caption{Cross-Country Comparison of Early Labor Market Patterns under Generative AI}
+\label{tab:crosscountry}
+\footnotesize
+\newcolumntype{Y}{>{\hsize=1.8\hsize\raggedright\arraybackslash}X}
+\newcolumntype{Z}{>{\hsize=0.65\hsize\raggedright\arraybackslash}X}
+\begin{tabularx}{\textwidth}{@{}Z Z Z Z Y@{}}
+\toprule
+Country & Study & Method & Direction (22--25) & Notes \\
+\midrule
+\multicolumn{5}{@{}l}{\textit{Panel A: Descriptive time series}} \\[2pt]
+US & Brynjolfsson et al.\ (2025) & Descriptive & Decline & SW developers 22--25: $-20\%$; top-2 quintiles: $-6\%$ \\[4pt]
+Sweden & Lodefalk et al.\ (2026) & Descriptive & Decline & $\approx -44\%$ raw in top quartile (Fig.\ A23) \\[4pt]
+Denmark & Humlum \& Vestergaard (2026) & Descriptive & Decline & Aggregate early-career decline mirrors US (App.\ D.2) \\[4pt]
+Finland & Kauhanen \& Rouvinen (2026) & Descriptive & Null & Trends reflect demographics, not AI \\[4pt]
+UK & Teeselink (2025) & Descriptive & Decline & High-wage, junior positions \\[4pt]
+Norway & This paper & Descriptive & Decline & Software developers 21--30: $-18\%$ (Fig.\ 1), top quintile decline \\[6pt]
+\multicolumn{5}{@{}l}{\textit{Panel B: Formal estimation}} \\[2pt]
+US & Brynjolfsson et al.\ (2025) & Poisson event study, firm FE & Decline & $-15$ log pts, most vs.\ least exposed quintile \\[4pt]
+Sweden & Lodefalk et al.\ (2026) & DiD, employer FE & Decline & $-5.5\%$ within-employer by 2025H1; posting decline driven by rate hikes, not AI \\[4pt]
+Denmark & Humlum \& Vestergaard (2026) & DiD, worker/workplace FE & Null & Aggregate decline not driven by firm AI adoption; rules out $>2\%$ earnings effect \\[4pt]
+UK & Teeselink (2025) & DiD & Decline & Junior positions at high-wage firms \\[4pt]
+Norway & This paper & Poisson event study, firm FE & Mixed & 22--25: near zero on average, Q5 falls below Q1 from spring 2025 to $\approx -35$ log pts by early 2026; 21--30 $\approx 0$ (App.\ B) \\
+\bottomrule
+\end{tabularx}
+\par\smallskip\footnotesize
+\raggedright\textit{Notes:} Studies sorted by year within each panel. ``Direction'' refers to the qualitative sign of the relative employment change for workers aged 22--25 in the most AI-exposed occupations after November 2022. Panel~A reports descriptive patterns (raw or per-capita trends); Panel~B reports results from formal econometric methods with controls and fixed effects. The descriptive-formal gap is substantial in all studies that employ both: Lodefalk et al.\ find $-44\%$ raw vs.\ $-5.5\%$ in the employer-FE event study; Humlum \& Vestergaard find an aggregate decline descriptively but a precise null when using firm-level adoption as treatment. Norway shows a descriptive young-worker decline in selected occupations and a 22--25 formal estimate that is near zero on average but widens to a sizable gap at the end of the sample (App.\ B replicates the Brynjolfsson et al.\ design on Norwegian data). Magnitudes across rows use different units and baselines and are not directly comparable.
+\end{table}
