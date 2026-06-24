@@ -1,43 +1,51 @@
 """
 plot_microdata_es_decade.py
 
-Plot the cell-level Poisson event-study coefficients (decade age groups,
-private sector) from coef_microdata_es_decade.csv as a four-panel grid, one
-panel per decade age group, with Q2--Q5 vs Q1 lines and 95% CI bands.
+Purpose:
+    Plot the cell-level Poisson event-study coefficients (decade age groups,
+    private sector) from coef_microdata_es_decade.csv as a four-panel grid, one
+    panel per decade age group, with Q2--Q5 vs Q1 lines and 95% CI bands.
+    Feeds the paper's Figure "fig:microdata_poisson_grid"
+    (figure_microdata_poisson_es_grid.pdf).
+    No title/notes baked into the PDF (caption lives in the paper .tex).
 
-No title/notes baked into the PDF (caption lives in the paper .tex).
+Inputs:
+    analysis/output/coefficients/coef_microdata_es_decade.csv
 
-Output: analysis/output/figures/figure_microdata_poisson_es_grid.pdf
+Outputs:
+    analysis/output/figures/figure_microdata_poisson_es_grid.pdf
 
 Usage:
     python analysis/06_figures/plot_microdata_es_decade.py
 """
 
-import os
+import os                                              # filesystem paths and mkdir
 
-from datetime import datetime
+from datetime import datetime                          # build the k=0 anchor date
 
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-import matplotlib.dates as mdates
-from matplotlib.lines import Line2D
-import pandas as pd
+import matplotlib                                      # plotting backend selection
+matplotlib.use("Agg")                                  # headless backend: write files, no display
+import matplotlib.pyplot as plt                        # figure/axes plotting API
+import matplotlib.dates as mdates                      # date axis formatting/locators
+from matplotlib.lines import Line2D                    # custom legend handles
+import pandas as pd                                    # read the coefficient CSV, build frames
 
 BASE_DT = datetime(2022, 11, 1)   # event time k = 0 (November 2022)
-CHATGPT = mdates.date2num(BASE_DT)
+CHATGPT = mdates.date2num(BASE_DT)                     # k=0 as a matplotlib date number (vertical line)
 
-BASE_DIR = os.path.join(os.path.dirname(__file__), "..", "..")
+BASE_DIR = os.path.join(os.path.dirname(__file__), "..", "..")   # repo root, two levels up from this file
+# Cell-level event-study coefficients (one row per age group x quintile x event time k).
 COEF = os.path.join(BASE_DIR, "analysis", "output", "coefficients",
                     "coef_microdata_es_decade.csv")
-FIG_DIR = os.path.join(BASE_DIR, "analysis", "output", "figures")
+FIG_DIR = os.path.join(BASE_DIR, "analysis", "output", "figures")   # where the PDF is written
 
-AGE_TITLES = {1: "Early career (21–30)", 2: "31–40", 3: "41–50", 4: "Senior (51–60)"}
-AGE_ORDER = [1, 2, 3, 4]
-QUINTILE_COLORS = {2: "#9ECAE1", 3: "#4292C6", 4: "#2171B5", 5: "#08306B"}
+AGE_TITLES = {1: "Early career (21–30)", 2: "31–40", 3: "41–50", 4: "Senior (51–60)"}   # panel titles by age group
+AGE_ORDER = [1, 2, 3, 4]                               # age groups in panel (top-left to bottom-right) order
+QUINTILE_COLORS = {2: "#9ECAE1", 3: "#4292C6", 4: "#2171B5", 5: "#08306B"}   # darker blue = more AI-exposed quintile
 
 
 def healy_style():
+    # Apply the shared house figure style (Kieran Healy-inspired): white bg, serif fonts, light grid.
     plt.rcParams.update({
         "figure.facecolor": "white", "axes.facecolor": "white",
         "savefig.facecolor": "white", "axes.linewidth": 0.5,
@@ -55,43 +63,46 @@ def healy_style():
 
 
 def main():
-    os.makedirs(FIG_DIR, exist_ok=True)
-    healy_style()
-    d = pd.read_csv(COEF)
-    d["hi"] = d["coef"] + 1.96 * d["se"]
-    d["lo"] = d["coef"] - 1.96 * d["se"]
+    os.makedirs(FIG_DIR, exist_ok=True)                # ensure the output figures directory exists
+    healy_style()                                      # set the shared plot styling
+    d = pd.read_csv(COEF)                              # load the event-study coefficient table
+    d["hi"] = d["coef"] + 1.96 * d["se"]               # upper end of the 95% CI
+    d["lo"] = d["coef"] - 1.96 * d["se"]               # lower end of the 95% CI
+    # Convert each event time k (months relative to Nov 2022) to a calendar date for the x-axis.
     d["date"] = [BASE_DT + pd.DateOffset(months=int(k)) for k in d["k"]]
+    # Symmetric y-limit: at least 0.10, at most 0.35, otherwise the largest CI endpoint magnitude.
     ymax = min(0.35, max(0.10, d["hi"].abs().max(), d["lo"].abs().max()))
 
-    fig, axes = plt.subplots(2, 2, figsize=(12, 10))
-    for ax, a in zip(axes.flatten(), AGE_ORDER):
-        sub = d[d["age_group"] == a]
-        for q in [2, 3, 4, 5]:
-            s = sub[sub["ai_q"] == q].sort_values("date")
-            if not len(s):
-                continue
-            ax.fill_between(s["date"], s["lo"], s["hi"], color=QUINTILE_COLORS[q], alpha=0.12)
-            ax.plot(s["date"], s["coef"], color=QUINTILE_COLORS[q], linewidth=1.6)
-        ax.axhline(y=0.0, color="#AAAAAA", linestyle="-", linewidth=0.5)
-        ax.axvline(x=CHATGPT, color="#D55E00", linestyle="--", linewidth=0.8, alpha=0.8)
-        ax.set_title(AGE_TITLES[a])
-        ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))
-        ax.xaxis.set_major_locator(mdates.YearLocator())
-        ax.set_ylim(-ymax, ymax)
+    fig, axes = plt.subplots(2, 2, figsize=(12, 10))   # 2x2 grid, one panel per age group
+    for ax, a in zip(axes.flatten(), AGE_ORDER):       # iterate panels paired with age groups
+        sub = d[d["age_group"] == a]                   # rows for this age group only
+        for q in [2, 3, 4, 5]:                         # plot one line per exposure quintile (Q1 is the base)
+            s = sub[sub["ai_q"] == q].sort_values("date")   # this quintile's series, in date order
+            if not len(s):                             # skip if this age x quintile has no rows
+                continue                               # nothing to draw
+            ax.fill_between(s["date"], s["lo"], s["hi"], color=QUINTILE_COLORS[q], alpha=0.12)   # faint 95% CI band
+            ax.plot(s["date"], s["coef"], color=QUINTILE_COLORS[q], linewidth=1.6)   # the point-estimate line
+        ax.axhline(y=0.0, color="#AAAAAA", linestyle="-", linewidth=0.5)   # zero reference line
+        ax.axvline(x=CHATGPT, color="#D55E00", linestyle="--", linewidth=0.8, alpha=0.8)   # ChatGPT launch marker (k=0)
+        ax.set_title(AGE_TITLES[a])                    # label the panel with its age group
+        ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))   # show years on the x-axis
+        ax.xaxis.set_major_locator(mdates.YearLocator())   # one tick per year
+        ax.set_ylim(-ymax, ymax)                       # symmetric y-axis across all panels
 
+    # Build shared legend handles: label Q5 "most exposed", Q2 "vs Q1", Q3/Q4 just "Qk".
     handles = [Line2D([0], [0], color=QUINTILE_COLORS[q], lw=2.5,
                       label=f"Q{q}" + (" (most exposed)" if q == 5 else
                                        " (vs Q1)" if q == 2 else ""))
                for q in [2, 3, 4, 5]]
     fig.legend(handles=handles, loc="upper center", ncol=4, frameon=False,
-               bbox_to_anchor=(0.5, 1.0), fontsize=20)
-    fig.autofmt_xdate(rotation=0, ha="center")
-    fig.tight_layout(rect=(0, 0, 1, 0.96))
-    out = os.path.join(FIG_DIR, "figure_microdata_poisson_es_grid.pdf")
-    fig.savefig(out, dpi=200, bbox_inches="tight")
-    plt.close(fig)
-    print(f"Saved {out}")
+               bbox_to_anchor=(0.5, 1.0), fontsize=20)   # one shared legend across the top
+    fig.autofmt_xdate(rotation=0, ha="center")         # keep year labels horizontal and centered
+    fig.tight_layout(rect=(0, 0, 1, 0.96))             # tidy spacing, leaving room for the top legend
+    out = os.path.join(FIG_DIR, "figure_microdata_poisson_es_grid.pdf")   # output PDF path
+    fig.savefig(out, dpi=200, bbox_inches="tight")     # write the figure to disk
+    plt.close(fig)                                     # free the figure
+    print(f"Saved {out}")                              # progress message
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__":                             # run main() only when executed as a script
+    main()                                             # build and save the figure
