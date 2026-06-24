@@ -1,9 +1,11 @@
 # make_quintile_yagan_table.R
 #
 # Table 4: cross-sectional Yagan employment-hysteresis change by AI-exposure
-# quintile, seasonally adjusted, October 2022 -> February 2026, ages 21-60,
-# private sector. One occupation = one observation, weighted by its October 2022
-# headcount so the quintile means reproduce the kiindeksen.no headcount index.
+# quintile, seasonally adjusted, ages 21-60, private sector. Each occupation's
+# change is the mean SA headcount over the most recent three months (Dec 2025-
+# Feb 2026) relative to October 2022, the same window the kiindeksen.no headline
+# uses. One occupation = one observation, weighted by its October 2022 headcount
+# so the quintile means reproduce the kiindeksen.no headcount index.
 #
 # This is the R twin of analysis/06_figures/microdata_change_lastmonth.py, but it
 # reports only the seasonally adjusted basis and lays the table out the way the
@@ -54,26 +56,28 @@ exp <- exp[!is.na(exp$quintile), c("styrk08", "quintile")]       # drop unmapped
 names(exp) <- c("yrke4", "ai_q")                     # rename keys
 occ <- merge(occ, exp, by = "yrke4")                 # inner join -> kept occupations
 
-last_date <- max(occ$date)                           # last month present (2026-02-16)
-cat(sprintf("Reference: %s  Last: %s\n", ref_date, last_date))  # show endpoints
+all_dates   <- sort(unique(occ$date))                # every month present, ascending
+last3_dates <- tail(all_dates, 3)                    # most recent three months (Dec 2025-Feb 2026)
+cat(sprintf("Reference: %s  Last 3: %s\n",           # show endpoints
+            ref_date, paste(last3_dates, collapse = ", ")))
 
 codes <- sort(unique(occ$yrke4))                     # occupation codes to loop over
 rows  <- list()                                      # collect one record per occupation
 for (oid in codes) {                                 # one occupation at a time
   s <- occ[occ$yrke4 == oid, ]                       # this occupation's series
   s <- s[order(s$date), ]                            # in date order
-  if (!(ref_date %in% s$date) || !(last_date %in% s$date)) next  # need both endpoints
-  base_raw <- s$emp[s$date == ref_date]              # Oct 2022 headcount
-  last_raw <- s$emp[s$date == last_date]             # last-month headcount
-  if (base_raw <= 0 || last_raw <= 0) next           # need positive headcount at both ends
+  if (!(ref_date %in% s$date) || !all(last3_dates %in% s$date)) next  # need base + all 3 recent
+  base_raw  <- s$emp[s$date == ref_date]             # Oct 2022 headcount
+  last3_raw <- s$emp[s$date %in% last3_dates]        # the three most recent headcounts
+  if (base_raw <= 0 || any(last3_raw <= 0)) next     # need positive headcount at base and all 3
   sa <- seasonal_adjust(s$date, s$emp, seas_from, seas_to)  # seasonally adjust series
-  base_sa <- sa[s$date[order(s$date)] == ref_date]   # SA Oct 2022 level
-  last_sa <- sa[s$date[order(s$date)] == last_date]  # SA last-month level
+  base_sa  <- sa[s$date == ref_date]                 # SA Oct 2022 level
+  last3_sa <- mean(sa[s$date %in% last3_dates])      # mean SA level over the recent three months
   rows[[length(rows) + 1]] <- data.frame(            # store this occupation's record
     yrke4 = oid,                                     # occupation code
     ai_q = as.integer(s$ai_q[1]),                    # exposure quintile
     base_emp = base_raw,                             # Oct 2022 headcount = regression weight
-    change_sa = last_sa / base_sa - 1)               # SA proportional (Yagan) change
+    change_sa = last3_sa / base_sa - 1)              # SA change vs Oct 2022, kiindeksen window
 }
 cs <- do.call(rbind, rows)                           # cross-section: one row per occupation
 cat(sprintf("Occupations with both endpoints: %d\n", nrow(cs)))  # report size
