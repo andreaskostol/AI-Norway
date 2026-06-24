@@ -98,6 +98,10 @@ plain-English comment on essentially every line.
 
 ## Notes from the latest consistency check
 
+The full code–paper consistency audit (verdict, minor discrepancies, coverage
+gaps, verified numbers, and the script-to-output map) is in
+`CONSISTENCY_REPORT.md`. The highlights:
+
 - The cross-section change (Table 4 and the abstract "0.1% vs 0.3%") uses the
   mean over the most recent three months (Dec 2025--Feb 2026) relative to October
   2022, the same window as the kiindeksen.no headline index.
