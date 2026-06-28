@@ -8,8 +8,9 @@
 #                   + sum_{q != 1, k != -1} gamma_{q,k} * 1{t=k} * 1{q'=q}
 #
 # Estimated separately per age_bin. Reference: q = 1 (lowest exposure, BCC
-# convention; Q1's winter-construction seasonality is absorbed by the firm x
-# month FE and the k = -1 baseline), k = -1 (October 2022).
+# convention), k = -1 (October 2022). Firm x month FE absorbs firm-level
+# monthly shocks, but not differential within-firm seasonality across exposure
+# quintiles.
 # Standard errors clustered at foretak.
 #
 # Inputs:  $DATA/cells_flagged.rds
@@ -126,8 +127,9 @@ for (a in 1:N_AGE_BINS) {
     if (n_a == 0) { cat("  no rows, skipping\n"); next }
 
     # Force ai_q to a proper factor with explicit levels and Q1 (lowest
-    # exposure) as the reference, following BCC. Q1's winter-construction
-    # seasonality is absorbed by the firm x month FE and the k = -1 baseline.
+    # exposure) as the reference, following BCC. Firm x month FE absorbs
+    # firm-level monthly shocks, but not differential within-firm seasonality
+    # across exposure quintiles.
     d_a[, ai_q := factor(ai_q, levels = c(1, 2, 3, 4, 5))]
 
     t0 <- Sys.time()
