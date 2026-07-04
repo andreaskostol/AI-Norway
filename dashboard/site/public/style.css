@@ -168,6 +168,14 @@ a { color: var(--accent); }
 }
 .headline-yoy.pos { color: var(--pos); }
 .headline-yoy.neg { color: var(--neg); }
+.headline-ci {
+  margin-top: 0.4rem;
+  font-size: 0.82rem;
+  line-height: 1.35;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+.headline-ci[hidden] { display: none; }
 .headline-def {
   margin-top: auto;
   padding-top: 0.7rem;

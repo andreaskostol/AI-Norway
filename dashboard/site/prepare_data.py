@@ -19,6 +19,13 @@ import pandas as pd
 SITE_DIR = os.path.dirname(os.path.abspath(__file__))
 DASH_DIR = os.path.dirname(SITE_DIR)
 REL_BASE = os.path.join(DASH_DIR, "releases")
+REPO_DIR = os.path.dirname(DASH_DIR)
+# Okkupasjons-klynge-bootstrap av KI-indeksen (standardfeil per vintage),
+# produsert av analysis/06_figures/recursive_kiindeks_headline.py. Siste
+# rad = nyeste vintage; svarer til den sesongjusterte (sa) hovedindeksen.
+HEADLINE_SE_CSV = os.path.join(
+    REPO_DIR, "analysis", "output", "coefficients",
+    "coef_recursive_kiindeks_headline.csv")
 
 ADJUSTMENTS = ["raw", "sa", "percap", "percap_sa"]
 
@@ -153,6 +160,34 @@ def build_download_manifest(release):
     return manifest
 
 
+def load_headline_uncertainty():
+    """Les bootstrap-standardfeilen for KI-indeksen og returner nyeste
+    vintage som en liten dict til dashboard.json. Standardfeilen gjelder
+    den sesongjusterte hovedindeksen (spec 'sa'), som er den app.js viser
+    som standard. Returnerer None hvis artefakten mangler, slik at
+    nettsiden faller tilbake til aa vise indeksen uten baand."""
+    if not os.path.exists(HEADLINE_SE_CSV):
+        print("  headline_uncertainty: artefakt mangler, hopper over")
+        return None
+    df = pd.read_csv(HEADLINE_SE_CSV)
+    last = df.iloc[-1]  # nyeste vintage = siste rad
+    ki = float(last["ki"])
+    se = float(last["se"])
+    # Baandet regnes som ki +/- 1.96*se, samme metode som Appendix-
+    # figuren i artikkelen (fig:recursive_kiindeks) beskriver: "+/-1.96
+    # occupation cluster-bootstrap standard errors". CSV-kolonnene
+    # ci_lo/ci_hi er persentil-bootstrap og brukes bevisst IKKE, slik at
+    # nettsidens intervall er identisk med det artikkelen rapporterer.
+    return {
+        "spec": "sa",
+        "vintage": str(last["cutoff"]),  # siste maaned, f.eks. "2026-02"
+        "ki": round(ki, 3),
+        "se": round(se, 3),
+        "ci_lo": round(ki - 1.96 * se, 3),
+        "ci_hi": round(ki + 1.96 * se, 3),
+    }
+
+
 def main():
     releases = sorted(d for d in os.listdir(REL_BASE)
                       if os.path.isdir(os.path.join(REL_BASE, d)))
@@ -169,6 +204,7 @@ def main():
         data["snapshots"][name] = load_snapshot(release, name)
         print(f"  {name}: snapshot")
     data["download_files"] = build_download_manifest(release)
+    data["headline_uncertainty"] = load_headline_uncertainty()
 
     out_dir = os.path.join(SITE_DIR, "public", "data")
     os.makedirs(out_dir, exist_ok=True)

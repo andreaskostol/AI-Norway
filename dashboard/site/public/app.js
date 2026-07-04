@@ -800,6 +800,31 @@
         " · Minst eksponerte: " + fmtPct(g.g1);
     yoyEl.className = "headline-yoy";
 
+    // Usikkerhetsbaand: okkupasjons-klynge-bootstrap av KI-indeksen.
+    // Standardfeilen gjelder bare den sesongjusterte hovedindeksen
+    // (spec 'sa'), saa vi viser intervallet kun naar det valgte
+    // justeringsnivaaet er det bootstrappen ble regnet paa; ellers
+    // skjuler vi baandet framfor aa vise et intervall som ikke passer.
+    var ciEl = document.getElementById("headline-ci");
+    if (ciEl) {
+      var u = DB.headline_uncertainty;
+      if (u && adjFor("by_exposure") === u.spec) {
+        ciEl.textContent = EN
+          ? "95% bootstrap interval: " + fmtNum(u.ci_lo) + " to " +
+            fmtNum(u.ci_hi) + " pp — not statistically distinguishable " +
+            "from zero."
+          : "95 % bootstrap-intervall: " + fmtNum(u.ci_lo) + " til " +
+            fmtNum(u.ci_hi) + " pp — ikke statistisk forskjellig fra null.";
+        ciEl.title = (EN ? "Occupation-cluster bootstrap standard error: "
+                         : "Okkupasjons-klynge-bootstrap, standardfeil: ") +
+          fmtNum(u.se) + " pp";
+        ciEl.hidden = false;
+      } else {
+        ciEl.textContent = "";
+        ciEl.hidden = true;
+      }
+    }
+
     var bars = EN ? [
       { name: "Least-exposed occupations\n(quintile 1)", value: g.g1,
         color: "#577590" },
