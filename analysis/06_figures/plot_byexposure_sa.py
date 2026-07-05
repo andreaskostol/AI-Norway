@@ -81,8 +81,7 @@ def make(pooled, adjust, out_name):
     ax.axhline(y=1.0, color="#AAAAAA", linestyle="-", linewidth=0.5)  # reference line
     ax.axvline(x=CHATGPT, color="#555555", linestyle="--",           # ChatGPT marker
                linewidth=0.7, alpha=0.8)
-    ax.set_ylabel("Employment index (Oct 2022 = 1.0)" +              # y label, note basis
-                  (", seasonally adjusted" if adjust else ""))
+    ax.set_ylabel("Employment index (Oct 2022 = 1.0)")              # y label; SA noted in caption, not axis
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y"))  # year tick labels
     ax.xaxis.set_major_locator(mdates.YearLocator())          # one tick per year
     ax.set_xlim(right=dt.iloc[-1] + pd.Timedelta(days=180))   # room for end labels
