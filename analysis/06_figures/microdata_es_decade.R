@@ -16,9 +16,9 @@
 #   log E[count_{j,t}] = alpha_j + beta_t
 #                     + sum_{q in 2..5, k != -1} gamma_{q,k} 1{ai_q(j)=q} 1{k(t)=k}
 #   j = 4-digit STYRK-08; t = month; k = months since October 2022 (ref k=-1).
-#   Cluster SE at occupation. Private sector, through 2026m2.
+#   Cluster SE at occupation. Private sector, through 2026m4.
 #
-# Input:  microdata-output/09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv
+# Input:  microdata-output/09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv
 #         data/ai_exposure/styrk08_eloundou_beta_mapping.csv
 # Output: analysis/output/coefficients/coef_microdata_es_decade.csv
 #           (age_group, ai_q, k, coef, se, n_obs, n_occ)
@@ -28,14 +28,14 @@ suppressMessages({ library(data.table); library(fixest) })
 
 BASE <- getwd()
 DATA_FILE <- file.path(BASE, "microdata-output",
-                       "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv")
+                       "09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv")
 EXP_FILE  <- file.path(BASE, "data", "ai_exposure",
                        "styrk08_eloundou_beta_mapping.csv")
 OUT_CSV   <- file.path(BASE, "analysis", "output", "coefficients",
                        "coef_microdata_es_decade.csv")
 
 REF_YM_INT  <- 2022L * 12L + 10L          # October 2022
-CUTOFF_DATE <- as.IDate("2026-02-16")     # through 2026m2
+CUTOFF_DATE <- as.IDate("2026-04-16")     # through 2026m4
 ALDER_KEEP  <- c("1", "2", "3", "4")
 
 cat("Loading", DATA_FILE, "\n")

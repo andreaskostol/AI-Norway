@@ -21,7 +21,7 @@
 #   quintile is the average post effect vs Oct 2022. Quintile reference:
 #   ai_q = 1 (lowest exposure). Cluster at occupation.
 #
-# Input:  microdata-output/09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv
+# Input:  microdata-output/09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv
 #         data/ai_exposure/styrk08_handa_mapping.csv
 # Output: analysis/output/coefficients/coef_microdata_did_cell_handa.csv
 #         (schema: measure, sector, age_group, outcome, ai_q, coef, se,
@@ -38,7 +38,7 @@ suppressMessages({                          # quiet package banners
 # -----------------------------------------------------------------------------
 BASE <- getwd()                             # run this script from the repo root
 DATA_FILE <- file.path(BASE, "microdata-output",   # parsed cell aggregates
-                       "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv")
+                       "09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv")
 EXP_FILE  <- file.path(BASE, "data", "ai_exposure",   # occupation -> Handa quintiles
                        "styrk08_handa_mapping.csv")
 OUT_CSV   <- file.path(BASE, "analysis", "output", "coefficients",   # coefficient output
@@ -53,7 +53,7 @@ ALDER_KEEP  <- c("1", "2", "3", "4")        # decade age groups kept: 0 = <21/mi
 AGE_LABELS  <- c("1" = "Early career (21-30)", "2" = "31-40",   # human-readable labels for the console
                  "3" = "41-50", "4" = "Senior (51-60)")
 REF_YM_INT  <- 2022L * 12L + 10L            # October 2022 = last pre-period (year*12+month index)
-CUTOFF_DATE <- as.IDate("2026-02-16")       # full window through 2026m2 (data edge)
+CUTOFF_DATE <- as.IDate("2026-04-16")       # full window through 2026m4 (data edge)
 SECTORS     <- c("2" = 2L, "1" = 1L)        # 2 = private (main), 1 = public (appendix)
 # Handa measure name -> quintile column in styrk08_handa_mapping.csv
 MEASURES    <- c("automation" = "q_automation_share",

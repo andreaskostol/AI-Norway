@@ -22,7 +22,7 @@
 #
 # Treatment contrasts: Q2, Q3, Q4, Q5 each vs Q1 -> four coefficients per cell.
 #
-# Input:  microdata-output/09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv
+# Input:  microdata-output/09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv
 #         data/ai_exposure/styrk08_eloundou_beta_mapping.csv
 # Output: analysis/output/coefficients/coef_microdata_did_cell.csv
 #         (schema: sector, age_group, outcome, ai_q, coef, se, p_value, n_obs, n_occ)
@@ -38,7 +38,7 @@ suppressMessages({                          # quiet package banners
 # -----------------------------------------------------------------------------
 BASE <- getwd()                             # run this script from the repo root
 DATA_FILE <- file.path(BASE, "microdata-output",   # parsed cell aggregates
-                       "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv")
+                       "09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv")
 EXP_FILE  <- file.path(BASE, "data", "ai_exposure",   # occupation -> Eloundou quintile
                        "styrk08_eloundou_beta_mapping.csv")
 OUT_CSV   <- file.path(BASE, "analysis", "output", "coefficients",   # coefficient output
@@ -53,7 +53,7 @@ ALDER_KEEP  <- c("1", "2", "3", "4")        # decade age groups kept: 0 = <21/mi
 AGE_LABELS  <- c("1" = "Early career (21-30)", "2" = "31-40",   # human-readable labels for the console
                  "3" = "41-50", "4" = "Senior (51-60)")
 REF_YM_INT  <- 2022L * 12L + 10L            # October 2022 = last pre-period (year*12+month index)
-CUTOFF_DATE <- as.IDate("2026-02-16")       # full window through 2026m2 (data
+CUTOFF_DATE <- as.IDate("2026-04-16")       # full window through 2026m4 (data
                                             # edge; the 2025m4 pre-agentic cutoff
                                             # was dropped together with the
                                             # secure-zone 7b/7d runs -- see

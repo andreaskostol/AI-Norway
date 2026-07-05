@@ -27,7 +27,7 @@ suppressMessages({ library(data.table); library(fixest); library(HonestDiD) })
 
 BASE <- getwd()                                       # repo root (run from here)
 DATA_FILE <- file.path(BASE, "microdata-output",      # parsed cell aggregates
-                       "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv")
+                       "09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv")
 EXP_FILE  <- file.path(BASE, "data", "ai_exposure",   # occupation -> Eloundou quintile
                        "styrk08_eloundou_beta_mapping.csv")
 OUT_TEX <- file.path(BASE, "analysis", "output", "tables", "table_honest_did.tex")

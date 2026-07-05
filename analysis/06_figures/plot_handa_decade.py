@@ -33,7 +33,7 @@ SEAS_FROM, SEAS_TO = "2021-01-16", "2024-12-16"   # SA factor-estimation window
 
 BASE_DIR = os.path.join(os.path.dirname(__file__), "..", "..")
 PARSED = os.path.join(BASE_DIR, "microdata-output",
-                      "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv")
+                      "09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv")
 HANDA = os.path.join(BASE_DIR, "data", "ai_exposure", "styrk08_handa_mapping.csv")
 FIG_DIR = os.path.join(BASE_DIR, "analysis", "output", "figures")
 

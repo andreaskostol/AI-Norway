@@ -7,12 +7,12 @@ Purpose:
   as of February 2026, with occupation code, title, Eloundou score, employment,
   and the occupation's share of the quintile's total employment.
 
-Employment ("overall") = sum of headcount over both sectors and all decade
-age groups present in the parsed file (alder_gr 1-5, i.e. ages 21+), for the
-February-2026 status month.
+Employment = sum of private-sector headcount (sekt == 2) over decade age
+groups 21-60 (alder_gr 1-4), for the February-2026 status month, matching
+the analysis sample.
 
 Writes a caption-less LaTeX fragment (just the tabular). The float, caption
-and label live in paper/section3_data.tex around \\input{}.
+and label live in paper/paper_dashboard_v8.tex around \\input{}.
 
   -> analysis/output/tables/table_quintile_top_occ.tex
 
@@ -29,7 +29,7 @@ import pandas as pd
 BASE_DIR = os.path.join(os.path.dirname(__file__), "..", "..")
 # Parsed microdata.no cell aggregates (occupation x age x sector x month)
 PARSED = os.path.join(BASE_DIR, "microdata-output",
-                      "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv")
+                      "09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv")
 # Occupation -> Eloundou exposure score and quintile mapping
 EXP_FILE = os.path.join(BASE_DIR, "data", "ai_exposure",
                         "styrk08_eloundou_beta_mapping.csv")
@@ -40,7 +40,7 @@ OUT = os.path.join(BASE_DIR, "analysis", "output", "tables",
                    "table_quintile_top_occ.tex")
 
 # Status month for the employment snapshot (ARBLONN status date = the 16th)
-STATUS_DATE = "2026-02-16"
+STATUS_DATE = "2026-04-16"
 # How many largest occupations to list per quintile
 TOP_N = 5
 # Human-readable headers printed above each quintile block in the table
@@ -75,9 +75,11 @@ def load_employment():
                               "variable", "value"])
     # Keep the status month and employment-count rows only
     df = df[(df["date"] == STATUS_DATE) & (df["variable"] == "count")]
-    # Keep decade age groups 1-5 (ages 21+)
-    df = df[df["alder_gr"].isin(["1", "2", "3", "4", "5"])]
-    # Sum headcount across sectors and age groups -> one row per occupation
+    # Keep the private sector only, matching the analysis sample
+    df = df[df["sekt"] == 2]
+    # Keep decade age groups 1-4 (ages 21-60)
+    df = df[df["alder_gr"].isin(["1", "2", "3", "4"])]
+    # Sum headcount across age groups -> one row per occupation
     emp = df.groupby("yrke4", as_index=False)["value"].sum()
     # Rename the summed column to "employment"
     emp = emp.rename(columns={"value": "employment"})
