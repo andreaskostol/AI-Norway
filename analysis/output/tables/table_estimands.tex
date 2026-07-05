@@ -1,0 +1,15 @@
+% Overview of designs and estimands (tab:estimands). Hand-maintained; the
+% float, caption, label, and notes live in paper/paper_dashboard_v8.tex.
+\footnotesize
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{3.2cm} X >{\raggedright\arraybackslash}p{1.8cm} >{\raggedright\arraybackslash}p{2.4cm} >{\raggedright\arraybackslash}p{3.0cm}@{}}
+\toprule
+Result & Design and sample & Ages & Weighting & Inference \\
+\midrule
+Headline index (``KI-indeks'', $-0.2$ pp; Table~\ref{tab:quintile_yagan}; kiindeksen.no) & Descriptive Q5$-$Q1 gap in seasonally adjusted headcount growth, three most recent months vs.\ October 2022; WLS of occupation-level changes on quintile dummies; 374 occupations & 21--60 pooled & Occupations weighted by October 2022 employment & Heteroskedasticity-robust SEs across occupations; occupation cluster bootstrap SE about 2 pp across vintages (Fig.~\ref{fig:recursive_kiindeks}) \\[4pt]
+Descriptive quintile series (Figs.~\ref{fig:byexposure_sa} and~\ref{fig:age_by_quintile}) & Indexed seasonally adjusted headcount by quintile; all mapped occupations with exported cells & 21--60 pooled and decade groups & Employment-weighted within quintile (headcount sums) & None (descriptive) \\[4pt]
+Cell-level event study and DiD (Fig.~\ref{fig:microdata_poisson_grid}, Table~\ref{tab:did_cell}) & Poisson on occupation $\times$ month cells, occupation and month fixed effects; 391--393 occupations & Separate per decade group & Implicit count weighting (Poisson) & Clustered by occupation \\[4pt]
+Pre-trend sensitivity (Table~\ref{tab:honest_did}) & HonestDiD relative-magnitude bounds on the average post-period Q5-vs-Q1 effect from the cell-level event study & 21--30 & As in the cell-level design & \citet{rambachan2023} robust confidence intervals \\[4pt]
+Within-firm DiD (Fig.~\ref{fig:firmfe_poisson_grid}, Table~\ref{tab:did_firmfe}) & Poisson on firm $\times$ quintile $\times$ month cells, firm-by-quintile and firm-by-month fixed effects; firms with at least 20 workers & Separate per decade group & Implicit count weighting (Poisson) & Clustered by firm \\[4pt]
+22--25 replication (Fig.~\ref{fig:bcc_es}, Table~\ref{tab:honest_did_bcc}) & \citet{brynjolfsson2025} balanced-panel design on full-time workers, firm-by-quintile and firm-by-month fixed effects & Six bins, 22--25 to 50--55 & Implicit count weighting (Poisson) & Clustered by firm; HonestDiD on the average post-period effect \\
+\bottomrule
+\end{tabularx}

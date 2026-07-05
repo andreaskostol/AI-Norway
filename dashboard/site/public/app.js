@@ -1266,7 +1266,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260704a")
+  fetch("/data/dashboard.json?v=20260705a")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
