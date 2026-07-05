@@ -15,8 +15,14 @@ Purpose:
     (figure_cell_vs_firmfe_q5_grid.pdf).
 
 Inputs:
-    analysis/output/coefficients/coef_microdata_es_decade.csv
+    analysis/output/coefficients/coef_microdata_es_decade_2026m02.csv
     analysis-indiv/from_secure_server/coefficients/coef_event_study_fepois.csv
+
+The cell-level side reads the FROZEN 2026m02 coefficient snapshot, not the
+live coef_microdata_es_decade.csv: the firm-FE side is fixed at the
+2021m1-2026m2 secure-server vintage, so the cell side must stay on the same
+window for the comparison to be like-with-like. Refresh the snapshot only
+when the secure-server estimates are re-run on a longer window.
 
 Outputs:
     analysis/output/figures/figure_cell_vs_firmfe_q5_grid.pdf
@@ -40,8 +46,9 @@ CHATGPT = mdates.date2num(BASE_DT)                     # k=0 as a matplotlib dat
 
 BASE_DIR = os.path.join(os.path.dirname(__file__), "..", "..")   # repo root, two levels up from this file
 # Cell-level event-study coefficients (one row per age group x quintile x event time k).
+# Frozen 2026m02 snapshot, matching the firm-FE vintage (see docstring).
 CELL_CSV = os.path.join(BASE_DIR, "analysis", "output", "coefficients",
-                        "coef_microdata_es_decade.csv")
+                        "coef_microdata_es_decade_2026m02.csv")
 # Individual-level firm-FE event-study coefficients exported from the secure server.
 FIRM_CSV = os.path.join(BASE_DIR, "analysis-indiv", "from_secure_server",
                         "coefficients", "coef_event_study_fepois.csv")

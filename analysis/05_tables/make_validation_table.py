@@ -9,16 +9,22 @@ Purpose:
   restriction, and the firm-FE specification:
 
   (1) microdata.no aggregates, cell spec (yrke4 + month FE)
-  (2) universe 1191 individual records, cell spec, all private foretak
-  (3) universe 1191 individual records, cell spec, foretak with >=20 workers
-  (4) universe 1191 individual records, firm-FE spec (firm x quintile + firm x month FE)
+  (2) individual records, cell spec, all private foretak
+  (3) individual records, cell spec, foretak with >=20 workers
+  (4) individual records, firm-FE spec (firm x quintile + firm x month FE)
 
 (1)->(2): data source.  (2)->(3): >=20 restriction.  (3)->(4): specification.
 
 Inputs:
-  analysis/output/coefficients/coef_microdata_did_cell.csv          (sector 2 = private)
+  analysis/output/coefficients/coef_microdata_did_cell_2026m02.csv  (sector 2 = private)
   analysis-indiv/from_secure_server/coefficients/coef_did_byage_cellspec.csv
   analysis-indiv/from_secure_server/coefficients/coef_did_byage_fepois.csv
+
+The cell-level column reads the FROZEN 2026m02 coefficient snapshot, not the
+live coef_microdata_did_cell.csv: the secure-server columns (2)-(4) are fixed
+at the 2021m1-2026m2 vintage, so the cell column must stay on the same window
+for the reconciliation to compare like with like. When the secure-server
+estimates are re-run on a longer window, refresh the frozen snapshot too.
 
 Output:
   analysis/output/tables/table_validation_cell_vs_firmfe.tex  (caption-less tabular)
@@ -34,9 +40,10 @@ import pandas as pd
 
 # Repo root, relative to this script (analysis/05_tables/ -> ../../)
 BASE = os.path.join(os.path.dirname(__file__), "..", "..")
-# Column (1): microdata.no cell-level DiD coefficients
+# Column (1): microdata.no cell-level DiD coefficients — frozen 2026m02
+# snapshot, matching the vintage of the secure-server columns (see docstring).
 MICRO = os.path.join(BASE, "analysis", "output", "coefficients",
-                     "coef_microdata_did_cell.csv")
+                     "coef_microdata_did_cell_2026m02.csv")
 # Columns (2)-(3): individual-record cell-spec DiD (secure-server output)
 CELLSPEC = os.path.join(BASE, "analysis-indiv", "from_secure_server",
                         "coefficients", "coef_did_byage_cellspec.csv")
@@ -111,7 +118,7 @@ def main():
     # Top rule
     L.append(r"\toprule")
     # Grouped header: microdata.no vs the three individual-record columns
-    L.append(r" & microdata.no & \multicolumn{3}{c}{Individual records (universe 1191)} \\")
+    L.append(r" & microdata.no & \multicolumn{3}{c}{Individual records} \\")
     # Rules underlining the two header groups
     L.append(r"\cmidrule(lr){2-2}\cmidrule(lr){3-5}")
     # Specification labels for the four columns
