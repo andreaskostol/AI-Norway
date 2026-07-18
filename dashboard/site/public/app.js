@@ -836,6 +836,10 @@
       { name: "Mest eksponerte yrker\n(kvintil 5)", value: g.g5,
         color: "#8C1515" }
     ];
+    // Tallest bar (in absolute value) — used to decide whether each bar is
+    // long enough to carry its value label inside; short bars get it outside.
+    var maxAbs = Math.max.apply(null, bars.map(function (b) {
+      return Math.abs(b.value); })) || 1;
     getChart("chart-headline").setOption({
       title: {
         text: (EN ? "AI Labor Market Index (relative growth): "
@@ -855,7 +859,10 @@
         axisLabel: { interval: 0, fontSize: 11.5, lineHeight: 15,
                      color: "#2a2a2a" },
         axisTick: { show: false },
-        axisLine: { lineStyle: { color: "#cfcdc6" } }
+        // Keep the axis line and the group names pinned to the bottom of the
+        // grid even when every bar is negative (zero line would otherwise jump
+        // to the top and the names would collide with the value labels).
+        axisLine: { onZero: false, lineStyle: { color: "#cfcdc6" } }
       },
       yAxis: {
         type: "value",
@@ -871,14 +878,20 @@
       series: [{
         type: "bar", barWidth: "44%",
         data: bars.map(function (b) {
+          // Put the value inside the bar when it is at least half the height
+          // of the tallest bar (room for the label, white text on the fill);
+          // otherwise place it just outside the bar end in dark text.
+          var inside = Math.abs(b.value) >= maxAbs * 0.5;
           return {
             value: Math.round(b.value * 10) / 10,
             name: b.name,
             itemStyle: { color: b.color },
             label: {
               show: true,
-              position: b.value >= 0 ? "top" : "bottom",
-              fontWeight: 700, fontSize: 13, color: "#2a2a2a",
+              position: inside ? "inside" : (b.value >= 0 ? "top" : "bottom"),
+              distance: 6,
+              fontWeight: 700, fontSize: 13,
+              color: inside ? "#fff" : "#2a2a2a",
               formatter: function (p) { return fmtPct(p.value); }
             }
           };
@@ -1266,7 +1279,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260718a")
+  fetch("/data/dashboard.json?v=20260718b")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
