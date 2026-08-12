@@ -1,19 +1,7 @@
-% Motivasjon: formål, presseoppslag, oppgaveperspektivet, litteratur, bidrag.
+% Motivasjon: presseoppslag, oppgaveperspektivet, litteratur, bidrag.
 % Illustrasjonsslidene er gjenskapt i TikZ fra den private pptx-decken.
+% (Formålssliden ligger i 00_agenda.tex, rett etter tittelsliden.)
 
-\begin{frame}{Hva vi går gjennom i dag}
-\begin{itemize}\setlength{\itemsep}{12pt}
-  \item \textbf{Hvordan KI-indeksen er laget.} Månedlige registerdata for hele det private arbeidsmarkedet, koblet til KI-eksponering per yrke.
-  \item \textbf{Hva den viser så langt.} Per april 2026 er indeksen $+0{,}5$ prosentpoeng, godt innenfor usikkerhetsbåndet. Ingen statistisk påvisbar forskjell mellom de mest og minst eksponerte yrkene, men tegn til utslag for de yngste i enkelte høyeksponerte yrker.
-  \item \textbf{Hva den kan gi informasjon om framover.} Løpende overvåking, hva som vil regnes som et reelt signal, og utvidelser som vurderes.
-\end{itemize}
-
-\vspace{0.8em}
-\footnotesize
-kiindeksen.no oppdateres månedlig etter hvert som nye data kommer til.
-\end{frame}
-
-% ---------------------------------------------------------------
 \begin{frame}{KI og fremtidens arbeidsmarked: i overskriftene}
 \centering
 \begin{tikzpicture}
@@ -130,27 +118,4 @@ Finland        & Kauhanen \& Rouvinen (2026)          & Null; utviklingen følge
 
 \vspace{0.6em}
 \raggedright\tiny\textcolor{illGray}{Kilder: Narayanan \& Kapoor (2025); Eloundou mfl.\ (2024); kiindeksen.no.}
-\end{frame}
-
-% ---------------------------------------------------------------
-% Illustrasjon: hva KI-indeksen måler (fra den private pptx-decken)
-\begin{frame}{Hva KI-indeksen måler}
-\vspace{0.4em}
-\centering
-\begin{tikzpicture}
-  \useasboundingbox (-0.2,0.5) rectangle (\textwidth,-3.1);
-  \illstep{(0.0,0)}{1}{Register}{Månedlige A-ordningsdata, alle ansatte i Norge}
-  \illarrow{(3.25,-1.2)}
-  \illstep{(3.9,0)}{2}{Utvalg}{Privat sektor, 21--60 år}
-  \illarrow{(7.15,-1.2)}
-  \illstep{(7.8,0)}{3}{Eksponering}{STYRK-08 koblet til O*NET-oppgaver}
-  \illarrow{(11.05,-1.2)}
-  \illstep{(11.7,0)}{4}{Sammenligning}{Mest eksponert (Q5) mot minst (Q1)}
-\end{tikzpicture}
-
-\vspace{0.5em}
-\illbanner{KI-indeksen: relativ sysselsettingsvekst i mest (Q5) mot minst (Q1) eksponert, snitt av siste tre måneder mot oktober 2022.}
-
-\vspace{0.2em}
-\raggedright\tiny\textcolor{illGray}{Kilder: kiindeksen.no; Hernæs \& Kostøl (2026).}
 \end{frame}
