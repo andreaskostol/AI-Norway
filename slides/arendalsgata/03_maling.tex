@@ -1,0 +1,171 @@
+% Hvordan vi måler: oppgaveperspektivet, indeksen, eksponeringsskår, gruppering.
+% Illustrasjonsslidene er de samme som i presentation_no (TikZ-gjenskapinger
+% av den private pptx-decken).
+
+\begin{frame}{En jobb består av oppgaver som påvirkes ulikt}
+\textcolor{illInk}{\textbf{Teknologi kan endre deler av jobben uten å erstatte hele.}}
+
+\vspace{0.3em}
+\centering
+\begin{tikzpicture}
+  \useasboundingbox (0,0.2) rectangle (\textwidth,-3.85);
+  \illcard{(0.0,0)}{illBlue}{OPPGAVENIVÅ}{En jobb er en samling oppgaver}{Arbeidsoppgaver kan flyttes mellom mennesker og teknologi. Yrket består så lenge viktige oppgaver fortsatt må løses av mennesker.}
+  \illcard{(5.1,0)}{illOrange}{HØY EKSPONERING}{Digital tekst, kode og analyse}{Standardiserte førsteutkast, dokumentbehandling og koding ligger nær språkmodellenes styrker.}
+  \illcard{(10.2,0)}{illGray}{LAVERE DIREKTE EKSPONERING}{Tilstedeværelse, relasjon og ansvar}{Fysisk arbeid, omsorg og skjønn under usikkerhet er vanskeligere å overføre fullt ut til en språkmodell. Per nå.}
+\end{tikzpicture}
+
+\vspace{0.15em}
+\illbanner{Rutinepregede inngangsoppgaver kan endres før hele yrker gjør det.}
+
+\vspace{0.1em}
+\raggedright\tiny\textcolor{illGray}{Kilder: Autor, Levy \& Murnane (2003); Acemoglu \& Autor (2011); Eloundou mfl.\ (2024); Brynjolfsson, Chandar \& Chen (2025).}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Tre krefter trekker sysselsettingen i ulike retninger}
+\vspace{0.3em}
+\centering
+\begin{tikzpicture}
+  \useasboundingbox (0,0.2) rectangle (\textwidth,-3.85);
+  \illcard{(0.0,0)}{illRed}{FORTRENGNING}{Oppgaver flyttes til maskiner}{Arbeidskraftens oppgaveandel faller. Etterspørselen etter arbeid går ned, alt annet likt.}
+  \illcard{(5.1,0)}{illTeal}{PRODUKTIVITET}{Lavere kostnad øker produksjonen}{Pris, kvalitet og etterspørsel kan endres. Behovet for arbeid i oppgavene som står igjen kan øke.}
+  \illcard{(10.2,0)}{illPurple}{NYE OPPGAVER}{Arbeidskraft får nye funksjoner}{Nye produkter, kontrollbehov og arbeidsoppgaver kan gjeninnsette arbeid i produksjonen.}
+\end{tikzpicture}
+
+\vspace{0.15em}
+\illbanner{Nettoeffekten følger ikke av hva modellen teknisk sett kan gjøre.}
+
+\vspace{0.1em}
+\raggedright\tiny\textcolor{illGray}{Rammeverk: Acemoglu og Restrepo (2019), Automation and New Tasks.}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Fire ulike størrelser som ofte blandes sammen}
+\vspace{0.4em}
+\centering
+\begin{tikzpicture}
+  \useasboundingbox (-0.2,0.5) rectangle (\textwidth,-3.6);
+  \illstep{(0.0,0)}{01}{Kapasitet}{Hva kan modellen gjøre i benchmarks?}
+  \illarrow{(3.25,-1.4)}
+  \illstep{(3.9,0)}{02}{Bruk}{Tas verktøyet faktisk i bruk på jobb?}
+  \illarrow{(7.15,-1.4)}
+  \illstep{(7.8,0)}{03}{Oppgaveendring}{Blir arbeidet raskere, bedre eller annerledes?}
+  \illarrow{(11.05,-1.4)}
+  \illstepx{(11.7,0)}{04}{Utfall}{Endres ansettelser, lønn eller sysselsetting?}
+\end{tikzpicture}
+
+\vspace{0.8em}
+\centering
+\textcolor{illInk}{\textbf{KI-indeksen observerer det siste leddet: arbeidsmarkedsutfall i norske registerdata.}}
+
+\vspace{0.4em}
+\raggedright\tiny\textcolor{illGray}{Kilder: Narayanan \& Kapoor (2025); Eloundou mfl.\ (2024); Google (2026); kiindeksen.no.}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Hva KI-indeksen måler}
+\vspace{0.4em}
+\centering
+\begin{tikzpicture}
+  \useasboundingbox (-0.2,0.5) rectangle (\textwidth,-3.1);
+  \illstep{(0.0,0)}{1}{Register}{Månedlige A-ordningsdata, alle ansatte i Norge}
+  \illarrow{(3.25,-1.2)}
+  \illstep{(3.9,0)}{2}{Utvalg}{Privat sektor, 21--60 år}
+  \illarrow{(7.15,-1.2)}
+  \illstep{(7.8,0)}{3}{Eksponering}{STYRK-08 koblet til O*NET-oppgaver}
+  \illarrow{(11.05,-1.2)}
+  \illstep{(11.7,0)}{4}{Sammenligning}{Mest eksponert (Q5) mot minst (Q1)}
+\end{tikzpicture}
+
+\vspace{0.5em}
+\illbanner{KI-indeksen: relativ sysselsettingsvekst i mest (Q5) mot minst (Q1) eksponert, snitt av siste tre måneder mot oktober 2022.}
+
+\vspace{0.2em}
+\raggedright\tiny\textcolor{illGray}{Kilder: kiindeksen.no; Hernæs \& Kostøl (2026).}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Eksponering måles på konkrete O*NET-oppgaver}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.36\textwidth}
+  {\bfseries\textcolor{illBlue}{O*NET}}
+
+  \vspace{0.5em}
+  {\footnotesize\textcolor{illGray}{Datasett fra US Department of Labor som beskriver rundt 1\,000 yrker med konkrete oppgaver. Eloundou mfl.\ vurderte hver oppgave for alle yrker.}}
+
+  \vspace{1.4em}
+  {\small\bfseries\textcolor{illInk}{KI-indeksens yrkesskår = Core-vektet gjennomsnitt av oppgavepoengene}}
+
+  \vspace{0.4em}
+  {\footnotesize\textcolor{illGray}{Core-oppgaver teller 2; Supplemental-oppgaver teller 1.}}
+\end{column}
+\begin{column}{0.60\textwidth}
+  \begin{tikzpicture}
+    \useasboundingbox (0,0.2) rectangle (8.4,-5.7);
+    \illerow{(0,0)}{illGray}{E0}{Skår: 0}{Ingen eksponering}{Språkmodellen reduserer ikke tidsbruken med minst 50 prosent.}
+    \illerow{(0,-2.0)}{illRed}{E1}{Skår: 1}{Språkmodell alene}{En språkmodell kan redusere tidsbruken med minst 50 prosent.}
+    \illerow{(0,-4.0)}{illOrange}{E2}{Skår: 0,5}{Språkmodell + programvare}{Tidsbruken kan reduseres med minst 50 prosent når annen programvare kobles på.}
+  \end{tikzpicture}
+\end{column}
+\end{columns}
+
+\vspace{0.2em}
+\raggedright\tiny\textcolor{illGray}{Kilder: O*NET Resource Center; Eloundou mfl.\ (Science, 2024).}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Fra oppgaver til skår: informasjonsrådgivere}
+\raggedright\scriptsize STYRK 2432 $\cdot$ O*NET 27-3031.00 $\cdot$ én-til-én-kobling gjennom SOC 2018 og SOC 2010
+
+\vspace{0.3em}
+\centering\tiny
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.12}
+\begin{tabular}{p{4.9cm}cc @{\hspace{0.5cm}} p{5.3cm}cc}
+\toprule
+O*NET-oppgave & $E$ & $\beta$ & O*NET-oppgave & $E$ & $\beta$ \\
+\midrule
+\rO{Svare medier eller finne talsperson}{$E_2$}{0,5}        & \rO{Arrangere opptredener og arrangementer}{$E_2$}{0,5} \\
+\rO{Planlegge kommunikasjonsprogrammer}{$E_2$}{0,5}         & \rO{Gjennomføre markeds- og opinionsundersøkelser}{$E_2$}{0,5} \\
+\rR{Oppdatere nettside og sosiale medier}{$E_1$}{1}         & \rO{Formidle miljø- og samfunnstiltak}{$E_2$}{0,5} \\
+\rR{Skrive pressemeldinger og medietekst}{$E_1$}{1}         & \rO{Koordinere reklame- og kampanjeproduksjon}{$E_2$}{0,5} \\
+Bygge relasjoner til interessegrupper & $E_0$ & 0            & \rO{Planlegge kampanjer med byråer og medier}{$E_2$}{0,5} \\
+\rO{Rådgi ledere om trender og interesser}{$E_2$}{0,5}      & \rR{Skrive eller holde taler}{$E_1$}{1} \\
+\rO{Trene talspersoner i kommunikasjon}{$E_2$}{0,5}         & \rO{Håndtere offentlig respons ved hendelser (supp.)}{$E_2$}{0,5} \\
+\rO{Utvikle PR-strategier}{$E_2$}{0,5}                      & \rO{Markedsføre miljøteknologi og -tjenester (supp.)}{$E_2$}{0,5} \\
+\rR{Redigere interne og eksterne publikasjoner}{$E_1$}{1}   & \rO{Kjøpe annonseplass og sendetid (supp.)}{$E_2$}{0,5} \\
+\midrule
+\multicolumn{6}{l}{\textbf{18 oppgaver: 1 $E_0$ \; 4 $E_1$ \; 13 $E_2$ \quad Core $\times$ 2, Supplemental $\times$ 1 \quad yrkes-$\beta$ = 0,591 \quad øverste femtedel (Q5)}} \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3em}
+\raggedright\tiny\textcolor{illGray}{Kilde: O*NET, Eloundou mfl.\ (2024) og prosjektets SOC--ISCO/STYRK-krysskobling. Oppgavetekstene er oversatt fra O*NET.}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{397 yrker rangeres og deles i fem like store grupper}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.47\textwidth}
+{\small\bfseries\textcolor{illGray}{Q1: minst eksponert}}
+
+\vspace{0.4em}
+\small
+Renholdere \\ Elektrikere \\ Bilmekanikere \\ Rørleggere
+\end{column}
+\begin{column}{0.47\textwidth}
+{\small\bfseries\textcolor{illBlue}{Q5: mest eksponert}}
+
+\vspace{0.4em}
+\small
+Selgere (engros) \\ Kontormedarbeidere \\ Systemanalytikere \\ Programvareutviklere \\ Regnskapsførere
+\end{column}
+\end{columns}
+
+\vspace{1.0em}
+\begin{itemize}\setlength{\itemsep}{4pt}
+  \item Hvert yrke får sin skår, som informasjonsrådgiverne fikk 0,591.
+  \item Yrkene rangeres og deles i fem like store grupper, fra minst til mest eksponert.
+  \item KI-indeksen sammenligner sysselsettingsveksten i den øverste og den nederste gruppen.
+\end{itemize}
+\end{frame}

@@ -1,0 +1,47 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+% Kort, folkelig deck for Arendalsgata 2026 (25 min, Sagene samfunnshus).
+% Tema: Metropolis, uten seksjonssider.
+\usetheme{metropolis}
+\metroset{numbering=none, progressbar=foot, sectionpage=none}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[norsk]{babel}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{ragged2e}
+
+% Delte stiler fra de andre deckene
+\input{../presentation/tikz_macros}
+\input{../presentation_no/illustration_macros}
+
+\graphicspath{{./}{../presentation/}{../presentation_no/}{../mapping/}{../../analysis/output/figures/}}
+
+\definecolor{accent}{HTML}{1F4E79}
+\setbeamercolor{progress bar}{fg=accent}
+\setbeamercolor{title separator}{fg=accent}
+\setbeamercolor{frametitle}{bg=accent}
+\setbeamercolor{alerted text}{fg=accent}
+
+\title{KI og det norske arbeidsmarkedet}
+\subtitle{Hva viser dataene så langt, og hva bør vi følge med på?}
+\author{Øystein Hernæs}
+\institute{Frischsenteret \and kiindeksen.no}
+\date{Arendalsgata, 13.\ august 2026}
+
+\begin{document}
+
+\maketitle
+
+\input{01_intro}
+\input{02_case}
+\input{03_maling}
+\input{04_resultater}
+\input{05_avslutning}
+
+\end{document}
