@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.3.31)  12 AUG 2026 11:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.3.31)  12 AUG 2026 12:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1159,25 +1159,32 @@ File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 
 ] [15
 
+]
+Overfull \hbox (14.5145pt too wide) in paragraph at lines 83--83
+ [][] 
+ []
+
+[16
+
 ]) (../mapping/eloundou_distribution.tex
-<../mapping/eloundou_distribution.pdf, id=161, 787.39543pt x 351.46431pt>
+<../mapping/eloundou_distribution.pdf, id=166, 787.39543pt x 351.46431pt>
 File: ../mapping/eloundou_distribution.pdf Graphic file (type pdf)
 <use ../mapping/eloundou_distribution.pdf>
 Package pdftex.def Info: ../mapping/eloundou_distribution.pdf  used on input li
 ne 10.
 (pdftex.def)             Requested size: 318.7252pt x 142.26718pt.
- [16
+ [17
 
  <../mapping/eloundou_distribution.pdf>])
 Overfull \vbox (19.1089pt too high) detected at line 88
  []
 
-[17
+[18
 
-]) [18
+]) [19
 
 ] (05_results_descriptive.tex
-<../../analysis/output/figures/figure_emp_byexposure_sa.pdf, id=245, 697.16772p
+<../../analysis/output/figures/figure_emp_byexposure_sa.pdf, id=251, 697.16772p
 t x 409.17993pt>
 File: ../../analysis/output/figures/figure_emp_byexposure_sa.pdf Graphic file (
 type pdf)
@@ -1189,10 +1196,10 @@ Package pdftex.def Info: ../../analysis/output/figures/figure_emp_byexposure_sa
 Overfull \vbox (0.6851pt too high) detected at line 10
  []
 
-[19
+[20
 
  <../../analysis/output/figures/figure_emp_byexposure_sa.pdf>]
-<../../analysis/output/figures/figure_occupations_by_age_sa.pdf, id=296, 848.99
+<../../analysis/output/figures/figure_occupations_by_age_sa.pdf, id=301, 848.99
 63pt x 697.74863pt>
 File: ../../analysis/output/figures/figure_occupations_by_age_sa.pdf Graphic fi
 le (type pdf)
@@ -1204,10 +1211,10 @@ e_sa.pdf  used on input line 20.
 Overfull \vbox (6.53374pt too high) detected at line 20
  []
 
-[20
+[21
 
  <../../analysis/output/figures/figure_occupations_by_age_sa.pdf>]
-<../../analysis/output/figures/figure_emp_decade_private_sa.pdf, id=343, 842.67
+<../../analysis/output/figures/figure_emp_decade_private_sa.pdf, id=348, 842.67
 827pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_emp_decade_private_sa.pdf Graphic fi
 le (type pdf)
@@ -1219,10 +1226,10 @@ e_sa.pdf  used on input line 34.
 Overfull \vbox (9.02061pt too high) detected at line 34
  []
 
-[21
+[22
 
  <../../analysis/output/figures/figure_emp_decade_private_sa.pdf>]
-<../../analysis/output/figures/figure_age_by_quintile_handa_auto_sa.pdf, id=393
+<../../analysis/output/figures/figure_age_by_quintile_handa_auto_sa.pdf, id=398
 , 842.67827pt x 790.04285pt>
 File: ../../analysis/output/figures/figure_age_by_quintile_handa_auto_sa.pdf Gr
 aphic file (type pdf)
@@ -1234,19 +1241,19 @@ anda_auto_sa.pdf  used on input line 48.
 Overfull \vbox (21.67055pt too high) detected at line 48
  []
 
-[22
+[23
 
  <../../analysis/output/figures/figure_age_by_quintile_handa_auto_sa.pdf>])
-[23
+[24
 
 ] (06_results_diffindiff.tex
 Overfull \vbox (2.61891pt too high) detected at line 23
  []
 
-[24
+[25
 
 ]
-<../../analysis/output/figures/figure_microdata_poisson_es_grid.pdf, id=475, 84
+<../../analysis/output/figures/figure_microdata_poisson_es_grid.pdf, id=481, 84
 2.71962pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_microdata_poisson_es_grid.pdf Graphi
 c file (type pdf)
@@ -1258,19 +1265,19 @@ _es_grid.pdf  used on input line 34.
 Overfull \vbox (7.1447pt too high) detected at line 34
  []
 
-[25
+[26
 
  <../../analysis/output/figures/figure_microdata_poisson_es_grid.pdf>]
-[26
+[27
 
 ] (../../analysis/output/tables/table_honest_did.tex)
 Overfull \vbox (7.37898pt too high) detected at line 78
  []
 
-[27
+[28
 
 ]
-<METR_time_horizon.JPG, id=531, 892.08281pt x 419.31656pt>
+<METR_time_horizon.JPG, id=536, 892.08281pt x 419.31656pt>
 File: METR_time_horizon.JPG Graphic file (type jpg)
 <use METR_time_horizon.JPG>
 Package pdftex.def Info: METR_time_horizon.JPG  used on input line 88.
@@ -1279,12 +1286,12 @@ Package pdftex.def Info: METR_time_horizon.JPG  used on input line 88.
 Overfull \vbox (6.97508pt too high) detected at line 88
  []
 
-[28
+[29
 
- <./METR_time_horizon.JPG>] [29
+ <./METR_time_horizon.JPG>] [30
 
 ]
-<../../analysis/output/figures/figure_microdata_es_decade_agentic.pdf, id=545, 
+<../../analysis/output/figures/figure_microdata_es_decade_agentic.pdf, id=550, 
 842.79994pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_microdata_es_decade_agentic.pdf Grap
 hic file (type pdf)
@@ -1296,15 +1303,15 @@ de_agentic.pdf  used on input line 110.
 Overfull \vbox (5.39513pt too high) detected at line 110
  []
 
-[30
-
- <../../analysis/output/figures/figure_microdata_es_decade_agentic.pdf>])
 [31
 
-] (07_firmfe.tex [32
+ <../../analysis/output/figures/figure_microdata_es_decade_agentic.pdf>])
+[32
+
+] (07_firmfe.tex [33
 
 ]
-<../../analysis/output/figures/figure_firmfe_poisson_es_grid.pdf, id=599, 842.7
+<../../analysis/output/figures/figure_firmfe_poisson_es_grid.pdf, id=604, 842.7
 1962pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_firmfe_poisson_es_grid.pdf Graphic f
 ile (type pdf)
@@ -1316,10 +1323,10 @@ _grid.pdf  used on input line 24.
 Overfull \vbox (4.79912pt too high) detected at line 24
  []
 
-[33
+[34
 
  <../../analysis/output/figures/figure_firmfe_poisson_es_grid.pdf>]
-<../../analysis/output/figures/figure_cell_vs_firmfe_q5_grid.pdf, id=643, 842.7
+<../../analysis/output/figures/figure_cell_vs_firmfe_q5_grid.pdf, id=648, 842.7
 1962pt x 708.73909pt>
 File: ../../analysis/output/figures/figure_cell_vs_firmfe_q5_grid.pdf Graphic f
 ile (type pdf)
@@ -1331,10 +1338,10 @@ _grid.pdf  used on input line 34.
 Overfull \vbox (4.79912pt too high) detected at line 34
  []
 
-[34
+[35
 
  <../../analysis/output/figures/figure_cell_vs_firmfe_q5_grid.pdf>]
-<../../analysis-indiv/output/bcc_appendix/fig_bcc_4_es.pdf, id=685, 1048.67198p
+<../../analysis-indiv/output/bcc_appendix/fig_bcc_4_es.pdf, id=690, 1048.67198p
 t x 539.35376pt>
 File: ../../analysis-indiv/output/bcc_appendix/fig_bcc_4_es.pdf Graphic file (t
 ype pdf)
@@ -1346,20 +1353,20 @@ pdf  used on input line 44.
 Overfull \vbox (5.56825pt too high) detected at line 44
  []
 
-[35
+[36
 
- <../../analysis-indiv/output/bcc_appendix/fig_bcc_4_es.pdf>]) [36
+ <../../analysis-indiv/output/bcc_appendix/fig_bcc_4_es.pdf>]) [37
 
 ]
-(09_discussion.tex [37
+(09_discussion.tex [38
 
-]) [38
+]) [39
 
 ] (09_dashboard.tex
-(../../analysis/output/tables/table_quintile_yagan.tex) [39
+(../../analysis/output/tables/table_quintile_yagan.tex) [40
 
 ]
-<../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf, id=750, 697.18
+<../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf, id=755, 697.18
 904pt x 408.21506pt>
 File: ../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf Graphic fi
 le (type pdf)
@@ -1371,21 +1378,21 @@ s_ci.pdf  used on input line 20.
 Overfull \vbox (8.41327pt too high) detected at line 20
  []
 
-[40
+[41
 
- <../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf>]) [41
+ <../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf>]) [42
 
 ]
 (10_conclusion.tex
 Overfull \vbox (1.05788pt too high) detected at line 12
  []
 
-[42
+[43
 
-]) [43
+]) [44
 
 ] (08_robustness.tex
-<../../analysis/output/figures/figureA0b_cohort_sizes.pdf, id=825, 1038.15564pt
+<../../analysis/output/figures/figureA0b_cohort_sizes.pdf, id=830, 1038.15564pt
  x 464.52608pt>
 File: ../../analysis/output/figures/figureA0b_cohort_sizes.pdf Graphic file (ty
 pe pdf)
@@ -1397,10 +1404,10 @@ df  used on input line 13.
 Overfull \vbox (11.68594pt too high) detected at line 13
  []
 
-[44
+[45
 
  <../../analysis/output/figures/figureA0b_cohort_sizes.pdf>]) (90_backup.tex
-<LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG, id=909, 928.21782pt x 613.54219pt>
+<LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG, id=914, 928.21782pt x 613.54219pt>
 File: LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG Graphic file (type jpg)
 <use LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG>
 Package pdftex.def Info: LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG  used on inp
@@ -1410,10 +1417,10 @@ ut line 16.
 Overfull \vbox (9.04164pt too high) detected at line 16
  []
 
-[45
+[46
 
  <./LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG>]
-<../../analysis/output/figures/figure_emp_decade_public_sa.pdf, id=916, 842.587
+<../../analysis/output/figures/figure_emp_decade_public_sa.pdf, id=921, 842.587
 9pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_emp_decade_public_sa.pdf Graphic fil
 e (type pdf)
@@ -1425,10 +1432,10 @@ _sa.pdf  used on input line 30.
 Overfull \vbox (11.88708pt too high) detected at line 30
  []
 
-[46
+[47
 
  <../../analysis/output/figures/figure_emp_decade_public_sa.pdf>]
-<../../analysis/output/figures/figure_kontantlonn_decade_private.pdf, id=961, 8
+<../../analysis/output/figures/figure_kontantlonn_decade_private.pdf, id=966, 8
 42.59795pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_kontantlonn_decade_private.pdf Graph
 ic file (type pdf)
@@ -1440,10 +1447,10 @@ e_private.pdf  used on input line 44.
 Overfull \vbox (14.91304pt too high) detected at line 44
  []
 
-[47
+[48
 
  <../../analysis/output/figures/figure_kontantlonn_decade_private.pdf>]
-<../../analysis/output/figures/figure_age_by_quintile_handa_aug_sa.pdf, id=1007
+<../../analysis/output/figures/figure_age_by_quintile_handa_aug_sa.pdf, id=1012
 , 842.67827pt x 790.04285pt>
 File: ../../analysis/output/figures/figure_age_by_quintile_handa_aug_sa.pdf Gra
 phic file (type pdf)
@@ -1455,10 +1462,10 @@ anda_aug_sa.pdf  used on input line 58.
 Overfull \vbox (11.88708pt too high) detected at line 58
  []
 
-[48
+[49
 
  <../../analysis/output/figures/figure_age_by_quintile_handa_aug_sa.pdf>]
-<../../analysis/output/figures/figure_microdata_poisson_es_grid_q3.pdf, id=1073
+<../../analysis/output/figures/figure_microdata_poisson_es_grid_q3.pdf, id=1079
 , 850.74962pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_microdata_poisson_es_grid_q3.pdf Gra
 phic file (type pdf)
@@ -1470,21 +1477,15 @@ _es_grid_q3.pdf  used on input line 72.
 Overfull \vbox (11.88708pt too high) detected at line 72
  []
 
-[49
-
- <../../analysis/output/figures/figure_microdata_poisson_es_grid_q3.pdf>]
 [50
 
-] (../mapping/eloundou_extra.tex
-Overfull \hbox (14.5145pt too wide) in paragraph at lines 27--27
- [][] 
- []
-
+ <../../analysis/output/figures/figure_microdata_poisson_es_grid_q3.pdf>]
 [51
 
-] [52
+] (../mapping/eloundou_extra.tex [52
 
-]) (../mapping/eloundou_examples.tex [53
+]) (../mapping/eloundou_examples.tex
+[53
 
 ] [54
 
@@ -1496,8 +1497,7 @@ Overfull \hbox (14.5145pt too wide) in paragraph at lines 27--27
 
 ] [58
 
-]
-[59
+] [59
 
 ]
 Overfull \vbox (3.76614pt too high) detected at line 216
@@ -1588,7 +1588,7 @@ r/sfsx1000.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx1095.pf
 b><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx1200.pfb><C:/Program
  Files/MiKTeX/fonts/type1/public/cm-super/sfsx1440.pfb><C:/Program Files/MiKTeX
 /fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (64 pages, 4551585 bytes).
+Output written on main.pdf (64 pages, 4551532 bytes).
 PDF statistics:
  1379 PDF objects out of 1440 (max. 8388607)
  150 named destinations out of 1000 (max. 500000)
