@@ -4,8 +4,8 @@ plot_occ_cases_single.py
 Single-panel per-occupation employment figures for the Arendalsgata talk,
 in the style of the kiindeksen.no yrkescase section: one occupation group
 per figure, one line per decade age group in the dashboard's age colors,
-seasonally adjusted headcount indexed to October 2022 = 100. No title
-baked in (the slide carries it).
+seasonally adjusted per-capita employment indexed to October 2022 = 100,
+no smoothing. No title baked in (the slide carries it).
 
 Reads analysis/output/figure_data/fig_selected_occ_by_age.csv
 (built by build_figure_data.py). Outputs one PDF per occupation group:
@@ -72,10 +72,10 @@ def style():
     })
 
 
-def sa_index(g):
-    """SA headcount for one series, indexed to Oct 2022 = 100."""
+def sa_index(g, col="percap"):
+    """SA per-capita series, indexed to Oct 2022 = 100."""
     g = g.sort_values("date").copy()
-    sa = seasonal_adjust(g[["date", "count"]].rename(columns={"count": "value"}),
+    sa = seasonal_adjust(g[["date", col]].rename(columns={col: "value"}),
                          SEAS_FROM, SEAS_TO)
     base = sa.loc[sa["date"] == NORM_DATE, "value"].iloc[0]
     g["y"] = 100 * sa["value"].to_numpy() / base
@@ -116,6 +116,26 @@ def newest_parsed():
     return sorted(glob.glob(pats))[-1]
 
 
+DECADE_RANGES = {"1": (21, 30), "2": (31, 40), "3": (41, 50), "4": (51, 60)}
+
+
+def load_pop():
+    """Resident population per decade age group and quarter (as in build_figure_data)."""
+    p = pd.read_csv(os.path.join(BASE_DIR, "data", "macro",
+                                 "ssb_population_by_age_quarterly.csv"))
+    out = {}
+    for code, (lo, hi) in DECADE_RANGES.items():
+        s = p[(p["age"] >= lo) & (p["age"] <= hi)].groupby("date")["population"].sum()
+        for qd, val in s.items():
+            out[(code, qd)] = val
+    return out
+
+
+def yq(datestr):
+    y, m, _ = datestr.split("-")
+    return f"{y}-Q{(int(m) - 1) // 3 + 1}"
+
+
 def main():
     os.makedirs(FIG_DIR, exist_ok=True)
     style()
@@ -128,13 +148,16 @@ def main():
              f"figure_case_{slug}_sa.pdf")
 
     # All occupations by age group (kiindeksen.no "Alder" figure),
-    # from the newest parsed kpos file, private sector.
+    # from the newest parsed kpos file, private sector, per capita.
     raw = pd.read_csv(newest_parsed(), dtype={"yrke4": str, "alder_gr": str,
                                               "sekt": str})
     raw = raw[(raw["variable"] == "count") & (raw["sekt"] == "2")
               & (raw["alder_gr"].isin(["1", "2", "3", "4"]))]
     agg = (raw.groupby(["date", "alder_gr"], as_index=False)["value"].sum()
            .rename(columns={"value": "count"}))
+    pop = load_pop()
+    agg["percap"] = [v / pop[(a, yq(d))]
+                     for v, a, d in zip(agg["count"], agg["alder_gr"], agg["date"])]
     draw({a: agg[agg["alder_gr"] == a] for a in ["1", "2", "3", "4"]},
          "figure_case_alder_sa.pdf")
 
