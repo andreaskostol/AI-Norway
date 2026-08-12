@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1786535857.49941 "main.tex" "main.pdf" "main" 1786535861.95913 0
+["pdflatex"] 1786541130.0314 "main.tex" "main.pdf" "main" 1786541134.4855 0
   "../../analysis-indiv/output/bcc_appendix/fig_bcc_4_es.pdf" 1782118438.92051 52763 0ce47cd639b6ed01ac8b14b7ff585b2b ""
   "../../analysis/output/figures/figureA0b_cohort_sizes.pdf" 1782111727.97441 35434 95b9be9eb9d6c3df59ca5da67580d6a4 ""
   "../../analysis/output/figures/figure_age_by_quintile_handa_aug_sa.pdf" 1783249662 38130 c7fd62a3409ef6483d4e82e898e6efcc ""
@@ -20,7 +20,7 @@
   "../mapping/eloundou_core.tex" 1786530863.88344 4830 052af75a69295643da941f7cf42f4f5c ""
   "../mapping/eloundou_distribution.pdf" 1780261223 23404 5a5aa1ab3904fef0c0b03220208a50cf ""
   "../mapping/eloundou_distribution.tex" 1780644412 555 209daf88750ddb28b353eef043a724f2 ""
-  "../mapping/eloundou_examples.tex" 1780646023 17222 cc0c9e676818bab7aacae20cd5a4dc45 ""
+  "../mapping/eloundou_examples.tex" 1786541106.82711 17221 7cde6c4aef8200b45fea6391aaf5fae3 ""
   "../mapping/eloundou_extra.tex" 1786530870.96804 1382 1adde1b63a828e448e7b2a22adb14d8a ""
   "../mapping/eloundou_manytoone.tex" 1786535821.01651 1243 c4695efe7d399bca22d0d5267bf1a06c ""
   "../mapping/onet_intro.tex" 1780645397 1048 6b44cfcf0891b4d4d1245b1a562aa4dd ""
@@ -326,9 +326,9 @@
   "LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG" 1780516590 151879 89df90942eafed1502c3c8e44e1b75ec ""
   "METR_time_horizon.JPG" 1780516538 89683 6e66a2215e9382c2ea1ff35c828b4494 ""
   "NYTimes_AIdoesnthavetomeanlayoffs.JPG" 1780586384 67348 e8d974c84aef78c7a506fcdf6845a9b3 ""
-  "main.aux" 1786535861.23391 11032 6db080da088f1669cba4eafbc536f6da "pdflatex"
-  "main.nav" 1786535861.26406 7465 9d5b4e353d8b44643994b705655a973c "pdflatex"
-  "main.out" 1786535861.24172 1237 b451f5e322ab8201547129adb913fec6 "pdflatex"
+  "main.aux" 1786541133.76485 11032 6db080da088f1669cba4eafbc536f6da "pdflatex"
+  "main.nav" 1786541133.79201 7465 9d5b4e353d8b44643994b705655a973c "pdflatex"
+  "main.out" 1786541133.776 1237 b451f5e322ab8201547129adb913fec6 "pdflatex"
   "main.tex" 1786527845.26776 2492 635e15be950d308ec3c4931e472a9305 ""
   "tikz_macros.tex" 1781945624 2048 128927e753132ab2749aeee6b76c38f8 ""
   (generated)

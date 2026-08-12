@@ -158,60 +158,52 @@ Select jurors, argue motions, meet judges   & $E_0$ & 0.0 & \rO{Search and exami
 
 
 % =================================================================
-% STYRK 2631: Forskere/rådgivere, samf.økonomi (Economists)
+% STYRK 2262: Farmasøyter (Pharmacists) — hovedeksempel i den engelske
+% decken; her i backup siden samfunnsøkonomene er hovedeksempel.
 % =================================================================
-\begin{frame}{Gjennomregnet eksempel: Samfunnsøkonomer (STYRK 2631)}
+\begin{frame}{Gjennomregnet eksempel: farmasøyter (STYRK 2262)}
 \centering
-\begin{tikzpicture}[node distance=0.7cm and 1.1cm]
-  \node[codebox=cTASK] (t1) {\cbox{cTASK}{O*NET}{19-3011.00}{Economists, 13 oppgaver}};
-  \node[codebox=cTASK, below=of t1] (t2) {\cbox{cTASK}{O*NET}{19-3011.01}{Environmental econ., 20 oppgaver}};
+\begin{tikzpicture}[node distance=1.0cm and 1.1cm]
+  \node[codebox=cTASK] (task) {\cbox{cTASK}{O*NET-oppgave}{21 oppgaver}{$E_0/E_1/E_2$-vurderinger}};
+  \node[codebox=cSOC18, right=of task] (soc18) {\cbox{cSOC18}{SOC 2018}{29-1051}{Pharmacists}};
+  \node[codebox=cSOC10, right=of soc18] (soc10) {\cbox{cSOC10}{SOC 2010}{29-1051}{Pharmacists}};
+  \node[codebox=cSTYRK, right=of soc10] (isco) {\cbox{cSTYRK}{ISCO-08}{2262}{Farmasøyter}};
 
-  \node[codebox=cSOC18, right=2cm of $(t1)!0.5!(t2)$] (soc18) {\cbox{cSOC18}{SOC 2018}{19-3011}{Economists}};
-  \node[codebox=cSOC10, right=of soc18] (soc10) {\cbox{cSOC10}{SOC 2010}{19-3011}{Economists}};
-  \node[codebox=cSTYRK, right=of soc10] (isco) {\cbox{cSTYRK}{ISCO-08}{2631}{Samfunnsøkonomer}};
-
-  \draw[chain] (t1) -- node[arrowlabel,above]{$\beta = 0{,}500$} (soc18);
-  \draw[chain] (t2) -- node[arrowlabel,below]{$\beta = 0{,}600$} (soc18);
+  \draw[chain] (task) -- node[arrowlabel]{snitt} (soc18);
   \draw[chain] (soc18) -- node[arrowlabel]{1$\to$1} (soc10);
   \draw[chain] (soc10) -- node[arrowlabel]{1$\to$1} (isco);
 \end{tikzpicture}
 
-\vspace{0.5em}
-To O*NET-spesialiteter samles i én SOC 2018-kode. SOC-nivåets $\beta$ er snittet av de to spesialitetssnittene: $(0{,}500 + 0{,}600)/2 = 0{,}550$, uavhengig av hvor mange oppgaver hver spesialitet har.
+\vspace{1em}
+\begin{itemize}\setlength{\itemsep}{4pt}
+  \item Farmasøyter har samme sekssifrede SOC-kode i begge årganger: 29-1051
+  \item BLS-krysskoblingen sender 29-1051 til én ISCO-08-kode (2262)
+  \item Norsk STYRK 2262 er farmasøyter, ingen norsk omkoding nødvendig
+\end{itemize}
 \end{frame}
 
 % oppgavetabell
-\begin{frame}{Oppgaveskåring: Economists (SOC 19-3011, 33 oppgaver i 2 spesialiteter)}
-\centering\tiny
+\begin{frame}{Oppgaveskåring for farmasøyter (SOC 29-1051, alle 21 oppgaver)}
+\centering\scriptsize
 \setlength{\tabcolsep}{4pt}
-\renewcommand{\arraystretch}{1.0}
-\begin{tabular}{p{5.4cm}cc @{\hspace{0.3cm}} p{5.4cm}cc}
+\renewcommand{\arraystretch}{0.95}
+\begin{tabular}{p{5.5cm}cc @{\hspace{0.7cm}} p{5.5cm}cc}
 \toprule
-\multicolumn{3}{l}{\textbf{19-3011.00 Economists (13 oppgaver)}} & \multicolumn{3}{l}{\textbf{19-3011.01 Env.\ Economists (20 oppgaver)}} \\
+O*NET-oppgave & $E$ & $\beta$ & O*NET-oppgave & $E$ & $\beta$ \\
 \midrule
-\rO{Study economic and statistical data}{$E_2$}{0.5}           & \rO{Prepare and deliver presentations}{$E_2$}{0.5} \\
-\rO{Conduct research on economic issues}{$E_2$}{0.5}           & \rO{Develop programs or policy recommendations}{$E_2$}{0.5} \\
-\rO{Compile, analyze, report data}{$E_2$}{0.5}                 & \rO{Develop economic models and forecasts}{$E_2$}{0.5} \\
-\rO{Supervise research projects}{$E_2$}{0.5}                   & \rO{Demonstrate economic benefits of policies}{$E_2$}{0.5} \\
-\rO{Teach theories and methods of economics}{$E_2$}{0.5}       & \rO{Conduct research on environmental relations}{$E_2$}{0.5} \\
-\rO{Study impacts of public policies}{$E_2$}{0.5}              & \rR{Perform complex mathematical analyses}{$E_1$}{1.0} \\
-\rO{Formulate recommendations and plans}{$E_2$}{0.5}           & \rR{Write social, legal, economic impact reports}{$E_1$}{1.0} \\
-\rO{Explain economic impact of policies}{$E_2$}{0.5}           & \rO{Teach courses in environmental economics}{$E_2$}{0.5} \\
-\rO{Provide advice and consultation}{$E_2$}{0.5}               & \rO{Develop programs to promote sustainability}{$E_2$}{0.5} \\
-\rO{Forecast production and consumption}{$E_2$}{0.5}           & \rO{Develop systems for analyzing data}{$E_2$}{0.5} \\
-\rO{Develop economic guidelines and standards}{$E_2$}{0.5}     & \rR{Write research proposals and grants}{$E_1$}{1.0} \\
-\rO{Testify at regulatory or legislative hearings}{$E_2$}{0.5} & \rO{Examine exhaustibility of natural resources}{$E_2$}{0.5} \\
-\rO{Provide litigation support}{$E_2$}{0.5}                    & \rO{Monitor or analyze market and env.\ trends}{$E_2$}{0.5} \\
-\rR{Write technical documents or articles}{$E_1$}{1.0}         & \rO{Develop environmental research project plans}{$E_2$}{0.5} \\
-                                              &       &     & \rO{Conduct research on economic, env.\ topics}{$E_2$}{0.5} \\
-                                              &       &     & \rO{Collect and analyze data on env.\ impact}{$E_2$}{0.5} \\
-                                              &       &     & \rO{Assess costs and benefits of activities}{$E_2$}{0.5} \\
-                                              &       &     & \rO{Identify environmentally friendly business}{$E_2$}{0.5} \\
-                                              &       &     & \rO{Interpret indicators of ecosystem health}{$E_2$}{0.5} \\
-                                              &       &     & \rO{Collaborate with researchers across fields}{$E_2$}{0.5} \\
-\midrule
-\multicolumn{3}{l}{\textbf{Spesialitetssnitt:} \;0,500} & \multicolumn{3}{l}{\textbf{Spesialitetssnitt:} \;0,600} \\
-\multicolumn{6}{l}{\textbf{SOC-$\beta$} $= (0{,}500 + 0{,}600)/2 = $ \textbf{0,550 (Q5)}} \\
+\rO{Review prescriptions for accuracy}{$E_2$}{0.5}             & \rO{Refer patients to other professionals}{$E_2$}{0.5} \\
+Assess identity, strength, purity of meds     & $E_0$ & 0.0 & \rO{Work in hospitals/clinics or for HMOs}{$E_2$}{0.5} \\
+\rO{Provide info on drug interactions}{$E_2$}{0.5}             & \rR{Update or troubleshoot pharmacy databases}{$E_1$}{1.0} \\
+\rO{Analyze prescribing trends}{$E_2$}{0.5}                    & \rO{Manage pharmacy operations, hire, supervise}{$E_2$}{0.5} \\
+\rO{Maintain pharmacy files and patient profiles}{$E_2$}{0.5}  & Prepare sterile solutions                           & $E_0$ & 0.0 \\
+\rO{Collaborate with other health professionals}{$E_2$}{0.5}   & Offer health promotion / prevention activities      & $E_0$ & 0.0 \\
+Plan procedures for mixing and labeling       & $E_0$ & 0.0 & Assay radiopharmaceuticals                          & $E_0$ & 0.0 \\
+\rO{Order and purchase pharmaceutical supplies}{$E_2$}{0.5}    & \rR{Publish educational information}{$E_1$}{1.0} \\
+Compound and dispense medications             & $E_0$ & 0.0 & & & \\
+\rO{Contact insurance companies on billing}{$E_2$}{0.5}        & \multicolumn{3}{l}{\textbf{Antall:} 6 $E_0$ \quad 3 $E_1$ \quad 12 $E_2$} \\
+\rO{Advise customers on medication brands}{$E_2$}{0.5}         & & & \\
+\rR{Teach pharmacy students serving as interns}{$E_1$}{1.0}    & \multicolumn{3}{l}{\textbf{Yrkes-$\beta$ (snitt av 21):} \;\; \textbf{0,4286 (Q4)}} \\
+\rO{Provide services for diabetes, asthma, etc.}{$E_2$}{0.5}   & & & \\
 \bottomrule
 \end{tabular}
 \end{frame}
