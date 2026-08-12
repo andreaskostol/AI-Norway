@@ -500,6 +500,35 @@ INPUT ..\..\analysis\output\figures\figure_case_hjemmehjelpere_sa.pdf
 INPUT ..\..\analysis\output\figures\figure_case_hjemmehjelpere_sa.pdf
 INPUT ..\..\analysis\output\figures\figure_case_hjemmehjelpere_sa.pdf
 INPUT ..\..\analysis\output\figures\figure_case_hjemmehjelpere_sa.pdf
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\sansmathaccent\ot1mathkerncmss.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\sansmathaccent\ot1mathkerncmss.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\sansmathaccent\ot1mathkerncmss.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\sansmathaccent\mathkerncmssi10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\sansmathaccent\mathkerncmssi8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\sansmathaccent\mathkerncmssi8.tfm
 INPUT .\03_maling.tex
 INPUT .\03_maling.tex
 INPUT .\03_maling.tex
@@ -510,33 +539,10 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecsx0800.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecsx1000.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecsx0900.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmss8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsa.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msam5.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\amsfonts\umsb.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\symbols\msbm5.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecss0500.tfm
-INPUT C:\Program Files\MiKTeX\tex\latex\sansmathaccent\ot1mathkerncmss.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\sansmathaccent\ot1mathkerncmss.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\sansmathaccent\ot1mathkerncmss.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\sansmathaccent\mathkerncmssi8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\sansmathaccent\mathkerncmssi8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\sansmathaccent\mathkerncmssi8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecsx0600.tfm
 INPUT C:\Program Files\MiKTeX\tex\latex\base\ts1cmss.fd
@@ -567,11 +573,11 @@ INPUT ..\presentation_no\kiindeksen_screenshot.png
 INPUT ..\presentation_no\kiindeksen_screenshot.png
 INPUT ..\presentation_no\kiindeksen_screenshot.png
 INPUT ..\presentation_no\kiindeksen_screenshot.png
-INPUT ..\..\analysis\output\figures\figure_emp_decade_private_sa.pdf
-INPUT ..\..\analysis\output\figures\figure_emp_decade_private_sa.pdf
-INPUT ..\..\analysis\output\figures\figure_emp_decade_private_sa.pdf
-INPUT ..\..\analysis\output\figures\figure_emp_decade_private_sa.pdf
-INPUT ..\..\analysis\output\figures\figure_emp_decade_private_sa.pdf
+INPUT ..\..\analysis\output\figures\figure_case_alder_sa.pdf
+INPUT ..\..\analysis\output\figures\figure_case_alder_sa.pdf
+INPUT ..\..\analysis\output\figures\figure_case_alder_sa.pdf
+INPUT ..\..\analysis\output\figures\figure_case_alder_sa.pdf
+INPUT ..\..\analysis\output\figures\figure_case_alder_sa.pdf
 INPUT .\05_avslutning.tex
 INPUT .\05_avslutning.tex
 INPUT .\05_avslutning.tex

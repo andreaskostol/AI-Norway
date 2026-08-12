@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.3.31)  12 AUG 2026 18:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2026.3.31)  12 AUG 2026 19:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1095,7 +1095,7 @@ Overfull \vbox (15.63992pt too high) detected at line 39
 
 {C:/Users/oysteimh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program
  Files/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (01_intro.tex
-<../presentation/Economist_jobs_apocalypse.jpg, id=22, 1284.8pt x 1715.40875pt>
+<../presentation/Economist_jobs_apocalypse.jpg, id=26, 1284.8pt x 1715.40875pt>
 
 File: ../presentation/Economist_jobs_apocalypse.jpg Graphic file (type jpg)
 <use ../presentation/Economist_jobs_apocalypse.jpg>
@@ -1111,7 +1111,7 @@ File: ../presentation/Economist_jobs_apocalypse.jpg Graphic file (type jpg)
 Package pdftex.def Info: ../presentation/Economist_jobs_apocalypse.jpg  used on
  input line 16.
 (pdftex.def)             Requested size: 106.55016pt x 142.26378pt.
-<../presentation/Atlantic_AI Has Ruined the Job Market.JPG, id=29, 570.933pt x 
+<../presentation/Atlantic_AI Has Ruined the Job Market.JPG, id=33, 570.933pt x 
 545.6385pt>
 File: ../presentation/Atlantic_AI Has Ruined the Job Market.JPG Graphic file (t
 ype jpg)
@@ -1133,7 +1133,7 @@ ype jpg)
 Package pdftex.def Info: ../presentation/Atlantic_AI Has Ruined the Job Market.
 JPG  used on input line 16.
 (pdftex.def)             Requested size: 148.85724pt x 142.26378pt.
-<../presentation/Axios 2025 white collar bloodbath Amodei.jpg, id=35, 674.52pt 
+<../presentation/Axios 2025 white collar bloodbath Amodei.jpg, id=39, 674.52pt 
 x 866.48718pt>
 File: ../presentation/Axios 2025 white collar bloodbath Amodei.jpg Graphic file
  (type jpg)
@@ -1146,14 +1146,14 @@ ei.jpg  used on input line 16.
  <../presentation/Axios 2025 white collar bloodbath Amodei.jpg>] [5
 
 ]) (02_case.tex
-<../../analysis/output/figures/figure_case_utviklere_sa.pdf, id=48, 622.74625pt
- x 365.81796pt>
+<../../analysis/output/figures/figure_case_utviklere_sa.pdf, id=52, 623.21994pt
+ x 365.92773pt>
 File: ../../analysis/output/figures/figure_case_utviklere_sa.pdf Graphic file (
 type pdf)
 <use ../../analysis/output/figures/figure_case_utviklere_sa.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_case_utviklere_sa
 .pdf  used on input line 12.
-(pdftex.def)             Requested size: 261.55164pt x 153.6447pt.
+(pdftex.def)             Requested size: 261.67451pt x 153.6447pt.
 
 Overfull \vbox (6.90967pt too high) detected at line 12
  []
@@ -1161,14 +1161,14 @@ Overfull \vbox (6.90967pt too high) detected at line 12
 [6
 
  <../../analysis/output/figures/figure_case_utviklere_sa.pdf>]
-<../../analysis/output/figures/figure_case_informasjonsradgivere_sa.pdf, id=70,
- 622.74625pt x 365.8311pt>
+<../../analysis/output/figures/figure_case_informasjonsradgivere_sa.pdf, id=73,
+ 623.21994pt x 365.75406pt>
 File: ../../analysis/output/figures/figure_case_informasjonsradgivere_sa.pdf Gr
 aphic file (type pdf)
 <use ../../analysis/output/figures/figure_case_informasjonsradgivere_sa.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_case_informasjons
 radgivere_sa.pdf  used on input line 22.
-(pdftex.def)             Requested size: 280.91739pt x 165.02606pt.
+(pdftex.def)             Requested size: 281.18813pt x 165.02606pt.
 
 Overfull \vbox (7.36609pt too high) detected at line 22
  []
@@ -1176,14 +1176,14 @@ Overfull \vbox (7.36609pt too high) detected at line 22
 [7
 
  <../../analysis/output/figures/figure_case_informasjonsradgivere_sa.pdf>]
-<../../analysis/output/figures/figure_case_designyrker_sa.pdf, id=92, 622.74625
-pt x 365.81796pt>
+<../../analysis/output/figures/figure_case_designyrker_sa.pdf, id=94, 623.21994
+pt x 365.92773pt>
 File: ../../analysis/output/figures/figure_case_designyrker_sa.pdf Graphic file
  (type pdf)
 <use ../../analysis/output/figures/figure_case_designyrker_sa.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_case_designyrker_
 sa.pdf  used on input line 32.
-(pdftex.def)             Requested size: 295.45595pt x 173.56198pt.
+(pdftex.def)             Requested size: 295.59511pt x 173.56198pt.
 
 Overfull \vbox (4.53273pt too high) detected at line 32
  []
@@ -1191,14 +1191,14 @@ Overfull \vbox (4.53273pt too high) detected at line 32
 [8
 
  <../../analysis/output/figures/figure_case_designyrker_sa.pdf>]
-<../../analysis/output/figures/figure_case_kundebehandlere_sa.pdf, id=115, 622.
-74625pt x 365.81796pt>
+<../../analysis/output/figures/figure_case_kundebehandlere_sa.pdf, id=116, 623.
+21994pt x 365.92773pt>
 File: ../../analysis/output/figures/figure_case_kundebehandlere_sa.pdf Graphic 
 file (type pdf)
 <use ../../analysis/output/figures/figure_case_kundebehandlere_sa.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_case_kundebehandl
 ere_sa.pdf  used on input line 42.
-(pdftex.def)             Requested size: 295.45595pt x 173.56198pt.
+(pdftex.def)             Requested size: 295.59511pt x 173.56198pt.
 
 Overfull \vbox (4.97707pt too high) detected at line 42
  []
@@ -1206,14 +1206,14 @@ Overfull \vbox (4.97707pt too high) detected at line 42
 [9
 
  <../../analysis/output/figures/figure_case_kundebehandlere_sa.pdf>]
-<../../analysis/output/figures/figure_case_elektrikere_sa.pdf, id=137, 623.4570
-9pt x 365.81796pt>
+<../../analysis/output/figures/figure_case_elektrikere_sa.pdf, id=137, 623.8672
+pt x 365.92773pt>
 File: ../../analysis/output/figures/figure_case_elektrikere_sa.pdf Graphic file
  (type pdf)
 <use ../../analysis/output/figures/figure_case_elektrikere_sa.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_case_elektrikere_
 sa.pdf  used on input line 52.
-(pdftex.def)             Requested size: 295.79321pt x 173.56198pt.
+(pdftex.def)             Requested size: 295.9021pt x 173.56198pt.
 
 Overfull \vbox (4.97707pt too high) detected at line 52
  []
@@ -1221,14 +1221,14 @@ Overfull \vbox (4.97707pt too high) detected at line 52
 [10
 
  <../../analysis/output/figures/figure_case_elektrikere_sa.pdf>]
-<../../analysis/output/figures/figure_case_hjemmehjelpere_sa.pdf, id=159, 622.7
-4625pt x 365.81796pt>
+<../../analysis/output/figures/figure_case_hjemmehjelpere_sa.pdf, id=159, 623.2
+1994pt x 365.92773pt>
 File: ../../analysis/output/figures/figure_case_hjemmehjelpere_sa.pdf Graphic f
 ile (type pdf)
 <use ../../analysis/output/figures/figure_case_hjemmehjelpere_sa.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_case_hjemmehjelpe
 re_sa.pdf  used on input line 62.
-(pdftex.def)             Requested size: 295.45595pt x 173.56198pt.
+(pdftex.def)             Requested size: 295.59511pt x 173.56198pt.
 
 Overfull \vbox (4.53273pt too high) detected at line 62
  []
@@ -1236,71 +1236,73 @@ Overfull \vbox (4.53273pt too high) detected at line 62
 [11
 
  <../../analysis/output/figures/figure_case_hjemmehjelpere_sa.pdf>])
-(03_maling.tex [12
+LaTeX Font Info:    Trying to load font information for U+msa on input line 44.
 
-] [13
+
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 44.
+
+
+(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
+ut line 44.
+
+(C:\Program Files\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
+File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
+thkerncmss.
+) [12
 
 ]
-Overfull \hbox (7.11076pt too wide) in paragraph at lines 63--63
+(03_maling.tex [13
+
+] [14
+
+]
+Overfull \hbox (7.11076pt too wide) in paragraph at lines 59--59
 [][][]\T1/cmss/bx/n/10.95 Oppgaveendring[]  
  []
 
 
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 63--63
- [][] 
- []
-
-[14
-
-]
-Overfull \hbox (2.20619pt too wide) in paragraph at lines 85--85
-[][][]\T1/cmss/bx/n/10.95 Sammenligning[]  
- []
-
-
-Overfull \hbox (5.69046pt too wide) in paragraph at lines 85--85
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 59--59
  [][] 
  []
 
 [15
 
 ]
-Overfull \vbox (10.7309pt too high) detected at line 114
+Overfull \hbox (2.20619pt too wide) in paragraph at lines 81--81
+[][][]\T1/cmss/bx/n/10.95 Sammenligning[]  
+ []
+
+
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 81--81
+ [][] 
  []
 
 [16
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 144
-.
- (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 144
-.
+Overfull \vbox (10.7309pt too high) detected at line 110
+ []
 
-(C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 144.
+[17
 
-(C:\Program Files\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
-File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
-thkerncmss.
-) [17
+] [18
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-171.
-
-(C:\Program Files\MiKTeX\tex/latex/base\ts1cmss.fd
+167.
+ (C:\Program Files\MiKTeX\tex/latex/base\ts1cmss.fd
 File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [18
+) [19
 
 {C:/Program Files/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) (04_resul
 tater.tex
-<../../analysis/output/figures/figure_emp_byexposure_sa.pdf, id=229, 697.16772p
+<../../analysis/output/figures/figure_emp_byexposure_sa.pdf, id=235, 697.16772p
 t x 409.17993pt>
 File: ../../analysis/output/figures/figure_emp_byexposure_sa.pdf Graphic file (
 type pdf)
@@ -1312,10 +1314,10 @@ Package pdftex.def Info: ../../analysis/output/figures/figure_emp_byexposure_sa
 Overfull \vbox (0.18565pt too high) detected at line 10
  []
 
-[19
+[20
 
  <../../analysis/output/figures/figure_emp_byexposure_sa.pdf>]
-<../presentation_no/kiindeksen_screenshot.png, id=282, 1038.88126pt x 622.325pt
+<../presentation_no/kiindeksen_screenshot.png, id=287, 1038.88126pt x 622.325pt
 >
 File: ../presentation_no/kiindeksen_screenshot.png Graphic file (type png)
 <use ../presentation_no/kiindeksen_screenshot.png>
@@ -1326,24 +1328,27 @@ input line 20.
 Overfull \vbox (3.03024pt too high) detected at line 20
  []
 
-[20
+[21
 
  <../presentation_no/kiindeksen_screenshot.png (PNG copy)>]
-<../../analysis/output/figures/figure_emp_decade_private_sa.pdf, id=288, 842.67
-827pt x 707.73534pt>
-File: ../../analysis/output/figures/figure_emp_decade_private_sa.pdf Graphic fi
-le (type pdf)
-<use ../../analysis/output/figures/figure_emp_decade_private_sa.pdf>
-Package pdftex.def Info: ../../analysis/output/figures/figure_emp_decade_privat
-e_sa.pdf  used on input line 30.
-(pdftex.def)             Requested size: 189.71014pt x 159.3356pt.
- [21
+<../../analysis/output/figures/figure_case_alder_sa.pdf, id=293, 623.8672pt x 3
+65.92773pt>
+File: ../../analysis/output/figures/figure_case_alder_sa.pdf Graphic file (type
+ pdf)
+<use ../../analysis/output/figures/figure_case_alder_sa.pdf>
+Package pdftex.def Info: ../../analysis/output/figures/figure_case_alder_sa.pdf
+  used on input line 30.
+(pdftex.def)             Requested size: 281.3469pt x 165.02606pt.
 
- <../../analysis/output/figures/figure_emp_decade_private_sa.pdf>]) (05_avslutn
-ing.tex
+Overfull \vbox (0.18523pt too high) detected at line 30
+ []
+
 [22
 
-] [23
+ <../../analysis/output/figures/figure_case_alder_sa.pdf>])
+(05_avslutning.tex [23
+
+] [24
 
 ]
 Underfull \hbox (badness 2221) in paragraph at lines 55--55
@@ -1366,7 +1371,7 @@ Overfull \hbox (24.61903pt too wide) in paragraph at lines 55--55
 [][]  
  []
 
-[24
+[25
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 69--69
@@ -1378,11 +1383,17 @@ Overfull \hbox (24.61903pt too wide) in paragraph at lines 69--69
 [][]  
  []
 
-[25
-
-] [26
+[26
 
 ] [27
+
+]
+Overfull \vbox (31.45384pt too high) detected at line 121
+ []
+
+[28
+
+] [29
 
 ])
 \tf@nav=\write6
@@ -1400,14 +1411,14 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: 3950F29B3F1B0BC9921A9536E0A0A3F5;200.
  ) 
 Here is how much of TeX's memory you used:
- 28213 strings out of 474419
- 569880 string characters out of 5751191
+ 28272 strings out of 474419
+ 571536 string characters out of 5751191
  1951190 words of memory out of 5000000
- 49863 multiletter control sequences out of 15000+600000
- 586424 words of font info for 98 fonts, out of 8000000 for 9000
+ 49917 multiletter control sequences out of 15000+600000
+ 588072 words of font info for 104 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,14n,123p,1873b,910s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program
@@ -1432,9 +1443,9 @@ type1/public/cm-super/sfsx1000.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
 cm-super/sfsx1095.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx
 1200.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx1440.pfb><C:/
 Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx1728.pfb>
-Output written on main.pdf (27 pages, 3864724 bytes).
+Output written on main.pdf (29 pages, 3854421 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 55 named destinations out of 1000 (max. 500000)
- 103 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 487 PDF objects out of 1000 (max. 8388607)
+ 60 named destinations out of 1000 (max. 500000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

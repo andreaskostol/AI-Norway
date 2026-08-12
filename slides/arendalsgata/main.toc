@@ -1,1 +1,2 @@
 \babel@toc {norsk}{}\relax 
+\beamer@sectionintoc {1}{En mer systematisk tilnærming}{12}{0}{1}
