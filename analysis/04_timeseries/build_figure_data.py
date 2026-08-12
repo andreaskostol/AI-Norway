@@ -31,16 +31,38 @@ import os
 import pandas as pd
 
 BASE_DIR = os.path.join(os.path.dirname(__file__), "..", "..")
+
+
+def _newest(*names):
+    """Pick the first existing file from names (newest-window first).
+
+    The kpos decade files are extended incrementally (see
+    analysis/02_parse/append_09_2026m03_m04.py), which writes a new
+    `_2026m04` file alongside the older `_2026m02` one. Prefer the newest
+    window that exists so this builder tracks the data without an edit here.
+    """
+    md = os.path.join(BASE_DIR, "microdata-output")
+    for n in names:
+        p = os.path.join(md, n)
+        if os.path.exists(p):
+            return p
+    return os.path.join(md, names[-1])
+
+
 # Primary source: the kpos (positive-cash-earnings) extract, matching the
 # paper's paid-employment count definition and the R event studies
 # (microdata_es_decade.R / microdata_did_cell.R both read the kpos file).
-PARSED_KPOS = os.path.join(BASE_DIR, "microdata-output",
-                           "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv")
+PARSED_KPOS = _newest(
+    "09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv",
+    "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv",
+)
 # Fallback for the two outcome variables absent from the kpos extract
 # (overtid_timer, timelonn): read from the non-kpos extract until they are
 # re-extracted in kpos form.
-PARSED_NONKPOS = os.path.join(BASE_DIR, "microdata-output",
-                              "09_occ_agedecade_sektor_2021m01_2026m02_parsed.csv")
+PARSED_NONKPOS = _newest(
+    "09_occ_agedecade_sektor_2021m01_2026m04_parsed.csv",
+    "09_occ_agedecade_sektor_2021m01_2026m02_parsed.csv",
+)
 NONKPOS_ONLY_VARS = ["overtid_timer", "timelonn"]
 EXP_FILE = os.path.join(BASE_DIR, "data", "ai_exposure",
                         "styrk08_eloundou_beta_mapping.csv")
@@ -194,6 +216,10 @@ def main():
         "Customer service agents": ["4222"],                       # STYRK 4222
         "Electricians": ["7411"],                                  # STYRK 7411 (low exposure)
         "Home health aides": ["5322"],                             # STYRK 5322 (low exposure)
+        # Extra cases for the Arendalsgata talk (single-panel figures via
+        # plot_occ_cases_single.py; not part of the paper's four-panel figure).
+        "Informasjonsradgivere": ["2432"],                         # communication (high exposure)
+        "Designyrker": ["2163", "2166"],                           # product/graphic design (2163 alone too thin)
     }
     code2grp = {c: g for g, cs in occ_groups.items() for c in cs}
     sel = counts[(counts["sekt"] == 2) & (counts["yrke4"].isin(code2grp))].copy()
