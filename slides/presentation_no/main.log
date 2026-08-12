@@ -800,31 +800,60 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 (C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 )
+(C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2024/02/07 v24.2 The Babel package
+\babel@savecnt=\count349
+\U@D=\dimen309
+\l@unhyphenated=\language84
+
+(C:\Program Files\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read3
+LaTeX Info: Redefining \textlatin on input line 3919.
+\bbl@dirlevel=\count350
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Program Files\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Program Files\MiKTeX\tex/latex/babel-norsk\norsk.ldf
+Language: norsk 2024/01/26 v2.0j Norwegian support from the babel system
+
+(C:\Program Files\MiKTeX\tex/latex/babel-norsk\norwegian.ldf
+Language: norwegian 2024/01/26 v2.0j Norwegian support from the babel system
+Package babel Info: Making " an active character on input line 113.
+)))
+(C:\Program Files\MiKTeX\tex/generic/babel/locale/no\babel-norsk.tex
+Package babel Info: Importing font and identification data for norsk
+(babel)             from babel-no.ini. Reported on input line 11.
+)
 (C:\Program Files\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen309
-\lightrulewidth=\dimen310
-\cmidrulewidth=\dimen311
-\belowrulesep=\dimen312
-\belowbottomsep=\dimen313
-\aboverulesep=\dimen314
-\abovetopsep=\dimen315
-\cmidrulesep=\dimen316
-\cmidrulekern=\dimen317
-\defaultaddspace=\dimen318
-\@cmidla=\count349
-\@cmidlb=\count350
-\@aboverulesep=\dimen319
-\@belowrulesep=\dimen320
-\@thisruleclass=\count351
-\@lastruleclass=\count352
-\@thisrulewidth=\dimen321
+\heavyrulewidth=\dimen310
+\lightrulewidth=\dimen311
+\cmidrulewidth=\dimen312
+\belowrulesep=\dimen313
+\belowbottomsep=\dimen314
+\aboverulesep=\dimen315
+\abovetopsep=\dimen316
+\cmidrulesep=\dimen317
+\cmidrulekern=\dimen318
+\defaultaddspace=\dimen319
+\@cmidla=\count351
+\@cmidlb=\count352
+\@aboverulesep=\dimen320
+\@belowrulesep=\dimen321
+\@thisruleclass=\count353
+\@lastruleclass=\count354
+\@thisrulewidth=\dimen322
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen322
+\col@sep=\dimen323
 \ar@mcellbox=\box81
-\extrarowheight=\dimen323
+\extrarowheight=\dimen324
 \NC@list=\toks52
 \extratabsurround=\skip77
 \backup@length=\skip78
@@ -834,7 +863,7 @@ Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
 Package: colortbl 2024/02/20 v1.0g Color table columns (DPC)
 \everycr=\toks53
 \minrowclearance=\skip79
-\rownum=\count353
+\rownum=\count355
 )
 (C:\Program Files\MiKTeX\tex/latex/ragged2e\ragged2e.sty
 Package: ragged2e 2023/06/22 v3.6 ragged2e Package
@@ -852,7 +881,8 @@ Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 \RaggedLeftParindent=\skip91
 \RaggedRightParindent=\skip92
 \JustifyingParindent=\skip93
-) (tikz_macros.tex
+)
+(../presentation/tikz_macros.tex
 (C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
 rypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -860,10 +890,10 @@ File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.t
 ex
 File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowinset=\dimen324
-\pgfarrowlength=\dimen325
-\pgfarrowwidth=\dimen326
-\pgfarrowlinewidth=\dimen327
+\pgfarrowinset=\dimen325
+\pgfarrowlength=\dimen326
+\pgfarrowwidth=\dimen327
+\pgfarrowlinewidth=\dimen328
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
 ryshapes.geometric.code.tex
@@ -886,32 +916,34 @@ File: tikzlibrarybackgrounds.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
 rycalc.code.tex
 File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))
+)) (illustration_macros.tex
+\c@illnode=\count356
+)
 (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count354
+\l__color_backend_stack_int=\count357
 \l__pdf_internal_box=\box85
 ) (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 40.
+LaTeX Font Info:    ... okay on input line 40.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -949,16 +981,16 @@ LaTeX Font Info:    ... okay on input line 35.
 
 (C:\Program Files\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count355
-\scratchdimen=\dimen328
+\scratchcounter=\count358
+\scratchdimen=\dimen329
 \scratchbox=\box86
-\nofMPsegments=\count356
-\nofMParguments=\count357
+\nofMPsegments=\count359
+\nofMParguments=\count360
 \everyMPshowfont=\toks54
-\MPscratchCnt=\count358
-\MPscratchDim=\dimen329
-\MPnumerator=\count359
-\makeMPintoPDFobject=\count360
+\MPscratchCnt=\count361
+\MPscratchDim=\dimen330
+\MPnumerator=\count362
+\makeMPintoPDFobject=\count363
 \everyMPtoPDFconversion=\toks55
 ) (C:\Program Files\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -968,69 +1000,69 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:\Program Files\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 35.
+Package hyperref Info: Link coloring OFF on input line 40.
  (main.out)
 (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 35.
+(Font)                  OT1/cmr/m/n --> OT1/cmss/m/n on input line 40.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 35.
+(Font)                  OT1/cmr/bx/n --> OT1/cmss/b/n on input line 40.
 \symnumbers=\mathgroup6
 \sympureletters=\mathgroup7
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 35.
+(Font)                  OT1/cmss/m/n --> T1/cmr/m/n on input line 40.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 35.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 35.
+(Font)                  OT1/cmr/bx/n --> T1/cmss/b/n on input line 40.
+LaTeX Font Info:    Redeclaring math alphabet \mathsf on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 35.
+(Font)                  OT1/cmss/m/n --> T1/cmss/m/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 35.
+(Font)                  OT1/cmss/bx/n --> T1/cmss/m/n on input line 40.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 35.
+(Font)                  OT1/cmr/m/it --> T1/cmss/m/it on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 35.
-LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 35.
+(Font)                  OT1/cmr/bx/it --> T1/cmss/m/it on input line 40.
+LaTeX Font Info:    Redeclaring math alphabet \mathtt on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 35.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 35.
+(Font)                  OT1/cmtt/m/n --> T1/cmtt/m/n on input line 40.
 LaTeX Font Info:    Overwriting symbol font `numbers' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 35.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 40.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 35.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `bold'
-(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 35.
+(Font)                  OT1/cmss/b/n --> T1/cmr/b/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 35.
+(Font)                  T1/cmss/b/n --> T1/cmss/b/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 35.
+(Font)                  T1/cmss/m/n --> T1/cmss/b/n on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 35.
+(Font)                  T1/cmss/m/it --> T1/cmss/b/it on input line 40.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 35.
-LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 35.
+(Font)                  T1/cmtt/m/n --> T1/cmtt/b/n on input line 40.
+LaTeX Font Info:    Redeclaring symbol font `pureletters' on input line 40.
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `normal' on input line 35
+(Font)              `pureletters' in the math version `normal' on input line 40
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `normal'
-(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 35
+(Font)                  T1/cmss/m/it --> OT1/mathkerncmss/m/sl on input line 40
 .
 LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
-(Font)              `pureletters' in the math version `bold' on input line 35.
+(Font)              `pureletters' in the math version `bold' on input line 40.
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
-(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 35
+(Font)                  T1/cmss/b/it --> OT1/mathkerncmss/m/sl on input line 40
 .
 LaTeX Font Info:    Overwriting symbol font `pureletters' in version `bold'
 (Font)                  OT1/mathkerncmss/m/sl --> OT1/mathkerncmss/bx/sl on inp
-ut line 35.
+ut line 40.
 
 (C:\Program Files\MiKTeX\tex/latex/translator\translator-basic-dictionary-Engli
 sh.dict
@@ -1056,118 +1088,181 @@ Dictionary: translator-numbers-dictionary, Language: English
 lish.dict
 Dictionary: translator-theorem-dictionary, Language: English 
 ) (main.nav)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
 
  (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
 
 
 (C:\Program Files\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inp
-ut line 37.
+ut line 42.
 
 (C:\Program Files\MiKTeX\tex/latex/sansmathaccent\ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 )
-Overfull \vbox (15.63992pt too high) detected at line 37
+Overfull \vbox (15.63992pt too high) detected at line 42
  []
 
 [1
 
 {C:/Users/oysteimh/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Program
- Files/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2
+ Files/MiKTeX/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (00_agenda.tex
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
+10.
 
-]
-(01_motivation.tex
-<Economist_jobs_apocalypse.jpg, id=67, 1284.8pt x 1715.40875pt>
-File: Economist_jobs_apocalypse.jpg Graphic file (type jpg)
-<use Economist_jobs_apocalypse.jpg>
-Package pdftex.def Info: Economist_jobs_apocalypse.jpg  used on input line 18.
-(pdftex.def)             Requested size: 106.55016pt x 142.26378pt.
- [3
+(C:\Program Files\MiKTeX\tex/latex/base\ts1cmss.fd
+File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+) [2
 
- <./Economist_jobs_apocalypse.jpg>]
-File: Economist_jobs_apocalypse.jpg Graphic file (type jpg)
-<use Economist_jobs_apocalypse.jpg>
-Package pdftex.def Info: Economist_jobs_apocalypse.jpg  used on input line 18.
+{C:/Program Files/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [3
+
+] (01_motivation.tex
+<../presentation/Economist_jobs_apocalypse.jpg, id=86, 1284.8pt x 1715.40875pt>
+
+File: ../presentation/Economist_jobs_apocalypse.jpg Graphic file (type jpg)
+<use ../presentation/Economist_jobs_apocalypse.jpg>
+Package pdftex.def Info: ../presentation/Economist_jobs_apocalypse.jpg  used on
+ input line 18.
 (pdftex.def)             Requested size: 106.55016pt x 142.26378pt.
-<Atlantic_AI Has Ruined the Job Market.JPG, id=74, 570.933pt x 545.6385pt>
-File: Atlantic_AI Has Ruined the Job Market.JPG Graphic file (type jpg)
-<use Atlantic_AI Has Ruined the Job Market.JPG>
-Package pdftex.def Info: Atlantic_AI Has Ruined the Job Market.JPG  used on inp
-ut line 18.
-(pdftex.def)             Requested size: 148.85724pt x 142.26378pt.
  [4
 
- <./Atlantic_AI Has Ruined the Job Market.JPG>]
-File: Economist_jobs_apocalypse.jpg Graphic file (type jpg)
-<use Economist_jobs_apocalypse.jpg>
-Package pdftex.def Info: Economist_jobs_apocalypse.jpg  used on input line 18.
+ <../presentation/Economist_jobs_apocalypse.jpg>]
+File: ../presentation/Economist_jobs_apocalypse.jpg Graphic file (type jpg)
+<use ../presentation/Economist_jobs_apocalypse.jpg>
+Package pdftex.def Info: ../presentation/Economist_jobs_apocalypse.jpg  used on
+ input line 18.
 (pdftex.def)             Requested size: 106.55016pt x 142.26378pt.
-File: Atlantic_AI Has Ruined the Job Market.JPG Graphic file (type jpg)
-<use Atlantic_AI Has Ruined the Job Market.JPG>
-Package pdftex.def Info: Atlantic_AI Has Ruined the Job Market.JPG  used on inp
-ut line 18.
+<../presentation/Atlantic_AI Has Ruined the Job Market.JPG, id=92, 570.933pt x 
+545.6385pt>
+File: ../presentation/Atlantic_AI Has Ruined the Job Market.JPG Graphic file (t
+ype jpg)
+<use ../presentation/Atlantic_AI Has Ruined the Job Market.JPG>
+Package pdftex.def Info: ../presentation/Atlantic_AI Has Ruined the Job Market.
+JPG  used on input line 18.
 (pdftex.def)             Requested size: 148.85724pt x 142.26378pt.
-<NYTimes_AIdoesnthavetomeanlayoffs.JPG, id=80, 709.4505pt x 218.61674pt>
-File: NYTimes_AIdoesnthavetomeanlayoffs.JPG Graphic file (type jpg)
-<use NYTimes_AIdoesnthavetomeanlayoffs.JPG>
-Package pdftex.def Info: NYTimes_AIdoesnthavetomeanlayoffs.JPG  used on input l
-ine 18.
-(pdftex.def)             Requested size: 461.67862pt x 142.26378pt.
  [5
 
- <./NYTimes_AIdoesnthavetomeanlayoffs.JPG>]
-Overfull \hbox (5.6921pt too wide) in paragraph at lines 38--38
-[][]  
+ <../presentation/Atlantic_AI Has Ruined the Job Market.JPG>]
+File: ../presentation/Economist_jobs_apocalypse.jpg Graphic file (type jpg)
+<use ../presentation/Economist_jobs_apocalypse.jpg>
+Package pdftex.def Info: ../presentation/Economist_jobs_apocalypse.jpg  used on
+ input line 18.
+(pdftex.def)             Requested size: 106.55016pt x 142.26378pt.
+File: ../presentation/Atlantic_AI Has Ruined the Job Market.JPG Graphic file (t
+ype jpg)
+<use ../presentation/Atlantic_AI Has Ruined the Job Market.JPG>
+Package pdftex.def Info: ../presentation/Atlantic_AI Has Ruined the Job Market.
+JPG  used on input line 18.
+(pdftex.def)             Requested size: 148.85724pt x 142.26378pt.
+<../presentation/Axios 2025 white collar bloodbath Amodei.jpg, id=98, 674.52pt 
+x 866.48718pt>
+File: ../presentation/Axios 2025 white collar bloodbath Amodei.jpg Graphic file
+ (type jpg)
+<use ../presentation/Axios 2025 white collar bloodbath Amodei.jpg>
+Package pdftex.def Info: ../presentation/Axios 2025 white collar bloodbath Amod
+ei.jpg  used on input line 18.
+(pdftex.def)             Requested size: 110.7455pt x 142.26378pt.
+ [6
+
+ <../presentation/Axios 2025 white collar bloodbath Amodei.jpg>]
+<../../analysis/output/figures/figure_occupations_by_age_sa.pdf, id=104, 848.99
+63pt x 697.74863pt>
+File: ../../analysis/output/figures/figure_occupations_by_age_sa.pdf Graphic fi
+le (type pdf)
+<use ../../analysis/output/figures/figure_occupations_by_age_sa.pdf>
+Package pdftex.def Info: ../../analysis/output/figures/figure_occupations_by_ag
+e_sa.pdf  used on input line 28.
+(pdftex.def)             Requested size: 193.86594pt x 159.3356pt.
+
+Overfull \vbox (7.1447pt too high) detected at line 28
  []
 
-[6
+[7
+
+ <../../analysis/output/figures/figure_occupations_by_age_sa.pdf>] [8
 
 ]
-LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 
-47.
- (C:\Program Files\MiKTeX\tex/latex/base\ts1cmss.fd
-File: ts1cmss.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [7
-
-{C:/Program Files/MiKTeX/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]) [8
-
-] (02_data_methodology.tex
 [9
 
 ] [10
 
-]) (03_eloundou_focus.tex [11
+]
+Underfull \hbox (badness 5203) in paragraph at lines 91--91
+[]|\T1/cmss/m/n/9 Hovedfunn (yngs-te ar-beids-ta-ke-re, øvers-te
+ []
 
-]) (04_mapping.tex [12
+[11
+
+] [12
 
 ]
-(../mapping/eloundou_core.tex
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-7.
- (C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [13
+Overfull \hbox (7.11076pt too wide) in paragraph at lines 127--127
+[][][]\T1/cmss/bx/n/10.95 Oppgaveendring[]  
+ []
 
-] [14
 
-] [15
-
-]
-Overfull \hbox (14.5145pt too wide) in paragraph at lines 83--83
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 127--127
  [][] 
  []
 
-[16
 
-]) (../mapping/eloundou_distribution.tex
-<../mapping/eloundou_distribution.pdf, id=166, 787.39543pt x 351.46431pt>
+Overfull \vbox (20.77652pt too high) detected at line 127
+ []
+
+[13
+
+]) [14
+
+] (02_data_methodology.tex [15
+
+] [16
+
+]) (03_eloundou_focus.tex [17
+
+])
+(04_mapping.tex [18
+
+] (mapping/eloundou_core.tex
+Overfull \vbox (10.7309pt too high) detected at line 35
+ []
+
+[19
+
+]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 5
+1.
+ (C:\Program Files\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+) [20
+
+]
+Overfull \hbox (3.60829pt too wide) in paragraph at lines 69--69
+ [][] 
+ []
+
+[21
+
+]
+Overfull \hbox (14.5066pt too wide) in paragraph at lines 90--90
+ [][] 
+ []
+
+[22
+
+]
+Overfull \vbox (4.8483pt too high) detected at line 126
+ []
+
+[23
+
+]) (mapping/eloundou_distribution.tex
+<../mapping/eloundou_distribution.pdf, id=259, 787.39543pt x 351.46431pt>
 File: ../mapping/eloundou_distribution.pdf Graphic file (type pdf)
 <use ../mapping/eloundou_distribution.pdf>
 Package pdftex.def Info: ../mapping/eloundou_distribution.pdf  used on input li
@@ -1177,87 +1272,113 @@ ne 10.
 Overfull \vbox (4.31416pt too high) detected at line 10
  []
 
-[17
+[24
 
  <../mapping/eloundou_distribution.pdf>])
-Overfull \vbox (19.1089pt too high) detected at line 88
+Overfull \vbox (19.1089pt too high) detected at line 86
  []
 
-[18
+[25
 
-]) [19
+]) [26
 
 ] (05_results_descriptive.tex
-<../../analysis/output/figures/figure_emp_byexposure_sa.pdf, id=251, 697.16772p
+<../../analysis/output/figures/figure_emp_byexposure_sa.pdf, id=345, 697.16772p
 t x 409.17993pt>
 File: ../../analysis/output/figures/figure_emp_byexposure_sa.pdf Graphic file (
 type pdf)
 <use ../../analysis/output/figures/figure_emp_byexposure_sa.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_emp_byexposure_sa
 .pdf  used on input line 10.
-(pdftex.def)             Requested size: 281.17056pt x 165.02606pt.
+(pdftex.def)             Requested size: 271.47943pt x 159.3356pt.
 
-Overfull \vbox (0.6851pt too high) detected at line 10
+Overfull \vbox (7.1447pt too high) detected at line 10
  []
 
-[20
+[27
 
  <../../analysis/output/figures/figure_emp_byexposure_sa.pdf>]
-<../../analysis/output/figures/figure_occupations_by_age_sa.pdf, id=301, 848.99
-63pt x 697.74863pt>
-File: ../../analysis/output/figures/figure_occupations_by_age_sa.pdf Graphic fi
-le (type pdf)
-<use ../../analysis/output/figures/figure_occupations_by_age_sa.pdf>
-Package pdftex.def Info: ../../analysis/output/figures/figure_occupations_by_ag
-e_sa.pdf  used on input line 20.
-(pdftex.def)             Requested size: 193.86594pt x 159.3356pt.
-
-Overfull \vbox (6.53374pt too high) detected at line 20
+Overfull \hbox (2.20619pt too wide) in paragraph at lines 33--33
+[][][]\T1/cmss/bx/n/10.95 Sammenligning[]  
  []
 
-[21
 
- <../../analysis/output/figures/figure_occupations_by_age_sa.pdf>]
-<../../analysis/output/figures/figure_emp_decade_private_sa.pdf, id=348, 842.67
+Overfull \hbox (5.69046pt too wide) in paragraph at lines 33--33
+ [][] 
+ []
+
+[28
+
+] (09_dashboard.tex
+<kiindeksen_screenshot.png, id=400, 1038.88126pt x 622.325pt>
+File: kiindeksen_screenshot.png Graphic file (type png)
+<use kiindeksen_screenshot.png>
+Package pdftex.def Info: kiindeksen_screenshot.png  used on input line 10.
+(pdftex.def)             Requested size: 280.23221pt x 167.87108pt.
+
+Overfull \vbox (3.53012pt too high) detected at line 10
+ []
+
+[29
+
+ <./kiindeksen_screenshot.png (PNG copy)>] [30
+
+]
+<../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf, id=411, 697.18
+904pt x 408.21506pt>
+File: ../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf Graphic fi
+le (type pdf)
+<use ../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf>
+Package pdftex.def Info: ../../analysis/output/figures/figure_recursive_kiindek
+s_ci.pdf  used on input line 41.
+(pdftex.def)             Requested size: 252.68997pt x 147.95424pt.
+
+Overfull \vbox (8.41327pt too high) detected at line 41
+ []
+
+[31
+
+ <../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf>])
+<../../analysis/output/figures/figure_emp_decade_private_sa.pdf, id=468, 842.67
 827pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_emp_decade_private_sa.pdf Graphic fi
 le (type pdf)
 <use ../../analysis/output/figures/figure_emp_decade_private_sa.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_emp_decade_privat
-e_sa.pdf  used on input line 34.
+e_sa.pdf  used on input line 53.
 (pdftex.def)             Requested size: 189.71014pt x 159.3356pt.
 
-Overfull \vbox (9.02061pt too high) detected at line 34
+Overfull \vbox (9.02061pt too high) detected at line 53
  []
 
-[22
+[32
 
  <../../analysis/output/figures/figure_emp_decade_private_sa.pdf>]
-<../../analysis/output/figures/figure_age_by_quintile_handa_auto_sa.pdf, id=398
+<../../analysis/output/figures/figure_age_by_quintile_handa_auto_sa.pdf, id=518
 , 842.67827pt x 790.04285pt>
 File: ../../analysis/output/figures/figure_age_by_quintile_handa_auto_sa.pdf Gr
 aphic file (type pdf)
 <use ../../analysis/output/figures/figure_age_by_quintile_handa_auto_sa.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_age_by_quintile_h
-anda_auto_sa.pdf  used on input line 48.
-(pdftex.def)             Requested size: 169.94707pt x 159.3356pt.
+anda_auto_sa.pdf  used on input line 67.
+(pdftex.def)             Requested size: 163.87799pt x 153.6447pt.
 
-Overfull \vbox (21.67055pt too high) detected at line 48
+Overfull \vbox (15.97964pt too high) detected at line 67
  []
 
-[23
+[33
 
  <../../analysis/output/figures/figure_age_by_quintile_handa_auto_sa.pdf>])
-[24
+[34
 
 ] (06_results_diffindiff.tex
 Overfull \vbox (2.61891pt too high) detected at line 23
  []
 
-[25
+[35
 
 ]
-<../../analysis/output/figures/figure_microdata_poisson_es_grid.pdf, id=481, 84
+<../../analysis/output/figures/figure_microdata_poisson_es_grid.pdf, id=599, 84
 2.71962pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_microdata_poisson_es_grid.pdf Graphi
 c file (type pdf)
@@ -1266,56 +1387,57 @@ Package pdftex.def Info: ../../analysis/output/figures/figure_microdata_poisson
 _es_grid.pdf  used on input line 34.
 (pdftex.def)             Requested size: 189.71945pt x 159.3356pt.
 
-Overfull \vbox (7.1447pt too high) detected at line 34
+Overfull \vbox (7.14513pt too high) detected at line 34
  []
 
-[26
+[36
 
  <../../analysis/output/figures/figure_microdata_poisson_es_grid.pdf>]
-[27
-
-] (../../analysis/output/tables/table_honest_did.tex)
-Overfull \vbox (7.37898pt too high) detected at line 78
- []
-
-[28
+[37
 
 ]
-<METR_time_horizon.JPG, id=536, 892.08281pt x 419.31656pt>
-File: METR_time_horizon.JPG Graphic file (type jpg)
-<use METR_time_horizon.JPG>
-Package pdftex.def Info: METR_time_horizon.JPG  used on input line 88.
+Overfull \vbox (13.23178pt too high) detected at line 90
+ []
+
+[38
+
+]
+<../presentation/METR_time_horizon.JPG, id=655, 892.08281pt x 419.31656pt>
+File: ../presentation/METR_time_horizon.JPG Graphic file (type jpg)
+<use ../presentation/METR_time_horizon.JPG>
+Package pdftex.def Info: ../presentation/METR_time_horizon.JPG  used on input l
+ine 100.
 (pdftex.def)             Requested size: 332.924pt x 156.49014pt.
 
-Overfull \vbox (6.97508pt too high) detected at line 88
+Overfull \vbox (6.97508pt too high) detected at line 100
  []
 
-[29
+[39
 
- <./METR_time_horizon.JPG>] [30
+ <../presentation/METR_time_horizon.JPG>] [40
 
 ]
-<../../analysis/output/figures/figure_microdata_es_decade_agentic.pdf, id=550, 
+<../../analysis/output/figures/figure_microdata_es_decade_agentic.pdf, id=669, 
 842.79994pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_microdata_es_decade_agentic.pdf Grap
 hic file (type pdf)
 <use ../../analysis/output/figures/figure_microdata_es_decade_agentic.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_microdata_es_deca
-de_agentic.pdf  used on input line 110.
+de_agentic.pdf  used on input line 122.
 (pdftex.def)             Requested size: 189.73755pt x 159.3356pt.
 
-Overfull \vbox (5.39513pt too high) detected at line 110
+Overfull \vbox (7.1447pt too high) detected at line 122
  []
 
-[31
+[41
 
  <../../analysis/output/figures/figure_microdata_es_decade_agentic.pdf>])
-[32
+[42
 
-] (07_firmfe.tex [33
+] (07_firmfe.tex [43
 
 ]
-<../../analysis/output/figures/figure_firmfe_poisson_es_grid.pdf, id=604, 842.7
+<../../analysis/output/figures/figure_firmfe_poisson_es_grid.pdf, id=723, 842.7
 1962pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_firmfe_poisson_es_grid.pdf Graphic f
 ile (type pdf)
@@ -1327,10 +1449,10 @@ _grid.pdf  used on input line 24.
 Overfull \vbox (4.79912pt too high) detected at line 24
  []
 
-[34
+[44
 
  <../../analysis/output/figures/figure_firmfe_poisson_es_grid.pdf>]
-<../../analysis/output/figures/figure_cell_vs_firmfe_q5_grid.pdf, id=648, 842.7
+<../../analysis/output/figures/figure_cell_vs_firmfe_q5_grid.pdf, id=767, 842.7
 1962pt x 708.73909pt>
 File: ../../analysis/output/figures/figure_cell_vs_firmfe_q5_grid.pdf Graphic f
 ile (type pdf)
@@ -1342,10 +1464,10 @@ _grid.pdf  used on input line 34.
 Overfull \vbox (4.79912pt too high) detected at line 34
  []
 
-[35
+[45
 
  <../../analysis/output/figures/figure_cell_vs_firmfe_q5_grid.pdf>]
-<../../analysis-indiv/output/bcc_appendix/fig_bcc_4_es.pdf, id=690, 1048.67198p
+<../../analysis-indiv/output/bcc_appendix/fig_bcc_4_es.pdf, id=809, 1048.67198p
 t x 539.35376pt>
 File: ../../analysis-indiv/output/bcc_appendix/fig_bcc_4_es.pdf Graphic file (t
 ype pdf)
@@ -1357,46 +1479,51 @@ pdf  used on input line 44.
 Overfull \vbox (5.56825pt too high) detected at line 44
  []
 
-[36
+[46
 
- <../../analysis-indiv/output/bcc_appendix/fig_bcc_4_es.pdf>]) [37
-
-]
-(09_discussion.tex [38
-
-]) [39
-
-] (09_dashboard.tex
-(../../analysis/output/tables/table_quintile_yagan.tex) [40
+ <../../analysis-indiv/output/bcc_appendix/fig_bcc_4_es.pdf>]) [47
 
 ]
-<../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf, id=755, 697.18
-904pt x 408.21506pt>
-File: ../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf Graphic fi
-le (type pdf)
-<use ../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf>
-Package pdftex.def Info: ../../analysis/output/figures/figure_recursive_kiindek
-s_ci.pdf  used on input line 20.
-(pdftex.def)             Requested size: 252.68997pt x 147.95424pt.
+(09_discussion.tex [48
 
-Overfull \vbox (8.41327pt too high) detected at line 20
+]) [49
+
+] (09_forward.tex
+Overfull \vbox (12.78168pt too high) detected at line 15
  []
 
-[41
+[50
 
- <../../analysis/output/figures/figure_recursive_kiindeks_ci.pdf>]) [42
+] [51
 
-]
-(10_conclusion.tex
-Overfull \vbox (1.05788pt too high) detected at line 12
+] [52
+
+]) [53
+
+] (10_conclusion.tex
+Overfull \vbox (3.00185pt too high) detected at line 12
  []
 
-[43
+[54
 
-]) [44
+]) [55
+
+] (11_references.tex
+Overfull \vbox (188.84785pt too high) detected at line 38
+ []
+
+[56
+
+]
+Overfull \vbox (18.97372pt too high) detected at line 66
+ []
+
+[57
+
+]) [58
 
 ] (08_robustness.tex
-<../../analysis/output/figures/figureA0b_cohort_sizes.pdf, id=830, 1038.15564pt
+<../../analysis/output/figures/figureA0b_cohort_sizes.pdf, id=919, 1038.15564pt
  x 464.52608pt>
 File: ../../analysis/output/figures/figureA0b_cohort_sizes.pdf Graphic file (ty
 pe pdf)
@@ -1408,139 +1535,150 @@ df  used on input line 13.
 Overfull \vbox (11.68594pt too high) detected at line 13
  []
 
-[45
+[59
 
  <../../analysis/output/figures/figureA0b_cohort_sizes.pdf>]) (90_backup.tex
-<LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG, id=914, 928.21782pt x 613.54219pt>
-File: LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG Graphic file (type jpg)
-<use LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG>
-Package pdftex.def Info: LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG  used on inp
-ut line 16.
+<../presentation/LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG, id=1003, 928.21782p
+t x 613.54219pt>
+File: ../presentation/LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG Graphic file (t
+ype jpg)
+<use ../presentation/LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG>
+Package pdftex.def Info: ../presentation/LORV_Fig1_Actual_adoptoin_vs_Exposure.
+JPG  used on input line 15.
 (pdftex.def)             Requested size: 232.4363pt x 153.6447pt.
 
-Overfull \vbox (9.04164pt too high) detected at line 16
+Overfull \vbox (9.04164pt too high) detected at line 15
  []
 
-[46
+[60
 
- <./LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG>]
-<../../analysis/output/figures/figure_emp_decade_public_sa.pdf, id=921, 842.587
-9pt x 707.73534pt>
+ <../presentation/LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG>]
+<../../analysis/output/figures/figure_emp_decade_public_sa.pdf, id=1010, 842.58
+79pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_emp_decade_public_sa.pdf Graphic fil
 e (type pdf)
 <use ../../analysis/output/figures/figure_emp_decade_public_sa.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_emp_decade_public
-_sa.pdf  used on input line 30.
+_sa.pdf  used on input line 29.
 (pdftex.def)             Requested size: 186.30846pt x 156.49014pt.
 
-Overfull \vbox (11.88708pt too high) detected at line 30
+Overfull \vbox (11.88708pt too high) detected at line 29
  []
 
-[47
+[61
 
  <../../analysis/output/figures/figure_emp_decade_public_sa.pdf>]
-<../../analysis/output/figures/figure_kontantlonn_decade_private.pdf, id=966, 8
-42.59795pt x 707.73534pt>
+<../../analysis/output/figures/figure_kontantlonn_decade_private.pdf, id=1056, 
+842.59795pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_kontantlonn_decade_private.pdf Graph
 ic file (type pdf)
 <use ../../analysis/output/figures/figure_kontantlonn_decade_private.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_kontantlonn_decad
-e_private.pdf  used on input line 44.
+e_private.pdf  used on input line 43.
 (pdftex.def)             Requested size: 176.1408pt x 147.95424pt.
 
-Overfull \vbox (14.91304pt too high) detected at line 44
+Overfull \vbox (14.91304pt too high) detected at line 43
  []
 
-[48
+[62
 
  <../../analysis/output/figures/figure_kontantlonn_decade_private.pdf>]
-<../../analysis/output/figures/figure_age_by_quintile_handa_aug_sa.pdf, id=1012
+<../../analysis/output/figures/figure_age_by_quintile_handa_aug_sa.pdf, id=1101
 , 842.67827pt x 790.04285pt>
 File: ../../analysis/output/figures/figure_age_by_quintile_handa_aug_sa.pdf Gra
 phic file (type pdf)
 <use ../../analysis/output/figures/figure_age_by_quintile_handa_aug_sa.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_age_by_quintile_h
-anda_aug_sa.pdf  used on input line 58.
+anda_aug_sa.pdf  used on input line 57.
 (pdftex.def)             Requested size: 166.91252pt x 156.49014pt.
 
-Overfull \vbox (11.88708pt too high) detected at line 58
+Overfull \vbox (11.88708pt too high) detected at line 57
  []
 
-[49
+[63
 
  <../../analysis/output/figures/figure_age_by_quintile_handa_aug_sa.pdf>]
-<../../analysis/output/figures/figure_microdata_poisson_es_grid_q3.pdf, id=1079
+<../../analysis/output/figures/figure_microdata_poisson_es_grid_q3.pdf, id=1167
 , 850.74962pt x 707.73534pt>
 File: ../../analysis/output/figures/figure_microdata_poisson_es_grid_q3.pdf Gra
 phic file (type pdf)
 <use ../../analysis/output/figures/figure_microdata_poisson_es_grid_q3.pdf>
 Package pdftex.def Info: ../../analysis/output/figures/figure_microdata_poisson
-_es_grid_q3.pdf  used on input line 72.
+_es_grid_q3.pdf  used on input line 71.
 (pdftex.def)             Requested size: 188.11313pt x 156.49014pt.
 
-Overfull \vbox (11.88708pt too high) detected at line 72
+Overfull \vbox (11.88708pt too high) detected at line 71
  []
 
-[50
+[64
 
  <../../analysis/output/figures/figure_microdata_poisson_es_grid_q3.pdf>]
-[51
+[65
 
-] (../mapping/eloundou_extra.tex [52
-
-]) (../mapping/eloundou_examples.tex
-[53
-
-] [54
-
-] [55
-
-] [56
-
-] [57
-
-] [58
-
-]
-Overfull \hbox (14.28743pt too wide) in paragraph at lines 180--180
+] (mapping/eloundou_extra.tex
+Overfull \hbox (2.87811pt too wide) in paragraph at lines 21--21
  [][] 
  []
 
-[59
+[66
 
-]
-Overfull \vbox (3.76614pt too high) detected at line 216
- []
-
-[60
-
-]
-Overfull \hbox (38.83527pt too wide) in paragraph at lines 238--238
+]) (mapping/eloundou_examples.tex
+Overfull \hbox (7.83302pt too wide) in paragraph at lines 25--25
  [][] 
  []
 
-[61
+[67
+
+] [68
+
+] [69
+
+] [70
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 266--266
+Overfull \hbox (8.44398pt too wide) in paragraph at lines 130--130
+ [][] 
+ []
+
+[71
+
+] [72
+
+] [73
+
+]
+Overfull \hbox (14.5145pt too wide) in paragraph at lines 209--209
+ [][] 
+ []
+
+[74
+
+]
+Overfull \hbox (54.96548pt too wide) in paragraph at lines 231--231
+ [][] 
+ []
+
+[75
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
 []|\T1/cmss/m/n/10 Geographic In-for-ma-tion Sys-tems
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--266
+Underfull \hbox (badness 10000) in paragraph at lines 259--259
 []|\T1/cmss/m/n/10 Computer Sys-tems En-gi-
  []
 
 
-Overfull \vbox (66.45537pt too high) detected at line 266
+Overfull \vbox (66.45537pt too high) detected at line 259
  []
 
-[62
+[76
 
-]) (../mapping/eloundou_manytoone.tex [63
+]) (mapping/eloundou_manytoone.tex [77
 
-]) (../mapping/onet_intro.tex
-[64
+]) (mapping/onet_intro.tex [78
 
 ]))
 \tf@nav=\write6
@@ -1552,22 +1690,23 @@ Overfull \vbox (66.45537pt too high) detected at line 266
 \tf@snm=\write8
 \openout8 = `main.snm'.
 
- (main.aux)
+
+(main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B451F5E322AB8201547129ADB913FEC6;1237.
+(rerunfilecheck)             Checksum: 7028DD95FE1CCD85968B6EFF528507EC;1467.
  ) 
 Here is how much of TeX's memory you used:
- 27514 strings out of 474419
- 562477 string characters out of 5751191
+ 28927 strings out of 474419
+ 588294 string characters out of 5751191
  1970190 words of memory out of 5000000
- 49044 multiletter control sequences out of 15000+600000
- 589628 words of font info for 111 fonts, out of 8000000 for 9000
+ 50398 multiletter control sequences out of 15000+600000
+ 589144 words of font info for 111 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,18n,123p,1873b,846s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 128i,18n,123p,1873b,910s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Progra
 m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX/fonts/type
@@ -1581,25 +1720,24 @@ type1/public/amsfonts/cm/cmssi8.pfb><C:/Program Files/MiKTeX/fonts/type1/public
 /cmsy10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
 C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Program Fi
 les/MiKTeX/fonts/type1/public/cm-super/sfsi0800.pfb><C:/Program Files/MiKTeX/fo
-nts/type1/public/cm-super/sfsi0900.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/cm-super/sfsi1000.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/
-sfsi1095.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfss0500.pfb>
-<C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfss0600.pfb><C:/Program F
-iles/MiKTeX/fonts/type1/public/cm-super/sfss0700.pfb><C:/Program Files/MiKTeX/f
-onts/type1/public/cm-super/sfss0800.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
-blic/cm-super/sfss0900.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super
-/sfss1000.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfss1095.pfb
-><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfss1200.pfb><C:/Program 
-Files/MiKTeX/fonts/type1/public/cm-super/sfsx0600.pfb><C:/Program Files/MiKTeX/
-fonts/type1/public/cm-super/sfsx0800.pfb><C:/Program Files/MiKTeX/fonts/type1/p
-ublic/cm-super/sfsx0900.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-supe
-r/sfsx1000.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx1095.pf
-b><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx1200.pfb><C:/Program
- Files/MiKTeX/fonts/type1/public/cm-super/sfsx1440.pfb><C:/Program Files/MiKTeX
-/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on main.pdf (64 pages, 4550598 bytes).
+nts/type1/public/cm-super/sfsi1000.pfb><C:/Program Files/MiKTeX/fonts/type1/pub
+lic/cm-super/sfsi1095.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/
+sfss0500.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfss0600.pfb>
+<C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfss0700.pfb><C:/Program F
+iles/MiKTeX/fonts/type1/public/cm-super/sfss0800.pfb><C:/Program Files/MiKTeX/f
+onts/type1/public/cm-super/sfss0900.pfb><C:/Program Files/MiKTeX/fonts/type1/pu
+blic/cm-super/sfss1000.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super
+/sfss1095.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfss1200.pfb
+><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx0600.pfb><C:/Program 
+Files/MiKTeX/fonts/type1/public/cm-super/sfsx0800.pfb><C:/Program Files/MiKTeX/
+fonts/type1/public/cm-super/sfsx0900.pfb><C:/Program Files/MiKTeX/fonts/type1/p
+ublic/cm-super/sfsx1000.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-supe
+r/sfsx1095.pfb><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx1200.pf
+b><C:/Program Files/MiKTeX/fonts/type1/public/cm-super/sfsx1440.pfb><C:/Program
+ Files/MiKTeX/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on main.pdf (78 pages, 4764227 bytes).
 PDF statistics:
- 1379 PDF objects out of 1440 (max. 8388607)
- 150 named destinations out of 1000 (max. 500000)
- 220 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1468 PDF objects out of 1728 (max. 8388607)
+ 180 named destinations out of 1000 (max. 500000)
+ 241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

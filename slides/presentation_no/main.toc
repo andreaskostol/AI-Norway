@@ -1,0 +1,10 @@
+\babel@toc {norsk}{}\relax 
+\beamer@sectionintoc {1}{Motivasjon}{3}{0}{1}
+\beamer@sectionintoc {2}{En mer systematisk, helhetlig tilnærming}{8}{0}{2}
+\beamer@sectionintoc {3}{Data}{14}{0}{3}
+\beamer@sectionintoc {4}{Sysselsettingsgap etter KI-eksponering}{26}{0}{4}
+\beamer@sectionintoc {5}{Regresjonsanalyse}{34}{0}{5}
+\beamer@sectionintoc {6}{Validering: individdata}{42}{0}{6}
+\beamer@sectionintoc {7}{Sammenligning mellom land}{47}{0}{7}
+\beamer@sectionintoc {8}{Framover}{49}{0}{8}
+\beamer@sectionintoc {9}{Konklusjon}{53}{0}{9}
