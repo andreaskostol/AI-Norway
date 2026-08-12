@@ -1,0 +1,87 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+% Norsk versjon av slides/presentation/main.tex.
+% Tema: Metropolis (TeX Live >= 2017).
+\usetheme{metropolis}
+\metroset{numbering=none, progressbar=foot, sectionpage=progressbar}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[norsk]{babel}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{ragged2e}
+
+% Delte TikZ-stiler for kodekjedene (samme fil som den engelske decken)
+\input{../presentation/tikz_macros}
+% Stiler og palett for illustrasjonsslidene
+\input{illustration_macros}
+
+% Figurer hentes fra den engelske decken, mapping-decken og analysis/output
+\graphicspath{{./}{../presentation/}{../mapping/}{../../analysis/output/figures/}{../../analysis-indiv/output/bcc_appendix/}}
+
+% Aksentfarge som i paperet
+\definecolor{accent}{HTML}{1F4E79}
+\setbeamercolor{progress bar}{fg=accent}
+\setbeamercolor{title separator}{fg=accent}
+\setbeamercolor{frametitle}{bg=accent}
+\setbeamercolor{alerted text}{fg=accent}
+
+\title{Øker KI forskjellene i arbeidsmarkedet?}
+\subtitle{Sysselsetting etter KI-eksponering i norske registerdata, 2021--2026}
+\author{Øystein Hernæs\inst{1} \and Andreas R.\ Kostøl\inst{2}}
+\institute{\inst{1}Frischsenteret \and \inst{2}Handelshøyskolen BI}
+\date{August 2026, \emph{foreløpige resultater}}
+
+\begin{document}
+
+\maketitle
+
+% ---------------------------------------------------------------
+\section{Motivasjon}
+\input{01_motivation}
+
+% ---------------------------------------------------------------
+\section{Data}
+\input{02_data_methodology}
+
+% ---------------------------------------------------------------
+\input{03_eloundou_focus}
+
+% ---------------------------------------------------------------
+\input{04_mapping}
+
+% ---------------------------------------------------------------
+\section{Sysselsettingsgap etter KI-eksponering}
+\input{05_results_descriptive}
+
+% ---------------------------------------------------------------
+\section{Regresjonsanalyse}
+\input{06_results_diffindiff}
+
+% ---------------------------------------------------------------
+\section{Validering: individdata}
+\input{07_firmfe}
+
+% ---------------------------------------------------------------
+\section{Sammenligning mellom land}
+\input{09_discussion}
+
+% ---------------------------------------------------------------
+\section{Dashbordet: kiindeksen.no}
+\input{09_dashboard}
+
+% ---------------------------------------------------------------
+\section{Konklusjon}
+\input{10_conclusion}
+
+% ---------------------------------------------------------------
+\section*{Backup}
+\input{08_robustness}
+\input{90_backup}
+
+\end{document}

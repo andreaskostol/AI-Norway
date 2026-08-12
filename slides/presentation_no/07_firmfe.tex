@@ -1,0 +1,44 @@
+% Validering med individdata: foretaksfaste effekter,
+% celle-mot-foretak-avstemming og BCC-replikasjonen (22-25 år).
+
+\begin{frame}{Validering: omfordeling innad i foretak}
+\begin{itemize}\setlength{\itemsep}{6pt}
+  \item Gradienten på cellenivå kunne skyldes sammensetningsendringer mellom foretak snarere enn omfordeling innad i foretak.
+  \item Vi estimerer på nytt på individdata fra registrene, med foretaksfaste effekter, som hos Brynjolfsson, Chandar \& Chen.
+  \item Individdataene er et øyeblikksbilde; vi bruker dem til å validere mønsteret på cellenivå, ikke til løpende oppfølging.
+\end{itemize}
+
+\vspace{0.6em}
+\textbf{Spesifikasjon.} Poisson (PPML) på celler av foretak $\times$ kvintil $\times$ måned, per tiårs aldersgruppe, med foretak $\times$ kvintil- og foretak $\times$ månedsfaste effekter. Identifikasjon fra omfordeling mellom eksponeringskvintiler innad i foretak. Utvalg: private foretak med minst 20 ansatte i alderen 21--60, 2021m1--2026m2; om lag 22\,000 foretak som dekker 66--72\,\% av privat lønnstakersysselsetting. Standardfeil klynget på foretak.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Hendelsesstudie innad i foretak (Q1-referanse)}
+\hypertarget{after-firmfe-es}{}
+\centering
+\includegraphics[height=5.5cm,keepaspectratio]{figure_firmfe_poisson_es_grid.pdf}
+
+\vspace{0.2em}
+\footnotesize
+Q2--Q5 mot Q1 etter tiårs aldersgruppe. I 21--30 er Q5 støyete og ender svakt positivt; 31--40 stiger til rundt $+0{,}12$; 41--50 glir nedover gjennom 2025 og henter seg inn mot null; 51--60 ligger flatt. Samlet Q5 $\times$ Post: $+0{,}013$ (i.s.), $+0{,}050$***, $-0{,}021$*, $+0{,}007$.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Celle mot foretak: samme historie}
+\centering
+\includegraphics[height=5.5cm,keepaspectratio]{figure_cell_vs_firmfe_q5_grid.pdf}
+
+\vspace{0.2em}
+\footnotesize
+Trinnvis avstemming av Q5-estimatene: bytte av datakilde flytter ingenting ($\leq 0{,}003$ i alle aldersgrupper); kravet om minst 20 ansatte betyr lite; det største enkeltsteget er fra celle- til foretaksspesifikasjonen, mest i 31--40 ($+0{,}084 \to +0{,}050$). Fortegnene står seg hele veien.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Replikasjon av Brynjolfsson mfl.\ (22--25 år)}
+\centering
+\includegraphics[height=5.1cm,keepaspectratio]{fig_bcc_4_es.pdf}
+
+\vspace{0.2em}
+\footnotesize
+Balansert panel av heltidsansatte i privat sektor, seks aldersgrupper. For 22--25 år er gjennomsnittsgapet Q5 mot Q1 etter ChatGPT lite (rundt 3 log-punkter), men Q5 faller under Q1 fra våren 2025 og gapet vokser til rundt 35 log-punkter innen februar 2026, mer enn de 15 som er rapportert for USA. Sent, upresist og med forkastede pretrender.
+\end{frame}

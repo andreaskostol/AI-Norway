@@ -1,0 +1,89 @@
+% Eloundou mfl. (2024): oppgavebasert LLM-eksponering, kjerneframene.
+% Norsk oversettelse av slides/mapping/eloundou_core.tex, med en
+% TikZ-illustrasjon (E0/E1/E2) fra den private pptx-decken lagt først.
+
+% ---------------------------------------------------------------
+% Illustrasjon (d): eksponering måles på konkrete O*NET-oppgaver
+\begin{frame}{Eksponering måles på konkrete O*NET-oppgaver}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.36\textwidth}
+  {\bfseries\textcolor{illBlue}{O*NET}}
+
+  \vspace{0.5em}
+  {\footnotesize\textcolor{illGray}{Datasett fra US Department of Labor som beskriver rundt 1\,000 yrker med konkrete oppgaver. Eloundou mfl.\ vurderte hver oppgave for alle yrker.}}
+
+  \vspace{1.4em}
+  {\small\bfseries\textcolor{illInk}{KI-indeksens yrkesskår = Core-vektet gjennomsnitt av oppgavepoengene}}
+
+  \vspace{0.4em}
+  {\footnotesize\textcolor{illGray}{Core-oppgaver teller 2; Supplemental-oppgaver teller 1.}}
+\end{column}
+\begin{column}{0.60\textwidth}
+  \begin{tikzpicture}
+    \useasboundingbox (0,0.2) rectangle (8.4,-5.7);
+    \illerow{(0,0)}{illGray}{E0}{Skår: 0}{Ingen eksponering}{Språkmodellen reduserer ikke tidsbruken med minst 50 prosent.}
+    \illerow{(0,-2.0)}{illRed}{E1}{Skår: 1}{Språkmodell alene}{En språkmodell kan redusere tidsbruken med minst 50 prosent.}
+    \illerow{(0,-4.0)}{illOrange}{E2}{Skår: 0,5}{Språkmodell + programvare}{Tidsbruken kan reduseres med minst 50 prosent når annen programvare kobles på.}
+  \end{tikzpicture}
+\end{column}
+\end{columns}
+
+\vspace{0.2em}
+\raggedright\tiny\textcolor{illGray}{Kilder: O*NET Resource Center; Eloundou mfl.\ (Science, 2024).}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Hva Eloundou mfl.\ måler}
+\begin{itemize}\setlength{\itemsep}{6pt}
+  \item Hver O*NET-oppgave er vurdert av mennesker og GPT-4 i tre kategorier:
+  \begin{itemize}
+    \item[$E_0$] ingen eksponering
+    \item[$E_1$] språkmodell alene reduserer tidsbruken med minst 50\,\%
+    \item[$E_2$] språkmodell med tilleggsprogramvare reduserer tidsbruken med minst 50\,\%
+  \end{itemize}
+  \item Oppgaveskår:\quad
+        $\beta_{\text{oppgave}} = 0$ ved $E_0$,\;\; $1$ ved $E_1$,\;\; $0{,}5$ ved $E_2$
+  \item Yrkesskår: $\beta_{\text{yrke}}$ = snitt av $\beta_{\text{oppgave}}$ der O*NET-oppgaver merket Core teller 2 og Supplemental teller 1
+  \item Vi bruker den publiserte yrkesfilen (\texttt{occ\_level.csv}); den avviker litt fra uvektede oppgavesnitt der yrket har Supplemental-oppgaver
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Kodekjeden}
+\centering
+\begin{tikzpicture}[node distance=1.0cm and 1.1cm]
+  \node[codebox=cTASK] (task) {\cbox{cTASK}{O*NET-oppgave}{8823, \dots}{vurdert $E_0/E_1/E_2$}};
+  \node[codebox=cSOC18, right=of task] (soc18) {\cbox{cSOC18}{SOC 2018}{29-1051}{Pharmacists}};
+  \node[codebox=cSOC10, right=of soc18] (soc10) {\cbox{cSOC10}{SOC 2010}{29-1051}{Pharmacists}};
+  \node[codebox=cSTYRK, right=of soc10] (isco) {\cbox{cSTYRK}{ISCO-08}{2262}{Farmasøyter}};
+
+  \draw[chain] (task) -- node[arrowlabel]{snitt} (soc18);
+  \draw[chain] (soc18) -- node[arrowlabel]{BLS 2017} (soc10);
+  \draw[chain] (soc10) -- node[arrowlabel]{BLS 2012} (isco);
+\end{tikzpicture}
+
+\vspace{1em}
+Overlappende firesifrede yrkesgrupper i STYRK-08 er kodekompatible med ISCO-08 (SSB Notater 17/2011). STYRK 2262 er farmasøyter.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Gjennomregnet eksempel: farmasøyter (en-til-en-kobling)}
+\centering
+\begin{tikzpicture}[node distance=1.0cm and 1.1cm]
+  \node[codebox=cTASK] (task) {\cbox{cTASK}{O*NET-oppgave}{21 oppgaver}{$E_0/E_1/E_2$-vurderinger}};
+  \node[codebox=cSOC18, right=of task] (soc18) {\cbox{cSOC18}{SOC 2018}{29-1051}{Pharmacists}};
+  \node[codebox=cSOC10, right=of soc18] (soc10) {\cbox{cSOC10}{SOC 2010}{29-1051}{Pharmacists}};
+  \node[codebox=cSTYRK, right=of soc10] (isco) {\cbox{cSTYRK}{ISCO-08}{2262}{Farmasøyter}};
+
+  \draw[chain] (task) -- node[arrowlabel]{snitt} (soc18);
+  \draw[chain] (soc18) -- node[arrowlabel]{1$\to$1} (soc10);
+  \draw[chain] (soc10) -- node[arrowlabel]{1$\to$1} (isco);
+\end{tikzpicture}
+
+\vspace{1em}
+\begin{itemize}\setlength{\itemsep}{4pt}
+  \item Farmasøyter har samme sekssifrede SOC-kode i begge årganger: 29-1051
+  \item BLS-krysskoblingen sender 29-1051 til én ISCO-08-kode (2262)
+  \item Norsk STYRK 2262 er farmasøyter, ingen norsk omkoding nødvendig
+\end{itemize}
+\end{frame}

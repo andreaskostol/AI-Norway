@@ -1,0 +1,122 @@
+% DiD på cellenivå: spesifikasjon, hendelsesstudie, HonestDiD
+% (huser også METR-framen og re-ankringen til agentisk KI)
+
+\begin{frame}{Empirisk spesifikasjon}
+\begin{itemize}\setlength{\itemsep}{4pt}
+  \item Celler: (yrke $j$ $\times$ aldersgruppe $a$ $\times$ måned $t$), privat sektor, 2021m1--2026m4
+  \item Én Poisson-regresjon (PPML) per tiårs aldersgruppe:
+\end{itemize}
+\[
+\log E[\text{antall}_{j,a,t}] = \alpha_{j} + \beta_{t} + \gamma_{q(j),\,k(t)}
+\]
+\begin{itemize}\setlength{\itemsep}{3pt}
+  \item $\alpha_j$: yrkesfaste effekter, fanger opp permanent yrkesstørrelse
+  \item $\beta_t$: månedsfaste effekter, fanger opp aldersgruppens samlede tidsbane
+  \item $\gamma_{q,k}$: endring i log-punkter for kvintil $q$ ved hendelsestid $k$, relativt til \textbf{Q1} (minst eksponert) og $k = -1$ (oktober 2022)
+  \item Standardfeil klynget på yrke
+\end{itemize}
+
+\vspace{0.2em}
+\footnotesize
+\textbf{Hvorfor Poisson?} Antall med en del nuller; $\log(0+x)$ gir skjevhet.\quad
+Q3-referanse (median) i backup.\quad\hyperlink{cell-es-q3-detail}{\beamerbutton{Q3-referanse}}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Hendelsesstudie på cellenivå (Q1-referanse)}
+\hypertarget{after-cell-did}{}
+\centering
+\includegraphics[height=5.6cm,keepaspectratio]{figure_microdata_poisson_es_grid.pdf}
+
+\vspace{0.2em}
+\footnotesize
+Q2--Q5 mot Q1, etter tiårs aldersgruppe, privat sektor; referanse oktober 2022 ($k=-1$). I 21--30 er Q5 støyete og ender nær null; 31--40 stiger til rundt $+0{,}15$; 41--50 når rundt $-0{,}08$ medio 2025 og ender nær $-0{,}03$; 51--60 ligger nær null.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Forskjell-i-forskjeller: Q5 mot Q1, snitt etter ChatGPT}
+\centering
+\setlength{\tabcolsep}{8pt}
+\begin{tabular}{lcccc}
+\toprule
+ & 21--30 & 31--40 & 41--50 & 51--60 \\
+\midrule
+Q5 $\times$ Post & 0,020 & 0,081*** & $-0{,}015$ & 0,010 \\
+                 & (0,023) & (0,019) & (0,017) & (0,017) \\
+\midrule
+Yrker & 391 & 393 & 393 & 392 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.8em}
+\begin{itemize}\setlength{\itemsep}{4pt}
+  \item Trippeldifferanse, Q5 $\times$ Post $\times$ ung (21--30 mot 31--60): $-0{,}009$ (0,016), ikke signifikant.
+  \item Ingen større nedgang etter ChatGPT for unge i den mest eksponerte kvintilen.
+\end{itemize}
+
+\vspace{0.2em}
+\footnotesize
+Poisson, yrkes- og månedsfaste effekter, standardfeil klynget på yrke. *** $p<0{,}01$.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Pretrendene er ikke parallelle. Hvor mye betyr det?}
+\small
+\begin{itemize}\setlength{\itemsep}{2pt}
+  \item Felles tester forkaster parallelle pretrender i alle aldersgrupper; Q5-banen før 2023 svinger 0,11 til 0,18 log-punkter, like mye som bevegelsene etter 2022.
+  \item HonestDiD (Rambachan \& Roth 2023): gjennomsnittlig Q5 mot Q1 etter ChatGPT, 21--30 år.
+\end{itemize}
+
+\vspace{0.1em}
+\centering
+\footnotesize
+\renewcommand{\arraystretch}{0.88}
+\begin{tabular}{lc}
+\toprule
+Restriksjon & Robust 95\,\%-KI \\
+\midrule
+Original ($\bar{M}=0$, parallelle trender) & $[-0{,}026,\ +0{,}065]$ \\
+$\bar{M}=0{,}5$ & $[-0{,}234,\ +0{,}314]$ \\
+$\bar{M}=1{,}0$ & $[-0{,}515,\ +0{,}582]$ \\
+$\bar{M}=1{,}5$ & $[-0{,}783,\ +0{,}863]$ \\
+$\bar{M}=2{,}0$ & $[-1{,}050,\ +1{,}130]$ \\
+\midrule
+Breakdown $\bar{M}$ & 0,00 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.3em}
+Det konvensjonelle intervallet inneholder allerede null, så det finnes ingen gradient å velte (breakdown $\bar M = 0$). Men nullresultatet er stramt bare under parallelle trender: de robuste intervallene utelukker ikke store effekter i noen retning.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{KI-kapasiteten akselererer}
+\centering
+\includegraphics[height=5.5cm,keepaspectratio]{METR_time_horizon.JPG}
+
+\vspace{0.4em}
+\footnotesize
+Lengden på programvareoppgaver en språkmodell løser med 50\,\% suksessrate har omtrent doblet seg hver sjuende måned siden GPT-2. I 2026 håndterer frontmodellene oppgaver på flere timer. Kilde: Model Evaluation \& Threat Research (METR).
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Hvorfor agentisk KI er et eget vindu}
+\textbf{Mekanisme.} Før-agentisk KI: KI hjelper med enkeltsteg i en produksjonskjede, mennesker kontrollerer hvert steg. Agentisk KI: mennesker kontrollerer bare sluttresultatet (Demirer, Horton, Immorlica \& Lucier 2026).
+
+\vspace{0.6em}
+\textbf{Når skjedde dette?} Noe vilkårlig, brukskostnaden faller gradvis.
+\begin{itemize}\setlength{\itemsep}{2pt}\footnotesize
+  \item \textbf{Tidlig 2024.} Devin-demo (mars 2024), Claude 3 Opus (mars 2024), standardiserte API-er for verktøykall. Kjeding teknisk mulig, men på demonstrasjonsnivå.
+  \item \textbf{Mai 2025.} OpenAI Codex (\href{https://openai.com/index/introducing-codex/}{16.\ mai 2025}) og Anthropic Claude 4 / Claude Code (\href{https://www.anthropic.com/news/claude-4}{22.\ mai 2025}) gjør flertrinns kodeagenter produksjonsklare.
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Re-ankring til agentisk KI (april 2025)}
+\centering
+\includegraphics[height=5.6cm,keepaspectratio]{figure_microdata_es_decade_agentic.pdf}
+
+\vspace{0.2em}
+\footnotesize
+Samme Poisson-DiD, re-ankret til april 2025 (siste måned før agentisk KI). Førperiode 2023m1--2025m4, etterperiode 2025m5--2026m2. Cellenivå, privat sektor. Q3-referanse, estimert på data til og med februar 2026.
+\end{frame}

@@ -1,0 +1,110 @@
+% Motivasjon: presseoppslag, oppgaveperspektivet, litteratur, bidrag.
+% Illustrasjonsslidene er gjenskapt i TikZ fra den private pptx-decken.
+
+\begin{frame}{KI og fremtidens arbeidsliv: i overskriftene}
+\centering
+\begin{tikzpicture}
+  \useasboundingbox (-6.5, -2.7) rectangle (6.5, 2.7);
+  \node<1->[rotate=-4] at (-4, 0) {%
+    \includegraphics[height=5cm,keepaspectratio]{Economist_jobs_apocalypse.jpg}};
+  \node<2->[rotate=3]  at (0, -0.3) {%
+    \includegraphics[height=5cm,keepaspectratio]{{Atlantic_AI Has Ruined the Job Market}.JPG}};
+  \node<3->[rotate=-2] at (4, 0.2) {%
+    \includegraphics[height=5cm,keepaspectratio]{NYTimes_AIdoesnthavetomeanlayoffs.JPG}};
+\end{tikzpicture}
+
+\vspace{0.4em}
+\end{frame}
+
+% ---------------------------------------------------------------
+% Illustrasjon (a): oppgaveperspektivet
+\begin{frame}{En jobb består av oppgaver som påvirkes ulikt}
+\textcolor{illInk}{\textbf{Teknologi kan endre deler av jobben uten å erstatte hele.}}
+
+\vspace{0.3em}
+\centering
+\begin{tikzpicture}
+  \useasboundingbox (0,0.2) rectangle (\textwidth,-3.85);
+  \illcard{(0.0,0)}{illBlue}{OPPGAVENIVÅ}{En jobb er en samling oppgaver}{Arbeidsoppgaver kan flyttes mellom mennesker og teknologi. Yrket består så lenge viktige oppgaver fortsatt må løses av mennesker.}
+  \illcard{(5.1,0)}{illOrange}{HØY EKSPONERING}{Digital tekst, kode og analyse}{Standardiserte førsteutkast, dokumentbehandling og koding ligger nær språkmodellenes styrker.}
+  \illcard{(10.2,0)}{illGray}{LAVERE DIREKTE EKSPONERING}{Tilstedeværelse, relasjon og ansvar}{Fysisk arbeid, omsorg og skjønn under usikkerhet er vanskeligere å overføre fullt ut til en språkmodell. Per nå.}
+\end{tikzpicture}
+
+\vspace{0.15em}
+\illbanner{Rutinepregede inngangsoppgaver kan endres før hele yrker gjør det.}
+
+\vspace{0.1em}
+\raggedright\tiny\textcolor{illGray}{Kilder: Autor, Levy \& Murnane (2003); Acemoglu \& Autor (2011); Eloundou mfl.\ (2024); Brynjolfsson (2026).}
+\end{frame}
+
+% ---------------------------------------------------------------
+% Illustrasjon (b): Acemoglu-Restrepo-rammeverket
+\begin{frame}{Tre krefter trekker sysselsettingen i ulike retninger}
+\vspace{0.3em}
+\centering
+\begin{tikzpicture}
+  \useasboundingbox (0,0.2) rectangle (\textwidth,-3.85);
+  \illcard{(0.0,0)}{illRed}{FORTRENGNING}{Oppgaver flyttes til maskiner}{Arbeidskraftens oppgaveandel faller. Etterspørselen etter arbeid går ned, alt annet likt.}
+  \illcard{(5.1,0)}{illTeal}{PRODUKTIVITET}{Lavere kostnad øker produksjonen}{Pris, kvalitet og etterspørsel kan endres. Behovet for arbeid i oppgavene som står igjen kan øke.}
+  \illcard{(10.2,0)}{illPurple}{NYE OPPGAVER}{Arbeidskraft får nye funksjoner}{Nye produkter, kontrollbehov og arbeidsoppgaver kan gjeninnsette arbeid i produksjonen.}
+\end{tikzpicture}
+
+\vspace{0.5em}
+\illbanner{Nettoeffekten følger ikke av hva modellen teknisk sett kan gjøre.}
+
+\vspace{0.2em}
+\raggedright\tiny\textcolor{illGray}{Rammeverk: Acemoglu og Restrepo (2019), Automation and New Tasks.}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Nyere litteratur: KI-eksponering og sysselsetting}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{l l p{6.2cm}}
+\toprule
+Land & Studie & Hovedfunn (yngste arbeidstakere, øverste kvintil) \\
+\midrule
+USA            & Brynjolfsson, Chandar \& Chen (2025) & Q5, 22--25 år: nedgang på om lag 15 log-punkter \\
+Sverige        & Lodefalk mfl.\ (2026)                & Q5, 22--25 år: nedgang på ca.\ 5,5\,\%; monoton gradient \\
+Storbritannia  & Teeselink (2025)                     & $-0{,}3\,\%$ per standardavvik LLM-eksponering; konsentrert i junior- og høytlønnsstillinger \\
+39 land        & Teeselink (2026)                     & Færre nyansettelser; sterkere utslag der stillingsvernet er strengt \\
+Danmark        & Humlum \& Vestergaard (2026)         & Null: nedgangen for unge skyldes ikke KI-bruk i virksomhetene; utelukker effekter over 2\,\% \\
+Finland        & Kauhanen \& Rouvinen (2026)          & Null; utviklingen følger demografi, ikke KI \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.8em}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Bidrag}
+\begin{itemize}\setlength{\itemsep}{8pt}
+  \item Et offentlig, månedlig dashbord, \textbf{kiindeksen.no}: sysselsettingen i hele populasjonen av private lønnstakerforhold i Norge, fulgt etter KI-eksponering med rundt tre måneders forsinkelse.
+  \item Tester om «kanarifugl»-mønsteret (Brynjolfsson mfl.) generaliserer: utvalgte høyeksponerte yrker mot \textbf{hele eksponeringsfordelingen}.
+  \item Undersøker den ferske effekten av \textbf{agentisk KI} (\emph{«autonome LLM-baserte systemer som planlegger, bruker verktøy og utfører flertrinnsoppgaver»}, Korinek 2025).
+\end{itemize}
+\end{frame}
+
+% ---------------------------------------------------------------
+% Illustrasjon (c): fire størrelser som ofte blandes sammen
+\begin{frame}{Fire ulike størrelser som ofte blandes sammen}
+\vspace{0.4em}
+\centering
+\begin{tikzpicture}
+  \useasboundingbox (-0.2,0.5) rectangle (\textwidth,-3.6);
+  \illstep{(0.0,0)}{01}{Kapasitet}{Hva kan modellen gjøre i benchmarks?}
+  \illarrow{(3.25,-1.4)}
+  \illstep{(3.9,0)}{02}{Bruk}{Tas verktøyet faktisk i bruk på jobb?}
+  \illarrow{(7.15,-1.4)}
+  \illstep{(7.8,0)}{03}{Oppgaveendring}{Blir arbeidet raskere, bedre eller annerledes?}
+  \illarrow{(11.05,-1.4)}
+  \illstepx{(11.7,0)}{04}{Utfall}{Endres ansettelser, lønn eller sysselsetting?}
+\end{tikzpicture}
+
+\vspace{0.8em}
+\centering
+\textcolor{illInk}{\textbf{KI-indeksen observerer det siste leddet: arbeidsmarkedsutfall i norske registerdata.}}
+
+\vspace{0.6em}
+\raggedright\tiny\textcolor{illGray}{Kilder: Narayanan \& Kapoor (2025); Eloundou mfl.\ (2024); kiindeksen.no.}
+\end{frame}

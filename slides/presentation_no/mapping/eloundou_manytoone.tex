@@ -1,0 +1,24 @@
+% Mange-til-en-eksempel
+
+\begin{frame}{Gjennomregnet eksempel: mange-til-en-kobling}
+\centering
+\begin{tikzpicture}[node distance=0.4cm and 0.5cm]
+  \node[codebox=cSOC10] (a) {\cbox{cSOC10}{SOC 2010}{11-1011}{\shortstack{Chief Exec. \\ $\beta=0{,}508$}}};
+  \node[codebox=cSOC10, right=of a] (b) {\cbox{cSOC10}{SOC 2010}{11-1021}{\shortstack{Gen.\ \& Ops \\ $\beta=0{,}481$}}};
+  \node[codebox=cSOC10, right=of b] (c) {\cbox{cSOC10}{SOC 2010}{11-9161}{\shortstack{Emergency \\ $\beta=0{,}422$}}};
+
+  \node[codebox=cSTYRK, below=1.2cm of b, minimum width=3.5cm] (s) {\cbox{cSTYRK}{STYRK-08}{1112}{Adm.\ direktører \quad \textbf{$\beta=0{,}470$}}};
+
+  \draw[chain] (a) -- (s);
+  \draw[chain] (b) -- (s);
+  \draw[chain] (c) -- (s);
+\end{tikzpicture}
+
+\vspace{0.4em}
+\footnotesize
+\begin{itemize}\setlength{\itemsep}{1pt}
+  \item Tre SOC 2010-koder går til ISCO 1112 i BLS-krysskoblingen
+  \item STYRK-$\beta$ er det uvektede snittet av bidragende SOC-koders $\beta$
+  \item 57,7\,\% av STYRK-kodene med Eloundou-skår har minst én bidragsyter merket som delvis match i BLS-filen
+\end{itemize}
+\end{frame}

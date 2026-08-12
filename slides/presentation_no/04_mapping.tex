@@ -1,0 +1,86 @@
+% Kobling fra amerikanske til norske yrkeskoder.
+% Kjerneframene ligger i mapping/ (oversatte kopier av slides/mapping/);
+% eksemplene og O*NET-introen ligger i backup (90_backup.tex).
+
+\begin{frame}{Kobling fra amerikanske til norske yrkeskoder}
+\begin{itemize}\setlength{\itemsep}{8pt}
+  \item Eksponeringsmålet til Eloundou mfl.\ er bygget på amerikanske yrkeskoder (SOC).
+  \item Norske registerdata bruker STYRK-08.
+  \item STYRK-08 bygger på ISCO-08; overlappende firesifrede yrkesgrupper er kodekompatible etter en liten, dokumentert gjennomgang av norske titler.
+  \item Bro: SOC $\to$ ISCO-08 via amerikanske BLS, deretter kobling til overlappende STYRK-08-koder, med manuelle SOC-korreksjoner for 2267 og 2269.
+\end{itemize}
+\end{frame}
+
+% Eloundou-målet, kodekjeden, farmasøyt-eksempelet (+ illustrasjonsslide E0/E1/E2)
+\input{mapping/eloundou_core}
+
+% Fordelingen over norske yrker (sysselsettingsvektet)
+\input{mapping/eloundou_distribution}
+
+% ---------------------------------------------------------------
+\begin{frame}{Fem største yrker per eksponeringskvintil (april 2026)}
+\hypertarget{after-mapping}{}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.50\textwidth}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{0.92}
+\begin{tabular}{@{}p{4.6cm} r r@{}}
+\toprule
+Yrke & Skår & Syss. \\
+\midrule
+\multicolumn{3}{@{}l}{\textit{Q1 (minst eksponert)}} \\
+Renholdere i virksomheter & 0,03 & 40k \\
+Elektrikere & 0,13 & 26k \\
+Operatører, næringsmiddelprod. & 0,09 & 23k \\
+Bilmekanikere & 0,09 & 17k \\
+Rørleggere og VVS-montører & 0,06 & 17k \\
+\addlinespace
+\multicolumn{3}{@{}l}{\textit{Q2}} \\
+Tømrere og snekkere & 0,14 & 35k \\
+Barnehage- og skoleassistenter & 0,25 & 32k \\
+Servitører & 0,16 & 20k \\
+Anleggsmaskin- og industrimek. & 0,13 & 16k \\
+Kokker & 0,19 & 16k \\
+\addlinespace
+\multicolumn{3}{@{}l}{\textit{Q3}} \\
+Butikkmedarbeidere & 0,34 & 115k \\
+Lagermedarbeidere & 0,33 & 29k \\
+Lastebil- og trailersjåfører & 0,31 & 21k \\
+Andre ingeniørteknikere & 0,36 & 20k \\
+Bil-, drosje- og varebilførere & 0,28 & 14k \\
+\bottomrule
+\end{tabular}
+\end{column}
+\begin{column}{0.50\textwidth}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{0.92}
+\begin{tabular}{@{}p{4.6cm} r r@{}}
+\toprule
+Yrke & Skår & Syss. \\
+\midrule
+\multicolumn{3}{@{}l}{\textit{Q4}} \\
+Varehandelssjefer & 0,48 & 30k \\
+Administrerende direktører & 0,49 & 28k \\
+Sivilingeniører (bygg og anlegg) & 0,48 & 19k \\
+Salgs- og markedssjefer & 0,48 & 13k \\
+Ledere, bygge- og anleggsvirks. & 0,44 & 12k \\
+\addlinespace
+\multicolumn{3}{@{}l}{\textit{Q5 (mest eksponert)}} \\
+Selgere (engros) & 0,57 & 37k \\
+Kontormedarbeidere & 0,60 & 33k \\
+Systemanalytikere/-arkitekter & 0,63 & 22k \\
+Andre programvareutviklere & 0,77 & 18k \\
+Regnskapsførere & 0,80 & 15k \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.6em}
+\footnotesize Sysselsetting i tusen. Privat sektor, 21--60 år, rangert innen kvintil etter antall i april 2026.
+
+\vspace{0.3em}
+\hfill\hyperlink{worked-examples}{\beamerbutton{Flere gjennomregnede eksempler}}
+\end{column}
+\end{columns}
+\end{frame}

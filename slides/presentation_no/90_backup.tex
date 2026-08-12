@@ -1,0 +1,91 @@
+% Backupslides: hver har et \hypertarget slik at den kan nås fra hovedløpet,
+% og en \beamerbutton{Tilbake} som går tilbake til utgangspunktet.
+
+\begin{frame}{Lindenlaub mfl.\ (2026), fig.\ 1: KI-bruk mot fire eksponeringsmål}
+\hypertarget{lorv-detail}{}
+\centering
+\includegraphics[height=5.4cm,keepaspectratio]{LORV_Fig1_Actual_adoptoin_vs_Exposure.JPG}
+
+\vspace{0.3em}
+\footnotesize
+Hvert panel regresserer arbeidstakerrapportert KI-bruk på et eksponeringsmål. Eloundou mfl.\ har $R^2 = 0{,}30$, foran Handa (0,26), Felten (0,26) og Webb (0,02).
+
+\vspace{0.3em}
+\hfill\hyperlink{after-eloundou}{\beamerbutton{Tilbake}}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Offentlig sektor: ingen eksponeringsgradient}
+\hypertarget{public-sector-detail}{}
+\centering
+\includegraphics[height=5.5cm,keepaspectratio]{figure_emp_decade_public_sa.pdf}
+
+\vspace{0.3em}
+\footnotesize
+Samme indekserte serier som for privat sektor, her offentlig sektor, sesongjustert. Ingen eksponeringsgradient i noen aldersgruppe.
+
+\vspace{0.3em}
+\hfill\hyperlink{after-private}{\beamerbutton{Tilbake}}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Kontantlønn: ingen divergens}
+\hypertarget{cash-earnings-detail}{}
+\centering
+\includegraphics[height=5.2cm,keepaspectratio]{figure_kontantlonn_decade_private.pdf}
+
+\vspace{0.2em}
+\footnotesize
+Kontantlønn etter kvintil og alder, privat sektor. Sesongmønstrene dominerer (feriepenger, desemberbonus): en foreløpig null, i tråd med tilpasning på ansettelsesmarginen under toleddet lønnsdannelse.
+
+\vspace{0.3em}
+\hfill\hyperlink{after-private}{\beamerbutton{Tilbake}}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Handa-augmentering: ingen gradient}
+\hypertarget{handa-aug-detail}{}
+\centering
+\includegraphics[height=5.5cm,keepaspectratio]{figure_age_by_quintile_handa_aug_sa.pdf}
+
+\vspace{0.3em}
+\footnotesize
+Kvintiler rangert etter \textbf{augmenteringsandelen} i Claude-bruk, sesongjustert. Gapene er mindre enn for automatisering; de minst eksponerte ligger til dels på linje med de mest eksponerte.
+
+\vspace{0.3em}
+\hfill\hyperlink{after-handa}{\beamerbutton{Tilbake}}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Hendelsesstudie på cellenivå, Q3-referanse}
+\hypertarget{cell-es-q3-detail}{}
+\centering
+\includegraphics[height=5.5cm,keepaspectratio]{figure_microdata_poisson_es_grid_q3.pdf}
+
+\vspace{0.3em}
+\footnotesize
+Samme hendelsesstudie på cellenivå, målt mot Q3 (median eksponering) i stedet for Q1. Q3 unngår vintersesongen i bygg som preger Q1; det kvalitative mønsteret er uendret.
+
+\vspace{0.3em}
+\hfill\hyperlink{after-cell-did}{\beamerbutton{Tilbake}}
+\end{frame}
+
+% ---------------------------------------------------------------
+% Gjennomregnede eksempler fra kartleggingen.
+\begin{frame}{Backup: gjennomregnede koblingseksempler}
+\hypertarget{worked-examples}{}
+\begin{itemize}\setlength{\itemsep}{6pt}
+  \item Oppgaveskåring for farmasøyter (21 oppgaver).
+  \item Fem ytterligere en-til-en-yrker med fulle oppgavetabeller: tømrere, lektorer, jurister, samfunnsøkonomer og driftsteknikere i IKT.
+  \item Et mange-til-en-eksempel (STYRK 1112) og datastrukturen i O*NET.
+  \item Oppgavetekstene er beholdt på engelsk slik de står i O*NET.
+\end{itemize}
+
+\vspace{0.3em}
+\hfill\hyperlink{after-mapping}{\beamerbutton{Tilbake}}
+\end{frame}
+
+\input{mapping/eloundou_extra}
+\input{mapping/eloundou_examples}
+\input{mapping/eloundou_manytoone}
+\input{mapping/onet_intro}
