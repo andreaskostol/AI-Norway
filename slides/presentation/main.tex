@@ -17,7 +17,7 @@
 \input{tikz_macros}
 
 % Look up figures and reused inputs from the mapping deck
-\graphicspath{{./}{../mapping/}{../../analysis/output/figures/}}
+\graphicspath{{./}{../mapping/}{../../analysis/output/figures/}{../../analysis-indiv/output/bcc_appendix/}}
 
 % Accent color matching the paper
 \definecolor{accent}{HTML}{1F4E79}
@@ -26,11 +26,11 @@
 \setbeamercolor{frametitle}{bg=accent}
 \setbeamercolor{alerted text}{fg=accent}
 
-\title{AI Exposure and Age-Differentiated Employment}
-\subtitle{Evidence from Norwegian Register Data}
+\title{Does AI Widen Employment Gaps?}
+\subtitle{Tracking Early-Career Employment by Occupational Exposure in Norway}
 \author{Øystein Hernæs\inst{1} \and Andreas R.\ Kostøl\inst{2}}
 \institute{\inst{1}Frisch Centre \and \inst{2}BI Norwegian Business School}
-\date{June 2026, \emph{Very preliminary work}}
+\date{August 2026, \emph{Preliminary}}
 
 \begin{document}
 
@@ -52,27 +52,33 @@
 %\section{Mapping AI exposure to STYRK-08}
 \input{04_mapping}
 
-
 % ---------------------------------------------------------------
-\section{Descriptive results}
+\section{Employment gaps by AI exposure}
 \input{05_results_descriptive}
 
 % ---------------------------------------------------------------
-\section{Cell-level difference-in-differences}
+\section{Regression analysis}
 \input{06_results_diffindiff}
+
+% ---------------------------------------------------------------
+\section{Validation: individual-level data}
+\input{07_firmfe}
+
+% ---------------------------------------------------------------
+\section{Cross-country comparison}
+\input{09_discussion}
+
+% ---------------------------------------------------------------
+\section{The dashboard: kiindeksen.no}
+\input{09_dashboard}
 
 % ---------------------------------------------------------------
 \section{Conclusion}
 \input{10_conclusion}
 
 % ---------------------------------------------------------------
-\section{Robustness}
-\input{08_robustness}
-
-
-% ---------------------------------------------------------------
 \section*{Backup}
-\input{07_firmfe}    % firm-FE demoted to backup pending Q3-reference re-run
+\input{08_robustness}
 \input{90_backup}
 
 \end{document}

@@ -19,11 +19,11 @@ Each panel regresses worker-reported AI adoption on an exposure measure. Eloundo
 \begin{frame}{Public sector: no exposure gradient}
 \hypertarget{public-sector-detail}{}
 \centering
-\includegraphics[height=6cm,keepaspectratio]{figure_emp_decade_public.pdf}
+\includegraphics[height=5.5cm,keepaspectratio]{figure_emp_decade_public_sa.pdf}
 
 \vspace{0.3em}
 \footnotesize
-Same indexed series as the private-sector slide, public sector. No exposure gradient at any age.
+Same indexed series as the private-sector slide, public sector, seasonally adjusted. No exposure gradient at any age.
 
 \vspace{0.3em}
 \hfill\hyperlink{after-private}{\beamerbutton{Back}}
@@ -33,40 +33,59 @@ Same indexed series as the private-sector slide, public sector. No exposure grad
 \begin{frame}{Cash earnings: no divergence}
 \hypertarget{cash-earnings-detail}{}
 \centering
-\includegraphics[height=6.5cm,keepaspectratio]{figure_kontantlonn_decade_private.pdf}
+\includegraphics[height=5.2cm,keepaspectratio]{figure_kontantlonn_decade_private.pdf}
 
-\vspace{0.5em}
+\vspace{0.2em}
 \footnotesize
-Cash earnings (\emph{kontantlønn}) by quintile and age in the private sector. Consistent with adjustment on the hiring margin under two-tier wage bargaining.
+Cash earnings (\emph{kontantlønn}) by quintile and age, private sector. Seasonal patterns dominate (holiday pay, December bonuses): a tentative null, consistent with adjustment on the hiring margin under two-tier bargaining.
 
 \vspace{0.3em}
 \hfill\hyperlink{after-private}{\beamerbutton{Back}}
 \end{frame}
 
 % ---------------------------------------------------------------
-\begin{frame}{Cell-level event study, Q1 reference}
-\hypertarget{cell-es-q1-detail}{}
+\begin{frame}{Handa augmentation: no gradient}
+\hypertarget{handa-aug-detail}{}
 \centering
-\includegraphics[height=6cm,keepaspectratio]{figure_microdata_poisson_es_grid.pdf}
+\includegraphics[height=5.5cm,keepaspectratio]{figure_age_by_quintile_handa_aug_sa.pdf}
 
 \vspace{0.3em}
 \footnotesize
-Same cell-level Poisson event study, plotted against Q1 (least exposed) instead of Q3. Magnitudes are larger but the qualitative pattern is the same.
+Quintiles ranked by \textbf{augmentation} share of Claude usage, seasonally adjusted. Gaps are less pronounced than for automation; the least exposed are sometimes on par with the most exposed.
+
+\vspace{0.3em}
+\hfill\hyperlink{after-handa}{\beamerbutton{Back}}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Cell-level event study, Q3 reference}
+\hypertarget{cell-es-q3-detail}{}
+\centering
+\includegraphics[height=5.5cm,keepaspectratio]{figure_microdata_poisson_es_grid_q3.pdf}
+
+\vspace{0.3em}
+\footnotesize
+Same cell-level Poisson event study, plotted against Q3 (median exposure) instead of Q1. Q3 avoids Q1's winter-construction seasonality; the qualitative pattern is unchanged.
 
 \vspace{0.3em}
 \hfill\hyperlink{after-cell-did}{\beamerbutton{Back}}
 \end{frame}
 
 % ---------------------------------------------------------------
-\begin{frame}{Firm-FE event study, full quintile grid}
-\hypertarget{firmfe-grid-detail}{}
-\centering
-\includegraphics[height=6cm,keepaspectratio]{figure_firmfe_poisson_es_grid.pdf}
+% Worked examples from the mapping deck.
+\begin{frame}{Backup: mapping worked examples}
+\hypertarget{worked-examples}{}
+\begin{itemize}\setlength{\itemsep}{6pt}
+  \item Task-level scoring for Pharmacists (21 tasks).
+  \item Five further one-to-one occupations, with full task tables: carpenters, secondary teachers, lawyers, economists, ICT operations technicians.
+  \item A many-to-one example (STYRK 1112) and the O*NET data structure.
+\end{itemize}
 
 \vspace{0.3em}
-\footnotesize
-Q2--Q5 vs Q1 event-study coefficients by age bin (Poisson, firm-FE).
-
-\vspace{0.3em}
-\hfill\hyperlink{after-firmfe-es}{\beamerbutton{Back}}
+\hfill\hyperlink{after-mapping}{\beamerbutton{Back}}
 \end{frame}
+
+\input{../mapping/eloundou_extra}
+\input{../mapping/eloundou_examples}
+\input{../mapping/eloundou_manytoone}
+\input{../mapping/onet_intro}

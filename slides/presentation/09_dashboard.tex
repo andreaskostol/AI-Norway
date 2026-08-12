@@ -1,0 +1,20 @@
+% The public dashboard: kiindeksen.no
+
+\begin{frame}{Employment change by quintile since ChatGPT}
+\centering
+\input{../../analysis/output/tables/table_quintile_yagan}
+
+\vspace{0.8em}
+\footnotesize
+Change from October 2022 to the February--April 2026 average; seasonally adjusted private-sector headcount, ages 21--60, occupations weighted by October 2022 employment (Yagan 2019 style). Most exposed $-0.09\,\%$ vs.\ least exposed $-0.63\,\%$: a $+0.54$ pp double difference (SE 2.42), not significant. Robust SEs across occupations in parentheses.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{kiindeksen.no: a live index}
+\centering
+\includegraphics[height=5.2cm,keepaspectratio]{figure_recursive_kiindeks_ci.pdf}
+
+\vspace{0.2em}
+\footnotesize
+The headline ``KI-indeks'': Q5 vs.\ Q1 employment growth, most recent three months vs.\ October 2022. Across expanding data vintages it drifts from $+1.7$ to $-0.2$ and back to $+0.5$ pp (April 2026). Bootstrap SE of 2 to 2.5 pp throughout: never statistically distinguishable from zero. A genuine change = a sustained move beyond the band.
+\end{frame}

@@ -1,6 +1,8 @@
 \beamer@sectionintoc {1}{Motivation}{2}{0}{1}
 \beamer@sectionintoc {2}{Data}{8}{0}{2}
-\beamer@sectionintoc {3}{Descriptive results}{32}{0}{3}
-\beamer@sectionintoc {4}{Cell-level difference-in-differences}{35}{0}{4}
-\beamer@sectionintoc {5}{Conclusion}{41}{0}{5}
-\beamer@sectionintoc {6}{Robustness}{43}{0}{6}
+\beamer@sectionintoc {3}{Employment gaps by AI exposure}{18}{0}{3}
+\beamer@sectionintoc {4}{Regression analysis}{23}{0}{4}
+\beamer@sectionintoc {5}{Validation: individual-level data}{31}{0}{5}
+\beamer@sectionintoc {6}{Cross-country comparison}{36}{0}{6}
+\beamer@sectionintoc {7}{The dashboard: kiindeksen.no}{38}{0}{7}
+\beamer@sectionintoc {8}{Conclusion}{41}{0}{8}

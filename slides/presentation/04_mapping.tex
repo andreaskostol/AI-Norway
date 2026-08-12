@@ -1,89 +1,88 @@
 % Mapping section: reuse Eloundou-only material from slides/mapping/.
-% The four \input files below are unchanged copies from the mapping deck.
+% Core frames only in the main flow; the worked examples, the task-level
+% scoring tables, the many-to-one example and the O*NET intro live in the
+% Backup section (90_backup.tex).
 
 % Brief intro: why a mapping is needed
 \begin{frame}{Mapping from US to Norwegian occupation codes}
 \begin{itemize}\setlength{\itemsep}{8pt}
   \item Eloundou et al.'s exposure measure is built on US occupation codes (SOC).
   \item Norwegian register data use STYRK-08.
-  \item STYRK-08 $\equiv$ ISCO-08 at 4 digits (Statistics Norway / SSB, Notater 17/2011).
-  \item Bridge: SOC $\to$ ISCO-08 via US Bureau of Labor Statistics (BLS) crosswalk (Aug 2012, rev.\ June 2015).
+  \item STYRK-08 is based on ISCO-08; overlapping 4-digit unit groups are code-compatible after a small set of documented Norwegian-title checks.
+  \item Bridge: SOC $\to$ ISCO-08 via US Bureau of Labor Statistics (BLS), then match overlapping STYRK-08 codes with manual SOC-source corrections for 2267 and 2269.
 \end{itemize}
 \end{frame}
 
-% O*NET data structure
-\input{../mapping/onet_intro}
-
-% Eloundou concept, chain, worked example, task table, other 1-1 mappings
-\input{../mapping/eloundou}
-
-% Worked examples for the five additional one-to-one occupations
-\input{../mapping/eloundou_examples}
-
-% Many-to-one example
-\input{../mapping/eloundou_manytoone}
+% Eloundou concept, chain, pharmacists worked example
+\input{../mapping/eloundou_core}
 
 % Distribution across Norwegian occupations (employment-weighted)
 \input{../mapping/eloundou_distribution}
 
 % ---------------------------------------------------------------
-\begin{frame}{Five largest occupations per exposure quintile (Apr 2025)}
+\begin{frame}{Five largest occupations per exposure quintile (Apr 2026)}
+\hypertarget{after-mapping}{}
 \begin{columns}[T,onlytextwidth]
 \begin{column}{0.50\textwidth}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{0.92}
 \begin{tabular}{@{}p{4.6cm} r r@{}}
 \toprule
 Occupation & Score & Emp. \\
 \midrule
 \multicolumn{3}{@{}l}{\textit{Q1 (least exposed)}} \\
-Health care assistants & 0.11 & 115k \\
-Cleaners (offices, hotels, \ldots) & 0.03 & 70k \\
-Building electricians & 0.13 & 31k \\
-Food machine operators & 0.09 & 26k \\
-Building caretakers & 0.00 & 24k \\
+Cleaners (offices, hotels, \ldots) & 0.03 & 40k \\
+Building electricians & 0.13 & 26k \\
+Food machine operators & 0.09 & 23k \\
+Motor vehicle mechanics & 0.09 & 17k \\
+Plumbers and pipe fitters & 0.06 & 17k \\
 \addlinespace
 \multicolumn{3}{@{}l}{\textit{Q2}} \\
-Child care workers & 0.25 & 111k \\
-Personal care, health (n.e.c.) & 0.22 & 78k \\
-Carpenters and joiners & 0.14 & 43k \\
-Early childhood educators & 0.23 & 35k \\
-Home-based personal care & 0.22 & 23k \\
+Carpenters and joiners & 0.14 & 35k \\
+Child care workers & 0.25 & 32k \\
+Waiters & 0.16 & 20k \\
+Machinery mechanics and repairers & 0.13 & 16k \\
+Cooks & 0.19 & 16k \\
 \addlinespace
 \multicolumn{3}{@{}l}{\textit{Q3}} \\
-Shop sales assistants & 0.34 & 131k \\
-Primary school teachers & 0.33 & 89k \\
-(STYRK 2223) & 0.34 & 67k \\
-Stock clerks & 0.33 & 35k \\
-Nursing professionals & 0.34 & 32k \\
+Shop sales assistants & 0.34 & 115k \\
+Stock clerks & 0.33 & 29k \\
+Heavy truck and lorry drivers & 0.31 & 21k \\
+Science technicians (n.e.c.) & 0.36 & 20k \\
+Car, taxi and van drivers & 0.28 & 14k \\
 \bottomrule
 \end{tabular}
 \end{column}
 \begin{column}{0.50\textwidth}
 \scriptsize
 \setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{0.92}
 \begin{tabular}{@{}p{4.6cm} r r@{}}
 \toprule
 Occupation & Score & Emp. \\
 \midrule
 \multicolumn{3}{@{}l}{\textit{Q4}} \\
-Managing directors / CEOs & 0.49 & 40k \\
-University, higher-ed teachers & 0.49 & 39k \\
-Retail/wholesale trade managers & 0.48 & 35k \\
-Civil engineers & 0.48 & 28k \\
-Business admin managers (n.e.c.) & 0.49 & 28k \\
+Retail/wholesale trade managers & 0.48 & 30k \\
+Managing directors / CEOs & 0.49 & 28k \\
+Civil engineers & 0.48 & 19k \\
+Sales and marketing managers & 0.48 & 13k \\
+Construction managers & 0.44 & 12k \\
 \addlinespace
 \multicolumn{3}{@{}l}{\textit{Q5 (most exposed)}} \\
-Policy administration profs.\ & 0.57 & 91k \\
-General office clerks & 0.60 & 60k \\
-Commercial sales representatives & 0.57 & 45k \\
-Systems analysts & 0.63 & 33k \\
-Software developers (n.e.c.) & 0.77 & 22k \\
+Commercial sales representatives & 0.57 & 37k \\
+General office clerks & 0.60 & 33k \\
+Systems analysts & 0.63 & 22k \\
+Software developers (n.e.c.) & 0.77 & 18k \\
+Accounting associate profs.\ & 0.80 & 15k \\
 \bottomrule
 \end{tabular}
 
 \vspace{0.6em}
-\footnotesize Employment in thousands. ISCO-08 labels. Ranked within quintile by April 2025 headcount across both sectors, ages 21--60.
+\footnotesize Employment in thousands. Private sector, ages 21--60, ranked within quintile by April 2026 headcount.
+
+\vspace{0.3em}
+\hfill\hyperlink{worked-examples}{\beamerbutton{More worked examples}}
 \end{column}
 \end{columns}
 \end{frame}

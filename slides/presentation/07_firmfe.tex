@@ -1,29 +1,44 @@
-% Firm fixed effects: spec + event study.
-% NOTE: These frames live in the Backup section. Coefficients and grid
-% figure are still on Q1 reference; re-run on Q3 reference (and the
-% agentic window) pending before promoting back to main flow.
+% Validation with individual-level data: firm fixed effects,
+% cell-vs-firm reconciliation, and the BCC 22-25 replication.
 
 \begin{frame}{Validation: within-firm reallocation}
 \begin{itemize}\setlength{\itemsep}{6pt}
   \item The cell-level gradient could reflect compositional shifts across firms rather than within-firm reallocation.
-  \item We re-estimate on individual-level register data with firm $\times$ time fixed effects, as in Brynjolfsson--Chandar--Chen.
+  \item We re-estimate on individual-level register data with firm fixed effects, as in Brynjolfsson--Chandar--Chen.
   \item Individual-level data is a snapshot; we use it to validate the cell-level pattern, not for time-tracking.
 \end{itemize}
 
 \vspace{0.6em}
-\textbf{Specification.} Poisson PPML with firm $\times$ age, firm $\times$ month, age $\times$ month fixed effects. Triple-difference on $\text{Young}_a \times \text{Post}_t \times \text{Exposure}_q$. Sample: private \emph{foretak}, $\geq 20$ workers in ages 22--55, 2021m1--2025m7. SE clustered at \emph{foretak}.
+\textbf{Specification.} Poisson PPML on firm $\times$ quintile $\times$ month cells, per decade age group, with firm $\times$ quintile and firm $\times$ month fixed effects. Identification from within-firm reallocation across exposure quintiles. Sample: private \emph{foretak} with $\geq 20$ workers aged 21--60, 2021m1--2026m2; about 22{,}000 firms covering 66--72\,\% of private paid employment. SE clustered at \emph{foretak}.
 \end{frame}
 
 % ---------------------------------------------------------------
-\begin{frame}{Event study by age bin (legacy: Q5 vs Q1)}
+\begin{frame}{Within-firm event study (Q1 reference)}
 \hypertarget{after-firmfe-es}{}
 \centering
-\includegraphics[height=5.8cm,keepaspectratio]{firm_fe_es_q5_by_age_poisson.pdf}
+\includegraphics[height=5.5cm,keepaspectratio]{figure_firmfe_poisson_es_grid.pdf}
 
-\vspace{0.3em}
+\vspace{0.2em}
 \footnotesize
-22--25 flat with wide CIs. Ages 26--30, 31--34, 35--40 drift up to $+8$ to $+10$ log points by mid-2025. Ages 41--49 and 50--55 are flat to slightly negative ($-3$ to $-5$). Reference $k = -1$ (October 2022).
+Q2--Q5 vs.\ Q1 by decade age group. At 21--30, Q5 is noisy and ends slightly positive; 31--40 rises to about $+0.12$; 41--50 drifts negative through 2025 and recovers to near zero; 51--60 stays flat. Collapsed Q5 $\times$ Post: $+0.013$ (n.s.), $+0.050$***, $-0.021$*, $+0.007$.
+\end{frame}
 
-\vspace{0.3em}
-\hfill\hyperlink{firmfe-grid-detail}{\beamerbutton{Full Q2--Q5 grid}}
+% ---------------------------------------------------------------
+\begin{frame}{Cell vs.\ within-firm: same story}
+\centering
+\includegraphics[height=5.5cm,keepaspectratio]{figure_cell_vs_firmfe_q5_grid.pdf}
+
+\vspace{0.2em}
+\footnotesize
+Nested reconciliation of the Q5 estimates: switching data source moves nothing ($\leq 0.003$ in any age group); the $\geq 20$-worker restriction is small; the largest single step is cell to firm-FE, mainly at 31--40 ($+0.084 \to +0.050$). Signs unchanged throughout.
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Replicating Brynjolfsson et al.\ (ages 22--25)}
+\centering
+\includegraphics[height=5.1cm,keepaspectratio]{fig_bcc_4_es.pdf}
+
+\vspace{0.2em}
+\footnotesize
+Balanced panel of full-time private-sector workers, six age bins. For ages 22--25 the average post-ChatGPT Q5 vs.\ Q1 gap is small ($\sim 3$ log points), but Q5 falls below Q1 from spring 2025, widening to about 35 log points by February 2026, more than the 15 reported for the US. Late, imprecise, and on rejected pre-trends.
 \end{frame}
