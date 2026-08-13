@@ -4,8 +4,8 @@ plot_byexposure_2130_sa.py
 Employment by AI-exposure quintile for the 21-30 age group only, private
 sector -- the deck version of kiindeksen.no figure 2 ("Alder x KI-eksponering")
 with the dashboard options seasonally adjusted, per capita, no smoothing.
-One line per quintile in the blue ramp shared with the all-ages exposure
-figure (plot_byexposure_sa.py), per-capita employment seasonally adjusted
+One line per quintile in the kiindeksen.no quintile colors (dashboard/site/
+public/app.js QUINT_COLORS), per-capita employment seasonally adjusted
 and indexed to October 2022 = 100. No title baked in (the slide carries it).
 
 Reads analysis/output/figure_data/fig_employment_by_age_quintile.csv
@@ -37,8 +37,9 @@ DATA = os.path.join(BASE_DIR, "analysis", "output", "figure_data",
 FIG_DIR = os.path.join(BASE_DIR, "analysis", "output", "figures")
 
 CHATGPT = mdates.date2num(datetime(2022, 11, 1))
-QUINTILE_COLORS = {1: "#C6DBEF", 2: "#9ECAE1", 3: "#4292C6",
-                   4: "#2171B5", 5: "#08306B"}
+# Quintile colors from kiindeksen.no (dashboard/site/public/app.js QUINT_COLORS).
+QUINTILE_COLORS = {1: "#8C1515", 2: "#577590", 3: "#E54A2B",
+                   4: "#E6A817", 5: "#401415"}
 
 
 def style():
