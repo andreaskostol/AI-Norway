@@ -3,9 +3,9 @@ build_combined_styrk_exposure.py
 
 Purpose: Build a single wide-format CSV with all 4-digit STYRK-08 occupation
     codes and one column per AI-exposure measure (Eloundou beta, Felten AIOE,
-    Handa overall/automation/augmentation, Anthropic-2026 job exposure, and the
-    relational axis), plus a derived exposure x relational interaction and a 2x2
-    quadrant. This is the master occupation -> AI-exposure crosswalk: it gathers
+    Handa overall/automation/augmentation, Anthropic-2026 job exposure, the
+    Mouchel grounded/calibrated arms, and the relational axis), plus a derived
+    exposure x relational interaction and a 2x2 quadrant. This is the master occupation -> AI-exposure crosswalk: it gathers
     every per-measure mapping into one table and supplies the per-occupation
     quintile columns the figures and tables key on, and is the file shared with
     collaborators.
@@ -15,6 +15,7 @@ Inputs:  data/ai_exposure/styrk08_codes.csv               (master code list)
          data/ai_exposure/styrk08_felten_mapping.csv
          data/ai_exposure/styrk08_handa_mapping.csv
          data/ai_exposure/styrk08_job_exposure_mapping.csv  (Anthropic 2026)
+         data/ai_exposure/styrk08_mouchel_mapping.csv       (Mouchel et al. 2026)
          data/ai_exposure/styrk08_relational_mapping.csv
 
 Output:  data/ai_exposure/styrk08_all_exposure_measures.csv
@@ -96,6 +97,20 @@ def load_anthropic2026() -> pd.DataFrame:
                  'quintile': 'anthropic2026_q'})
 
 
+def load_mouchel() -> pd.DataFrame:
+    # Read the Mouchel et al. (2026) evidence-grounded mapping (styrk08 as string).
+    df = pd.read_csv(DATA / 'styrk08_mouchel_mapping.csv', dtype={'styrk08': str})
+    # Zero-pad the join key to 4 digits.
+    df['styrk08'] = df['styrk08'].str.zfill(4)
+    # Keep the grounded (A1, theoretical) and calibrated (S0, usage-fitted) arms
+    # with their quintiles, renamed to measure-specific column names.
+    return df[['styrk08',
+               'mouchel_grounded', 'quintile',
+               'mouchel_calibrated', 'quintile_calibrated']].rename(
+        columns={'quintile': 'mouchel_grounded_q',
+                 'quintile_calibrated': 'mouchel_calibrated_q'})
+
+
 def load_relational() -> pd.DataFrame:
     # Read the relational-axis mapping (styrk08 as string).
     df = pd.read_csv(DATA / 'styrk08_relational_mapping.csv', dtype={'styrk08': str})
@@ -165,13 +180,15 @@ def main() -> None:
            .merge(load_felten(), on='styrk08', how='left')
            .merge(load_handa(), on='styrk08', how='left')
            .merge(load_anthropic2026(), on='styrk08', how='left')
+           .merge(load_mouchel(), on='styrk08', how='left')
            .merge(load_relational(), on='styrk08', how='left'))
 
     # Add the derived exposure x relational interaction and the 2x2 quadrant.
     out = add_relational_quadrant(out)
 
     # Write the combined wide table to disk (no row index, UTF-8).
-    out.to_csv(OUT, index=False, encoding='utf-8')
+    # LF line endings keep regeneration byte-stable across platforms.
+    out.to_csv(OUT, index=False, encoding='utf-8', lineterminator='\n')
 
     # Total number of occupation rows (for the coverage report).
     n = len(out)
@@ -179,7 +196,7 @@ def main() -> None:
     print(f'Wrote {OUT.name}: {n} STYRK-08 4-digit codes')
     # For each core measure, report how many codes received a (non-missing) value.
     for col in ['eloundou_beta', 'felten_aioe', 'handa_overall',
-                'anthropic2026_job_exposure', 'relational']:
+                'anthropic2026_job_exposure', 'mouchel_grounded', 'relational']:
         # Count non-missing values for this measure.
         cov = out[col].notna().sum()
         # Print count and percentage coverage.

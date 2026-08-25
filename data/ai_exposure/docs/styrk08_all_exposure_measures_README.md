@@ -1,13 +1,17 @@
 # styrk08_all_exposure_measures.csv — codebook
 
-Combined crosswalk from Norwegian 4-digit STYRK-08 occupation codes to four
+Combined crosswalk from Norwegian 4-digit STYRK-08 occupation codes to five
 AI exposure measures used in Hernæs & Kostøl, "AI Exposure and
 Age-Differentiated Employment: Evidence from Norwegian Register Data."
 
 ## Contents
 
-407 rows (all 4-digit STYRK-08 codes in the SSB register), 16 columns.
+407 rows (all 4-digit STYRK-08 codes in the SSB register), 26 columns.
 UTF-8, comma-separated, one header row. Missing values are blank.
+Columns 21--26 (`relational`, `relational_q`, `ai_exposure_z`,
+`relational_z`, `exposure_relational_interaction`, `quadrant`) belong to the
+relational-economy extension and are documented in
+`relational-economy/INTEGRATION_PLAN.md`.
 
 | # | Column | Description |
 |---|---|---|
@@ -27,6 +31,10 @@ UTF-8, comma-separated, one header row. Missing values are blank.
 | 14 | `handa_augmentation_q` | Quintile of `handa_augmentation`. |
 | 15 | `anthropic2026_job_exposure` | Anthropic (2026) `job_exposure` measure. Time-weighted observed Claude usage with an automation penalty; postdates BCC and Kauhanen. |
 | 16 | `anthropic2026_q` | Quintile of `anthropic2026_job_exposure`. |
+| 17 | `mouchel_grounded` | Mouchel, Bouquet & Sheffi (2026) evidence-grounded exposure, arm A1: unweighted mean of an ensemble of open-weight models judging each O*NET task under a 2026 agentic-AI rubric (E0/E1/E2 + vision-dependent E3, β mapped 0/1/0.5/0.5), conditioned on retrieved news and research evidence. Never calibrated on usage data, so it is the theoretical-exposure counterpart to `eloundou_beta` for the 2026 frontier. Vintage 2026-07-20. |
+| 18 | `mouchel_grounded_q` | Quintile of `mouchel_grounded`. |
+| 19 | `mouchel_calibrated` | Mouchel et al. (2026) arm S0: same grounded task scores, ensemble-weighted by fit against Anthropic Economic Index task penetration. NOT independent of the revealed-usage measures (Handa, Anthropic 2026); use `mouchel_grounded` where independence matters. |
+| 20 | `mouchel_calibrated_q` | Quintile of `mouchel_calibrated`. |
 
 ## Coverage
 
@@ -36,31 +44,64 @@ UTF-8, comma-separated, one header row. Missing values are blank.
 | Felten AIOE (overall + LM sub-index) | 392 / 407 | 96.3 % |
 | Handa overall + automation/augmentation | 352 / 407 | 86.5 % |
 | Anthropic 2026 `job_exposure` | 388 / 407 | 95.3 % |
+| Mouchel grounded + calibrated | 397 / 407 | 97.5 % |
 
-Codes with no mapping include the military groups (0110, 0210, 0310), the
-"unspecified" code (0000), and a small number of specialty service
-occupations whose SOC analogues do not exist or are too narrowly defined
-for the underlying scoring exercise. Handa coverage is lowest because
+Codes with no mapping on any measure include the military groups 0110 and
+0210 (0310 is mapped on Eloundou, Anthropic 2026, and Mouchel, but not on
+Felten or Handa), the "unspecified" code (0000), and a small number of
+specialty service occupations whose SOC analogues do not exist or are too
+narrowly defined for the underlying scoring exercise. Handa coverage is lowest because
 observed Claude usage concentrates in a narrow set of task types and many
 occupations have negligible recorded usage.
 
+Four STYRK-08 codes in the register list are not present as 4-digit codes in
+the BLS SOC--ISCO crosswalk: `0000`, `2223`, `2224`, and `3439`. We treat
+them as follows:
+
+- `2223` Sykepleiere and `2224` Vernepleiere are manually assigned the
+  scores of `2221` Nursing professionals in the Eloundou, Mouchel, Handa,
+  and Felten mappings; the source code is recorded in `manual_map = 2221`.
+- `0000` Uoppgitt / unidentified receives no exposure score and is excluded
+  from exposure-quintile analyses. In the parsed analysis aggregates for ages
+  21--60 it appears only in January--March 2021 and accounts for 35,828
+  worker-months, 0.023 % of worker-months across the two analysis sectors.
+- `3439` Andre yrker innen estetiske fag is currently left unmapped. A
+  plausible flagged robustness alternative is to map it to ISCO `3435` Other
+  artistic and cultural associate professionals, but this is not used in the
+  baseline files.
+
+Two overlapping-code Norwegian adaptations are also corrected manually after
+checking SSB detailed occupation titles against the BLS titles. `2267`
+Ergoterapeuter uses SOC `29-1122` Occupational Therapists rather than
+BLS/ISCO 2267 optometrists/ophthalmic opticians. `2269` Kiropraktorer mv.
+uses SOC `29-1011` Chiropractors rather than the broad BLS/ISCO 2269
+residual health-professional group. These corrections are recorded as
+`manual_map = SOC:29-1122` and `manual_map = SOC:29-1011` in the Eloundou,
+Mouchel, Handa, and Felten mapping files; the Anthropic 2026 job-exposure
+file is built with the same overrides but keeps its compact three-column
+schema. We do not add a separate optometrist reassignment in the baseline.
+
 ## How the scores reach STYRK-08
 
-All four measures originate in US SOC codes. The crosswalk runs:
+All five measures originate in US SOC codes. The crosswalk runs:
 
 ```
-SOC 2018 ─(BLS, Nov 2017)─▶ SOC 2010 ─(BLS, Aug 2012, updated Jun 2015)─▶ ISCO-08 ≡ STYRK-08
+SOC 2018 ─(BLS, Nov 2017)─▶ SOC 2010 ─(BLS, Aug 2012, updated Jun 2015)─▶ ISCO-08 ─▶ STYRK-08
 ```
 
-The last step is an identity at the 4-digit level (SSB Notater 17/2011).
-Where the BLS crosswalk is one-to-many (multiple SOC codes map to a single
-STYRK-08), the score is the unweighted average of the source-SOC scores.
+The last step matches overlapping 4-digit ISCO-08 codes to the official
+STYRK-08 list by code. STYRK-08 is based on ISCO-08, but it includes
+Norwegian adaptations, so this is a filtered code match rather than a
+claim that the two classifications are exactly the same. Where the BLS
+crosswalk is one-to-many (multiple SOC codes map to a single STYRK-08),
+the score is the unweighted average of the source-SOC scores.
 38.8 % of BLS crosswalk rows are partial matches; 57.7 % of the
 Eloundou-mapped STYRK-08 codes have at least one partial-match contributor.
 
-The Felten and Handa measures map from SOC 2010 directly; the Eloundou
-measure adds the SOC 2018 → SOC 2010 step. Anthropic 2026 was released
-mapped to SOC and reaches STYRK-08 through the same crosswalk.
+The Felten and Handa measures map from SOC 2010 directly; the Eloundou and
+Mouchel measures add the SOC 2018 → SOC 2010 step (both are published on
+O*NET-SOC 2018 codes, averaged to 6-digit SOC first). Anthropic 2026 was
+released mapped to SOC and reaches STYRK-08 through the same crosswalk.
 
 ## Quintile construction
 
@@ -74,19 +115,30 @@ use the underlying score column rather than the quintile.
 
 | Pair | n | ρ |
 |---|---|---|
-| Eloundou — Felten AIOE | 392 | 0.890 |
+| Eloundou — Felten AIOE | 392 | 0.889 |
 | Eloundou — Felten LM | 392 | 0.867 |
-| Eloundou — Handa overall | 352 | 0.637 |
-| Eloundou — Anthropic 2026 | 388 | 0.782 |
+| Eloundou — Handa overall | 352 | 0.635 |
+| Eloundou — Anthropic 2026 | 388 | 0.780 |
 | Felten AIOE — Felten LM | 392 | 0.980 |
-| Felten AIOE — Handa overall | 351 | 0.620 |
-| Felten AIOE — Anthropic 2026 | 386 | 0.761 |
-| Handa overall — Anthropic 2026 | 347 | 0.716 |
+| Felten AIOE — Handa overall | 351 | 0.623 |
+| Felten AIOE — Anthropic 2026 | 386 | 0.762 |
+| Handa overall — Anthropic 2026 | 347 | 0.715 |
+| Mouchel grounded — Eloundou | 397 | 0.943 |
+| Mouchel grounded — Felten AIOE | 392 | 0.889 |
+| Mouchel grounded — Handa overall | 352 | 0.632 |
+| Mouchel grounded — Anthropic 2026 | 388 | 0.774 |
+| Mouchel grounded — Mouchel calibrated | 397 | 0.994 |
 
-The theoretical/ability-based measures (Eloundou and Felten) correlate
-strongly with each other; the revealed-usage measures (Handa and
+The theoretical/ability-based measures (Eloundou, Mouchel, and Felten)
+correlate strongly with each other; the revealed-usage measures (Handa and
 Anthropic 2026) correlate strongly with each other; correlations across
-the two families are lower.
+the two families are lower. The Mouchel grounded and calibrated arms are
+nearly identical at the occupation level (ρ = 0.994), so the Anthropic
+calibration barely moves occupation rankings. Against Eloundou, the Mouchel
+grounded arm keeps 66 % of occupations in the same quintile and 99 % within
+one quintile; the agentic 2026 rubric shifts professional-judgment
+occupations (law, economics, auditing, advisory) up and routine clerical
+occupations (switchboard, secretarial) down.
 
 ## Source files
 
@@ -96,10 +148,16 @@ The combined CSV is built by [build_combined_styrk_exposure.py](../../analysis/0
 - `styrk08_felten_mapping.csv` (Felten, both overall AIOE and LM sub-index)
 - `styrk08_handa_mapping.csv` (Handa overall, automation, augmentation)
 - `styrk08_job_exposure_mapping.csv` (Anthropic 2026)
+- `styrk08_mouchel_mapping.csv` (Mouchel grounded A1 + calibrated S0)
 
 To rebuild after updating any of the sources:
 
 ```
+python analysis/03_mappings/build_eloundou_mapping.py
+python analysis/03_mappings/build_handa_mapping.py
+python analysis/03_mappings/archive/build_felten_mapping.py
+python analysis/03_mappings/build_job_exposure_mapping.py
+python analysis/03_mappings/build_mouchel_mapping.py
 python analysis/03_mappings/build_combined_styrk_exposure.py
 ```
 
@@ -115,6 +173,11 @@ python analysis/03_mappings/build_combined_styrk_exposure.py
 - Anthropic (2026). "Anthropic Economic Index `job_exposure` measure."
   Released March 2026.
   GitHub: https://github.com/anthropics/anthropic-economic-index
+- Mouchel, L., P. Bouquet, Y. Sheffi (2026). "Jobs' AI Exposure Should Be
+  Measured from Evidence, Not Model Priors." arXiv:2605.15474.
+  GitHub: https://github.com/MIT-Work-Analytics-Laboratory/RAG-Exposure
+  (occupation-level scores, vintage 2026-07-20; local copy in
+  `mouchel/calibrated_occupation_exposure_2026-07-20.csv`).
 
 ## Crosswalks used
 
@@ -122,7 +185,7 @@ python analysis/03_mappings/build_combined_styrk_exposure.py
   https://www.bls.gov/soc/2018/crosswalks.htm
 - BLS SOC 2010 → ISCO-08 (August 2012, updated June 2015):
   https://www.bls.gov/soc/soccrosswalks.htm
-- STYRK-08 ≡ ISCO-08 at 4-digit level (SSB Notater 17/2011):
+- STYRK-08, based on ISCO-08 with overlapping 4-digit codes matched by code:
   https://www.ssb.no/klass/klassifikasjoner/7
 
 ## Known limitations
@@ -133,7 +196,7 @@ python analysis/03_mappings/build_combined_styrk_exposure.py
    attenuates regression estimates toward zero. See `crosswalk_audit.md`
    for code-level details and `mapping_methodology.md` for the per-measure
    processing decisions.
-2. **US task content.** All four measures use US task or skill taxonomies
+2. **US task content.** All five measures use US task or skill taxonomies
    (O*NET / Anthropic API data on the US user base). For a non-US
    counterpart see Demirev (2026), which is ESCO-based and already at
    ISCO-08 4-digit level — discussed in `esco_isco_exposure_alternatives.md`
@@ -142,9 +205,9 @@ python analysis/03_mappings/build_combined_styrk_exposure.py
    ~20 % of occupation codes, not ~20 % of workers. If you need
    employment-weighted quintiles, recompute using your own employment
    weights.
-4. **`styrk08_name` is in Norwegian.** Use the official ISCO-08 English
-   labels if you need English names; they are identical to STYRK-08 at the
-   4-digit level (with translation).
+4. **`styrk08_name` is in Norwegian.** Use official ISCO-08 English labels
+   for overlapping codes if you need English names; Norwegian-specific
+   STYRK-08 codes need register labels or direct translation.
 
 ## Contact
 
