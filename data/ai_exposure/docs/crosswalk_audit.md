@@ -21,7 +21,7 @@ Til sammenligning: Kauhanen (2026, Finland) mapper Handa-data via O\*NET 2019 �
 Begge våre mappinger følger samme grunnstruktur:
 
 ```
-O*NET-SOC (6-siffer) → SOC 2010 (6-siffer) → ISCO-08 (4-siffer) = STYRK-08 (4-siffer)
+O*NET-SOC (6-siffer) → SOC 2010 (6-siffer) → ISCO-08 (4-siffer) → STYRK-08 (overlappende 4-sifferkoder)
 ```
 
 For Eloundou inkluderer vi også SOC 2018 → SOC 2010 som mellomsteg (kildedataene bruker SOC 2018-koder).
@@ -29,7 +29,7 @@ For Eloundou inkluderer vi også SOC 2018 → SOC 2010 som mellomsteg (kildedata
 Kildene for crosswalker:
 - SOC 2018→2010: Offisiell BLS-fil (november 2017)
 - SOC 2010→ISCO-08: Offisiell BLS-fil (august 2012, oppdatert juni 2015)
-- STYRK-08 = ISCO-08 ved 4-siffer: Dokumentert i SSB Notater 17/2011
+- STYRK-08 er basert på ISCO-08: Vi matcher overlappende 4-sifferkoder mot den offisielle STYRK-08-listen; enkelte ISCO-koder finnes ikke i STYRK-08 og noen STYRK-koder er norske tilpasninger.
 
 Versjonsmessig er kjeden korrekt — ingen mismatch mellom SOC-versjoner.
 
@@ -86,6 +86,33 @@ Manuelle mappinger er lagt inn for de to største:
 - **2224 Vernepleiere** (24 406 ansatte) ← 2221 Nursing professionals
 
 Disse er flagget med `manual_map`-kolonnen i CSV-filene.
+
+I tillegg er to same-code-treff overstyrt etter kontroll av SSBs detaljerte
+yrkestitler mot BLS-titlene:
+- **2267 Ergoterapeuter** henter baseline-score direkte fra SOC `29-1122`
+  Occupational Therapists, ikke fra BLS/ISCO 2267 optometrists/ophthalmic
+  opticians.
+- **2269 Kiropraktorer mv.** henter baseline-score direkte fra SOC `29-1011`
+  Chiropractors. SSBs detaljerte titler for koden er kiropraktorer og
+  osteopater, sa dette er en snevrere og mer norsk-relevant kilde enn den
+  brede BLS/ISCO 2269-restgruppen.
+
+Disse to er flagget som `manual_map = SOC:29-1122` og
+`manual_map = SOC:29-1011` i Eloundou-, Handa- og Felten-filene. Vi legger
+ikke inn en egen optometrist-mapping i baseline.
+
+Av de fire STYRK-kodene som finnes i registerlisten men ikke i BLS'
+SOC→ISCO-liste, behandles de øvrige slik:
+- **0000 Uoppgitt / yrker som ikke kan identifiseres** får ingen
+  eksponeringsscore og faller ut av eksponeringskvintilene. I de parserte
+  analyseaggregatene for alder 21--60 forekommer koden bare januar--mars
+  2021 og utgjør 35 828 worker-months, 0,023 % av worker-months på tvers av
+  de to analysesektorene.
+- **3439 Andre yrker innen estetiske fag** er foreløpig umappet. Nærmeste
+  mulige ISCO-kandidat er `3435` "Other artistic and cultural associate
+  professionals"; dette kan brukes som en flagget robusthetssjekk, men vi
+  bruker det ikke i baseline fordi koden er liten og ville arve brede
+  "all other"-SOC-bidrag.
 
 ### 6. Handa: Lav oppgavedekning
 
@@ -150,7 +177,7 @@ Begge mapping-filer (`styrk08_eloundou_beta_mapping.csv`, `styrk08_handa_mapping
 |---|---|---|
 | `n_soc_matched` | Antall SOC-koder som bidrar til denne STYRK-koden | |
 | `has_partial_match` | 1 hvis minst én SOC→ISCO-kobling er delvis (`*` i BLS-crosswalk) | |
-| `manual_map` | Kilde-STYRK-kode hvis manuelt mappet (f.eks. "2221" for 2223 Sykepleiere) | |
+| `manual_map` | Kildekode hvis manuelt mappet: enten STYRK-kilde (f.eks. "2221") eller direkte SOC-kilde (f.eks. "SOC:29-1122") | |
 | `n_tasks_matched` | Antall O\*NET-oppgaver med match i task_pct | ✓ |
 | `n_tasks_total` | Totalt antall O\*NET-oppgaver for de bidragende SOC-kodene | ✓ |
 | `task_coverage` | n_tasks_matched / n_tasks_total | ✓ |
@@ -159,13 +186,13 @@ Begge mapping-filer (`styrk08_eloundou_beta_mapping.csv`, `styrk08_handa_mapping
 
 **Eloundou (397 koder):**
 - 229 (57.7%) har minst én delvis SOC→ISCO-match
-- 2 er manuelt mappet (2223, 2224)
+- 4 er manuelt mappet eller overstyrt (2223, 2224, 2267, 2269)
 
 **Handa (352 koder):**
 - 187 (53.1%) har minst én delvis SOC→ISCO-match
 - 89 (25.3%) har <10% oppgavedekning
 - 90 (25.6%) deler identisk overall_exposure med minst én annen kode
-- 2 er manuelt mappet (2223, 2224)
+- 4 er manuelt mappet eller overstyrt (2223, 2224, 2267, 2269)
 
 ---
 

@@ -9,7 +9,8 @@ STYRK-08 via the BLS SOC -> ISCO crosswalk?
 ## Motivation
 
 All four headline measures in this paper start from US SOC codes and reach
-STYRK-08 via SOC-2018 -> SOC-2010 -> ISCO-08 = STYRK-08. The BLS crosswalk
+STYRK-08 via SOC-2018 -> SOC-2010 -> ISCO-08 -> STYRK-08, matching
+overlapping 4-digit codes. The BLS crosswalk
 has 38.8 % partial-match rows and 57.7 % of Eloundou-mapped STYRK codes have
 at least one partial-match contributor (paper section 3.3). The literature
 also flags this concern explicitly: Gmyrek (2025) shows that national
@@ -80,9 +81,10 @@ Add **Demirev (2026)** as a fifth exposure measure in the paper.
 Rationale:
 1. It is the only off-the-shelf measure that is ESCO-native and therefore
    bypasses the SOC -> ISCO crosswalk we worry about in section 5.1.
-2. The score is published at ISCO-08 4-digit level, which is identical to
-   STYRK-08 4-digit (SSB Notater 17/2011), so no further crosswalk work is
-   needed.
+2. The score is published at ISCO-08 4-digit level. For overlapping codes,
+   these can be matched directly to the official STYRK-08 list by code;
+   non-overlapping and Norwegian-specific codes should be flagged or handled
+   separately.
 3. The automation/augmentation decomposition gives a second check on the
    Handa automation/augmentation split in section 4.3.
 4. The CSV is permissively licensed and ready to use.
@@ -103,9 +105,9 @@ Trade-offs:
 ## Practical steps if we add this measure
 
 1. Download `scored_esco_occupations_isco_4_digit.csv` from the GitHub repo
-   above into this folder. The data is already a STYRK-08 mapping (since
-   STYRK-08 = ISCO-08 at 4-digit), so the only processing step is
-   zero-padding the ISCO code to 4 characters if needed.
+   above into this folder. Match the zero-padded ISCO code to the official
+   STYRK-08 4-digit list, keeping overlap explicit and flagging
+   non-overlapping codes.
 2. Add to `analysis/03_mappings/` a script that produces
    `styrk08_demirev_mapping.csv` with the same column structure as the
    existing four mapping files (`styrk08`, `quintile`, `exposure_score`,

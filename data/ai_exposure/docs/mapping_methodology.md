@@ -12,13 +12,13 @@ Vi mapper tre AI-eksponeringsmål til norske STYRK-08 yrkeskoder:
 
 3. **Felten et al. (2021):** AI-kapabilitet koblet til yrkesevner via O\*NET. [Felten-artikkel (SMJ)](https://doi.org/10.1002/smj.3286). [Data (GitHub)](https://github.com/AIOE-Data/AIOE).
 
-Eloundou og Handa har sin opprinnelse i O\*NET-oppgavedatabasen og crosswalkes via SOC 2010 → ISCO-08. Felten bruker O\*NET-evner (abilities) og crosswalkes tilsvarende.
+Eloundou og Handa har sin opprinnelse i O\*NET-oppgavedatabasen og crosswalkes via SOC 2010 → ISCO-08, deretter til overlappende STYRK-08-koder. Felten bruker O\*NET-evner (abilities) og crosswalkes tilsvarende.
 
 ---
 
 ## 1. Crosswalk-kjeden
 
-### 1.1 Eloundou: SOC 2018 → SOC 2010 → ISCO-08 = STYRK-08
+### 1.1 Eloundou: SOC 2018 → SOC 2010 → ISCO-08 → STYRK-08
 
 ```
   Eloundou GPT-4 β-scorer (798 SOC 2018-koder)
@@ -29,11 +29,11 @@ Eloundou og Handa har sin opprinnelse i O\*NET-oppgavedatabasen og crosswalkes v
          ▼  BLS SOC 2010→ISCO-08-crosswalk
   ISCO-08 4-siffer-koder
          │
-         ▼  Identitetsmapping (SSB Notater 17/2011)
+         ▼  Kodefilter mot STYRK-08 (overlappende 4-sifferkoder)
   STYRK-08 4-siffer-koder (397 mappet, 97,5 % av alle STYRK-koder)
 ```
 
-### 1.2 Handa: O\*NET-oppgaver → SOC 2010 → ISCO-08 = STYRK-08
+### 1.2 Handa: O\*NET-oppgaver → SOC 2010 → ISCO-08 → STYRK-08
 
 ```
   Handa task_pct (3 365 oppgaver med Claude-bruksandel)
@@ -44,7 +44,7 @@ Eloundou og Handa har sin opprinnelse i O\*NET-oppgavedatabasen og crosswalkes v
          ▼  BLS SOC 2010→ISCO-08-crosswalk
   ISCO-08 4-siffer-koder
          │
-         ▼  Identitetsmapping
+         ▼  Kodefilter mot STYRK-08 (overlappende 4-sifferkoder)
   STYRK-08 4-siffer-koder (352 mappet, 86,5 % av alle STYRK-koder)
 ```
 
@@ -56,7 +56,7 @@ Eloundou og Handa har sin opprinnelse i O\*NET-oppgavedatabasen og crosswalkes v
 |------|-------|------|-------|
 | SOC 2018 → 2010 | BLS offisiell crosswalk | November 2017 | [BLS](https://www.bls.gov/soc/2018/soc_2010_to_2018_crosswalk.xlsx) |
 | SOC 2010 → ISCO-08 | BLS offisiell crosswalk | August 2012, oppdatert juni 2015 | [BLS](https://www.bls.gov/soc/isco_soc_crosswalk.xls) |
-| ISCO-08 = STYRK-08 | SSB Notater 17/2011 | Identitet ved 4-siffer | [SSB](https://www.ssb.no/arbeid-og-lonn/artikler-og-publikasjoner/standard-for-yrkesklassifisering-styrk-08) |
+| ISCO-08 → STYRK-08 | SSB klassifikasjon | Overlappende 4-sifferkoder matches etter kode; STYRK-08 har norske tilpasninger | [SSB](https://www.ssb.no/klass/klassifikasjoner/7) |
 | O\*NET Task Statements | O\*NET Database v20.1 | 2015 | [O\*NET](https://www.onetcenter.org/database.html) |
 | Handa task_pct_v2 | Anthropic Economic Index | Mars 2025 | [HuggingFace](https://huggingface.co/datasets/Anthropic/EconomicIndex/tree/main/release_2025_03_27) |
 
@@ -213,7 +213,7 @@ Vi inkluderer tre Felten-baserte mål:
 | `aioe_lm` | Felten et al. (2023) | Språkmodellering-AIOE (GenAI-spesifikk) | 390 |
 | `aioe_ig` | Felten et al. (2023) | Bildegenerering-AIOE (GenAI-spesifikk) | 390 |
 
-[Felten AIOE-data](https://github.com/AIOE-Data/AIOE) bruker SOC 2010-koder (774 stk) og crosswalkes via SOC 2010 → ISCO-08, identisk med Eloundou/Handa-kjeden.
+[Felten AIOE-data](https://github.com/AIOE-Data/AIOE) bruker SOC 2010-koder (774 stk) og crosswalkes via SOC 2010 → ISCO-08 og deretter til overlappende STYRK-08-koder, som i Eloundou/Handa-kjeden.
 
 ### 4.3 Crosswalk
 
@@ -223,7 +223,7 @@ Felten AIOE (774 SOC 2010-koder)
        ▼  BLS SOC 2010→ISCO-08 crosswalk
 ISCO-08 4-siffer-koder
        │
-       ▼  Identitetsmapping
+       ▼  Kodefilter mot STYRK-08 (overlappende 4-sifferkoder)
 STYRK-08 (390 koder, 95,8 % av STYRK-koder med data)
 ```
 
@@ -305,6 +305,39 @@ To norskspesifikke STYRK-koder mappes manuelt til sin ISCO-forelder:
 
 Disse er flagget med `manual_map = 2221` i CSV-filene.
 
+To overlappende 4-sifferkoder behandles ogsa manuelt fordi SSBs detaljerte
+yrkestitler viser at den norske STYRK-koden ikke dekker samme yrke som
+BLS/ISCO-koden med samme nummer:
+
+| STYRK | Norsk innhold | Baseline-kilde | Begrunnelse |
+|-------|---------------|----------------|-------------|
+| 2267 | Ergoterapeuter | SOC `29-1122` Occupational Therapists | SSBs detaljerte titler for 2267 er ergoterapeuter, mens BLS/ISCO 2267 gjelder optometrists/ophthalmic opticians. |
+| 2269 | Kiropraktorer mv. | SOC `29-1011` Chiropractors | SSBs detaljerte titler for 2269 er kiropraktorer og osteopater; vi bruker chiropractors som naermeste SOC-kilde i baseline. |
+
+Disse radene erstatter den automatiske same-code-mappingen i Eloundou-,
+Handa- og Felten-filene og flagges som `manual_map = SOC:29-1122` og
+`manual_map = SOC:29-1011`. Anthropic job-exposure-filen bygges med samme
+overstyring, men beholder sitt tre-kolonne output-format. Vi legger ikke inn
+en egen optometrist-mapping i baseline; norske optikere/optometrister bor
+klassifiseres separat i registeret.
+
+To andre STYRK-koder i registerlisten finnes heller ikke som 4-sifferkoder i
+BLS' SOC→ISCO-crosswalk:
+
+| STYRK | Yrke | Behandling | Omfang |
+|-------|------|------------|--------|
+| 0000 | Uoppgitt / yrker som ikke kan identifiseres | Ingen eksponeringsscore; ekskluderes fra eksponeringskvintiler | 35 828 worker-months i analyseaggregatene for alder 21--60, 0,023 % av worker-months på tvers av de to analysesektorene; finnes bare jan.--mars 2021 |
+| 3439 | Andre yrker innen estetiske fag | Foreløpig umappet | 112 319 worker-months i analyseaggregatene for alder 21--60, 0,073 % av worker-months |
+
+For 3439 er den nærmeste internasjonale kandidaten ISCO `3435` "Other
+artistic and cultural associate professionals". BLS-crosswalken gir
+SOC-bidrag til 3435 (bl.a. artists/performers/media/entertainment
+all-other-kategorier), så en mulig robusthetssjekk er å legge inn en
+eksplisitt manuell mapping `3439 <- 3435` med eget flagg. Vi bruker den ikke
+i baseline fordi 3439 er en liten norsk restkategori, og en slik mapping ville
+arve nettopp den typen brede "all other"-SOC-kategorier som crosswalk-auditen
+ellers advarer mot.
+
 Andre store umappede yrker (5153 Vaktmestre, 9312 Hjelpearbeidere) mappes **ikke** manuelt. For Handa-målet er fraværet genuint: SOC 37-2011 (Janitors and Cleaners) mapper korrekt til ISCO 5153 i BLS-crosswalken, men alle 23 O\*NET-oppgaver for dette yrket har null Claude-bruk. Ingen spor Claude om å feie gulv eller tomme soppel.
 
 ---
@@ -328,6 +361,7 @@ Noen enkelttilfeller illustrerer hvordan crosswalken kan gi misvisende resultate
 | 3139 | Prosessoperatører, ikke nevnt annet sted | Eloundou β = 0,804 kommer utelukkende fra SOC 51-4012 «CNC Machine Tool Programmers» — et helt annet yrke enn den brede restkategorien |
 | 2211 | Allmennpraktiserende leger | Inkluderer SOC 29-1069 «Physicians and Surgeons, All Other» — en sekkekategori med 12 spesialisttyper (235 oppgaver, 42 med Claude-bruk) som blandes med allmennpraktikere |
 | 2310 | Universitets- og hoyskolelektorer | 35 SOC-koder (alle «XXX Teachers, Postsecondary») gjennomsnittet — informatikklærere og kunstlærere får identisk AI-eksponering |
+| 2267/2269 | Ergoterapeuter; kiropraktorer mv. | Same-code-treffene er overstyrt etter sammenligning av SSBs detaljerte yrkestitler med BLS-titler: 2267 henter SOC 29-1122 og 2269 henter SOC 29-1011. |
 
 ### 6.3 Broadcasting fra restkategorier
 
