@@ -1,0 +1,36 @@
+\documentclass[aspectratio=169,11pt]{beamer}
+
+% Frittstående to-siders deck: Mouchel mfl. (2026) vs. Eloundou mfl. (2024).
+% Samme preamble som slides/arendalsgata/main.tex slik at rammene kan
+% flyttes/\input-es rett inn i arendalsgata- eller FIN-decken.
+\usetheme{metropolis}
+\metroset{numbering=counter, progressbar=foot}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[norsk]{babel}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{amsmath}
+\usepackage{ragged2e}
+
+% Delte stiler fra de andre deckene
+\input{../presentation/tikz_macros}
+\input{../presentation_no/illustration_macros}
+
+\graphicspath{{./}{../presentation/}{../presentation_no/}{../mapping/}{../../analysis/output/figures/}}
+
+\definecolor{accent}{HTML}{1F4E79}
+\setbeamercolor{progress bar}{fg=accent}
+\setbeamercolor{title separator}{fg=accent}
+\setbeamercolor{frametitle}{bg=accent}
+\setbeamercolor{alerted text}{fg=accent}
+
+\begin{document}
+
+\input{mouchel_frames}
+
+\end{document}

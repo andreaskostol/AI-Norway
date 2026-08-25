@@ -1,0 +1,66 @@
+% To slides om Mouchel, Bouquet & Sheffi (2026) og forholdet til Eloundou-målet.
+% Frittstående kompilering: main.tex i samme mappe. Kan også \input-es i
+% arendalsgata- eller FIN-decken (begge laster de samme makroene og har
+% analysis/output/figures i \graphicspath).
+
+% ---------------------------------------------------------------
+\begin{frame}{To generasjoner av eksponeringsmål}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.475\textwidth}
+  {\bfseries\textcolor{illBlue}{Eloundou mfl.\ (2024)}}
+
+  \vspace{0.25em}
+  {\footnotesize
+  \begin{itemize}\setlength\itemsep{0.25em}
+    \item Rubrikk fra GPT-4-æraen: kan en \textbf{språkmodell} halvere tidsbruken? (E0/E1/E2)
+    \item Vurdert av mennesker og GPT-4: ekspertenes og modellens \textbf{forhåndsoppfatninger}
+    \item Yrkes-$\beta$ = E1 + 0{,}5$\cdot$E2, Core-vektet over O*NET-oppgavene
+    \item Øyeblikksbilde av 2023-kapabilitet
+  \end{itemize}}
+\end{column}
+\begin{column}{0.475\textwidth}
+  {\bfseries\textcolor{illTeal}{Mouchel mfl.\ (2026)}}
+
+  \vspace{0.25em}
+  {\footnotesize
+  \begin{itemize}\setlength\itemsep{0.25em}
+    \item Rubrikk for \textbf{agentisk KI 2026}: verktøy- og nettleserbruk gir direkte eksponering; ny E3-klasse for syn
+    \item \textbf{Evidensbasert}: oppgavene vurderes mot 30\,000 nyhetsartikler og 24\,000 forskningssammendrag
+    \item Ensemble av sju åpne modeller; oppgavetids-vekting til yrkes-skår
+    \item To armer: \textbf{A1} (teoretisk) og S0 (kalibrert mot faktisk Claude-bruk)
+  \end{itemize}}
+\end{column}
+\end{columns}
+
+\vspace{0.25em}
+\illbanner{Samme oppgave-for-oppgave-$\beta$, men med 2026-kapabilitet og dokumentert evidens.}
+
+\vspace{0.05em}
+\raggedright\tiny\textcolor{illGray}{Kilder: Eloundou mfl.\ (Science, 2024); Mouchel, Bouquet \& Sheffi (2026), arXiv:2605.15474 (dataversjon 2026-07-20).}
+\end{frame}
+
+% ---------------------------------------------------------------
+\begin{frame}{Nytt mål, nesten samme rangering av yrker}
+\begin{columns}[T,onlytextwidth]
+\begin{column}{0.54\textwidth}
+  \centering
+  \includegraphics[height=0.8\textheight]{figure_mouchel_vs_eloundou.pdf}
+\end{column}
+\begin{column}{0.44\textwidth}
+  \vspace{0.3em}
+  {\footnotesize
+  \begin{itemize}\setlength\itemsep{0.35em}
+    \item Ett punkt per yrke (397 STYRK-08-koder), samme SOC--ISCO-krysskobling
+    \item Korrelasjon \textbf{0{,}92} (Pearson), \textbf{0{,}94} (Spearman); 66 prosent i samme femtedel, 99 prosent innen én
+    \item \textcolor{illTeal}{\textbf{Opp}} med agentisk rubrikk: jus, samfunnsøkonomi, revisjon, rådgivning
+    \item \textcolor{illRed}{\textbf{Ned}}: sentralbord, sekretær- og annet rutinearbeid, der evidensen viser mindre reell tidsbesparelse
+  \end{itemize}}
+
+  \vspace{0.35em}
+  {\footnotesize\bfseries\textcolor{illInk}{Resultater bygget på Eloundou-femdelene står seg med 2026-målet.}}
+\end{column}
+\end{columns}
+
+\vspace{0.05em}
+\raggedright\tiny\textcolor{illGray}{Kilde: egne beregninger. Mouchel = A1-armen (ukalibrert, uavhengig av Claude-bruksdata); Eloundou = GPT-4-$\beta$ fra kiindeksen.}
+\end{frame}
