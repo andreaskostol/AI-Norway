@@ -19,6 +19,10 @@ variantene raw/sa (per capita er ikke meningsfullt for loenn).
 Yrkescase- og usage-figurene viser bare nivaaindeks paa nettsiden, saa
 der faar nyansettelser derived=False (ingen yoy/annualized); det
 haandterer ogsaa tynne celler med null nyansettelser i enkelte maaneder.
+Fra release 2026-08 bygges hovedkuttene (by_exposure, age_by_exposure,
+by_age, composition, samt hires_/wages_-variantene) ogsaa for offentlig
+sektor (sekt=1) som egne public_-pakker; yrkescase- og usage-pakkene
+forblir privat sektor.
 
 Kjoering:  python dashboard/build_release.py [RELEASE]
            (RELEASE default "2026-06"; pakkemapper som finnes fra foer
@@ -549,6 +553,152 @@ def main():
                       f"BCC (2025) Figure 3. `No usage` = canaries-sample "
                       f"occupations below the query threshold.",
                       derived=der, conventions=conv)
+
+    # 18-27. Offentlig sektor (sekt=1): hovedkuttene som egne
+    #        public_-pakker. Kvintilene er de samme nasjonale,
+    #        yrkesbaserte Eloundou-kvintilene som i privat-pakkene, men
+    #        yrkessammensetningen innen hver kvintil er en annen i
+    #        offentlig sektor (offentlig administrasjon dominerer oevre
+    #        kvintiler blant unge), saa nivaaer boer ikke sammenliknes
+    #        paa tvers av sektor -- offentlig sektor presenteres som egen
+    #        fasett, jf. paper. Yrkescase- og usage-pakkene bygges ikke
+    #        for offentlig sektor. Per capita deler paa aldersgruppens
+    #        samlede befolkning (07459), som i privat-pakkene.
+    #        Celle-QA per 2026-08: minste maanedlige nyansettelser per
+    #        kvintil-x-alder-fasett er 150 og ingen nullmaaneder, saa
+    #        hires beholder derived=True ogsaa her.
+    def pub_conv(conv):
+        # Offentlig-variant av konvensjonsteksten (ellers identisk).
+        return conv.replace(
+            "the full population of private-sector employees",
+            "the full population of public-sector employees (general "
+            "government and publicly owned enterprises; institutional "
+            "sector codes 1110, 1120, 1510, 1520, 6100 and 6500)")
+
+    PUB_NOTE = (" Public-sector package: the quintiles are the same "
+                "national occupation-based Eloundou quintiles as in the "
+                "private-sector packages, but the occupational "
+                "composition within each quintile differs between "
+                "sectors, so index levels should not be compared across "
+                "sectors.")
+
+    dp = pd.read_csv(DATA, dtype={"yrke4": str, "alder_gr": str,
+                                  "sekt": int})
+    dp = dp[(dp["variable"] == "count") & (dp["sekt"] == 1)
+            & (dp["alder_gr"].isin(AGE_ORDER))]
+    dp = dp.merge(el, left_on="yrke4", right_on="styrk08")
+
+    # 18. public_by_exposure: som pakke 1, offentlig sektor.
+    long = collect(dp, ["quintile"], lambda k: "all")
+    long["col"] = long["quintile"].map(EXP_LABELS)
+    wide = pivot_index(long, [], "col", list(EXP_LABELS.values()))
+    comp = dp.groupby(["date", "quintile"], as_index=False)["value"].sum()
+    comp["share"] = np.round(100 * comp["value"]
+                             / comp.groupby("date")["value"]
+                             .transform("sum"), 2)
+    comp_w = comp.pivot_table(index="date", columns="quintile",
+                              values="share")
+    comp_w.columns = [f"composition_E{q}" for q in comp_w.columns]
+    comp_w.index = comp_w.index.str[:8] + "01"
+    wide = wide.merge(comp_w, left_on="observation_date", right_index=True)
+    write_package("public_by_exposure", wide, list(EXP_LABELS.values()),
+                  ["adjustment"],
+                  "Value columns: Employment Index per Eloundou exposure "
+                  "quintile, all ages 21-60 pooled, public sector. "
+                  "`composition_E1..E5`: each quintile's share of sample "
+                  "employment in percent, from raw headcount (identical "
+                  "across adjustment rows)." + PUB_NOTE,
+                  conventions=pub_conv(DICT_CONVENTIONS))
+
+    # 19. public_age_by_exposure: som pakke 2, offentlig sektor.
+    long = collect(dp, ["quintile", "alder_gr"], lambda k: k["alder_gr"])
+    long["exposure_quintile"] = long["quintile"].map(EXP_LABELS)
+    long["col"] = long["alder_gr"].map(AGE_LABELS)
+    wide = pivot_index(long, ["exposure_quintile"], "col",
+                       list(AGE_LABELS.values()))
+    write_package("public_age_by_exposure", wide,
+                  list(AGE_LABELS.values()),
+                  ["adjustment", "exposure_quintile"],
+                  "Facet `exposure_quintile`; value columns: Employment "
+                  "Index per decade age group, public sector." + PUB_NOTE,
+                  conventions=pub_conv(DICT_CONVENTIONS))
+
+    # 20. public_by_age: som pakke 3, offentlig sektor.
+    long = collect(dp, ["alder_gr"], lambda k: k["alder_gr"])
+    long["col"] = long["alder_gr"].map(AGE_LABELS)
+    wide = pivot_index(long, [], "col", list(AGE_LABELS.values()))
+    write_package("public_by_age", wide, list(AGE_LABELS.values()),
+                  ["adjustment"],
+                  "Value columns: Employment Index per decade age group, "
+                  "all canaries-sample occupations pooled, public sector."
+                  + PUB_NOTE, conventions=pub_conv(DICT_CONVENTIONS))
+
+    # 21. public_composition: snapshot ved basismaaneden.
+    base_p = dp[dp["date"] == BASE_MONTH]
+    tot_p = base_p["value"].sum()
+    comp = base_p.groupby(["alder_gr", "quintile"],
+                          as_index=False)["value"].sum()
+    comp["Share"] = np.round(100 * comp["value"] / tot_p, 4)
+    comp["Age Group"] = comp["alder_gr"].map(AGE_LABELS)
+    comp["Exposure Group"] = comp["quintile"].map(EXP_LABELS)
+    comp["observation_date"] = BASE_OBS
+    comp = comp[["observation_date", "Age Group", "Share",
+                 "Exposure Group"]]
+    write_package("public_composition", comp, [], [],
+                  "Snapshot at the normalization date: each age-by-"
+                  "exposure cell's share of total public-sector sample "
+                  "employment, in percent (raw headcount). Sums to 100."
+                  + PUB_NOTE, derived=False,
+                  conventions=pub_conv(DICT_CONVENTIONS))
+
+    # 22-27. Nyansettelser og FTE-justert loenn, hovedkuttene,
+    #        offentlig sektor.
+    cwp = pd.read_csv(DATA, dtype={"yrke4": str, "alder_gr": str,
+                                   "sekt": int})
+    cwp = cwp[(cwp["sekt"] == 1) & (cwp["alder_gr"].isin(AGE_ORDER))
+              & cwp["variable"].isin(["count", "kontantlonn",
+                                      "stillingspst", "ny_jobb"])]
+    cwp = cwp.pivot_table(index=["date", "yrke4", "alder_gr"],
+                          columns="variable", values="value",
+                          aggfunc="first").reset_index()
+    assert not cwp[["count", "kontantlonn", "stillingspst",
+                    "ny_jobb"]].isna().any().any(), \
+        "offentlige celler mangler en av variablene"
+    cwp = cwp.merge(el, left_on="yrke4", right_on="styrk08")
+
+    for oname, agg_fn, adjs, conv, what in OUTCOME_SPECS:
+        long = collect_outcome(cwp, ["quintile"], lambda k: "all",
+                               agg_fn, adjs)
+        long["col"] = long["quintile"].map(EXP_LABELS)
+        wide = pivot_index(long, [], "col", list(EXP_LABELS.values()))
+        write_package(f"public_{oname}_by_exposure", wide,
+                      list(EXP_LABELS.values()), ["adjustment"],
+                      f"Value columns: {what} per Eloundou exposure "
+                      "quintile, all ages 21-60 pooled, public sector."
+                      + PUB_NOTE, conventions=pub_conv(conv))
+
+        long = collect_outcome(cwp, ["quintile", "alder_gr"],
+                               lambda k: k["alder_gr"], agg_fn, adjs)
+        long["exposure_quintile"] = long["quintile"].map(EXP_LABELS)
+        long["col"] = long["alder_gr"].map(AGE_LABELS)
+        wide = pivot_index(long, ["exposure_quintile"], "col",
+                           list(AGE_LABELS.values()))
+        write_package(f"public_{oname}_age_by_exposure", wide,
+                      list(AGE_LABELS.values()),
+                      ["adjustment", "exposure_quintile"],
+                      f"Facet `exposure_quintile`; value columns: {what} "
+                      "per decade age group, public sector." + PUB_NOTE,
+                      conventions=pub_conv(conv))
+
+        long = collect_outcome(cwp, ["alder_gr"],
+                               lambda k: k["alder_gr"], agg_fn, adjs)
+        long["col"] = long["alder_gr"].map(AGE_LABELS)
+        wide = pivot_index(long, [], "col", list(AGE_LABELS.values()))
+        write_package(f"public_{oname}_by_age", wide,
+                      list(AGE_LABELS.values()), ["adjustment"],
+                      f"Value columns: {what} per decade age group, all "
+                      "canaries-sample occupations pooled, public sector."
+                      + PUB_NOTE, conventions=pub_conv(conv))
 
     print("Done.")
 
