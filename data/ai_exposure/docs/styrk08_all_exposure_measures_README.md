@@ -29,7 +29,7 @@ relational-economy extension and are documented in
 | 12 | `handa_automation_q` | Quintile of `handa_automation`. |
 | 13 | `handa_augmentation` | Handa share of conversations classified as augmentation mode (iterative collaboration). |
 | 14 | `handa_augmentation_q` | Quintile of `handa_augmentation`. |
-| 15 | `anthropic2026_job_exposure` | Anthropic (2026) `job_exposure` measure. Time-weighted observed Claude usage with an automation penalty; postdates BCC and Kauhanen. |
+| 15 | `anthropic2026_job_exposure` | Anthropic (2026) `job_exposure` ("observed exposure") measure: the time-weighted share of the occupation's tasks with gated, work-related Claude/API usage. Augmentative use counts at half weight (automation and API use at full weight) and tasks are gated on Eloundou feasibility, so it is not pure usage. Postdates BCC and Kauhanen. |
 | 16 | `anthropic2026_q` | Quintile of `anthropic2026_job_exposure`. |
 | 17 | `mouchel_grounded` | Mouchel, Bouquet & Sheffi (2026) evidence-grounded exposure, arm A1: unweighted mean of an ensemble of open-weight models judging each O*NET task under a 2026 agentic-AI rubric (E0/E1/E2 + vision-dependent E3, β mapped 0/1/0.5/0.5), conditioned on retrieved news and research evidence. Never calibrated on usage data, so it is the theoretical-exposure counterpart to `eloundou_beta` for the 2026 frontier. Vintage 2026-07-20. |
 | 18 | `mouchel_grounded_q` | Quintile of `mouchel_grounded`. |

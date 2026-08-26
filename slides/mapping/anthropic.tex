@@ -2,10 +2,10 @@
 
 \begin{frame}{What the Anthropic 2026 \texttt{job\_exposure} measure tracks}
 \begin{itemize}\setlength{\itemsep}{6pt}
-  \item Time-weighted Claude usage at the occupation level
-  \item Penalty applied to directive (automation) conversations
+  \item Time-weighted Claude task coverage at the occupation level
+  \item Augmentative use counts at half weight (automation and API use at full weight); tasks gated on Eloundou feasibility
   \item Released by Anthropic in March 2026 as an update to the Anthropic Economic Index
-  \item Distinguishes itself from Handa by using time weights rather than conversation shares, and by re-weighting toward augmentation
+  \item Distinguishes itself from Handa by using time weights rather than conversation shares, and by re-weighting toward automation
 \end{itemize}
 \end{frame}
 
@@ -13,7 +13,7 @@
 \begin{frame}{The code chain}
 \centering
 \begin{tikzpicture}[node distance=1.0cm and 1.8cm]
-  \node[codebox=cTASK] (claude) {\cbox{cTASK}{Claude usage}{time-weighted}{automation penalty}};
+  \node[codebox=cTASK] (claude) {\cbox{cTASK}{Claude usage}{time-weighted}{augment.\ half weight}};
   \node[codebox=cSOC10, right=of claude] (soc) {\cbox{cSOC10}{SOC 2010}{29-1051}{Pharmacists}};
   \node[codebox=cSTYRK, right=of soc] (s) {\cbox{cSTYRK}{STYRK-08}{2262}{Farmasøyter}};
 

@@ -2,9 +2,14 @@
 plot_exposure_vs_usage.py
 
 Scatter of theoretical AI exposure (Eloundou et al. 2024 GPT-4 beta)
-against observed Claude usage (Anthropic 2026 job_exposure: time-weighted
-observed usage with an automation penalty), one point per 4-digit
-STYRK-08 code. Companion to plot_mouchel_vs_eloundou.py: that figure
+against Anthropic's observed-exposure measure (2026 job_exposure: the
+time-weighted share of the occupation's tasks with gated, work-related
+Claude/API usage; augmentative use counts at half weight, automation
+and API use at full weight, and tasks are gated on Eloundou
+feasibility), one point per 4-digit STYRK-08 code. Because of that
+feasibility gate a small part of the x-y association is mechanical
+(beta = 0 tasks are zeroed in y), though the gate binds rarely: 97
+percent of observed tasks pass it. Companion to plot_mouchel_vs_eloundou.py: that figure
 compares two capability-side measures (Eloundou's prior-based beta and
 Mouchel's evidence-grounded beta -- "evidensbasert" refers to the
 documentary evidence behind the capability judgments; neither is built
@@ -173,7 +178,7 @@ def main():
 
     # Axis labels: theoretical exposure on x, observed usage on y.
     ax.set_xlabel("Eloundou mfl. (2024): GPT-4-$\\beta$")
-    ax.set_ylabel("Anthropic (2026): observert Claude-bruk")
+    ax.set_ylabel("Anthropic (2026): observert eksponering")
     # Full 0-1 exposure range on x; usage tops out at 0.75 (2514).
     ax.set_xlim(0, 1.0)
     ax.set_ylim(0, 0.8)

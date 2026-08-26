@@ -459,7 +459,7 @@ der:
   α_t  = ½ + ½ × AutomasjonsAndel_t  (automasjon vektes tyngre)
 ```
 
-Dette inkorporerer tidsvekter, minimumsterskler for bruk, Eloundou-gjennomforbarhetsporter og en automasjonsstraff — ingen av disse finnes i de rå task_pct-dataene. Spearman rangkorrelasjon mellom vår task_pct-aggregering og `observed_exposure` er ρ ≈ 0,70 på STYRK-nivå.
+Dette inkorporerer tidsvekter, minimumsterskler for bruk, Eloundou-gjennomforbarhetsporter og halv vekt for augmenterende bruk — ingen av disse finnes i de rå task_pct-dataene. Spearman rangkorrelasjon mellom vår task_pct-aggregering og `observed_exposure` er ρ ≈ 0,70 på STYRK-nivå.
 
 Gitt at `job_exposure.csv` ble publisert etter begge artiklene, er det sannsynlig at vår task_pct-baserte tilnærming ligger nærmere det Brynjolfsson og Kauhanen faktisk brukte. Vi kan imidlertid ikke verifisere dette uten tilgang til deres kode.
 
