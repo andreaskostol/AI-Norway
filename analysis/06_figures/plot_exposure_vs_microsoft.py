@@ -49,16 +49,26 @@ EMP_MONTH = "2026-04-16"                     # employment reference month
 FIG_DIR = os.path.join(BASE_DIR, "analysis", "output", "figures")  # output folder
 
 POINT_COLOR = "#2F6FB0"                      # illBlue from the slide decks (single series)
+ACCENT_COLOR = "#1D4E85"                     # darker blue for annotated markers
 LABEL_COLOR = "#516274"                      # illGray for the outlier annotations
+LEADER_COLOR = "#9AA7B4"                     # thin leader line from label to marker
 
-# Hand-picked points to annotate: styrk08 -> (short label, x-offset, y-offset).
-# Offsets are in data units and placed manually so no label collides.
+# Hand-picked occupations to annotate: styrk08 -> label position in data
+# coordinates. The label text is the official STYRK-08 name from the
+# register (styrk08_name); a thin leader line connects label and marker,
+# and annotated markers are drawn in a darker blue on top.
 ANNOTATE = {
-    "2643": ("Oversettere og tolker",     -0.14,  0.030),
-    "2514": ("Applikasjonsprogrammerere", -0.10,  0.030),
-    "4222": ("Kundesentermedarbeidere",   -0.06,  0.028),
-    "2652": ("Musikere mv.",               0.07,  -0.022),
-    "3256": ("Helsesekretærer",       0.00,  -0.025),
+    "2643": (0.54, 0.455),
+    "2514": (0.83, 0.350),
+    "4222": (0.44, 0.375),
+    "3322": (0.76, 0.300),
+    "5223": (0.17, 0.305),
+    "2341": (0.18, 0.225),
+    "2223": (0.47, 0.075),
+    "2652": (0.75, 0.055),
+    "3256": (0.42, 0.012),
+    "7115": (0.25, 0.115),
+    "9112": (0.12, 0.155),
 }
 
 
@@ -126,19 +136,28 @@ def main():
                s=sizes, color=POINT_COLOR, alpha=0.75,
                edgecolors="white", linewidths=0.6, zorder=2)
 
-    # Annotate the hand-picked points with small gray labels.
-    for code, (label, dx, dy) in ANNOTATE.items():
+    # Redraw the annotated markers in the darker accent blue on top, then
+    # label each with its official register name and a thin leader line.
+    ann = sub[sub["styrk08"].isin(ANNOTATE)]
+    ann_sizes = 8 + 192 * ann["employment"] / sub["employment"].max()
+    ax.scatter(ann["eloundou_beta"], ann["microsoft_applicability"],
+               s=ann_sizes, color=ACCENT_COLOR,
+               edgecolors="white", linewidths=0.6, zorder=3)
+    for code, (lx, ly) in ANNOTATE.items():
         # Find the row for this occupation code (skip if unmapped).
         row = sub[sub["styrk08"] == code]
         if row.empty:
             continue
-        # Point coordinates for this occupation.
+        # Marker coordinates and official name for this occupation.
         x = float(row["eloundou_beta"].iloc[0])
         y = float(row["microsoft_applicability"].iloc[0])
-        # Place the label at the manual offset from the point.
-        ax.annotate(label, xy=(x, y), xytext=(x + dx, y + dy),
+        name = str(row["styrk08_name"].iloc[0])
+        # Label at its manual position, connected by a leader line.
+        ax.annotate(name, xy=(x, y), xytext=(lx, ly),
                     fontsize=10.5, color=LABEL_COLOR,
-                    ha="center", va="center", zorder=3)
+                    ha="center", va="center", zorder=4,
+                    arrowprops=dict(arrowstyle="-", color=LEADER_COLOR,
+                                    lw=0.7, shrinkA=2, shrinkB=4))
 
     # Corner annotation with the correlation numbers (Norwegian comma decimals).
     stats = (f"Pearson $r$ = {pearson:.2f}\n"

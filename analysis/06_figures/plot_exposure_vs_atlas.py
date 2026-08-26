@@ -43,23 +43,37 @@ FIG_DIR = os.path.join(BASE_DIR, "analysis", "output", "figures")  # output fold
 
 POINT_COLOR = "#2F6FB0"                      # illBlue from the slide decks (single series)
 LABEL_COLOR = "#516274"                      # illGray for the group labels
+LEADER_COLOR = "#9AA7B4"                     # thin leader line from label to marker
 IDENT_COLOR = "#999999"                      # recessive gray for the ratio=1 line
 
-# Norwegian labels per SOC major-group prefix; only the listed groups get
-# a text label (all 22 would collide). Offsets are (dx in data units,
-# dy as a multiplicative factor on the log axis).
+# Norwegian labels per SOC major-group prefix (translations of the
+# official BLS major-group titles; SOC groups have no official Norwegian
+# names). 21 of 22 groups are labeled -- Production is skipped in the
+# crowded bottom-left corner. Offsets are (dx in data units, dy as a
+# multiplicative factor on the log axis); a thin leader line connects
+# each label to its marker.
 LABELS = {
-    "15": ("Data og matematikk",        -0.105, 1.0),
-    "27": ("Kunst, media og sport",     -0.045, 1.3),
-    "13": ("Økonomi og forretning", 0.000, 1.35),
-    "43": ("Kontorstøtte",          0.075, 1.0),
-    "23": ("Juridiske yrker",           -0.115, 1.0),
-    "17": ("Ingeniørfag",           -0.070, 1.0),
-    "25": ("Undervisning",               -0.075, 1.0),
-    "29": ("Helsepersonell",             -0.095, 1.0),
-    "41": ("Salg",                       0.045, 1.0),
-    "47": ("Bygg og anlegg",             0.000, 0.72),
-    "35": ("Servering",                  0.045, 0.75),
+    "15": ("Data og matematikk",             -0.115, 1.00),
+    "27": ("Kunst, media og sport",          -0.045, 1.30),
+    "13": ("Økonomi og forretningsdrift", 0.000, 1.35),
+    "19": ("Naturvitenskap og samfunnsfag",  -0.140, 1.00),
+    "17": ("Arkitektur og ingeniørfag",  -0.130, 1.05),
+    "23": ("Juridisk arbeid",                 0.020, 0.82),
+    "43": ("Kontorstøtte",                0.075, 1.00),
+    "21": ("Sosialt arbeid",                  0.000, 0.80),
+    "11": ("Ledelse",                         0.075, 1.00),
+    "49": ("Installasjon og reparasjon",      0.090, 1.15),
+    "25": ("Undervisning og bibliotek",       0.100, 1.00),
+    "45": ("Jordbruk, fiske og skogbruk",     0.000, 0.72),
+    "29": ("Helsepersonell",                 -0.095, 1.05),
+    "33": ("Vakthold og beredskap",          -0.020, 0.78),
+    "41": ("Salg",                            0.045, 1.00),
+    "47": ("Bygg og anlegg",                  0.035, 1.35),
+    "39": ("Personlig tjenesteyting",         0.115, 1.00),
+    "53": ("Transport og lager",              0.105, 1.00),
+    "31": ("Helsestøtteyrker",            0.100, 0.90),
+    "37": ("Renhold og vedlikehold",         -0.010, 1.45),
+    "35": ("Servering og matlaging",          0.045, 0.75),
 }
 
 
@@ -118,7 +132,7 @@ def main():
                s=sizes, color=POINT_COLOR, alpha=0.75,
                edgecolors="white", linewidths=0.6, zorder=2)
 
-    # Label the selected groups with small gray labels.
+    # Label the groups with small gray labels and thin leader lines.
     for _, row in sub.iterrows():
         if row["grp"] not in LABELS:
             continue
@@ -128,7 +142,9 @@ def main():
         # dy is multiplicative because the axis is logarithmic.
         ax.annotate(label, xy=(x, y), xytext=(x + dx, y * fy),
                     fontsize=10.5, color=LABEL_COLOR,
-                    ha="center", va="center", zorder=3)
+                    ha="center", va="center", zorder=3,
+                    arrowprops=dict(arrowstyle="-", color=LEADER_COLOR,
+                                    lw=0.7, shrinkA=2, shrinkB=4))
 
     # Corner annotation with the correlation (Norwegian comma decimals).
     stats = (f"Spearman $\\rho$ = {spearman:.2f}\n"
