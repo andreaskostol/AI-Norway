@@ -1,0 +1,23 @@
+list,occupation_title_onet_soc
+table1_most_overrepresented,Financial and Investment Analysts
+table1_most_overrepresented,Market Research Analysts
+table1_most_overrepresented,Software Developers
+table1_most_overrepresented,Network and Computer Systems Administrators
+table1_most_underrepresented,Home Health and Personal Care Aides
+table1_most_underrepresented,Fast Food and Counter Workers
+table1_most_underrepresented,Cashiers
+table1_most_underrepresented,Retail Salespersons
+table1_largest_not_observed,Food Preparation Workers
+table1_largest_not_observed,"Cooks, Fast Food"
+table1_largest_not_observed,Dining Room and Cafeteria Attendants and Bartender Helpers
+table1_largest_not_observed,"Substitute Teachers, Short-Term"
+table2_least_task_saturated,"Special Education Teachers, Middle School"
+table2_least_task_saturated,"Kindergarten Teachers, Except Special Education"
+table2_least_task_saturated,"Special Education Teachers, Preschool"
+table2_least_task_saturated,Midwives
+table2_least_task_saturated,"English Language and Literature Teachers, Postsecondary"
+table2_most_task_saturated,Market Research Analysts and Marketing Specialists
+table2_most_task_saturated,Human Resources Specialists
+table2_most_task_saturated,Software Quality Assurance Analysts and Testers
+table2_most_task_saturated,Document Management Specialists
+table2_most_task_saturated,Network and Computer Systems Administrators

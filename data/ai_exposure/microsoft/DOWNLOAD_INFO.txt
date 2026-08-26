@@ -1,0 +1,33 @@
+Source: https://github.com/microsoft/working-with-ai (official data release for
+Tomlinson, Jaffe, Wang, Counts, Suri (2025), "Working with AI: Measuring the
+Applicability of Generative AI to Occupations", arXiv:2507.07935)
+
+Downloaded: 2026-08-25
+Pinned commit: c94a07c52f (2025-12-22, "update readme")
+Release version: v1.1 (matches arXiv paper revision v6; v1.0 matched revisions up to v5.
+v1.1 added physical-task classification and switched the AI-action side of the
+applicability score to nonphysical IWA weights.)
+
+Files downloaded (raw, unmodified):
+- ai_applicability_scores.csv  main per-occupation score (785 detailed 2018 SOC codes)
+- soc_metrics.csv              per-SOC components: coverage/completion/impact_scope/
+                               feedback (user + ai) and user/ai_nonphysical subscores
+- iwa_metrics.csv              IWA-level metrics (332 O*NET intermediate work activities)
+- soc_to_iwas.csv              SOC -> IWA mapping
+- README.md, LICENSE.txt, NOTICE.md  upstream docs
+
+Not downloaded (available upstream if needed): soc_iwa_weights.csv,
+soc_iwa_nonphysical_weights.csv, physical_tasks.csv (task/weight-level detail, ~2.6 MB).
+
+License: CC BY 4.0 (attribution: cite the paper, see README.md).
+
+Coverage note: 785 detailed 2018 SOC codes; military (55-xxxx) and 74 SOC codes
+without O*NET task data are excluded. Underlying usage: Bing Copilot conversations,
+US, 2024-01-01 to 2024-09-30. Employment weights (2023 OEWS) are NOT included in
+these files; pull from BLS OEWS if employment-weighted aggregation is needed.
+
+Spot checks against paper text (all match):
+- 27-3091 Interpreters and Translators   0.492
+- 19-3093 Historians                     0.462
+- 43-4051 Customer Service Reps          0.408
+- machine setters/operators/tenders      mostly 0.02-0.13

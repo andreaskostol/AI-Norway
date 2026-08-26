@@ -1,0 +1,23 @@
+soc2018_major_group,soc_major_title,gemini_us_interaction_share_pct,oews_us_employment_share_pct,representation_ratio,gemini_dot_quality,oews_dot_quality
+15-0000,Computer and Mathematical,29.61,3.37,8.775,full,full
+13-0000,Business and Financial Operations,22.42,6.73,3.33,full,full
+43-0000,Office and Administrative Support,12.4,11.81,1.05,full,full
+27-0000,"Arts, Design, Entertainment, Sports, and Media",9.48,1.36,6.978,full,full
+11-0000,Management,5.45,7.11,0.766,full,full
+25-0000,Educational Instruction and Library,2.79,5.8,0.481,full,full
+19-0000,"Life, Physical, and Social Science",2.59,0.95,2.723,full,full
+29-0000,Healthcare Practitioners and Technical,2.56,6.24,0.41,full,full
+17-0000,Architecture and Engineering,2.53,1.68,1.504,full,full
+41-0000,Sales and Related,2.09,8.66,0.241,full,full
+49-0000,"Installation, Maintenance, and Repair",1.94,3.93,0.494,full,full
+21-0000,Community and Social Service,1.65,1.66,0.993,full,partial(edge-recovered)
+23-0000,Legal,0.98,0.85,1.15,full,partial(edge-recovered)
+53-0000,Transportation and Material Moving,0.8,8.87,0.091,full,full
+47-0000,Construction and Extraction,0.69,4.13,0.166,full,full
+33-0000,Protective Service,0.66,2.38,0.276,full,full
+51-0000,Production,0.57,5.68,0.1,full,full
+39-0000,Personal Care and Service,0.28,2.06,0.134,full,full
+31-0000,Healthcare Support,0.25,4.83,0.051,full,full
+35-0000,Food Preparation and Serving Related,0.25,8.84,0.028,full,full
+37-0000,Building and Grounds Cleaning and Maintenance,0.13,2.94,0.045,full,full
+45-0000,"Farming, Fishing, and Forestry",0.13,0.29,0.449,full,partial(edge-recovered)
