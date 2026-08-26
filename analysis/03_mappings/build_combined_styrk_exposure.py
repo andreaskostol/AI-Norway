@@ -4,8 +4,9 @@ build_combined_styrk_exposure.py
 Purpose: Build a single wide-format CSV with all 4-digit STYRK-08 occupation
     codes and one column per AI-exposure measure (Eloundou beta, Felten AIOE,
     Handa overall/automation/augmentation, Anthropic-2026 job exposure, the
-    Mouchel grounded/calibrated arms, and the relational axis), plus a derived
-    exposure x relational interaction and a 2x2 quadrant. This is the master occupation -> AI-exposure crosswalk: it gathers
+    Mouchel grounded/calibrated arms, the Microsoft Copilot applicability
+    score, the Google ATLAS Gemini-usage ratio, and the relational axis),
+    plus a derived exposure x relational interaction and a 2x2 quadrant. This is the master occupation -> AI-exposure crosswalk: it gathers
     every per-measure mapping into one table and supplies the per-occupation
     quintile columns the figures and tables key on, and is the file shared with
     collaborators.
@@ -16,6 +17,8 @@ Inputs:  data/ai_exposure/styrk08_codes.csv               (master code list)
          data/ai_exposure/styrk08_handa_mapping.csv
          data/ai_exposure/styrk08_job_exposure_mapping.csv  (Anthropic 2026)
          data/ai_exposure/styrk08_mouchel_mapping.csv       (Mouchel et al. 2026)
+         data/ai_exposure/styrk08_microsoft_mapping.csv     (Tomlinson et al. 2025)
+         data/ai_exposure/styrk08_atlas_mapping.csv         (Google ATLAS 2026)
          data/ai_exposure/styrk08_relational_mapping.csv
 
 Output:  data/ai_exposure/styrk08_all_exposure_measures.csv
@@ -111,6 +114,30 @@ def load_mouchel() -> pd.DataFrame:
                  'quintile_calibrated': 'mouchel_calibrated_q'})
 
 
+def load_microsoft() -> pd.DataFrame:
+    # Read the Microsoft (Tomlinson et al. 2025) applicability mapping
+    # (styrk08 as string).
+    df = pd.read_csv(DATA / 'styrk08_microsoft_mapping.csv', dtype={'styrk08': str})
+    # Zero-pad the join key to 4 digits.
+    df['styrk08'] = df['styrk08'].str.zfill(4)
+    # Keep the headline score, its user-goal and AI-action sides, and the
+    # headline quintile, renamed to measure-specific column names.
+    return df[['styrk08', 'microsoft_applicability', 'microsoft_user',
+               'microsoft_action', 'quintile']].rename(
+        columns={'quintile': 'microsoft_q'})
+
+
+def load_atlas() -> pd.DataFrame:
+    # Read the Google ATLAS (2026) Gemini-usage mapping (styrk08 as string).
+    # The source varies only at SOC major-group level (22 groups), so this
+    # column carries no genuine 4-digit variation and gets no quintile.
+    df = pd.read_csv(DATA / 'styrk08_atlas_mapping.csv', dtype={'styrk08': str})
+    # Zero-pad the join key to 4 digits.
+    df['styrk08'] = df['styrk08'].str.zfill(4)
+    # Keep only the representation ratio.
+    return df[['styrk08', 'atlas_repr_ratio']]
+
+
 def load_relational() -> pd.DataFrame:
     # Read the relational-axis mapping (styrk08 as string).
     df = pd.read_csv(DATA / 'styrk08_relational_mapping.csv', dtype={'styrk08': str})
@@ -181,6 +208,8 @@ def main() -> None:
            .merge(load_handa(), on='styrk08', how='left')
            .merge(load_anthropic2026(), on='styrk08', how='left')
            .merge(load_mouchel(), on='styrk08', how='left')
+           .merge(load_microsoft(), on='styrk08', how='left')
+           .merge(load_atlas(), on='styrk08', how='left')
            .merge(load_relational(), on='styrk08', how='left'))
 
     # Add the derived exposure x relational interaction and the 2x2 quadrant.
@@ -196,7 +225,8 @@ def main() -> None:
     print(f'Wrote {OUT.name}: {n} STYRK-08 4-digit codes')
     # For each core measure, report how many codes received a (non-missing) value.
     for col in ['eloundou_beta', 'felten_aioe', 'handa_overall',
-                'anthropic2026_job_exposure', 'mouchel_grounded', 'relational']:
+                'anthropic2026_job_exposure', 'mouchel_grounded',
+                'microsoft_applicability', 'atlas_repr_ratio', 'relational']:
         # Count non-missing values for this measure.
         cov = out[col].notna().sum()
         # Print count and percentage coverage.
