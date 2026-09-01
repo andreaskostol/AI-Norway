@@ -38,7 +38,7 @@ import pandas as pd
 
 BASE_DIR = os.path.join(os.path.dirname(__file__), "..")
 DATA = os.path.join(BASE_DIR, "microdata-output",
-                    "09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv")
+                    "09_occ_agedecade_sektor_kpos_2021m01_2026m06_parsed.csv")
 ELOUNDOU = os.path.join(BASE_DIR, "data", "ai_exposure",
                         "styrk08_eloundou_beta_mapping.csv")
 USAGE = os.path.join(BASE_DIR, "data", "ai_exposure",

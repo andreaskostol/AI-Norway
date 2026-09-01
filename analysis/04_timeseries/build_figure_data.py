@@ -53,6 +53,7 @@ def _newest(*names):
 # paper's paid-employment count definition and the R event studies
 # (microdata_es_decade.R / microdata_did_cell.R both read the kpos file).
 PARSED_KPOS = _newest(
+    "09_occ_agedecade_sektor_kpos_2021m01_2026m06_parsed.csv",
     "09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv",
     "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv",
 )
@@ -60,6 +61,7 @@ PARSED_KPOS = _newest(
 # (overtid_timer, timelonn): read from the non-kpos extract until they are
 # re-extracted in kpos form.
 PARSED_NONKPOS = _newest(
+    "09_occ_agedecade_sektor_2021m01_2026m06_parsed.csv",
     "09_occ_agedecade_sektor_2021m01_2026m04_parsed.csv",
     "09_occ_agedecade_sektor_2021m01_2026m02_parsed.csv",
 )

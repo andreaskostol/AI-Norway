@@ -1,0 +1,175 @@
+require no.ssb.fdb:56 as db
+
+create-dataset kobling
+import db/ARBEIDSFORHOLD_PERSON as personid
+
+create-dataset pers
+import db/BEFOLKNING_FOEDSELS_AAR_MND as fodtaarmd
+
+create-dataset jobb_kpos_y2026m05
+import db/ARBLONN_ARB_YRKE_STYRK08 2026-05-16 as yrke
+import db/ARBLONN_FRTK_SEKTOR_2014 2026-05-16 as sektor
+import db/ARBLONN_LONN_KONTANT_IMP 2026-05-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2026-05-16 as stillingspst
+import db/ARBLONN_ARB_START 2026-05-16 as startdato
+drop if sysmiss(kontantlonn)
+drop if kontantlonn <= 0
+generate yrke4 = substr(yrke, 1, 4)
+
+generate sekt = 2
+replace sekt = 1 if sektor == '1110'
+replace sekt = 1 if sektor == '1120'
+replace sekt = 1 if sektor == '6100'
+replace sekt = 1 if sektor == '1510'
+replace sekt = 1 if sektor == '1520'
+replace sekt = 1 if sektor == '6500'
+
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20559 & startdato <= 20589
+
+use kobling
+merge personid into jobb_kpos_y2026m05
+use pers
+merge fodtaarmd into jobb_kpos_y2026m05 on personid
+
+use jobb_kpos_y2026m05
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2026 - birth_yr
+replace alder = alder - 1 if birth_mo > 5
+generate alder_gr = 0
+replace alder_gr = 1 if alder >= 21 & alder <= 30
+replace alder_gr = 2 if alder >= 31 & alder <= 40
+replace alder_gr = 3 if alder >= 41 & alder <= 50
+replace alder_gr = 4 if alder >= 51 & alder <= 60
+replace alder_gr = 5 if alder >= 61
+
+tabulate yrke4 alder_gr sekt, flatten
+tabulate yrke4 alder_gr sekt, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr sekt, summarize(kontantlonn) std flatten
+tabulate yrke4 alder_gr sekt, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr sekt, summarize(ny_jobb) flatten
+
+delete-dataset jobb_kpos_y2026m05
+
+create-dataset jobb_nonkpos_y2026m05
+import db/ARBLONN_ARB_YRKE_STYRK08 2026-05-16 as yrke
+import db/ARBLONN_FRTK_SEKTOR_2014 2026-05-16 as sektor
+import db/ARBLONN_LONN_TIME 2026-05-16 as timelonn
+import db/ARBLONN_LONN_OVERTID_TIMER 2026-05-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+generate yrke4 = substr(yrke, 1, 4)
+
+generate sekt = 2
+replace sekt = 1 if sektor == '1110'
+replace sekt = 1 if sektor == '1120'
+replace sekt = 1 if sektor == '6100'
+replace sekt = 1 if sektor == '1510'
+replace sekt = 1 if sektor == '1520'
+replace sekt = 1 if sektor == '6500'
+
+use kobling
+merge personid into jobb_nonkpos_y2026m05
+use pers
+merge fodtaarmd into jobb_nonkpos_y2026m05 on personid
+
+use jobb_nonkpos_y2026m05
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2026 - birth_yr
+replace alder = alder - 1 if birth_mo > 5
+generate alder_gr = 0
+replace alder_gr = 1 if alder >= 21 & alder <= 30
+replace alder_gr = 2 if alder >= 31 & alder <= 40
+replace alder_gr = 3 if alder >= 41 & alder <= 50
+replace alder_gr = 4 if alder >= 51 & alder <= 60
+replace alder_gr = 5 if alder >= 61
+
+tabulate yrke4 alder_gr sekt, summarize(timelonn) flatten
+tabulate yrke4 alder_gr sekt, summarize(overtid_timer) flatten
+
+delete-dataset jobb_nonkpos_y2026m05
+
+create-dataset jobb_kpos_y2026m06
+import db/ARBLONN_ARB_YRKE_STYRK08 2026-06-16 as yrke
+import db/ARBLONN_FRTK_SEKTOR_2014 2026-06-16 as sektor
+import db/ARBLONN_LONN_KONTANT_IMP 2026-06-16 as kontantlonn
+import db/ARBLONN_ARB_STILLINGSPST 2026-06-16 as stillingspst
+import db/ARBLONN_ARB_START 2026-06-16 as startdato
+drop if sysmiss(kontantlonn)
+drop if kontantlonn <= 0
+generate yrke4 = substr(yrke, 1, 4)
+
+generate sekt = 2
+replace sekt = 1 if sektor == '1110'
+replace sekt = 1 if sektor == '1120'
+replace sekt = 1 if sektor == '6100'
+replace sekt = 1 if sektor == '1510'
+replace sekt = 1 if sektor == '1520'
+replace sekt = 1 if sektor == '6500'
+
+generate ny_jobb = 0
+replace ny_jobb = 1 if startdato > 20589 & startdato <= 20620
+
+use kobling
+merge personid into jobb_kpos_y2026m06
+use pers
+merge fodtaarmd into jobb_kpos_y2026m06 on personid
+
+use jobb_kpos_y2026m06
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2026 - birth_yr
+replace alder = alder - 1 if birth_mo > 6
+generate alder_gr = 0
+replace alder_gr = 1 if alder >= 21 & alder <= 30
+replace alder_gr = 2 if alder >= 31 & alder <= 40
+replace alder_gr = 3 if alder >= 41 & alder <= 50
+replace alder_gr = 4 if alder >= 51 & alder <= 60
+replace alder_gr = 5 if alder >= 61
+
+tabulate yrke4 alder_gr sekt, flatten
+tabulate yrke4 alder_gr sekt, summarize(kontantlonn) flatten
+tabulate yrke4 alder_gr sekt, summarize(kontantlonn) std flatten
+tabulate yrke4 alder_gr sekt, summarize(stillingspst) flatten
+tabulate yrke4 alder_gr sekt, summarize(ny_jobb) flatten
+
+delete-dataset jobb_kpos_y2026m06
+
+create-dataset jobb_nonkpos_y2026m06
+import db/ARBLONN_ARB_YRKE_STYRK08 2026-06-16 as yrke
+import db/ARBLONN_FRTK_SEKTOR_2014 2026-06-16 as sektor
+import db/ARBLONN_LONN_TIME 2026-06-16 as timelonn
+import db/ARBLONN_LONN_OVERTID_TIMER 2026-06-16 as overtid_timer
+replace overtid_timer = 0 if sysmiss(overtid_timer)
+generate yrke4 = substr(yrke, 1, 4)
+
+generate sekt = 2
+replace sekt = 1 if sektor == '1110'
+replace sekt = 1 if sektor == '1120'
+replace sekt = 1 if sektor == '6100'
+replace sekt = 1 if sektor == '1510'
+replace sekt = 1 if sektor == '1520'
+replace sekt = 1 if sektor == '6500'
+
+use kobling
+merge personid into jobb_nonkpos_y2026m06
+use pers
+merge fodtaarmd into jobb_nonkpos_y2026m06 on personid
+
+use jobb_nonkpos_y2026m06
+generate birth_yr = int(fodtaarmd / 100)
+generate birth_mo = fodtaarmd - birth_yr * 100
+generate alder = 2026 - birth_yr
+replace alder = alder - 1 if birth_mo > 6
+generate alder_gr = 0
+replace alder_gr = 1 if alder >= 21 & alder <= 30
+replace alder_gr = 2 if alder >= 31 & alder <= 40
+replace alder_gr = 3 if alder >= 41 & alder <= 50
+replace alder_gr = 4 if alder >= 51 & alder <= 60
+replace alder_gr = 5 if alder >= 61
+
+tabulate yrke4 alder_gr sekt, summarize(timelonn) flatten
+tabulate yrke4 alder_gr sekt, summarize(overtid_timer) flatten
+
+delete-dataset jobb_nonkpos_y2026m06

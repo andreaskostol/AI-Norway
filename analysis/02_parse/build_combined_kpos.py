@@ -16,13 +16,21 @@ import pandas as pd
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "microdata-output"
 
+# The kpos files are extended incrementally (append_09_2026mXX_mYY.py), which
+# writes a new window alongside the older ones. Prefer the newest window that
+# exists so a re-run reproduces the extended combined file.
+for _tag in ("2021m01_2026m06", "2021m01_2026m04", "2021m01_2026m02"):
+    if (OUT / f"09a_count_kpos_{_tag}_parsed.csv").exists():
+        TAG = _tag
+        break
+
 INPUTS = [
-    OUT / "09a_count_kpos_2021m01_2026m02_parsed.csv",
-    OUT / "09b_kontantlonn_kpos_2021m01_2026m02_parsed.csv",
-    OUT / "09c_stillingspst_kpos_2021m01_2026m02_parsed.csv",
-    OUT / "09f_nyjobb_kpos_2021m01_2026m02_parsed.csv",
+    OUT / f"09a_count_kpos_{TAG}_parsed.csv",
+    OUT / f"09b_kontantlonn_kpos_{TAG}_parsed.csv",
+    OUT / f"09c_stillingspst_kpos_{TAG}_parsed.csv",
+    OUT / f"09f_nyjobb_kpos_{TAG}_parsed.csv",
 ]
-OUTPUT = OUT / "09_occ_agedecade_sektor_kpos_2021m01_2026m02_parsed.csv"
+OUTPUT = OUT / f"09_occ_agedecade_sektor_kpos_{TAG}_parsed.csv"
 
 
 def main() -> None:
