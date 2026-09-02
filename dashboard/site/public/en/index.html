@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="/style.css?v=20260902c">
+<link rel="stylesheet" href="/style.css?v=20260902d">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -300,14 +300,15 @@
       Search for up to six occupations and compare them in one figure.
       All ages 21–60 combined, private sector. Outcome, adjustment,
       smoothing and reference follow the selections above. Occupations
-      are four-digit STYRK-08 (ISCO-08) codes, shown with their Norwegian
-      names. Only occupations with at least 30 employees in every month
-      since January 2021 are included, 358 in all.
+      are four-digit STYRK-08 codes with Statistics Norway's English
+      names; hover over a chip for the Norwegian name. Only occupations with at
+      least 30 employees in every month since January 2021 are included,
+      358 in all.
     </p>
     <div class="occ-picker">
       <input type="search" id="occ-search" autocomplete="off"
              aria-label="Search for an occupation"
-             placeholder="Search by Norwegian occupation name or STYRK-08 code">
+             placeholder="Search by occupation name (English or Norwegian) or STYRK-08 code">
       <ul id="occ-hits" class="occ-hits" hidden></ul>
     </div>
     <div id="occ-chips" class="occ-chips"></div>
@@ -634,7 +635,9 @@
         occupation; it would rescale every series within an occupation
         by the same factor. New hires are not published by occupation,
         because small occupations have months with no hires. Occupations
-        carry the same exposure quintile as in figure 1. The selection is
+        carry the same exposure quintile as in figure 1. English names
+        are Statistics Norway's official English STYRK-08 names; the
+        search matches English and Norwegian names and codes. The selection is
         stored in the page address, so a figure can be shared as a link.
         The packages are listed under <a href="#data">Download data</a>.
       </p>
@@ -817,6 +820,6 @@
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/app.js?v=20260902c"></script>
+<script src="/app.js?v=20260902d"></script>
 </body>
 </html>

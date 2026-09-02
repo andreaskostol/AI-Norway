@@ -79,6 +79,13 @@ SNAP_PACKAGES = ["composition", "usage_augmentation_ratio_composition",
 # fil, public/data/occupations.json, slik at dashboard.json ikke vokser
 # med ~95 000 tall. Noekkel = utfall slik app.js bruker det.
 OCC_PACKAGES = {"employment": "occupations", "wages": "wages_occupations"}
+# Engelske yrkesnavn for /en/: SSBs offisielle engelske STYRK-08-navn
+# (Klass API, klassifikasjon 7, language=en), lagret i repoet med to
+# manuelle rettelser (2221 Specialist nurses, 2267 Occupational
+# therapists). STYRK-08 avviker fra ISCO-08 for enkelte koder, saa
+# ISCO-titler kan ikke brukes direkte.
+OCC_TITLES_EN = os.path.join(REPO_DIR, "data", "ai_exposure",
+                             "styrk08_names_en.csv")
 
 
 def load_ts(release, name, facets):
@@ -186,6 +193,10 @@ def load_occupations(release):
     eldre releaser fortsatt kan bygges."""
     out = {"release": release, "dates": None, "occupations": []}
     occ = {}
+    titles_en = {}
+    if os.path.exists(OCC_TITLES_EN):
+        t = pd.read_csv(OCC_TITLES_EN, dtype=str)
+        titles_en = dict(zip(t["styrk08"].str.zfill(4), t["name_en"]))
     for outcome, name in OCC_PACKAGES.items():
         pkg = f"canaries_no_{name}"
         path = os.path.join(REL_BASE, release, pkg, f"{pkg}.csv")
@@ -207,6 +218,7 @@ def load_occupations(release):
                 quint = (None if pd.isna(q)
                          else int(str(q).split()[1]))
                 occ[code] = {"code": code, "name": label,
+                             "name_en": titles_en.get(code),
                              "quintile": quint,
                              "n_base": int(g["n_base"].iloc[0])}
             occ[code][outcome] = {}
@@ -217,6 +229,10 @@ def load_occupations(release):
                     None if pd.isna(v) else round(float(v), 2)
                     for v in sub[value_col]]
     out["occupations"] = [occ[c] for c in sorted(occ)]
+    missing = [c for c in sorted(occ) if not occ[c]["name_en"]]
+    if missing:
+        print(f"  ADVARSEL: {len(missing)} yrker mangler engelsk navn: "
+              f"{missing}")
     return out
 
 

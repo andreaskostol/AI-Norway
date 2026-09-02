@@ -14,8 +14,14 @@ navn) håndteres, og nedlastingsmanifestet plukket opp de to kortene.
 Renummerert: KI-bruk 10–12, offentlig sektor 13–16. Nedlastingskortene
 er gruppert i fem sammenleggbare grupper. Paperlenken (RFBerlin 179/26,
 ny tittel) er inne i siteringsblokken, paper-ref, om.html og
-en/about.html. Ikke gjort: engelske yrkesnavn (v1 viser norsk navn +
-kode, som avtalt), nyansettelser per yrke, offentlig sektor per yrke.
+en/about.html. Engelske yrkesnavn kom samme kveld: SSBs offisielle
+engelske STYRK-08-navn fra Klass API (klassifikasjon 7, language=en),
+lagret i `data/ai_exposure/styrk08_names_en.csv` med to manuelle
+rettelser (2221 Specialist nurses, 2267 Occupational therapists).
+ISCO-08-titler ble forkastet: STYRK-08 avviker fra ISCO for enkelte
+koder (2267 er ergoterapeuter i STYRK, optikere i ISCO). Søket på /en/
+treffer både engelsk og norsk navn. Ikke gjort: nyansettelser per yrke,
+offentlig sektor per yrke.
 
 ## Status 2026-09-02: Del A ferdig (Øystein)
 

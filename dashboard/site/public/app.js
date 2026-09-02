@@ -1014,6 +1014,9 @@
     if (ser[state.adjustment]) return state.adjustment;
     return state.adjustment === "percap_sa" ? "sa" : "raw";
   }
+  // Visningsnavn: SSBs engelske STYRK-08-navn paa /en/, norsk navn
+  // ellers (data/ai_exposure/styrk08_names_en.csv via prepare_data).
+  function occName(o) { return EN ? (o.name_en || o.name) : o.name; }
   function occShort(name) {
     return name.length > 30 ? name.slice(0, 28).replace(/[ ,]+$/, "") + "…"
                             : name;
@@ -1023,7 +1026,8 @@
     var q = o.quintile == null
       ? (EN ? "no exposure score" : "ingen eksponeringsskår")
       : (EN ? "exposure quintile " : "eksponeringskvintil ") + o.quintile;
-    return (EN ? n + " employees in Nov 2022 · " : n + " lønnstakere i nov. 2022 · ") + q;
+    return (EN ? "STYRK-08 " + o.name + " · " + n + " employees in Nov 2022 · "
+               : n + " lønnstakere i nov. 2022 · ") + q;
   }
 
   // Valget speiles i URL-en (?yrker=2512,4110) slik at lenker kan deles.
@@ -1051,7 +1055,7 @@
       chip.title = occChipTitle(o);
       chip.innerHTML =
         '<i style="background:' + OCC_COLORS[i] + '"></i>' +
-        '<span>' + o.name + ' <code>' + code + '</code>' +
+        '<span>' + occName(o) + ' <code>' + code + '</code>' +
         (o.n_base < OCC_SMALL
           ? ' <span class="occ-small">' + (EN ? "small" : "lite yrke") + '</span>'
           : "") + '</span>' +
@@ -1069,7 +1073,8 @@
     if (!OCC || !document.getElementById("chart-occ-select")) return;
     var defs = state.occs.map(function (code, i) {
       var o = OCC.byCode[code];
-      return { name: o.name + " (" + code + ")", label: occShort(o.name),
+      return { name: occName(o) + " (" + code + ")",
+               label: occShort(occName(o)),
                color: OCC_COLORS[i],
                values: indexSeries(o[occOutcome()][occAdj(o)], OCC.dates) };
     });
@@ -1123,7 +1128,8 @@
     for (var i = 0; i < OCC.occupations.length && hits.length < 12; i++) {
       var o = OCC.occupations[i];
       if (state.occs.indexOf(o.code) >= 0) continue;
-      if (o.code.indexOf(q) === 0 || o.name.toLowerCase().indexOf(q) >= 0) {
+      if (o.code.indexOf(q) === 0 || o.name.toLowerCase().indexOf(q) >= 0 ||
+          (o.name_en && o.name_en.toLowerCase().indexOf(q) >= 0)) {
         hits.push(o);
       }
     }
@@ -1137,7 +1143,7 @@
       var li = document.createElement("li");
       var b = document.createElement("button");
       b.type = "button";
-      b.innerHTML = "<code>" + o.code + "</code>" + o.name +
+      b.innerHTML = "<code>" + o.code + "</code>" + occName(o) +
         (o.n_base < OCC_SMALL
           ? ' <span class="occ-small">(' + (EN ? "small" : "lite yrke") + ')</span>'
           : "");
@@ -1157,6 +1163,7 @@
   function occDownload() {
     var oc = occOutcome();
     var head = "observation_date,adjustment,styrk08,occupation," +
+      "occupation_en," +
       (oc === "wages" ? "Wage Index" : "Employment Index") +
       ",n_base,exposure_quintile\n";
     var rows = [];
@@ -1165,6 +1172,7 @@
       ["raw", "sa"].forEach(function (adj) {
         OCC.dates.forEach(function (d, i) {
           rows.push([d, adj, code, '"' + o.name.replace(/"/g, '""') + '"',
+                     '"' + (o.name_en || "").replace(/"/g, '""') + '"',
                      o[oc][adj][i], o.n_base,
                      o.quintile == null ? "" : o.quintile].join(","));
         });
@@ -1546,7 +1554,7 @@
 
     // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
     if (document.getElementById("chart-occ-select")) {
-      fetch("/data/occupations.json?v=20260902c")
+      fetch("/data/occupations.json?v=20260902d")
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();
@@ -1721,7 +1729,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260902c")
+  fetch("/data/dashboard.json?v=20260902d")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
