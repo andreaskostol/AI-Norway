@@ -6,6 +6,22 @@ Datagrunnlaget er ferdig og committet (`f16f980`). Dette notatet beskriver
 hva som gjenstår før releasen kan deployes, pluss noen andre mangler ved
 nettsiden vi har notert underveis.
 
+## Status 2026-09-02: publisert
+
+Releasen ble deployet 2. september 2026 (Fly-image
+`deployment-01M1GYXN68Z6ARTQHDG67E5BN9`; forrige live-versjon var
+`deployment-01KXT7N26ANNAZYGD0ND59ATP9`). Alle seks punktene under
+«Gjenstår før deploy» er gjort: de 10 `public_`-pakkene er inne i
+`prepare_data.py`, offentlig sektor har egen seksjon (figur 12–15) med
+forbehold på norsk og engelsk, bootstrap-båndet er rekjørt for vintage
+2026-06 (KI +1,73, se 2,54, intervall −3,2 til +6,7), Hovedfunn/Key
+findings er oppdatert, cache-parameteren er `v=20260902a`, og backup
+ligger i `backups/kiindeksen_site_2026-09-02_pre-2026-09-release.tar.gz`.
+Nedlastingsseksjonen viste allerede stock_clerks- og
+usage-ratio-composition-pakkene (den bygges fra `PKG_TITLES`, ikke fra
+figurlisten), så det punktet krevde ingen endring. Working paperet er
+fortsatt ikke lenket.
+
 ## Status: hva som er gjort
 
 - `releases/2026-09/` er bygget: alle 40 pakker (30 private + de 10 nye

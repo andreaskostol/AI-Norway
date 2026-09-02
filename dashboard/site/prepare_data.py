@@ -57,9 +57,24 @@ TS_PACKAGES = {
     "wages_home_health_aides": ([], None),
     "hires_usage_patterns_by_age": (["usage_pattern", "age_bucket"], None),
     "wages_usage_patterns_by_age": (["usage_pattern", "age_bucket"], None),
+    # Offentlig sektor (release 2026-09): hovedkuttene 1-3 for alle tre
+    # utfall, som egne public_-pakker. Kvintilene er de samme nasjonale
+    # Eloundou-kvintilene, men yrkessammensetningen innen hver kvintil er
+    # en annen enn i privat sektor, saa nivaaene skal ikke sammenlignes
+    # paa tvers av sektor (jf. data dictionary). Vises i egen seksjon.
+    "public_by_exposure": ([], None),
+    "public_age_by_exposure": (["exposure_quintile"], None),
+    "public_by_age": ([], None),
+    "public_hires_by_exposure": ([], None),
+    "public_hires_age_by_exposure": (["exposure_quintile"], None),
+    "public_hires_by_age": ([], None),
+    "public_wages_by_exposure": ([], None),
+    "public_wages_age_by_exposure": (["exposure_quintile"], None),
+    "public_wages_by_age": ([], None),
 }
 SNAP_PACKAGES = ["composition", "usage_augmentation_ratio_composition",
-                 "usage_automation_ratio_composition"]
+                 "usage_automation_ratio_composition",
+                 "public_composition"]
 
 
 def load_ts(release, name, facets):

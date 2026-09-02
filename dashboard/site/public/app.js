@@ -74,6 +74,7 @@
   // justerte varianter finnes kun i de nedlastbare filene.
   var state = { outcome: "employment", adjustment: "sa",
                 smoothing: 6, epoch: "chatgpt", ageFacet: "21-30",
+                publicAgeFacet: "21-30",
                 usagePattern: "Automation", usageAge: "All ages" };
 
   // Referansepunkter: indeksene normaliseres til 100 i basismaaneden,
@@ -126,6 +127,17 @@
              word: EN ? "Pay (FTE-adjusted)" : "Lønn (FTE-justert)" }
   };
   function corePkg(base) { return OUTCOMES[state.outcome].prefix + base; }
+  // Offentlig sektor (figur 12-15): pakkene heter public_<utfall>_<kutt>,
+  // dvs. utfallsprefikset ligger etter "public_".
+  function publicPkg(base) {
+    return "public_" + OUTCOMES[state.outcome].prefix + base;
+  }
+  // Releaser foer 2026-09 har ingen offentlig sektor-pakker, og eldre
+  // HTML mangler seksjonen; da hoppes den over.
+  function hasPublic() {
+    return !!(DB.packages.public_by_exposure &&
+              document.getElementById("chart-public-by-exposure"));
+  }
 
   // ---------- Hjelpere ----------
 
@@ -327,6 +339,16 @@
       "1 · " + word + (EN ? " by AI exposure" : " etter KI-eksponering");
     document.getElementById("title-age").textContent =
       "3 · " + word + (EN ? " by age" : " etter alder");
+    // Offentlig sektor (figur 12 og 14) foelger samme utfall.
+    var tpe = document.getElementById("title-public-exposure");
+    if (tpe) {
+      tpe.textContent = "12 · " + word +
+        (EN ? " by AI exposure" : " etter KI-eksponering");
+    }
+    var tpa = document.getElementById("title-public-age");
+    if (tpa) {
+      tpa.textContent = "14 · " + word + (EN ? " by age" : " etter alder");
+    }
   }
 
   function renderOccupations() {
@@ -350,6 +372,44 @@
                  values: seriesFor(pn, key, c) };
       }), SRC_USAGE);
     renderUsageComposition();
+  }
+
+  // ---------- Figur 12-15: offentlig sektor ----------
+  // Samme kutt som figur 1-4, men for loennstakere i offentlig sektor
+  // (institusjonell sektor 1110/1120/1510/1520/6100/6500). Kvintilene
+  // er de samme nasjonale Eloundou-kvintilene, men yrkessammensetningen
+  // innen hver kvintil er en annen enn i privat sektor, saa nivaaene
+  // sammenlignes ikke paa tvers av sektor og ingen KI-indeks beregnes.
+  function renderPublic() {
+    if (!hasPublic()) return;
+    var pe = publicPkg("by_exposure");
+    var cols = DB.packages[pe].value_cols;
+    renderLines("chart-public-by-exposure", pe, cols.map(function (c, i) {
+      return { name: lab(c), color: QUINT_COLORS[i],
+               values: seriesFor(pe, "_", c) };
+    }));
+    var pa = publicPkg("age_by_exposure");
+    var quintiles = Object.keys(DB.packages[pa].series[adjFor(pa)]);
+    quintiles.sort();
+    renderLines("chart-public-age-by-exposure", pa,
+      quintiles.map(function (q, i) {
+        return { name: lab(q), color: QUINT_COLORS[i],
+                 values: seriesFor(pa, q, state.publicAgeFacet) };
+      }));
+    var pb = publicPkg("by_age");
+    var acols = DB.packages[pb].value_cols;
+    renderLines("chart-public-by-age", pb, acols.map(function (c) {
+      return { name: ageLab(c), color: AGE_COLORS[c],
+               values: seriesFor(pb, "_", c) };
+    }));
+    var snap = DB.snapshots.public_composition;
+    if (snap && document.getElementById("chart-public-composition")) {
+      var groups = ["Quintile 1 (least exposed)", "Quintile 2",
+                    "Quintile 3", "Quintile 4", "Quintile 5 (most exposed)"];
+      getChart("chart-public-composition").setOption(
+        stackedShareOption(snap.rows, groups, QUINT_COLORS, SRC_MAIN),
+        { notMerge: true });
+    }
   }
 
   // ---------- Figur 4 og 10-11: sammensetning ----------
@@ -809,12 +869,17 @@
     if (ciEl) {
       var u = DB.headline_uncertainty;
       if (u && adjFor("by_exposure") === u.spec) {
+        // Setningen om null gjelder bare naar intervallet faktisk
+        // dekker null (det har det gjort i alle vintager saa langt).
+        var spansZero = u.ci_lo <= 0 && u.ci_hi >= 0;
         ciEl.textContent = EN
           ? "95% bootstrap interval: " + fmtNum(u.ci_lo) + " to " +
-            fmtNum(u.ci_hi) + " pp — not statistically distinguishable " +
-            "from zero."
+            fmtNum(u.ci_hi) + " pp" +
+            (spansZero ? " — not statistically distinguishable from zero."
+                       : ".")
           : "95 % bootstrap-intervall: " + fmtNum(u.ci_lo) + " til " +
-            fmtNum(u.ci_hi) + " pp — ikke statistisk forskjellig fra null.";
+            fmtNum(u.ci_hi) + " pp" +
+            (spansZero ? " — ikke statistisk forskjellig fra null." : ".");
         ciEl.title = (EN ? "Occupation-cluster bootstrap standard error: "
                          : "Okkupasjons-klynge-bootstrap, standardfeil: ") +
           fmtNum(u.se) + " pp";
@@ -947,7 +1012,17 @@
     wages_electricians: "Pay (FTE), case: electricians",
     wages_home_health_aides: "Pay (FTE), case: home health aides",
     wages_stock_clerks: "Pay (FTE), case: stock clerks",
-    wages_usage_patterns_by_age: "Pay (FTE), AI usage × age"
+    wages_usage_patterns_by_age: "Pay (FTE), AI usage × age",
+    public_by_exposure: "Public sector: by AI exposure",
+    public_age_by_exposure: "Public sector: age × exposure",
+    public_by_age: "Public sector: by age group",
+    public_composition: "Public sector: composition (snapshot)",
+    public_hires_by_exposure: "Public sector: new hires by AI exposure",
+    public_hires_age_by_exposure: "Public sector: new hires, age × exposure",
+    public_hires_by_age: "Public sector: new hires by age group",
+    public_wages_by_exposure: "Public sector: pay (FTE) by AI exposure",
+    public_wages_age_by_exposure: "Public sector: pay (FTE), age × exposure",
+    public_wages_by_age: "Public sector: pay (FTE) by age group"
   } : {
     by_exposure: "Etter KI-eksponering",
     age_by_exposure: "Alder × eksponering",
@@ -978,7 +1053,21 @@
     wages_electricians: "Lønn (FTE), case: elektrikere",
     wages_home_health_aides: "Lønn (FTE), case: hjemmehjelpere",
     wages_stock_clerks: "Lønn (FTE), case: lagermedarbeidere",
-    wages_usage_patterns_by_age: "Lønn (FTE), KI-bruk × alder"
+    wages_usage_patterns_by_age: "Lønn (FTE), KI-bruk × alder",
+    public_by_exposure: "Offentlig sektor: etter KI-eksponering",
+    public_age_by_exposure: "Offentlig sektor: alder × eksponering",
+    public_by_age: "Offentlig sektor: etter aldersgruppe",
+    public_composition: "Offentlig sektor: sammensetning (snapshot)",
+    public_hires_by_exposure:
+      "Offentlig sektor: nyansettelser etter KI-eksponering",
+    public_hires_age_by_exposure:
+      "Offentlig sektor: nyansettelser, alder × eksponering",
+    public_hires_by_age: "Offentlig sektor: nyansettelser etter aldersgruppe",
+    public_wages_by_exposure:
+      "Offentlig sektor: lønn (FTE) etter KI-eksponering",
+    public_wages_age_by_exposure:
+      "Offentlig sektor: lønn (FTE), alder × eksponering",
+    public_wages_by_age: "Offentlig sektor: lønn (FTE) etter aldersgruppe"
   };
 
   var DL = EN
@@ -1047,6 +1136,7 @@
     renderComposition();
     renderOccupations();
     renderUsage();
+    renderPublic();
     renderSummary();
     renderUsageInfographic();
   }
@@ -1060,6 +1150,15 @@
       }),
       function () { return state.ageFacet; },
       function (v) { state.ageFacet = v; renderAgeByExposure(); });
+    if (hasPublic() &&
+        document.getElementById("public-age-facet-buttons")) {
+      makeButtons("public-age-facet-buttons",
+        DB.packages.public_age_by_exposure.value_cols.map(function (a) {
+          return { value: a, label: ageLab(a) };
+        }),
+        function () { return state.publicAgeFacet; },
+        function (v) { state.publicAgeFacet = v; renderPublic(); });
+    }
 
     var ageSel = document.getElementById("sel-usage-age");
     ["All ages", "21-30", "31-40", "41-50", "51-60"].forEach(function (a) {
@@ -1168,6 +1267,13 @@
       "substantially faster, as estimated by Eloundou et al. (2024). " +
       "High exposure means AI can be used for much of the job – not " +
       "necessarily that the job disappears.",
+    sektor: "“Private sector” is wage earners outside general " +
+      "government and publicly owned enterprises. “Public sector” is " +
+      "general government and publicly owned enterprises (institutional " +
+      "sector codes 1110, 1120, 1510, 1520, 6100 and 6500 in the " +
+      "A-ordningen). Both use the same national exposure quintiles, but " +
+      "the occupations within each quintile differ. The sectors are " +
+      "therefore shown separately.",
     indeks: "Every series is set to 100 in the reference month " +
       "(November 2022, when ChatGPT launched). 105 means 5% more than " +
       "then, 95 means 5% fewer. This lets large and small groups be " +
@@ -1201,6 +1307,13 @@
       "vesentlig raskere, anslått av Eloundou m.fl. (2024). Høy " +
       "eksponering betyr at KI kan brukes til mye av jobben – ikke " +
       "nødvendigvis at jobben forsvinner.",
+    sektor: "«Privat sektor» er lønnstakere utenfor offentlig " +
+      "forvaltning og offentlig eide foretak. «Offentlig sektor» er " +
+      "offentlig forvaltning og offentlig eide foretak (institusjonell " +
+      "sektor 1110, 1120, 1510, 1520, 6100 og 6500 i A-ordningen). Begge " +
+      "bruker de samme nasjonale eksponeringskvintilene, men yrkene " +
+      "innenfor hver kvintil er ulike. Sektorene vises derfor hver for " +
+      "seg.",
     indeks: "Alle serier settes til 100 i referansemåneden (november " +
       "2022, da ChatGPT ble lansert). 105 betyr 5 % flere enn da, 95 " +
       "betyr 5 % færre. Slik kan store og små grupper sammenlignes " +
@@ -1279,7 +1392,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260718b")
+  fetch("/data/dashboard.json?v=20260902a")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();

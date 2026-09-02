@@ -109,10 +109,16 @@ Dette gjøres bare når det finnes et nytt mikrodata-uttrekk. Rekkefølge:
 # 1) Bygg ny datavintage (eksempel: juli 2026)
 python dashboard/build_release.py 2026-07
 
-# 2) Konverter siste release til nettside-data (plukker nyeste automatisk)
+# 2) Rekjør bootstrap-usikkerhetsbåndet for hovedtallet: bump LAST_CUT
+#    (linje ~52) til siste måned i releasen, så kjør scriptet (~1 min)
+python analysis/06_figures/recursive_kiindeks_headline.py
+
+# 3) Konverter siste release til nettside-data (plukker nyeste automatisk;
+#    leser også siste rad i coef_recursive_kiindeks_headline.csv)
 python dashboard/site/prepare_data.py
 
-# 3) Forhåndsvis (se pkt. 3), så deploy (se pkt. 4)
+# 4) Rett de hardkodede tallene i «Hovedfunn» (om.html) og «Key findings»
+#    (en/about.html), bump cache-parameteren, forhåndsvis (pkt. 3), deploy (pkt. 4)
 cd "dashboard/site" && flyctl deploy
 ```
 
@@ -124,7 +130,8 @@ endres ikke; en ny måned blir en ny mappe.
 ## 6. Fallgruver (les disse før du publiserer)
 
 - **Cache-parameter:** når du endrer `app.js` eller `style.css`, bump
-  versjonsstrengen `?v=YYYYMMDD` i HTML-filene (nå `v=20260614b`).
+  versjonsstrengen `?v=YYYYMMDD` i HTML-filene og i `fetch(...)` i
+  `app.js` (nå `v=20260902a`).
   Ellers ser brukerne en gammel cachet versjon.
 - **Hardkodede hovedtall:** «Hovedfunn» i `om.html` og «Key findings» i
   `en/about.html` har tall skrevet rett inn i teksten. De oppdateres

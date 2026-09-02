@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="style.css?v=20260718b">
+<link rel="stylesheet" href="style.css?v=20260902a">
 <link rel="icon" href="assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -26,6 +26,7 @@
       <a href="#alder">Alder</a>
       <a href="#yrker">Yrkescase</a>
       <a href="#bruk">KI-bruk</a>
+      <a href="#offentlig">Offentlig sektor</a>
       <a href="#oppsummering">Oppsummering</a>
       <a href="#metode">Metode</a>
       <a href="#team">Team</a>
@@ -51,6 +52,7 @@
     <a href="#bruk-vekst">9 · Vekst etter KI-bruk</a>
     <a href="#bruk">10–11 · KI-bruk</a>
     <a href="#oppsummering">Siste 12 måneder</a>
+    <a href="#offentlig">12–15 · Offentlig sektor</a>
     <a href="#metode">Metode</a>
     <a href="#team">Team</a>
     <a href="#data">Last ned data</a>
@@ -74,13 +76,13 @@
     </p>
     <div class="quick-summary">
       <h3>For den utålmodige leseren</h3>
-      <p class="quick-scope">Alle tall på siden gjelder lønnstakere i
-        <strong>norsk privat sektor</strong> (offentlig sektor inngår
-        ikke).</p>
+      <p class="quick-scope">KI-indeksen og figur 1–11 gjelder
+        lønnstakere i <strong>norsk privat sektor</strong>. Offentlig
+        sektor vises for seg i <a href="#offentlig">figur 12–15</a>.</p>
       <ul>
         <li><strong>Ingen jobbkrise i Norge:</strong>
-          samlet sysselsetting i privat sektor vokser, og andelen
-          sysselsatte er stabil.</li>
+          samlet sysselsetting i privat sektor er høyere enn før
+          ChatGPT, og andelen sysselsatte er om lag stabil.</li>
         <li id="qs-2"><strong>KI-indeksen er svakt positiv:</strong>
           siden perioden før ChatGPT har samlet sysselsetting i de mest
           KI-eksponerte yrkene vokst om lag like mye som i de minst
@@ -353,6 +355,60 @@
     </p>
   </section>
 
+  <section id="offentlig" class="chart-section">
+    <h2>Offentlig sektor</h2>
+    <p class="chart-intro">
+      Figur 1–11 gjelder privat sektor. Her vises de samme hovedkuttene
+      for lønnstakere i offentlig sektor<button class="info-btn"
+        type="button" data-term="sektor"
+        aria-label="Hva betyr dette?">?</button>: offentlig forvaltning
+      og offentlig eide foretak, 21–60 år. Utfall, justering, glatting og
+      referanse følger valgene øverst.
+    </p>
+    <div class="caveat">
+      <strong>Les figurene med forbehold.</strong> Yrkene er delt i de
+      samme fem nasjonale eksponeringskvintilene som i privat sektor. Men
+      yrkene innenfor hver kvintil er helt andre. Nesten halvparten av den
+      mest eksponerte kvintilen er høyere saksbehandlere (STYRK-08 2422).
+      Nær to tredjedeler av den minst eksponerte er helsefagarbeidere
+      (5321). Over en tredjedel av all sysselsetting ligger i kvintil 3,
+      dominert av lærere og sykepleiere (figur 15). Nivåene kan derfor
+      ikke sammenlignes direkte med figur 1–3, og vi beregner ingen
+      KI-indeks for offentlig sektor.
+    </div>
+
+    <h3 id="title-public-exposure">12 · Sysselsetting etter KI-eksponering</h3>
+    <div id="chart-public-by-exposure" class="chart chart-tall"></div>
+
+    <h3>13 · Alder × KI-eksponering</h3>
+    <p class="chart-intro">
+      Velg en aldersgruppe og se utviklingen per eksponeringskvintil i
+      offentlig sektor.
+    </p>
+    <div class="btn-row" id="public-age-facet-buttons" role="tablist"></div>
+    <div id="chart-public-age-by-exposure" class="chart chart-tall"></div>
+
+    <h3 id="title-public-age">14 · Sysselsetting etter alder</h3>
+    <div id="chart-public-by-age" class="chart"></div>
+
+    <h3>15 · Sysselsettingsandeler i november 2022</h3>
+    <p class="chart-intro">
+      Hver gruppes andel av samlet sysselsetting i offentlig sektor i
+      november 2022. Sammenlign med figur 4: fordelingen på kvintiler er
+      en helt annen enn i privat sektor.
+    </p>
+    <div id="chart-public-composition" class="chart chart-short"></div>
+    <p class="chart-footnote">
+      Offentlig sektor er institusjonell sektor 1110, 1120, 1510, 1520,
+      6100 og 6500 i A-ordningen (offentlig forvaltning og offentlig eide
+      foretak). Kilde: A-ordningen via
+      <a href="https://www.microdata.no/" target="_blank"
+         rel="noopener">microdata.no</a>,
+      <a href="https://www.science.org/doi/10.1126/science.adj0998"
+         target="_blank" rel="noopener">Eloundou m.fl. (2024)</a>.
+    </p>
+  </section>
+
   <section id="metode" class="prose-section">
     <h2>Metode</h2>
     <p>
@@ -379,7 +435,8 @@
         A-ordningen er arbeidsgivernes månedlige rapportering av alle
         arbeidsforhold til myndighetene; vi bruker den via
         microdata.no, tilrettelagt av SSB. Utvalget er alle lønnstakere
-        i privat sektor, 21–60 år. Referanseperioden for hver måned er
+        i privat sektor, 21–60 år. Figur 12–15 bruker tilsvarende utvalg
+        for offentlig sektor. Referanseperioden for hver måned er
         uken som inneholder den 16. «Canaries-utvalget» er de 397
         STYRK-08-yrkeskodene som har en eksponeringsskår; det dekker
         det store flertallet av privat sysselsetting.
@@ -512,6 +569,23 @@
         datarelease arkiveres derfor som en egen årgang («vintage») og
         endres ikke i ettertid; nettsiden viser alltid siste release,
         og alle tidligere kan lastes ned.
+      </p>
+    </details>
+
+    <details class="method-details">
+      <summary>Offentlig sektor (figur 12–15)</summary>
+      <p>
+        Fra release 2026-09 publiseres hovedkuttene også for offentlig
+        sektor: offentlig forvaltning og offentlig eide foretak
+        (institusjonell sektor 1110, 1120, 1510, 1520, 6100 og 6500),
+        21–60 år, for sysselsetting, nyansettelser og lønn. Yrkene får
+        samme nasjonale eksponeringskvintil som i privat sektor, og
+        sesongjusteringen gjøres på samme måte, serie for serie.
+        Yrkessammensetningen innenfor kvintilene er likevel svært ulik
+        mellom sektorene. Nivåene bør derfor ikke sammenlignes på tvers
+        av sektor, og KI-indeksen beregnes bare for privat sektor.
+        Offentlig sektor-pakkene ligger under
+        <a href="#data">Last ned data</a>.
       </p>
     </details>
 
@@ -669,6 +743,6 @@
 </footer>
 
 <script src="vendor/echarts.min.js"></script>
-<script src="app.js?v=20260718b"></script>
+<script src="app.js?v=20260902a"></script>
 </body>
 </html>

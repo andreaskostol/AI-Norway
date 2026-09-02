@@ -24,7 +24,7 @@ Validation: prints the full-data SA value, which reproduces dashboard.json (-0.2
 Stage-1 estimation script (writes the coefficient artifact); the figure is drawn
 by plot_recursive_kiindeks.py.
 
-Input:  microdata-output/09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv
+Input:  microdata-output/09_occ_agedecade_sektor_kpos_2021m01_2026m06_parsed.csv
         data/ai_exposure/styrk08_eloundou_beta_mapping.csv
         dashboard/site/public/data/dashboard.json   (validation only)
 Output: analysis/output/coefficients/coef_recursive_kiindeks_headline.csv
@@ -40,7 +40,7 @@ from collections import defaultdict         # nested auto-initialising count map
 import numpy as np                          # arrays, seasonal adjustment, bootstrap
 
 BASE = Path(__file__).resolve().parents[2]  # repo root (this file is 2 levels below it)
-PANEL = BASE / "microdata-output" / "09_occ_agedecade_sektor_kpos_2021m01_2026m04_parsed.csv"  # occ x month counts
+PANEL = BASE / "microdata-output" / "09_occ_agedecade_sektor_kpos_2021m01_2026m06_parsed.csv"  # occ x month counts
 EXP = BASE / "data" / "ai_exposure" / "styrk08_eloundou_beta_mapping.csv"  # occupation -> quintile
 DJSON = BASE / "dashboard" / "site" / "public" / "data" / "dashboard.json"  # published numbers (validation)
 OUT = BASE / "analysis" / "output" / "coefficients" / "coef_recursive_kiindeks_headline.csv"  # recursive KI output
@@ -49,7 +49,7 @@ AGES = {"1", "2", "3", "4"}            # 21-60
 SECTOR = "2"                            # private
 REF_MONTH = "2022-10"                   # before-ChatGPT reference
 SEAS_FROM, SEAS_TO = "2021-01", "2024-12"  # window the seasonal factors are estimated/frozen on
-FIRST_CUT, LAST_CUT = "2025-01", "2026-04"  # first and last vintage data-edge
+FIRST_CUT, LAST_CUT = "2025-01", "2026-06"  # first and last vintage data-edge
 N_BOOT = 1000                           # bootstrap replications per vintage
 SEED = 12345                            # RNG seed for reproducible bootstrap
 

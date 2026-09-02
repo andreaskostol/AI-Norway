@@ -306,6 +306,18 @@ a { color: var(--accent); }
   font-size: 0.95rem;
   margin: 0 0 0.9rem;
 }
+/* Forbehold (offentlig sektor, figur 12-15): dempet boks med aksentkant */
+.caveat {
+  max-width: 54rem;
+  margin: 0 0 1rem;
+  padding: 0.6rem 0.9rem;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
 .chart {
   width: 100%;
   height: 420px;
