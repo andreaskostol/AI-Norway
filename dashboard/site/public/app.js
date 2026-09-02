@@ -141,16 +141,18 @@
 
   // ---------- Hjelpere ----------
 
+  // Glidende snitt over de siste k maanedene (bakoverskuende, ikke
+  // sentrert): verdien i maaned i er snittet av i-k+1 .. i. Ved starten
+  // av serien brukes den delen av vinduet som finnes. Snittet henger
+  // derfor etter vendepunktene i den ujusterte serien.
   function movingAverage(values, k) {
     if (k <= 1) return values;
-    var half = Math.floor(k / 2), out = [], i, j, s, n;
+    var out = [], i, j, s, n;
     for (i = 0; i < values.length; i++) {
       if (values[i] == null) { out.push(null); continue; }
       s = 0; n = 0;
-      for (j = i - half; j <= i + half; j++) {
-        if (j >= 0 && j < values.length && values[j] != null) {
-          s += values[j]; n += 1;
-        }
+      for (j = i - k + 1; j <= i; j++) {
+        if (j >= 0 && values[j] != null) { s += values[j]; n += 1; }
       }
       out.push(n ? Math.round(100 * s / n) / 100 : null);
     }
@@ -167,15 +169,19 @@
 
   function seriesFor(pkg, facetKey, col) {
     var raw = DB.packages[pkg].series[adjFor(pkg)][facetKey][col];
-    // Renormaliser til 100 i den valgte referansemaaneden.
+    // Glatt foerst, renormaliser etterpaa: da er den viste serien
+    // noeyaktig 100 i den valgte referansemaaneden, og indeksen maales
+    // mot det glattede nivaaet fram til referansen, ikke mot en enkelt
+    // maaned (endret 2026-09-02 etter oenske fra Andreas).
+    var sm = movingAverage(raw, state.smoothing);
     var baseIdx = DB.packages[pkg].dates.indexOf(epoch().base);
-    if (baseIdx >= 0 && raw[baseIdx]) {
-      var base = raw[baseIdx];
-      raw = raw.map(function (v) {
+    if (baseIdx >= 0 && sm[baseIdx]) {
+      var base = sm[baseIdx];
+      sm = sm.map(function (v) {
         return v == null ? null : Math.round(10000 * v / base) / 100;
       });
     }
-    return movingAverage(raw, state.smoothing);
+    return sm;
   }
 
   function getChart(id) {
@@ -1252,8 +1258,9 @@
       "same age group, so growth does not simply reflect a larger " +
       "population.",
     glatting: "A moving average smooths out random month-to-month " +
-      "fluctuations by showing the average of the surrounding months. " +
-      "This makes trends easier to see.",
+      "fluctuations by showing the average of the last 3 or 6 months. " +
+      "This makes trends easier to see, but the average lags turning " +
+      "points somewhat.",
     referanse: "The point in time the series are measured from. ChatGPT " +
       "(November 2022) marks the breakthrough of large language models; " +
       "Claude Code (February 2025) the breakthrough of “agentic” AI that " +
@@ -1292,8 +1299,9 @@
       "i samme aldersgruppe, slik at veksten ikke bare skyldes at det " +
       "er blitt flere folk.",
     glatting: "Glidende snitt jevner ut tilfeldige svingninger fra " +
-      "måned til måned ved å vise gjennomsnittet av månedene rundt. " +
-      "Det gjør trendene lettere å se.",
+      "måned til måned ved å vise gjennomsnittet av de siste 3 eller 6 " +
+      "månedene. Det gjør trendene lettere å se, men snittet henger " +
+      "litt etter vendepunktene.",
     referanse: "Tidspunktet seriene regnes fra. ChatGPT (november " +
       "2022) markerer gjennombruddet for språkmodeller; Claude Code " +
       "(februar 2025) gjennombruddet for «agentisk» KI som utfører " +
@@ -1392,7 +1400,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260902a")
+  fetch("/data/dashboard.json?v=20260902b")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();

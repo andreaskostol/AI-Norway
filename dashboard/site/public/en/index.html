@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="/style.css?v=20260902a">
+<link rel="stylesheet" href="/style.css?v=20260902b">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -543,9 +543,14 @@
     <details class="method-details">
       <summary>Smoothing</summary>
       <p>
-        The smoothing is a centered moving average over 3 or 6 months,
-        computed in the browser. At the endpoints the available part of
-        the window is used, so the most recent month is always shown.
+        The smoothing is a trailing moving average over the last 3 or 6
+        months (not centered), computed in the browser. At the start of
+        the series the available part of the window is used. The average
+        therefore lags turning points in the unsmoothed series somewhat.
+        The series are rescaled after smoothing, so the displayed series
+        is exactly 100 in the reference month. The index is thus measured
+        against the smoothed level up to the reference, not against a
+        single month.
         Smoothing and seasonal adjustment can be combined freely; the
         default view is seasonally adjusted with a 6-month average.
       </p>
@@ -747,6 +752,6 @@
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/app.js?v=20260902a"></script>
+<script src="/app.js?v=20260902b"></script>
 </body>
 </html>

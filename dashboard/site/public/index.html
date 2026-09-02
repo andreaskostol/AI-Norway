@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="style.css?v=20260902a">
+<link rel="stylesheet" href="style.css?v=20260902b">
 <link rel="icon" href="assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -538,9 +538,14 @@
     <details class="method-details">
       <summary>Glatting</summary>
       <p>
-        Glattingen er et sentrert glidende snitt over 3 eller 6
-        måneder, beregnet i nettleseren. Ved endepunktene brukes den
-        delen av vinduet som finnes, slik at siste måned alltid vises.
+        Glattingen er et glidende snitt over de siste 3 eller 6
+        månedene (bakoverskuende, ikke sentrert), beregnet i
+        nettleseren. Ved starten av serien brukes den delen av vinduet
+        som finnes. Snittet henger derfor litt etter vendepunktene i
+        de ujusterte seriene. Seriene skaleres etter glattingen, slik
+        at den viste serien er nøyaktig 100 i referansemåneden.
+        Indeksen måles dermed mot det glattede nivået fram til
+        referansen, ikke mot én enkelt måned.
         Glatting og sesongjustering kan kombineres fritt;
         standardvisningen er sesongjustert med 6 måneders snitt.
       </p>
@@ -743,6 +748,6 @@
 </footer>
 
 <script src="vendor/echarts.min.js"></script>
-<script src="app.js?v=20260902a"></script>
+<script src="app.js?v=20260902b"></script>
 </body>
 </html>

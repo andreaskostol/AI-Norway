@@ -55,6 +55,6 @@ appens IPv6 (`flyctl ips list -a kiindeksen`), CNAME `www` ->
   fasett i dataene; standardvisningen er `percap_sa`. Lønnspakkene
   har bare `raw`/`sa`: percap-valgene deaktiveres når lønn er valgt,
   og visningen faller ned til nærmeste variant (`adjFor` i `app.js`).
-- Glidende snitt (3/6 mnd, sentrert) beregnes i nettleseren
+- Glidende snitt (3/6 mnd, bakoverskuende) beregnes i nettleseren
   (`movingAverage` i `app.js`).
 - Norske etiketter for engelske kolonnenavn: `NO_LABELS` i `app.js`.
