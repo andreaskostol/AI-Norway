@@ -20,7 +20,8 @@ ligger i `backups/kiindeksen_site_2026-09-02_pre-2026-09-release.tar.gz`.
 Nedlastingsseksjonen viste allerede stock_clerks- og
 usage-ratio-composition-pakkene (den bygges fra `PKG_TITLES`, ikke fra
 figurlisten), så det punktet krevde ingen endring. Working paperet er
-fortsatt ikke lenket.
+fortsatt ikke lenket — se «Working paperet er ute» under for
+ferdig siteringsinfo (Andreas oppdaterer siden).
 
 ## Status: hva som er gjort
 
@@ -73,11 +74,33 @@ eksponerte faller mer.
 
 ## Andre mangler ved nettsiden (uavhengig av releasen)
 
-- **Working paperet er ikke lenket.** Siteringsseksjonen (`#sitering`) og
-  `#paper-ref` sier bare «Under arbeid (working paper)» uten lenke, selv om
-  tittelen er oppdatert («Does AI Widen Employment Gaps? ...»). Legg inn
-  lenke til PDF/SSRN/nettside når paperet legges ut — både i den norske og
-  engelske siteringsblokken og i BibTeX-en (`url`-felt).
+- **Working paperet er ute (2026-09-02) — Andreas oppdaterer siden.**
+  Publisert som RFBerlin Discussion Paper 179/26 (juli 2026):
+  <https://www.rfberlin.com/wp-content/uploads/2026/07/26179.pdf>.
+  NB: den publiserte tittelen er **«Has AI Widened Employment Gaps?
+  Tracking Early-Career Employment by Occupational Exposure in
+  Norway»** — siden siterer i dag «Does AI Widen ...», så tittelen må
+  også rettes. Steder som skal endres (begge språk): siteringsblokken
+  (`#sitering`, elementene `cite-paper-txt` og `cite-paper-bib`) og
+  `#paper-ref`-avsnittet som sier «under arbeid» (også i `om.html` /
+  `en/about.html` hvis omtalt der). Ferdig tekst:
+
+  Tekstsitering: Hernæs, Øystein and Andreas Ravndal Kostøl (2026).
+  «Has AI Widened Employment Gaps? Tracking Early-Career Employment by
+  Occupational Exposure in Norway». RFBerlin Discussion Paper 179/26.
+
+  ```bibtex
+  @techreport{hernaeskostol2026ai,
+    author      = {Hern{\ae}s, {\O}ystein and Kost{\o}l, Andreas Ravndal},
+    title       = {Has AI Widened Employment Gaps? Tracking Early-Career
+                   Employment by Occupational Exposure in Norway},
+    institution = {ROCKWOOL Foundation Berlin},
+    type        = {RFBerlin Discussion Paper},
+    number      = {179/26},
+    year        = {2026},
+    url         = {https://www.rfberlin.com/wp-content/uploads/2026/07/26179.pdf}
+  }
+  ```
 - **Fem pakker i releasene vises ikke på siden og kan heller ikke lastes
   ned derfra**: `stock_clerks` (+ hires/wages-variantene) og de to
   usage-ratio-composition-pakkene. Nedlastingsseksjonen bygges fra samme
