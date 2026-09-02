@@ -815,7 +815,8 @@ def main():
                      "occupation", vcol, "n_base", "exposure_quintile"]] \
             .sort_values(["observation_date", "adjustment", "styrk08"]) \
             .reset_index(drop=True)
-        write_package(oname, wide, [vcol], ["styrk08", "occupation"],
+        write_package(oname, wide, [vcol],
+                      ["adjustment", "styrk08", "occupation"],
                       f"Value column: {vcol} per 4-digit occupation."
                       + OCC_DICT, conventions=conv)
 
