@@ -47,6 +47,8 @@ POP_SRC = os.path.join(BASE_DIR, "analysis", "output", "figure_data",
                        "fig_employment_by_age_quintile.csv")
 OCC_NAMES = os.path.join(BASE_DIR, "data", "ai_exposure",
                          "styrk08_codes.csv")
+MOUCHEL = os.path.join(BASE_DIR, "data", "ai_exposure",
+                       "styrk08_mouchel_mapping.csv")
 
 RELEASE = sys.argv[1] if len(sys.argv) > 1 else "2026-06"
 OUT_BASE = os.path.join(BASE_DIR, "dashboard", "releases", RELEASE)
@@ -702,7 +704,112 @@ def main():
                       "canaries-sample occupations pooled, public sector."
                       + PUB_NOTE, conventions=pub_conv(conv))
 
-    # 28-29. Yrkespakker (lang format, yrke som fasett): grunnlaget for
+    # 28-33. Mouchel-kvintiler: hovedkuttene by_exposure og
+    #        age_by_exposure (sysselsetting, nyansettelser, FTE-loenn)
+    #        med kvintiler fra Mouchel et al. (2026) sitt
+    #        evidensgrunnede eksponeringsmaal (mouchel_grounded) i
+    #        stedet for Eloundou-beta. Samme 397 yrker, samme
+    #        qcut-regel (equal-frequency over yrker), privat sektor.
+    #        Grunnlag for maal-nedtrekksmenyen paa nettsiden.
+    #        by_age bygges ikke: den pooler alle yrkene og er
+    #        identisk uansett maal. Spearman mot Eloundou-beta er
+    #        0.94; 66 prosent av yrkene faar samme kvintil.
+    mo = pd.read_csv(MOUCHEL, dtype={"styrk08": str})
+    mo = mo[mo["quintile"].notna()][["styrk08", "quintile"]]
+    mo["quintile"] = mo["quintile"].astype(int)
+
+    MOUCHEL_NOTE = (" Mouchel package: quintiles are assigned from the "
+                    "Mouchel et al. (2026) evidence-grounded exposure "
+                    "measure (mouchel_grounded in "
+                    "styrk08_mouchel_mapping.csv) over the same 397 "
+                    "occupations as the Eloundou-based packages "
+                    "(equal-frequency by occupation). Spearman rank "
+                    "correlation with the Eloundou beta is 0.94 and 66 "
+                    "percent of occupations fall in the same quintile, "
+                    "so levels are comparable but not identical across "
+                    "measures.")
+
+    def mouchel_conv(conv):
+        old = ("- The canaries sample is the 397 STYRK-08 (= ISCO-08) "
+               "occupation codes\n  with an Eloundou et al. (2024) "
+               "exposure score, quintiles\n  equal-weighted by "
+               "occupation.")
+        new = ("- The canaries sample is the 397 STYRK-08 (= ISCO-08) "
+               "occupation codes\n  with an Eloundou et al. (2024) "
+               "exposure score. In this package the\n  quintiles are "
+               "instead assigned from the Mouchel et al. (2026)\n  "
+               "evidence-grounded exposure measure, equal-frequency "
+               "over the same\n  occupations.")
+        assert old in conv, "konvensjonstekst endret; oppdater mouchel_conv"
+        return conv.replace(old, new)
+
+    dm = pd.read_csv(DATA, dtype={"yrke4": str, "alder_gr": str,
+                                  "sekt": int})
+    dm = dm[(dm["variable"] == "count") & (dm["sekt"] == 2)
+            & (dm["alder_gr"].isin(AGE_ORDER))]
+    dm = dm.merge(mo, left_on="yrke4", right_on="styrk08")
+    cwm = cw.drop(columns=["quintile"]).merge(mo, on="styrk08")
+
+    # 28. mouchel_by_exposure: som pakke 1, Mouchel-kvintiler.
+    long = collect(dm, ["quintile"], lambda k: "all")
+    long["col"] = long["quintile"].map(EXP_LABELS)
+    wide = pivot_index(long, [], "col", list(EXP_LABELS.values()))
+    comp = dm.groupby(["date", "quintile"], as_index=False)["value"].sum()
+    comp["share"] = np.round(100 * comp["value"]
+                             / comp.groupby("date")["value"]
+                             .transform("sum"), 2)
+    comp_w = comp.pivot_table(index="date", columns="quintile",
+                              values="share")
+    comp_w.columns = [f"composition_E{q}" for q in comp_w.columns]
+    comp_w.index = comp_w.index.str[:8] + "01"
+    wide = wide.merge(comp_w, left_on="observation_date", right_index=True)
+    write_package("mouchel_by_exposure", wide, list(EXP_LABELS.values()),
+                  ["adjustment"],
+                  "Value columns: Employment Index per Mouchel exposure "
+                  "quintile, all ages 21-60 pooled. `composition_E1..E5`: "
+                  "each quintile's share of sample employment in percent, "
+                  "from raw headcount (identical across adjustment rows)."
+                  + MOUCHEL_NOTE, conventions=mouchel_conv(DICT_CONVENTIONS))
+
+    # 29. mouchel_age_by_exposure.
+    long = collect(dm, ["quintile", "alder_gr"], lambda k: k["alder_gr"])
+    long["exposure_quintile"] = long["quintile"].map(EXP_LABELS)
+    long["col"] = long["alder_gr"].map(AGE_LABELS)
+    wide = pivot_index(long, ["exposure_quintile"], "col",
+                       list(AGE_LABELS.values()))
+    write_package("mouchel_age_by_exposure", wide,
+                  list(AGE_LABELS.values()),
+                  ["adjustment", "exposure_quintile"],
+                  "Facet `exposure_quintile` (Mouchel); value columns: "
+                  "Employment Index per decade age group." + MOUCHEL_NOTE,
+                  conventions=mouchel_conv(DICT_CONVENTIONS))
+
+    # 30-33. Nyansettelser og FTE-loenn med Mouchel-kvintiler.
+    for oname, agg_fn, adjs, conv, what in OUTCOME_SPECS:
+        long = collect_outcome(cwm, ["quintile"], lambda k: "all",
+                               agg_fn, adjs)
+        long["col"] = long["quintile"].map(EXP_LABELS)
+        wide = pivot_index(long, [], "col", list(EXP_LABELS.values()))
+        write_package(f"mouchel_{oname}_by_exposure", wide,
+                      list(EXP_LABELS.values()), ["adjustment"],
+                      f"Value columns: {what} per Mouchel exposure "
+                      "quintile, all ages 21-60 pooled." + MOUCHEL_NOTE,
+                      conventions=mouchel_conv(conv))
+
+        long = collect_outcome(cwm, ["quintile", "alder_gr"],
+                               lambda k: k["alder_gr"], agg_fn, adjs)
+        long["exposure_quintile"] = long["quintile"].map(EXP_LABELS)
+        long["col"] = long["alder_gr"].map(AGE_LABELS)
+        wide = pivot_index(long, ["exposure_quintile"], "col",
+                           list(AGE_LABELS.values()))
+        write_package(f"mouchel_{oname}_age_by_exposure", wide,
+                      list(AGE_LABELS.values()),
+                      ["adjustment", "exposure_quintile"],
+                      f"Facet `exposure_quintile` (Mouchel); value "
+                      f"columns: {what} per decade age group."
+                      + MOUCHEL_NOTE, conventions=mouchel_conv(conv))
+
+    # 34-35. Yrkespakker (lang format, yrke som fasett): grunnlaget for
     #        "Velg yrker selv"-seksjonen, jf. PLAN_yrkesvelger_2026-09.md.
     #        Alle 4-sifrede STYRK-08-koder med minst 30 private
     #        loennstakere (21-60, aldre samlet) i samtlige maaneder --
