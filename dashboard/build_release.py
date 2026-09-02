@@ -45,6 +45,8 @@ USAGE = os.path.join(BASE_DIR, "data", "ai_exposure",
                      "styrk08_usage_groups.csv")
 POP_SRC = os.path.join(BASE_DIR, "analysis", "output", "figure_data",
                        "fig_employment_by_age_quintile.csv")
+OCC_NAMES = os.path.join(BASE_DIR, "data", "ai_exposure",
+                         "styrk08_codes.csv")
 
 RELEASE = sys.argv[1] if len(sys.argv) > 1 else "2026-06"
 OUT_BASE = os.path.join(BASE_DIR, "dashboard", "releases", RELEASE)
@@ -699,6 +701,123 @@ def main():
                       f"Value columns: {what} per decade age group, all "
                       "canaries-sample occupations pooled, public sector."
                       + PUB_NOTE, conventions=pub_conv(conv))
+
+    # 28-29. Yrkespakker (lang format, yrke som fasett): grunnlaget for
+    #        "Velg yrker selv"-seksjonen, jf. PLAN_yrkesvelger_2026-09.md.
+    #        Alle 4-sifrede STYRK-08-koder med minst 30 private
+    #        loennstakere (21-60, aldre samlet) i samtlige maaneder --
+    #        ikke bare canaries-utvalget; yrker uten Eloundou-skaar faar
+    #        tom exposure_quintile. Bare raw/sa: per innbygger skalerer
+    #        alle serier i et yrke likt og er ikke meningsfull her.
+    #        Nyansettelser venter til v2 (nullmaaneder i smaa yrker).
+    do = pd.read_csv(DATA, dtype={"yrke4": str, "alder_gr": str,
+                                  "sekt": int})
+    do = do[(do["sekt"] == 2) & (do["alder_gr"].isin(AGE_ORDER))
+            & do["variable"].isin(["count", "kontantlonn",
+                                   "stillingspst"])]
+    do = do.pivot_table(index=["date", "yrke4", "alder_gr"],
+                        columns="variable", values="value",
+                        aggfunc="first").reset_index()
+    om = do.assign(num=do["count"] * do["kontantlonn"],
+                   den=do["count"] * do["stillingspst"] / 100.0) \
+           .groupby(["yrke4", "date"], as_index=False)[
+               ["count", "num", "den"]].sum()
+    n_months = om["date"].nunique()
+    per_occ = om.groupby("yrke4")["count"].agg(["min", "size"])
+    keep = per_occ[(per_occ["min"] >= 30)
+                   & (per_occ["size"] == n_months)].index
+    om = om[om["yrke4"].isin(keep)]
+    assert not om[["count", "num", "den"]].isna().any().any(), \
+        "yrkesceller mangler en av variablene"
+    print(f"  yrkespakker: {len(keep)} av {len(per_occ)} yrker over "
+          f"terskelen (>=30 i alle {n_months} maaneder)")
+
+    names = pd.read_csv(OCC_NAMES, encoding="latin-1", dtype=str)
+    names = names[names["level"] == "4"].set_index("code")["name"]
+    nbase = om[om["date"] == BASE_MONTH].set_index("yrke4")["count"] \
+        .astype(int)
+    qlab = el.set_index("styrk08")["quintile"].map(EXP_LABELS)
+
+    occ_long = {"employment": [], "wages": []}
+    for code, g in om.groupby("yrke4"):
+        g = g.sort_values("date")
+        for outcome, level in [("employment", g["count"]),
+                               ("wages", g["num"] / g["den"])]:
+            s = pd.DataFrame({"date": g["date"], "count": level})
+            assert (s["count"] > 0).all(), f"ikke-positiv serie: {code}"
+            vi = variant_index(s, None, None, WAGE_ADJUSTMENTS)
+            vi["styrk08"] = code
+            occ_long[outcome].append(vi)
+
+    def occ_conv(conv):
+        old = ("- The canaries sample is the 397 STYRK-08 (= ISCO-08) "
+               "occupation codes\n  with an Eloundou et al. (2024) "
+               "exposure score, quintiles\n  equal-weighted by "
+               "occupation.")
+        new = ("- The sample is every 4-digit STYRK-08 (= ISCO-08) "
+               "occupation code with\n  at least 30 private-sector "
+               "employees aged 21-60 in every month from\n  2021-01 "
+               "(single codes, unlike the grouped occupation cases; not\n"
+               "  restricted to the canaries sample). `exposure_quintile` "
+               "carries the\n  national Eloundou et al. (2024) quintile "
+               "where the code has a score\n  and is empty where it does "
+               "not.")
+        assert old in conv, "konvensjonstekst endret; oppdater occ_conv"
+        conv = conv.replace(old, new)
+        conv = conv.replace(
+            "decade age groups 21-30, 31-40, 41-50, 51-60, monthly from "
+            "2021-01",
+            "all ages 21-60 pooled, monthly from 2021-01")
+        if "percap" in conv:
+            old_adj = ("- Time-series files carry an `adjustment` facet "
+                       "column not present in\n  the Stanford files: "
+                       "`raw` (headcount, Stanford's method), `sa`\n  "
+                       "(seasonally adjusted; X-11 core with factors "
+                       "estimated 2021-2024 and\n  frozen), `percap` "
+                       "(headcount divided by the resident population of\n"
+                       "  the age group, Statistics Norway table 07459), "
+                       "`percap_sa` (both).\n  The `raw` rows alone "
+                       "reproduce the Stanford schema.")
+            new_adj = ("- Time-series files carry an `adjustment` facet "
+                       "column with the values\n  `raw` (headcount) and "
+                       "`sa` (seasonally adjusted; X-11 core with\n  "
+                       "factors estimated 2021-2024 and frozen). The "
+                       "per-capita variants are\n  not published here: "
+                       "they rescale every series within an occupation\n"
+                       "  by the same population and add nothing at "
+                       "occupation level.")
+            assert old_adj in conv, \
+                "justeringstekst endret; oppdater occ_conv"
+            conv = conv.replace(old_adj, new_adj)
+        return conv
+
+    OCC_DICT = (" Long-format package behind the occupation selector: "
+                "facets `styrk08` and `occupation` (Norwegian STYRK-08 "
+                "name). `n_base` is the occupation's headcount at the "
+                "normalization date and `exposure_quintile` its Eloundou "
+                "quintile (empty when the code lacks a score); both are "
+                "constant within occupation. Small occupations are noisy, "
+                "and the composition of workers within an occupation can "
+                "change over time.")
+
+    for oname, outcome, vcol, conv in [
+            ("occupations", "employment", "Employment Index",
+             occ_conv(DICT_CONVENTIONS)),
+            ("wages_occupations", "wages", "Wage Index",
+             occ_conv(DICT_CONVENTIONS_WAGES))]:
+        long = pd.concat(occ_long[outcome], ignore_index=True)
+        long = long.rename(columns={"value": vcol})
+        long["occupation"] = long["styrk08"].map(names)
+        assert long["occupation"].notna().all(), "yrkeskode uten navn"
+        long["n_base"] = long["styrk08"].map(nbase)
+        long["exposure_quintile"] = long["styrk08"].map(qlab).fillna("")
+        wide = long[["observation_date", "adjustment", "styrk08",
+                     "occupation", vcol, "n_base", "exposure_quintile"]] \
+            .sort_values(["observation_date", "adjustment", "styrk08"]) \
+            .reset_index(drop=True)
+        write_package(oname, wide, [vcol], ["styrk08", "occupation"],
+                      f"Value column: {vcol} per 4-digit occupation."
+                      + OCC_DICT, conventions=conv)
 
     print("Done.")
 
