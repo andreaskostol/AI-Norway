@@ -43,6 +43,7 @@ dashboard/
                             automatisk fra <html lang>.
       style.css          ← all styling (farger, layout)
       data/dashboard.json← GENERERT — ikke rediger for hånd (se pkt. 5)
+      data/occupations.json ← GENERERT, yrkesvelgeren (figur 9)
       assets/            ← logoer, teambilder
     Dockerfile, nginx.conf, fly.toml  ← server-/deploy-config (rør sjelden)
   build_release.py       ← bygger en ny datavintage fra mikrodata (månedlig)
@@ -131,7 +132,7 @@ endres ikke; en ny måned blir en ny mappe.
 
 - **Cache-parameter:** når du endrer `app.js` eller `style.css`, bump
   versjonsstrengen `?v=YYYYMMDD` i HTML-filene og i `fetch(...)` i
-  `app.js` (nå `v=20260902b`).
+  `app.js` (nå `v=20260902c`).
   Ellers ser brukerne en gammel cachet versjon.
 - **Hardkodede hovedtall:** «Hovedfunn» i `om.html` og «Key findings» i
   `en/about.html` har tall skrevet rett inn i teksten. De oppdateres

@@ -167,14 +167,14 @@
     return state.adjustment === "percap_sa" ? "sa" : "raw";
   }
 
-  function seriesFor(pkg, facetKey, col) {
-    var raw = DB.packages[pkg].series[adjFor(pkg)][facetKey][col];
-    // Glatt foerst, renormaliser etterpaa: da er den viste serien
-    // noeyaktig 100 i den valgte referansemaaneden, og indeksen maales
-    // mot det glattede nivaaet fram til referansen, ikke mot en enkelt
-    // maaned (endret 2026-09-02 etter oenske fra Andreas).
+  // Glatt foerst, renormaliser etterpaa: da er den viste serien
+  // noeyaktig 100 i den valgte referansemaaneden, og indeksen maales
+  // mot det glattede nivaaet fram til referansen, ikke mot en enkelt
+  // maaned (endret 2026-09-02 etter oenske fra Andreas). Brukes baade
+  // for pakkene i dashboard.json og for yrkene i occupations.json.
+  function indexSeries(raw, dates) {
     var sm = movingAverage(raw, state.smoothing);
-    var baseIdx = DB.packages[pkg].dates.indexOf(epoch().base);
+    var baseIdx = dates.indexOf(epoch().base);
     if (baseIdx >= 0 && sm[baseIdx]) {
       var base = sm[baseIdx];
       sm = sm.map(function (v) {
@@ -182,6 +182,11 @@
       });
     }
     return sm;
+  }
+
+  function seriesFor(pkg, facetKey, col) {
+    return indexSeries(DB.packages[pkg].series[adjFor(pkg)][facetKey][col],
+                       DB.packages[pkg].dates);
   }
 
   function getChart(id) {
@@ -224,7 +229,7 @@
         itemStyle: { color: d.color },
         color: d.color,
         endLabel: {
-          show: true, formatter: d.name, fontSize: 11.5,
+          show: true, formatter: d.label || d.name, fontSize: 11.5,
           color: d.color, fontWeight: 600, distance: 8
         },
         labelLayout: { moveOverlap: "shiftY" },
@@ -348,12 +353,12 @@
     // Offentlig sektor (figur 12 og 14) foelger samme utfall.
     var tpe = document.getElementById("title-public-exposure");
     if (tpe) {
-      tpe.textContent = "12 · " + word +
+      tpe.textContent = "13 · " + word +
         (EN ? " by AI exposure" : " etter KI-eksponering");
     }
     var tpa = document.getElementById("title-public-age");
     if (tpa) {
-      tpa.textContent = "14 · " + word + (EN ? " by age" : " etter alder");
+      tpa.textContent = "15 · " + word + (EN ? " by age" : " etter alder");
     }
   }
 
@@ -986,6 +991,239 @@
         "på kvintiler, alder og yrker i figurene under.";
   }
 
+  // ---------- Figur 9: velg yrker selv ----------
+  // Data fra /data/occupations.json (prepare_data.py): alle 4-sifrede
+  // STYRK-08-yrker i privat sektor med minst 30 loennstakere i hver
+  // maaned, alle aldre samlet, sysselsetting og loenn, raw/sa. Lastes
+  // etter dashboard.json slik at hovedfigurene ikke venter paa den.
+  var OCC = null;
+  var OCC_MAX = 6;                       // flere gir uleselige etiketter
+  var OCC_SMALL = 200;                   // under dette merkes "lite yrke"
+  var OCC_COLORS = ["#8C1515", "#577590", "#E54A2B", "#E6A817",
+                    "#401415", "#1a7a4a"];
+  var OCC_DEFAULT = ["2512", "4110", "5223", "7411"];
+  state.occs = [];
+
+  // Utfallet per yrke: nyansettelser publiseres ikke per yrke, saa da
+  // vises sysselsetting med en merknad.
+  function occOutcome() {
+    return state.outcome === "wages" ? "wages" : "employment";
+  }
+  function occAdj(o) {
+    var ser = o[occOutcome()];
+    if (ser[state.adjustment]) return state.adjustment;
+    return state.adjustment === "percap_sa" ? "sa" : "raw";
+  }
+  function occShort(name) {
+    return name.length > 30 ? name.slice(0, 28).replace(/[ ,]+$/, "") + "…"
+                            : name;
+  }
+  function occChipTitle(o) {
+    var n = o.n_base.toLocaleString(EN ? "en-US" : "nb-NO");
+    var q = o.quintile == null
+      ? (EN ? "no exposure score" : "ingen eksponeringsskår")
+      : (EN ? "exposure quintile " : "eksponeringskvintil ") + o.quintile;
+    return (EN ? n + " employees in Nov 2022 · " : n + " lønnstakere i nov. 2022 · ") + q;
+  }
+
+  // Valget speiles i URL-en (?yrker=2512,4110) slik at lenker kan deles.
+  function occsFromUrl() {
+    var m = /[?&]yrker=([0-9,]+)/.exec(window.location.search);
+    if (!m) return null;
+    return m[1].split(",").filter(function (c) { return OCC.byCode[c]; });
+  }
+  function occsToUrl() {
+    if (!window.history || !window.history.replaceState) return;
+    var url = window.location.pathname +
+      (state.occs.length ? "?yrker=" + state.occs.join(",") : "") +
+      window.location.hash;
+    window.history.replaceState(null, "", url);
+  }
+
+  function renderOccChips() {
+    var holder = document.getElementById("occ-chips");
+    if (!holder) return;
+    holder.innerHTML = "";
+    state.occs.forEach(function (code, i) {
+      var o = OCC.byCode[code];
+      var chip = document.createElement("span");
+      chip.className = "occ-chip";
+      chip.title = occChipTitle(o);
+      chip.innerHTML =
+        '<i style="background:' + OCC_COLORS[i] + '"></i>' +
+        '<span>' + o.name + ' <code>' + code + '</code>' +
+        (o.n_base < OCC_SMALL
+          ? ' <span class="occ-small">' + (EN ? "small" : "lite yrke") + '</span>'
+          : "") + '</span>' +
+        '<button type="button" aria-label="' +
+        (EN ? "Remove" : "Fjern") + '">×</button>';
+      chip.querySelector("button").addEventListener("click", function () {
+        state.occs.splice(state.occs.indexOf(code), 1);
+        occChanged();
+      });
+      holder.appendChild(chip);
+    });
+  }
+
+  function renderOccChart() {
+    if (!OCC || !document.getElementById("chart-occ-select")) return;
+    var defs = state.occs.map(function (code, i) {
+      var o = OCC.byCode[code];
+      return { name: o.name + " (" + code + ")", label: occShort(o.name),
+               color: OCC_COLORS[i],
+               values: indexSeries(o[occOutcome()][occAdj(o)], OCC.dates) };
+    });
+    getChart("chart-occ-select").setOption(
+      lineOption(OCC.dates, defs, SRC_MAIN), { notMerge: true });
+
+    var note = document.getElementById("occ-note");
+    if (note) {
+      var word = OUTCOMES[occOutcome()].word;
+      var adj = ADJ_LABELS[occAdj(OCC.byCode[state.occs[0]] ||
+                                  OCC.occupations[0])].toLowerCase();
+      var txt = EN
+        ? word + ", " + adj + ", all ages 21–60, private sector."
+        : word + ", " + adj + ", alle aldre 21–60 år, privat sektor.";
+      if (state.outcome === "hires") {
+        txt += EN
+          ? " New hires are not published by occupation; the figure shows employment."
+          : " Nyansettelser publiseres ikke per yrke; figuren viser sysselsetting.";
+      }
+      if (!state.occs.length) {
+        txt = EN ? "Search above and pick up to " + OCC_MAX + " occupations."
+                 : "Søk over og velg inntil " + OCC_MAX + " yrker.";
+      }
+      note.textContent = txt;
+    }
+    var dl = document.getElementById("occ-download");
+    if (dl) dl.disabled = !state.occs.length;
+  }
+
+  function occChanged() {
+    renderOccChips();
+    renderOccChart();
+    occsToUrl();
+  }
+
+  function occAdd(code) {
+    if (state.occs.indexOf(code) >= 0) return;
+    if (state.occs.length >= OCC_MAX) {
+      // Bytt ut det eldste valget naar lista er full.
+      state.occs.shift();
+    }
+    state.occs.push(code);
+    occChanged();
+  }
+
+  // Soek: treff paa navn (uansett hvor i navnet) eller paa kodeprefiks.
+  function occSearch(q) {
+    q = q.trim().toLowerCase();
+    if (!q) return [];
+    var hits = [];
+    for (var i = 0; i < OCC.occupations.length && hits.length < 12; i++) {
+      var o = OCC.occupations[i];
+      if (state.occs.indexOf(o.code) >= 0) continue;
+      if (o.code.indexOf(q) === 0 || o.name.toLowerCase().indexOf(q) >= 0) {
+        hits.push(o);
+      }
+    }
+    return hits;
+  }
+
+  function renderOccHits(hits) {
+    var ul = document.getElementById("occ-hits");
+    ul.innerHTML = "";
+    hits.forEach(function (o) {
+      var li = document.createElement("li");
+      var b = document.createElement("button");
+      b.type = "button";
+      b.innerHTML = "<code>" + o.code + "</code>" + o.name +
+        (o.n_base < OCC_SMALL
+          ? ' <span class="occ-small">(' + (EN ? "small" : "lite yrke") + ')</span>'
+          : "");
+      b.addEventListener("click", function () {
+        occAdd(o.code);
+        document.getElementById("occ-search").value = "";
+        ul.hidden = true;
+      });
+      li.appendChild(b);
+      ul.appendChild(li);
+    });
+    ul.hidden = !hits.length;
+  }
+
+  // CSV med de valgte yrkene, bygget i nettleseren fra occupations.json:
+  // samme kolonner som pakken, begge justeringer, gjeldende utfall.
+  function occDownload() {
+    var oc = occOutcome();
+    var head = "observation_date,adjustment,styrk08,occupation," +
+      (oc === "wages" ? "Wage Index" : "Employment Index") +
+      ",n_base,exposure_quintile\n";
+    var rows = [];
+    state.occs.forEach(function (code) {
+      var o = OCC.byCode[code];
+      ["raw", "sa"].forEach(function (adj) {
+        OCC.dates.forEach(function (d, i) {
+          rows.push([d, adj, code, '"' + o.name.replace(/"/g, '""') + '"',
+                     o[oc][adj][i], o.n_base,
+                     o.quintile == null ? "" : o.quintile].join(","));
+        });
+      });
+    });
+    var blob = new Blob([head + rows.join("\n") + "\n"],
+                        { type: "text/csv;charset=utf-8" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "kiindeksen_" + oc + "_" + state.occs.join("-") + "_" +
+      OCC.release + ".csv";
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () {
+      URL.revokeObjectURL(a.href); document.body.removeChild(a);
+    }, 500);
+  }
+
+  function initOccupations(occ) {
+    OCC = occ;
+    OCC.byCode = {};
+    OCC.occupations.forEach(function (o) { OCC.byCode[o.code] = o; });
+    var fromUrl = occsFromUrl();
+    state.occs = (fromUrl && fromUrl.length ? fromUrl : OCC_DEFAULT)
+      .filter(function (c) { return OCC.byCode[c]; }).slice(0, OCC_MAX);
+
+    var input = document.getElementById("occ-search");
+    var ul = document.getElementById("occ-hits");
+    if (!input || !ul) return;
+    input.addEventListener("input", function () {
+      renderOccHits(occSearch(input.value));
+    });
+    input.addEventListener("focus", function () {
+      if (input.value) renderOccHits(occSearch(input.value));
+    });
+    input.addEventListener("keydown", function (e) {
+      if (e.key === "Enter") {
+        var first = ul.querySelector("button");
+        if (first) { e.preventDefault(); first.click(); }
+      } else if (e.key === "Escape") {
+        ul.hidden = true;
+      }
+    });
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest || !e.target.closest(".occ-picker")) {
+        ul.hidden = true;
+      }
+    });
+    var dl = document.getElementById("occ-download");
+    if (dl) dl.addEventListener("click", occDownload);
+    var reset = document.getElementById("occ-reset");
+    if (reset) {
+      reset.addEventListener("click", function () {
+        state.occs = OCC_DEFAULT.slice(); occChanged();
+      });
+    }
+    occChanged();
+  }
+
   // ---------- Nedlastinger ----------
 
   var PKG_TITLES = EN ? {
@@ -1028,7 +1266,9 @@
     public_hires_by_age: "Public sector: new hires by age group",
     public_wages_by_exposure: "Public sector: pay (FTE) by AI exposure",
     public_wages_age_by_exposure: "Public sector: pay (FTE), age × exposure",
-    public_wages_by_age: "Public sector: pay (FTE) by age group"
+    public_wages_by_age: "Public sector: pay (FTE) by age group",
+    occupations: "All occupations: employment by occupation",
+    wages_occupations: "All occupations: pay (FTE) by occupation"
   } : {
     by_exposure: "Etter KI-eksponering",
     age_by_exposure: "Alder × eksponering",
@@ -1073,23 +1313,85 @@
       "Offentlig sektor: lønn (FTE) etter KI-eksponering",
     public_wages_age_by_exposure:
       "Offentlig sektor: lønn (FTE), alder × eksponering",
-    public_wages_by_age: "Offentlig sektor: lønn (FTE) etter aldersgruppe"
+    public_wages_by_age: "Offentlig sektor: lønn (FTE) etter aldersgruppe",
+    occupations: "Alle yrker: sysselsetting per yrke",
+    wages_occupations: "Alle yrker: lønn (FTE) per yrke"
   };
 
   var DL = EN
     ? { yoy: "12-month change", ann: "Annualized", doc: "Documentation" }
     : { yoy: "12 mnd endring", ann: "Annualisert", doc: "Dokumentasjon" };
 
+  // Nedlastingskortene grupperes i sammenleggbare blokker; foerste
+  // gruppe er aapen. Pakker som ikke er nevnt her havner i "Annet".
+  var DL_GROUPS = [
+    { title: EN ? "Main cuts" : "Hovedkutt",
+      names: ["by_exposure", "age_by_exposure", "by_age", "composition",
+              "hires_by_exposure", "hires_age_by_exposure", "hires_by_age",
+              "wages_by_exposure", "wages_age_by_exposure", "wages_by_age"] },
+    { title: EN ? "All occupations (figure 9)" : "Alle yrker (figur 9)",
+      names: ["occupations", "wages_occupations"] },
+    { title: EN ? "Occupation cases" : "Yrkescase",
+      names: ["software_developers", "customer_service", "electricians",
+              "home_health_aides", "stock_clerks",
+              "hires_software_developers", "hires_customer_service",
+              "hires_electricians", "hires_home_health_aides",
+              "hires_stock_clerks", "wages_software_developers",
+              "wages_customer_service", "wages_electricians",
+              "wages_home_health_aides", "wages_stock_clerks"] },
+    { title: EN ? "AI usage" : "KI-bruk",
+      names: ["usage_patterns_by_age",
+              "usage_augmentation_ratio_composition",
+              "usage_automation_ratio_composition",
+              "hires_usage_patterns_by_age", "wages_usage_patterns_by_age"] },
+    { title: EN ? "Public sector" : "Offentlig sektor",
+      names: ["public_by_exposure", "public_age_by_exposure",
+              "public_by_age", "public_composition",
+              "public_hires_by_exposure", "public_hires_age_by_exposure",
+              "public_hires_by_age", "public_wages_by_exposure",
+              "public_wages_age_by_exposure", "public_wages_by_age"] }
+  ];
+
   function renderDownloads() {
     var holder = document.getElementById("download-list");
     var rel = DB.release;
     var avail = DB.download_files || {};
     document.getElementById("release-label").textContent = rel;
-    Object.keys(PKG_TITLES).forEach(function (name) {
-      var kinds = avail[name];
-      // Bare pakker som faktisk finnes i denne releasen, og bare de
-      // filtypene som er generert (unngaar doede lenker).
-      if (!kinds || kinds.indexOf("csv") < 0) return;
+    var grouped = {};
+    DL_GROUPS.forEach(function (g) {
+      g.names.forEach(function (n) { grouped[n] = true; });
+    });
+    var rest = Object.keys(PKG_TITLES).filter(function (n) {
+      return !grouped[n];
+    });
+    var groups = DL_GROUPS.concat(
+      rest.length ? [{ title: EN ? "Other" : "Annet", names: rest }] : []);
+    groups.forEach(function (g, gi) {
+      var cards = [];
+      g.names.forEach(function (name) {
+        var card = downloadCard(name, rel, avail);
+        if (card) cards.push(card);
+      });
+      if (!cards.length) return;
+      var det = document.createElement("details");
+      det.className = "download-group";
+      if (gi === 0) det.open = true;
+      det.innerHTML = "<summary>" + g.title + " (" + cards.length +
+        ")</summary>";
+      var grid = document.createElement("div");
+      grid.className = "download-grid";
+      cards.forEach(function (c) { grid.appendChild(c); });
+      det.appendChild(grid);
+      holder.appendChild(det);
+    });
+  }
+
+  function downloadCard(name, rel, avail) {
+    var kinds = avail[name];
+    // Bare pakker som faktisk finnes i denne releasen, og bare de
+    // filtypene som er generert (unngaar doede lenker).
+    if (!kinds || kinds.indexOf("csv") < 0) return null;
+    {
       var pkg = "canaries_no_" + name;
       var base = "/data/releases/" + rel + "/" + pkg + "/" + pkg;
       var card = document.createElement("div");
@@ -1108,8 +1410,8 @@
                  '_data_dictionary.md" download>' + DL.doc + '</a>';
       }
       card.innerHTML = "<strong>" + PKG_TITLES[name] + "</strong>" + links;
-      holder.appendChild(card);
-    });
+      return card;
+    }
   }
 
   // ---------- Kontroller ----------
@@ -1143,6 +1445,7 @@
     renderOccupations();
     renderUsage();
     renderPublic();
+    renderOccChart();
     renderSummary();
     renderUsageInfographic();
   }
@@ -1240,6 +1543,24 @@
 
     renderDownloads();
     renderAll();
+
+    // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
+    if (document.getElementById("chart-occ-select")) {
+      fetch("/data/occupations.json?v=20260902c")
+        .then(function (r) {
+          if (!r.ok) throw new Error("HTTP " + r.status);
+          return r.json();
+        })
+        .then(initOccupations)
+        .catch(function (err) {
+          var note = document.getElementById("occ-note");
+          if (note) {
+            note.textContent = EN
+              ? "Could not load the occupation data (" + err.message + ")."
+              : "Kunne ikke laste yrkesdataene (" + err.message + ").";
+          }
+        });
+    }
   }
 
   // ---------- Ordforklaringer (?-knappene) ----------
@@ -1400,7 +1721,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260902b")
+  fetch("/data/dashboard.json?v=20260902c")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();

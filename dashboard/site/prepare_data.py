@@ -75,6 +75,10 @@ TS_PACKAGES = {
 SNAP_PACKAGES = ["composition", "usage_augmentation_ratio_composition",
                  "usage_automation_ratio_composition",
                  "public_composition"]
+# Yrkesvelgeren (figur 9): de lange yrkespakkene skrives til en egen
+# fil, public/data/occupations.json, slik at dashboard.json ikke vokser
+# med ~95 000 tall. Noekkel = utfall slik app.js bruker det.
+OCC_PACKAGES = {"employment": "occupations", "wages": "wages_occupations"}
 
 
 def load_ts(release, name, facets):
@@ -175,6 +179,47 @@ def build_download_manifest(release):
     return manifest
 
 
+def load_occupations(release):
+    """Les de lange yrkespakkene (en rad per maaned x justering x yrke)
+    og pakk dem om til en liste av yrker med tallrekker per utfall og
+    justering. Returnerer None hvis pakkene mangler i releasen, slik at
+    eldre releaser fortsatt kan bygges."""
+    out = {"release": release, "dates": None, "occupations": []}
+    occ = {}
+    for outcome, name in OCC_PACKAGES.items():
+        pkg = f"canaries_no_{name}"
+        path = os.path.join(REL_BASE, release, pkg, f"{pkg}.csv")
+        if not os.path.exists(path):
+            print(f"  {pkg}: mangler, occupations.json hoppes over")
+            return None
+        df = pd.read_csv(path, dtype={"styrk08": str,
+                                      "observation_date": str})
+        value_col = [c for c in df.columns if c.endswith("Index")][0]
+        dates = sorted(df["observation_date"].unique())
+        if out["dates"] is None:
+            out["dates"] = dates
+        assert dates == out["dates"], "ulik datoakse i yrkespakkene"
+        for (code, label), g in df.groupby(["styrk08", "occupation"],
+                                           sort=True):
+            if code not in occ:
+                q = g["exposure_quintile"].iloc[0]
+                # "Quintile 5 (most exposed)" -> 5; tom -> None
+                quint = (None if pd.isna(q)
+                         else int(str(q).split()[1]))
+                occ[code] = {"code": code, "name": label,
+                             "quintile": quint,
+                             "n_base": int(g["n_base"].iloc[0])}
+            occ[code][outcome] = {}
+            for adj in ["raw", "sa"]:
+                sub = g[g["adjustment"] == adj].set_index(
+                    "observation_date").reindex(dates)
+                occ[code][outcome][adj] = [
+                    None if pd.isna(v) else round(float(v), 2)
+                    for v in sub[value_col]]
+    out["occupations"] = [occ[c] for c in sorted(occ)]
+    return out
+
+
 def load_headline_uncertainty():
     """Les bootstrap-standardfeilen for KI-indeksen og returner nyeste
     vintage som en liten dict til dashboard.json. Standardfeilen gjelder
@@ -228,6 +273,16 @@ def main():
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
     size = os.path.getsize(os.path.join(out_dir, "dashboard.json"))
     print(f"  dashboard.json: {size/1024:.0f} kB")
+
+    # Yrkesvelgeren: egen fil, hentes av app.js etter dashboard.json.
+    occ = load_occupations(release)
+    if occ is not None:
+        with open(os.path.join(out_dir, "occupations.json"), "w",
+                  encoding="utf-8") as f:
+            json.dump(occ, f, ensure_ascii=False, separators=(",", ":"))
+        size = os.path.getsize(os.path.join(out_dir, "occupations.json"))
+        print(f"  occupations.json: {len(occ['occupations'])} yrker, "
+              f"{size/1024:.0f} kB")
 
     # Kopier CSV-ene for nedlasting.
     dl_dir = os.path.join(out_dir, "releases", release)

@@ -8,7 +8,8 @@ Canaries Dashboard.
 
 ```
 site/
-  prepare_data.py   # release-CSV -> public/data/dashboard.json + nedlastbare CSV-er
+  prepare_data.py   # release-CSV -> public/data/dashboard.json,
+                    # public/data/occupations.json (yrkesvelgeren) + nedlastbare CSV-er
   public/           # alt som serveres
     index.html
     app.js          # figurer (ECharts), kontroller, nedlastingsliste
@@ -58,3 +59,7 @@ appens IPv6 (`flyctl ips list -a kiindeksen`), CNAME `www` ->
 - Glidende snitt (3/6 mnd, bakoverskuende) beregnes i nettleseren
   (`movingAverage` i `app.js`).
 - Norske etiketter for engelske kolonnenavn: `NO_LABELS` i `app.js`.
+- Yrkesvelgeren (figur 9) leser `data/occupations.json` etter at
+  `dashboard.json` er lastet (`initOccupations` i `app.js`). Valget
+  ligger i URL-en som `?yrker=2512,4110`; maks 6 yrker; nedlasting av
+  valgte yrker bygges som CSV i nettleseren.

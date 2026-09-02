@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="style.css?v=20260902b">
+<link rel="stylesheet" href="style.css?v=20260902c">
 <link rel="icon" href="assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -25,6 +25,7 @@
       <a href="#eksponering">Eksponering</a>
       <a href="#alder">Alder</a>
       <a href="#yrker">Yrkescase</a>
+      <a href="#yrker-velg">Velg yrker</a>
       <a href="#bruk">KI-bruk</a>
       <a href="#offentlig">Offentlig sektor</a>
       <a href="#oppsummering">Oppsummering</a>
@@ -49,10 +50,11 @@
     <a href="#alder">3 · Alder</a>
     <a href="#sammensetning">4 · Sammensetning</a>
     <a href="#yrker">5–8 · Yrkescase</a>
-    <a href="#bruk-vekst">9 · Vekst etter KI-bruk</a>
-    <a href="#bruk">10–11 · KI-bruk</a>
+    <a href="#yrker-velg">9 · Velg yrker selv</a>
+    <a href="#bruk-vekst">10 · Vekst etter KI-bruk</a>
+    <a href="#bruk">11–12 · KI-bruk</a>
     <a href="#oppsummering">Siste 12 måneder</a>
-    <a href="#offentlig">12–15 · Offentlig sektor</a>
+    <a href="#offentlig">13–16 · Offentlig sektor</a>
     <a href="#metode">Metode</a>
     <a href="#team">Team</a>
     <a href="#data">Last ned data</a>
@@ -76,9 +78,9 @@
     </p>
     <div class="quick-summary">
       <h3>For den utålmodige leseren</h3>
-      <p class="quick-scope">KI-indeksen og figur 1–11 gjelder
+      <p class="quick-scope">KI-indeksen og figur 1–12 gjelder
         lønnstakere i <strong>norsk privat sektor</strong>. Offentlig
-        sektor vises for seg i <a href="#offentlig">figur 12–15</a>.</p>
+        sektor vises for seg i <a href="#offentlig">figur 13–16</a>.</p>
       <ul>
         <li><strong>Ingen jobbkrise i Norge:</strong>
           samlet sysselsetting i privat sektor er høyere enn før
@@ -261,7 +263,8 @@
       Fire yrker som ofte trekkes fram i diskusjonen om KI og arbeid:
       programvareutviklere og kundebehandlere (høy eksponering),
       elektrikere og hjemmehjelpere (lav eksponering).
-      Indeks per aldersgruppe innenfor yrket.
+      Indeks per aldersgruppe innenfor yrket. Andre yrker kan du velge
+      selv i <a href="#yrker-velg">figur 9</a>.
     </p>
 
     <h3>5 · Programvareutviklere</h3>
@@ -288,14 +291,49 @@
       inngår ikke. Lav KI-eksponering.</p>
   </section>
 
+  <section id="yrker-velg" class="chart-section">
+    <h2>9 · Velg yrker selv</h2>
+    <p class="chart-intro">
+      Søk fram inntil seks yrker og sammenlign dem i samme figur. Alle
+      aldre 21–60 år samlet, privat sektor. Utfall, justering, glatting og
+      referanse følger valgene øverst. Yrkene er firesifrede
+      STYRK-08-koder. Bare yrker med minst 30 lønnstakere i hver måned
+      siden januar 2021 er med, 358 i alt.
+    </p>
+    <div class="occ-picker">
+      <input type="search" id="occ-search" autocomplete="off"
+             aria-label="Søk etter yrke"
+             placeholder="Søk etter yrke eller STYRK-08-kode">
+      <ul id="occ-hits" class="occ-hits" hidden></ul>
+    </div>
+    <div id="occ-chips" class="occ-chips"></div>
+    <div class="btn-row occ-actions">
+      <button type="button" id="occ-download">Last ned valgte yrker (CSV)</button>
+      <button type="button" id="occ-reset">Tilbake til standardvalget</button>
+    </div>
+    <div id="chart-occ-select" class="chart chart-tall"></div>
+    <p class="chart-footnote" id="occ-note"></p>
+    <p class="chart-footnote">
+      Små yrker (under 200 lønnstakere i november 2022) er merket, og
+      seriene deres er støyende. Sammensetningen av arbeidstakere
+      innenfor et yrke kan endre seg over tid. Tre yrker mangler
+      eksponeringsskår. Nyansettelser publiseres ikke per yrke. Kilde:
+      A-ordningen via
+      <a href="https://www.microdata.no/" target="_blank"
+         rel="noopener">microdata.no</a>,
+      <a href="https://www.science.org/doi/10.1126/science.adj0998"
+         target="_blank" rel="noopener">Eloundou m.fl. (2024)</a>.
+    </p>
+  </section>
+
   <section id="bruk-vekst" class="chart-section">
-    <h2>9 · Vekst etter KI-bruk</h2>
+    <h2>10 · Vekst etter KI-bruk</h2>
     <p class="chart-intro" id="usage-summary-subtitle"></p>
     <div id="usage-infographic" class="infographic"></div>
     <p class="chart-footnote">
       Yrker gruppert etter andelen av yrkets Claude-forespørsler som er
       automatiserende (øverst) hhv. augmenterende (nederst), jf.
-      figur 10 under. Sysselsetting, alle aldre samlet; justeringen
+      figur 11 under. Sysselsetting, alle aldre samlet; justeringen
       følger valget øverst. Kilde:
       <a href="https://www.anthropic.com/economic-index" target="_blank"
          rel="noopener">Anthropic Economic Index</a>
@@ -305,7 +343,7 @@
   </section>
 
   <section id="bruk" class="chart-section">
-    <h2>10 · Sysselsetting etter KI-bruk</h2>
+    <h2>11 · Sysselsetting etter KI-bruk</h2>
     <p class="chart-intro">
       Eksponeringsmålene er anslag på hva språkmodeller <em>kan</em>
       gjøre. Her grupperes yrkene i stedet etter observert bruk av Claude
@@ -331,7 +369,7 @@
       </div>
     </div>
     <div id="chart-usage" class="chart chart-tall"></div>
-    <h3>11 · Andeler etter bruksgruppe</h3>
+    <h3>12 · Andeler etter bruksgruppe</h3>
     <p class="chart-intro">
       Hver gruppes andel av samlet sysselsetting ved
       normaliseringstidspunktet, for bruksmønsteret valgt ovenfor.
@@ -358,7 +396,7 @@
   <section id="offentlig" class="chart-section">
     <h2>Offentlig sektor</h2>
     <p class="chart-intro">
-      Figur 1–11 gjelder privat sektor. Her vises de samme hovedkuttene
+      Figur 1–12 gjelder privat sektor. Her vises de samme hovedkuttene
       for lønnstakere i offentlig sektor<button class="info-btn"
         type="button" data-term="sektor"
         aria-label="Hva betyr dette?">?</button>: offentlig forvaltning
@@ -372,15 +410,15 @@
       mest eksponerte kvintilen er høyere saksbehandlere (STYRK-08 2422).
       Nær to tredjedeler av den minst eksponerte er helsefagarbeidere
       (5321). Over en tredjedel av all sysselsetting ligger i kvintil 3,
-      dominert av lærere og sykepleiere (figur 15). Nivåene kan derfor
+      dominert av lærere og sykepleiere (figur 16). Nivåene kan derfor
       ikke sammenlignes direkte med figur 1–3, og vi beregner ingen
       KI-indeks for offentlig sektor.
     </div>
 
-    <h3 id="title-public-exposure">12 · Sysselsetting etter KI-eksponering</h3>
+    <h3 id="title-public-exposure">13 · Sysselsetting etter KI-eksponering</h3>
     <div id="chart-public-by-exposure" class="chart chart-tall"></div>
 
-    <h3>13 · Alder × KI-eksponering</h3>
+    <h3>14 · Alder × KI-eksponering</h3>
     <p class="chart-intro">
       Velg en aldersgruppe og se utviklingen per eksponeringskvintil i
       offentlig sektor.
@@ -388,10 +426,10 @@
     <div class="btn-row" id="public-age-facet-buttons" role="tablist"></div>
     <div id="chart-public-age-by-exposure" class="chart chart-tall"></div>
 
-    <h3 id="title-public-age">14 · Sysselsetting etter alder</h3>
+    <h3 id="title-public-age">15 · Sysselsetting etter alder</h3>
     <div id="chart-public-by-age" class="chart"></div>
 
-    <h3>15 · Sysselsettingsandeler i november 2022</h3>
+    <h3>16 · Sysselsettingsandeler i november 2022</h3>
     <p class="chart-intro">
       Hver gruppes andel av samlet sysselsetting i offentlig sektor i
       november 2022. Sammenlign med figur 4: fordelingen på kvintiler er
@@ -435,7 +473,7 @@
         A-ordningen er arbeidsgivernes månedlige rapportering av alle
         arbeidsforhold til myndighetene; vi bruker den via
         microdata.no, tilrettelagt av SSB. Utvalget er alle lønnstakere
-        i privat sektor, 21–60 år. Figur 12–15 bruker tilsvarende utvalg
+        i privat sektor, 21–60 år. Figur 13–16 bruker tilsvarende utvalg
         for offentlig sektor. Referanseperioden for hver måned er
         uken som inneholder den 16. «Canaries-utvalget» er de 397
         STYRK-08-yrkeskodene som har en eksponeringsskår; det dekker
@@ -455,7 +493,7 @@
         yrkets oppgaver som kan utføres vesentlig raskere med store
         språkmodeller og tilhørende programvare. Kvintilene er
         likevektet per yrke (ikke sysselsettingsvektet), samme
-        konstruksjon som i DEL-dashboardet. Bruksgruppene i figur 9–11
+        konstruksjon som i DEL-dashboardet. Bruksgruppene i figur 10–12
         bygger i stedet på observert bruk: andelen av yrkets
         Claude-forespørsler som er klassifisert som automatiserende
         hhv. augmenterende i Anthropic Economic Index
@@ -578,7 +616,25 @@
     </details>
 
     <details class="method-details">
-      <summary>Offentlig sektor (figur 12–15)</summary>
+      <summary>Velg yrker selv (figur 9)</summary>
+      <p>
+        Figur 9 bygger på to lange datapakker med alle firesifrede
+        STYRK-08-yrker i privat sektor som har minst 30 lønnstakere
+        (21–60 år) i hver måned fra januar 2021, 358 yrker i alt.
+        Aldersgruppene er slått sammen, fordi alder × yrke gir små og
+        støyende celler. Seriene er sysselsetting og FTE-justert lønn,
+        rå og sesongjustert, indeksert til 100 i referansemåneden. Per
+        innbygger-varianten finnes ikke per yrke; den skalerer alle
+        serier innenfor et yrke likt. Nyansettelser publiseres ikke per
+        yrke, fordi små yrker har måneder uten nyansettelser. Yrkene har
+        samme eksponeringskvintil som i figur 1. Valget ligger i
+        nettadressen, slik at en figur kan deles som lenke. Pakkene
+        ligger under <a href="#data">Last ned data</a>.
+      </p>
+    </details>
+
+    <details class="method-details">
+      <summary>Offentlig sektor (figur 13–16)</summary>
       <p>
         Fra release 2026-09 publiseres hovedkuttene også for offentlig
         sektor: offentlig forvaltning og offentlig eide foretak
@@ -597,8 +653,10 @@
     <p id="paper-ref">
       KI-indeksen utarbeides av <a href="#team">Øystein Hernæs
       (Frischsenteret) og Andreas R. Kostøl (Handelshøyskolen BI)</a>.
-      En forskningsartikkel med fullstendig metodebeskrivelse og
-      analyse er under arbeid, se
+      Forskningsartikkelen med fullstendig metodebeskrivelse og
+      analyse er publisert som RFBerlin Discussion Paper 179/26
+      (<a href="https://www.rfberlin.com/wp-content/uploads/2026/07/26179.pdf"
+          target="_blank" rel="noopener">PDF</a>), se
       <a href="#sitering">siteringsinformasjon</a>. Kontakt:
       <a href="mailto:andreas.r.kostol@bi.no">andreas.r.kostol@bi.no</a>.
     </p>
@@ -658,7 +716,7 @@
       tidsserien, tolvmånedersendring, annualisert vekst og en
       data dictionary.
     </p>
-    <div id="download-list" class="download-grid"></div>
+    <div id="download-list" class="download-groups"></div>
     <p class="chart-footnote">
       Dataene kan fritt brukes med kildehenvisning til KI-indeksen
       (kiindeksen.no), se <a href="#sitering">siteringsinformasjon</a>.
@@ -716,16 +774,21 @@
         </div>
       </div>
       <p class="cite-text" id="cite-paper-txt">Hernæs, Øystein and
-        Andreas R. Kostøl (2026). “Does AI Widen Employment Gaps?
+        Andreas Ravndal Kostøl (2026). “Has AI Widened Employment Gaps?
         Tracking Early-Career Employment by Occupational Exposure in
-        Norway”. Under arbeid (working paper).</p>
+        Norway”. RFBerlin Discussion Paper 179/26.
+        <a href="https://www.rfberlin.com/wp-content/uploads/2026/07/26179.pdf"
+           target="_blank" rel="noopener">https://www.rfberlin.com/wp-content/uploads/2026/07/26179.pdf</a></p>
       <details class="cite-bib">
         <summary>BibTeX</summary>
-<pre id="cite-paper-bib">@unpublished{hernaeskostol2026ai,
-  author = {Hern{\ae}s, {\O}ystein and Kost{\o}l, Andreas R.},
-  title  = {Does AI Widen Employment Gaps? Tracking Early-Career Employment by Occupational Exposure in Norway},
-  year   = {2026},
-  note   = {Working paper}
+<pre id="cite-paper-bib">@techreport{hernaeskostol2026ai,
+  author      = {Hern{\ae}s, {\O}ystein and Kost{\o}l, Andreas Ravndal},
+  title       = {Has AI Widened Employment Gaps? Tracking Early-Career Employment by Occupational Exposure in Norway},
+  institution = {ROCKWOOL Foundation Berlin},
+  type        = {RFBerlin Discussion Paper},
+  number      = {179/26},
+  year        = {2026},
+  url         = {https://www.rfberlin.com/wp-content/uploads/2026/07/26179.pdf}
 }</pre>
       </details>
     </div>
@@ -748,6 +811,6 @@
 </footer>
 
 <script src="vendor/echarts.min.js"></script>
-<script src="app.js?v=20260902b"></script>
+<script src="app.js?v=20260902c"></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="/style.css?v=20260902b">
+<link rel="stylesheet" href="/style.css?v=20260902c">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -25,6 +25,7 @@
       <a href="#eksponering">Exposure</a>
       <a href="#alder">Age</a>
       <a href="#yrker">Occupations</a>
+      <a href="#yrker-velg">Pick occupations</a>
       <a href="#bruk">AI usage</a>
       <a href="#offentlig">Public sector</a>
       <a href="#oppsummering">Summary</a>
@@ -49,10 +50,11 @@
     <a href="#alder">3 · Age</a>
     <a href="#sammensetning">4 · Composition</a>
     <a href="#yrker">5–8 · Occupation cases</a>
-    <a href="#bruk-vekst">9 · Growth by AI usage</a>
-    <a href="#bruk">10–11 · AI usage</a>
+    <a href="#yrker-velg">9 · Pick occupations</a>
+    <a href="#bruk-vekst">10 · Growth by AI usage</a>
+    <a href="#bruk">11–12 · AI usage</a>
     <a href="#oppsummering">Last 12 months</a>
-    <a href="#offentlig">12–15 · Public sector</a>
+    <a href="#offentlig">13–16 · Public sector</a>
     <a href="#metode">Method</a>
     <a href="#team">Team</a>
     <a href="#data">Download data</a>
@@ -75,9 +77,9 @@
     </p>
     <div class="quick-summary">
       <h3>For the impatient reader</h3>
-      <p class="quick-scope">The index and figures 1–11 cover wage earners
+      <p class="quick-scope">The index and figures 1–12 cover wage earners
         in the <strong>Norwegian private sector</strong>. The public sector
-        is shown separately in <a href="#offentlig">figures 12–15</a>.</p>
+        is shown separately in <a href="#offentlig">figures 13–16</a>.</p>
       <ul>
         <li><strong>No job crisis in Norway:</strong>
           total private-sector employment is above its level before
@@ -263,7 +265,8 @@
       Four occupations often raised in the discussion of AI and work:
       software developers and customer service reps (high exposure),
       electricians and home health aides (low exposure).
-      Index by age group within the occupation.
+      Index by age group within the occupation. Other occupations can be
+      chosen in <a href="#yrker-velg">figure 9</a>.
     </p>
 
     <h3>5 · Software developers</h3>
@@ -291,13 +294,49 @@
       occupation is not included. Low AI exposure.</p>
   </section>
 
+  <section id="yrker-velg" class="chart-section">
+    <h2>9 · Pick your own occupations</h2>
+    <p class="chart-intro">
+      Search for up to six occupations and compare them in one figure.
+      All ages 21–60 combined, private sector. Outcome, adjustment,
+      smoothing and reference follow the selections above. Occupations
+      are four-digit STYRK-08 (ISCO-08) codes, shown with their Norwegian
+      names. Only occupations with at least 30 employees in every month
+      since January 2021 are included, 358 in all.
+    </p>
+    <div class="occ-picker">
+      <input type="search" id="occ-search" autocomplete="off"
+             aria-label="Search for an occupation"
+             placeholder="Search by Norwegian occupation name or STYRK-08 code">
+      <ul id="occ-hits" class="occ-hits" hidden></ul>
+    </div>
+    <div id="occ-chips" class="occ-chips"></div>
+    <div class="btn-row occ-actions">
+      <button type="button" id="occ-download">Download selected occupations (CSV)</button>
+      <button type="button" id="occ-reset">Back to the default selection</button>
+    </div>
+    <div id="chart-occ-select" class="chart chart-tall"></div>
+    <p class="chart-footnote" id="occ-note"></p>
+    <p class="chart-footnote">
+      Small occupations (under 200 employees in November 2022) are
+      marked, and their series are noisy. The composition of workers
+      within an occupation can change over time. Three occupations lack
+      an exposure score. New hires are not published by occupation.
+      Source: the A-ordningen via
+      <a href="https://www.microdata.no/" target="_blank"
+         rel="noopener">microdata.no</a>,
+      <a href="https://www.science.org/doi/10.1126/science.adj0998"
+         target="_blank" rel="noopener">Eloundou et al. (2024)</a>.
+    </p>
+  </section>
+
   <section id="bruk-vekst" class="chart-section">
-    <h2>9 · Growth by AI usage</h2>
+    <h2>10 · Growth by AI usage</h2>
     <p class="chart-intro" id="usage-summary-subtitle"></p>
     <div id="usage-infographic" class="infographic"></div>
     <p class="chart-footnote">
       Occupations grouped by the share of the occupation's Claude requests
-      that are automating (top) or augmenting (bottom), cf. figure 10
+      that are automating (top) or augmenting (bottom), cf. figure 11
       below. Employment, all ages combined; the adjustment follows the
       selection above. Source:
       <a href="https://www.anthropic.com/economic-index" target="_blank"
@@ -308,7 +347,7 @@
   </section>
 
   <section id="bruk" class="chart-section">
-    <h2>10 · Employment by AI usage</h2>
+    <h2>11 · Employment by AI usage</h2>
     <p class="chart-intro">
       The exposure measures are estimates of what language models
       <em>can</em> do. Here occupations are instead grouped by observed
@@ -335,7 +374,7 @@
       </div>
     </div>
     <div id="chart-usage" class="chart chart-tall"></div>
-    <h3>11 · Shares by usage group</h3>
+    <h3>12 · Shares by usage group</h3>
     <p class="chart-intro">
       Each group's share of total employment at the normalization point,
       for the usage pattern selected above.
@@ -362,7 +401,7 @@
   <section id="offentlig" class="chart-section">
     <h2>Public sector</h2>
     <p class="chart-intro">
-      Figures 1–11 cover the private sector. This section shows the same
+      Figures 1–12 cover the private sector. This section shows the same
       main cuts for wage earners in the public sector<button class="info-btn"
         type="button" data-term="sektor"
         aria-label="What does this mean?">?</button>: general government
@@ -377,15 +416,15 @@
       case administration professionals (STYRK-08 2422). Nearly two-thirds
       of the least exposed quintile is health care assistants (5321). More
       than a third of all employment sits in quintile 3, dominated by
-      teachers and nurses (figure 15). Levels therefore cannot be compared
+      teachers and nurses (figure 16). Levels therefore cannot be compared
       directly with figures 1–3, and we do not compute an AI Labor Market
       Index for the public sector.
     </div>
 
-    <h3 id="title-public-exposure">12 · Employment by AI exposure</h3>
+    <h3 id="title-public-exposure">13 · Employment by AI exposure</h3>
     <div id="chart-public-by-exposure" class="chart chart-tall"></div>
 
-    <h3>13 · Age × AI exposure</h3>
+    <h3>14 · Age × AI exposure</h3>
     <p class="chart-intro">
       Choose an age group and see the development by exposure quintile in
       the public sector.
@@ -393,10 +432,10 @@
     <div class="btn-row" id="public-age-facet-buttons" role="tablist"></div>
     <div id="chart-public-age-by-exposure" class="chart chart-tall"></div>
 
-    <h3 id="title-public-age">14 · Employment by age</h3>
+    <h3 id="title-public-age">15 · Employment by age</h3>
     <div id="chart-public-by-age" class="chart"></div>
 
-    <h3>15 · Employment shares in November 2022</h3>
+    <h3>16 · Employment shares in November 2022</h3>
     <p class="chart-intro">
       Each group's share of total public-sector employment in November
       2022. Compare with figure 4: the distribution across quintiles is
@@ -440,7 +479,7 @@
         The A-ordningen is employers' monthly reporting of all employment
         relationships to the authorities; we use it via microdata.no,
         provided by SSB. The sample is all private-sector wage earners,
-        ages 21–60. Figures 12–15 use the corresponding sample for the
+        ages 21–60. Figures 13–16 use the corresponding sample for the
         public sector. The reference period for each month is the week
         containing the 16th. The “Canaries sample” is the 397 STYRK-08
         occupation codes that have an exposure score; it covers the large
@@ -461,7 +500,7 @@
         faster with large language models and associated software. The
         quintiles are equally weighted per occupation (not
         employment-weighted), the same construction as in the DEL
-        dashboard. The usage groups in figures 9–11 are instead based on
+        dashboard. The usage groups in figures 10–12 are instead based on
         observed use: the share of the occupation's Claude requests
         classified as automating or augmenting in the Anthropic Economic
         Index
@@ -583,7 +622,26 @@
     </details>
 
     <details class="method-details">
-      <summary>Public sector (figures 12–15)</summary>
+      <summary>Pick your own occupations (figure 9)</summary>
+      <p>
+        Figure 9 draws on two long-format data packages with every
+        four-digit STYRK-08 occupation in the private sector that has at
+        least 30 employees (ages 21–60) in every month from January 2021,
+        358 occupations in all. Age groups are pooled, because age ×
+        occupation gives small and noisy cells. The series are employment
+        and FTE-adjusted pay, raw and seasonally adjusted, indexed to 100
+        in the reference month. The per capita variant does not exist by
+        occupation; it would rescale every series within an occupation
+        by the same factor. New hires are not published by occupation,
+        because small occupations have months with no hires. Occupations
+        carry the same exposure quintile as in figure 1. The selection is
+        stored in the page address, so a figure can be shared as a link.
+        The packages are listed under <a href="#data">Download data</a>.
+      </p>
+    </details>
+
+    <details class="method-details">
+      <summary>Public sector (figures 13–16)</summary>
       <p>
         From the 2026-09 release the main cuts are also published for the
         public sector: general government and publicly owned enterprises
@@ -602,8 +660,10 @@
     <p id="paper-ref">
       The AI Labor Market Index is produced by <a href="#team">Øystein
       Hernæs (Frisch Centre) and Andreas R. Kostøl (BI Norwegian Business
-      School)</a>. A research paper with a full methodological description
-      and analysis is in progress; see
+      School)</a>. The research paper with a full methodological
+      description and analysis is published as RFBerlin Discussion Paper
+      179/26 (<a href="https://www.rfberlin.com/wp-content/uploads/2026/07/26179.pdf"
+          target="_blank" rel="noopener">PDF</a>); see
       <a href="#sitering">citation information</a>. Contact:
       <a href="mailto:andreas.r.kostol@bi.no">andreas.r.kostol@bi.no</a>.
     </p>
@@ -662,7 +722,7 @@
       contains the time series, twelve-month change, annualized growth and
       a data dictionary.
     </p>
-    <div id="download-list" class="download-grid"></div>
+    <div id="download-list" class="download-groups"></div>
     <p class="chart-footnote">
       The data may be used freely with attribution to The AI Labor Market
       Index (kiindeksen.no), see <a href="#sitering">citation
@@ -720,16 +780,21 @@
         </div>
       </div>
       <p class="cite-text" id="cite-paper-txt">Hernæs, Øystein and
-        Andreas R. Kostøl (2026). “Does AI Widen Employment Gaps?
+        Andreas Ravndal Kostøl (2026). “Has AI Widened Employment Gaps?
         Tracking Early-Career Employment by Occupational Exposure in
-        Norway”. Working paper.</p>
+        Norway”. RFBerlin Discussion Paper 179/26.
+        <a href="https://www.rfberlin.com/wp-content/uploads/2026/07/26179.pdf"
+           target="_blank" rel="noopener">https://www.rfberlin.com/wp-content/uploads/2026/07/26179.pdf</a></p>
       <details class="cite-bib">
         <summary>BibTeX</summary>
-<pre id="cite-paper-bib">@unpublished{hernaeskostol2026ai,
-  author = {Hern{\ae}s, {\O}ystein and Kost{\o}l, Andreas R.},
-  title  = {Does AI Widen Employment Gaps? Tracking Early-Career Employment by Occupational Exposure in Norway},
-  year   = {2026},
-  note   = {Working paper}
+<pre id="cite-paper-bib">@techreport{hernaeskostol2026ai,
+  author      = {Hern{\ae}s, {\O}ystein and Kost{\o}l, Andreas Ravndal},
+  title       = {Has AI Widened Employment Gaps? Tracking Early-Career Employment by Occupational Exposure in Norway},
+  institution = {ROCKWOOL Foundation Berlin},
+  type        = {RFBerlin Discussion Paper},
+  number      = {179/26},
+  year        = {2026},
+  url         = {https://www.rfberlin.com/wp-content/uploads/2026/07/26179.pdf}
 }</pre>
       </details>
     </div>
@@ -752,6 +817,6 @@
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/app.js?v=20260902b"></script>
+<script src="/app.js?v=20260902c"></script>
 </body>
 </html>
