@@ -5,6 +5,32 @@ kommentar-svar-posten: Mouchel et al. (2026) legges til som valgbart
 eksponeringsmål i en nedtrekksmeny. 2016-placebo og fjernarbeid er
 bevisst utsatt.
 
+## Status 2026-09-03: Del B ferdig og publisert (Andreas)
+
+Målvelgeren er live (Fly-image `deployment-01M1JPH578V0D407GQDWFFYQ87`,
+cache `v=20260903a`). Nedtrekksmeny «Eksponeringsmål» i kontrollinja,
+mellom utfall og justering. Gjelder hovedfiguren, figur 1–2 og «Siste 12
+måneder» for alle tre utfall; figurtitler, kildelinjer og hurtigoppsummeringen
+merkes med «Mouchel» når det målet er valgt. `?maal=mouchel` i adressen
+forhåndsvelger målet, så posten kan lenke rett til Mouchel-visningen.
+
+Beslutningen om usikkerhetsbåndet: bootstrappen er kjørt for Mouchel
+også (`recursive_kiindeks_headline.py mouchel`, ny valgfri parameter;
+output `coef_recursive_kiindeks_headline_mouchel.csv`). Vintage 2026-06:
+KI +2,31, se 2,36, bånd −2,3 til +6,9, dekker fortsatt null. `prepare_data`
+skriver `headline_uncertainty_by_measure` til dashboard.json, og app.js
+viser båndet for det valgte målet.
+
+Metodetekst: nytt `<details>` «Eksponeringsmål: Eloundou og Mouchel» på
+begge forsider, avsnitt på om.html/en/about.html, ordforklaring («?» ved
+menyen), fotnote under figur 4, og setning i Hovedfunn/Key findings
+(«+2,3 under Mouchel-målet, konklusjonen flytter seg ikke»). Referanse:
+Mouchel, Bouquet & Sheffi (2026), arXiv:2605.15474. De seks pakkene ligger
+som egen nedlastingsgruppe (48 kort totalt).
+
+Uendret i v1, som planlagt: figur 4, yrkescasene, KI-bruk, yrkesvelgeren
+(chips viser Eloundou-kvintil) og offentlig sektor.
+
 ## Status: datadelen er ferdig (Øystein)
 
 Seks `mouchel_*`-pakker ligger i `releases/2026-09/` (commit

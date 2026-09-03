@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="/style.css?v=20260902d">
+<link rel="stylesheet" href="/style.css?v=20260903a">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -161,6 +161,15 @@
       </select>
     </div>
     <div class="control">
+      <label for="sel-measure">Exposure measure</label>
+      <button class="info-btn" type="button" data-term="maal"
+              aria-label="What does this mean?">?</button>
+      <select id="sel-measure">
+        <option value="eloundou" selected>Eloundou et al. (2024)</option>
+        <option value="mouchel">Mouchel et al. (2026)</option>
+      </select>
+    </div>
+    <div class="control">
       <label for="sel-adjustment">Adjustment</label>
       <button class="info-btn" type="button" data-term="justering"
               aria-label="What does this mean?">?</button>
@@ -222,12 +231,17 @@
       (shaded area) is the labor market's post-pandemic recovery; because
       it lifted all groups, October 2022 — not the whole period — is used
       as the reference for the AI Labor Market Index.
+      The exposure measure can be switched above: Eloundou et al. (2024)
+      is the default, Mouchel et al. (2026) is an evidence-grounded
+      alternative over the same 397 occupations<button class="info-btn"
+        type="button" data-term="maal"
+        aria-label="What does this mean?">?</button>.
     </p>
     <div id="chart-by-exposure" class="chart chart-tall"></div>
   </section>
 
   <section id="alder-eksponering" class="chart-section">
-    <h2>2 · Age × AI exposure</h2>
+    <h2 id="title-age-exposure">2 · Age × AI exposure</h2>
     <p class="chart-intro">
       If AI particularly affects those with the least work experience, the
       effects should show up first among the young in the most exposed
@@ -257,6 +271,9 @@
       employment is fairly evenly distributed.
     </p>
     <div id="chart-composition" class="chart chart-short"></div>
+    <p class="chart-footnote">The shares refer to the Eloundou quintiles.
+      The measure selector above applies to the headline figure, figures
+      1–2 and “Last 12 months”.</p>
   </section>
 
   <section id="yrker" class="chart-section">
@@ -389,8 +406,8 @@
     <div id="summary-infographic" class="infographic"></div>
     <p class="chart-footnote">
       The dots show the change over the past twelve months by group; the
-      horizontal line is the spread between groups. The outcome selection
-      above applies here too. Source: The AI Labor Market Index
+      horizontal line is the spread between groups. The outcome and
+      measure selections above apply here too. Source: The AI Labor Market Index
       (kiindeksen.no), the A-ordningen via
       <a href="https://www.microdata.no/" target="_blank"
          rel="noopener">microdata.no</a>,
@@ -510,6 +527,26 @@
         <a href="https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
            target="_blank" rel="noopener">Brynjolfsson, Chandar and Chen
         (2025)</a>.
+      </p>
+    </details>
+
+    <details class="method-details">
+      <summary>Exposure measures: Eloundou and Mouchel</summary>
+      <p>
+        From the 2026-09 release the exposure measure can be switched at
+        the top of the page. The default is Eloundou et al. (2024), the
+        task-based measure the index has used from the start. The
+        alternative is the evidence-grounded measure from
+        <a href="https://arxiv.org/abs/2605.15474" target="_blank" rel="noopener">Mouchel et
+        al. (2026)</a>, built on documented AI use. Both give
+        equal-frequency quintiles over the same 397 occupations. The rank
+        correlation between the measures is 0.94, and two-thirds of
+        occupations fall in the same quintile. The selector applies to
+        the headline figure, figures 1–2 and “Last 12 months”, for all
+        three outcomes. The uncertainty band is bootstrapped separately
+        for each measure. Figure 4, the occupation cases, AI usage, the
+        occupation selector and the public sector use the Eloundou
+        quintiles.
       </p>
     </details>
 
@@ -820,6 +857,6 @@
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/app.js?v=20260902d"></script>
+<script src="/app.js?v=20260903a"></script>
 </body>
 </html>

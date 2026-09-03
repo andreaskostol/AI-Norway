@@ -113,6 +113,7 @@ python dashboard/build_release.py 2026-07
 # 2) Rekjør bootstrap-usikkerhetsbåndet for hovedtallet: bump LAST_CUT
 #    (linje ~52) til siste måned i releasen, så kjør scriptet (~1 min)
 python analysis/06_figures/recursive_kiindeks_headline.py
+python analysis/06_figures/recursive_kiindeks_headline.py mouchel   # målvelgeren
 
 # 3) Konverter siste release til nettside-data (plukker nyeste automatisk;
 #    leser også siste rad i coef_recursive_kiindeks_headline.csv)
@@ -132,7 +133,7 @@ endres ikke; en ny måned blir en ny mappe.
 
 - **Cache-parameter:** når du endrer `app.js` eller `style.css`, bump
   versjonsstrengen `?v=YYYYMMDD` i HTML-filene og i `fetch(...)` i
-  `app.js` (nå `v=20260902d`).
+  `app.js` (nå `v=20260903a`).
   Ellers ser brukerne en gammel cachet versjon.
 - **Hardkodede hovedtall:** «Hovedfunn» i `om.html` og «Key findings» i
   `en/about.html` har tall skrevet rett inn i teksten. De oppdateres

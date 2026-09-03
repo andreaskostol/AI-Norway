@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="style.css?v=20260902d">
+<link rel="stylesheet" href="style.css?v=20260903a">
 <link rel="icon" href="assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -160,6 +160,15 @@
       </select>
     </div>
     <div class="control">
+      <label for="sel-measure">Eksponeringsmål</label>
+      <button class="info-btn" type="button" data-term="maal"
+              aria-label="Hva betyr dette?">?</button>
+      <select id="sel-measure">
+        <option value="eloundou" selected>Eloundou m.fl. (2024)</option>
+        <option value="mouchel">Mouchel m.fl. (2026)</option>
+      </select>
+    </div>
+    <div class="control">
       <label for="sel-adjustment">Justering</label>
       <button class="info-btn" type="button" data-term="justering"
               aria-label="Hva betyr dette?">?</button>
@@ -221,12 +230,16 @@
       2021–2022 (skyggelagt felt) er gjeninnhentingen i arbeidsmarkedet
       etter pandemien; fordi den løftet alle gruppene, brukes oktober
       2022 — ikke hele perioden — som referanse for KI-indeksen.
+      Eksponeringsmålet kan byttes øverst: Eloundou m.fl. (2024) er
+      standard, Mouchel m.fl. (2026) er et evidensbasert alternativ over
+      de samme 397 yrkene<button class="info-btn" type="button"
+        data-term="maal" aria-label="Hva betyr dette?">?</button>.
     </p>
     <div id="chart-by-exposure" class="chart chart-tall"></div>
   </section>
 
   <section id="alder-eksponering" class="chart-section">
-    <h2>2 · Alder × KI-eksponering</h2>
+    <h2 id="title-age-exposure">2 · Alder × KI-eksponering</h2>
     <p class="chart-intro">
       Hvis KI særlig påvirker dem med minst arbeidserfaring, bør
       utslagene synes først blant de unge i de mest eksponerte yrkene.
@@ -255,6 +268,9 @@
       kvintilene, er norsk privat sysselsetting nokså jevnt fordelt.
     </p>
     <div id="chart-composition" class="chart chart-short"></div>
+    <p class="chart-footnote">Andelene gjelder Eloundou-kvintilene.
+      Målvelgeren øverst gjelder hovedfiguren, figur 1–2 og «Siste 12
+      måneder».</p>
   </section>
 
   <section id="yrker" class="chart-section">
@@ -383,7 +399,7 @@
     <div id="summary-infographic" class="infographic"></div>
     <p class="chart-footnote">
       Punktene viser endring siste tolv måneder per gruppe; den vannrette
-      linjen er spennet mellom gruppene. Utfallsvalget
+      linjen er spennet mellom gruppene. Utfalls- og målvalget
       øverst gjelder også her. Kilde: KI-indeksen (kiindeksen.no),
       A-ordningen via
       <a href="https://www.microdata.no/" target="_blank"
@@ -502,6 +518,25 @@
         <a href="https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
            target="_blank" rel="noopener">Brynjolfsson, Chandar og Chen
         (2025)</a>.
+      </p>
+    </details>
+
+    <details class="method-details">
+      <summary>Eksponeringsmål: Eloundou og Mouchel</summary>
+      <p>
+        Fra release 2026-09 kan eksponeringsmålet byttes øverst på
+        siden. Standard er Eloundou m.fl. (2024), det oppgavebaserte
+        målet indeksen har brukt hele tiden. Alternativet er det
+        evidensbaserte målet fra
+        <a href="https://arxiv.org/abs/2605.15474" target="_blank" rel="noopener">Mouchel
+        m.fl. (2026)</a>, som bygger på dokumentert KI-bruk. Begge gir
+        kvintiler med like mange yrker over de samme 397 yrkene.
+        Rangkorrelasjonen mellom målene er 0,94, og to tredjedeler av
+        yrkene havner i samme kvintil. Målvelgeren gjelder hovedfiguren,
+        figur 1–2 og «Siste 12 måneder», for alle tre utfall.
+        Usikkerhetsbåndet er bootstrappet separat for hvert mål.
+        Figur 4, yrkescasene, KI-bruk, yrkesvelgeren og offentlig
+        sektor bruker Eloundou-kvintilene.
       </p>
     </details>
 
@@ -811,6 +846,6 @@
 </footer>
 
 <script src="vendor/echarts.min.js"></script>
-<script src="app.js?v=20260902d"></script>
+<script src="app.js?v=20260903a"></script>
 </body>
 </html>

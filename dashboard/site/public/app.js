@@ -72,7 +72,7 @@
   var DB = null;
   // Figurene viser raa serier (som DEL); sesong- og befolknings-
   // justerte varianter finnes kun i de nedlastbare filene.
-  var state = { outcome: "employment", adjustment: "sa",
+  var state = { outcome: "employment", adjustment: "sa", measure: "eloundou",
                 smoothing: 6, epoch: "chatgpt", ageFacet: "21-30",
                 publicAgeFacet: "21-30",
                 usagePattern: "Automation", usageAge: "All ages" };
@@ -127,6 +127,27 @@
              word: EN ? "Pay (FTE-adjusted)" : "Lønn (FTE-justert)" }
   };
   function corePkg(base) { return OUTCOMES[state.outcome].prefix + base; }
+  // Eksponeringsmaal (maalvelgeren, release 2026-09): Eloundou et al.
+  // (2024) er standard; Mouchel et al. (2026) ligger som egne pakker
+  // med prefiks "mouchel_" for by_exposure og age_by_exposure (alle
+  // utfall). Resten av figurene er maalnoeytrale eller Eloundou i v1.
+  var MEASURES = {
+    eloundou: { prefix: "", short: "Eloundou",
+                label: EN ? "Eloundou et al. (2024)" : "Eloundou m.fl. (2024)" },
+    mouchel: { prefix: "mouchel_", short: "Mouchel",
+               label: EN ? "Mouchel et al. (2026)" : "Mouchel m.fl. (2026)" }
+  };
+  function measure() { return MEASURES[state.measure] || MEASURES.eloundou; }
+  // Pakke for kutt som finnes per maal (by_exposure, age_by_exposure);
+  // faller tilbake til Eloundou-pakken hvis maalets pakke mangler.
+  function measurePkg(base) {
+    var name = measure().prefix + corePkg(base);
+    return DB.packages[name] ? name : corePkg(base);
+  }
+  // Kort maalmerke til titler og tekst naar et annet maal enn standard er valgt.
+  function measureTag() {
+    return state.measure === "eloundou" ? "" : " · " + measure().short;
+  }
   // Offentlig sektor (figur 12-15): pakkene heter public_<utfall>_<kutt>,
   // dvs. utfallsprefikset ligger etter "public_".
   function publicPkg(base) {
@@ -206,6 +227,14 @@
   var SRC_USAGE = EN
     ? "Source: A-ordningen via microdata.no · Anthropic Economic Index"
     : "Kilde: A-ordningen via microdata.no · Anthropic Economic Index";
+  // Kildelinje for maalavhengige figurer (hovedfigur, figur 1-2, siste
+  // 12 maaneder): navngir Mouchel naar det maalet er valgt.
+  var SRC_MOUCHEL = EN
+    ? "Source: A-ordningen via microdata.no · Mouchel et al. (2026)"
+    : "Kilde: A-ordningen via microdata.no · Mouchel m.fl. (2026)";
+  function srcMeasure() {
+    return state.measure === "mouchel" ? SRC_MOUCHEL : SRC_MAIN;
+  }
   function brandGraphic(src) {
     return [{
       type: "text", left: 10, bottom: 2, silent: true,
@@ -316,12 +345,12 @@
   // ---------- Figurer 1-3 og 5-9 ----------
 
   function renderByExposure() {
-    var pkg = corePkg("by_exposure");
+    var pkg = measurePkg("by_exposure");
     var cols = DB.packages[pkg].value_cols;
     renderLines("chart-by-exposure", pkg, cols.map(function (c, i) {
       return { name: lab(c), color: QUINT_COLORS[i],
                values: seriesFor(pkg, "_", c) };
-    }), SRC_MAIN, { band: true });
+    }), srcMeasure(), { band: true });
   }
 
   function renderByAge() {
@@ -334,20 +363,26 @@
   }
 
   function renderAgeByExposure() {
-    var pkg = corePkg("age_by_exposure");
+    var pkg = measurePkg("age_by_exposure");
     var quintiles = Object.keys(DB.packages[pkg].series[adjFor(pkg)]);
     quintiles.sort();
     renderLines("chart-age-by-exposure", pkg,
       quintiles.map(function (q, i) {
         return { name: lab(q), color: QUINT_COLORS[i],
                  values: seriesFor(pkg, q, state.ageFacet) };
-      }));
+      }), srcMeasure());
   }
 
   function renderOutcomeTitles() {
     var word = OUTCOMES[state.outcome].word;
     document.getElementById("title-exposure").textContent =
-      "1 · " + word + (EN ? " by AI exposure" : " etter KI-eksponering");
+      "1 · " + word + (EN ? " by AI exposure" : " etter KI-eksponering") +
+      measureTag();
+    var tae = document.getElementById("title-age-exposure");
+    if (tae) {
+      tae.textContent = (EN ? "2 · Age × AI exposure" : "2 · Alder × KI-eksponering") +
+        measureTag();
+    }
     document.getElementById("title-age").textContent =
       "3 · " + word + (EN ? " by age" : " etter alder");
     // Offentlig sektor (figur 12 og 14) foelger samme utfall.
@@ -513,7 +548,7 @@
   function fellRose(v) { return (v < 0 ? "fallen " : "risen ") + pctMag(v); }
 
   function summaryRowsData() {
-    var be = corePkg("by_exposure"), ae = corePkg("age_by_exposure");
+    var be = measurePkg("by_exposure"), ae = measurePkg("age_by_exposure");
     if (!DB.packages[be].yoy_latest) return null;
     var qcols = DB.packages[be].value_cols;
     var noun = OUTCOME_NOUN[state.outcome];
@@ -675,7 +710,7 @@
     S.rows.forEach(function (row, i) {
       getChart("info-chart-" + i).setOption(
         infoRowOption(row.points, xmin, xmax, i === S.rows.length - 1,
-                      SRC_MAIN),
+                      srcMeasure()),
         { notMerge: true });
       document.getElementById("info-text-" + i).textContent = row.text;
     });
@@ -805,7 +840,9 @@
         fmtNum(g.rel) + "):</strong> since October 2022 (the month before " +
         "ChatGPT), total private-sector employment in the most AI-exposed " +
         "occupations has " + growthVerb(g.g5) + ", versus " +
-        fmtPct(g.g1) + " in the least-exposed occupations.";
+        fmtPct(g.g1) + " in the least-exposed occupations." +
+        (state.measure === "eloundou" ? ""
+          : " (Exposure measure: " + measure().label + ".)");
     } else {
       var grad = Math.abs(g.rel) < 1 ? "svakt " : "";
       el.innerHTML =
@@ -814,7 +851,9 @@
         fmtNum(g.rel) + "):</strong> siden oktober 2022 " +
         "(måneden før ChatGPT) har samlet sysselsetting i privat sektor i " +
         "de mest KI-eksponerte yrkene " + growthVerb(g.g5) + ", mot " +
-        fmtPct(g.g1) + " i de minst eksponerte yrkene.";
+        fmtPct(g.g1) + " i de minst eksponerte yrkene." +
+        (state.measure === "eloundou" ? ""
+          : " (Eksponeringsmål: " + measure().label + ".)");
     }
   }
 
@@ -837,8 +876,10 @@
   // Hovedindeksen foelger justeringsvalget; etter = snittet av de
   // tre siste maanedene.
   function headlineGrowth() {
-    var be = DB.packages.by_exposure;
-    var ser = be.series[adjFor("by_exposure")]._;
+    var pkgName = measure().prefix + "by_exposure";
+    if (!DB.packages[pkgName]) pkgName = "by_exposure";
+    var be = DB.packages[pkgName];
+    var ser = be.series[adjFor(pkgName)]._;
     var iPre0 = be.dates.indexOf("2022-10-01");
     var iPre1 = iPre0;
     var n = be.dates.length;
@@ -860,9 +901,11 @@
     document.getElementById("headline-value").textContent = fmtNum(g.rel);
     document.getElementById("headline-date").textContent = EN
       ? "percentage points, as of " + fmtMonth(g.lastDate) + " (" +
-        ADJ_LABELS[adjFor("by_exposure")].toLowerCase() + ")"
+        ADJ_LABELS[adjFor("by_exposure")].toLowerCase() + ", " +
+        measure().label + ")"
       : "prosentpoeng, per " + fmtMonth(g.lastDate) + " (" +
-        ADJ_LABELS[adjFor("by_exposure")].toLowerCase() + ")";
+        ADJ_LABELS[adjFor("by_exposure")].toLowerCase() + ", " +
+        measure().label + ")";
     var yoyEl = document.getElementById("headline-yoy");
     yoyEl.textContent = EN
       ? "Most exposed: " + fmtPct(g.g5) +
@@ -878,7 +921,12 @@
     // skjuler vi baandet framfor aa vise et intervall som ikke passer.
     var ciEl = document.getElementById("headline-ci");
     if (ciEl) {
-      var u = DB.headline_uncertainty;
+      // Baandet per maal: bootstrappen er kjoert separat for Eloundou-
+      // og Mouchel-kvintilene; mangler maalet, skjules baandet.
+      var byM = DB.headline_uncertainty_by_measure || {};
+      var u = byM[state.measure] !== undefined
+        ? byM[state.measure]
+        : (state.measure === "eloundou" ? DB.headline_uncertainty : null);
       if (u && adjFor("by_exposure") === u.spec) {
         // Setningen om null gjelder bare naar intervallet faktisk
         // dekker null (det har det gjort i alle vintager saa langt).
@@ -919,12 +967,13 @@
     getChart("chart-headline").setOption({
       title: {
         text: (EN ? "AI Labor Market Index (relative growth): "
-                  : "KI-indeksen (relativ vekst): ") + fmtPct(g.rel),
+                  : "KI-indeksen (relativ vekst): ") + fmtPct(g.rel) +
+              measureTag(),
         left: "center", top: 4,
         textStyle: { fontSize: 14, fontWeight: 700, color: "#1d2733" }
       },
       grid: { left: 52, right: 30, top: 74, bottom: 62 },
-      graphic: brandGraphic(SRC_MAIN),
+      graphic: brandGraphic(srcMeasure()),
       tooltip: {
         trigger: "axis", axisPointer: { type: "shadow" },
         valueFormatter: function (v) { return fmtPct(+v); }
@@ -1276,7 +1325,13 @@
     public_wages_age_by_exposure: "Public sector: pay (FTE), age × exposure",
     public_wages_by_age: "Public sector: pay (FTE) by age group",
     occupations: "All occupations: employment by occupation",
-    wages_occupations: "All occupations: pay (FTE) by occupation"
+    wages_occupations: "All occupations: pay (FTE) by occupation",
+    mouchel_by_exposure: "Mouchel measure: by AI exposure",
+    mouchel_age_by_exposure: "Mouchel measure: age × exposure",
+    mouchel_hires_by_exposure: "Mouchel measure: new hires by AI exposure",
+    mouchel_hires_age_by_exposure: "Mouchel measure: new hires, age × exposure",
+    mouchel_wages_by_exposure: "Mouchel measure: pay (FTE) by AI exposure",
+    mouchel_wages_age_by_exposure: "Mouchel measure: pay (FTE), age × exposure"
   } : {
     by_exposure: "Etter KI-eksponering",
     age_by_exposure: "Alder × eksponering",
@@ -1323,7 +1378,13 @@
       "Offentlig sektor: lønn (FTE), alder × eksponering",
     public_wages_by_age: "Offentlig sektor: lønn (FTE) etter aldersgruppe",
     occupations: "Alle yrker: sysselsetting per yrke",
-    wages_occupations: "Alle yrker: lønn (FTE) per yrke"
+    wages_occupations: "Alle yrker: lønn (FTE) per yrke",
+    mouchel_by_exposure: "Mouchel-mål: etter KI-eksponering",
+    mouchel_age_by_exposure: "Mouchel-mål: alder × eksponering",
+    mouchel_hires_by_exposure: "Mouchel-mål: nyansettelser etter KI-eksponering",
+    mouchel_hires_age_by_exposure: "Mouchel-mål: nyansettelser, alder × eksponering",
+    mouchel_wages_by_exposure: "Mouchel-mål: lønn (FTE) etter KI-eksponering",
+    mouchel_wages_age_by_exposure: "Mouchel-mål: lønn (FTE), alder × eksponering"
   };
 
   var DL = EN
@@ -1337,6 +1398,11 @@
       names: ["by_exposure", "age_by_exposure", "by_age", "composition",
               "hires_by_exposure", "hires_age_by_exposure", "hires_by_age",
               "wages_by_exposure", "wages_age_by_exposure", "wages_by_age"] },
+    { title: EN ? "Alternative exposure measure: Mouchel et al. (2026)"
+                : "Alternativt eksponeringsmål: Mouchel et al. (2026)",
+      names: ["mouchel_by_exposure", "mouchel_age_by_exposure",
+              "mouchel_hires_by_exposure", "mouchel_hires_age_by_exposure",
+              "mouchel_wages_by_exposure", "mouchel_wages_age_by_exposure"] },
     { title: EN ? "All occupations (figure 9)" : "Alle yrker (figur 9)",
       names: ["occupations", "wages_occupations"] },
     { title: EN ? "Occupation cases" : "Yrkescase",
@@ -1507,6 +1573,19 @@
       .addEventListener("change", function (e) {
         state.smoothing = +e.target.value; renderAll();
       });
+    var selMeasure = document.getElementById("sel-measure");
+    if (selMeasure) {
+      // ?maal=mouchel i adressen forhaandsvelger maalet, slik at en
+      // lenke kan peke rett paa Mouchel-visningen.
+      var mq = /[?&]maal=(eloundou|mouchel)/.exec(window.location.search);
+      if (mq && MEASURES[mq[1]]) {
+        state.measure = mq[1];
+        selMeasure.value = mq[1];
+      }
+      selMeasure.addEventListener("change", function (e) {
+        state.measure = e.target.value; renderAll();
+      });
+    }
     document.getElementById("sel-adjustment")
       .addEventListener("change", function (e) {
         state.adjustment = e.target.value; renderAll();
@@ -1554,7 +1633,7 @@
 
     // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
     if (document.getElementById("chart-occ-select")) {
-      fetch("/data/occupations.json?v=20260902d")
+      fetch("/data/occupations.json?v=20260903a")
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();
@@ -1603,6 +1682,15 @@
       "substantially faster, as estimated by Eloundou et al. (2024). " +
       "High exposure means AI can be used for much of the job – not " +
       "necessarily that the job disappears.",
+    maal: "Both measures rank occupations by how much of their work " +
+      "large language models can do. Eloundou et al. (2024) is the " +
+      "task-based measure the index has used from the start. Mouchel " +
+      "et al. (2026) is an evidence-grounded measure built from " +
+      "documented AI use. Over the same 397 occupations the two rank " +
+      "almost alike (rank correlation 0.94; two-thirds of occupations " +
+      "in the same quintile), but the quintiles are not identical, so " +
+      "levels differ somewhat. The measure applies to the headline " +
+      "figure and figures 1–2 and the 12-month summary.",
     sektor: "“Private sector” is wage earners outside general " +
       "government and publicly owned enterprises. “Public sector” is " +
       "general government and publicly owned enterprises (institutional " +
@@ -1644,6 +1732,15 @@
       "vesentlig raskere, anslått av Eloundou m.fl. (2024). Høy " +
       "eksponering betyr at KI kan brukes til mye av jobben – ikke " +
       "nødvendigvis at jobben forsvinner.",
+    maal: "Begge målene rangerer yrker etter hvor mye av arbeidet " +
+      "store språkmodeller kan gjøre. Eloundou m.fl. (2024) er det " +
+      "oppgavebaserte målet indeksen har brukt hele tiden. Mouchel " +
+      "m.fl. (2026) er et evidensbasert mål bygget på dokumentert " +
+      "KI-bruk. Over de samme 397 yrkene rangerer de nesten likt " +
+      "(rangkorrelasjon 0,94; to tredjedeler av yrkene i samme " +
+      "kvintil), men kvintilene er ikke identiske, så nivåene avviker " +
+      "noe. Målet gjelder hovedfiguren, figur 1–2 og 12-måneders-" +
+      "oppsummeringen.",
     sektor: "«Privat sektor» er lønnstakere utenfor offentlig " +
       "forvaltning og offentlig eide foretak. «Offentlig sektor» er " +
       "offentlig forvaltning og offentlig eide foretak (institusjonell " +
@@ -1729,7 +1826,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260902d")
+  fetch("/data/dashboard.json?v=20260903a")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();

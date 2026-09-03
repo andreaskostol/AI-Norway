@@ -26,6 +26,13 @@ REPO_DIR = os.path.dirname(DASH_DIR)
 HEADLINE_SE_CSV = os.path.join(
     REPO_DIR, "analysis", "output", "coefficients",
     "coef_recursive_kiindeks_headline.csv")
+# Samme bootstrap for Mouchel-kvintilene (recursive_kiindeks_headline.py
+# mouchel), til maalvelgeren paa nettsiden.
+HEADLINE_SE_CSV_BY_MEASURE = {
+    "eloundou": HEADLINE_SE_CSV,
+    "mouchel": os.path.join(REPO_DIR, "analysis", "output", "coefficients",
+                            "coef_recursive_kiindeks_headline_mouchel.csv"),
+}
 
 ADJUSTMENTS = ["raw", "sa", "percap", "percap_sa"]
 
@@ -71,6 +78,16 @@ TS_PACKAGES = {
     "public_wages_by_exposure": ([], None),
     "public_wages_age_by_exposure": (["exposure_quintile"], None),
     "public_wages_by_age": ([], None),
+    # Maalvelgeren (release 2026-09): hovedkuttene by_exposure og
+    # age_by_exposure med kvintiler fra Mouchel et al. (2026) i stedet
+    # for Eloundou, for alle tre utfall. Samme struktur som motstykkene,
+    # saa app.js bytter bare pakkeprefiks ("mouchel_").
+    "mouchel_by_exposure": ([], None),
+    "mouchel_age_by_exposure": (["exposure_quintile"], None),
+    "mouchel_hires_by_exposure": ([], None),
+    "mouchel_hires_age_by_exposure": (["exposure_quintile"], None),
+    "mouchel_wages_by_exposure": ([], None),
+    "mouchel_wages_age_by_exposure": (["exposure_quintile"], None),
 }
 SNAP_PACKAGES = ["composition", "usage_augmentation_ratio_composition",
                  "usage_automation_ratio_composition",
@@ -236,16 +253,17 @@ def load_occupations(release):
     return out
 
 
-def load_headline_uncertainty():
+def load_headline_uncertainty(path=HEADLINE_SE_CSV):
     """Les bootstrap-standardfeilen for KI-indeksen og returner nyeste
     vintage som en liten dict til dashboard.json. Standardfeilen gjelder
     den sesongjusterte hovedindeksen (spec 'sa'), som er den app.js viser
     som standard. Returnerer None hvis artefakten mangler, slik at
     nettsiden faller tilbake til aa vise indeksen uten baand."""
-    if not os.path.exists(HEADLINE_SE_CSV):
-        print("  headline_uncertainty: artefakt mangler, hopper over")
+    if not os.path.exists(path):
+        print(f"  headline_uncertainty: {os.path.basename(path)} mangler, "
+              "hopper over")
         return None
-    df = pd.read_csv(HEADLINE_SE_CSV)
+    df = pd.read_csv(path)
     last = df.iloc[-1]  # nyeste vintage = siste rad
     ki = float(last["ki"])
     se = float(last["se"])
@@ -281,6 +299,11 @@ def main():
         print(f"  {name}: snapshot")
     data["download_files"] = build_download_manifest(release)
     data["headline_uncertainty"] = load_headline_uncertainty()
+    # Per maal (maalvelgeren): app.js slaar opp paa state.measure og
+    # skjuler baandet for maal uten bootstrap.
+    data["headline_uncertainty_by_measure"] = {
+        m: load_headline_uncertainty(path)
+        for m, path in HEADLINE_SE_CSV_BY_MEASURE.items()}
 
     out_dir = os.path.join(SITE_DIR, "public", "data")
     os.makedirs(out_dir, exist_ok=True)
