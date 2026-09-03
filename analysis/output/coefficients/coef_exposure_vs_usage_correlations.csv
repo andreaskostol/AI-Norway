@@ -1,0 +1,5 @@
+measure,source,unit,n,pearson_r,spearman_rho
+Anthropic 2026 job exposure,Anthropic (2026),STYRK-08 occupation,388,0.72,0.78
+Handa overall usage,Handa et al. (2025),STYRK-08 occupation,352,0.39,0.635
+Microsoft Copilot applicability,Tomlinson et al. (2025),STYRK-08 occupation,393,0.756,0.772
+Google ATLAS representation ratio,Google (2026),SOC major group (22),22,,0.794
