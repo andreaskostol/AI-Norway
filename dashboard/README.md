@@ -133,7 +133,7 @@ endres ikke; en ny måned blir en ny mappe.
 
 - **Cache-parameter:** når du endrer `app.js` eller `style.css`, bump
   versjonsstrengen `?v=YYYYMMDD` i HTML-filene og i `fetch(...)` i
-  `app.js` (nå `v=20260903a`).
+  `app.js` (nå `v=20260903b`).
   Ellers ser brukerne en gammel cachet versjon.
 - **Hardkodede hovedtall:** «Hovedfunn» i `om.html` og «Key findings» i
   `en/about.html` har tall skrevet rett inn i teksten. De oppdateres

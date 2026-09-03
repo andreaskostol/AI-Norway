@@ -1066,6 +1066,11 @@
   // Visningsnavn: SSBs engelske STYRK-08-navn paa /en/, norsk navn
   // ellers (data/ai_exposure/styrk08_names_en.csv via prepare_data).
   function occName(o) { return EN ? (o.name_en || o.name) : o.name; }
+  // Eksponeringskvintil i parentes ved navnet: K1 (minst) til K5 (mest),
+  // Q paa engelsk. Eloundou-kvintilen (v1); tomt for yrker uten skaar.
+  function occQ(o) {
+    return o.quintile == null ? "" : " (" + (EN ? "Q" : "K") + o.quintile + ")";
+  }
   function occShort(name) {
     return name.length > 30 ? name.slice(0, 28).replace(/[ ,]+$/, "") + "…"
                             : name;
@@ -1104,7 +1109,7 @@
       chip.title = occChipTitle(o);
       chip.innerHTML =
         '<i style="background:' + OCC_COLORS[i] + '"></i>' +
-        '<span>' + occName(o) + ' <code>' + code + '</code>' +
+        '<span>' + occName(o) + occQ(o) + ' <code>' + code + '</code>' +
         (o.n_base < OCC_SMALL
           ? ' <span class="occ-small">' + (EN ? "small" : "lite yrke") + '</span>'
           : "") + '</span>' +
@@ -1122,8 +1127,8 @@
     if (!OCC || !document.getElementById("chart-occ-select")) return;
     var defs = state.occs.map(function (code, i) {
       var o = OCC.byCode[code];
-      return { name: occName(o) + " (" + code + ")",
-               label: occShort(occName(o)),
+      return { name: occName(o) + occQ(o) + " · " + code,
+               label: occShort(occName(o)) + occQ(o),
                color: OCC_COLORS[i],
                values: indexSeries(o[occOutcome()][occAdj(o)], OCC.dates) };
     });
@@ -1192,7 +1197,7 @@
       var li = document.createElement("li");
       var b = document.createElement("button");
       b.type = "button";
-      b.innerHTML = "<code>" + o.code + "</code>" + occName(o) +
+      b.innerHTML = "<code>" + o.code + "</code>" + occName(o) + occQ(o) +
         (o.n_base < OCC_SMALL
           ? ' <span class="occ-small">(' + (EN ? "small" : "lite yrke") + ')</span>'
           : "");
@@ -1633,7 +1638,7 @@
 
     // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
     if (document.getElementById("chart-occ-select")) {
-      fetch("/data/occupations.json?v=20260903a")
+      fetch("/data/occupations.json?v=20260903b")
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();
@@ -1826,7 +1831,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260903a")
+  fetch("/data/dashboard.json?v=20260903b")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
