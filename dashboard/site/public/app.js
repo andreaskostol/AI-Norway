@@ -1043,6 +1043,8 @@
       measure().label + " · " + epoch().refLabel;
     var defRef = document.getElementById("headline-def-ref");
     if (defRef) defRef.textContent = epoch().defText;
+    var defSince = document.getElementById("headline-def-since");
+    if (defSince) defSince.textContent = epoch().axisWord;
     var yoyEl = document.getElementById("headline-yoy");
     yoyEl.textContent = EN
       ? "Most exposed: " + fmtPct(g.g5) +
@@ -1789,7 +1791,7 @@
 
     // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
     if (document.getElementById("chart-occ-select")) {
-      fetch("/data/occupations.json?v=20260903c")
+      fetch("/data/occupations.json?v=20260903d")
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();
@@ -1982,7 +1984,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260903c")
+  fetch("/data/dashboard.json?v=20260903d")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
