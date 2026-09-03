@@ -304,6 +304,11 @@ def main():
     data["headline_uncertainty_by_measure"] = {
         m: load_headline_uncertainty(path)
         for m, path in HEADLINE_SE_CSV_BY_MEASURE.items()}
+    # Samme, for referansen Claude Code (snittet av feb. 2024-jan. 2025);
+    # filene har suffikset _claudecode.
+    data["headline_uncertainty_claudecode_by_measure"] = {
+        m: load_headline_uncertainty(path.replace(".csv", "_claudecode.csv"))
+        for m, path in HEADLINE_SE_CSV_BY_MEASURE.items()}
 
     out_dir = os.path.join(SITE_DIR, "public", "data")
     os.makedirs(out_dir, exist_ok=True)

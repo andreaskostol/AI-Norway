@@ -23,6 +23,22 @@ figurlisten), så det punktet krevde ingen endring. Working paperet er
 fortsatt ikke lenket — se «Working paperet er ute» under for
 ferdig siteringsinfo (Andreas oppdaterer siden).
 
+## Status 2026-09-03: referansevalget styrer nå også hovedtallet og punktene
+
+Hovedtallet, kildelinja under det, «Slik beregnes tallet» og alle fire
+punktene under «For den utålmodige leseren» følger nå referansevalget
+(ChatGPT eller Claude Code), i tillegg til utfall, justering og
+eksponeringsmål. Under Claude Code (snittet av feb. 2024–jan. 2025) er
+KI-indeksen +0,3 (Eloundou) og −0,2 (Mouchel), begge med bootstrap-bånd
+som dekker null (−2,2 til +2,7 og −2,5 til +2,1). Bootstrappen tar nå
+to argumenter, mål og referanse; månedsrutinen kjører den fire ganger
+(se README pkt. 5). Punktene regnes fra dataene: samlet privat
+sysselsetting (by_age vektet med composition), KI-indeksen, unge i K5
+mot unge i K1 og mot 31–60 år i K5 (pluss siste tolv måneder), og
+augmentering mot automatisering. `?ref=claudecode` i adressen
+forhåndsvelger referansen. Hovedfunn på om.html/en/about.html er
+fortsatt statisk og gjelder ChatGPT-referansen.
+
 ## Status: hva som er gjort
 
 - `releases/2026-09/` er bygget: alle 40 pakker (30 private + de 10 nye

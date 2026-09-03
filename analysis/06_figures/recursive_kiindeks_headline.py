@@ -30,11 +30,15 @@ Input:  microdata-output/09_occ_agedecade_sektor_kpos_2021m01_2026m06_parsed.csv
 Output: analysis/output/coefficients/coef_recursive_kiindeks_headline.csv
           (vintage, cutoff, g1, g5, ki, se, ci_lo, ci_hi, n_post_months)
 
-Usage:  python analysis/06_figures/recursive_kiindeks_headline.py [eloundou|mouchel]
-        The optional argument picks the exposure measure whose quintiles define
-        Q1/Q5 (default eloundou). With "mouchel" the quintiles come from
+Usage:  python analysis/06_figures/recursive_kiindeks_headline.py [eloundou|mouchel] [chatgpt|claudecode]
+        The first optional argument picks the exposure measure whose quintiles
+        define Q1/Q5 (default eloundou). With "mouchel" the quintiles come from
         styrk08_mouchel_mapping.csv, the output gets the suffix _mouchel, and
         the validation reads the mouchel_by_exposure package instead.
+        The second picks the site's reference epoch (default chatgpt): "claudecode"
+        uses the dashboard's agentic-AI reference, the mean of Feb 2024-Jan 2025
+        (EPOCHS.claudecode in app.js), first vintage 2025-04 (three post months),
+        and adds the suffix _claudecode to the output.
 """
 import sys                                  # command-line argument: exposure measure
 import csv                                  # read input mappings/panel, write coefficient CSV
@@ -48,22 +52,29 @@ BASE = Path(__file__).resolve().parents[2]  # repo root (this file is 2 levels b
 PANEL = BASE / "microdata-output" / "09_occ_agedecade_sektor_kpos_2021m01_2026m06_parsed.csv"  # occ x month counts
 MEASURE = sys.argv[1] if len(sys.argv) > 1 else "eloundou"  # which quintiles define Q1/Q5
 assert MEASURE in ("eloundou", "mouchel"), "measure must be eloundou or mouchel"
+EPOCH = sys.argv[2] if len(sys.argv) > 2 else "chatgpt"  # site reference point
+assert EPOCH in ("chatgpt", "claudecode"), "epoch must be chatgpt or claudecode"
 # Occupation -> quintile mapping and output file depend on the measure; the
 # Eloundou paths are unchanged so existing callers keep working.
 EXP = BASE / "data" / "ai_exposure" / ("styrk08_eloundou_beta_mapping.csv" if MEASURE == "eloundou"
                                        else "styrk08_mouchel_mapping.csv")  # occupation -> quintile
 DJSON = BASE / "dashboard" / "site" / "public" / "data" / "dashboard.json"  # published numbers (validation)
 OUT = BASE / "analysis" / "output" / "coefficients" / (
-    "coef_recursive_kiindeks_headline.csv" if MEASURE == "eloundou"
-    else "coef_recursive_kiindeks_headline_mouchel.csv")  # recursive KI output
+    "coef_recursive_kiindeks_headline"
+    + ("" if MEASURE == "eloundou" else "_mouchel")
+    + ("" if EPOCH == "chatgpt" else "_claudecode") + ".csv")  # recursive KI output
 # Package in dashboard.json that carries this measure's by_exposure series.
 DJSON_PKG = "by_exposure" if MEASURE == "eloundou" else "mouchel_by_exposure"
 
 AGES = {"1", "2", "3", "4"}            # 21-60
 SECTOR = "2"                            # private
-REF_MONTH = "2022-10"                   # before-ChatGPT reference
+# Reference window: a single month before ChatGPT, or the twelve months
+# before Claude Code (the dashboard's agentic-AI epoch) averaged.
+REF_FROM, REF_TO = ("2022-10", "2022-10") if EPOCH == "chatgpt" else ("2024-02", "2025-01")
+REF_MONTH = REF_TO                      # last month of the reference window (post months counted after it)
 SEAS_FROM, SEAS_TO = "2021-01", "2024-12"  # window the seasonal factors are estimated/frozen on
-FIRST_CUT, LAST_CUT = "2025-01", "2026-06"  # first and last vintage data-edge
+FIRST_CUT = "2025-01" if EPOCH == "chatgpt" else "2025-04"  # first vintage (>= 3 post months)
+LAST_CUT = "2026-06"                    # last vintage data-edge
 N_BOOT = 1000                           # bootstrap replications per vintage
 SEED = 12345                            # RNG seed for reproducible bootstrap
 
@@ -125,8 +136,8 @@ def growth(series_by_month, months_sorted, cutoff, adj):
         vals = seasonal_adjust(vals, keep)
     # Month -> (adjusted) level lookup.
     idx = {m: vals[i] for i, m in enumerate(keep)}
-    # Reference (pre-ChatGPT) level.
-    before = idx[REF_MONTH]
+    # Reference level: mean over the reference window (one month for ChatGPT).
+    before = np.mean([idx[m] for m in keep if REF_FROM <= m <= REF_TO])
     # The three most recent months of this vintage.
     last3 = keep[-3:]
     # Average level over the last three months.
@@ -279,12 +290,13 @@ DB = json.load(open(DJSON))
 if DJSON_PKG in DB["packages"]:
     # Pull the by-exposure package: its SA series and date axis.
     be = DB["packages"][DJSON_PKG]; ser = be["series"]["sa"]["_"]; dd = be["dates"]
-    # Index of the reference month and the total number of dates.
-    i0 = dd.index("2022-10-01"); n = len(dd)
+    # Indices of the reference window and the total number of dates.
+    i0 = dd.index(REF_FROM + "-01"); i1 = dd.index(REF_TO + "-01"); n = len(dd)
 
     def gjson(col):
-        # Series for this quintile; growth of last-3 average vs the reference month.
-        v = ser[col]; return 100 * ((v[n - 3] + v[n - 2] + v[n - 1]) / 3 / v[i0] - 1)
+        # Series for this quintile; growth of last-3 average vs the reference window mean.
+        v = ser[col]; base = sum(v[i0:i1 + 1]) / (i1 - i0 + 1)
+        return 100 * ((v[n - 3] + v[n - 2] + v[n - 1]) / 3 / base - 1)
 
     # Published Q1 and Q5 growths.
     gj1, gj5 = gjson("Quintile 1 (least exposed)"), gjson("Quintile 5 (most exposed)")
