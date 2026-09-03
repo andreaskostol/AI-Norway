@@ -11,6 +11,17 @@ lenker fylt ut. Tallet 0,77–0,79 (rangkorrelasjon mot bruksdata fra
 Anthropic, Microsoft og Google) er ikke verifisert av Andreas; Øystein
 bekrefter kilden før publisering.
 
+Kildesjekk 2026-09-03 (Øystein med Claude): tallene fantes bare som
+konsoll-utskrift i de tre scatter-scriptene, aldri lagret. De ligger nå
+i `analysis/output/coefficients/coef_exposure_vs_usage_correlations.csv`
+(commit `1d9b967`). Reproduserte verdier: Anthropic 2026 0,78 (n=388
+yrker), Microsoft 0,77 (n=393 yrker), Google ATLAS 0,79 — men over 22
+SOC-hovedgrupper, ikke yrker, og digitalisert fra en figur i Googles
+rapport. Handa overall, som også er brukstall, ligger på 0,64.
+Avsnittet er derfor omskrevet: Anthropic og Microsoft oppgis med egne
+tall på yrkesnivå, ATLAS nevnes som grovere, og «0,77-0,79» som ett
+intervall for tre kilder er tatt ut.
+
 ---
 
 Juni-tallene er ute på kiindeksen.no. Kommentarfeltet fra forrige
@@ -25,11 +36,14 @@ sektor. https://kiindeksen.no/#offentlig
 Dere spurte om resultatene tåler andre mål for KI-eksponering. Nå kan
 dere sjekke selv: en ny velger lar dere bytte mellom Eloundou-målet vi
 har brukt hele tiden og det evidensbaserte målet fra Mouchel et al.
-(2026). De to rangerer yrker nesten likt (rangkorrelasjon 0,94), og vi
-har i tillegg validert mot faktisk bruksdata fra Anthropic, Microsoft
-og Google (rangkorrelasjon 0,77-0,79). KI-indeksen er +2,3 med
-Mouchel-målet mot +1,7 med Eloundou. Konklusjonen flytter seg ikke
-med målet. https://kiindeksen.no/?maal=mouchel
+(2026). De to rangerer yrker nesten likt (rangkorrelasjon 0,94), og
+KI-indeksen er +2,3 med Mouchel-målet mot +1,7 med Eloundou.
+Konklusjonen flytter seg ikke med målet. Vi har også sammenliknet
+eksponeringsmålet med data om faktisk KI-bruk: Anthropics og
+Microsofts brukstall rangerer yrker omtrent som Eloundou
+(rangkorrelasjon 0,78 og 0,77 på tvers av nesten 400 yrker). Googles
+ATLAS peker samme vei, men er publisert bare for 22 yrkesgrupper, så
+den sammenlikningen er grovere. https://kiindeksen.no/?maal=mouchel
 
 Dere sa at figurene var vanskelige å kjenne seg igjen i. Nå kan dere
 velge deres eget yrke: søk blant 358 yrker, sammenlign opptil seks om

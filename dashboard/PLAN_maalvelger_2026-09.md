@@ -79,11 +79,29 @@ app.js kan parameteriseres med pakkeprefiks («» eller «mouchel_»).
 
 ## Til kommentar-svar-posten
 
-Målvelgeren svarer på spørsmålet om ulike eksponeringsmål. Belegg som
-kan brukes: fire uavhengige kilder for faktisk bruk (Anthropic 2026,
-Microsoft Copilot, Google ATLAS, Handa) rangerer yrker nesten likt som
-Eloundou (rangkorrelasjon 0,77-0,79), og Mouchel-målet gir samme
-kvalitative bilde med KI-indeks +2,3 mot +1,7. Offentlig sektor-modulen
+Målvelgeren svarer på spørsmålet om ulike eksponeringsmål. Mouchel-målet
+gir samme kvalitative bilde med KI-indeks +2,3 mot +1,7.
+
+Rettelse 2026-09-03: setningen her sa først at «fire uavhengige kilder
+(Anthropic 2026, Microsoft Copilot, Google ATLAS, Handa) rangerer yrker
+nesten likt (rangkorrelasjon 0,77-0,79)». Det var feil på to punkter, og
+tallet hadde ingen kilde i repoet. Korrekte tall, nå i
+`analysis/output/coefficients/coef_exposure_vs_usage_correlations.csv`
+(bygget av `analysis/06_figures/make_usage_correlation_table.py`):
+
+| Mål | Enhet | N | Spearman |
+|---|---|---|---|
+| Anthropic 2026 job exposure | STYRK-08-yrke | 388 | 0,78 |
+| Microsoft Copilot applicability | STYRK-08-yrke | 393 | 0,77 |
+| Google ATLAS representation ratio | SOC-hovedgruppe | 22 | 0,79 |
+| Handa overall usage | STYRK-08-yrke | 352 | 0,64 |
+
+To forbehold for offentlig bruk: (1) Handa ligger på 0,64, ikke i
+0,77-0,79-intervallet, så «fire kilder» blir feil; (2) ATLAS-tallet er
+regnet over 22 SOC-hovedgrupper, ikke yrker, og hovedgruppedata er
+digitalisert fra en figur i Googles rapport (Google publiserer ingen
+maskinlesbar fil på yrkesnivå). Det er ikke sammenliknbart med de
+yrkesnivå-tallene og bør ikke settes i samme intervall. Offentlig sektor-modulen
 (figur 13-16) svarer på etterspørselen etter egen offentlig-modul;
 kostnad/saksbehandlingstid/frigjorte årsverk/kvalitet krever data som
 ikke finnes i A-ordningen.
