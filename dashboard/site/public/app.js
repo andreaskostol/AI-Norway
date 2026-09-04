@@ -1132,17 +1132,24 @@
         // Setningen om null gjelder bare naar intervallet faktisk
         // dekker null (det har det gjort i alle vintager saa langt).
         var spansZero = u.ci_lo <= 0 && u.ci_hi >= 0;
+        // Standardfeilen staar foerst: den er tallet en leser trenger
+        // for aa vurdere presisjonen, og laa tidligere bare gjemt i
+        // tittel-attributtet.
+        var se = u.se.toFixed(2);
+        if (!EN) se = se.replace(".", ",");
         ciEl.textContent = EN
-          ? "95% bootstrap interval: " + fmtNum(u.ci_lo) + " to " +
-            fmtNum(u.ci_hi) + " pp" +
+          ? "Standard error " + se + " pp · 95% bootstrap interval: " +
+            fmtNum(u.ci_lo) + " to " + fmtNum(u.ci_hi) + " pp" +
             (spansZero ? " — not statistically distinguishable from zero."
                        : ".")
-          : "95 % bootstrap-intervall: " + fmtNum(u.ci_lo) + " til " +
-            fmtNum(u.ci_hi) + " pp" +
+          : "Standardfeil " + se + " pp · 95 % bootstrap-intervall: " +
+            fmtNum(u.ci_lo) + " til " + fmtNum(u.ci_hi) + " pp" +
             (spansZero ? " — ikke statistisk forskjellig fra null." : ".");
-        ciEl.title = (EN ? "Occupation-cluster bootstrap standard error: "
-                         : "Okkupasjons-klynge-bootstrap, standardfeil: ") +
-          fmtNum(u.se) + " pp";
+        ciEl.title = EN
+          ? "Occupation-cluster bootstrap over the seasonally adjusted " +
+            "headline index"
+          : "Okkupasjons-klynge-bootstrap over den sesongjusterte " +
+            "hovedindeksen";
         ciEl.hidden = false;
       } else {
         ciEl.textContent = "";
@@ -1789,7 +1796,7 @@
 
     // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
     if (document.getElementById("chart-occ-select")) {
-      fetch("/data/occupations.json?v=20260904e")
+      fetch("/data/occupations.json?v=20260904f")
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();
@@ -1983,7 +1990,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260904e")
+  fetch("/data/dashboard.json?v=20260904f")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
