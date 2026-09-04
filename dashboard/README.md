@@ -122,7 +122,9 @@ python analysis/06_figures/recursive_kiindeks_headline.py mouchel claudecode
 python dashboard/site/prepare_data.py
 
 # 4) Rett de hardkodede tallene i «Hovedfunn» (om.html) og «Key findings»
-#    (en/about.html), bump cache-parameteren, forhåndsvis (pkt. 3), deploy (pkt. 4)
+#    (en/about.html). De er skrevet mot STANDARDREFERANSEN, som siden
+#    2026-09-04 er agentisk KI (Claude Code, snitt feb. 2024–jan. 2025) —
+#    ikke ChatGPT. Bump cache-parameteren, forhåndsvis, deploy
 cd "dashboard/site" && flyctl deploy
 ```
 
@@ -135,7 +137,7 @@ endres ikke; en ny måned blir en ny mappe.
 
 - **Cache-parameter:** når du endrer `app.js` eller `style.css`, bump
   versjonsstrengen `?v=YYYYMMDD` i HTML-filene og i `fetch(...)` i
-  `app.js` (nå `v=20260903d`).
+  `app.js` (nå `v=20260904a`).
   Ellers ser brukerne en gammel cachet versjon.
 - **Hardkodede hovedtall:** «Hovedfunn» i `om.html` og «Key findings» i
   `en/about.html` har tall skrevet rett inn i teksten. De oppdateres

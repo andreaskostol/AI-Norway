@@ -35,6 +35,11 @@
   // Stanford-dashboardets palett i kvintilrekkefoelge
   // (jf. canaries_dashboard_oversikt.md).
   var QUINT_COLORS = ["#8C1515", "#577590", "#E54A2B", "#E6A817", "#401415"];
+  var GAP_COLORS = [QUINT_COLORS[0], "#cfccc4", "#bdb9b0", "#aba69c",
+                    QUINT_COLORS[4]];
+  // Hvitt tall inni en lysegraa prikk blir uleselig; de graa faar
+  // moerk skrift i stedet.
+  var GAP_LABEL = ["#fff", "#4a463f", "#4a463f", "#3d3a34", "#fff"];
   var AGE_COLORS = { "21-30": "#8C1515", "31-40": "#E6A817",
                      "41-50": "#577590", "51-60": "#401415" };
   var USE_COLORS = ["#9D9C97", "#8C1515", "#577590", "#E54A2B",
@@ -73,7 +78,7 @@
   // Figurene viser raa serier (som DEL); sesong- og befolknings-
   // justerte varianter finnes kun i de nedlastbare filene.
   var state = { outcome: "employment", adjustment: "sa", measure: "eloundou",
-                smoothing: 6, epoch: "chatgpt", ageFacet: "21-30",
+                smoothing: 6, epoch: "claudecode", ageFacet: "21-30",
                 publicAgeFacet: "21-30",
                 usagePattern: "Automation", usageAge: "All ages" };
 
@@ -84,6 +89,7 @@
     chatgpt: {
       base: "2022-11-01",
       baseLabel: EN ? "Nov 2022" : "nov. 2022",
+      baseLong: EN ? "November 2022" : "november 2022",
       mark: "2022-11-30",
       markLabel: EN ? "ChatGPT launch" : "ChatGPT-lansering",
       preFrom: "2022-10-01", preTo: "2022-10-01",
@@ -92,6 +98,8 @@
         : "nivået i oktober 2022 (måneden før ChatGPT)",
       refShort: EN ? "before ChatGPT (October 2022)"
                    : "før ChatGPT (oktober 2022)",
+      preShort: EN ? "October 2022" : "oktober 2022",
+      eraWord: "ChatGPT",
       axisWord: "ChatGPT",
       refLabel: EN ? "reference: ChatGPT (Oct 2022)"
                    : "referanse: ChatGPT (okt. 2022)",
@@ -102,6 +110,15 @@
         : "nivået i oktober 2022, måneden rett før ChatGPT. Vi bruker " +
           "oktober 2022 som referanse for å unngå den ulike " +
           "gjeninnhentingen etter pandemien i 2021–2022.",
+      refNote: EN
+        ? "The steep rise in 2021–2022 (shaded area) is the labor " +
+          "market's post-pandemic recovery; because it lifted all groups, " +
+          "October 2022 — not the whole period — is used as the " +
+          "reference for the AI Labor Market Index."
+        : "Den bratte oppgangen i 2021–2022 (skyggelagt felt) er " +
+          "gjeninnhentingen i arbeidsmarkedet etter pandemien; fordi den " +
+          "løftet alle gruppene, brukes oktober 2022 — ikke hele " +
+          "perioden — som referanse for KI-indeksen.",
       note: EN
         ? "Index = 100 in November 2022 (launch of ChatGPT)"
         : "Indeks = 100 i november 2022 (lansering av ChatGPT)"
@@ -109,6 +126,7 @@
     claudecode: {
       base: "2025-02-01",
       baseLabel: EN ? "Feb 2025" : "feb. 2025",
+      baseLong: EN ? "February 2025" : "februar 2025",
       mark: "2025-02-24",
       markLabel: EN ? "Claude Code launch" : "Claude Code-lansering",
       preFrom: "2024-02-01", preTo: "2025-01-01",
@@ -119,6 +137,9 @@
           "Claude Code (februar 2024–januar 2025)",
       refShort: EN ? "before Claude Code (February 2024–January 2025)"
                    : "før Claude Code (februar 2024–januar 2025)",
+      preShort: EN ? "the year before Claude Code"
+                   : "året før Claude Code",
+      eraWord: EN ? "agentic AI" : "agentisk KI",
       axisWord: "Claude Code",
       refLabel: EN ? "reference: Claude Code (Feb 2024–Jan 2025 average)"
                    : "referanse: Claude Code (snitt feb. 2024–jan. 2025)",
@@ -127,6 +148,17 @@
           "2024–January 2025), the launch of agentic AI."
         : "gjennomsnittet av de tolv månedene før Claude Code (februar " +
           "2024–januar 2025), lanseringen av agentisk KI.",
+      refNote: EN
+        ? "The reference is the twelve months before Claude Code, so the " +
+          "comparison is with the labor market as it was just before " +
+          "agentic AI — well after the post-pandemic recovery in " +
+          "2021–2022 (shaded area). Select ChatGPT above to measure " +
+          "from October 2022 instead."
+        : "Referansen er de tolv månedene før Claude Code, slik at " +
+          "sammenligningen er med arbeidsmarkedet slik det var rett før " +
+          "agentisk KI — godt etter gjeninnhentingen i 2021–2022 " +
+          "(skyggelagt felt). Velg ChatGPT øverst for å måle fra " +
+          "oktober 2022 i stedet.",
       note: EN
         ? "Index = 100 in February 2025 (launch of Claude Code, agentic AI)"
         : "Indeks = 100 i februar 2025 (lansering av Claude Code, " +
@@ -541,7 +573,7 @@
       { notMerge: true });
   }
 
-  // ---------- Oppsummeringen: punktdiagram à la Stanford-infografikken
+  // ---------- Hovedfiguren: punktdiagram à la Stanford-infografikken
   // (tre rader paa felles prosentakse, dotter per gruppe, tekst ved
   // siden av hver rad). ----------
 
@@ -569,64 +601,65 @@
   function verbNo(v) { return (v < 0 ? "falt " : "økt ") + pctMag(v); }
   function fellRose(v) { return (v < 0 ? "fallen " : "risen ") + pctMag(v); }
 
+  // Hovedfiguren: vekst etter vs. foer valgt referanse, samme
+  // maal som hovedtallet (snittet av de tre siste maanedene mot
+  // referansevinduet). Prikkene er kvintiler; avstanden mellom kvintil
+  // 1 og 5 i hver rad ER KI-indeksen for den gruppen, og den skrives
+  // ogsaa ut ved siden av raden.
+  function ratioGrowth(pkg, facetKey, col) {
+    var g = pkgGrowth(pkg, facetKey, col);
+    return g == null ? null : g / 100;
+  }
+  // Indeksen for en rad: relativ vekst mellom mest og minst eksponerte.
+  function rowIndex(points) {
+    var g1 = points[0] ? points[0].value : null;
+    var g5 = points[points.length - 1] ? points[points.length - 1].value
+                                       : null;
+    if (g1 == null || g5 == null) return null;
+    return 100 * ((1 + g5) / (1 + g1) - 1);
+  }
+
   function summaryRowsData() {
     var be = measurePkg("by_exposure"), ae = measurePkg("age_by_exposure");
-    if (!DB.packages[be].yoy_latest) return null;
     var qcols = DB.packages[be].value_cols;
-    var noun = OUTCOME_NOUN[state.outcome];
-    var aux = OUTCOME_AUX[state.outcome];
 
     function quintPoints(getVal) {
       return qcols.map(function (c, i) {
         return { name: lab(c), inside: String(i + 1),
                  above: i === 0 ? LEAST_EXP
                         : (i === qcols.length - 1 ? MOST_EXP : null),
-                 color: QUINT_COLORS[i], value: getVal(c) };
+                 color: GAP_COLORS[i], labelColor: GAP_LABEL[i],
+                 value: getVal(c) };
       });
     }
 
-    var r1 = quintPoints(function (c) { return yoyOf(be, "_", c); });
-    var r2 = quintPoints(function (c) { return yoyOf(ae, c, "21-30"); });
-
-    function v(points, i) { return points[i] ? points[i].value : null; }
+    var r1 = quintPoints(function (c) { return ratioGrowth(be, "_", c); });
+    var r2 = quintPoints(function (c) { return ratioGrowth(ae, c, "21-30"); });
+    if (r1[0].value == null) return null;
 
     var rows;
     if (EN) {
       rows = [
-        { label: "All age groups,<br>by exposure", points: r1,
-          text: "Across all ages, " + noun +
-            " in the most AI-exposed occupations " + aux + " " +
-            fellRose(v(r1, 4)) + " over the past twelve months, versus " +
-            signedPct(v(r1, 0)) + " in the least exposed." },
-        { label: "Young (21–30),<br>by exposure", points: r2,
-          text: "Among the youngest (21–30), " + noun +
-            " in the most exposed occupations " + aux + " " +
-            fellRose(v(r2, 4)) + ", while the least exposed " + aux + " " +
-            fellRose(v(r2, 0)) + "." }
+        { label: "All age groups,<br>by exposure", points: r1 },
+        { label: "Young (21–30),<br>by exposure", points: r2 }
       ];
     } else {
       rows = [
-        { label: "Alle aldersgrupper,<br>etter eksponering", points: r1,
-          text: "Blant arbeidstakere i alle aldre har " + noun +
-            " i de mest KI-eksponerte yrkene " + verbNo(v(r1, 4)) +
-            " siste tolv måneder, mot " + signedPct(v(r1, 0)) +
-            " i de minst eksponerte." },
-        { label: "Unge (21–30 år),<br>etter eksponering", points: r2,
-          text: "Blant de yngste (21–30 år) har " + noun +
-            " i de mest eksponerte yrkene " + verbNo(v(r2, 4)) +
-            ", mens de minst eksponerte har " + verbNo(v(r2, 0)) + "." }
+        { label: "Alle aldersgrupper,<br>etter eksponering", points: r1 },
+        { label: "Unge (21–30 år),<br>etter eksponering", points: r2 }
       ];
     }
-    return { date: DB.packages[be].yoy_latest.date, rows: rows };
+    rows.forEach(function (row) { row.index = rowIndex(row.points); });
+    return { rows: rows };
   }
 
-  function infoRowOption(points, xmin, xmax, isLast, src) {
+  function infoRowOption(points, xmin, xmax, isLast, src, aboveOnLast) {
     var pts = points.filter(function (p) { return p.value != null; });
     var vals = pts.map(function (p) { return 100 * p.value; });
     var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
     return {
       animationDuration: 250,
-      grid: { left: 10, right: 10, top: 44,
+      grid: { left: 28, right: 28, top: 44,
               bottom: isLast ? 44 : 6 },
       graphic: isLast ? brandGraphic(src) : [],
       tooltip: {
@@ -671,14 +704,15 @@
               fullName: p.name,
               itemStyle: { color: p.color },
               label: { show: p.inside !== "", position: "inside",
-                       formatter: p.inside, color: "#fff",
+                       formatter: p.inside, color: p.labelColor || "#fff",
                        fontWeight: 700, fontSize: 10 }
             };
           })
         },
-        { // roterte navn over punktene
+        { // roterte navn over punktene, bare paa nederste rad
           type: "scatter", z: 2, symbolSize: 0, silent: true,
-          data: pts.filter(function (p) { return p.above; })
+          data: pts.filter(function (p) {
+              return p.above && (isLast || !aboveOnLast); })
             .map(function (p) {
               return {
                 value: [100 * p.value, 0],
@@ -695,25 +729,23 @@
     };
   }
 
-  function renderSummary() {
+  // Hovedfiguren: to rader med prikker, alle aldre oeverst og unge
+  // 21-30 under. Avstanden mellom kvintil 1 og 5 i hver rad er
+  // KI-indeksen for gruppen, og den skrives ut ved siden av raden.
+  function renderHeadlineRows() {
     var S = summaryRowsData();
-    var holder = document.getElementById("summary-infographic");
+    var holder = document.getElementById("headline-rows");
+    if (!holder) return;
     if (!S) { holder.innerHTML = ""; return; }
-
-    document.getElementById("summary-subtitle").textContent = EN
-      ? "Change over the past twelve months by group (" +
-        OUTCOME_NOUN[state.outcome] + "), as of " + fmtMonth(S.date) + "."
-      : "Endring siste tolv måneder per gruppe (" +
-        OUTCOME_NOUN[state.outcome] + "), per " + fmtMonth(S.date) + ".";
 
     if (!holder.children.length) {
       S.rows.forEach(function (row, i) {
         var div = document.createElement("div");
-        div.className = "info-row";
+        div.className = "info-row info-row-hero";
         div.innerHTML =
-          '<div class="info-label">' + row.label + "</div>" +
-          '<div class="info-chart" id="info-chart-' + i + '"></div>' +
-          '<p class="info-text" id="info-text-' + i + '"></p>';
+          '<div class="info-label"><span id="info-lab-' + i + '"></span>' +
+          '<span class="info-index" id="info-index-' + i + '"></span></div>' +
+          '<div class="info-chart" id="info-chart-' + i + '"></div>';
         holder.appendChild(div);
       });
     }
@@ -732,9 +764,12 @@
     S.rows.forEach(function (row, i) {
       getChart("info-chart-" + i).setOption(
         infoRowOption(row.points, xmin, xmax, i === S.rows.length - 1,
-                      srcMeasure()),
+                      srcMeasure(), true),
         { notMerge: true });
-      document.getElementById("info-text-" + i).textContent = row.text;
+      document.getElementById("info-lab-" + i).innerHTML = row.label;
+      document.getElementById("info-index-" + i).textContent =
+        row.index == null ? ""
+        : (EN ? "Index: " : "KI-indeksen: ") + fmtNum(row.index);
     });
   }
 
@@ -887,7 +922,9 @@
   function renderQuickSummary() {
     var g = headlineGrowth();
     var ref = epoch().refShort;
-    var vs = (EN ? "measured against " : "målt mot ") + epoch().preText;
+    // Punkt 2 skriver referansen ut i sin helhet; punkt 3 og 4 bruker
+    // kortformen, slik at den lange parentesen ikke gjentas fire ganger.
+    var vs = (EN ? "measured against " : "målt mot ") + epoch().preShort;
     var measNote = state.measure === "eloundou" ? ""
       : (EN ? " (Exposure measure: " : " (Eksponeringsmål: ") +
         measure().label + ".)";
@@ -1092,98 +1129,20 @@
       }
     }
 
-    var bars = EN ? [
-      { name: "Least-exposed occupations\n(quintile 1)", value: g.g1,
-        color: "#577590" },
-      { name: "Most-exposed occupations\n(quintile 5)", value: g.g5,
-        color: "#8C1515" }
-    ] : [
-      { name: "Minst eksponerte yrker\n(kvintil 1)", value: g.g1,
-        color: "#577590" },
-      { name: "Mest eksponerte yrker\n(kvintil 5)", value: g.g5,
-        color: "#8C1515" }
-    ];
-    // Tallest bar (in absolute value) — used to decide whether each bar is
-    // long enough to carry its value label inside; short bars get it outside.
-    var maxAbs = Math.max.apply(null, bars.map(function (b) {
-      return Math.abs(b.value); })) || 1;
-    getChart("chart-headline").setOption({
-      title: {
-        text: (EN ? "AI Labor Market Index (relative growth): "
-                  : "KI-indeksen (relativ vekst): ") + fmtPct(g.rel) +
-              measureTag(),
-        left: "center", top: 4,
-        textStyle: { fontSize: 14, fontWeight: 700, color: "#1d2733" }
-      },
-      grid: { left: 52, right: 30, top: 74, bottom: 62 },
-      graphic: brandGraphic(srcMeasure()),
-      tooltip: {
-        trigger: "axis", axisPointer: { type: "shadow" },
-        valueFormatter: function (v) { return fmtPct(+v); }
-      },
-      xAxis: {
-        type: "category",
-        data: bars.map(function (b) { return b.name; }),
-        axisLabel: { interval: 0, fontSize: 11.5, lineHeight: 15,
-                     color: "#2a2a2a" },
-        axisTick: { show: false },
-        // Keep the axis line and the group names pinned to the bottom of the
-        // grid even when every bar is negative (zero line would otherwise jump
-        // to the top and the names would collide with the value labels).
-        axisLine: { onZero: false, lineStyle: { color: "#cfcdc6" } }
-      },
-      yAxis: {
-        type: "value",
-        name: (EN ? "Growth after vs. before " : "Vekst etter vs. før ") +
-              epoch().axisWord + ", %",
-        nameTextStyle: { color: "#5a5a5a", align: "left" },
-        nameGap: 18,
-        axisLabel: { color: "#5a5a5a",
-                     formatter: function (v) {
-                       return v + (EN ? "%" : " %"); } },
-        splitLine: { lineStyle: { color: "#e9e7e0" } }
-      },
-      series: [{
-        type: "bar", barWidth: "44%",
-        data: bars.map(function (b) {
-          // Put the value inside the bar when it is at least half the height
-          // of the tallest bar (room for the label, white text on the fill);
-          // otherwise place it just outside the bar end in dark text.
-          var inside = Math.abs(b.value) >= maxAbs * 0.5;
-          return {
-            value: Math.round(b.value * 10) / 10,
-            name: b.name,
-            itemStyle: { color: b.color },
-            label: {
-              show: true,
-              position: inside ? "inside" : (b.value >= 0 ? "top" : "bottom"),
-              distance: 6,
-              fontWeight: 700, fontSize: 13,
-              color: inside ? "#fff" : "#2a2a2a",
-              formatter: function (p) { return fmtPct(p.value); }
-            }
-          };
-        })
-      }]
-    }, { notMerge: true });
-
-    var isCg = state.epoch === "chatgpt";
+    // Selve figuren er de to prikkradene (renderHeadlineRows), ikke
+    // lenger et soylediagram: da kan indeksen leses av for alle aldre
+    // og for de unge i samme bilde.
     document.getElementById("kpi-note").textContent = EN
-      ? "Each bar shows how much employment in the group has grown " +
-        "relative to " + epoch().preText + ", measured as the average of " +
-        "the last three months. " +
-        (isCg ? "October 2022 is used as the reference to avoid the " +
-                "differential post-pandemic recovery in 2021–2022. " : "") +
-        "The AI Labor Market Index is the difference between the bars. " +
-        "Explore the breakdown by quintile, age and occupation in the " +
-        "figures below."
-      : "Hver søyle viser hvor mye sysselsettingen i gruppen har vokst " +
+      ? "Each row shows employment growth by exposure quintile, measured " +
+        "against " + epoch().preText + ", as the average of the last three " +
+        "months. The distance between quintile 1 and quintile 5 is the " +
+        "index for that group. Explore the breakdown by quintile, age " +
+        "and occupation in the figures below."
+      : "Hver rad viser sysselsettingsveksten per eksponeringskvintil, " +
         "målt mot " + epoch().preText + ", som snittet av de tre siste " +
-        "månedene. " +
-        (isCg ? "Oktober 2022 brukes som referanse for å unngå den ulike " +
-                "gjeninnhentingen etter pandemien i 2021–2022. " : "") +
-        "KI-indeksen er forskjellen mellom søylene. Utforsk fordelingen " +
-        "på kvintiler, alder og yrker i figurene under.";
+        "månedene. Avstanden mellom kvintil 1 og kvintil 5 er indeksen " +
+        "for den gruppen. Utforsk fordelingen på kvintiler, alder og " +
+        "yrker i figurene under.";
   }
 
   // ---------- Figur 9: velg yrker selv ----------
@@ -1659,9 +1618,25 @@
     });
   }
 
+  // Teksten under figur 1 navngir referansemaaneden og epoken. Den
+  // skrives fra EPOCHS slik at den foelger referansevelgeren i stedet
+  // for aa staa fast paa november 2022.
+  function renderRefTexts() {
+    var ep = epoch();
+    var set = function (id, txt) {
+      var el = document.getElementById(id);
+      if (el) el.textContent = txt;
+    };
+    set("fig1-base", ep.baseLong);
+    set("fig1-since", ep.axisWord);
+    set("fig1-refnote", ep.refNote);
+  }
+
   function renderAll() {
     renderOutcomeTitles();
+    renderRefTexts();
     renderHeadline();
+    renderHeadlineRows();
     renderQuickSummary();
     renderByExposure();
     renderAgeByExposure();
@@ -1671,7 +1646,6 @@
     renderUsage();
     renderPublic();
     renderOccChart();
-    renderSummary();
     renderUsageInfographic();
   }
 
@@ -1742,7 +1716,11 @@
         state.adjustment = e.target.value; renderAll();
       });
     var selEpoch = document.getElementById("sel-epoch");
-    // ?ref=claudecode i adressen forhaandsvelger referansen.
+    // Nedtrekkslista foelger standardvalget i state, slik at HTML og
+    // JS ikke kan komme i utakt.
+    selEpoch.value = state.epoch;
+    document.getElementById("idx-note").textContent = epoch().note;
+    // ?ref=chatgpt i adressen forhaandsvelger den gamle referansen.
     var rq = /[?&]ref=(chatgpt|claudecode)/.exec(window.location.search);
     if (rq && EPOCHS[rq[1]]) {
       state.epoch = rq[1];
@@ -1791,7 +1769,7 @@
 
     // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
     if (document.getElementById("chart-occ-select")) {
-      fetch("/data/occupations.json?v=20260903d")
+      fetch("/data/occupations.json?v=20260904a")
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();
@@ -1827,10 +1805,10 @@
       "fluctuations by showing the average of the last 3 or 6 months. " +
       "This makes trends easier to see, but the average lags turning " +
       "points somewhat.",
-    referanse: "The point in time the series are measured from. ChatGPT " +
-      "(November 2022) marks the breakthrough of large language models; " +
-      "Claude Code (February 2025) the breakthrough of “agentic” AI that " +
-      "carries out longer tasks on its own.",
+    referanse: "The point in time the series are measured from. Claude " +
+      "Code (February 2025) marks the breakthrough of “agentic” AI that " +
+      "carries out longer tasks on its own, and is the default; ChatGPT " +
+      "(November 2022) marks the breakthrough of large language models.",
     kvintil: "Occupations are sorted by AI exposure and split into five " +
       "equal-sized groups (“quintiles”). Quintile 1 is the fifth of " +
       "occupations with the lowest exposure, quintile 5 the fifth with " +
@@ -1848,7 +1826,7 @@
       "almost alike (rank correlation 0.94; two-thirds of occupations " +
       "in the same quintile), but the quintiles are not identical, so " +
       "levels differ somewhat. The measure applies to the headline " +
-      "figure and figures 1–2 and the 12-month summary.",
+      "figure and figures 1–2.",
     sektor: "“Private sector” is wage earners outside general " +
       "government and publicly owned enterprises. “Public sector” is " +
       "general government and publicly owned enterprises (institutional " +
@@ -1856,10 +1834,11 @@
       "A-ordningen). Both use the same national exposure quintiles, but " +
       "the occupations within each quintile differ. The sectors are " +
       "therefore shown separately.",
-    indeks: "Every series is set to 100 in the reference month " +
-      "(November 2022, when ChatGPT launched). 105 means 5% more than " +
-      "then, 95 means 5% fewer. This lets large and small groups be " +
-      "compared directly."
+    indeks: "Every series is set to 100 in the reference month you " +
+      "select at the top: February 2025 (Claude Code, agentic AI) by " +
+      "default, November 2022 if you switch to ChatGPT. 105 means 5% " +
+      "more than in that month, 95 means 5% fewer. This lets large and " +
+      "small groups be compared directly."
   } : {
     utfall: "«Sysselsetting» er antall lønnstakere i gruppen. " +
       "«Nyansettelser» er antall nye jobber som startet i måneden. " +
@@ -1877,10 +1856,10 @@
       "måned til måned ved å vise gjennomsnittet av de siste 3 eller 6 " +
       "månedene. Det gjør trendene lettere å se, men snittet henger " +
       "litt etter vendepunktene.",
-    referanse: "Tidspunktet seriene regnes fra. ChatGPT (november " +
-      "2022) markerer gjennombruddet for språkmodeller; Claude Code " +
-      "(februar 2025) gjennombruddet for «agentisk» KI som utfører " +
-      "lengre oppgaver på egen hånd.",
+    referanse: "Tidspunktet seriene regnes fra. Claude Code (februar " +
+      "2025) markerer gjennombruddet for «agentisk» KI som utfører " +
+      "lengre oppgaver på egen hånd, og er standardvalget; ChatGPT " +
+      "(november 2022) markerer gjennombruddet for språkmodeller.",
     kvintil: "Yrkene er sortert etter KI-eksponering og delt i fem " +
       "like store grupper («kvintiler»). Kvintil 1 er femtedelen av " +
       "yrkene med lavest eksponering, kvintil 5 femtedelen med " +
@@ -1897,8 +1876,7 @@
       "KI-bruk. Over de samme 397 yrkene rangerer de nesten likt " +
       "(rangkorrelasjon 0,94; to tredjedeler av yrkene i samme " +
       "kvintil), men kvintilene er ikke identiske, så nivåene avviker " +
-      "noe. Målet gjelder hovedfiguren, figur 1–2 og 12-måneders-" +
-      "oppsummeringen.",
+      "noe. Målet gjelder hovedfiguren og figur 1–2.",
     sektor: "«Privat sektor» er lønnstakere utenfor offentlig " +
       "forvaltning og offentlig eide foretak. «Offentlig sektor» er " +
       "offentlig forvaltning og offentlig eide foretak (institusjonell " +
@@ -1906,10 +1884,11 @@
       "bruker de samme nasjonale eksponeringskvintilene, men yrkene " +
       "innenfor hver kvintil er ulike. Sektorene vises derfor hver for " +
       "seg.",
-    indeks: "Alle serier settes til 100 i referansemåneden (november " +
-      "2022, da ChatGPT ble lansert). 105 betyr 5 % flere enn da, 95 " +
-      "betyr 5 % færre. Slik kan store og små grupper sammenlignes " +
-      "direkte."
+    indeks: "Alle serier settes til 100 i referansemåneden du velger " +
+      "øverst: februar 2025 (Claude Code, agentisk KI) som standard, " +
+      "november 2022 hvis du bytter til ChatGPT. 105 betyr 5 % flere " +
+      "enn den måneden, 95 betyr 5 % færre. Slik kan store og små " +
+      "grupper sammenlignes direkte."
   };
 
   document.addEventListener("click", function (e) {
@@ -1984,7 +1963,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260903d")
+  fetch("/data/dashboard.json?v=20260904a")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();

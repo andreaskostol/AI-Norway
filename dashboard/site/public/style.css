@@ -183,7 +183,11 @@ a { color: var(--accent); }
   line-height: 1.45;
   color: var(--ink-soft);
 }
-.chart-headline { height: 320px; }
+.headline-rows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 .headline-def .def-details { margin-top: 0.45rem; }
 .headline-def .def-details summary {
   cursor: pointer;
@@ -395,7 +399,7 @@ a { color: var(--accent); }
   .site-nav { display: none; }
 }
 
-/* Oppsummerings-infografikk (à la Stanford-PNG-en) */
+/* Punktrader à la Stanford-infografikken: hovedfiguren og KI-bruk */
 .infographic {
   background: transparent;
   border: none;
@@ -415,6 +419,15 @@ a { color: var(--accent); }
   font-weight: 600;
   line-height: 1.35;
 }
+/* KI-indeksen for raden: avstanden mellom kvintil 1 og 5, skrevet ut */
+.info-index {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
 .info-chart { height: 130px; }
 .info-row:last-child .info-chart { height: 150px; }
 .info-text {
@@ -425,6 +438,16 @@ a { color: var(--accent); }
 @media (max-width: 860px) {
   .info-row { grid-template-columns: 1fr; gap: 0.2rem; }
   .info-label { margin-top: 0.5rem; }
+}
+/* Radene i hovedfiguren: bare etikett og prikker, ingen prosakolonne.
+   Maa staa etter .info-row for aa overstyre tre-kolonners-oppsettet. */
+.info-row-hero {
+  grid-template-columns: 165px minmax(0, 1fr);
+}
+.info-row-hero .info-chart { height: 132px; }
+.info-row-hero:last-child .info-chart { height: 158px; }
+@media (max-width: 860px) {
+  .info-row-hero { grid-template-columns: 1fr; }
 }
 .chart-footnote {
   font-size: 0.8rem;
