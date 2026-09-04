@@ -130,19 +130,22 @@ a { color: var(--accent); }
   color: var(--ink-soft);
   margin-bottom: 1.4rem;
 }
-.hero-grid {
-  display: grid;
-  grid-template-columns: 300px 1fr;
-  gap: 0.9rem;
-  align-items: stretch;
-}
-.headline-card {
-  background: transparent;
-  border: none;
-  border-radius: 10px;
-  padding: 1rem 1.2rem;
+.headline-top {
   display: flex;
-  flex-direction: column;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.6rem;
+  margin-top: 0.9rem;
+}
+.headline-num {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+}
+.headline-meta { text-align: right; }
+@media (max-width: 860px) {
+  .headline-meta { text-align: left; }
 }
 .headline-label {
   font-size: 0.8rem;
@@ -162,7 +165,6 @@ a { color: var(--accent); }
   color: var(--ink-soft);
 }
 .headline-yoy {
-  margin-top: 0.55rem;
   font-size: 0.95rem;
   font-weight: 700;
 }
@@ -176,18 +178,7 @@ a { color: var(--accent); }
   font-variant-numeric: tabular-nums;
 }
 .headline-ci[hidden] { display: none; }
-.headline-def {
-  margin-top: auto;
-  padding-top: 0.7rem;
-  font-size: 0.8rem;
-  line-height: 1.45;
-  color: var(--ink-soft);
-}
-.headline-rows {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+.headline-rows { margin-top: 0.5rem; }
 .def-details { margin-top: 0.45rem; }
 .def-details summary {
   cursor: pointer;
@@ -198,13 +189,12 @@ a { color: var(--accent); }
 /* Under figuren, i samme lille grad som noten over den */
 .def-details-below {
   margin-top: 0.35rem;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--ink-soft);
-  line-height: 1.5;
+  line-height: 1.55;
 }
-@media (max-width: 760px) {
-  .hero-grid { grid-template-columns: 1fr; }
-}
+.def-details-below p { margin: 0.5rem 0 0; }
+.def-details-below p:first-of-type { margin-top: 0.35rem; }
 .kpi-note {
   margin: 0.6rem 0 0;
   font-size: 0.8rem;
@@ -217,14 +207,18 @@ a { color: var(--accent); }
   background: transparent;
   border: none;
   border-radius: 10px;
-  padding: 0.9rem 1.2rem;
+  padding: 0.9rem 0 0.2rem;
+  border-top: 1px solid var(--line);
 }
-.quick-summary h3 {
+.quick-summary > summary {
+  cursor: pointer;
   margin: 0 0 0.4rem;
   font-size: 1.35rem;
   font-weight: 700;
   color: var(--ink);
 }
+.quick-summary > summary:hover { color: var(--accent); }
+.quick-summary[open] > summary { margin-bottom: 0.6rem; }
 .quick-scope {
   margin: 0 0 0.6rem;
   font-size: 0.95rem;

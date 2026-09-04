@@ -661,6 +661,27 @@
     var pts = points.filter(function (p) { return p.value != null; });
     var vals = pts.map(function (p) { return 100 * p.value; });
     var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+    // Prikker som ligger naermere hverandre enn én prikkbredde ville
+    // ligget oppa hverandre; da forsvinner den ene helt (det skjer naar
+    // indeksen er null og kvintil 1 og 5 havner paa samme verdi). Slike
+    // grupper spres vertikalt. Bare y flyttes - verdien paa x-aksen,
+    // altsaa selve tallet, staar urort.
+    var near = (xmax - xmin) * 0.02;
+    var yOf = {};
+    var sorted = pts.slice().sort(function (a, b) { return a.value - b.value; });
+    var group = [];
+    var flush = function () {
+      group.forEach(function (p, k) {
+        yOf[p.inside] = group.length < 2 ? 0
+          : (k - (group.length - 1) / 2) * 0.5;
+      });
+      group = [];
+    };
+    sorted.forEach(function (p, k) {
+      if (k && 100 * (p.value - sorted[k - 1].value) >= near) flush();
+      group.push(p);
+    });
+    flush();
     return {
       animationDuration: 250,
       grid: { left: 28, right: 28, top: 44,
@@ -704,9 +725,10 @@
           type: "scatter", z: 3, symbolSize: 17,
           data: pts.map(function (p) {
             return {
-              value: [100 * p.value, 0],
+              value: [100 * p.value, yOf[p.inside] || 0],
               fullName: p.name,
-              itemStyle: { color: p.color },
+              itemStyle: { color: p.color, borderColor: "#fffdf8",
+                           borderWidth: 1.5 },
               label: { show: p.inside !== "", position: "inside",
                        formatter: p.inside, color: p.labelColor || "#fff",
                        fontWeight: 700, fontSize: 10 }
@@ -762,8 +784,7 @@
     });
     var lo = Math.min.apply(null, all), hi = Math.max.apply(null, all);
     var pad = Math.max(0.4, (hi - lo) * 0.22);
-    var xmin = Math.floor((lo - pad) * 2) / 2;
-    var xmax = Math.ceil((hi + pad) * 2) / 2;
+    var xmin = Math.floor(lo - pad), xmax = Math.ceil(hi + pad);
 
     S.rows.forEach(function (row, i) {
       getChart("info-chart-" + i).setOption(
@@ -1766,7 +1787,7 @@
 
     // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
     if (document.getElementById("chart-occ-select")) {
-      fetch("/data/occupations.json?v=20260904c")
+      fetch("/data/occupations.json?v=20260904d")
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();
@@ -1960,7 +1981,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260904c")
+  fetch("/data/dashboard.json?v=20260904d")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
