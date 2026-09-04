@@ -36,7 +36,7 @@ Usage:  python analysis/06_figures/recursive_kiindeks_headline.py [eloundou|mouc
         styrk08_mouchel_mapping.csv, the output gets the suffix _mouchel, and
         the validation reads the mouchel_by_exposure package instead.
         The second picks the site's reference epoch (default chatgpt): "claudecode"
-        uses the dashboard's agentic-AI reference, the mean of Feb 2024-Jan 2025
+        uses the dashboard's agentic-AI reference, the mean of Nov 2024-Jan 2025
         (EPOCHS.claudecode in app.js), first vintage 2025-04 (three post months),
         and adds the suffix _claudecode to the output.
 """
@@ -68,9 +68,9 @@ DJSON_PKG = "by_exposure" if MEASURE == "eloundou" else "mouchel_by_exposure"
 
 AGES = {"1", "2", "3", "4"}            # 21-60
 SECTOR = "2"                            # private
-# Reference window: a single month before ChatGPT, or the twelve months
-# before Claude Code (the dashboard's agentic-AI epoch) averaged.
-REF_FROM, REF_TO = ("2022-10", "2022-10") if EPOCH == "chatgpt" else ("2024-02", "2025-01")
+# Reference window: the three months before the launch, in both epochs, so
+# the "before" side is averaged over as many months as the "after" side.
+REF_FROM, REF_TO = ("2022-08", "2022-10") if EPOCH == "chatgpt" else ("2024-11", "2025-01")
 REF_MONTH = REF_TO                      # last month of the reference window (post months counted after it)
 SEAS_FROM, SEAS_TO = "2021-01", "2024-12"  # window the seasonal factors are estimated/frozen on
 FIRST_CUT = "2025-01" if EPOCH == "chatgpt" else "2025-04"  # first vintage (>= 3 post months)
@@ -136,7 +136,7 @@ def growth(series_by_month, months_sorted, cutoff, adj):
         vals = seasonal_adjust(vals, keep)
     # Month -> (adjusted) level lookup.
     idx = {m: vals[i] for i, m in enumerate(keep)}
-    # Reference level: mean over the reference window (one month for ChatGPT).
+    # Reference level: mean over the three months before the launch.
     before = np.mean([idx[m] for m in keep if REF_FROM <= m <= REF_TO])
     # The three most recent months of this vintage.
     last3 = keep[-3:]

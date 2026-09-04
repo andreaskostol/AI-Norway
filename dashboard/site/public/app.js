@@ -92,33 +92,34 @@
       baseLong: EN ? "November 2022" : "november 2022",
       mark: "2022-11-30",
       markLabel: EN ? "ChatGPT launch" : "ChatGPT-lansering",
-      preFrom: "2022-10-01", preTo: "2022-10-01",
+      refMonth: "2022-10-01",
       preText: EN
-        ? "the level in October 2022 (the month before ChatGPT)"
-        : "nivået i oktober 2022 (måneden før ChatGPT)",
-      refShort: EN ? "before ChatGPT (October 2022)"
-                   : "før ChatGPT (oktober 2022)",
-      preShort: EN ? "October 2022" : "oktober 2022",
+        ? "the average of the three months before ChatGPT " +
+          "(August–October 2022)"
+        : "gjennomsnittet av de tre månedene før ChatGPT " +
+          "(august–oktober 2022)",
+      refShort: EN ? "before ChatGPT (August–October 2022)"
+                   : "før ChatGPT (august–oktober 2022)",
+      preShort: EN ? "the three months before ChatGPT"
+                   : "de tre månedene før ChatGPT",
       eraWord: "ChatGPT",
       axisWord: "ChatGPT",
-      refLabel: EN ? "reference: ChatGPT (Oct 2022)"
-                   : "referanse: ChatGPT (okt. 2022)",
+      refLabel: EN ? "reference: ChatGPT (Aug–Oct 2022 average)"
+                   : "referanse: ChatGPT (snitt aug.–okt. 2022)",
       defText: EN
-        ? "the level in October 2022, the month just before ChatGPT. We " +
-          "use October 2022 as the reference to avoid the differential " +
-          "post-pandemic recovery in 2021–2022."
-        : "nivået i oktober 2022, måneden rett før ChatGPT. Vi bruker " +
-          "oktober 2022 som referanse for å unngå den ulike " +
-          "gjeninnhentingen etter pandemien i 2021–2022.",
+        ? "the average of the three months before ChatGPT (August–October " +
+          "2022). The before and after sides are averaged over the same " +
+          "number of months."
+        : "gjennomsnittet av de tre månedene før ChatGPT (august–oktober " +
+          "2022). Før- og etter-siden måles over like mange måneder.",
       refNote: EN
         ? "The steep rise in 2021–2022 (shaded area) is the labor " +
-          "market's post-pandemic recovery; because it lifted all groups, " +
-          "October 2022 — not the whole period — is used as the " +
-          "reference for the AI Labor Market Index."
+          "market's post-pandemic recovery. The reference sits right at " +
+          "the end of that period, in the three months just before ChatGPT."
         : "Den bratte oppgangen i 2021–2022 (skyggelagt felt) er " +
-          "gjeninnhentingen i arbeidsmarkedet etter pandemien; fordi den " +
-          "løftet alle gruppene, brukes oktober 2022 — ikke hele " +
-          "perioden — som referanse for KI-indeksen.",
+          "gjeninnhentingen i arbeidsmarkedet etter pandemien. Referansen " +
+          "ligger helt på slutten av den perioden, i de tre månedene rett " +
+          "før ChatGPT.",
       note: EN
         ? "Index = 100 in November 2022 (launch of ChatGPT)"
         : "Indeks = 100 i november 2022 (lansering av ChatGPT)"
@@ -129,36 +130,35 @@
       baseLong: EN ? "February 2025" : "februar 2025",
       mark: "2025-02-24",
       markLabel: EN ? "Claude Code launch" : "Claude Code-lansering",
-      preFrom: "2024-02-01", preTo: "2025-01-01",
+      refMonth: "2025-01-01",
       preText: EN
-        ? "the average of the twelve months before Claude Code " +
-          "(February 2024–January 2025)"
-        : "gjennomsnittet av de siste tolv månedene før " +
-          "Claude Code (februar 2024–januar 2025)",
-      refShort: EN ? "before Claude Code (February 2024–January 2025)"
-                   : "før Claude Code (februar 2024–januar 2025)",
-      preShort: EN ? "the year before Claude Code"
-                   : "året før Claude Code",
+        ? "the average of the three months before Claude Code " +
+          "(November 2024–January 2025)"
+        : "gjennomsnittet av de tre månedene før Claude Code " +
+          "(november 2024–januar 2025)",
+      refShort: EN ? "before Claude Code (November 2024–January 2025)"
+                   : "før Claude Code (november 2024–januar 2025)",
+      preShort: EN ? "the three months before Claude Code"
+                   : "de tre månedene før Claude Code",
       eraWord: EN ? "agentic AI" : "agentisk KI",
       axisWord: "Claude Code",
-      refLabel: EN ? "reference: Claude Code (Feb 2024–Jan 2025 average)"
-                   : "referanse: Claude Code (snitt feb. 2024–jan. 2025)",
+      refLabel: EN ? "reference: Claude Code (Nov 2024–Jan 2025 average)"
+                   : "referanse: Claude Code (snitt nov. 2024–jan. 2025)",
       defText: EN
-        ? "the average of the twelve months before Claude Code (February " +
-          "2024–January 2025), the launch of agentic AI."
-        : "gjennomsnittet av de tolv månedene før Claude Code (februar " +
-          "2024–januar 2025), lanseringen av agentisk KI.",
+        ? "the average of the three months before Claude Code (November " +
+          "2024–January 2025), the launch of agentic AI. The before and " +
+          "after sides are averaged over the same number of months."
+        : "gjennomsnittet av de tre månedene før Claude Code (november " +
+          "2024–januar 2025), lanseringen av agentisk KI. Før- og " +
+          "etter-siden måles over like mange måneder.",
       refNote: EN
-        ? "The reference is the twelve months before Claude Code, so the " +
-          "comparison is with the labor market as it was just before " +
-          "agentic AI — well after the post-pandemic recovery in " +
-          "2021–2022 (shaded area). Select ChatGPT above to measure " +
-          "from October 2022 instead."
-        : "Referansen er de tolv månedene før Claude Code, slik at " +
-          "sammenligningen er med arbeidsmarkedet slik det var rett før " +
-          "agentisk KI — godt etter gjeninnhentingen i 2021–2022 " +
-          "(skyggelagt felt). Velg ChatGPT øverst for å måle fra " +
-          "oktober 2022 i stedet.",
+        ? "The reference is the three months just before Claude Code, so " +
+          "the comparison is with the labor market as it was immediately " +
+          "before agentic AI. Select ChatGPT above to measure from 2022 " +
+          "instead."
+        : "Referansen er de tre månedene rett før Claude Code, slik at " +
+          "sammenligningen er med arbeidsmarkedet slik det var like før " +
+          "agentisk KI. Velg ChatGPT øverst for å måle fra 2022 i stedet.",
       note: EN
         ? "Index = 100 in February 2025 (launch of Claude Code, agentic AI)"
         : "Indeks = 100 i februar 2025 (lansering av Claude Code, " +
@@ -783,16 +783,8 @@
   // (foer ChatGPT, eller siste aar foer Claude Code). Alltid
   // sysselsetting, alle aldre, raa indeks.
   function usageGrowth(values, dates) {
-    var ep = epoch();
-    var i0 = dates.indexOf(ep.preFrom), i1 = dates.indexOf(ep.preTo);
-    if (i0 < 0 || i1 < 0) return null;
-    var s = 0, n = 0, i;
-    for (i = i0; i <= i1; i++) {
-      if (values[i] != null) { s += values[i]; n += 1; }
-    }
-    var m = values.length;
-    var after = (values[m - 3] + values[m - 2] + values[m - 1]) / 3;
-    return n ? after / (s / n) - 1 : null;
+    var g = epochGrowth(values, dates);
+    return g == null ? null : g / 100;
   }
 
   function renderUsageInfographic() {
@@ -957,15 +949,18 @@
 
     // 2. KI-indeksen.
     var grad = Math.abs(g.rel) < 1 ? (EN ? "slightly " : "svakt ") : "";
+    var idxWord = Math.abs(g.rel) < 0.05
+      ? (EN ? "roughly zero" : "om lag null")
+      : grad + (EN ? (g.rel >= 0 ? "positive" : "negative")
+                   : (g.rel >= 0 ? "positiv" : "negativ"));
     setBullet("qs-2", EN
-      ? "<strong>The AI Labor Market Index is " + grad +
-        (g.rel >= 0 ? "positive" : "negative") + " (" + fmtNum(g.rel) +
+      ? "<strong>The AI Labor Market Index is " + idxWord +
+        " (" + fmtNum(g.rel) +
         "):</strong> measured against " + epoch().preText +
         ", total private-sector employment in the most AI-exposed " +
         "occupations has " + growthVerb(g.g5) + ", versus " + fmtPct(g.g1) +
         " in the least-exposed occupations." + measNote
-      : "<strong>KI-indeksen er " + grad +
-        (g.rel >= 0 ? "positiv" : "negativ") + " (" + fmtNum(g.rel) +
+      : "<strong>KI-indeksen er " + idxWord + " (" + fmtNum(g.rel) +
         "):</strong> målt mot " + epoch().preText +
         " har samlet sysselsetting i privat sektor i de mest " +
         "KI-eksponerte yrkene " + growthVerb(g.g5) + ", mot " +
@@ -1039,22 +1034,23 @@
   var Q5L = "Quintile 5 (most exposed)";
   var Q1L = "Quintile 1 (least exposed)";
 
-  // Vekst i prosent: snittet av de tre siste maanedene mot referanse-
-  // vinduet til valgt epoke (oktober 2022 alene for ChatGPT, snittet av
-  // februar 2024-januar 2025 for Claude Code). Brukes av hovedtallet og
-  // av punktene i "For den utaalmodige leseren".
+  // Vekst i prosent, regnet paa NOEYAKTIG samme maate som figurene:
+  // glatt foerst med et etterslepende 3-maaneders snitt, sammenlign
+  // saa det glattede nivaaet i referansemaaneden (maaneden foer
+  // lanseringen) med det glattede nivaaet i siste maaned. Da maales
+  // foer- og etter-siden over like mange maaneder. Glattingen er
+  // laast til 3 her, uavhengig av glattevelgeren, slik at hovedtallet
+  // ikke flytter seg naar noen bytter glatting i figurene.
+  var HEADLINE_MA = 3;
   function epochGrowth(values, dates) {
-    var ep = epoch();
-    var i0 = dates.indexOf(ep.preFrom), i1 = dates.indexOf(ep.preTo);
-    if (i0 < 0 || i1 < 0) return null;
-    var s = 0, k = 0, i;
-    for (i = i0; i <= i1; i++) {
-      if (values[i] != null) { s += values[i]; k += 1; }
-    }
-    var n = values.length;
-    var after = (values[n - 3] + values[n - 2] + values[n - 1]) / 3;
-    return k ? 100 * (after / (s / k) - 1) : null;
+    var i = dates.indexOf(epoch().refMonth);
+    if (i < 0) return null;
+    var sm = movingAverage(values, HEADLINE_MA);
+    var before = sm[i], after = sm[sm.length - 1];
+    if (!before || after == null) return null;
+    return 100 * (after / before - 1);
   }
+
   function pkgGrowth(pkg, facetKey, col, adj) {
     var p = DB.packages[pkg];
     var ser = p.series[adj || adjFor(pkg)];
@@ -1191,20 +1187,15 @@
                : n + " lønnstakere i nov. 2022 · ") + q;
   }
 
-  // Valget speiles i URL-en (?yrker=2512,4110) slik at lenker kan deles.
+  // ?yrker=2512,4110 leses fortsatt, slik at lenker som alt er delt
+  // virker. Valget skrives IKKE tilbake til adressen (fjernet
+  // 2026-09-04): det gjorde adressen rotete med en gang siden gjorde
+  // seg, og den gamle skrivingen slettet dessuten ?ref= og ?maal=.
   function occsFromUrl() {
     var m = /[?&]yrker=([0-9,]+)/.exec(window.location.search);
     if (!m) return null;
     return m[1].split(",").filter(function (c) { return OCC.byCode[c]; });
   }
-  function occsToUrl() {
-    if (!window.history || !window.history.replaceState) return;
-    var url = window.location.pathname +
-      (state.occs.length ? "?yrker=" + state.occs.join(",") : "") +
-      window.location.hash;
-    window.history.replaceState(null, "", url);
-  }
-
   function renderOccChips() {
     var holder = document.getElementById("occ-chips");
     if (!holder) return;
@@ -1268,7 +1259,6 @@
   function occChanged() {
     renderOccChips();
     renderOccChart();
-    occsToUrl();
   }
 
   function occAdd(code) {
@@ -1776,7 +1766,7 @@
 
     // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
     if (document.getElementById("chart-occ-select")) {
-      fetch("/data/occupations.json?v=20260904b")
+      fetch("/data/occupations.json?v=20260904c")
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();
@@ -1970,7 +1960,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260904b")
+  fetch("/data/dashboard.json?v=20260904c")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
