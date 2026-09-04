@@ -1154,14 +1154,16 @@
     // lenger et soylediagram: da kan indeksen leses av for alle aldre
     // og for de unge i samme bilde.
     document.getElementById("kpi-note").textContent = EN
-      ? "Each row shows employment growth by exposure quintile, measured " +
-        "against " + epoch().preShort + ". The distance between quintile " +
-        "1 and quintile 5 is the index for that group. Explore the " +
-        "breakdown by quintile, age and occupation in the figures below."
-      : "Hver rad viser sysselsettingsveksten per eksponeringskvintil, " +
-        "målt mot " + epoch().preShort + ". Avstanden mellom kvintil 1 " +
-        "og kvintil 5 er KI-indeksen for den gruppen. Utforsk " +
-        "fordelingen på kvintiler, alder og yrker i figurene under.";
+      ? "Each circle is one exposure quintile, from 1 (least exposed) to " +
+        "5 (most exposed), measured against " + epoch().preShort + ". " +
+        "The distance between circle 1 and circle 5 is the index for that " +
+        "group. Explore the breakdown by quintile, age and occupation in " +
+        "the figures below."
+      : "Hver sirkel er én eksponeringskvintil, fra 1 (minst eksponert) " +
+        "til 5 (mest eksponert), målt mot " + epoch().preShort + ". " +
+        "Avstanden mellom sirkel 1 og sirkel 5 er KI-indeksen for den " +
+        "gruppen. Utforsk fordelingen på kvintiler, alder og yrker i " +
+        "figurene under.";
   }
 
   // ---------- Figur 9: velg yrker selv ----------
@@ -1787,7 +1789,7 @@
 
     // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
     if (document.getElementById("chart-occ-select")) {
-      fetch("/data/occupations.json?v=20260904d")
+      fetch("/data/occupations.json?v=20260904e")
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();
@@ -1981,7 +1983,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260904d")
+  fetch("/data/dashboard.json?v=20260904e")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
