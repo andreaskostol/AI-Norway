@@ -187,9 +187,13 @@
   // utfall). Resten av figurene er maalnoeytrale eller Eloundou i v1.
   var MEASURES = {
     eloundou: { prefix: "", short: "Eloundou",
-                label: EN ? "Eloundou et al. (2024)" : "Eloundou m.fl. (2024)" },
+                label: EN ? "Eloundou et al. (2024)" : "Eloundou m.fl. (2024)",
+                cite: EN ? "Eloundou et al. 2024" : "Eloundou m.fl. 2024",
+                url: "https://www.science.org/doi/10.1126/science.adj0998" },
     mouchel: { prefix: "mouchel_", short: "Mouchel",
-               label: EN ? "Mouchel et al. (2026)" : "Mouchel m.fl. (2026)" }
+               label: EN ? "Mouchel et al. (2026)" : "Mouchel m.fl. (2026)",
+               cite: EN ? "Mouchel et al. 2026" : "Mouchel m.fl. 2026",
+               url: "https://arxiv.org/abs/2605.15474" }
   };
   function measure() { return MEASURES[state.measure] || MEASURES.eloundou; }
   // Pakke for kutt som finnes per maal (by_exposure, age_by_exposure);
@@ -1134,15 +1138,13 @@
     // og for de unge i samme bilde.
     document.getElementById("kpi-note").textContent = EN
       ? "Each row shows employment growth by exposure quintile, measured " +
-        "against " + epoch().preText + ", as the average of the last three " +
-        "months. The distance between quintile 1 and quintile 5 is the " +
-        "index for that group. Explore the breakdown by quintile, age " +
-        "and occupation in the figures below."
+        "against " + epoch().preShort + ". The distance between quintile " +
+        "1 and quintile 5 is the index for that group. Explore the " +
+        "breakdown by quintile, age and occupation in the figures below."
       : "Hver rad viser sysselsettingsveksten per eksponeringskvintil, " +
-        "målt mot " + epoch().preText + ", som snittet av de tre siste " +
-        "månedene. Avstanden mellom kvintil 1 og kvintil 5 er indeksen " +
-        "for den gruppen. Utforsk fordelingen på kvintiler, alder og " +
-        "yrker i figurene under.";
+        "målt mot " + epoch().preShort + ". Avstanden mellom kvintil 1 " +
+        "og kvintil 5 er KI-indeksen for den gruppen. Utforsk " +
+        "fordelingen på kvintiler, alder og yrker i figurene under.";
   }
 
   // ---------- Figur 9: velg yrker selv ----------
@@ -1627,6 +1629,11 @@
       var el = document.getElementById(id);
       if (el) el.textContent = txt;
     };
+    var ml = document.getElementById("lede-measure");
+    if (ml) {
+      ml.textContent = measure().cite;
+      ml.href = measure().url;
+    }
     set("fig1-base", ep.baseLong);
     set("fig1-since", ep.axisWord);
     set("fig1-refnote", ep.refNote);
@@ -1769,7 +1776,7 @@
 
     // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
     if (document.getElementById("chart-occ-select")) {
-      fetch("/data/occupations.json?v=20260904a")
+      fetch("/data/occupations.json?v=20260904b")
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();
@@ -1963,7 +1970,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260904a")
+  fetch("/data/dashboard.json?v=20260904b")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();

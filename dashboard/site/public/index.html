@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="style.css?v=20260904a">
+<link rel="stylesheet" href="style.css?v=20260904b">
 <link rel="icon" href="assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -89,26 +89,26 @@
           færrest. Et positivt tall betyr at de mest KI-utsatte yrkene
           har vokst mest; et negativt tall betyr at de har vokst minst
           — et tidlig varsel om at KI kan fortrenge jobber.
-          <details class="def-details">
-            <summary>Slik beregnes tallet</summary>
-            Sysselsettingsvekst i de mest KI-eksponerte yrkene minus
-            veksten i de minst eksponerte: snittet av de tre siste
-            månedene mot <span id="headline-def-ref">gjennomsnittet av
-            de tolv månedene før Claude Code (februar 2024–januar 2025),
-            lanseringen av agentisk KI.</span>
-            Justering, eksponeringsmål og referanse følger valgene under.
-          </details>
         </div>
       </div>
       <div id="headline-rows" class="headline-rows"></div>
     </div>
     <p class="kpi-note" id="kpi-note"></p>
+    <details class="def-details def-details-below">
+      <summary>Slik beregnes tallet</summary>
+      Sysselsettingsvekst i de mest KI-eksponerte yrkene minus veksten i
+      de minst eksponerte: snittet av de tre siste månedene mot <span
+      id="headline-def-ref">gjennomsnittet av de tolv månedene før Claude
+      Code (februar 2024–januar 2025), lanseringen av agentisk KI.</span>
+      Justering, eksponeringsmål og referanse følger valgene under.
+    </details>
     <p class="lede lede-secondary">
       Indeksen følger sysselsettingen i norsk privat sektor med bruk av
       <a href="https://www.microdata.no/" target="_blank"
          rel="noopener">microdata.no</a>, tilrettelagt av SSB. Yrker er
       gruppert etter hvor eksponert hvert yrke er for store
-      språkmodeller (<a href="https://www.science.org/doi/10.1126/science.adj0998"
+      språkmodeller (<a id="lede-measure"
+         href="https://www.science.org/doi/10.1126/science.adj0998"
          target="_blank" rel="noopener">Eloundou m.fl. 2024</a>) og
       etter arbeidstakernes alder — en norsk parallell til
       Stanford Digital Economy Lab (DEL) sitt
@@ -835,6 +835,6 @@
 </footer>
 
 <script src="vendor/echarts.min.js"></script>
-<script src="app.js?v=20260904a"></script>
+<script src="app.js?v=20260904b"></script>
 </body>
 </html>

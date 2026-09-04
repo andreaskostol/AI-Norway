@@ -188,13 +188,20 @@ a { color: var(--accent); }
   flex-direction: column;
   justify-content: center;
 }
-.headline-def .def-details { margin-top: 0.45rem; }
-.headline-def .def-details summary {
+.def-details { margin-top: 0.45rem; }
+.def-details summary {
   cursor: pointer;
   color: var(--accent);
   font-weight: 600;
 }
-.headline-def .def-details summary:hover { text-decoration: underline; }
+.def-details summary:hover { text-decoration: underline; }
+/* Under figuren, i samme lille grad som noten over den */
+.def-details-below {
+  margin-top: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  line-height: 1.5;
+}
 @media (max-width: 760px) {
   .hero-grid { grid-template-columns: 1fr; }
 }

@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="/style.css?v=20260904a">
+<link rel="stylesheet" href="/style.css?v=20260904b">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -88,26 +88,27 @@
           AI-exposed occupations have grown the most; a negative number
           means they have grown the least — an early warning that AI may be
           displacing jobs.
-          <details class="def-details">
-            <summary>How the number is calculated</summary>
-            Employment growth in the most AI-exposed occupations minus
-            growth in the least exposed: the average of the last three
-            months against <span id="headline-def-ref">the average of the
-            twelve months before Claude Code (February 2024–January
-            2025), the launch of agentic AI.</span> Adjustment, exposure measure
-            and reference follow the selections below.
-          </details>
         </div>
       </div>
       <div id="headline-rows" class="headline-rows"></div>
     </div>
     <p class="kpi-note" id="kpi-note"></p>
+    <details class="def-details def-details-below">
+      <summary>How the number is calculated</summary>
+      Employment growth in the most AI-exposed occupations minus growth in
+      the least exposed: the average of the last three months against
+      <span id="headline-def-ref">the average of the twelve months before
+      Claude Code (February 2024–January 2025), the launch of agentic
+      AI.</span> Adjustment, exposure measure and reference follow the
+      selections below.
+    </details>
     <p class="lede lede-secondary">
       The index tracks employment in the Norwegian private sector using
       <a href="https://www.microdata.no/" target="_blank"
          rel="noopener">microdata.no</a>, provided by Statistics Norway
       (SSB). Occupations are grouped by how exposed each occupation is to
-      large language models (<a href="https://www.science.org/doi/10.1126/science.adj0998"
+      large language models (<a id="lede-measure"
+         href="https://www.science.org/doi/10.1126/science.adj0998"
          target="_blank" rel="noopener">Eloundou et al. 2024</a>) and by
       workers' age — a Norwegian parallel to Stanford Digital Economy Lab
       (DEL)'s
@@ -846,6 +847,6 @@
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/app.js?v=20260904a"></script>
+<script src="/app.js?v=20260904b"></script>
 </body>
 </html>
