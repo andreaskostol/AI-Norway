@@ -34,7 +34,12 @@
 
   // Stanford-dashboardets palett i kvintilrekkefoelge
   // (jf. canaries_dashboard_oversikt.md).
-  var QUINT_COLORS = ["#8C1515", "#577590", "#E54A2B", "#E6A817", "#401415"];
+  // Kvintilene er ORDNET, saa fargene gaar kaldt til varmt: kvintil 1
+  // (minst eksponert) er skiferblaa, kvintil 5 (mest eksponert) er
+  // moerk vinroed. Fargene er de samme fem Canaries-fargene som foer,
+  // bare sortert (endret 2026-09-04). Foer laa de to roedtonene i hver
+  // sin ende, altsaa paa nettopp de to gruppene leseren sammenligner.
+  var QUINT_COLORS = ["#577590", "#E6A817", "#E54A2B", "#8C1515", "#401415"];
   var GAP_COLORS = [QUINT_COLORS[0], "#cfccc4", "#bdb9b0", "#aba69c",
                     QUINT_COLORS[4]];
   // Hvitt tall inni en lysegraa prikk blir uleselig; de graa faar
@@ -1809,7 +1814,7 @@
 
     // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
     if (document.getElementById("chart-occ-select")) {
-      fetch("/data/occupations.json?v=20260904h")
+      fetch("/data/occupations.json?v=20260904i")
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();
@@ -2003,7 +2008,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260904h")
+  fetch("/data/dashboard.json?v=20260904i")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
