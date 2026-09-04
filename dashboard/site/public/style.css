@@ -445,6 +445,14 @@ a { color: var(--accent); }
 .info-row-hero {
   grid-template-columns: 165px minmax(0, 1fr);
 }
+.info-se {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
 .info-row-hero .info-chart { height: 132px; }
 .info-row-hero:last-child .info-chart { height: 158px; }
 @media (max-width: 860px) {

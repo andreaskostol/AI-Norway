@@ -30,11 +30,14 @@ Input:  microdata-output/09_occ_agedecade_sektor_kpos_2021m01_2026m06_parsed.csv
 Output: analysis/output/coefficients/coef_recursive_kiindeks_headline.csv
           (vintage, cutoff, g1, g5, ki, se, ci_lo, ci_hi, n_post_months)
 
-Usage:  python analysis/06_figures/recursive_kiindeks_headline.py [eloundou|mouchel] [chatgpt|claudecode]
+Usage:  python analysis/06_figures/recursive_kiindeks_headline.py [eloundou|mouchel] [chatgpt|claudecode] [all|young]
         The first optional argument picks the exposure measure whose quintiles
         define Q1/Q5 (default eloundou). With "mouchel" the quintiles come from
         styrk08_mouchel_mapping.csv, the output gets the suffix _mouchel, and
         the validation reads the mouchel_by_exposure package instead.
+        The third picks the age cut (default all = 21-60 pooled): "young"
+        restricts the panel to 21-30 and adds the suffix _young, reproducing
+        the index shown on the dashboard's second row.
         The second picks the site's reference epoch (default chatgpt): "claudecode"
         uses the dashboard's agentic-AI reference, the mean of Nov 2024-Jan 2025
         (EPOCHS.claudecode in app.js), first vintage 2025-04 (three post months),
@@ -54,6 +57,8 @@ MEASURE = sys.argv[1] if len(sys.argv) > 1 else "eloundou"  # which quintiles de
 assert MEASURE in ("eloundou", "mouchel"), "measure must be eloundou or mouchel"
 EPOCH = sys.argv[2] if len(sys.argv) > 2 else "chatgpt"  # site reference point
 assert EPOCH in ("chatgpt", "claudecode"), "epoch must be chatgpt or claudecode"
+AGE_GROUP = sys.argv[3] if len(sys.argv) > 3 else "all"  # 21-60 pooled, or 21-30
+assert AGE_GROUP in ("all", "young"), "age group must be all or young"
 # Occupation -> quintile mapping and output file depend on the measure; the
 # Eloundou paths are unchanged so existing callers keep working.
 EXP = BASE / "data" / "ai_exposure" / ("styrk08_eloundou_beta_mapping.csv" if MEASURE == "eloundou"
@@ -62,11 +67,17 @@ DJSON = BASE / "dashboard" / "site" / "public" / "data" / "dashboard.json"  # pu
 OUT = BASE / "analysis" / "output" / "coefficients" / (
     "coef_recursive_kiindeks_headline"
     + ("" if MEASURE == "eloundou" else "_mouchel")
-    + ("" if EPOCH == "chatgpt" else "_claudecode") + ".csv")  # recursive KI output
-# Package in dashboard.json that carries this measure's by_exposure series.
-DJSON_PKG = "by_exposure" if MEASURE == "eloundou" else "mouchel_by_exposure"
-
-AGES = {"1", "2", "3", "4"}            # 21-60
+    + ("" if EPOCH == "chatgpt" else "_claudecode")
+    + ("" if AGE_GROUP == "all" else "_young") + ".csv")  # recursive KI output
+# Package in dashboard.json that carries the series this run reproduces:
+# the pooled by_exposure cut, or the age x exposure cut for 21-30.
+DJSON_PKG = (("by_exposure" if AGE_GROUP == "all" else "age_by_exposure")
+             if MEASURE == "eloundou"
+             else ("mouchel_by_exposure" if AGE_GROUP == "all"
+                   else "mouchel_age_by_exposure"))
+YOUNG_COL = "21-30"                     # age column in the age x exposure package
+# Age groups kept from the panel: alder_gr 1=21-30, 2=31-40, 3=41-50, 4=51-60.
+AGES = {"1", "2", "3", "4"} if AGE_GROUP == "all" else {"1"}
 SECTOR = "2"                            # private
 # Reference window: the three months before the launch, in both epochs, so
 # the "before" side is averaged over as many months as the "after" side.
@@ -289,13 +300,16 @@ DB = json.load(open(DJSON))
 # has not been rebuilt with it yet.
 if DJSON_PKG in DB["packages"]:
     # Pull the by-exposure package: its SA series and date axis.
-    be = DB["packages"][DJSON_PKG]; ser = be["series"]["sa"]["_"]; dd = be["dates"]
+    be = DB["packages"][DJSON_PKG]; ser = be["series"]["sa"]; dd = be["dates"]
     # Indices of the reference window and the total number of dates.
     i0 = dd.index(REF_FROM + "-01"); i1 = dd.index(REF_TO + "-01"); n = len(dd)
 
     def gjson(col):
-        # Series for this quintile; growth of last-3 average vs the reference window mean.
-        v = ser[col]; base = sum(v[i0:i1 + 1]) / (i1 - i0 + 1)
+        # Pooled cut keys the facet on "_"; the age cut keys it on the
+        # quintile and then picks the 21-30 column.
+        v = ser["_"][col] if AGE_GROUP == "all" else ser[col][YOUNG_COL]
+        # Growth of the last-3 average vs the reference window mean.
+        base = sum(v[i0:i1 + 1]) / (i1 - i0 + 1)
         return 100 * ((v[n - 3] + v[n - 2] + v[n - 1]) / 3 / base - 1)
 
     # Published Q1 and Q5 growths.

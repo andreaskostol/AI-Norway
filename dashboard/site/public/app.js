@@ -644,13 +644,16 @@
     var rows;
     if (EN) {
       rows = [
-        { label: "All age groups,<br>by exposure", points: r1 },
-        { label: "Young (21–30),<br>by exposure", points: r2 }
+        { label: "All age groups,<br>by exposure", points: r1,
+          young: false },
+        { label: "Young (21–30),<br>by exposure", points: r2, young: true }
       ];
     } else {
       rows = [
-        { label: "Alle aldersgrupper,<br>etter eksponering", points: r1 },
-        { label: "Unge (21–30 år),<br>etter eksponering", points: r2 }
+        { label: "Alle aldersgrupper,<br>etter eksponering", points: r1,
+          young: false },
+        { label: "Unge (21–30 år),<br>etter eksponering", points: r2,
+          young: true }
       ];
     }
     rows.forEach(function (row) { row.index = rowIndex(row.points); });
@@ -770,7 +773,8 @@
         div.className = "info-row info-row-hero";
         div.innerHTML =
           '<div class="info-label"><span id="info-lab-' + i + '"></span>' +
-          '<span class="info-index" id="info-index-' + i + '"></span></div>' +
+          '<span class="info-index" id="info-index-' + i + '"></span>' +
+          '<span class="info-se" id="info-se-' + i + '"></span></div>' +
           '<div class="info-chart" id="info-chart-' + i + '"></div>';
         holder.appendChild(div);
       });
@@ -795,6 +799,22 @@
       document.getElementById("info-index-" + i).textContent =
         row.index == null ? ""
         : (EN ? "Index: " : "KI-indeksen: ") + fmtNum(row.index);
+      // Standardfeilen for nettopp denne raden (egen bootstrap per
+      // aldersgruppe, maal og referanse).
+      var ru = uncertaintyFor(!!row.young);
+      var seEl = document.getElementById("info-se-" + i);
+      if (seEl) {
+        seEl.textContent = ru
+          ? (EN ? "Standard error " : "Standardfeil ") +
+            (EN ? ru.se.toFixed(2) : ru.se.toFixed(2).replace(".", ",")) +
+            " pp"
+          : "";
+        seEl.title = ru
+          ? (EN ? "95% bootstrap interval: " : "95 % bootstrap-intervall: ") +
+            fmtNum(ru.ci_lo) + (EN ? " to " : " til ") + fmtNum(ru.ci_hi) +
+            " pp"
+          : "";
+      }
     });
   }
 
@@ -1091,6 +1111,15 @@
              lastDate: be.dates[be.dates.length - 1] };
   }
 
+  function uncertaintyFor(young) {
+    var key = "headline_uncertainty" + (young ? "_young" : "") +
+      (state.epoch === "claudecode" ? "_claudecode" : "") + "_by_measure";
+    var u = (DB[key] || {})[state.measure];
+    if (!u && !young && state.measure === "eloundou" &&
+        state.epoch === "chatgpt") u = DB.headline_uncertainty;
+    return u && adjFor("by_exposure") === u.spec ? u : null;
+  }
+
   function renderHeadline() {
     var g = headlineGrowth();
     document.getElementById("headline-value").textContent = fmtNum(g.rel);
@@ -1118,38 +1147,22 @@
     // skjuler vi baandet framfor aa vise et intervall som ikke passer.
     var ciEl = document.getElementById("headline-ci");
     if (ciEl) {
-      // Baandet per maal: bootstrappen er kjoert separat for Eloundou-
-      // og Mouchel-kvintilene; mangler maalet, skjules baandet.
-      // ... og per referanse: egen bootstrap for Claude Code-vinduet.
-      var byM = (state.epoch === "claudecode"
-        ? DB.headline_uncertainty_claudecode_by_measure
-        : DB.headline_uncertainty_by_measure) || {};
-      var u = byM[state.measure] !== undefined
-        ? byM[state.measure]
-        : (state.measure === "eloundou" && state.epoch === "chatgpt"
-           ? DB.headline_uncertainty : null);
-      if (u && adjFor("by_exposure") === u.spec) {
+      var u = uncertaintyFor(false);
+      if (u) {
         // Setningen om null gjelder bare naar intervallet faktisk
-        // dekker null (det har det gjort i alle vintager saa langt).
+        // dekker null.
         var spansZero = u.ci_lo <= 0 && u.ci_hi >= 0;
-        // Standardfeilen staar foerst: den er tallet en leser trenger
-        // for aa vurdere presisjonen, og laa tidligere bare gjemt i
-        // tittel-attributtet.
-        var se = u.se.toFixed(2);
-        if (!EN) se = se.replace(".", ",");
         ciEl.textContent = EN
-          ? "Standard error " + se + " pp · 95% bootstrap interval: " +
-            fmtNum(u.ci_lo) + " to " + fmtNum(u.ci_hi) + " pp" +
+          ? "95% bootstrap interval: " + fmtNum(u.ci_lo) + " to " +
+            fmtNum(u.ci_hi) + " pp" +
             (spansZero ? " — not statistically distinguishable from zero."
                        : ".")
-          : "Standardfeil " + se + " pp · 95 % bootstrap-intervall: " +
-            fmtNum(u.ci_lo) + " til " + fmtNum(u.ci_hi) + " pp" +
+          : "95 % bootstrap-intervall: " + fmtNum(u.ci_lo) + " til " +
+            fmtNum(u.ci_hi) + " pp" +
             (spansZero ? " — ikke statistisk forskjellig fra null." : ".");
         ciEl.title = EN
-          ? "Occupation-cluster bootstrap over the seasonally adjusted " +
-            "headline index"
-          : "Okkupasjons-klynge-bootstrap over den sesongjusterte " +
-            "hovedindeksen";
+          ? "Occupation-cluster bootstrap over the seasonally adjusted index"
+          : "Okkupasjons-klynge-bootstrap over den sesongjusterte indeksen";
         ciEl.hidden = false;
       } else {
         ciEl.textContent = "";
@@ -1796,7 +1809,7 @@
 
     // Yrkesvelgeren (figur 9): egen fil, lastes etter hovedfigurene.
     if (document.getElementById("chart-occ-select")) {
-      fetch("/data/occupations.json?v=20260904f")
+      fetch("/data/occupations.json?v=20260904g")
         .then(function (r) {
           if (!r.ok) throw new Error("HTTP " + r.status);
           return r.json();
@@ -1990,7 +2003,7 @@
   // Versjonsparameteren omgaar gamle hurtigbufrede kopier; holdes i
   // takt med ?v= paa app.js i index.html. Absolutt sti slik at samme
   // script virker baade fra / og /en/.
-  fetch("/data/dashboard.json?v=20260904f")
+  fetch("/data/dashboard.json?v=20260904g")
     .then(function (r) {
       if (!r.ok) throw new Error("HTTP " + r.status);
       return r.json();
