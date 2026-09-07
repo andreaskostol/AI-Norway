@@ -7,9 +7,13 @@ et panel med notatene om tokens og brukere på tvers av leverandører.
 Planleggingsnotatet som lå til grunn: `OCCUPATION-TAB-PLAN-kiindeksen.md`
 (2026-09-06) i repo-roten.
 
-**Ikke deployet.** Alt ligger på branchen. Deploy krever Andreas' OK:
-`cd dashboard/site && flyctl deploy` etter merge til main. Siste live-image
-før dette er `deployment-01M1PR22GBGNJ67KJAMB94CKWD` (v=20260904i).
+**Deployet 2026-09-07 ~20:30** som Fly-release v56, etter merge til main
+(PR #1, merge-commit 177d255; Andreas: «du gjør dette»). Live cache
+`v=20260907h`; alle åtte sider svarer 200, `/data/panels/` gir 404.
+Forrige live-image, for tilbakerulling: `deployment-01M1PR22GBGNJ67KJAMB94CKWD`
+(v=20260904i, release v55), se `dashboard/backups/REVERT_2026-09-07.md`.
+flyctl-innlogging må gjøres i et vanlig terminalvindu; token leses fra
+`~/.fly/config.yml`.
 
 ## Hva som er bygget
 
