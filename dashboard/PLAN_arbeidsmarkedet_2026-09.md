@@ -78,7 +78,11 @@ stillinger fra NAV. Figur 3 og 4 følger valget. `?yrke=2512&sammenlign=1`
   `prepare_panels.py build_vacancies()` lager `vacancies.json` når serien
   finnes, ellers viser panelet en «under innsamling»-note. **Ingen eksisterende
   innsamling ble funnet** i Dropbox/Deling/Hermes, så serien starter her. NAV
-  svarer 429 ved rask polling; skriptet venter og prøver igjen (`--sleep`).
+  svarer 429 ved rask polling og blokkerte denne adressen i over ti minutter
+  etter første kjøring (0,3 s mellom forespørsler). Skriptet går nå med 3 s
+  som standard. **Første øyeblikksbilde er ikke levert ennå**; kjør
+  `python dashboard/collect_nav_vacancies.py` når blokken er borte, deretter
+  `prepare_panels.py`.
 - Avvik fra ordlyden i bestillingen: «pick the three closest occupations in
   terms of ONET tasks» er løst med O*NET-profiler, ikke oppgavetekster, av
   grunnen over.
