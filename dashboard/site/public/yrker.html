@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/yrker.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/occupations.html">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/yrker.html">
-<link rel="stylesheet" href="/style.css?v=20260907a">
+<link rel="stylesheet" href="/style.css?v=20260907b">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body data-panel="yrker">
@@ -22,6 +22,7 @@
              alt="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI"></a>
     </div>
     <nav class="site-nav">
+      <a href="#velg">Velg et yrke</a>
       <a href="#fig1">Største yrker</a>
       <a href="#fig2">Chat mot API</a>
       <a href="#fig3">Velg yrker</a>
@@ -50,6 +51,7 @@
 <aside class="toc" aria-label="Innhold">
   <nav id="toc-nav">
     <a href="#intro">Yrker</a>
+    <a href="#velg">Velg et yrke</a>
     <a href="#fig1">1 · De største yrkene</a>
     <a href="#fig2">2 · Chat mot API</a>
     <a href="#fig3">3 · Velg yrker</a>
@@ -92,6 +94,52 @@
           Koblingen til norske yrker går via SOC og ISCO.</li>
       </ul>
     </details>
+  </section>
+
+  <section id="velg" class="chart-section">
+    <h2>Velg et yrke</h2>
+    <p class="chart-intro">
+      Søk fram et yrke, eller la oss trekke ett. Yrket får en skår for
+      KI-eksponering og for automatisering. Så finner vi de tre yrkene
+      som ligner mest i arbeidsinnhold, målt med O*NETs arbeidsaktiviteter
+      og ferdigheter. Til slutt kan du sammenligne arbeidsmarkedet for
+      de fire: sysselsetting, lønn og ledige stillinger.
+    </p>
+    <div class="occ-picker">
+      <input type="search" id="pick-search" autocomplete="off"
+             aria-label="Søk etter yrke"
+             placeholder="Søk etter yrke eller STYRK-08-kode">
+      <ul id="pick-hits" class="occ-hits" hidden></ul>
+    </div>
+    <div class="btn-row">
+      <button type="button" id="pick-random">Trekk et tilfeldig yrke</button>
+    </div>
+    <div id="pick-card" class="pick-card"></div>
+    <h3>De tre nærmeste yrkene i arbeidsinnhold</h3>
+    <div id="pick-neighbours" class="pick-grid"></div>
+    <div class="btn-row">
+      <button type="button" id="pick-compare" class="btn-primary">Sammenlign arbeidsmarkedet</button>
+    </div>
+    <div id="compare" hidden>
+      <h3>Sysselsetting</h3>
+      <div id="chart-c1" class="chart"></div>
+      <p class="chart-footnote" id="c1-note"></p>
+      <h3>Lønn per fulltidsekvivalent</h3>
+      <div id="chart-c2" class="chart"></div>
+      <p class="chart-footnote" id="c2-note"></p>
+      <h3>Ledige stillinger hos NAV</h3>
+      <div id="chart-c3" class="chart chart-short"></div>
+      <p class="chart-footnote" id="c3-note"></p>
+    </div>
+    <p class="chart-footnote">
+      Likhet er cosinus mellom yrkenes standardiserte profiler over 41
+      arbeidsaktiviteter og 35 ferdigheter i O*NET, koblet til STYRK-08
+      via SOC og ISCO. Yrker som deler samme amerikanske yrkeskoder får
+      likhet 1. Sysselsetting og lønn er de samme seriene som i figur 9 på
+      KI-indeks-siden: privat sektor, 21–60 år, sesongjustert, indeks 100
+      i februar 2025. Ledige stillinger er åpne annonser på
+      arbeidsplassen.nav.no som lister yrket.
+    </p>
   </section>
 
   <section id="fig1" class="chart-section">
@@ -269,6 +317,6 @@
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/panels.js?v=20260907a"></script>
+<script src="/panels.js?v=20260907b"></script>
 </body>
 </html>

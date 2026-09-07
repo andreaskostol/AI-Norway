@@ -838,3 +838,47 @@ code {
 }
 .chart-xtall { height: 780px; }
 .chart-tasks { height: 520px; }
+
+/* Velg et yrke (yrkespanelet): skaarkort, naboyrker, sammenligning */
+.pick-card {
+  max-width: 56rem;
+  margin: 0.4rem 0 1.2rem;
+  padding: 0.9rem 1.1rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-left: 4px solid #8C1515;
+  border-radius: 0 10px 10px 0;
+}
+.pick-card h3, .pick-nb h4 { margin: 0 0 0.2rem; font-size: 1.1rem; }
+.pick-card .pick-sub, .pick-nb .pick-sub { color: var(--ink-soft); font-size: 0.86rem; margin: 0 0 0.6rem; }
+.pick-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 0.5rem 1rem;
+}
+.pick-metric { font-size: 0.84rem; color: var(--ink-soft); line-height: 1.3; }
+.pick-metric strong { display: block; font-size: 1.15rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+.pick-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.7rem;
+  max-width: 56rem;
+  margin: 0.3rem 0 1rem;
+}
+.pick-nb {
+  padding: 0.7rem 0.9rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  border-radius: 0 0 8px 8px;
+  font-size: 0.86rem;
+}
+.pick-nb button {
+  font: inherit; font-size: 0.8rem; margin-top: 0.4rem; padding: 0.2rem 0.6rem;
+  border: 1px solid var(--line); border-radius: 999px; background: #fff;
+  color: var(--accent); cursor: pointer;
+}
+.pick-nb button:hover { border-color: var(--accent); }
+.btn-row .btn-primary { background: #8C1515; border-color: #8C1515; color: #fff; font-weight: 600; }
+.btn-row .btn-primary:hover { background: #401415; border-color: #401415; color: #fff; }
+#compare h3 { margin-top: 1.4rem; }

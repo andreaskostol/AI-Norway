@@ -11,7 +11,7 @@
   var EN = (document.documentElement.lang || "nb")
              .toLowerCase().indexOf("en") === 0;
   var PANEL = document.body.getAttribute("data-panel");
-  var V = "20260907a";
+  var V = "20260907b";
 
   // ---------- Farger og etiketter ----------
 
@@ -173,6 +173,8 @@
   // ==================================================================
   // YRKER
   // ==================================================================
+
+  var OCC = null;   // occupations.json, lastet ved behov (sammenlign arbeidsmarkedet)
 
   function initYrker(Y) {
     var byCode = {};
@@ -420,6 +422,296 @@
       renderY4();
     }
 
+    // ---- Velg et yrke: skaarkort, tre naboyrker, sammenlign arbeidsmarkedet ----
+    // Naboene kommer fra styrk08_task_neighbours.csv (O*NET-profiler).
+    // Sysselsetting og loenn hentes fra occupations.json (yrkesvelgeren paa
+    // forsiden) foerst naar brukeren ber om sammenligningen; ledige
+    // stillinger fra vacancies.json, som bare finnes naar NAV-innsamlingen
+    // har levert.
+    var pick = { code: null, occ: null, vac: undefined };
+    var PICK_COLORS = [QUINT_COLORS[3], QUINT_COLORS[0], QUINT_COLORS[1], "#2b3e50"];
+    var REF_MONTH = "2025-02-01";
+
+    function qBadge(q) {
+      return q ? "<span class='q-badge' style='background:" + QUINT_COLORS[q - 1] + "'>" +
+        (EN ? "Q" : "K") + q + "</span>" : "–";
+    }
+    function latestChat(o) { return o.v[latestKey.claude_ai]; }
+    function latestApi(o) { return o.v[latestKey.api]; }
+    function pickSet() {
+      if (!pick.code) return [];
+      var o = byCode[pick.code];
+      return [pick.code].concat(o.nb.map(function (n) { return n.code; }))
+        .filter(function (c) { return byCode[c]; });
+    }
+
+    function renderPickCard() {
+      var box = el("pick-card");
+      var o = byCode[pick.code];
+      if (!o) { box.innerHTML = ""; return; }
+      var c = latestChat(o), a = latestApi(o);
+      function metric(label, value, extra) {
+        return "<div class='pick-metric'><strong>" + value + "</strong>" + label +
+          (extra ? " " + extra : "") + "</div>";
+      }
+      box.innerHTML =
+        "<h3>" + occName(o) + " <code>" + o.code + "</code></h3>" +
+        "<p class='pick-sub'>" + (o.n
+          ? thousands(o.n) + (EN ? " private-sector employees (Nov 2022)" : " lønnstakere i privat sektor (nov. 2022)")
+          : (EN ? "Fewer than 30 private-sector employees, no monthly series" : "Under 30 lønnstakere i privat sektor, ingen månedsserie")) +
+        "</p><div class='pick-metrics'>" +
+        metric(EN ? "AI exposure, Eloundou (0–1)" : "KI-eksponering, Eloundou (0–1)",
+               o.beta === null ? "–" : num(o.beta, 2), qBadge(o.q)) +
+        metric(EN ? "AI exposure, Mouchel (0–1)" : "KI-eksponering, Mouchel (0–1)",
+               o.mouchel === null ? "–" : num(o.mouchel, 2), qBadge(o.q_mouchel)) +
+        metric(EN ? "Share of all Claude.ai use" : "Andel av all Claude.ai-bruk",
+               c ? num(c.u, 2) + " %" : "–") +
+        metric(EN ? "Automation share, chat" : "Automatiseringsandel, chat",
+               c && c.auto !== null ? pct(c.auto * 100, 0) : "–") +
+        metric(EN ? "Automation share, API" : "Automatiseringsandel, API",
+               a && a.auto !== null ? pct(a.auto * 100, 0) : "–") +
+        metric(EN ? "Classified conversations, chat" : "Klassifiserte samtaler, chat",
+               c && c.n ? thousands(c.n) : "–") +
+        "</div>";
+    }
+
+    function renderNeighbours() {
+      var box = el("pick-neighbours");
+      var o = byCode[pick.code];
+      box.innerHTML = "";
+      if (!o) return;
+      if (!o.nb.length) {
+        box.innerHTML = "<p class='chart-footnote'>" +
+          (EN ? "No O*NET profile for this occupation." : "Ingen O*NET-profil for dette yrket.") + "</p>";
+        return;
+      }
+      o.nb.forEach(function (nb, i) {
+        var n = byCode[nb.code];
+        if (!n) return;
+        var c = latestChat(n);
+        var card = document.createElement("div");
+        card.className = "pick-nb";
+        card.style.borderTopColor = PICK_COLORS[i + 1];
+        card.innerHTML = "<h4>" + occName(n) + " <code>" + n.code + "</code></h4>" +
+          "<p class='pick-sub'>" + (EN ? "Similarity " : "Likhet ") + num(nb.sim, 2) +
+          (n.n ? " · " + thousands(n.n) + (EN ? " employees" : " lønnstakere") : "") + "</p>" +
+          "<div>" + (EN ? "Exposure " : "Eksponering ") + qBadge(n.q) +
+          " · " + (EN ? "automation, chat " : "automatisering, chat ") +
+          (c && c.auto !== null ? pct(c.auto * 100, 0) : "–") + "</div>";
+        var b = document.createElement("button");
+        b.type = "button";
+        b.textContent = EN ? "Start from this one" : "Ta utgangspunkt i dette";
+        b.addEventListener("click", function () { pickOccupation(n.code); });
+        card.appendChild(b);
+        box.appendChild(card);
+      });
+    }
+
+    function pickOccupation(code) {
+      if (!byCode[code]) return;
+      pick.code = code;
+      renderPickCard();
+      renderNeighbours();
+      el("compare").hidden = true;
+      // Figur 3 og 4 foelger valget: yrket og de tre naboene.
+      state.occs = pickSet().slice(0, OCC_MAX);
+      state.taskOcc = code;
+      occChanged();
+      if (pick.shown) showCompare();
+    }
+
+    function indexTo(values, dates) {
+      var i = dates.indexOf(REF_MONTH);
+      var base = i >= 0 ? values[i] : null;
+      return values.map(function (v) {
+        return v === null || !base ? null : +(v / base * 100).toFixed(2);
+      });
+    }
+
+    function compareLines(id, outcome, src, noteId) {
+      var codes = pickSet();
+      var series = [];
+      codes.forEach(function (code, i) {
+        var o = OCC.byCode[code];
+        if (!o || !o[outcome]) return;
+        series.push({
+          name: occName(byCode[code]) + " (" + code + ")", type: "line",
+          showSymbol: false, lineStyle: { width: i === 0 ? 3.2 : 2.2 },
+          itemStyle: { color: PICK_COLORS[i] }, color: PICK_COLORS[i],
+          endLabel: { show: true, formatter: trunc(occName(byCode[code]), 24), fontSize: 11,
+                      color: PICK_COLORS[i], fontWeight: 600, distance: 6 },
+          labelLayout: { moveOverlap: "shiftY" },
+          data: indexTo(o[outcome].sa, OCC.dates)
+        });
+      });
+      var c = chart(id);
+      if (!series.length) {
+        c.clear();
+        setText(noteId, EN ? "No monthly series for these occupations."
+                           : "Ingen månedsserie for disse yrkene.");
+        return;
+      }
+      var refIdx = OCC.dates.indexOf(REF_MONTH);
+      c.setOption({
+        animationDuration: 300,
+        grid: { left: 50, right: 190, top: 24, bottom: 44 },
+        graphic: brandGraphic(src),
+        tooltip: { trigger: "axis", valueFormatter: function (v) { return v === null ? "–" : num(v, 1); } },
+        xAxis: { type: "category", data: OCC.dates.map(function (d) { return d.slice(0, 7); }),
+                 boundaryGap: false,
+                 axisLabel: { formatter: function (v) { return v.slice(5) === "01" ? v.slice(0, 4) : ""; },
+                              interval: 0 } },
+        yAxis: { type: "value", scale: true, splitLine: { lineStyle: { color: "#eee" } },
+                 name: EN ? "Index (Feb 2025 = 100)" : "Indeks (feb. 2025 = 100)",
+                 nameTextStyle: { align: "left" } },
+        series: series.concat([{
+          type: "line", data: [], markLine: {
+            silent: true, symbol: "none", lineStyle: { type: "dashed", color: "#666" },
+            label: { formatter: EN ? "Claude Code launch" : "Claude Code-lansering", fontSize: 10.5 },
+            data: refIdx >= 0 ? [{ xAxis: refIdx }] : [] }
+        }])
+      }, true);
+      var missing = codes.filter(function (code) { return !OCC.byCode[code]; });
+      setText(noteId, (EN
+        ? "Seasonally adjusted, private sector, ages 21–60, index 100 in February 2025. Source: A-ordningen via microdata.no."
+        : "Sesongjustert, privat sektor, 21–60 år, indeks 100 i februar 2025. Kilde: A-ordningen via microdata.no.") +
+        (missing.length ? (EN ? " No series (fewer than 30 employees): " : " Ingen serie (under 30 lønnstakere): ") +
+          missing.map(function (c) { return occName(byCode[c]); }).join(", ") + "." : ""));
+    }
+
+    function compareVacancies() {
+      var codes = pickSet();
+      el("chart-c3").hidden = !pick.vac;
+      if (!pick.vac) {
+        setText("c3-note", EN
+          ? "Vacancy counts from NAV are being collected. The series appears here once the first snapshot is delivered."
+          : "Ledige stillinger fra NAV er under innsamling. Serien vises her når første øyeblikksbilde er levert.");
+        return;
+      }
+      var V = pick.vac;
+      var c = chart("chart-c3");
+      var src = EN ? "Source: arbeidsplassen.nav.no, open ads" : "Kilde: arbeidsplassen.nav.no, åpne annonser";
+      if (V.dates.length >= 2) {
+        c.setOption({
+          animationDuration: 300,
+          grid: { left: 60, right: 190, top: 24, bottom: 44 },
+          graphic: brandGraphic(src),
+          tooltip: { trigger: "axis" },
+          xAxis: { type: "category", data: V.dates, boundaryGap: false },
+          yAxis: { type: "value", min: 0, splitLine: { lineStyle: { color: "#eee" } },
+                   name: EN ? "Open ads" : "Åpne annonser", nameTextStyle: { align: "left" } },
+          series: codes.map(function (code, i) {
+            var r = V.by_code[code];
+            return { name: occName(byCode[code]) + " (" + code + ")", type: "line",
+                     symbol: "circle", symbolSize: 6, lineStyle: { width: i === 0 ? 3.2 : 2.2 },
+                     itemStyle: { color: PICK_COLORS[i] }, color: PICK_COLORS[i],
+                     endLabel: { show: true, formatter: trunc(occName(byCode[code]), 24), fontSize: 11,
+                                 color: PICK_COLORS[i], fontWeight: 600, distance: 6 },
+                     labelLayout: { moveOverlap: "shiftY" },
+                     data: r ? r.ads : V.dates.map(function () { return 0; }) };
+          })
+        }, true);
+      } else {
+        var last = V.dates.length - 1;
+        c.setOption({
+          animationDuration: 300,
+          grid: { left: 250, right: 60, top: 20, bottom: 40 },
+          graphic: brandGraphic(src),
+          tooltip: { trigger: "axis", axisPointer: { type: "shadow" },
+                     formatter: function (ps) {
+                       var code = codes[ps[0].dataIndex], r = V.by_code[code];
+                       return "<b>" + occName(byCode[code]) + "</b><br>" +
+                         (EN ? "Open ads: " : "Åpne annonser: ") + (r ? r.ads[last] : 0) + "<br>" +
+                         (EN ? "Positions: " : "Stillinger: ") + (r ? r.pos[last] : 0) + "<br>" +
+                         (EN ? "Published last 7 days: " : "Publisert siste 7 dager: ") + (r ? r.new7[last] : 0);
+                     } },
+          xAxis: { type: "value", min: 0, splitLine: { lineStyle: { color: "#eee" } } },
+          yAxis: { type: "category", inverse: true, axisTick: { show: false },
+                   data: codes.map(function (code) { return trunc(occName(byCode[code]), 34) + " (" + code + ")"; }),
+                   axisLabel: { fontSize: 11, width: 234, overflow: "truncate" } },
+          series: [{ type: "bar", barMaxWidth: 26,
+                     itemStyle: { color: function (p) { return PICK_COLORS[p.dataIndex]; } },
+                     label: { show: true, position: "right", fontSize: 11 },
+                     data: codes.map(function (code) { var r = V.by_code[code]; return r ? r.ads[last] : 0; }) }]
+        }, true);
+      }
+      setText("c3-note", (EN
+        ? "Open ads on arbeidsplassen.nav.no that list the occupation, snapshot " + V.dates[V.dates.length - 1] +
+          ". An ad listing several occupations counts in each. Stock of open ads, not inflow."
+        : "Åpne annonser på arbeidsplassen.nav.no som lister yrket, øyeblikksbilde " + V.dates[V.dates.length - 1] +
+          ". En annonse som lister flere yrker teller i hvert. Beholdning av åpne annonser, ikke tilgang."));
+    }
+
+    function showCompare() {
+      if (!pick.code) return;
+      pick.shown = true;
+      el("compare").hidden = false;
+      var jobs = [];
+      if (!OCC) {
+        jobs.push(fetch("/data/occupations.json?v=" + V).then(function (r) { return r.json(); })
+          .then(function (d) {
+            OCC = d; OCC.byCode = {};
+            OCC.occupations.forEach(function (o) { OCC.byCode[o.code] = o; });
+          }));
+      }
+      if (pick.vac === undefined) {
+        jobs.push(fetch("/data/vacancies.json?v=" + V)
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) { pick.vac = d; })
+          .catch(function () { pick.vac = null; }));
+      }
+      Promise.all(jobs).then(function () {
+        compareLines("chart-c1", "employment",
+          EN ? "Source: A-ordningen via microdata.no" : "Kilde: A-ordningen via microdata.no", "c1-note");
+        compareLines("chart-c2", "wages",
+          EN ? "Source: A-ordningen via microdata.no" : "Kilde: A-ordningen via microdata.no", "c2-note");
+        compareVacancies();
+        Object.keys(CHARTS).forEach(function (k) { CHARTS[k].resize(); });
+      }).catch(function (err) {
+        setText("c1-note", (EN ? "Could not load the series (" : "Kunne ikke laste seriene (") + err.message + ").");
+      });
+    }
+
+    function initPick() {
+      var input = el("pick-search"), ul = el("pick-hits");
+      if (!input) return;
+      function hits(list) {
+        ul.innerHTML = "";
+        list.forEach(function (o) {
+          var li = document.createElement("li");
+          var b = document.createElement("button");
+          b.type = "button";
+          b.innerHTML = "<code>" + o.code + "</code> " + occName(o) +
+            (o.n ? " <span class='occ-small'>(" + thousands(o.n) + ")</span>" : "");
+          b.addEventListener("click", function () {
+            input.value = ""; ul.hidden = true; pickOccupation(o.code);
+          });
+          li.appendChild(b); ul.appendChild(li);
+        });
+        ul.hidden = !list.length;
+      }
+      input.addEventListener("input", function () { hits(search(input.value)); });
+      input.addEventListener("keydown", function (e) {
+        if (e.key === "Enter") { var f = ul.querySelector("button"); if (f) { e.preventDefault(); f.click(); } }
+        else if (e.key === "Escape") ul.hidden = true;
+      });
+      el("pick-random").addEventListener("click", function () {
+        var pool = Y.occupations.filter(function (o) { return o.n && o.n >= 1000 && o.nb.length; });
+        pickOccupation(pool[Math.floor(Math.random() * pool.length)].code);
+      });
+      el("pick-compare").addEventListener("click", showCompare);
+      // ?yrke=2512 velger et yrke, ?sammenlign=1 (eller ?compare=1) aapner
+      // sammenligningen med en gang, saa lenker kan deles.
+      var fromUrl = (location.search.match(/[?&]yrke=(\d{4})/) || [])[1];
+      if (fromUrl && byCode[fromUrl]) {
+        pickOccupation(fromUrl);
+      } else {
+        var pool = Y.occupations.filter(function (o) { return o.n && o.n >= 2000 && o.nb.length; });
+        pickOccupation(pool[Math.floor(Math.random() * pool.length)].code);
+      }
+      if (/[?&](sammenlign|compare)=/.test(location.search)) showCompare();
+    }
+
     // ---- Oppsett ----
     makeButtons("y-platform-buttons",
       ["claude_ai", "api"].map(function (p) { return { value: p, label: PLATFORM_LABELS[p] }; }),
@@ -468,6 +760,7 @@
 
     setText("y-n-occ", String(Y.n_occupations));
     renderKpi(); renderY1(); renderY2(); occChanged();
+    initPick();
   }
 
   // ==================================================================

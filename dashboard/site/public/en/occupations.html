@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/yrker.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/occupations.html">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/yrker.html">
-<link rel="stylesheet" href="/style.css?v=20260907a">
+<link rel="stylesheet" href="/style.css?v=20260907b">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body data-panel="yrker">
@@ -22,6 +22,7 @@
              alt="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School"></a>
     </div>
     <nav class="site-nav">
+      <a href="#velg">Pick an occupation</a>
       <a href="#fig1">Largest occupations</a>
       <a href="#fig2">Chat vs API</a>
       <a href="#fig3">Pick occupations</a>
@@ -50,6 +51,7 @@
 <aside class="toc" aria-label="Contents">
   <nav id="toc-nav">
     <a href="#intro">Occupations</a>
+    <a href="#velg">Pick an occupation</a>
     <a href="#fig1">1 · Largest occupations</a>
     <a href="#fig2">2 · Chat vs API</a>
     <a href="#fig3">3 · Pick occupations</a>
@@ -94,6 +96,52 @@
           ISCO.</li>
       </ul>
     </details>
+  </section>
+
+  <section id="velg" class="chart-section">
+    <h2>Pick an occupation</h2>
+    <p class="chart-intro">
+      Search for an occupation, or let us draw one. The occupation gets
+      a score for AI exposure and for automation. We then find the three
+      occupations closest in work content, measured with O*NET work
+      activities and skills. Finally you can compare the labor market
+      for the four: employment, pay and open vacancies.
+    </p>
+    <div class="occ-picker">
+      <input type="search" id="pick-search" autocomplete="off"
+             aria-label="Search for an occupation"
+             placeholder="Search by occupation or STYRK-08 code">
+      <ul id="pick-hits" class="occ-hits" hidden></ul>
+    </div>
+    <div class="btn-row">
+      <button type="button" id="pick-random">Draw a random occupation</button>
+    </div>
+    <div id="pick-card" class="pick-card"></div>
+    <h3>The three closest occupations in work content</h3>
+    <div id="pick-neighbours" class="pick-grid"></div>
+    <div class="btn-row">
+      <button type="button" id="pick-compare" class="btn-primary">Compare the labor market</button>
+    </div>
+    <div id="compare" hidden>
+      <h3>Employment</h3>
+      <div id="chart-c1" class="chart"></div>
+      <p class="chart-footnote" id="c1-note"></p>
+      <h3>Pay per full-time equivalent</h3>
+      <div id="chart-c2" class="chart"></div>
+      <p class="chart-footnote" id="c2-note"></p>
+      <h3>Open vacancies at NAV</h3>
+      <div id="chart-c3" class="chart chart-short"></div>
+      <p class="chart-footnote" id="c3-note"></p>
+    </div>
+    <p class="chart-footnote">
+      Similarity is the cosine between the occupations' standardized
+      profiles over 41 work activities and 35 skills in O*NET, mapped to
+      STYRK-08 through SOC and ISCO. Occupations that share the same US
+      occupation codes get similarity 1. Employment and pay are the same
+      series as figure 9 on the index page: private sector, ages 21–60,
+      seasonally adjusted, index 100 in February 2025. Vacancies are open
+      ads on arbeidsplassen.nav.no that list the occupation.
+    </p>
   </section>
 
   <section id="fig1" class="chart-section">
@@ -272,6 +320,6 @@
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/panels.js?v=20260907a"></script>
+<script src="/panels.js?v=20260907b"></script>
 </body>
 </html>

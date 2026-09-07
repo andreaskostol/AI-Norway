@@ -81,6 +81,14 @@ def build_yrker():
 
     coll = read_csv(os.path.join(EXPO_DIR, "styrk08_aei_collaboration.csv"))
     tasks = read_csv(os.path.join(EXPO_DIR, "styrk08_aei_tasks.csv"))
+    # Closest occupations by O*NET work content (build_occupation_task_similarity.py).
+    neighbours = defaultdict(list)
+    nb_path = os.path.join(EXPO_DIR, "styrk08_task_neighbours.csv")
+    if os.path.exists(nb_path):
+        for r in read_csv(nb_path):
+            if int(r["rank"]) <= 3:
+                neighbours[r["styrk08"]].append({"code": r["neighbour"],
+                                                 "sim": num(r["similarity"], 3)})
 
     by_code = defaultdict(dict)
     for r in coll:
@@ -119,6 +127,9 @@ def build_yrker():
             "n": n_base.get(code),
             "q": int(float(m["eloundou_q"])) if m["eloundou_q"] else None,
             "q_mouchel": int(float(m["mouchel_grounded_q"])) if m["mouchel_grounded_q"] else None,
+            "beta": num(m["eloundou_beta"], 3),
+            "mouchel": num(m["mouchel_grounded"], 3),
+            "nb": neighbours.get(code, []),
             "v": by_code[code],
             "tasks": task_by_code.get(code, {}),
         })
@@ -296,6 +307,39 @@ def build_bruk():
             "world_working_age_pop": round(world_pop)}
 
 
+# ------------------------------------------------------------- vacancies
+
+def build_vacancies():
+    """Open NAV job ads per STYRK-08 and snapshot date (data/nav_vacancies/).
+
+    Written by dashboard/collect_nav_vacancies.py, or delivered in the same
+    format by the collecting agent. Returns None when no series exists yet,
+    and the panel then hides the vacancy figure.
+    """
+    path = os.path.join(REPO_DIR, "data", "nav_vacancies", "nav_vacancies_by_styrk.csv")
+    if not os.path.exists(path):
+        return None
+    rows = read_csv(path)
+    dates = sorted({r["snapshot_date"] for r in rows})
+    idx = {d: i for i, d in enumerate(dates)}
+    by_code = {}
+    for r in rows:
+        rec = by_code.setdefault(r["styrk08"], {"ads": [None] * len(dates),
+                                                "pos": [None] * len(dates),
+                                                "new7": [None] * len(dates)})
+        i = idx[r["snapshot_date"]]
+        rec["ads"][i] = int(r["n_ads"])
+        rec["pos"][i] = int(r["n_positions"])
+        rec["new7"][i] = int(r["n_ads_new7d"])
+    totals = []
+    tot_path = os.path.join(REPO_DIR, "data", "nav_vacancies", "nav_vacancies_totals.csv")
+    if os.path.exists(tot_path):
+        totals = [{"date": r["snapshot_date"], "ads": int(r["n_ads_unique"]),
+                   "mapped": int(r["n_ads_mapped"])} for r in read_csv(tot_path)]
+    return {"dates": dates, "by_code": by_code, "totals": totals,
+            "source": "arbeidsplassen.nav.no"}
+
+
 # ------------------------------------------------------------------ main
 
 def write(name, data):
@@ -316,6 +360,12 @@ def main():
     b = build_bruk()
     write("bruk.json", b)
     print("  usage series:", [s["date"] for s in b["series"]])
+    v = build_vacancies()
+    if v:
+        write("vacancies.json", v)
+        print("  vacancy snapshots:", v["dates"], "codes:", len(v["by_code"]))
+    else:
+        print("vacancies.json      skipped (no data/nav_vacancies/nav_vacancies_by_styrk.csv yet)")
     # Downloadable copies of the occupation table for the panel's data section.
     dl = os.path.join(OUT_DIR, "panels")
     os.makedirs(dl, exist_ok=True)

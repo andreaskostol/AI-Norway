@@ -54,7 +54,40 @@ fra data på begge språk.
 5. Metodeteksten på `om.html` og `en/about.html` er skrevet om (den sa at ingen
    oppdatering på yrkesnivå fantes).
 
+## Velg et yrke (lagt til samme dag, etter Andreas' beskjed)
+
+Yrkessiden fikk en ny toppseksjon `#velg`: søk eller «Trekk et tilfeldig yrke»
+→ skårkort (Eloundou-β og kvintil, Mouchel og kvintil, andel av Claude-bruk,
+automatisering chat og API, klassifiserte samtaler) → de tre nærmeste yrkene i
+arbeidsinnhold → knappen «Sammenlign arbeidsmarkedet» med sysselsetting og
+lønn (seriene fra `occupations.json`, indeks 100 feb. 2025) og ledige
+stillinger fra NAV. Figur 3 og 4 følger valget. `?yrke=2512&sammenlign=1`
+åpner alt direkte.
+
+- **Nærhet:** `analysis/03_mappings/build_occupation_task_similarity.py` →
+  `data/ai_exposure/styrk08_task_neighbours.csv`. Rene O*NET-oppgavetekster
+  ga nesten ingen overlapp (de er skrevet per SOC-yrke), så likheten er cosinus
+  mellom z-skårede profiler over 41 arbeidsaktiviteter + 35 ferdigheter
+  (O*NET IM), gjennom samme SOC→ISCO→STYRK-kjede som Eloundou. 392 yrker.
+  Eksempel: 2512 → 2519, 2529, 2521; 4110 → 4225, 3313, 4311; 7411 → 7119,
+  7127, 9622. Yrker med samme SOC-sett (2221/2223/2224) får likhet 1.
+- **NAV-stillinger, datakontrakt:** `data/nav_vacancies/README.md`. Innsamler
+  `dashboard/collect_nav_vacancies.py` (åpen søke-API, fylke for fylke pga.
+  10 000-taket, dedup på uuid, STYRK-navn → kode). Mac Mini-agenten kan kjøre
+  skriptet eller levere `snapshots/nav_ads_YYYY-MM-DD.csv` i samme format;
+  `prepare_panels.py build_vacancies()` lager `vacancies.json` når serien
+  finnes, ellers viser panelet en «under innsamling»-note. **Ingen eksisterende
+  innsamling ble funnet** i Dropbox/Deling/Hermes, så serien starter her. NAV
+  svarer 429 ved rask polling; skriptet venter og prøver igjen (`--sleep`).
+- Avvik fra ordlyden i bestillingen: «pick the three closest occupations in
+  terms of ONET tasks» er løst med O*NET-profiler, ikke oppgavetekster, av
+  grunnen over.
+
 ## Åpne beslutninger for Andreas
+
+- **Mac Mini-agenten** må settes opp til å kjøre
+  `python dashboard/collect_nav_vacancies.py` ukentlig (eller levere filer i
+  kontrakten). Andreas må gi den beskjeden; ingenting her sender noe.
 
 - **Deploy?** Se over branchen, så `flyctl deploy`. Ta backup av `public/` først
   (`dashboard/backups/`), som ved tidligere runder.

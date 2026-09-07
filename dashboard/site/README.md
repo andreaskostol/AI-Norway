@@ -44,7 +44,12 @@ månedlig:
   `analysis/03_mappings/build_aei_collaboration_mapping.py` →
   `dashboard/site/prepare_panels.py`. Automatisering = directive + feedback
   loop (Anthropics regel). Forsidens bruksgrupper bruker fortsatt bare
-  directive og det opprinnelige Handa-utvalget.
+  directive og det opprinnelige Handa-utvalget. «Velg et yrke» øverst på siden
+  bruker i tillegg `styrk08_task_neighbours.csv`
+  (`analysis/03_mappings/build_occupation_task_similarity.py`, O*NET-profiler)
+  og, ved «Sammenlign arbeidsmarkedet», `occupations.json` pluss
+  `vacancies.json` (NAV, se `data/nav_vacancies/README.md`; bygges av
+  `prepare_panels.py` bare når `nav_vacancies_by_styrk.csv` finnes).
 - **Utdanning** (`utdanning.html`, data `utdanning.json`): Edutech-pipelinen
   (`AI-research/Edutech/education-analysis/`), utdata kopiert til
   `data/education_analysis/`. Seks institusjoner i første versjon.
