@@ -87,6 +87,29 @@ stillinger fra NAV. Figur 3 og 4 følger valget. `?yrke=2512&sammenlign=1`
   terms of ONET tasks» er løst med O*NET-profiler, ikke oppgavetekster, av
   grunnen over.
 
+## Runde 2 (2026-09-07, etter Andreas' tilbakemelding «not good enough»)
+
+- **KI-bruk per land er fjernet** fra nettstedet (sider, nav, sitemap, nginx,
+  JSON). Notatene og dataene ligger fortsatt i `data/ai_usage_cross_platform/`
+  og `aei_releases/`.
+- **Yrker:** «Velg yrker selv»-grensesnittet (søk, inntil seks chips, nedlasting)
+  ligger øverst, som figur 9 på forsiden. Første chip er hovedyrket. Figuren
+  viser sysselsetting eller lønn fra februar 2023 (to år før Claude Code).
+  Deretter skårkort, femtype-stolper per utvalg for hovedyrket, de tre nærmeste
+  yrkene med «felles» O*NET-aktiviteter, oppgaver, over tid, 30 største, chat mot
+  API. Metodeteksten forklarer automatisering/augmentering i dybden og
+  O*NET-likheten (profiler, ikke oppgavetekster; z-skår; cosinus; kryssgang).
+- **Utdanning:** utvidet til alle læresteder med ≥ 50 kandidater i 2025 (35).
+  Pipeline i repoet: `analysis/07_education/fetch_dbh.py` (DBH-API, alle
+  institusjoner) → `build_institutions.py` (trenger utdanning.no-koblingsfilene i
+  Edutech-mappa, `EDUTECH_DIR`) → `data/education_analysis/` →
+  `prepare_panels.py`. Siden har fagfelt × nivå-velger (nasjonalt, med
+  toppyrker og «hvem utdanner flest»), institusjonsvelger (kort, fagfelt × nivå-
+  tabell, toppyrker), oversikt over alle 35 og metode i tre trinn
+  (utdanningskode, fagfelt/nivå, institusjon).
+- Ledige stillinger: venter, som Andreas ba om. Innsamleren ble startet på nytt
+  da NAV-blokken slapp; leveres når/hvis den fullfører.
+
 ## Åpne beslutninger for Andreas
 
 - **Mac Mini-agenten** må settes opp til å kjøre

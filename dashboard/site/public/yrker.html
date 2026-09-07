@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yrker — Arbeidsmarkedet</title>
-<meta name="description" content="Automatisering eller augmentering, yrke for yrke: hvordan Claude brukes på oppgavene i 350 norske yrker, i chat og i API-et, fra desember 2024 til februar 2026. Fra Anthropic Economic Index, koblet til STYRK-08.">
+<meta name="description" content="Velg yrker og se KI-eksponering, automatisering og augmentering, de nærmeste yrkene i arbeidsinnhold, og sysselsetting og lønn siden Claude Code. Bygget på Anthropic Economic Index, O*NET og A-ordningen.">
 <link rel="canonical" href="https://kiindeksen.no/yrker.html">
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/yrker.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/occupations.html">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/yrker.html">
-<link rel="stylesheet" href="/style.css?v=20260907b">
+<link rel="stylesheet" href="/style.css?v=20260907c">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body data-panel="yrker">
@@ -22,13 +22,11 @@
              alt="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI"></a>
     </div>
     <nav class="site-nav">
-      <a href="#velg">Velg et yrke</a>
-      <a href="#fig1">Største yrker</a>
-      <a href="#fig2">Chat mot API</a>
-      <a href="#fig3">Velg yrker</a>
-      <a href="#fig4">Oppgaver</a>
+      <a href="#velg">Velg yrker</a>
+      <a href="#skaar">Skår</a>
+      <a href="#naermeste">Nærmeste yrker</a>
+      <a href="#oppgaver">Oppgaver</a>
       <a href="#metode">Metode</a>
-      <a href="#data">Data</a>
     </nav>
     <div class="brand">
       <a class="lang-toggle" href="/en/occupations.html" hreflang="en" lang="en">English</a>
@@ -42,7 +40,6 @@
     <a href="/">KI-indeksen</a>
     <a href="/yrker.html" class="active">Yrker</a>
     <a href="/utdanning.html">Utdanning</a>
-    <a href="/bruk.html">KI-bruk per land</a>
     <a href="/om.html">Om</a>
   </div>
 </nav>
@@ -50,12 +47,13 @@
 <div class="layout">
 <aside class="toc" aria-label="Innhold">
   <nav id="toc-nav">
-    <a href="#intro">Yrker</a>
-    <a href="#velg">Velg et yrke</a>
-    <a href="#fig1">1 · De største yrkene</a>
-    <a href="#fig2">2 · Chat mot API</a>
-    <a href="#fig3">3 · Velg yrker</a>
-    <a href="#fig4">4 · Oppgavene i ett yrke</a>
+    <a href="#velg">Velg yrker selv</a>
+    <a href="#skaar">1 · Skår for valgt yrke</a>
+    <a href="#naermeste">2 · Nærmeste yrker</a>
+    <a href="#oppgaver">3 · Oppgavene i yrket</a>
+    <a href="#tid">4 · Automatisering over tid</a>
+    <a href="#storste">5 · De største yrkene</a>
+    <a href="#chat-api">6 · Chat mot API</a>
     <a href="#metode">Metode</a>
     <a href="#data">Last ned data</a>
   </nav>
@@ -64,118 +62,16 @@
 
 <main class="container">
 
-  <section id="intro" class="hero">
-    <h2 class="hero-title">Automatisering eller augmentering, yrke for yrke</h2>
+  <section id="velg" class="hero">
+    <h2 class="hero-title">Velg yrker selv</h2>
     <p class="panel-lede">
-      KI kan brukes på to måter i en jobb. Enten får modellen en oppgave
-      og leverer et svar. Eller så jobber personen og modellen sammen,
-      med spørsmål, utkast og kontroll underveis. Anthropic kaller det
-      første automatisering og det andre augmentering. Denne siden viser
-      fordelingen for <span id="y-n-occ">350</span> norske yrker, bygget
-      på hvordan Claude faktisk brukes på oppgavene i hvert yrke. Chat
-      og API vises hver for seg, og tallene finnes for fire tidspunkter
-      fra desember 2024 til februar 2026.
+      Søk fram inntil seks yrker, eller trekk ett tilfeldig. Det første
+      yrket i lista er hovedyrket. Det får en skår for KI-eksponering og
+      for automatisering under, og vi finner de tre yrkene som ligner mest
+      i arbeidsinnhold. Figuren viser sysselsetting eller lønn for de
+      valgte yrkene fra to år før Claude Code og fram til i dag.
     </p>
-    <p class="panel-kpi" id="y-kpi"></p>
     <p class="panel-status"></p>
-    <details class="quick-summary" open>
-      <summary>Oppsummering for den utålmodige leseren</summary>
-      <ul>
-        <li><strong>Chat er delt på midten, API-et er automatisering.</strong>
-          I chat er om lag halvparten av samtalene automatisering. I API-et,
-          der utviklere og agenter kaller modellen, er nesten alt direkte
-          delegering.</li>
-        <li><strong>Rekkefølgen mellom yrker er ikke fast.</strong>
-          Rangeringen etter automatiseringsandel flytter seg mye fra
-          utvalg til utvalg. Den er mest stabil for yrker med mange
-          samtaler.</li>
-        <li><strong>Dette er global bruk, ikke norsk.</strong> Oppgavene
-          er O*NET-oppgaver, og samtalene kommer fra hele verden.
-          Koblingen til norske yrker går via SOC og ISCO.</li>
-      </ul>
-    </details>
-  </section>
-
-  <section id="velg" class="chart-section">
-    <h2>Velg et yrke</h2>
-    <p class="chart-intro">
-      Søk fram et yrke, eller la oss trekke ett. Yrket får en skår for
-      KI-eksponering og for automatisering. Så finner vi de tre yrkene
-      som ligner mest i arbeidsinnhold, målt med O*NETs arbeidsaktiviteter
-      og ferdigheter. Til slutt kan du sammenligne arbeidsmarkedet for
-      de fire: sysselsetting, lønn og ledige stillinger.
-    </p>
-    <div class="occ-picker">
-      <input type="search" id="pick-search" autocomplete="off"
-             aria-label="Søk etter yrke"
-             placeholder="Søk etter yrke eller STYRK-08-kode">
-      <ul id="pick-hits" class="occ-hits" hidden></ul>
-    </div>
-    <div class="btn-row">
-      <button type="button" id="pick-random">Trekk et tilfeldig yrke</button>
-    </div>
-    <div id="pick-card" class="pick-card"></div>
-    <h3>De tre nærmeste yrkene i arbeidsinnhold</h3>
-    <div id="pick-neighbours" class="pick-grid"></div>
-    <div class="btn-row">
-      <button type="button" id="pick-compare" class="btn-primary">Sammenlign arbeidsmarkedet</button>
-    </div>
-    <div id="compare" hidden>
-      <h3>Sysselsetting</h3>
-      <div id="chart-c1" class="chart"></div>
-      <p class="chart-footnote" id="c1-note"></p>
-      <h3>Lønn per fulltidsekvivalent</h3>
-      <div id="chart-c2" class="chart"></div>
-      <p class="chart-footnote" id="c2-note"></p>
-      <h3>Ledige stillinger hos NAV</h3>
-      <div id="chart-c3" class="chart chart-short"></div>
-      <p class="chart-footnote" id="c3-note"></p>
-    </div>
-    <p class="chart-footnote">
-      Likhet er cosinus mellom yrkenes standardiserte profiler over 41
-      arbeidsaktiviteter og 35 ferdigheter i O*NET, koblet til STYRK-08
-      via SOC og ISCO. Yrker som deler samme amerikanske yrkeskoder får
-      likhet 1. Sysselsetting og lønn er de samme seriene som i figur 9 på
-      KI-indeks-siden: privat sektor, 21–60 år, sesongjustert, indeks 100
-      i februar 2025. Ledige stillinger er åpne annonser på
-      arbeidsplassen.nav.no som lister yrket.
-    </p>
-  </section>
-
-  <section id="fig1" class="chart-section">
-    <h2>1 · De 30 største yrkene</h2>
-    <p class="chart-intro">
-      Hver stolpe er ett yrke. Fargene viser Anthropics fem
-      interaksjonstyper. De to røde er automatisering: direkte delegering
-      og tilbakemeldingssløyfe. De tre andre er augmentering:
-      oppgaveiterasjon, validering og læring. Velg plattform og
-      tidspunkt under.
-    </p>
-    <div class="btn-row" id="y-platform-buttons"></div>
-    <div class="btn-row" id="y-vintage-buttons"></div>
-    <div id="chart-y1" class="chart chart-xtall"></div>
-    <p class="chart-footnote" id="y1-note"></p>
-  </section>
-
-  <section id="fig2" class="chart-section">
-    <h2>2 · Chat mot API, alle yrker</h2>
-    <p class="chart-intro">
-      Samme yrke kan brukes helt ulikt i chat og i API-et. Figuren
-      setter de to mot hverandre for alle yrker med data på begge
-      plattformer. Store sirkler er store yrker.
-    </p>
-    <div id="chart-y2" class="chart chart-tall"></div>
-    <p class="chart-footnote" id="y2-note"></p>
-  </section>
-
-  <section id="fig3" class="chart-section">
-    <h2>3 · Velg yrker og følg dem over tid</h2>
-    <p class="chart-intro">
-      Søk fram inntil seks yrker. Figuren viser automatiseringsandelen
-      ved hvert tidspunkt for plattformen valgt i figur 1. Yrkene er
-      firesifrede STYRK-08-koder. Tallet i parentes i trefflisten er
-      antall lønnstakere i privat sektor i november 2022.
-    </p>
     <div class="occ-picker">
       <input type="search" id="occ-search" autocomplete="off"
              aria-label="Søk etter yrke"
@@ -184,70 +80,225 @@
     </div>
     <div id="occ-chips" class="occ-chips"></div>
     <div class="btn-row occ-actions">
+      <button type="button" id="occ-random">Trekk et tilfeldig yrke</button>
+      <button type="button" id="occ-add-nb">Legg til de tre nærmeste</button>
       <button type="button" id="occ-download">Last ned valgte yrker (CSV)</button>
     </div>
-    <div id="chart-y3" class="chart"></div>
-    <p class="chart-footnote" id="y3-note"></p>
+    <div class="btn-row" id="lm-outcome-buttons"></div>
+    <div id="chart-lm" class="chart chart-tall"></div>
+    <p class="chart-footnote" id="lm-note"></p>
+    <p class="chart-footnote">
+      Samme serier som i figur 9 på KI-indeks-siden: lønnstakere i privat
+      sektor, 21–60 år, sesongjustert, indeks 100 i februar 2025. Vinduet
+      starter to år før Claude Code. Klikk på et yrke i lista for å gjøre
+      det til hovedyrke. Ledige stillinger fra NAV kommer i en senere
+      versjon.
+    </p>
   </section>
 
-  <section id="fig4" class="chart-section">
-    <h2>4 · Oppgavene i ett yrke</h2>
+  <section id="skaar" class="chart-section">
+    <h2>1 · Skår for valgt yrke</h2>
     <p class="chart-intro">
-      Hvilke oppgaver i yrket brukes Claude mest på, og hvordan? Velg
-      ett av yrkene fra figur 3. Oppgavene er sortert etter hvor stor
-      andel av all Claude-bruk de står for. Stolpen viser
-      interaksjonstypene for hver oppgave.
+      To skårer sier noe ulikt. <strong>KI-eksponering</strong> er en
+      vurdering av oppgavene: hvor stor del av arbeidet kan en språkmodell
+      gjøre, i prinsippet. <strong>Automatisering</strong> er observert
+      bruk: når folk faktisk bruker Claude på yrkets oppgaver, får modellen
+      oppgaven alene, eller jobber personen og modellen sammen?
     </p>
-    <div class="btn-row" id="task-occ-buttons"></div>
+    <div id="pick-card" class="pick-card"></div>
+    <h3>Slik brukes Claude på oppgavene i yrket</h3>
+    <p class="chart-intro">
+      Anthropic sorterer hver samtale i fem typer. To av dem er
+      automatisering. <strong>Direkte delegering</strong>: personen ber om
+      et ferdig resultat og får det. <strong>Tilbakemeldingssløyfe</strong>:
+      modellen gjør jobben, personen gir bare tilbakemelding fra
+      omgivelsene, for eksempel en feilmelding. Tre er augmentering.
+      <strong>Oppgaveiterasjon</strong>: personen og modellen bygger
+      resultatet sammen i flere runder. <strong>Validering</strong>:
+      personen bruker modellen til å sjekke eget arbeid.
+      <strong>Læring</strong>: personen vil forstå noe, ikke få noe gjort.
+      Stolpene viser fordelingen for hovedyrket ved hvert tidspunkt, chat
+      og API hver for seg.
+    </p>
+    <div id="chart-types" class="chart chart-short"></div>
+    <p class="chart-footnote" id="types-note"></p>
+  </section>
+
+  <section id="naermeste" class="chart-section">
+    <h2>2 · De tre nærmeste yrkene i arbeidsinnhold</h2>
+    <p class="chart-intro">
+      Hvilke andre yrker består av mye av det samme arbeidet? Vi bruker
+      O*NET, den amerikanske yrkesdatabasen, som gir hvert yrke en profil
+      over 41 arbeidsaktiviteter og 35 ferdigheter. Yrker med like profiler
+      ligger nær hverandre. Under hvert yrke står de aktivitetene som
+      trekker de to sammen. Se metode for regnestykket.
+    </p>
+    <div id="pick-neighbours" class="pick-grid"></div>
+    <p class="chart-footnote" id="nb-note"></p>
+  </section>
+
+  <section id="oppgaver" class="chart-section">
+    <h2>3 · Oppgavene i yrket</h2>
+    <p class="chart-intro">
+      Hvilke oppgaver i hovedyrket brukes Claude mest på, og hvordan?
+      Oppgavene er sortert etter hvor stor andel av all Claude-bruk de
+      står for. Stolpen viser de fem typene for hver oppgave.
+    </p>
     <div class="btn-row" id="task-platform-buttons"></div>
     <div id="chart-y4" class="chart chart-tasks"></div>
     <p class="chart-footnote" id="y4-note"></p>
   </section>
 
+  <section id="tid" class="chart-section">
+    <h2>4 · Automatisering over tid for de valgte yrkene</h2>
+    <p class="chart-intro">
+      Automatiseringsandelen for yrkene i lista øverst, ved hvert
+      tidspunkt Anthropic har publisert. Velg chat eller API.
+    </p>
+    <div class="btn-row" id="tid-platform-buttons"></div>
+    <div id="chart-y3" class="chart"></div>
+    <p class="chart-footnote" id="y3-note"></p>
+  </section>
+
+  <section id="storste" class="chart-section">
+    <h2>5 · De 30 største yrkene</h2>
+    <p class="chart-intro">
+      Hver stolpe er ett yrke, sortert etter automatiseringsandel. Velg
+      plattform og tidspunkt under.
+    </p>
+    <p class="panel-kpi" id="y-kpi"></p>
+    <div class="btn-row" id="y-platform-buttons"></div>
+    <div class="btn-row" id="y-vintage-buttons"></div>
+    <div id="chart-y1" class="chart chart-xtall"></div>
+    <p class="chart-footnote" id="y1-note"></p>
+  </section>
+
+  <section id="chat-api" class="chart-section">
+    <h2>6 · Chat mot API, alle yrker</h2>
+    <p class="chart-intro">
+      Samme yrke kan brukes helt ulikt i chat og i API-et, der utviklere
+      og agenter kaller modellen. Figuren setter de to mot hverandre for
+      alle yrker med data på begge plattformer. Store sirkler er store
+      yrker.
+    </p>
+    <div id="chart-y2" class="chart chart-tall"></div>
+    <p class="chart-footnote" id="y2-note"></p>
+  </section>
+
   <section id="metode" class="prose-section">
     <h2>Metode</h2>
     <p>
-      Kilden er Anthropic Economic Index. Anthropic klassifiserer et
-      utvalg samtaler etter hvilken O*NET-oppgave de gjelder, og etter
-      hvordan personen og modellen samhandler. Tabellen oppgave × type
-      er publisert for fire utvalg. Det første er utvalget i Handa m.fl.
-      (2025), samtaler i Claude.ai fra desember 2024 til januar 2025. De
-      tre neste er én uke hver: august 2025, november 2025 og februar
-      2026. Fra august 2025 finnes tabellen også for API-et.
+      Siden setter sammen fire kilder. KI-eksponeringen kommer fra
+      Eloundou m.fl. (2024) og Mouchel m.fl. (2026), som på
+      KI-indeks-siden. Automatisering og augmentering kommer fra
+      Anthropic Economic Index. Nærmeste yrker kommer fra O*NET.
+      Sysselsetting og lønn kommer fra A-ordningen via microdata.no.
     </p>
-    <details class="method-details">
-      <summary>De fem interaksjonstypene</summary>
-      <p><strong>Direkte delegering</strong> (directive): personen ber om et
-        ferdig resultat og får det. <strong>Tilbakemeldingssløyfe</strong>
-        (feedback loop): modellen gjør jobben, personen gir bare
-        tilbakemelding fra omgivelsene, for eksempel en feilmelding.
-        <strong>Oppgaveiterasjon</strong> (task iteration): personen og
-        modellen bygger resultatet sammen i flere runder.
-        <strong>Validering</strong>: personen bruker modellen til å sjekke
-        eget arbeid. <strong>Læring</strong>: personen vil forstå noe, ikke
-        få noe gjort.</p>
-      <p>Anthropic regner de to første som automatisering og de tre
-        siste som augmentering. Samtaler som ikke lot seg klassifisere er
-        tatt ut av nevneren. Merk at KI-indeks-siden og arbeidsnotatet
-        bruker en strengere regel for bruksgruppene: bare direkte
-        delegering regnes som automatisering der, og tallene er fra det
-        første utvalget. Andelen for direkte delegering alene ligger i
+
+    <details class="method-details" open>
+      <summary>Automatisering og augmentering: hva tallene betyr</summary>
+      <p>Anthropic tar et utvalg samtaler fra Claude og lar en modell
+        klassifisere hver samtale på to måter. Først: hvilken
+        O*NET-oppgave handler samtalen om? Dernest: hvordan samhandler
+        personen og modellen? Den andre klassifiseringen har fem utfall,
+        beskrevet i del 1. Samtaler som ikke lar seg plassere, tas ut.</p>
+      <p><strong>Automatisering</strong> er summen av direkte delegering
+        og tilbakemeldingssløyfe. I begge gjør modellen arbeidet. Personen
+        formulerer bestillingen og, i sløyfen, formidler hva som skjedde
+        da resultatet ble prøvd. <strong>Augmentering</strong> er summen
+        av oppgaveiterasjon, validering og læring. I alle tre bidrar
+        personen med innhold, vurdering eller spørsmål underveis. Dette
+        er Anthropics egen inndeling og den vi bruker her.</p>
+      <p>Automatiseringsandelen for et yrke er andelen av samtalene om
+        yrkets oppgaver som er automatisering. Andelen sier ikke hvor mye
+        av arbeidet som gjøres av KI. Den sier hvordan KI brukes når den
+        brukes. Et yrke der Claude nesten aldri brukes kan likevel ha en
+        høy andel, fra få samtaler. Antall klassifiserte samtaler står
+        derfor i skårkortet og i tooltip.</p>
+      <p>Hvorfor skille? De to bruksmåtene kan ha motsatt virkning på
+        sysselsetting. Der bruken er automatiserende, gjør modellen
+        oppgaven i stedet for personen. Der bruken er augmenterende,
+        gjør personen mer eller bedre arbeid med modellen som hjelp.
+        KI-indeks-siden viser at sysselsettingen har utviklet seg ulikt
+        i de to gruppene av yrker.</p>
+      <p>Merk to avvik fra forsiden. Der regnes bare direkte delegering
+        som automatisering, og tallene kommer fra det første utvalget til
+        Handa m.fl. (2025). Her brukes Anthropics inndeling og alle
+        publiserte utvalg. Andelen for direkte delegering alene ligger i
         nedlastingsfilen.</p>
     </details>
+
+    <details class="method-details">
+      <summary>Fire utvalg, to plattformer</summary>
+      <p>Tabellen oppgave × type er publisert fire ganger. Det første
+        utvalget er samtaler i Claude.ai fra desember 2024 til januar
+        2025 (Handa m.fl. 2025). De tre neste er én uke hver: august
+        2025, november 2025 og februar 2026. Fra august 2025 finnes
+        tabellen også for API-et, der utviklere og agenter kaller
+        modellen. Rangeringen av yrker flytter seg mellom utvalgene.
+        Mellom august 2025 og februar 2026 er rangkorrelasjonen i chat
+        om lag 0,7. Mot Handa-utvalget er den lavere, om lag 0,3, og om
+        lag 0,6 for yrker med minst tusen samtaler.</p>
+    </details>
+
     <details class="method-details">
       <summary>Fra O*NET-oppgave til norsk yrke</summary>
-      <p>Hver oppgave hører til ett eller flere amerikanske SOC-yrker.
-        Samtalene fordeles likt på dem. SOC går til ISCO-08 med BLS'
-        kryssgang, og ISCO-koden er STYRK-08-koden når den finnes i den
-        norske standarden. Andelen for et STYRK-yrke er snittet over
-        SOC-yrkene som bidrar. Dette er nøyaktig samme kjede som for
-        Handa-målet på KI-indeks-siden. Kjeden gir 300 til 320 yrker per
+      <p>Hver O*NET-oppgave hører til ett eller flere amerikanske
+        SOC-yrker. Samtalene fordeles likt på dem. SOC går til ISCO-08
+        med BLS' kryssgang, og ISCO-koden er STYRK-08-koden når den
+        finnes i den norske standarden. Andelen for et STYRK-yrke er
+        snittet over SOC-yrkene som bidrar. Kjeden er den samme som for
+        Handa-målet på KI-indeks-siden og gir 300 til 320 yrker per
         utvalg. Yrker uten Claude-bruk på noen av oppgavene sine faller
-        ut.</p>
-      <p>Figur 4 viser oppgavene bak ett yrke: de 15 O*NET-oppgavene med
-        mest bruk blant SOC-yrkene koden er koblet til, med minst ti
-        klassifiserte samtaler.</p>
+        ut. Del 3 viser de 15 O*NET-oppgavene med mest bruk blant
+        SOC-yrkene koden er koblet til, med minst ti klassifiserte
+        samtaler. Oppgavetekstene er O*NETs engelske formuleringer.</p>
     </details>
+
+    <details class="method-details" open>
+      <summary>Nærmeste yrker: slik brukes O*NET</summary>
+      <p>O*NET er det amerikanske arbeidsdepartementets database over
+        yrker. For hvert yrke har O*NET spurt et utvalg ansatte hvor
+        viktig hver av 41 generelle arbeidsaktiviteter er, for eksempel
+        «programmering», «pleie av andre» eller «betjening av kjøretøy».
+        Det samme er gjort for 35 ferdigheter, som «kritisk tenkning» og
+        «reparasjon». Skalaen går fra 1 til 5. Til sammen gir det hvert
+        yrke en profil med 76 tall.</p>
+      <p>Vi bruker ikke oppgavetekstene til å finne naboer, selv om
+        O*NET har dem. Oppgavene er skrevet for hvert yrke og gjentas
+        nesten aldri på tvers. Programvareutviklere deler to
+        oppgavetekster med ett annet yrke, og kontormedarbeidere deler
+        ingen. Aktivitets- og ferdighetsprofilene finnes for alle yrker
+        på samme skala, og det er dem vi sammenligner.</p>
+      <p>Regnestykket: hvert av de 76 tallene standardiseres på tvers
+        av yrker, så aktiviteter alle yrker skårer høyt på, som «å hente
+        informasjon», ikke dominerer. Likheten mellom to yrker er
+        cosinus mellom de standardiserte profilene, et tall fra −1 til 1.
+        De tre yrkene med høyest likhet vises. Under hvert vises de tre
+        aktivitetene eller ferdighetene som begge yrker skårer høyt på og
+        som bidrar mest til likheten.</p>
+      <p>Profilene ligger på amerikanske SOC-koder. De går til norske
+        STYRK-08-koder gjennom samme kryssgang som eksponeringsmålene.
+        Et STYRK-yrke som er koblet til flere SOC-yrker får snittet av
+        profilene deres. Norske koder som deler samme SOC-sett, for
+        eksempel sykepleiere, spesialsykepleiere og vernepleiere, får
+        identisk profil og likhet 1.</p>
+      <p>Hva målet ikke fanger: norske forhold, lønn, utdanningskrav,
+        og hvor lett det faktisk er å bytte. Det sier bare at arbeidet
+        består av mye av det samme.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Sysselsetting og lønn</summary>
+      <p>Seriene er de samme som i figur 9 på KI-indeks-siden: antall
+        lønnstakere og gjennomsnittslønn per fulltidsekvivalent i privat
+        sektor, 21–60 år, per firesifret STYRK-08-kode, sesongjustert.
+        Indeksen er 100 i februar 2025, måneden Claude Code ble lansert.
+        Vinduet her starter i februar 2023, to år før. Bare yrker med
+        minst 30 lønnstakere i hver måned siden januar 2021 har serie,
+        358 i alt.</p>
+    </details>
+
     <details class="method-details">
       <summary>Forbehold</summary>
       <ol>
@@ -255,17 +306,11 @@
           oppgavene i yrket, ikke hvordan norske arbeidstakere bruker
           KI.</li>
         <li>Bare Claude. OpenAI publiserer ingen tilsvarende tabell.</li>
-        <li>Andelene gjelder samtaler, ikke arbeidstid. Et yrke der
-          Claude sjelden brukes kan få en høy automatiseringsandel fra
-          få samtaler. Antallet klassifiserte samtaler står i
-          tooltip.</li>
-        <li>Rangeringen flytter seg. Mellom utvalgene i august 2025 og
-          februar 2026 er rangkorrelasjonen i chat om lag 0,7. Mot
-          Handa-utvalget er den lavere, om lag 0,3, og om lag 0,6 for
-          yrker med minst tusen samtaler.</li>
-        <li>API-et gir lite variasjon mellom yrker. Nesten alle yrker
-          ligger over 80 prosent direkte delegering.</li>
-        <li>Oppgavetekstene er O*NETs engelske formuleringer.</li>
+        <li>Andelene gjelder samtaler, ikke arbeidstid.</li>
+        <li>API-et gir lite variasjon mellom yrker. Nesten alle ligger
+          over 80 prosent direkte delegering.</li>
+        <li>O*NET beskriver amerikanske yrker. Norske yrker med samme
+          kode kan ha annet innhold.</li>
       </ol>
     </details>
   </section>
@@ -276,9 +321,10 @@
       Yrkestabellen har én rad per yrke, plattform og tidspunkt, med
       andelen for hver interaksjonstype, bruksandel og antall
       klassifiserte samtaler. Oppgavetabellen har de 15 største
-      oppgavene per yrke for det siste utvalget. Begge kan brukes fritt
-      med kildehenvisning til Arbeidsmarkedet (kiindeksen.no) og
-      Anthropic Economic Index.
+      oppgavene per yrke for det siste utvalget. Nabotabellen har de fem
+      nærmeste yrkene per yrke med likhet og felles aktiviteter. Alt kan
+      brukes fritt med kildehenvisning til Arbeidsmarkedet (kiindeksen.no),
+      Anthropic Economic Index og O*NET.
     </p>
     <div class="download-grid">
       <div class="download-card">
@@ -290,9 +336,15 @@
         <a href="/data/panels/styrk08_aei_tasks.csv" download>CSV</a>
       </div>
       <div class="download-card">
-        <strong>Kilde</strong>
+        <strong>Nærmeste yrker</strong>
+        <a href="/data/panels/styrk08_task_neighbours.csv" download>CSV</a>
+      </div>
+      <div class="download-card">
+        <strong>Kilder</strong>
         <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex"
-           target="_blank" rel="noopener">Anthropic Economic Index (Hugging Face)</a>
+           target="_blank" rel="noopener">Anthropic Economic Index</a>
+        <a href="https://www.onetcenter.org/database.html"
+           target="_blank" rel="noopener">O*NET</a>
       </div>
     </div>
   </section>
@@ -307,16 +359,15 @@
     <p>
       Arbeidsmarkedet · KI-indeksen · Øystein Hernæs (Frischsenteret) og
       Andreas R. Kostøl (Handelshøyskolen BI) ·
-      Data: Anthropic Economic Index ·
+      Data: Anthropic Economic Index, O*NET, A-ordningen via microdata.no ·
       <a href="/">KI-indeksen</a> ·
       <a href="/utdanning.html">Utdanning</a> ·
-      <a href="/bruk.html">KI-bruk per land</a> ·
       <a href="/om.html">Om KI-indeksen</a>
     </p>
   </div>
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/panels.js?v=20260907b"></script>
+<script src="/panels.js?v=20260907c"></script>
 </body>
 </html>

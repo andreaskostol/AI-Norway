@@ -73,22 +73,4 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://kiindeksen.no/bruk.html</loc>
-    <xhtml:link rel="alternate" hreflang="nb" href="https://kiindeksen.no/bruk.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/usage.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/bruk.html"/>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://kiindeksen.no/en/usage.html</loc>
-    <xhtml:link rel="alternate" hreflang="nb" href="https://kiindeksen.no/bruk.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/usage.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/bruk.html"/>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
 </urlset>

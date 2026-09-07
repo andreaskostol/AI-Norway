@@ -1,17 +1,4 @@
 inst,inst_short,field,graduates,share
-1110,UiO,Samfunnsfag og juridiske fag,1694.000000,0.295999
-1110,UiO,"Helse-, sosial- og idrettsfag",611.000000,0.106762
-1110,UiO,Ph.d.,476.000000,0.083173
-1110,UiO,"Naturvitenskap, håndverk og teknikk",1235.000000,0.215796
-1110,UiO,Lærerutdanninger og pedagogikk,798.000000,0.139437
-1110,UiO,Humanistiske og estetiske fag,824.000000,0.143980
-1110,UiO,Økonomiske og administrative fag,85.000000,0.014852
-1120,UiB,Samfunnsfag og juridiske fag,1630.000000,0.414021
-1120,UiB,"Helse-, sosial- og idrettsfag",391.000000,0.099314
-1120,UiB,Ph.d.,218.000000,0.055372
-1120,UiB,"Naturvitenskap, håndverk og teknikk",790.000000,0.200660
-1120,UiB,Humanistiske og estetiske fag,602.000000,0.152908
-1120,UiB,Lærerutdanninger og pedagogikk,306.000000,0.077724
 1150,NTNU,"Helse-, sosial- og idrettsfag",1807.000000,0.187196
 1150,NTNU,Økonomiske og administrative fag,650.000000,0.067337
 1150,NTNU,"Naturvitenskap, håndverk og teknikk",4072.000000,0.421838
@@ -21,6 +8,72 @@ inst,inst_short,field,graduates,share
 1150,NTNU,"Samferdsel, sikkerhet og service",186.000000,0.019269
 1150,NTNU,Humanistiske og estetiske fag,474.000000,0.049104
 1150,NTNU,Primærnæringsfag,21.000000,0.002175
+1110,UiO,Samfunnsfag og juridiske fag,1694.000000,0.295999
+1110,UiO,"Helse-, sosial- og idrettsfag",611.000000,0.106762
+1110,UiO,Ph.d.,476.000000,0.083173
+1110,UiO,"Naturvitenskap, håndverk og teknikk",1235.000000,0.215796
+1110,UiO,Lærerutdanninger og pedagogikk,798.000000,0.139437
+1110,UiO,Humanistiske og estetiske fag,824.000000,0.143980
+1110,UiO,Økonomiske og administrative fag,85.000000,0.014852
+1175,OsloMet,"Helse-, sosial- og idrettsfag",1761.000000,0.381830
+1175,OsloMet,Økonomiske og administrative fag,444.000000,0.096271
+1175,OsloMet,Lærerutdanninger og pedagogikk,1062.000000,0.230269
+1175,OsloMet,"Naturvitenskap, håndverk og teknikk",679.000000,0.147225
+1175,OsloMet,Humanistiske og estetiske fag,284.000000,0.061578
+1175,OsloMet,Samfunnsfag og juridiske fag,313.000000,0.067866
+1175,OsloMet,Ph.d.,69.000000,0.014961
+8241,BI,Økonomiske og administrative fag,4210.000000,0.956383
+8241,BI,Samfunnsfag og juridiske fag,181.000000,0.041118
+8241,BI,Ph.d.,11.000000,0.002499
+1120,UiB,Samfunnsfag og juridiske fag,1630.000000,0.414021
+1120,UiB,"Helse-, sosial- og idrettsfag",391.000000,0.099314
+1120,UiB,Ph.d.,218.000000,0.055372
+1120,UiB,"Naturvitenskap, håndverk og teknikk",790.000000,0.200660
+1120,UiB,Humanistiske og estetiske fag,602.000000,0.152908
+1120,UiB,Lærerutdanninger og pedagogikk,306.000000,0.077724
+0238,HVL,"Helse-, sosial- og idrettsfag",1437.000000,0.423020
+0238,HVL,Lærerutdanninger og pedagogikk,858.000000,0.252576
+0238,HVL,Økonomiske og administrative fag,308.000000,0.090668
+0238,HVL,"Naturvitenskap, håndverk og teknikk",594.000000,0.174860
+0238,HVL,Samfunnsfag og juridiske fag,64.000000,0.018840
+0238,HVL,"Samferdsel, sikkerhet og service",70.000000,0.020606
+0238,HVL,Humanistiske og estetiske fag,36.000000,0.010598
+0238,HVL,Ph.d.,30.000000,0.008831
+1176,USN,"Helse-, sosial- og idrettsfag",797.000000,0.240567
+1176,USN,Økonomiske og administrative fag,490.000000,0.147902
+1176,USN,Lærerutdanninger og pedagogikk,909.000000,0.274374
+1176,USN,"Naturvitenskap, håndverk og teknikk",636.000000,0.191971
+1176,USN,Samfunnsfag og juridiske fag,179.000000,0.054030
+1176,USN,Humanistiske og estetiske fag,159.000000,0.047993
+1176,USN,"Samferdsel, sikkerhet og service",88.000000,0.026562
+1176,USN,Uoppgitt fagfelt,14.000000,0.004226
+1176,USN,Ph.d.,41.000000,0.012375
+8253,HK,"Naturvitenskap, håndverk og teknikk",677.000000,0.218669
+8253,HK,Økonomiske og administrative fag,1353.000000,0.437016
+8253,HK,Samfunnsfag og juridiske fag,530.000000,0.171189
+8253,HK,"Helse-, sosial- og idrettsfag",146.000000,0.047158
+8253,HK,Humanistiske og estetiske fag,276.000000,0.089147
+8253,HK,Lærerutdanninger og pedagogikk,107.000000,0.034561
+8253,HK,"Samferdsel, sikkerhet og service",4.000000,0.001292
+8253,HK,Ph.d.,3.000000,0.000969
+1130,UiT,"Helse-, sosial- og idrettsfag",914.000000,0.295029
+1130,UiT,Samfunnsfag og juridiske fag,472.000000,0.152356
+1130,UiT,Økonomiske og administrative fag,431.000000,0.139122
+1130,UiT,Ph.d.,137.000000,0.044222
+1130,UiT,Uoppgitt fagfelt,54.000000,0.017431
+1130,UiT,Primærnæringsfag,92.000000,0.029697
+1130,UiT,Lærerutdanninger og pedagogikk,295.000000,0.095223
+1130,UiT,"Samferdsel, sikkerhet og service",117.000000,0.037766
+1130,UiT,"Naturvitenskap, håndverk og teknikk",475.000000,0.153325
+1130,UiT,Humanistiske og estetiske fag,111.000000,0.035830
+1171,UiA,Økonomiske og administrative fag,469.000000,0.156229
+1171,UiA,"Helse-, sosial- og idrettsfag",677.000000,0.225516
+1171,UiA,Lærerutdanninger og pedagogikk,573.000000,0.190873
+1171,UiA,"Naturvitenskap, håndverk og teknikk",580.000000,0.193205
+1171,UiA,Samfunnsfag og juridiske fag,325.000000,0.108261
+1171,UiA,Humanistiske og estetiske fag,278.000000,0.092605
+1171,UiA,Allmenne fag,37.000000,0.012325
+1171,UiA,Ph.d.,63.000000,0.020986
 1160,UiS,"Helse-, sosial- og idrettsfag",682.000000,0.240141
 1160,UiS,Økonomiske og administrative fag,506.000000,0.178169
 1160,UiS,Lærerutdanninger og pedagogikk,438.000000,0.154225
@@ -30,9 +83,90 @@ inst,inst_short,field,graduates,share
 1160,UiS,"Samferdsel, sikkerhet og service",141.000000,0.049648
 1160,UiS,Humanistiske og estetiske fag,98.000000,0.034507
 1160,UiS,Uoppgitt fagfelt,3.000000,0.001056
+1177,INN,"Helse-, sosial- og idrettsfag",649.000000,0.274651
+1177,INN,Samfunnsfag og juridiske fag,349.000000,0.147694
+1177,INN,Lærerutdanninger og pedagogikk,554.000000,0.234448
+1177,INN,Økonomiske og administrative fag,487.000000,0.206094
+1177,INN,"Samferdsel, sikkerhet og service",57.000000,0.024122
+1177,INN,Humanistiske og estetiske fag,98.000000,0.041473
+1177,INN,"Naturvitenskap, håndverk og teknikk",79.000000,0.033432
+1177,INN,Primærnæringsfag,69.000000,0.029200
+1177,INN,Ph.d.,21.000000,0.008887
+1174,NU,"Helse-, sosial- og idrettsfag",631.000000,0.312376
+1174,NU,Økonomiske og administrative fag,467.000000,0.231188
+1174,NU,Lærerutdanninger og pedagogikk,483.000000,0.239109
+1174,NU,"Samferdsel, sikkerhet og service",53.000000,0.026238
+1174,NU,Primærnæringsfag,75.000000,0.037129
+1174,NU,"Naturvitenskap, håndverk og teknikk",118.000000,0.058416
+1174,NU,Samfunnsfag og juridiske fag,113.000000,0.055941
+1174,NU,Humanistiske og estetiske fag,35.000000,0.017327
+1174,NU,Ph.d.,37.000000,0.018317
+1174,NU,Uoppgitt fagfelt,8.000000,0.003960
+1173,NMBU,Økonomiske og administrative fag,607.000000,0.311442
+1173,NMBU,"Helse-, sosial- og idrettsfag",126.000000,0.064649
+1173,NMBU,"Naturvitenskap, håndverk og teknikk",701.000000,0.359672
+1173,NMBU,Samfunnsfag og juridiske fag,205.000000,0.105182
+1173,NMBU,Lærerutdanninger og pedagogikk,55.000000,0.028220
+1173,NMBU,Primærnæringsfag,154.000000,0.079015
+1173,NMBU,Ph.d.,101.000000,0.051821
 1240,NHH,Økonomiske og administrative fag,1404.000000,0.980447
 1240,NHH,Ph.d.,18.000000,0.012570
 1240,NHH,Humanistiske og estetiske fag,10.000000,0.006983
-8241,BI,Økonomiske og administrative fag,4210.000000,0.956383
-8241,BI,Samfunnsfag og juridiske fag,181.000000,0.041118
-8241,BI,Ph.d.,11.000000,0.002499
+0256,HiØ,"Helse-, sosial- og idrettsfag",545.000000,0.436699
+0256,HiØ,"Naturvitenskap, håndverk og teknikk",268.000000,0.214744
+0256,HiØ,Lærerutdanninger og pedagogikk,238.000000,0.190705
+0256,HiØ,Økonomiske og administrative fag,81.000000,0.064904
+0256,HiØ,Samfunnsfag og juridiske fag,41.000000,0.032853
+0256,HiØ,Humanistiske og estetiske fag,64.000000,0.051282
+0256,HiØ,Uoppgitt fagfelt,11.000000,0.008814
+8208,VID,"Helse-, sosial- og idrettsfag",953.000000,0.884865
+8208,VID,Humanistiske og estetiske fag,55.000000,0.051068
+8208,VID,Økonomiske og administrative fag,35.000000,0.032498
+8208,VID,Samfunnsfag og juridiske fag,18.000000,0.016713
+8208,VID,Ph.d.,16.000000,0.014856
+0236,HVO,"Helse-, sosial- og idrettsfag",141.000000,0.252236
+0236,HVO,Samfunnsfag og juridiske fag,135.000000,0.241503
+0236,HVO,Lærerutdanninger og pedagogikk,188.000000,0.336315
+0236,HVO,Humanistiske og estetiske fag,77.000000,0.137746
+0236,HVO,Uoppgitt fagfelt,10.000000,0.017889
+0236,HVO,Økonomiske og administrative fag,6.000000,0.010733
+0236,HVO,Ph.d.,2.000000,0.003578
+1301,PHS,"Samferdsel, sikkerhet og service",501.000000,1.000000
+0232,HiM,"Helse-, sosial- og idrettsfag",205.000000,0.426195
+0232,HiM,"Naturvitenskap, håndverk og teknikk",35.000000,0.072765
+0232,HiM,Økonomiske og administrative fag,87.000000,0.180873
+0232,HiM,"Samferdsel, sikkerhet og service",103.000000,0.214137
+0232,HiM,Samfunnsfag og juridiske fag,43.000000,0.089397
+0232,HiM,Ph.d.,8.000000,0.016632
+1260,NIH,"Helse-, sosial- og idrettsfag",442.000000,0.924686
+1260,NIH,Lærerutdanninger og pedagogikk,27.000000,0.056485
+1260,NIH,Ph.d.,9.000000,0.018828
+1407,ONH,Samfunnsfag og juridiske fag,373.000000,0.812636
+1407,ONH,Økonomiske og administrative fag,65.000000,0.141612
+1407,ONH,"Helse-, sosial- og idrettsfag",21.000000,0.045752
+8223,NLA,Lærerutdanninger og pedagogikk,189.000000,0.451074
+8223,NLA,Økonomiske og administrative fag,105.000000,0.250597
+8223,NLA,Samfunnsfag og juridiske fag,66.000000,0.157518
+8223,NLA,Humanistiske og estetiske fag,59.000000,0.140811
+1303,FHS,"Samferdsel, sikkerhet og service",323.000000,1.000000
+8202,LDH,"Helse-, sosial- og idrettsfag",293.000000,1.000000
+8224,DMMH,Lærerutdanninger og pedagogikk,286.000000,1.000000
+6220,KHiO,Humanistiske og estetiske fag,223.000000,0.929167
+6220,KHiO,Lærerutdanninger og pedagogikk,11.000000,0.045833
+6220,KHiO,Ph.d.,6.000000,0.025000
+1210,NMH,Humanistiske og estetiske fag,181.000000,0.822727
+1210,NMH,Lærerutdanninger og pedagogikk,33.000000,0.150000
+1210,NMH,Ph.d.,6.000000,0.027273
+1302,KRUS,"Samferdsel, sikkerhet og service",193.000000,1.000000
+8221,MF,Humanistiske og estetiske fag,154.000000,0.865169
+8221,MF,Lærerutdanninger og pedagogikk,19.000000,0.106742
+8221,MF,Ph.d.,5.000000,0.028090
+1220,AHO,"Naturvitenskap, håndverk og teknikk",82.000000,0.569444
+1220,AHO,Humanistiske og estetiske fag,56.000000,0.388889
+1220,AHO,Ph.d.,6.000000,0.041667
+1409,NOROFF,"Samferdsel, sikkerhet og service",58.000000,0.504348
+1409,NOROFF,"Naturvitenskap, håndverk og teknikk",57.000000,0.495652
+8234,FIH,Humanistiske og estetiske fag,80.000000,1.000000
+1412,LIMPI,Humanistiske og estetiske fag,64.000000,1.000000
+8232,ATH,Samfunnsfag og juridiske fag,38.000000,0.622951
+8232,ATH,Humanistiske og estetiske fag,23.000000,0.377049

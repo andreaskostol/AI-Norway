@@ -49,9 +49,13 @@ OUT = DATA_DIR / 'styrk08_task_neighbours.csv'
 TOP_N = 5
 
 
+ELEMENT_NAMES = {}
+
+
 def importance(path):
     df = pd.read_csv(path, sep='\t', dtype=str)
     df = df[df['Scale ID'] == 'IM'].copy()
+    ELEMENT_NAMES.update(dict(zip(df['Element ID'], df['Element Name'])))
     df['soc6'] = df['O*NET-SOC Code'].str.split('.').str[0]
     df['val'] = pd.to_numeric(df['Data Value'], errors='coerce')
     # Several O*NET-SOC codes (e.g. 15-1252.00 and 15-1252.01) share a
@@ -99,10 +103,16 @@ def main():
     for a in sorted(prof.index):
         s = sim.loc[a].drop(a).sort_values(ascending=False)
         for rank, (b, val) in enumerate(s.head(TOP_N).items(), start=1):
+            # The elements that pull the pair together: both occupations
+            # score high (or both low) on them. Shown on the panel so the
+            # similarity is not a black box.
+            contrib = (z.loc[a] * z.loc[b])
+            top = contrib[(z.loc[a] > 0) & (z.loc[b] > 0)].sort_values(ascending=False).head(3)
             rows.append({'styrk08': a, 'rank': rank, 'neighbour': b,
                          'similarity': round(float(val), 4),
                          'n_soc': len(socs_per_styrk[a]),
-                         'n_soc_neighbour': len(socs_per_styrk[b])})
+                         'n_soc_neighbour': len(socs_per_styrk[b]),
+                         'shared_elements': '; '.join(ELEMENT_NAMES.get(e, e) for e in top.index)})
     with open(OUT, 'w', newline='', encoding='utf-8') as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0].keys()), lineterminator='\n')
         w.writeheader()
