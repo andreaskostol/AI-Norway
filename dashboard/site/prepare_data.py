@@ -304,10 +304,19 @@ def main():
     data["headline_uncertainty_by_measure"] = {
         m: load_headline_uncertainty(path)
         for m, path in HEADLINE_SE_CSV_BY_MEASURE.items()}
-    # Samme, for referansen Claude Code (snittet av feb. 2024-jan. 2025);
+    # Samme, for referansen Claude Code (snittet av nov. 2024-jan. 2025);
     # filene har suffikset _claudecode.
     data["headline_uncertainty_claudecode_by_measure"] = {
         m: load_headline_uncertainty(path.replace(".csv", "_claudecode.csv"))
+        for m, path in HEADLINE_SE_CSV_BY_MEASURE.items()}
+    # Og for aldersraden (21-30) i hovedfiguren: samme bootstrap kjoert
+    # paa age_by_exposure, filene har suffikset _young.
+    data["headline_uncertainty_young_by_measure"] = {
+        m: load_headline_uncertainty(path.replace(".csv", "_young.csv"))
+        for m, path in HEADLINE_SE_CSV_BY_MEASURE.items()}
+    data["headline_uncertainty_young_claudecode_by_measure"] = {
+        m: load_headline_uncertainty(
+            path.replace(".csv", "_claudecode_young.csv"))
         for m, path in HEADLINE_SE_CSV_BY_MEASURE.items()}
 
     out_dir = os.path.join(SITE_DIR, "public", "data")

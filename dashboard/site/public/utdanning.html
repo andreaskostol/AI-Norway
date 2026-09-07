@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Utdanning — KI-indeksen</title>
+<meta name="description" content="Hvilke jobber gir utdanningen, og hvor utsatt er de for KI? Velg fag og nivå og se de ti vanligste oppgavene i jobbene, hvor utsatt hver oppgave er for språkmodeller, hvordan Claude brukes på den, og de vanligste jobbene. Registerdata fra utdanning.no, O*NET, Eloundou m.fl. og Anthropic Economic Index.">
+<link rel="canonical" href="https://kiindeksen.no/utdanning.html">
+<link rel="alternate" hreflang="nb" href="https://kiindeksen.no/utdanning.html">
+<link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/education.html">
+<link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/utdanning.html">
+<link rel="stylesheet" href="/style.css?v=20260907h">
+<link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
+</head>
+<body data-panel="utdanning">
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-logos">
+      <a href="/" title="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI">
+        <img src="/assets/ki-logo.png"
+             alt="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI"></a>
+    </div>
+    <nav class="site-nav">
+      <a href="#velg">Velg utdanning</a>
+      <a href="#oppgaver">Oppgavene</a>
+      <a href="#jobber">Jobbene</a>
+      <a href="#metode">Metode</a>
+    </nav>
+    <div class="brand">
+      <div class="brand-top">
+        <nav class="panel-nav" aria-label="Sider">
+          <a href="/">KI-indeksen</a>
+          <a href="/yrker.html">Yrker</a>
+          <a href="/utdanning.html" class="active">Utdanning</a>
+          <a href="/om.html">Om</a>
+        </nav>
+        <a class="lang-toggle" href="/en/education.html" hreflang="en" lang="en">English</a>
+      </div>
+      <p class="tagline">Månedlige indikatorer for kunstig intelligens og det norske arbeidsmarkedet</p>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+<aside class="toc" aria-label="Innhold">
+  <nav id="toc-nav">
+    <a href="#velg">Velg utdanning</a>
+    <a href="#oppgaver">De ti vanligste oppgavene</a>
+    <a href="#jobber">De vanligste jobbene</a>
+    <a href="#metode">Metode</a>
+  </nav>
+</aside>
+<div class="content">
+
+<main class="container">
+
+  <section id="velg" class="hero">
+    <h2 class="hero-title hero-title-wide">Hvilke jobber gir utdanningen, og hvor utsatt er de for KI?</h2>
+    <p class="lede">
+      Velg fag og nivå. Du får de ti vanligste oppgavene i jobbene
+      utdanningen fører til, hvor utsatt hver oppgave er for
+      språkmodeller, hvordan Claude brukes på den, og til slutt de
+      vanligste jobbene.
+    </p>
+    <details class="more">
+      <summary>Om tallene</summary>
+      <p>Jobbene kommer fra SSBs register via utdanning.no: alle bosatte
+        20–70 år med utdanningen som sin høyeste, koblet til yrke.
+        Oppgavene kommer fra O*NET, den amerikanske yrkesdatabasen, via
+        samme kryssgang som KI-indeksen. Eksponeringen per oppgave er
+        Eloundou m.fl. (2024). Claude-bruken er Anthropic Economic
+        Index, siste utvalg. Bachelor er standardvalget; bytt nivå for
+        master, ph.d., fagskole eller videregående.</p>
+    </details>
+    <p class="panel-status"></p>
+    <div class="control-row panel-controls">
+      <div class="control">
+        <label for="u-level">Nivå</label>
+        <select id="u-level"></select>
+      </div>
+      <div class="control control-search">
+        <label for="u-search">Fag</label>
+        <div class="occ-picker">
+          <input type="search" id="u-search" autocomplete="off"
+                 aria-label="Søk etter fag eller grad"
+                 placeholder="Klikk for lista, eller skriv: sykepleie, siviløkonom, master i rettsvitenskap …">
+          <ul id="u-hits" class="occ-hits" hidden></ul>
+        </div>
+      </div>
+    </div>
+    <p class="pick-hint">
+      Skriv det du kaller graden din. Søket treffer både faggruppene og
+      navnene på over 2 400 enkeltutdanninger i registeret.
+    </p>
+    <div id="u-lead" class="pick-summary"></div>
+  </section>
+
+  <section id="oppgaver" class="chart-section">
+    <h2>De ti vanligste oppgavene for <span class="u-group-name">valgt utdanning</span></h2>
+    <p class="chart-intro">
+      Oppgavene i jobbene utdanningen fører til, med KI-eksponering og
+      hvor stor del av Claude-bruken på oppgaven som er automatisering.
+      En oppgave hører ofte til flere av yrkene; kolonnen viser de
+      viktigste. Klikk på en oppgave.
+    </p>
+    <details class="more">
+      <summary>Slik er lista laget</summary>
+      <p>Hvert yrke har en oppgaveliste i O*NET, med hvor viktig hver
+        oppgave er og hvor mange i yrket som gjør den. Oppgavens vekt for
+        en utdanning er viktighet × andel som gjør den, vektet med hvor
+        mange med utdanningen som har yrket. De ti med størst vekt vises.
+        KI-eksponering er en skår fra 0 til 1 per oppgave, snittet av
+        Eloundou m.fl. sine tre vurderinger av om en språkmodell kan
+        halvere tiden oppgaven tar, og gruppen skåren gir i den samme
+        femdelingen som yrkene: minst utsatt, lite utsatt, middels, mye
+        utsatt, mest utsatt. Automatisering er Anthropics inndeling:
+        direkte delegering og tilbakemeldingssløyfe, som andel av
+        samtalene om oppgaven i Claude.ai. Oppgaver Anthropic ikke har
+        data for, står uten tall. Oppgavetekstene er oversatt fra
+        O*NET.</p>
+    </details>
+    <div class="table-wrap" id="u-task-table"></div>
+    <p class="chart-footnote" id="u-task-foot"></p>
+
+    <h3 id="u-task-title">Slik brukes Claude på oppgaven</h3>
+    <div id="chart-u-task" class="chart chart-short"></div>
+    <p class="chart-footnote" id="u-task-note"></p>
+  </section>
+
+  <section id="jobber" class="chart-section">
+    <h2>De vanligste jobbene for <span class="u-group-name">valgt utdanning</span></h2>
+    <p class="chart-intro">
+      De ti yrkene flest med utdanningen jobber i, med eksponering og
+      automatisering.
+    </p>
+    <div class="btn-row" id="u-cohort-buttons"></div>
+    <div class="table-wrap" id="u-occ-table"></div>
+    <p class="chart-footnote" id="u-occ-note"></p>
+  </section>
+
+  <section id="metode" class="prose-section">
+    <h2>Metode</h2>
+    <p>
+      Siden setter sammen fire kilder i én kjede: fra utdanning til
+      yrke, fra yrke til oppgaver, og for hver oppgave eksponering og
+      Claude-bruk. Lærestedene er tatt ut av siden og kommer som en
+      egen analyse.
+    </p>
+
+    <details class="method-details">
+      <summary>Fra utdanning til yrke</summary>
+      <p>Utgangspunktet er utdanning.no sin registerstatistikk, bygget på
+        SSBs registre: for hver utdanningskode i NUS2000, antall bosatte
+        20–70 år som har koden som sin høyeste fullførte utdanning,
+        fordelt på yrke (STYRK-08) for de som er ansatt. Kodene er summert
+        til faggruppe, det tresifrede nivået i NUS2000: første siffer er
+        nivå, de to neste er fag. Grupper med under 100 sysselsatte med
+        eksponeringsskår er utelatt. Koblingen er fra november 2024.
+        Nyutdannede er de som fullførte for ett til tre år siden, en
+        kolonne utdanning.no ikke dokumenterer.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Fra yrke til oppgaver</summary>
+      <p>O*NET er det amerikanske arbeidsdepartementets database over
+        yrker. Hvert yrke har en liste med oppgaver, og for hver oppgave
+        har et utvalg ansatte svart på hvor viktig den er (1–5) og om de
+        gjør den. Norske STYRK-08-koder går til amerikanske SOC-koder
+        gjennom samme kryssgang som eksponeringsmålene (ISCO-08, BLS).
+        Der O*NET har spesialiseringer under en SOC-kode, brukes
+        hovedkoden. En oppgaves vekt for en utdanning er viktighet ×
+        andel som gjør den, delt likt mellom SOC-kodene et STYRK-yrke er
+        koblet til, og vektet med andelen av de sysselsatte som har
+        yrket. O*NET versjon 30.1.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Eksponering per oppgave</summary>
+      <p>Eloundou m.fl. (2024) lot GPT-4 og mennesker vurdere hver
+        O*NET-oppgave: E1 når en språkmodell alene kan halvere tiden
+        oppgaven tar med samme kvalitet, E2 når det krever programvare
+        bygget på modellen, E0 ellers. Skåren i tabellen er E1 = 1,
+        E2 = 0,5, E0 = 0, samme «beta»-vekting som yrkesmålet på
+        forsiden. Utdanningens oppgaveskår er det vektede snittet over
+        alle oppgavene i yrkene, ikke bare de ti som vises.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Claude-bruk per oppgave</summary>
+      <p>Anthropic Economic Index klassifiserer et utvalg samtaler etter
+        O*NET-oppgave og etter fem samhandlingstyper. To er
+        automatisering: personen ber om et ferdig resultat (direkte
+        delegering), eller modellen gjør jobben og personen melder
+        tilbake (tilbakemeldingssløyfe). Tre er augmentering:
+        oppgaveiterasjon, validering og læring. Tallene her er siste
+        utvalg fra Claude.ai (chat). Oppgavene kobles
+        på tekst. Anthropic publiserer bare oppgaver med bruk, så om lag
+        en tredel av oppgavene i tabellene har tall. Utdanningens
+        automatiseringsandel er vektet med hver oppgaves andel av all
+        Claude.ai-bruk.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Forbehold</summary>
+      <ol>
+        <li>Oppgavetekstene er O*NETs engelske formuleringer og beskriver
+          amerikanske yrker.</li>
+        <li>Registeret er nasjonalt per utdanningskode. Det skiller ikke
+          mellom læresteder.</li>
+        <li>Claude-samtalene er globale og gjelder samtaler, ikke
+          arbeidstid.</li>
+        <li>Eloundous etiketter er vurderinger av hva som er mulig, ikke
+          observert bruk.</li>
+        <li>Små faggrupper får tynne tall. Grupper med under 100
+          sysselsatte er utelatt.</li>
+      </ol>
+    </details>
+    <p class="chart-footnote">Kilder: <a href="https://utdanning.no/dokumentasjon/yrkes_utdanningstatistikk" target="_blank" rel="noopener">utdanning.no</a> · <a href="https://www.onetcenter.org/database.html" target="_blank" rel="noopener">O*NET</a> · <a href="https://www.science.org/doi/10.1126/science.adj0998" target="_blank" rel="noopener">Eloundou m.fl. (2024)</a> · <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex" target="_blank" rel="noopener">Anthropic Economic Index</a>.</p>
+  </section>
+
+</main>
+
+</div><!-- .content -->
+</div><!-- .layout -->
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      KI-indeksen · Øystein Hernæs (Frischsenteret) og
+      Andreas R. Kostøl (Handelshøyskolen BI) ·
+      Data: utdanning.no, O*NET, Eloundou m.fl. (2024), Anthropic Economic Index ·
+      <a href="/">KI-indeksen</a> ·
+      <a href="/yrker.html">Yrker</a> ·
+      <a href="/om.html">Om</a>
+    </p>
+  </div>
+</footer>
+
+<script src="/vendor/echarts.min.js"></script>
+<script src="/panels.js?v=20260907h"></script>
+</body>
+</html>

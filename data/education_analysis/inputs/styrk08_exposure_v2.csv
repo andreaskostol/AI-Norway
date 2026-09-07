@@ -1,0 +1,407 @@
+styrk08_code,isco08_code,title_no,exposure,exposure_norm,stage,confidence,source_detail
+0110,0110,Offiserer fra fenrik og høyere grad,,,4_unmappable,unmappable,DOCUMENTED UNMAPPABLE: Norwegian military officers (fenrik+). No ISCO 0110 in BLS xwalk; SOC military codes (55-xxxx) not in Eloundou. Set NaN;
+0210,0210,Befal med sersjant grad,,,4_unmappable,unmappable,DOCUMENTED UNMAPPABLE: Norwegian military NCOs. Same as 0110.
+0310,0310,Menige,,,4_unmappable,unmappable,DOCUMENTED UNMAPPABLE: Norwegian conscripts. Same as 0110.
+1111,1111,Politikere,0.4,0.4102564102564103,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1112,1112,Toppledere i offentlig administrasjon,0.47963675213675216,0.4919351303966689,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+1114,1114,Toppledere i interesseorganisasjoner,0.4897676307165118,0.5023257750938582,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+1120,1120,Administrerende direktører,0.4987749287749288,0.5115640295127475,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+1211,1211,Finans- og økonomisjefer,0.4850552306692657,0.49749254427616996,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1212,1212,Personalsjefer,0.497719298245614,0.5104813315339631,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+1213,1213,Strategi- og planleggingssjefer,0.4912673640410586,0.5038639631190345,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1219,1219,Andre administrative ledere,0.5071409992212701,0.5201446145859181,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+1221,1221,Salgs- og markedssjefer,0.475,0.48717948717948717,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+1222,1222,PR- og informasjonssjefer,0.4767441860465116,0.4889683959451401,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1223,1223,Forsknings- og utviklingsledere,0.4954624140714146,0.5081665785347842,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+1311,1311,"Ledere i skogbruk, gartnerier mv.",0.3673469387755101,0.37676609105180525,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1312,1312,Ledere innen akvakultur mv.,0.3673469387755101,0.37676609105180525,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1321,1321,Ledere av industriproduksjon mv.,0.40571870150289957,0.41612174513117905,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1322,1322,Ledere av olje- og gassutvinning mv.,0.4912673640410586,0.5038639631190345,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1323,1323,Ledere av bygge- og anleggsvirksomhet,0.4444444444444445,0.4558404558404559,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1324,1324,Ledere av logistikk og transport mv.,0.486525974025974,0.499000999000999,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1330,1330,Ledere av IKT-enheter,0.5303030303030303,0.5439005439005439,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1341,1341,Ledere av omsorgstjenester for barn,0.46875,0.4807692307692308,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1342,1342,Ledere av helsetjenester,0.4285714285714285,0.4395604395604395,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1343,1343,Ledere av eldreomsorg,0.4546703296703296,0.4663285432516201,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+1344,1344,Ledere av sosialomsorg,0.3928571428571428,0.4029304029304029,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1345,1345,Ledere av utdanning og undervisning,0.42860310421286024,0.43959292739780537,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+1346,1346,Ledere av forsikring og finansvirksomhet,0.483983730694257,0.4963935699428277,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+1349,1349,Andre ledere av produksjon og tjenesteyting,0.4912673640410586,0.5038639631190345,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1411,1411,Hotellsjefer,0.4565217391304347,0.4682274247491638,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1412,1412,Restaurantsjefer,0.4166666666666666,0.4273504273504273,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1420,1420,Varehandelssjefer,0.4807692307692308,0.4930966469428008,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+1431,1431,"Sports-, rekreasjons- og kultursenterledere",0.5030190851444368,0.5159170104045506,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+1439,1439,Andre daglige ledere i tjenesteytende virksomheter,0.4912673640410586,0.5038639631190345,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2111,2111,Fysikere og astronomer,0.59375,0.608974358974359,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2112,2112,Meteorologer,0.5652173913043478,0.5797101449275363,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2113,2113,Kjemikere,0.43137931034482757,0.4424403183023873,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2114,2114,Geologer og geofysikere,0.48333333333333334,0.49572649572649574,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2120,2120,"Matematikere, statistikere mv.",0.7005843237125071,0.7185480243205201,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+2131,2131,"Biologer, botanikere, zoologer mv.",0.485931425085413,0.4983912052158082,1_bls_xwalk,high,mean of 9 SOC matches via BLS
+2132,2132,Sivilagronomer mv.,0.40904928799216944,0.41953773127401994,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+2133,2133,Miljøvernrådgivere,0.48645540396749404,0.49892861945384004,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2141,2141,Sivilingeniører (industri og produksjon),0.554355036527489,0.568569268233322,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2142,2142,Sivilingeniører (bygg og anlegg),0.48214285714285715,0.4945054945054945,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2143,2143,Sivilingeniører (miljøteknikk),0.5555555555555556,0.5698005698005698,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2144,2144,Sivilingeniører (maskin- og marin-teknikk),0.5020479429815355,0.5149209671605492,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+2145,2145,Sivilingeniører (kjemi),0.4615384615384615,0.47337278106508873,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2146,2146,"Sivilingeniører (geofag, petro-leumsteknologi, metallurgi mv.)",0.4949556894994237,0.50764686102505,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+2149,2149,Andre sivilingeniører (unntatt elektroteknologi),0.5244005358827123,0.5378467034694485,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+2151,2151,Sivilingeniører (elkraftteknikk),0.5625,0.576923076923077,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2152,2152,Sivilingeniører (elektronikk),0.6558229352346999,0.6726389079330256,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2153,2153,Sivilingeniører (telekommunikasjon),0.6200980392156863,0.6359979889391655,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2161,2161,Sivilarkitekter,0.4883720930232558,0.5008944543828264,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2162,2162,Landskapsarkitekter,0.4210526315789473,0.4318488529014844,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2163,2163,Produkt- og klesdesignere,0.42807112068965514,0.4390473032714412,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2164,2164,Arealplanleggere,0.4772727272727273,0.48951048951048953,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2165,2165,"Landmålere, kartografer mv.",0.5133796296296297,0.5265432098765432,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2166,2166,Grafiske- og multimediadesignere,0.5125,0.5256410256410257,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2211,2211,Allmennpraktiserende leger,0.4571428571428571,0.4688644688644688,2_manual_override,high,manual → SOC 29-1216: Allmennpraktiserende leger → General Internal Medicine Physicians (SOC 29-1216). Direct functional match for general pra
+2212,2212,Legespesialister,0.4164495357891584,0.42712772901452145,2_manual_override,medium,manual → SOC 29-1229: Legespesialister (medical specialists). SOC 29-1229 'Allergists and Immunologists' is the closest single-code match with
+2221,2221,Spesialsykepleiere,0.3641568833335195,0.3734942393164302,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+2222,2222,Jordmødre,0.3902439024390244,0.4002501563477173,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2223,2223,Sykepleiere,0.38019000703729766,0.38993846875620275,2_manual_override,high,manual → SOC 29-1141: Sykepleiere → Registered Nurses (SOC 29-1141). Standard ISCO 2221 ↔ SOC 29-1141 mapping recognized in OECD nursing-occup
+2224,2224,Vernepleiere,0.3548387096774194,0.36393713813068657,2_manual_override,medium,manual → SOC 21-1015: Vernepleiere — Norwegian-specific care worker for cognitive/developmental disabilities. Closest SOC is 21-1015 'Rehabili
+2250,2250,Veterinærer,0.2702702702702703,0.27720027720027723,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2261,2261,Tannleger,0.15886363636363635,0.16293706293706292,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+2262,2262,Farmasøyter,0.4285714285714285,0.4395604395604395,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2263,2263,Helse- og miljørådgivere,0.532258064516129,0.5459057071960297,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2264,2264,Fysioterapeuter,0.2257446808510638,0.23153300600109109,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2265,2265,Ernæringsfysiologer,0.5487804878048781,0.5628517823639776,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2266,2266,Audiografer og logopeder,0.45288248337028825,0.4644948547387572,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2267,2267,Ergoterapeuter,0.3,0.3076923076923077,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2269,2269,Kiropraktorer mv.,0.35845969190384086,0.3676509660552214,1_bls_xwalk,high,mean of 6 SOC matches via BLS
+2310,2310,Universitets- og høyskolelektorer/-lærere,0.48443683175528196,0.4968582889797764,1_bls_xwalk,high,mean of 34 SOC matches via BLS
+2320,2320,Yrkesfaglærere,0.3810311552247036,0.39080118484584986,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+2330,2330,Lektorer mv. (videregående skole),0.3333333333333333,0.3418803418803419,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2341,2341,Grunnskolelærere,0.32931844888366624,0.3377625116755551,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2342,2342,Førskole-/barnehagelærere,0.2300747198007472,0.23597407159050995,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2351,2351,Spesialister i pedagogikk,0.4875,0.5,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2352,2352,Spesiallærere / spesialpedagoger,0.3374999999999999,0.3461538461538461,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2353,2353,Andre språklærere,0.3822058823529412,0.39200603318250377,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2354,2354,Andre musikklærere,0.36,0.36923076923076925,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2355,2355,Andre lærere i estetiske fag,0.36,0.36923076923076925,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2356,2356,Andre IKT-lærere,0.5526315789473684,0.5668016194331983,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2359,2359,Andre lærere,0.2894736842105263,0.2968960863697706,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2411,2411,"Revisorer, regnskapsrådgivere",0.5683333333333334,0.582905982905983,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+2412,2412,Finans- og investeringsrådgivere,0.4807692307692307,0.49309664694280075,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2413,2413,Finansanalytikere,0.5056980056980057,0.5186646212287238,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+2421,2421,Organisasjonsrådgivere mv.,0.497085875065021,0.5098316667333549,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2422,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.5828407660281357,0.5977854010544982,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2423,2423,Personal- og karriererådgivere,0.4886930376255103,0.5012236283338567,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+2424,2424,Rådgivere innen kompetanseutvikling,0.5526315789473684,0.5668016194331983,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2431,2431,Reklame- og markedsføringsrådgivere,0.7008634580355892,0.7188343159339378,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2432,2432,Informasjonsrådgivere,0.5909090909090909,0.6060606060606061,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2433,2433,Salgskonsulenter innen tekniske og medisinske produkter,0.5112210726245814,0.5243293052559809,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2434,2434,Salgskonsulenter innen IKT-produkter,0.5112567135593451,0.5243658600608668,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+2511,2511,Systemanalytikere/-arkitekter,0.6174242424242424,0.6332556332556333,2_manual_override,high,manual → SOC 15-1211: Systemanalytikere/-arkitekter → Computer Systems Analysts (SOC 15-1211). Direct ISCO 2511 ↔ SOC 15-1211 mapping per BLS 
+2512,2512,Programvareutviklere,0.8684210526315789,0.8906882591093117,2_manual_override,high,manual → SOC 15-1252: Programvareutviklere → Software Developers (SOC 15-1252). Direct ISCO 2512 ↔ SOC 15-1252.
+2513,2513,Nett- og multimediautviklere,0.75,0.7692307692307693,2_manual_override,high,manual → SOC 15-1255: Nett- og multimediautviklere → Web and Digital Interface Designers (SOC 15-1255). Direct ISCO 2513 ↔ SOC 15-1255.
+2514,2514,Applikasjonsprogrammerere,0.95,0.9743589743589743,2_manual_override,high,manual → SOC 15-1251: Applikasjonsprogrammerere → Computer Programmers (SOC 15-1251). Direct ISCO 2514 ↔ SOC 15-1251.
+2519,2519,Andre programvare- og applikasjonsutviklere,0.7357861863332168,0.7546524988032993,2_manual_override,high,manual → SOC 15-1299: Andre programvare- og applikasjonsutviklere → Computer Occupations All Other (SOC 15-1299). Catch-all maps to catch-all.
+2521,2521,Databasedesignere og -administratorer,0.935483870967742,0.9594706368899918,2_manual_override,high,manual → SOC 15-1242: Databasedesignere og -administratorer → Database Administrators and Architects (SOC 15-1242). Direct ISCO 2521 ↔ SOC 15-
+2522,2522,Systemadministratorer,0.7297297297297298,0.7484407484407486,2_manual_override,high,manual → SOC 15-1244: Systemadministratorer → Network and Computer Systems Administrators (SOC 15-1244). Direct match.
+2523,2523,Nettverksansvarlige,0.6352227393617021,0.6515105019094382,2_manual_override,high,manual → SOC 15-1241: Nettverksansvarlige → Computer Network Architects (SOC 15-1241). Direct match.
+2529,2529,Sikkerhetsanalytikere mv.,0.6521739130434783,0.6688963210702341,2_manual_override,high,manual → SOC 15-1212: Sikkerhetsanalytikere mv. → Information Security Analysts (SOC 15-1212). Direct match.
+2611,2611,Jurister og advokater,0.425,0.4358974358974359,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2612,2612,Dommere,0.45833333333333326,0.47008547008547,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2619,2619,Andre juridiske yrker,0.5,0.5128205128205129,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2621,2621,Arkivarer og kuratorer,0.5,0.5128205128205129,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2622,2622,Bibliotekarer og andre informasjonsarbeidere,0.5350877192982456,0.5488079172289698,2_manual_override,high,manual → SOC 25-4022: Bibliotekarer og andre informasjonsarbeidere → Librarians and Media Collections Specialists (SOC 25-4022). Direct functi
+2631,2631,"Rådgivere/forskere, samfunnsøkonomi",0.5526315789473684,0.5668016194331983,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2632,2632,"Rådgivere/forskere, samfunnsvitenskap",0.49270557029177714,0.5053390464531048,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+2633,2633,"Rådgivere/forskere, humanistiske fag",0.49203556371549023,0.5046518602210156,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+2634,2634,Psykologer,0.4658730158730158,0.4778184778184778,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2635,2635,Rådgivere innen sosiale fagfelt,0.2716286374835729,0.27859347434212606,1_bls_xwalk,high,mean of 8 SOC matches via BLS
+2636,2636,Geistlige yrker,0.38636363636363635,0.3962703962703963,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2641,2641,Forfattere mv.,0.775333081950729,0.7952134173853631,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+2642,2642,Journalister,0.6470588235294118,0.6636500754147814,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2643,2643,"Oversettere, tolker mv.",0.7016279069767442,0.719618366129994,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2651,2651,"Skulptører, kunstmalere og andre billedkunstnere",0.3418103448275862,0.3505747126436782,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2652,2652,"Dirigenter, komponister, musikere og sangere",0.5593447905477981,0.5736869646644083,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2653,2653,Koreografer og dansere,0.14613095238095236,0.14987789987789987,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+2654,2654,Regissører,0.48435321573619444,0.49677252896019947,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+2655,2655,Skuespillere,0.1875,0.19230769230769232,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2656,2656,Programledere i TV og radio,0.65,0.6666666666666667,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+2659,2659,Andre utøvende kunstneriske yrker,0.41701367642356,0.4277063347933949,3_isco3_fallback,low,"3-digit ISCO 265 aggregate, 11 SOCs"
+3112,3112,Bygningsingeniører,0.41044559127179686,0.42096983720184294,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+3113,3113,Elkraftingeniører,0.39345718184093453,0.4035458275291636,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3114,3114,Elektronikkingeniører,0.4056603773584905,0.41606192549588766,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3115,3115,Maskiningeniører,0.342089810771013,0.3508613443805262,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+3116,3116,Kjemiingeniører,0.26877394636015317,0.2756655860104135,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3117,3117,"Ingeniører innen petroleum, bergverk og metallurgi",0.26877394636015317,0.2756655860104135,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3118,3118,Tekniske tegnere,0.5098670212765958,0.5229405346426623,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+3119,3119,Andre ingeniører,0.3568330909409205,0.3659826573753031,1_bls_xwalk,high,mean of 10 SOC matches via BLS
+3121,3121,"Arbeidsleder, bergfag",0.41666666666666663,0.42735042735042733,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3122,3122,"Arbeidsleder, industri",0.4,0.4102564102564103,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3123,3123,"Arbeidsleder, bygg og anlegg",0.41666666666666663,0.42735042735042733,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3131,3131,Energikontrolloperatører,0.259811348781937,0.26647317823788413,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+3132,3132,Kontrolloperatører ved forbrennings- kjøle- og vannrenseanlegg mv.,0.21739864864864863,0.22297297297297297,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+3133,3133,Kontrolloperatører innen kjemisk prosessindustri,0.1515151515151515,0.1554001554001554,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3134,3134,Kontrolloperatører ved olje- og naturgassraffineringsanlegg,0.20202568011257033,0.2072058257564824,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+3135,3135,Kontrolloperatører innen metallproduksjon,0.1041666666666666,0.10683760683760678,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3139,3139,Andre prosesskontrolloperatører,0.21826545161989475,0.22386200166143053,3_isco3_fallback,low,"3-digit ISCO 313 aggregate, 12 SOCs"
+3141,3141,Bioteknikere (ikke-medisinske laboratorier),0.4166666666666666,0.4273504273504273,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3142,3142,Agroteknikere,0.4097222222222222,0.4202279202279202,2_manual_override,medium,manual → SOC 19-4012: Agroteknikere → Agricultural Technicians (SOC 19-4012).
+3143,3143,Skogteknikere,0.3269230769230769,0.33530571992110453,2_manual_override,medium,manual → SOC 19-4071: Skogteknikere → Forest and Conservation Technicians (SOC 19-4071).
+3151,3151,Skipsmaskinister,0.171875,0.1762820512820513,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3152,3152,Dekksoffiserer og loser,0.2636363636363636,0.2703962703962704,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3153,3153,Flygere,0.2954545454545454,0.303030303030303,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3154,3154,Flygeledere,0.3409090909090909,0.34965034965034963,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3155,3155,Teknikere innen luftfartssikkerhet,0.4056603773584905,0.41606192549588766,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3211,3211,Radiografer mv.,0.3145714338297882,0.322637368030552,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+3212,3212,Bioingeniører,0.28251539408866994,0.289759378552482,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3213,3213,Reseptarer,0.4264705882352941,0.4374057315233786,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3214,3214,Protese- og tannteknikere,0.1638649425287356,0.16806660772178011,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+3230,3230,Yrker innen alternativ medisin,0.3785714285714285,0.38827838827838823,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3240,3240,Dyrepleiere,0.1930783242258652,0.19802905048806688,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3251,3251,Tannpleiere,0.2666666666666666,0.2735042735042735,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3254,3254,Optikere,0.2857142857142857,0.29304029304029305,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3256,3256,Helsesekretærer,0.3439608636977058,0.352780373023288,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3257,3257,Helse- og miljøkontrollører,0.3823484848484848,0.39215229215229214,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3258,3258,Ambulansepersonell,0.2083333333333333,0.21367521367521364,2_manual_override,high,manual → SOC 29-2042: Ambulansepersonell → EMTs (SOC 29-2042). Direct functional match.
+3259,3259,Andre helseyrker,0.3250142812056261,0.3333479807237191,1_bls_xwalk,high,mean of 9 SOC matches via BLS
+3311,3311,Finansmeglere,0.5714031339031339,0.5860544963109066,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3312,3312,Kundebehandlere lån og kreditt,0.6079545454545454,0.6235431235431235,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3313,3313,Regnskapsførere,0.8023255813953488,0.8228980322003577,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3315,3315,Takstmenn,0.51,0.5230769230769231,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3321,3321,Forsikringsagenter,0.5614077280743947,0.5758027980250202,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+3322,3322,Selgere (engros),0.5385882182615395,0.5523981725759379,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+3323,3323,Innkjøpere,0.48937621832358674,0.50192432648573,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+3324,3324,Handels- og skipsmeglere,0.549352224470149,0.5634381789437426,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+3331,3331,Speditører og befraktere,0.5182008766914428,0.53148807865789,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3332,3332,Konferanse- og arrangementsplanleggere mv.,0.4864864864864865,0.498960498960499,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3333,3333,Arbeidsformidlere,0.39365079365079364,0.40374440374440373,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3334,3334,Eiendomsmeglere og - forvaltere,0.4794297138047138,0.49172278338945,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+3339,3339,Andre yrker innen forretningstjenester,0.5617547106311455,0.5761586775704056,1_bls_xwalk,high,mean of 7 SOC matches via BLS
+3341,3341,Arbeidsledere for kontorpersonell,0.4895833333333333,0.5021367521367521,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3342,3342,Advokatsekretær,0.6956521739130435,0.7134894091415831,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3343,3343,Sjefssekretærer,0.6486486486486487,0.6652806652806653,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3351,3351,Tollere,0.47154582453193034,0.48363674310967214,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+3352,3352,Skattefunksjonærer,0.5806451612903225,0.5955334987593052,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3353,3353,Saksbehandlere innen sosiale ytelser,0.5455162405646623,0.5595038364765768,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3354,3354,"Saksbehandlere for førerkort, importlisenser mv.",0.5480162405646624,0.5620679390406793,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3355,3355,Politibetjenter mv.,0.3802949114868619,0.39004606306344813,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3359,3359,Andre yrker innen offentlig forvaltning,0.2916666666666666,0.2991452991452991,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3411,3411,Privatetterforskere mv.,0.4126288542236818,0.42320908125505824,1_bls_xwalk,high,mean of 6 SOC matches via BLS
+3412,3412,Miljøarbeidere innen sosiale fagfelt,0.3928571428571428,0.4029304029304029,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3413,3413,Religiøse yrker,0.3333333333333333,0.3418803418803419,2_manual_override,medium,manual → SOC 21-2011: Religiøse yrker → Clergy (SOC 21-2011). Norwegian usage covers both ordained clergy and broader religious workers; SOC 2
+3421,3421,Idrettsutøvere,0.0,0.0,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3422,3422,Trenere og idrettsdommere,0.32416666666666666,0.33247863247863246,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+3423,3423,Sports- og aktivitetsinstruktører,0.21792521659826716,0.22351304266488942,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+3431,3431,Fotografer og filmfotografer,0.3854166666666666,0.3952991452991452,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+3432,3432,Interiørdesignere og dekoratører,0.3987274655355249,0.40895124670310246,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+3433,3433,Tekniske konservatorer,0.3542568290753408,0.36334033751317,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+3434,3434,Sjefskokker,0.38650793650793647,0.3964183964183964,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+3439,3439,Andre yrker innen estetiske fag,0.3797094915016819,0.3894456323094173,3_isco3_fallback,low,"3-digit ISCO 343 aggregate, 9 SOCs"
+3511,3511,"Driftsteknikere, IKT",0.611111111111111,0.6267806267806267,2_manual_override,high,manual → SOC 15-1232: Driftsteknikere IKT → Computer User Support Specialists (SOC 15-1232).
+3512,3512,"Brukerstøtte, IKT",0.611111111111111,0.6267806267806267,2_manual_override,high,manual → SOC 15-1232: Brukerstøtte IKT → Computer User Support Specialists (SOC 15-1232). Same as 3511 (both are user-support roles).
+3513,3513,"Nettverks- og systemteknikere, IKT",0.6346153846153847,0.6508875739644971,2_manual_override,high,manual → SOC 15-1231: Nettverks- og systemteknikere IKT → Computer Network Support Specialists (SOC 15-1231).
+3514,3514,Internett-teknikere,0.7357861863332168,0.7546524988032993,2_manual_override,high,manual → SOC 15-1299: Internett-teknikere → Computer Occupations All Other (SOC 15-1299).
+3521,3521,Teknikere innen radio og tv,0.45286946849446846,0.4644815061481728,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+3522,3522,Teknikere innen telekom,0.4056603773584905,0.41606192549588766,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+4110,4110,Kontormedarbeidere,0.595021645021645,0.6102786102786103,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+4131,4131,Stenografer mv.,0.7432432432432433,0.7623007623007624,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+4132,4132,Dataregistrere,0.8928571428571428,0.9157509157509157,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+4211,4211,"Kundebehandlere, bank og postkontor",0.4282407407407407,0.43922127255460586,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+4212,4212,"Bingoverter, bookmakere mv.",0.2745735810251939,0.28161392925660916,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+4213,4213,Pantelånere mv.,0.5909090909090909,0.6060606060606061,2_manual_override,medium,manual → SOC 13-2072: Override prior row: Pantelånere → Loan Officers (SOC 13-2072) — better functional match than 43-3041.
+4214,4214,Inkassomedarbeidere mv.,0.6078296703296704,0.6234150464919697,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+4221,4221,Reisebyråmedarbeidere mv.,0.5188932980599646,0.5321982544204765,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+4222,4222,Kundesentermedarbeidere,0.5507575757575758,0.5648795648795649,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+4223,4223,Sentralbordoperatører,0.7618845500848896,0.7814200513691176,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+4224,4224,Hotellresepsjonister,0.48333333333333334,0.49572649572649574,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+4225,4225,Informasjonsskrankemedarbeidere,0.7488095238095238,0.7680097680097681,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+4226,4226,Resepsjonister (ekskl. hotell),0.5333333333333333,0.5470085470085471,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+4227,4227,Intervjuere,0.6724137931034483,0.6896551724137931,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+4229,4229,Andre opplysningsmedarbeidere,0.68,0.6974358974358975,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+4311,4311,Regnskapsmedarbeidere,0.7880675526024363,0.8082744129255758,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+4312,4312,Forsikrings- og finansmedarbeidere,0.68075,0.6982051282051281,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+4313,4313,Lønningsmedarbeidere,0.8378378378378379,0.8593208593208594,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+4321,4321,Lagermedarbeidere og material-forvaltere,0.396551724137931,0.40671971706454463,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+4322,4322,Logistikkmedarbeidere,0.5961538461538461,0.611439842209073,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+4323,4323,Transportfunksjonærer,0.6739130434782609,0.6911928651059086,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+4411,4411,Bibliotekassistenter,0.550895225464191,0.5650207440658369,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+4412,4412,Postbud og postsorterere,0.2344290178772937,0.24044001833568585,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+4413,4413,Kodere mv.,0.975,1.0,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+4415,4415,Arkivassistenter,0.5955882352941175,0.6108597285067873,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+4416,4416,Personalkontormedarbeidere,0.6206896551724138,0.6366047745358091,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5111,5111,"Flyverter, båtverter mv.",0.19444444444444442,0.1994301994301994,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+5112,5112,Konduktører,0.2222222222222222,0.22792022792022792,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5113,5113,Reiseledere og guider,0.32461538461538464,0.3329388560157791,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+5120,5120,Kokker,0.1932790721756239,0.19823494582115272,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+5131,5131,Servitører,0.1566515495086923,0.1606682559063511,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+5132,5132,Bartendere,0.1944444444444444,0.19943019943019938,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5141,5141,Frisører,0.12035603715170275,0.1234420893863618,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+5142,5142,Kosmetologer mv.,0.16871419124307438,0.17304019614674296,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+5151,5151,Renholdsledere i bedrifter,0.2653061224489795,0.2721088435374149,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5152,5152,Husholdere,0.2653061224489795,0.2721088435374149,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5153,5153,Vaktmestre,0.0,0.0,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5161,5161,Astrologer mv.,,,4_unmappable,unmappable,DOCUMENTED UNMAPPABLE: Astrologer mv. — fortune tellers/astrologers. No SOC equivalent in mainstream Eloundou-scored occupations (US BLS does n
+5163,5163,Begravelsesbyrå- og krematoriearbeidere,0.12685615848406542,0.13010888049647737,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+5164,5164,Dyrepassere og - trenere mv.,0.1994659236038546,0.2045804344654919,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+5165,5165,Kjøreskolelærere,0.36,0.36923076923076925,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5169,5169,Andre personlige tjenesteytere,0.23555555555555552,0.24159544159544155,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+5211,5211,Torghandlere,0.2608695652173913,0.26755852842809363,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5212,5212,"Gateselgere, mat",0.19524959742351045,0.20025599735744662,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+5221,5221,Innehavere av kiosk/liten butikk,0.4807692307692308,0.4930966469428008,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5222,5222,Butikkavdelingssjefer,0.4864864864864865,0.498960498960499,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5223,5223,Butikkmedarbeidere,0.3424812030075187,0.3512627723154038,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+5230,5230,Billettselgere,0.23560354374307857,0.24164466024931136,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+5241,5241,Mannekenger og modeller,0.2333333333333333,0.2393162393162393,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5242,5242,Demonstrasjonsselgere,0.1282051282051282,0.13149243918474687,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5243,5243,Dørselgere,0.2608695652173913,0.26755852842809363,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5244,5244,Telefon- og nettselgere,0.8055555555555555,0.8262108262108261,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5245,5245,Servicemedarbeidere (bensinstasjon),0.1304347826086956,0.13377926421404676,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5246,5246,Gatekjøkken- og kafémedarbeidere mv.,0.0,0.0,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5249,5249,Andre salgsmedarbeidere,0.532258064516129,0.5459057071960297,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5311,5311,Barnehage- og skolefritidsassistenter mv.,0.1414312039312039,0.145057645057645,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+5312,5312,Skoleassistenter,0.3666666666666666,0.376068376068376,2_manual_override,high,manual → SOC 25-9042: Skoleassistenter → Teaching Assistants Preschool/Elementary/Middle/Secondary (SOC 25-9042).
+5321,5321,Helsefagarbeidere,0.1016949152542373,0.10430247718383312,2_manual_override,high,manual → SOC 31-1131: Helsefagarbeidere → Nursing Assistants (SOC 31-1131). Direct functional match — Norwegian helsefagarbeidere are CNA-equi
+5322,5322,Hjemmehjelper,0.0769230769230769,0.0788954635108481,2_manual_override,high,manual → SOC 31-1121: Hjemmehjelper → Home Health Aides (SOC 31-1121). Direct functional match.
+5329,5329,Andre pleiemedarbeidere,0.2616908359374662,0.2684008573717602,1_bls_xwalk,high,mean of 7 SOC matches via BLS
+5411,5411,Brannkonstabler,0.27772260840781193,0.2848437009310892,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+5413,5413,Fengselsbetjenter,0.2719861660079051,0.278960170264518,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+5414,5414,Vektere,0.28805555555555556,0.2954415954415955,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+5419,5419,Andre sikkerhetsarbeidere,0.3105950954266102,0.3185590722324207,1_bls_xwalk,high,mean of 7 SOC matches via BLS
+6111,6111,Korn- og grønnsaksprodusenter,0.14035087719298245,0.14394961763382816,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+6112,6112,Frukt- og bærprodusenter,0.14035087719298245,0.14394961763382816,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+6113,6113,Gartnere,0.13850702143385066,0.14205848352189812,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+6114,6114,"Kombinasjonsbrukere, nyttevekster",0.14035087719298245,0.14394961763382816,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+6121,6121,Melke- og husdyrprodusenter,0.22368421052631576,0.2294197031039136,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+6122,6122,Egg- og fjærfeprodusenter,0.22368421052631576,0.2294197031039136,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+6123,6123,Birøktere mv.,0.22368421052631576,0.2294197031039136,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+6129,6129,Andre dyreoppdrettere og røktere,0.22368421052631576,0.2294197031039136,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+6130,6130,Plante- og husdyrprodusenter (kombinasjonsbruk),0.14912280701754385,0.15294646873594242,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+6210,6210,Skogbrukere,0.15069126620900072,0.15455514482974433,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+6221,6221,Havbruksarbeidere,0.22368421052631576,0.2294197031039136,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+6222,6222,Fiskere,0.2807017543859649,0.2878992352676563,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+6224,6224,Fangstfolk,0.2807017543859649,0.2878992352676563,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7112,7112,Murere,0.0192307692307692,0.019723865877712,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7113,7113,Steinhoggere mv.,0.0208333333333333,0.021367521367521333,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7114,7114,Betongarbeidere,0.013888888888888867,0.014245014245014223,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+7115,7115,Tømrere og snekkere,0.1444444444444444,0.1481481481481481,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7119,7119,Andre bygningsarbeidere,0.10377005789909013,0.10643082861445143,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+7121,7121,Taktekkere,0.04,0.041025641025641026,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7122,7122,Gulv- og flisleggere,0.05535714285714285,0.05677655677655677,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+7123,7123,Gips- og sparklingsarbeidere,0.0395299145299145,0.04054350208196359,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+7124,7124,Isolatører mv.,0.0477272727272727,0.048951048951048924,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7125,7125,Glassarbeidere,0.0833333333333333,0.08547008547008544,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7126,7126,Rørleggere og VVS-montører,0.062115541790338506,0.06370824799009078,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7127,7127,Kuldemontører mv.,0.2577597840755735,0.2643690093082805,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7131,7131,Malere og byggtapetserere,0.042084942084942054,0.04316404316404313,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7132,7132,Overflatebehandlere og lakkerere,0.0,0.0,2_manual_override,medium,"manual → SOC 51-9123: Overflatebehandlere og lakkerere → Painting, Coating, and Decorating Workers (SOC 51-9123)."
+7133,7133,"Feiere, fasaderenholdere mv.",0.0,0.0,2_manual_override,medium,"manual → SOC 37-2011: Feiere, fasaderenholdere — chimney sweeps and facade cleaners. SOC 37-2011 'Janitors and Cleaners'."
+7211,7211,Støpere,0.04069767441860465,0.0417412045319022,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7212,7212,Sveisere,0.07820855614973254,0.08021390374331543,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7213,7213,Kopper- og blikkenslagere,0.0755090955319788,0.07744522618664493,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+7214,7214,Platearbeidere,0.04090909090909087,0.04195804195804192,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+7215,7215,Riggere og spleisere,0.0,0.0,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7221,7221,Smeder,0.0416666666666666,0.042735042735042666,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7222,7222,"Verktøymaker, låsesmeder mv.",0.14227980364656378,0.14592800374006543,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+7223,7223,Metalldreiere mv.,0.10837173606111779,0.11115049852422337,1_bls_xwalk,high,mean of 10 SOC matches via BLS
+7224,7224,Metallslipere,0.0345238095238095,0.03540903540903538,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7231,7231,Bilmekanikere,0.08507283496645197,0.08725418970918151,1_bls_xwalk,high,mean of 10 SOC matches via BLS
+7232,7232,Mekanikere innen flytekniske fag,0.2722923842326827,0.27927424023864894,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7233,7233,Anleggsmaskin- og industrimekanikere,0.1338537001931111,0.13728584635190882,1_bls_xwalk,high,mean of 9 SOC matches via BLS
+7234,7234,Sykkelreparatører mv.,0.25685234305923954,0.26343830057357903,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7311,7311,Presisjonsinstrumentmakere og -reparatører,0.28832167832167827,0.29571454186838797,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+7312,7312,Musikkinstrumentmakere og -stemmere,0.21493212669683254,0.2204432068685462,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7313,7313,"Gull- og sølvsmeder, gravører mv.",0.2053571428571428,0.21062271062271057,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7314,7314,Keramikere mv.,0.10850938167279993,0.11129167351056403,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7315,7315,Glasshåndverkere,0.053273417403852164,0.0546394024654894,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+7316,7316,Dekormalere mv.,0.06818181818181815,0.0699300699300699,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7317,7317,Kunsthåndverkere i tre mv.,0.2586206896551724,0.2652519893899204,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7318,7318,"Vevere, strikkere mv. (innen husflidsproduksjon)",0.0588235294117647,0.060331825037707384,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7319,7319,Andre kunsthåndverkere,0.2586206896551724,0.2652519893899204,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7321,7321,Førtrykkere,0.5413306451612903,0.5552109181141439,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7322,7322,Trykkere,0.2875,0.2948717948717949,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7323,7323,Innbindere mv.,0.0897435897435897,0.09204470742932278,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7411,7411,Elektrikere,0.12817073170731705,0.13145716072545338,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7412,7412,Automatikere,0.19919437512554916,0.20430192320569146,1_bls_xwalk,high,mean of 13 SOC matches via BLS
+7413,7413,Energimontører,0.2051282051282051,0.21038790269559499,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7421,7421,Serviceelektronikere,0.29599461762727064,0.3035842232074571,1_bls_xwalk,high,mean of 7 SOC matches via BLS
+7422,7422,Tele- og IKT-installatører,0.23933449203857363,0.24547127388571655,1_bls_xwalk,high,mean of 7 SOC matches via BLS
+7511,7511,"Slaktere, fiskehandlere mv.",0.0495614035087719,0.050832208726945535,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+7512,7512,"Bakere, konditorer mv.",0.2647058823529412,0.2714932126696833,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7513,7513,Ystere mv. (gårdsproduksjon),0.12912087912087905,0.13243167089320929,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7514,7514,"Saftere, syltere mv. (gårdsproduksjon)",0.1290322580645161,0.1323407775020678,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7515,7515,Prøvesmakere og kvalitetsbedømmere av mat og drikke,0.1958333333333333,0.20085470085470084,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+7522,7522,Møbelsnekkere,0.139118724412842,0.14268587119265846,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+7531,7531,"Skreddere, buntmakere mv.",0.0909090909090909,0.09324009324009323,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7532,7532,Gradører,0.20982142857142858,0.21520146520146521,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+7534,7534,Møbeltapetserere mv.,0.1911764705882352,0.19607843137254893,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7535,7535,Skinnberedere og garvere,0.1,0.10256410256410257,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7536,7536,Skomakere,0.0588235294117647,0.060331825037707384,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7541,7541,Yrkesdykkere,0.0666666666666666,0.0683760683760683,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7542,7542,Skytebaser og sprengningsarbeidere,0.205312049062049,0.2105764605764605,3_isco3_fallback,low,"3-digit ISCO 754 aggregate, 7 SOCs"
+7543,7543,Produkttestere (ikke matprodukter),0.4166666666666666,0.4273504273504273,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+7544,7544,Desinfeksjonsarbeidere og skadedyrbekjempere,0.22003367003367,0.2256755590088923,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+7549,7549,Andre håndverkere,0.14687499999999995,0.1506410256410256,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+8111,8111,Bergfagarbeidere,0.03846153846153845,0.03944773175542405,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+8112,8112,Prosessoperatører (oppredning),0.10668563300142245,0.10942116205274098,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+8113,8113,Operatører innen boring mv.,0.023429541595925276,0.024030299072743875,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+8114,8114,Operatører innen produksjon av betong mv.,0.09549890799890798,0.09794759794759793,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+8121,8121,Operatører innen metallurgiske prosessfag,0.09558823529411761,0.09803921568627448,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+8122,8122,Operatører innen metallflatebehandling,0.1047149122807017,0.10739991003148894,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+8131,8131,Operatører innen kjemisk industri,0.09649287910157471,0.09896705548879457,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+8132,8132,Operatører innen produksjon av fotofilm og -papir mv.,0.38,0.38974358974358975,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8141,8141,Operatører innen produksjon av gummiprodukter,0.08078313700596308,0.08285449949329547,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+8142,8142,Operatører innen plastprodukter,0.10077199856683863,0.10335589596598835,1_bls_xwalk,high,mean of 11 SOC matches via BLS
+8143,8143,Operatører innen papirprodukter,0.032258064516129,0.03308519437551692,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+8151,8151,Spinne- og nøstemaskinoperatører,0.0857142857142857,0.0879120879120879,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8152,8152,Operatører innen tekstilproduksjon mv.,0.15625,0.16025641025641027,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8153,8153,Industrisyere,0.0813953488372093,0.0834824090638044,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8154,8154,Operatører innen tekstilbearbeiding,0.1578947368421052,0.16194331983805663,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8155,8155,"Operatører innen pels, skinn- og lærbearbeiding",0.1911764705882352,0.19607843137254893,2_manual_override,medium,"manual → SOC 51-6093: Operatører innen pels, skinn- og lærbearbeiding → Upholsterers / Leather workers. SOC 51-6093 'Upholsterers'."
+8156,8156,Operatører innen skinn og lærprodukter,0.0869565217391304,0.08918617614269786,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8157,8157,Renseri- og vaskerimaskinoperatører,0.05,0.05128205128205129,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8159,8159,"Andre operatører innen produksjon av tekstiler, pels, skinn og lær",0.1030351488554551,0.10567707574918472,3_isco3_fallback,low,"3-digit ISCO 815 aggregate, 6 SOCs"
+8160,8160,Operatører innen næringsmiddelproduksjon,0.0932167080231596,0.09560688002375343,1_bls_xwalk,high,mean of 5 SOC matches via BLS
+8171,8171,Operatører innen treforedling,0.0526315789473684,0.053981106612685535,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+8172,8172,Operatører innen trelastproduksjon,0.0588235294117647,0.060331825037707384,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8181,8181,Operatører innen glass- og keramisk produksjon,0.08967899501882509,0.0919784564295642,1_bls_xwalk,high,mean of 6 SOC matches via BLS
+8182,8182,Fyrkjele- og turbinoperatører,0.1627906976744186,0.1669648181276088,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8183,8183,"Pakke-, tappe- og etikettmaskinoperatører",0.0,0.0,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8189,8189,Andre stasjonære maskinoperatører,0.12058485122358173,0.12367677048572485,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+8211,8211,Montører av mekaniske produkter,0.0601190476190476,0.06166056166056164,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+8212,8212,Montører av elektriske og elektroniske produkter,0.1250485625485625,0.1282549359472436,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+8219,8219,Andre montører,0.2352941176470588,0.24132730015082954,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8311,8311,Lokomotiv og T-baneførere,0.29978354978354976,0.30747030747030746,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+8312,8312,Skiftekonduktører mv,0.2777777777777778,0.2849002849002849,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8322,8322,"Bil-, drosje- og varebilførere",0.2632090132090132,0.26995796226565455,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+8331,8331,Bussjåfører og trikkeførere,0.4090909090909091,0.41958041958041964,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8332,8332,Lastebil- og trailersjåfører,0.2788461538461538,0.2859960552268244,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8341,8341,Jordbruks- og skogbruksmaskinførere,0.09375,0.09615384615384616,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+8342,8342,Anleggsmaskinførere,0.013586956521739125,0.013935340022296539,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+8343,8343,Kran- og heisførere mv.,0.17036581839213416,0.1747341727098812,1_bls_xwalk,high,mean of 4 SOC matches via BLS
+8344,8344,Truckførere,0.03125,0.032051282051282055,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+8350,8350,Dekks- og maskinmannskap (skip),0.02127659574468085,0.02182214948172395,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+9111,9111,Renholdere i private hjem,0.0,0.0,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9112,9112,Renholdere i bedrifter,0.027777777777777766,0.028490028490028477,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+9122,9122,Bilvaskere,0.0833333333333333,0.08547008547008544,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9123,9123,Vinduspussere,0.0,0.0,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9129,9129,Andre rengjørere,0.078125,0.08012820512820513,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9211,9211,Hjelpearbeidere i nyttevekstproduksjon,0.1428571428571428,0.14652014652014647,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9212,9212,Hjelpearbeidere i husdyrproduksjon,0.0625,0.06410256410256411,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9213,9213,Hjelpearbeidere i kombinasjonsbruk,0.1026785714285714,0.10531135531135528,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+9214,9214,Hjelpearbeidere i gartneri mv.,0.08362369337979089,0.08576789064593938,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+9215,9215,Hjelpearbeidere i skogbruk,0.0434782608695652,0.04459308807134893,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9216,9216,Hjelpearbeidere innen havbruk,0.0625,0.06410256410256411,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9311,9311,Hjelpearbeidere i bergverk,0.0,0.0,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9312,9312,Hjelpearbeidere i anlegg,0.00806451612903225,0.00827129859387923,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+9313,9313,Hjelpearbeidere i bygg,0.01062717770034843,0.0108996694362548,1_bls_xwalk,high,mean of 7 SOC matches via BLS
+9321,9321,Håndpakkere mv.,0.1,0.10256410256410257,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9329,9329,Andre hjelpearbeidere i industri,0.06581906016688623,0.06750672837629357,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+9331,9331,Førere av ikke-motorisert kjøretøy,0.3103448275862069,0.31830238726790455,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9333,9333,Laste- og lossearbeidere,0.05163561076604553,0.052959600785687726,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+9334,9334,Varepåfyllere,0.1818181818181818,0.18648018648018647,2_manual_override,medium,manual → SOC 53-7065: Override prior row: Varepåfyllere → Stockers and Order Fillers (SOC 53-7065) — better functional match.
+9412,9412,Kjøkkenassistenter,0.012345679012345666,0.012662234884457094,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+9510,9510,Reklamedistributører mv.,0.2608695652173913,0.26755852842809363,2_manual_override,low,"manual → SOC 41-9091: Reklamedistributører — leaflet/advertising distributors. SOC 41-9091 'Door-to-Door Sales Workers, News and Street Vendor"
+9611,9611,Renovasjonsarbeidere,0.1964285714285714,0.20146520146520144,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9612,9612,Gjenvinningsarbeidere,0.1964285714285714,0.20146520146520144,1_bls_xwalk,high,mean of 1 SOC matches via BLS
+9613,9613,Gatefeiere mv.,0.0,0.0,2_manual_override,medium,manual → SOC 37-2011: Gatefeiere — street sweepers. SOC 37-2011 'Janitors and Cleaners' (closest broad cleaning category).
+9621,9621,Bud mv.,0.2292464878671775,0.23512460294069487,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+9622,9622,Altmuligmann,0.12675521821631877,0.1300053520167372,1_bls_xwalk,high,mean of 3 SOC matches via BLS
+9623,9623,Måleravlesere mv.,0.37946428571428564,0.38919413919413914,1_bls_xwalk,high,mean of 2 SOC matches via BLS
+9629,9629,Andre hjelpearbeidere,0.14157455447778025,0.14520467125926179,1_bls_xwalk,high,mean of 5 SOC matches via BLS

@@ -85,3 +85,8 @@ microdata-output/
 
 # RA bundle data snapshot (register-derived, do not track)
 to_RA/data_aggregated.zip
+
+# DBH raa-svar (19 MB); build_institutions.py trenger bare de to totalfilene
+data/education_analysis/dbh/raw/*
+!data/education_analysis/dbh/raw/104_kandidater_totaler.json
+!data/education_analysis/dbh/raw/123_registrerte_totaler.json

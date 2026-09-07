@@ -1,0 +1,7 @@
+# Holdes utenfor Docker-bildet (Dockerfile kopierer public/ i sin helhet).
+# Nedlastbare CSV-er for Yrker/Utdanning ble tatt bort fra nettstedet
+# 2026-09-07; nginx svarer 404 paa /data/panels/ uansett.
+public/data/panels/
+__pycache__/
+*.py
+README.md
