@@ -10,17 +10,16 @@ Canaries Dashboard.
 site/
   prepare_data.py   # release-CSV -> public/data/dashboard.json,
                     # public/data/occupations.json (yrkesvelgeren) + nedlastbare CSV-er
-  prepare_panels.py # panelene: public/data/yrker.json, utdanning.json, bruk.json
-                    # + public/data/panels/*.csv (egen kadens, se under)
+  prepare_panels.py # sidene Yrker og Utdanning: public/data/yrker.json,
+                    # utdanning.json (egen kadens, se under; ingen nedlastbare CSV-er)
   public/           # alt som serveres
     index.html      # KI-indeksen (flaggskipet, forsiden)
-    yrker.html      # panel: automatisering/augmentering yrke for yrke
-    utdanning.html  # panel: institusjoner, fagfelt, toppyrker
-    bruk.html       # panel: KI-bruk per land, tokens og brukere
+    yrker.html      # Yrker: hvor utsatt er jobben din, oppgaver, bruk over tid
+    utdanning.html  # Utdanning: studievalget, oppgaver og jobber per faggruppe
     om.html
-    en/             # engelske tvillinger: index, occupations, education, usage, about
+    en/             # engelske tvillinger: index, occupations, education, about
     app.js          # KI-indeksen: figurer (ECharts), kontroller, nedlastingsliste
-    panels.js       # de tre panelene, ett script, språk fra <html lang>
+    panels.js       # Yrker og Utdanning, ett script, språk fra <html lang>
     style.css
     vendor/echarts.min.js
     data/           # generert av prepare_data.py og prepare_panels.py
@@ -29,12 +28,16 @@ site/
   fly.toml          # app "kiindeksen", region arn (Stockholm)
 ```
 
-## Panelene (Arbeidsmarkedet, sept. 2026)
+## Sidene Yrker og Utdanning (sept. 2026)
 
-Nettstedet heter Arbeidsmarkedet. KI-indeksen er fortsatt forsiden og
-flaggskipet. Panelnavigasjonen (`.panel-nav`) ligger under toppfeltet på
-alle sider. De tre panelene oppdateres når kildene oppdateres, ikke
-månedlig:
+KI-indeksen er forsiden og navnet på nettstedet. Yrker og Utdanning er
+egne sider, med sidelenkene (`.panel-nav`) øverst til høyre i toppfeltet
+på alle sider, på samme rad som språkveksleren.
+Om-siden er én setning pluss de to som lager indeksen; metode og sitering
+ligger på forsiden. Sidene drives av `panels.js` (språk fra `<html lang>`,
+side fra `<body data-panel>`). Sammendragene skrives som løpende tekst fra
+dataene, ikke som nøkkeltallsfliser. De to sidene oppdateres når kildene
+oppdateres, ikke månedlig:
 
 - **Yrker** (`yrker.html`, data `yrker.json`): Anthropic Economic Index,
   tabellen O*NET-oppgave × interaksjonstype, koblet til STYRK-08 med samme
@@ -50,17 +53,19 @@ månedlig:
   og, ved «Sammenlign arbeidsmarkedet», `occupations.json` pluss
   `vacancies.json` (NAV, se `data/nav_vacancies/README.md`; bygges av
   `prepare_panels.py` bare når `nav_vacancies_by_styrk.csv` finnes).
-- **Utdanning** (`utdanning.html`, data `utdanning.json`): Edutech-pipelinen
-  (`AI-research/Edutech/education-analysis/`), utdata kopiert til
-  `data/education_analysis/`. Seks institusjoner i første versjon.
-- **KI-bruk per land** (`bruk.html`, data `bruk.json`): landfilene fra
-  Anthropic (`data/ai_usage_cross_platform/` + ukesutvalgene i
-  `data/ai_exposure/handa/aei_releases/usage_by_country_*` og
-  `collaboration_by_country_*`).
+- **Utdanning** (`utdanning.html`, data `utdanning.json`): studievalget.
+  Per NUS-faggruppe (nivå + tosifret fag) de ti vanligste oppgavene i
+  jobbene utdanningen fører til, med Eloundou-etikett og Claude-bruk per
+  oppgave, og de vanligste jobbene. `analysis/07_education/build_majors.py`
+  (trenger utdanning.no-koblingsfilene i Edutech-mappa, `EDUTECH_DIR`; O*NET
+  30.1-filene ligger i `data/ai_exposure/onet_relational/`) →
+  `data/education_analysis/majors.json` → `prepare_panels.py`.
+  Lærestedsvisningen (`build_institutions.py`, DBH) er tatt av siden og
+  ventes som egen analyse.
 
 Ny side eller ny JSON må også inn i `nginx.conf` (no-cache) og
 `sitemap.xml`. Cache-parameteren på `style.css` og `panels.js` er
-`v=20260907a`.
+`v=20260907d` (bump i alle HTML-filer og i `V` i panels.js ved endring).
 
 ## Månedlig oppdatering
 

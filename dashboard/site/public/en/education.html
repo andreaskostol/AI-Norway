@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Education — Arbeidsmarkedet</title>
-<meta name="description" content="Pick a field of study, a level and an institution: which occupations do graduates go to, and how AI-exposed are they? 35 Norwegian institutions, graduate counts from DBH linked to register data from utdanning.no and the index's occupational AI exposure.">
+<title>Education — The AI Labor Market Index</title>
+<meta name="description" content="Which jobs does a degree lead to, and how exposed are they to AI? Pick a field and a level and see the ten most common tasks in those jobs, how exposed each task is to language models, how Claude is used on it, and the most common jobs. Register data from utdanning.no, O*NET, Eloundou et al. and the Anthropic Economic Index.">
 <link rel="canonical" href="https://kiindeksen.no/en/education.html">
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/utdanning.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/education.html">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/utdanning.html">
-<link rel="stylesheet" href="/style.css?v=20260907c">
+<link rel="stylesheet" href="/style.css?v=20260907h">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body data-panel="utdanning">
@@ -22,311 +22,204 @@
              alt="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School"></a>
     </div>
     <nav class="site-nav">
-      <a href="#fagfelt">Field and level</a>
-      <a href="#institusjon">Institution</a>
-      <a href="#oversikt">All institutions</a>
+      <a href="#velg">Pick a degree</a>
+      <a href="#oppgaver">The tasks</a>
+      <a href="#jobber">The jobs</a>
       <a href="#metode">Method</a>
-      <a href="#data">Data</a>
     </nav>
     <div class="brand">
-      <a class="lang-toggle" href="/utdanning.html" hreflang="nb" lang="nb">Norsk</a>
-      <p class="site-name"><a href="/en/">Arbeidsmarkedet</a></p>
-      <p class="tagline">The AI Labor Market Index and companion indicators on artificial intelligence and the Norwegian labor market</p>
+      <div class="brand-top">
+        <nav class="panel-nav" aria-label="Pages">
+          <a href="/en/">The AI Labor Market Index</a>
+          <a href="/en/occupations.html">Occupations</a>
+          <a href="/en/education.html" class="active">Education</a>
+          <a href="/en/about.html">About</a>
+        </nav>
+        <a class="lang-toggle" href="/utdanning.html" hreflang="nb" lang="nb">Norsk</a>
+      </div>
+      <p class="tagline">Monthly indicators on artificial intelligence and the Norwegian labor market</p>
     </div>
   </div>
 </header>
-<nav class="panel-nav" aria-label="Panels">
-  <div class="container">
-    <a href="/en/">The AI Labor Market Index</a>
-    <a href="/en/occupations.html">Occupations</a>
-    <a href="/en/education.html" class="active">Education</a>
-    <a href="/en/about.html">About</a>
-  </div>
-</nav>
 
 <div class="layout">
 <aside class="toc" aria-label="Contents">
   <nav id="toc-nav">
-    <a href="#intro">Education</a>
-    <a href="#fagfelt">1 · Pick field and level</a>
-    <a href="#institusjon">2 · Pick institution</a>
-    <a href="#oversikt">3 · All institutions</a>
-    <a href="#fagfelt-nasjonalt">4 · Fields, national</a>
+    <a href="#velg">Pick a degree</a>
+    <a href="#oppgaver">The ten most common tasks</a>
+    <a href="#jobber">The most common jobs</a>
     <a href="#metode">Method</a>
-    <a href="#data">Download data</a>
   </nav>
 </aside>
 <div class="content">
 
 <main class="container">
 
-  <section id="intro" class="hero">
-    <h2 class="hero-title">What do we educate for, and how AI-exposed is the job?</h2>
-    <p class="panel-lede">
-      Each institution awards degrees in particular fields. Each degree
-      typically leads to particular occupations. And each occupation has
-      an AI exposure, the same one the index uses. This page links the
-      three for every Norwegian institution with at least 50 graduates a
-      year. Pick a field and a level to see national numbers and who
-      educates most. Pick an institution to see its graduates, fields
-      and typical occupations.
+  <section id="velg" class="hero">
+    <h2 class="hero-title hero-title-wide">Which jobs does a degree lead to, and how exposed are they to AI?</h2>
+    <p class="lede">
+      Pick a field and a level. You get the ten most common tasks in the
+      jobs the degree leads to, how exposed each task is to language
+      models, how Claude is used on it, and finally the most common jobs.
     </p>
-    <p class="panel-kpi" id="u-kpi"></p>
-    <p class="panel-status"></p>
-    <details class="quick-summary" open>
-      <summary>Summary for the impatient reader</summary>
-      <ul>
-        <li><strong>The business schools are on top.</strong> NHH, BI
-          and Kristiania send graduates into accounting, finance,
-          marketing and case handling. Those are occupations high on the
-          exposure scale.</li>
-        <li><strong>The professional colleges are at the bottom.</strong>
-          Teachers, nurses and care workers have low exposure, and
-          institutions that educate many of them get low means.</li>
-        <li><strong>Field and level explain most of it.</strong> The
-          difference between institutions is first of all a difference
-          in what they teach. Within the same field and level,
-          institutions look alike, because the occupational profiles are
-          national.</li>
-      </ul>
+    <details class="more">
+      <summary>About the numbers</summary>
+      <p>The jobs come from Statistics Norway's registers via
+        utdanning.no: every resident aged 20–70 with the degree as their
+        highest education, linked to occupation. The tasks come from
+        O*NET, the US occupational database, through the same crosswalk
+        as the index. Exposure per task is Eloundou et al. (2024). Claude
+        use is the Anthropic Economic Index, latest sample. Bachelor is
+        the default; switch level for master, PhD, vocational college or
+        upper secondary. Field names are in Norwegian, as in the
+        source.</p>
     </details>
-    <div class="btn-row" id="u-version-buttons"></div>
-    <p class="chart-footnote">
-      The exposure measure applies to the whole page. Eloundou et al.
-      (2024) is the default, as on the index page. Mouchel et al. (2026)
-      is an evidence-grounded alternative. Both are scaled 0 to 1, and
-      the quintiles split occupations into five equal groups, Q1 least
-      and Q5 most exposed.
+    <p class="panel-status"></p>
+    <div class="control-row panel-controls">
+      <div class="control">
+        <label for="u-level">Level</label>
+        <select id="u-level"></select>
+      </div>
+      <div class="control control-search">
+        <label for="u-search">Field</label>
+        <div class="occ-picker">
+          <input type="search" id="u-search" autocomplete="off"
+                 aria-label="Search for a field or degree"
+                 placeholder="Click for the list, or type: nursing, law, master in economics …">
+          <ul id="u-hits" class="occ-hits" hidden></ul>
+        </div>
+      </div>
+    </div>
+    <p class="pick-hint">
+      Type what you call your degree. The search matches the fields and
+      the names of more than 2,400 individual degrees in the register,
+      in Norwegian and English.
     </p>
+    <div id="u-lead" class="pick-summary"></div>
   </section>
 
-  <section id="fagfelt" class="chart-section">
-    <h2>1 · Pick field and level</h2>
+  <section id="oppgaver" class="chart-section">
+    <h2>The ten most common tasks for <span class="u-group-name">the chosen degree</span></h2>
     <p class="chart-intro">
-      Fields are Statistics Norway's nine fields of study in the
-      education standard NUS2000. Levels are bachelor, master, PhD,
-      vocational college or upper secondary. The numbers cover every
-      resident of Norway with such an education as their highest, not
-      only recent graduates. Field names are in Norwegian, as in the
-      source.
+      The tasks in the jobs the degree leads to, with AI exposure and the
+      share of Claude use on the task that is automation. A task often
+      belongs to several of the occupations; the column shows the main
+      ones. Click a task.
     </p>
-    <div class="btn-row btn-wrap" id="u-field-buttons"></div>
-    <div class="btn-row" id="u-level-buttons"></div>
-    <div id="u-fl-card" class="pick-card"></div>
-    <h3>Where do they work?</h3>
-    <div class="table-wrap" id="u-fl-table"></div>
-    <p class="chart-footnote">
-      The ten most common occupations among employed people with an
-      education in this field at this level, whole country. The quintile
-      is the occupation's AI exposure.
-    </p>
-    <h3>Who educates most?</h3>
-    <div id="chart-u-fl-inst" class="chart chart-short"></div>
-    <p class="chart-footnote" id="u-fl-note"></p>
+    <details class="more">
+      <summary>How the list is made</summary>
+      <p>Every occupation has a task list in O*NET, with how important
+        each task is and how many in the occupation do it. A task's
+        weight for a degree is importance × share who do it, weighted by
+        how many with the degree hold the occupation. The ten with the
+        largest weight are shown. AI exposure is a score from 0 to 1 per
+        task, the mean of Eloundou et al.'s three ratings of whether a
+        language model can halve the time the task takes, and the group
+        the score falls in using the same five groups as the
+        occupations: least exposed, low, medium, high, most exposed.
+        Automation is Anthropic's bucketing, directive and feedback loop,
+        as a share of Claude.ai conversations about the task. Tasks
+        Anthropic has no data for are shown without a number.</p>
+    </details>
+    <div class="table-wrap" id="u-task-table"></div>
+    <p class="chart-footnote" id="u-task-foot"></p>
+
+    <h3 id="u-task-title">How Claude is used on the task</h3>
+    <div id="chart-u-task" class="chart chart-short"></div>
+    <p class="chart-footnote" id="u-task-note"></p>
   </section>
 
-  <section id="institusjon" class="chart-section">
-    <h2>2 · Pick institution</h2>
+  <section id="jobber" class="chart-section">
+    <h2>The most common jobs for <span class="u-group-name">the chosen degree</span></h2>
     <p class="chart-intro">
-      Every institution with at least 50 graduates in the latest DBH
-      year, sorted by graduates. An institution's numbers are
-      graduate-weighted means over the programmes it offers, where each
-      programme gets the national occupational profile of its education
-      code.
+      The ten occupations most people with the degree work in, with
+      exposure and automation.
     </p>
-    <select id="u-inst-select" class="inst-select" aria-label="Pick an institution"></select>
-    <div id="u-inst-card" class="pick-card"></div>
-    <h3>Fields and levels at the institution</h3>
-    <div class="table-wrap" id="u-inst-fl-table"></div>
-    <p class="chart-footnote">
-      Graduates in the latest year by field and level, with
-      graduate-weighted exposure and the share who typically go to
-      occupations in the most exposed quintile. Typical occupations are
-      the five most common, with their share of the employed.
-    </p>
-    <h3>Where do the graduates work?</h3>
     <div class="btn-row" id="u-cohort-buttons"></div>
-    <div class="table-wrap" id="u-top-table"></div>
-    <p class="chart-footnote" id="u-table-note"></p>
-  </section>
-
-  <section id="oversikt" class="chart-section">
-    <h2>3 · All institutions</h2>
-    <p class="chart-intro">
-      Graduate-weighted mean exposure for every institution under both
-      measures, and the split of graduates across the five exposure
-      quintiles.
-    </p>
-    <div id="chart-u1" class="chart"></div>
-    <p class="chart-footnote">
-      The mean is over everyone employed in Norway with the same
-      degrees, not the institution's own graduates. Two institutions
-      with the same programmes get the same profile. See the method.
-    </p>
-    <div id="chart-u2" class="chart"></div>
-    <p class="chart-footnote" id="u2-note"></p>
-  </section>
-
-  <section id="fagfelt-nasjonalt" class="chart-section">
-    <h2>4 · Fields of study, national</h2>
-    <p class="chart-intro">
-      The same calculation for the whole population, by field of the
-      highest completed education, all levels together. The bar is the
-      share of employed people working in the most exposed fifth of
-      occupations.
-    </p>
-    <div id="chart-u3" class="chart chart-short"></div>
-    <p class="chart-footnote" id="u3-note"></p>
+    <div class="table-wrap" id="u-occ-table"></div>
+    <p class="chart-footnote" id="u-occ-note"></p>
   </section>
 
   <section id="metode" class="prose-section">
-    <h2>Method: how the numbers are made</h2>
+    <h2>Method</h2>
     <p>
-      The numbers are built in three steps, and each step has its own
-      calculation. First, every education code gets an occupational
-      profile and an exposure. Then the codes are grouped into fields and
-      levels. Finally, the programmes at each institution are weighted
-      together into institution numbers.
+      The page joins four sources in one chain: from degree to
+      occupation, from occupation to tasks, and for each task exposure
+      and Claude use. Institutions have been taken off the page and will
+      come as a separate analysis.
     </p>
 
-    <details class="method-details" open>
-      <summary>Step 1: exposure per education code</summary>
+    <details class="method-details">
+      <summary>From degree to occupation</summary>
       <p>The starting point is utdanning.no's register statistics, built
-        on Statistics Norway's registers. For each education code in
-        NUS2000 it gives the number of residents aged 20–70 who hold the
-        code as their highest completed education, split by occupation
-        (STYRK-08) for those employed. Those not employed appear as five
-        status categories (self-employed, in education, unemployed,
-        disability benefit, outside the labour force). Cells with one or
-        two persons are removed. The link is from November 2024.</p>
-      <p>Every occupation has an AI exposure from 0 to 1, the same one
-        the index uses: Eloundou et al. (2024) or Mouchel et al. (2026),
-        mapped to STYRK-08 via ISCO and SOC. The exposure of an
-        education code is the person-weighted mean of the occupations'
-        exposure over the employed who hold an occupation with a score.
-        The share in a quintile is the share of the same persons working
-        in an occupation in that quintile. The status categories and
-        self-employed without an occupation are outside the calculation.
-        Score coverage is above 98 percent for all relevant
-        educations.</p>
-    </details>
-
-    <details class="method-details" open>
-      <summary>Step 2: field and level</summary>
-      <p>The field is the second digit of the NUS code, Statistics
-        Norway's nine fields of study. The level is the first digit,
-        here grouped into bachelor level (6), master level (7), PhD (8),
-        vocational college (5) and upper secondary (3 and 4). Parts 1 and
-        4 show national numbers: everyone in the register with an
-        education in the group, wherever they studied. The exposure of a
-        group is person-weighted over the education codes in the group,
-        which is the same as weighting each occupation by how many in the
-        group hold it. The ten most common occupations in part 1 come
-        from the group's pooled occupational distribution.</p>
-      <p>Field and level at an institution (part 2) is something else.
-        There, the programmes the institution offers in the field and at
-        the level are weighted by graduates in the latest year. The level
-        comes from DBH's level code for the programme, not from the NUS
-        code, and the field from the programme's NUS code. PhDs have no
-        NUS code in DBH and get the national profile of all doctoral
-        educations.</p>
-    </details>
-
-    <details class="method-details" open>
-      <summary>Step 3: institution</summary>
-      <p>Graduate counts come from DBH (HK-dir), table 104 "Graduates"
-        per study programme with NUS code and level code, table 101
-        "Doctoral degrees" and table 123 "Registered students". Every
-        institution with at least 50 graduates in the latest year is
-        included, 35 in all. Graduates are qualifications awarded, not
-        persons.</p>
-      <p>Each programme gets the national profile of its NUS code from
-        step 1. If the code has fewer than 100 employed persons with a
-        score in the register, the profile of the four-digit NUS group is
-        used instead. The institution's exposure is the graduate-weighted
-        mean over programmes. The share in a quintile is weighted the
-        same way. The most common occupations for the institution are the
-        graduate-weighted sum of the programmes' occupational
-        distributions.</p>
-      <p>DBH suppresses small cells, so programme rows sum slightly below
-        the institution's total. The total in the card is DBH's exact
-        figure, while the mix across fields, levels and occupations comes
-        from the programme rows. The share "programme rows with a
-        profile" says how many of the graduates got a profile.</p>
-      <p>The main simplification: profiles are national per education
-        code, not per institution. A business graduate from BI and one
-        from NHH get the same occupational profile when the programmes
-        share a NUS code. The difference between institutions is
-        therefore a difference in what they teach, not in where their
-        graduates end up.</p>
+        on Statistics Norway's registers: for each education code in
+        NUS2000, the number of residents aged 20–70 who hold the code as
+        their highest completed education, split by occupation (STYRK-08)
+        for those employed. Codes are summed to the three-digit group in
+        NUS2000: the first digit is level, the next two are field. Groups
+        with fewer than 100 employed persons with an exposure score are
+        left out. The link is from November 2024. Recent graduates are
+        those who completed one to three years ago, a column utdanning.no
+        does not document.</p>
     </details>
 
     <details class="method-details">
-      <summary>The quintiles</summary>
-      <p>Occupations with a score are split into five equal groups by
-        exposure, as on the index page. Each occupation counts once. The
-        cut-offs are computed per measure. The share in Q5 is the share
-        of employed persons with a score who work in an occupation in the
-        most exposed fifth.</p>
+      <summary>From occupation to tasks</summary>
+      <p>O*NET is the US Department of Labor's occupational database.
+        Every occupation has a task list, and for each task a sample of
+        incumbents has said how important it is (1–5) and whether they do
+        it. Norwegian STYRK-08 codes go to US SOC codes through the same
+        crosswalk as the exposure measures (ISCO-08, BLS). Where O*NET has
+        specialties under a SOC code, the base code is used. A task's
+        weight for a degree is importance × share who do it, split
+        equally between the SOC codes a STYRK occupation maps to, and
+        weighted by the share of the employed who hold the occupation.
+        O*NET version 30.1.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Exposure per task</summary>
+      <p>Eloundou et al. (2024) had GPT-4 and humans rate every O*NET
+        task: E1 when a language model alone can halve the time the task
+        takes at the same quality, E2 when that needs software built on
+        the model, E0 otherwise. The score in the table is E1 = 1,
+        E2 = 0.5, E0 = 0, the same "beta" weighting as the occupation
+        measure on the index page. The degree's task score is the
+        weighted mean over all tasks in its occupations, not only the ten
+        shown.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Claude use per task</summary>
+      <p>The Anthropic Economic Index classifies a sample of
+        conversations by O*NET task and by five interaction types. Two
+        are automation: the person asks for a finished result
+        (directive), or the model does the work and the person relays
+        what happened (feedback loop). Three are augmentation: task
+        iteration, validation and learning. The numbers here are the
+        latest Claude.ai (chat) sample. Tasks are
+        matched on text. Anthropic publishes only tasks with use, so
+        about a third of the tasks in the tables have a number. The
+        degree's automation share is weighted by each task's share of
+        all Claude.ai use.</p>
     </details>
 
     <details class="method-details">
       <summary>Caveats</summary>
       <ol>
-        <li>Occupational profiles are national per education code, not
-          per institution.</li>
-        <li>The register link is from November 2024 and covers residents
-          aged 20 to 70. Graduate counts are for 2025.</li>
-        <li>Recent graduates rest on a column in utdanning.no that is
-          not documented in the API. We read it as completed one to
-          three years ago.</li>
-        <li>Both exposure measures are theoretical task assessments, not
+        <li>Task texts are O*NET's English statements and describe US
+          occupations.</li>
+        <li>The register is national per education code. It does not
+          distinguish institutions.</li>
+        <li>Claude conversations are global and count conversations, not
+          working time.</li>
+        <li>Eloundou's labels are assessments of what is possible, not
           observed use.</li>
-        <li>Small institutions get thinner numbers because DBH suppresses
-          small cells. Institutions with fewer than 50 graduates are
-          left out.</li>
+        <li>Small groups get thin numbers. Groups with fewer than 100
+          employed are left out.</li>
       </ol>
     </details>
-  </section>
-
-  <section id="data" class="prose-section">
-    <h2>Download data</h2>
-    <p>
-      The institution table has one row per institution. The field ×
-      level table has one row per institution, field and level. The
-      occupation tables have the most common occupations per institution
-      and per field and level nationally. The data may be used freely
-      with attribution to Arbeidsmarkedet (kiindeksen.no), DBH and
-      utdanning.no.
-    </p>
-    <div class="download-grid">
-      <div class="download-card">
-        <strong>Institutions</strong>
-        <a href="/data/panels/institutions_summary.csv" download>CSV</a>
-      </div>
-      <div class="download-card">
-        <strong>Institution × field × level</strong>
-        <a href="/data/panels/institutions_by_field_level.csv" download>CSV</a>
-      </div>
-      <div class="download-card">
-        <strong>Occupations per institution</strong>
-        <a href="/data/panels/institutions_top_occupations.csv" download>CSV</a>
-      </div>
-      <div class="download-card">
-        <strong>Occupations per field and level, national</strong>
-        <a href="/data/panels/national_field_level_top_occupations.csv" download>CSV</a>
-      </div>
-      <div class="download-card">
-        <strong>Fields and levels, national</strong>
-        <a href="/data/panels/education_exposure_by_group.csv" download>CSV</a>
-      </div>
-      <div class="download-card">
-        <strong>Sources</strong>
-        <a href="https://dbh.hkdir.no/" target="_blank" rel="noopener">DBH</a>
-        <a href="https://utdanning.no/dokumentasjon/yrkes_utdanningstatistikk"
-           target="_blank" rel="noopener">utdanning.no</a>
-      </div>
-    </div>
+    <p class="chart-footnote">Sources: <a href="https://utdanning.no/dokumentasjon/yrkes_utdanningstatistikk" target="_blank" rel="noopener">utdanning.no</a> · <a href="https://www.onetcenter.org/database.html" target="_blank" rel="noopener">O*NET</a> · <a href="https://www.science.org/doi/10.1126/science.adj0998" target="_blank" rel="noopener">Eloundou et al. (2024)</a> · <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex" target="_blank" rel="noopener">Anthropic Economic Index</a>.</p>
   </section>
 
 </main>
@@ -337,9 +230,9 @@
 <footer class="site-footer">
   <div class="container">
     <p>
-      Arbeidsmarkedet · The AI Labor Market Index · Øystein Hernæs (Frisch Centre) and
+      The AI Labor Market Index · Øystein Hernæs (Frisch Centre) and
       Andreas R. Kostøl (BI Norwegian Business School) ·
-      Data: DBH, utdanning.no ·
+      Data: utdanning.no, O*NET, Eloundou et al. (2024), Anthropic Economic Index ·
       <a href="/en/">The AI Labor Market Index</a> ·
       <a href="/en/occupations.html">Occupations</a> ·
       <a href="/en/about.html">About</a>
@@ -348,6 +241,6 @@
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/panels.js?v=20260907c"></script>
+<script src="/panels.js?v=20260907h"></script>
 </body>
 </html>

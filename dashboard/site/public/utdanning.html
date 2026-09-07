@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Utdanning — Arbeidsmarkedet</title>
-<meta name="description" content="Velg fagfelt, nivå og lærested: hvilke yrker går kandidatene til, og hvor KI-eksponerte er de yrkene? 35 norske institusjoner, kandidattall fra DBH koblet til registerdata fra utdanning.no og KI-indeksens yrkeseksponering.">
+<title>Utdanning — KI-indeksen</title>
+<meta name="description" content="Hvilke jobber gir utdanningen, og hvor utsatt er de for KI? Velg fag og nivå og se de ti vanligste oppgavene i jobbene, hvor utsatt hver oppgave er for språkmodeller, hvordan Claude brukes på den, og de vanligste jobbene. Registerdata fra utdanning.no, O*NET, Eloundou m.fl. og Anthropic Economic Index.">
 <link rel="canonical" href="https://kiindeksen.no/utdanning.html">
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/utdanning.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/education.html">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/utdanning.html">
-<link rel="stylesheet" href="/style.css?v=20260907c">
+<link rel="stylesheet" href="/style.css?v=20260907h">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body data-panel="utdanning">
@@ -22,298 +22,201 @@
              alt="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI"></a>
     </div>
     <nav class="site-nav">
-      <a href="#fagfelt">Fagfelt og nivå</a>
-      <a href="#institusjon">Institusjon</a>
-      <a href="#oversikt">Alle institusjoner</a>
+      <a href="#velg">Velg utdanning</a>
+      <a href="#oppgaver">Oppgavene</a>
+      <a href="#jobber">Jobbene</a>
       <a href="#metode">Metode</a>
-      <a href="#data">Data</a>
     </nav>
     <div class="brand">
-      <a class="lang-toggle" href="/en/education.html" hreflang="en" lang="en">English</a>
-      <p class="site-name"><a href="/">Arbeidsmarkedet</a></p>
-      <p class="tagline">KI-indeksen og andre indikatorer for kunstig intelligens og det norske arbeidsmarkedet</p>
+      <div class="brand-top">
+        <nav class="panel-nav" aria-label="Sider">
+          <a href="/">KI-indeksen</a>
+          <a href="/yrker.html">Yrker</a>
+          <a href="/utdanning.html" class="active">Utdanning</a>
+          <a href="/om.html">Om</a>
+        </nav>
+        <a class="lang-toggle" href="/en/education.html" hreflang="en" lang="en">English</a>
+      </div>
+      <p class="tagline">Månedlige indikatorer for kunstig intelligens og det norske arbeidsmarkedet</p>
     </div>
   </div>
 </header>
-<nav class="panel-nav" aria-label="Paneler">
-  <div class="container">
-    <a href="/">KI-indeksen</a>
-    <a href="/yrker.html">Yrker</a>
-    <a href="/utdanning.html" class="active">Utdanning</a>
-    <a href="/om.html">Om</a>
-  </div>
-</nav>
 
 <div class="layout">
 <aside class="toc" aria-label="Innhold">
   <nav id="toc-nav">
-    <a href="#intro">Utdanning</a>
-    <a href="#fagfelt">1 · Velg fagfelt og nivå</a>
-    <a href="#institusjon">2 · Velg institusjon</a>
-    <a href="#oversikt">3 · Alle institusjoner</a>
-    <a href="#fagfelt-nasjonalt">4 · Fagfelt nasjonalt</a>
+    <a href="#velg">Velg utdanning</a>
+    <a href="#oppgaver">De ti vanligste oppgavene</a>
+    <a href="#jobber">De vanligste jobbene</a>
     <a href="#metode">Metode</a>
-    <a href="#data">Last ned data</a>
   </nav>
 </aside>
 <div class="content">
 
 <main class="container">
 
-  <section id="intro" class="hero">
-    <h2 class="hero-title">Hva utdanner vi, og hvor KI-eksponert er jobben?</h2>
-    <p class="panel-lede">
-      Hvert lærested gir kandidater med bestemte utdanninger. Hver
-      utdanning fører typisk til bestemte yrker. Og hvert yrke har en
-      KI-eksponering, den samme som KI-indeksen bruker. Denne siden
-      kobler de tre leddene for alle norske læresteder med minst 50
-      kandidater i året. Velg fagfelt og nivå for å se nasjonale tall og
-      hvem som utdanner flest. Velg institusjon for å se dens
-      kandidater, fagfelt og typiske yrker.
+  <section id="velg" class="hero">
+    <h2 class="hero-title hero-title-wide">Hvilke jobber gir utdanningen, og hvor utsatt er de for KI?</h2>
+    <p class="lede">
+      Velg fag og nivå. Du får de ti vanligste oppgavene i jobbene
+      utdanningen fører til, hvor utsatt hver oppgave er for
+      språkmodeller, hvordan Claude brukes på den, og til slutt de
+      vanligste jobbene.
     </p>
-    <p class="panel-kpi" id="u-kpi"></p>
-    <p class="panel-status"></p>
-    <details class="quick-summary" open>
-      <summary>Oppsummering for den utålmodige leseren</summary>
-      <ul>
-        <li><strong>Økonomiskolene ligger øverst.</strong> NHH, BI og
-          Høyskolen Kristiania sender kandidatene til regnskap, finans,
-          markedsføring og saksbehandling. Det er yrker høyt oppe i
-          eksponeringsskalaen.</li>
-        <li><strong>Profesjonshøyskolene ligger nederst.</strong>
-          Lærere, sykepleiere og helsefagarbeidere har lav eksponering,
-          og institusjoner som utdanner mange av dem får lave snitt.</li>
-        <li><strong>Fagfelt og nivå forklarer det meste.</strong>
-          Forskjellen mellom institusjoner er først og fremst en forskjell
-          i hva de utdanner. Innenfor samme fagfelt og nivå er
-          institusjonene like, fordi yrkesprofilene er nasjonale.</li>
-      </ul>
+    <details class="more">
+      <summary>Om tallene</summary>
+      <p>Jobbene kommer fra SSBs register via utdanning.no: alle bosatte
+        20–70 år med utdanningen som sin høyeste, koblet til yrke.
+        Oppgavene kommer fra O*NET, den amerikanske yrkesdatabasen, via
+        samme kryssgang som KI-indeksen. Eksponeringen per oppgave er
+        Eloundou m.fl. (2024). Claude-bruken er Anthropic Economic
+        Index, siste utvalg. Bachelor er standardvalget; bytt nivå for
+        master, ph.d., fagskole eller videregående.</p>
     </details>
-    <div class="btn-row" id="u-version-buttons"></div>
-    <p class="chart-footnote">
-      Eksponeringsmålet gjelder hele siden. Eloundou m.fl. (2024) er
-      standard, som på KI-indeks-siden. Mouchel m.fl. (2026) er et
-      evidensbasert alternativ. Begge er skalert 0 til 1, og kvintilene
-      deler yrkene i fem like store grupper, K1 minst og K5 mest
-      eksponert.
+    <p class="panel-status"></p>
+    <div class="control-row panel-controls">
+      <div class="control">
+        <label for="u-level">Nivå</label>
+        <select id="u-level"></select>
+      </div>
+      <div class="control control-search">
+        <label for="u-search">Fag</label>
+        <div class="occ-picker">
+          <input type="search" id="u-search" autocomplete="off"
+                 aria-label="Søk etter fag eller grad"
+                 placeholder="Klikk for lista, eller skriv: sykepleie, siviløkonom, master i rettsvitenskap …">
+          <ul id="u-hits" class="occ-hits" hidden></ul>
+        </div>
+      </div>
+    </div>
+    <p class="pick-hint">
+      Skriv det du kaller graden din. Søket treffer både faggruppene og
+      navnene på over 2 400 enkeltutdanninger i registeret.
     </p>
+    <div id="u-lead" class="pick-summary"></div>
   </section>
 
-  <section id="fagfelt" class="chart-section">
-    <h2>1 · Velg fagfelt og nivå</h2>
+  <section id="oppgaver" class="chart-section">
+    <h2>De ti vanligste oppgavene for <span class="u-group-name">valgt utdanning</span></h2>
     <p class="chart-intro">
-      Fagfelt er SSBs ni fagfelt i utdanningsstandarden NUS2000. Nivå
-      er bachelor, master, ph.d., fagskole eller videregående. Tallene
-      gjelder alle bosatte i Norge med en slik utdanning som sin
-      høyeste, ikke bare nyutdannede.
+      Oppgavene i jobbene utdanningen fører til, med KI-eksponering og
+      hvor stor del av Claude-bruken på oppgaven som er automatisering.
+      En oppgave hører ofte til flere av yrkene; kolonnen viser de
+      viktigste. Klikk på en oppgave.
     </p>
-    <div class="btn-row btn-wrap" id="u-field-buttons"></div>
-    <div class="btn-row" id="u-level-buttons"></div>
-    <div id="u-fl-card" class="pick-card"></div>
-    <h3>Hvor jobber de?</h3>
-    <div class="table-wrap" id="u-fl-table"></div>
-    <p class="chart-footnote">
-      De ti vanligste yrkene blant sysselsatte med en utdanning i dette
-      fagfeltet på dette nivået, hele landet. Kvintilen er yrkets
-      KI-eksponering.
-    </p>
-    <h3>Hvem utdanner flest?</h3>
-    <div id="chart-u-fl-inst" class="chart chart-short"></div>
-    <p class="chart-footnote" id="u-fl-note"></p>
+    <details class="more">
+      <summary>Slik er lista laget</summary>
+      <p>Hvert yrke har en oppgaveliste i O*NET, med hvor viktig hver
+        oppgave er og hvor mange i yrket som gjør den. Oppgavens vekt for
+        en utdanning er viktighet × andel som gjør den, vektet med hvor
+        mange med utdanningen som har yrket. De ti med størst vekt vises.
+        KI-eksponering er en skår fra 0 til 1 per oppgave, snittet av
+        Eloundou m.fl. sine tre vurderinger av om en språkmodell kan
+        halvere tiden oppgaven tar, og gruppen skåren gir i den samme
+        femdelingen som yrkene: minst utsatt, lite utsatt, middels, mye
+        utsatt, mest utsatt. Automatisering er Anthropics inndeling:
+        direkte delegering og tilbakemeldingssløyfe, som andel av
+        samtalene om oppgaven i Claude.ai. Oppgaver Anthropic ikke har
+        data for, står uten tall. Oppgavetekstene er oversatt fra
+        O*NET.</p>
+    </details>
+    <div class="table-wrap" id="u-task-table"></div>
+    <p class="chart-footnote" id="u-task-foot"></p>
+
+    <h3 id="u-task-title">Slik brukes Claude på oppgaven</h3>
+    <div id="chart-u-task" class="chart chart-short"></div>
+    <p class="chart-footnote" id="u-task-note"></p>
   </section>
 
-  <section id="institusjon" class="chart-section">
-    <h2>2 · Velg institusjon</h2>
+  <section id="jobber" class="chart-section">
+    <h2>De vanligste jobbene for <span class="u-group-name">valgt utdanning</span></h2>
     <p class="chart-intro">
-      Alle læresteder med minst 50 kandidater i siste år i DBH, sortert
-      etter antall kandidater. Institusjonens tall er kandidatvektede
-      snitt over programmene den gir, der hvert program får den
-      nasjonale yrkesprofilen til sin utdanningskode.
+      De ti yrkene flest med utdanningen jobber i, med eksponering og
+      automatisering.
     </p>
-    <select id="u-inst-select" class="inst-select" aria-label="Velg institusjon"></select>
-    <div id="u-inst-card" class="pick-card"></div>
-    <h3>Fagfelt og nivå ved institusjonen</h3>
-    <div class="table-wrap" id="u-inst-fl-table"></div>
-    <p class="chart-footnote">
-      Kandidater i siste år etter fagfelt og nivå, med kandidatvektet
-      eksponering og andel som typisk går til yrker i den mest
-      eksponerte kvintilen. Typiske yrker er de fem vanligste, med andel
-      av de sysselsatte.
-    </p>
-    <h3>Hvor jobber kandidatene?</h3>
     <div class="btn-row" id="u-cohort-buttons"></div>
-    <div class="table-wrap" id="u-top-table"></div>
-    <p class="chart-footnote" id="u-table-note"></p>
-  </section>
-
-  <section id="oversikt" class="chart-section">
-    <h2>3 · Alle institusjoner</h2>
-    <p class="chart-intro">
-      Kandidatvektet snitt-eksponering for hvert lærested etter begge
-      mål, og fordelingen av kandidatene på de fem
-      eksponeringskvintilene.
-    </p>
-    <div id="chart-u1" class="chart"></div>
-    <p class="chart-footnote">
-      Snittet er over alle sysselsatte i Norge med de samme
-      utdanningene, ikke institusjonens egne kandidater. To institusjoner
-      med samme programmer får samme profil. Se metode.
-    </p>
-    <div id="chart-u2" class="chart"></div>
-    <p class="chart-footnote" id="u2-note"></p>
-  </section>
-
-  <section id="fagfelt-nasjonalt" class="chart-section">
-    <h2>4 · Fagfelt nasjonalt</h2>
-    <p class="chart-intro">
-      Samme regnestykke for hele befolkningen, etter fagfeltet til
-      høyeste fullførte utdanning, alle nivåer samlet. Stolpen er andelen
-      sysselsatte som jobber i den mest eksponerte femdelen av yrkene.
-    </p>
-    <div id="chart-u3" class="chart chart-short"></div>
-    <p class="chart-footnote" id="u3-note"></p>
+    <div class="table-wrap" id="u-occ-table"></div>
+    <p class="chart-footnote" id="u-occ-note"></p>
   </section>
 
   <section id="metode" class="prose-section">
-    <h2>Metode: slik lages tallene</h2>
+    <h2>Metode</h2>
     <p>
-      Tallene bygges i tre trinn, og hvert trinn har sitt regnestykke.
-      Først får hver utdanningskode en yrkesprofil og en eksponering.
-      Så slås kodene sammen til fagfelt og nivå. Til slutt vektes
-      programmene ved hvert lærested sammen til institusjonstall.
+      Siden setter sammen fire kilder i én kjede: fra utdanning til
+      yrke, fra yrke til oppgaver, og for hver oppgave eksponering og
+      Claude-bruk. Lærestedene er tatt ut av siden og kommer som en
+      egen analyse.
     </p>
 
-    <details class="method-details" open>
-      <summary>Trinn 1: eksponering per utdanningskode</summary>
+    <details class="method-details">
+      <summary>Fra utdanning til yrke</summary>
       <p>Utgangspunktet er utdanning.no sin registerstatistikk, bygget på
-        SSBs registre. For hver utdanningskode i NUS2000 gir den antall
-        bosatte 20–70 år som har koden som sin høyeste fullførte
-        utdanning, fordelt på yrke (STYRK-08) for de som er ansatt. De
-        som ikke er ansatt, vises som fem statuskategorier
-        (selvstendig, i utdanning, ledig, uføretrygd/AAP, utenfor
-        arbeidsstyrken). Celler med én eller to personer er fjernet.
-        Koblingen er fra november 2024.</p>
-      <p>Hvert yrke har en KI-eksponering fra 0 til 1, den samme som
-        KI-indeksen bruker: Eloundou m.fl. (2024) eller Mouchel m.fl.
-        (2026), koblet til STYRK-08 via ISCO og SOC. Eksponeringen for
-        en utdanningskode er det personvektede snittet av yrkenes
-        eksponering over de ansatte som har et yrke med skår. Andelen i
-        en kvintil er andelen av de samme personene som jobber i et yrke
-        i den kvintilen. Statuskategoriene og selvstendige uten yrke er
-        utenfor regnestykket. Dekningen av skår er over 98 prosent for
-        alle relevante utdanninger.</p>
-    </details>
-
-    <details class="method-details" open>
-      <summary>Trinn 2: fagfelt og nivå</summary>
-      <p>Fagfelt er andre siffer i NUS-koden, SSBs ni fagfelt. Nivå er
-        første siffer, her slått sammen til bachelor-nivå (6), master-nivå
-        (7), ph.d. (8), fagskole og påbygging (5) og videregående (3 og
-        4). Del 1 og del 4 viser nasjonale tall: alle personer i
-        registeret med en utdanning i gruppen, uansett hvor de studerte.
-        Eksponeringen for en gruppe er personvektet over
-        utdanningskodene i gruppen, altså det samme som å vekte hvert
-        yrke med hvor mange i gruppen som har det. De ti vanligste
-        yrkene i del 1 er hentet fra den samlede yrkesfordelingen for
-        gruppen.</p>
-      <p>Fagfelt og nivå ved en institusjon (del 2) er noe annet. Der
-        vektes programmene institusjonen gir i fagfeltet og på nivået,
-        med antall kandidater i siste år. Nivået kommer fra DBHs
-        nivåkode for programmet, ikke fra NUS-koden, og fagfeltet fra
-        programmets NUS-kode. Ph.d. har ingen NUS-kode i DBH og får den
-        nasjonale profilen for alle forskerutdanninger.</p>
-    </details>
-
-    <details class="method-details" open>
-      <summary>Trinn 3: institusjon</summary>
-      <p>Kandidattallene kommer fra DBH (HK-dir), tabell 104 «Ferdige
-        kandidater» per studieprogram med NUS-kode og nivåkode, tabell
-        101 «Avlagte doktorgrader» og tabell 123 «Registrerte studenter».
-        Alle læresteder med minst 50 kandidater i siste år er med, 35 i
-        alt. Kandidater er tildelte kvalifikasjoner, ikke personer.</p>
-      <p>Hvert program får den nasjonale profilen til sin NUS-kode fra
-        trinn 1. Hvis koden har under 100 ansatte med skår i registeret,
-        brukes profilen for den firesifrede NUS-gruppen i stedet.
-        Institusjonens eksponering er det kandidatvektede snittet over
-        programmene. Andelen i en kvintil er vektet på samme måte. De
-        vanligste yrkene for institusjonen er den kandidatvektede summen
-        av programmenes yrkesfordelinger.</p>
-      <p>DBH skjermer små celler, så programrader summerer litt lavere
-        enn institusjonens totaltall. Totaltallet i kortet er DBHs
-        eksakte tall, mens miksen mellom fagfelt, nivå og yrker kommer
-        fra programradene. Andelen «programrader med profil» sier hvor
-        stor del av kandidatene som fikk en profil.</p>
-      <p>Den viktigste forenklingen: profilene er nasjonale per
-        utdanningskode, ikke per institusjon. En siviløkonom fra BI og
-        en fra NHH får samme yrkesprofil når programmene har samme
-        NUS-kode. Forskjellen mellom institusjoner er derfor en
-        forskjell i hva de utdanner, ikke i hvor kandidatene ender.</p>
+        SSBs registre: for hver utdanningskode i NUS2000, antall bosatte
+        20–70 år som har koden som sin høyeste fullførte utdanning,
+        fordelt på yrke (STYRK-08) for de som er ansatt. Kodene er summert
+        til faggruppe, det tresifrede nivået i NUS2000: første siffer er
+        nivå, de to neste er fag. Grupper med under 100 sysselsatte med
+        eksponeringsskår er utelatt. Koblingen er fra november 2024.
+        Nyutdannede er de som fullførte for ett til tre år siden, en
+        kolonne utdanning.no ikke dokumenterer.</p>
     </details>
 
     <details class="method-details">
-      <summary>Kvintilene</summary>
-      <p>Yrkene med skår deles i fem like store grupper etter
-        eksponering, som på KI-indeks-siden. Hvert yrke teller én gang.
-        Grensene er beregnet per mål. Andelen i K5 er andelen av de
-        ansatte med skår som jobber i et yrke i den mest eksponerte
-        femdelen.</p>
+      <summary>Fra yrke til oppgaver</summary>
+      <p>O*NET er det amerikanske arbeidsdepartementets database over
+        yrker. Hvert yrke har en liste med oppgaver, og for hver oppgave
+        har et utvalg ansatte svart på hvor viktig den er (1–5) og om de
+        gjør den. Norske STYRK-08-koder går til amerikanske SOC-koder
+        gjennom samme kryssgang som eksponeringsmålene (ISCO-08, BLS).
+        Der O*NET har spesialiseringer under en SOC-kode, brukes
+        hovedkoden. En oppgaves vekt for en utdanning er viktighet ×
+        andel som gjør den, delt likt mellom SOC-kodene et STYRK-yrke er
+        koblet til, og vektet med andelen av de sysselsatte som har
+        yrket. O*NET versjon 30.1.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Eksponering per oppgave</summary>
+      <p>Eloundou m.fl. (2024) lot GPT-4 og mennesker vurdere hver
+        O*NET-oppgave: E1 når en språkmodell alene kan halvere tiden
+        oppgaven tar med samme kvalitet, E2 når det krever programvare
+        bygget på modellen, E0 ellers. Skåren i tabellen er E1 = 1,
+        E2 = 0,5, E0 = 0, samme «beta»-vekting som yrkesmålet på
+        forsiden. Utdanningens oppgaveskår er det vektede snittet over
+        alle oppgavene i yrkene, ikke bare de ti som vises.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Claude-bruk per oppgave</summary>
+      <p>Anthropic Economic Index klassifiserer et utvalg samtaler etter
+        O*NET-oppgave og etter fem samhandlingstyper. To er
+        automatisering: personen ber om et ferdig resultat (direkte
+        delegering), eller modellen gjør jobben og personen melder
+        tilbake (tilbakemeldingssløyfe). Tre er augmentering:
+        oppgaveiterasjon, validering og læring. Tallene her er siste
+        utvalg fra Claude.ai (chat). Oppgavene kobles
+        på tekst. Anthropic publiserer bare oppgaver med bruk, så om lag
+        en tredel av oppgavene i tabellene har tall. Utdanningens
+        automatiseringsandel er vektet med hver oppgaves andel av all
+        Claude.ai-bruk.</p>
     </details>
 
     <details class="method-details">
       <summary>Forbehold</summary>
       <ol>
-        <li>Yrkesprofilene er nasjonale per utdanningskode, ikke per
-          institusjon.</li>
-        <li>Registerkoblingen er fra november 2024 og dekker bosatte 20
-          til 70 år. Kandidattallene er for 2025.</li>
-        <li>Nyutdannede bygger på en kolonne i utdanning.no som ikke er
-          dokumentert i API-et. Vi tolker den som fullført for ett til
-          tre år siden.</li>
-        <li>Begge eksponeringsmålene er teoretiske vurderinger av
-          oppgaver, ikke observert bruk.</li>
-        <li>Små institusjoner får tynnere tall fordi DBH skjermer små
-          celler. Læresteder med under 50 kandidater er utelatt.</li>
+        <li>Oppgavetekstene er O*NETs engelske formuleringer og beskriver
+          amerikanske yrker.</li>
+        <li>Registeret er nasjonalt per utdanningskode. Det skiller ikke
+          mellom læresteder.</li>
+        <li>Claude-samtalene er globale og gjelder samtaler, ikke
+          arbeidstid.</li>
+        <li>Eloundous etiketter er vurderinger av hva som er mulig, ikke
+          observert bruk.</li>
+        <li>Små faggrupper får tynne tall. Grupper med under 100
+          sysselsatte er utelatt.</li>
       </ol>
     </details>
-  </section>
-
-  <section id="data" class="prose-section">
-    <h2>Last ned data</h2>
-    <p>
-      Institusjonstabellen har én rad per lærested. Fagfelt × nivå-tabellen
-      har én rad per lærested, fagfelt og nivå. Yrkestabellene har de
-      vanligste yrkene per institusjon og per fagfelt og nivå nasjonalt.
-      Dataene kan brukes fritt med kildehenvisning til Arbeidsmarkedet
-      (kiindeksen.no), DBH og utdanning.no.
-    </p>
-    <div class="download-grid">
-      <div class="download-card">
-        <strong>Institusjoner</strong>
-        <a href="/data/panels/institutions_summary.csv" download>CSV</a>
-      </div>
-      <div class="download-card">
-        <strong>Institusjon × fagfelt × nivå</strong>
-        <a href="/data/panels/institutions_by_field_level.csv" download>CSV</a>
-      </div>
-      <div class="download-card">
-        <strong>Yrker per institusjon</strong>
-        <a href="/data/panels/institutions_top_occupations.csv" download>CSV</a>
-      </div>
-      <div class="download-card">
-        <strong>Yrker per fagfelt og nivå, nasjonalt</strong>
-        <a href="/data/panels/national_field_level_top_occupations.csv" download>CSV</a>
-      </div>
-      <div class="download-card">
-        <strong>Fagfelt og nivå, nasjonalt</strong>
-        <a href="/data/panels/education_exposure_by_group.csv" download>CSV</a>
-      </div>
-      <div class="download-card">
-        <strong>Kilder</strong>
-        <a href="https://dbh.hkdir.no/" target="_blank" rel="noopener">DBH</a>
-        <a href="https://utdanning.no/dokumentasjon/yrkes_utdanningstatistikk"
-           target="_blank" rel="noopener">utdanning.no</a>
-      </div>
-    </div>
+    <p class="chart-footnote">Kilder: <a href="https://utdanning.no/dokumentasjon/yrkes_utdanningstatistikk" target="_blank" rel="noopener">utdanning.no</a> · <a href="https://www.onetcenter.org/database.html" target="_blank" rel="noopener">O*NET</a> · <a href="https://www.science.org/doi/10.1126/science.adj0998" target="_blank" rel="noopener">Eloundou m.fl. (2024)</a> · <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex" target="_blank" rel="noopener">Anthropic Economic Index</a>.</p>
   </section>
 
 </main>
@@ -324,17 +227,17 @@
 <footer class="site-footer">
   <div class="container">
     <p>
-      Arbeidsmarkedet · KI-indeksen · Øystein Hernæs (Frischsenteret) og
+      KI-indeksen · Øystein Hernæs (Frischsenteret) og
       Andreas R. Kostøl (Handelshøyskolen BI) ·
-      Data: DBH, utdanning.no ·
+      Data: utdanning.no, O*NET, Eloundou m.fl. (2024), Anthropic Economic Index ·
       <a href="/">KI-indeksen</a> ·
       <a href="/yrker.html">Yrker</a> ·
-      <a href="/om.html">Om KI-indeksen</a>
+      <a href="/om.html">Om</a>
     </p>
   </div>
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/panels.js?v=20260907c"></script>
+<script src="/panels.js?v=20260907h"></script>
 </body>
 </html>

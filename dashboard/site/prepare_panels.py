@@ -1,14 +1,18 @@
 """
-Build the data files for the two panels that sit beside the KI-indeks on
-kiindeksen.no ("Arbeidsmarkedet"):
+Build the data files for the two pages that sit beside the KI-indeks on
+kiindeksen.no (Yrker and Utdanning):
 
   public/data/yrker.json      occupation panel: automation vs augmentation per
                               STYRK-08 occupation across Anthropic Economic
                               Index vintages, each occupation's top tasks and
                               its closest occupations by O*NET work content
-  public/data/utdanning.json  education panel: every institution with 50+
-                              graduates, field x level at national and
-                              institution level, top occupations
+  public/data/utdanning.json  education page: per NUS faggruppe (level +
+                              two-digit group) the ten most common tasks
+                              with exposure and Claude use, and the most
+                              common jobs (analysis/07_education/build_majors.py).
+                              The institution view (build_institutions.py)
+                              is kept as build_institutions_json() for a
+                              later, separate analysis; not on the page.
   public/data/vacancies.json  open NAV job ads per occupation, only when
                               data/nav_vacancies/ has a series (see its README)
 
@@ -20,6 +24,7 @@ Run:
 """
 
 import csv
+import difflib
 import json
 import os
 from collections import defaultdict
@@ -46,6 +51,70 @@ VINTAGES = [
 def read_csv(path, encoding="utf-8"):
     with open(path, encoding=encoding, newline="") as f:
         return list(csv.DictReader(f))
+
+
+def read_tsv(path):
+    with open(path, encoding="utf-8", newline="") as f:
+        return list(csv.DictReader(f, delimiter="\t"))
+
+
+def tkey(s):
+    return " ".join((s or "").lower().split())
+
+
+# ---- O*NET 30.1 task importance: IM (1-5) and RT (share of incumbents the
+# task is relevant for), and the task's rank by IM x RT among the occupation's
+# rated tasks. Same files and weight as analysis/07_education/build_majors.py.
+ONET_DIR = os.path.join(EXPO_DIR, "onet_relational")
+
+
+def load_onet_task_info():
+    rat = defaultdict(dict)
+    for r in read_tsv(os.path.join(ONET_DIR, "Task Ratings IM RT.txt")):
+        if r["Scale ID"] in ("IM", "RT"):
+            rat[(r["O*NET-SOC Code"], r["Task ID"])][r["Scale ID"]] = float(r["Data Value"])
+    per_occ = defaultdict(list)
+    for r in read_tsv(os.path.join(ONET_DIR, "Task Statements.txt")):
+        q = rat.get((r["O*NET-SOC Code"], r["Task ID"]))
+        if q and "IM" in q:
+            per_occ[r["O*NET-SOC Code"]].append((tkey(r["Task"]), q["IM"], q.get("RT", 100.0)))
+    info, by_text, by_occ = {}, defaultdict(list), defaultdict(list)
+    for onet, lst in per_occ.items():
+        lst.sort(key=lambda x: -(x[1] * x[2]))
+        for i, (txt, im, rt) in enumerate(lst, 1):
+            info[(onet, txt)] = {"im": round(im, 2), "rt": round(rt, 1), "rk": i, "nt": len(lst)}
+            by_text[txt].append((onet, info[(onet, txt)]))
+            by_occ[onet].append(txt)
+    return info, by_text, by_occ
+
+
+def onet_task_info(info, by_text, by_occ, soc, text):
+    """The AEI task carries a SOC 2010 code (11-1011); O*NET codes are
+    11-1011.00 plus specialties. Base code first, then a specialty, then a
+    reworded statement in the same occupation (difflib ratio >= 0.9, O*NET
+    edits wording between versions), then the same text under any
+    occupation (importance averaged, no rank)."""
+    txt, base = tkey(text), soc.split(".")[0]
+    if (base + ".00", txt) in info:
+        return info[(base + ".00", txt)], "exact"
+    for onet, d in by_text.get(txt, []):
+        if onet.startswith(base + "."):
+            return d, "exact"
+    best, best_key = 0.0, None
+    for onet in by_occ:
+        if not onet.startswith(base + "."):
+            continue
+        for cand in by_occ[onet]:
+            r = difflib.SequenceMatcher(None, txt, cand).ratio()
+            if r > best:
+                best, best_key = r, (onet, cand)
+    if best >= 0.9:
+        return info[best_key], "fuzzy"
+    alts = by_text.get(txt, [])
+    if alts:
+        return {"im": round(sum(d["im"] for _, d in alts) / len(alts), 2),
+                "rt": round(sum(d["rt"] for _, d in alts) / len(alts), 1), "rk": None, "nt": None}, "text"
+    return None, "none"
 
 
 def num(x, nd=4):
@@ -92,14 +161,66 @@ def build_yrker():
             "va": num(r["validation_share"]), "le": num(r["learning_share"]),
             "n": num(r["n_classified"], 0), "nt": int(r["n_tasks_matched"]),
         }
+    # Norwegian task texts when translated (analysis/07_education/translate_tasks.py).
+    trans = {}
+    tp = os.path.join(EXPO_DIR, "onet_task_translations_no.csv")
+    if os.path.exists(tp):
+        trans = {" ".join(r["task"].lower().split()): r["task_no"] for r in read_csv(tp) if r.get("task_no")}
+    onet_info, onet_by_text, onet_by_occ = load_onet_task_info()
+    how = defaultdict(int)
     task_by_code = defaultdict(lambda: defaultdict(list))
     for r in tasks:
+        oi, kind = onet_task_info(onet_info, onet_by_text, onet_by_occ, r["soc"], r["task_name"])
+        how[kind] += 1
         task_by_code[r["styrk08"]][r["platform"]].append({
-            "t": r["task_name"], "soc": r["soc"], "pct": num(r["pct"], 5),
+            "t": r["task_name"], "t_no": trans.get(" ".join(r["task_name"].lower().split()), ""),
+            "soc": r["soc"], "pct": num(r["pct"], 5),
             "n": num(r["n_classified"], 0), "d": num(r["directive_share"]),
             "fb": num(r["feedback_loop_share"]), "ti": num(r["task_iteration_share"]),
             "va": num(r["validation_share"]), "le": num(r["learning_share"]),
+            # O*NET importance to the occupation: im 1-5, rt % of incumbents,
+            # rk rank of nt tasks by IM x RT (rk/nt None when matched by text only).
+            "im": oi["im"] if oi else None, "rt": oi["rt"] if oi else None,
+            "rk": oi["rk"] if oi else None, "nt": oi["nt"] if oi else None,
         })
+    print("  O*NET importance matched:", dict(how))
+
+    # Task-level five-type shares for every sample, so the page can show a
+    # task's change since an earlier sample: the raw release slices (chat and
+    # API) plus the Handa vintage. Arrays: [d, fb, ti, va, le, n, usage pct].
+    TYPE_COLS = ["directive", "feedback loop", "task iteration", "validation", "learning"]
+    REL = os.path.join(EXPO_DIR, "handa", "aei_releases")
+
+    def tkey(s):
+        return " ".join(s.lower().split())
+
+    tv = defaultdict(dict)
+    for p, d, *_ in VINTAGES:
+        path = os.path.join(REL, f"onet_task_collaboration_{p}_{d}.csv")
+        upath = os.path.join(REL, f"onet_task_{p}_{d}.csv")
+        if not os.path.exists(path):
+            continue
+        cnt = defaultdict(lambda: defaultdict(float))
+        for r in read_csv(path):
+            cnt[tkey(r["task_name"])][r["collaboration"]] += float(r["count"] or 0)
+        use = {tkey(r["task_name"]): float(r["pct"] or 0) for r in read_csv(upath)} if os.path.exists(upath) else {}
+        for t, c in cnt.items():
+            n = sum(c[k] for k in TYPE_COLS)
+            if n > 0:
+                tv[t][p + "|" + d] = [round(c[k] / n, 4) for k in TYPE_COLS] + [int(n), round(use.get(t, 0), 4)]
+    hp = os.path.join(EXPO_DIR, "handa", "automation_vs_augmentation_by_task.csv")
+    up = os.path.join(EXPO_DIR, "handa", "task_pct_v2.csv")
+    if os.path.exists(hp):
+        use = {tkey(r["task_name"]): float(r["pct"] or 0) for r in read_csv(up)} if os.path.exists(up) else {}
+        for r in read_csv(hp):
+            sh = [float(r[k] or 0) for k in ("directive", "feedback_loop", "task_iteration", "validation", "learning")]
+            s = sum(sh)
+            if s > 0:
+                tv[tkey(r["task_name"])]["claude_ai|2024-12-01"] = [round(x / s, 4) for x in sh] + [None, round(use.get(tkey(r["task_name"]), 0), 4)]
+    for code_tasks in task_by_code.values():
+        for plat_tasks in code_tasks.values():
+            for t in plat_tasks:
+                t["v"] = tv.get(tkey(t["t"]), {})
 
     occupations = []
     for m in measures:
@@ -115,11 +236,24 @@ def build_yrker():
             "tasks": task_by_code.get(code, {}),
         })
     occupations.sort(key=lambda o: o["code"])
+    # Neighbours without Claude data are not in `occupations`, but the page
+    # still needs their name, size and exposure, otherwise "the three closest"
+    # shows two entries for 45 occupations.
+    have = {o["code"] for o in occupations}
+    referenced = {nb["code"] for o in occupations for nb in o["nb"]}
+    extra = {}
+    for m in measures:
+        code = m["styrk08"]
+        if code in have or code not in referenced:
+            continue
+        extra[code] = {"name": m["styrk08_name"], "name_en": names_en.get(code, ""),
+                       "n": n_base.get(code), "q": intq(m["eloundou_q"]),
+                       "beta": num(m["eloundou_beta"], 3)}
     vintages = [{"platform": p, "date": d, "key": p + "|" + d, "label": lab,
                  "label_en": lab_en, "source": src, "source_en": src_en}
                 for p, d, lab, lab_en, src, src_en in VINTAGES]
     return {"vintages": vintages, "occupations": occupations,
-            "n_occupations": len(occupations)}
+            "n_occupations": len(occupations), "extra": extra}
 
 
 # ------------------------------------------------------------- utdanning
@@ -129,6 +263,15 @@ LEVEL_ORDER = ["Bachelor-nivå", "Master-nivå", "Ph.d.", "Påbygging/fagskole",
 
 
 def build_utdanning():
+    """The study-choice view: data/education_analysis/majors.json, passed
+    through as-is (built by analysis/07_education/build_majors.py)."""
+    with open(os.path.join(EDU_DIR, "majors.json"), encoding="utf-8") as f:
+        return json.load(f)
+
+
+def build_institutions_json():
+    """Institution view (35 institutions from DBH). Taken off the page on
+    2026-09-07; kept for a separate analysis later."""
     summary = read_csv(os.path.join(EDU_DIR, "institutions_summary.csv"))
     by_field = read_csv(os.path.join(EDU_DIR, "institutions_by_field.csv"))
     by_level = read_csv(os.path.join(EDU_DIR, "institutions_by_level.csv"))
@@ -264,12 +407,6 @@ def write(name, data):
     print("%-16s %7.0f kB" % (name, os.path.getsize(path) / 1024))
 
 
-def copy_to(dst_dir, src_path):
-    with open(src_path, encoding="utf-8") as fi, \
-            open(os.path.join(dst_dir, os.path.basename(src_path)), "w", encoding="utf-8") as fo:
-        fo.write(fi.read())
-
-
 def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     y = build_yrker()
@@ -277,21 +414,17 @@ def main():
     print("  occupations:", y["n_occupations"])
     u = build_utdanning()
     write("utdanning.json", u)
-    print("  institutions:", u["n_institutions"], [i["short"] for i in u["institutions"][:8]], "...")
+    print("  groups:", len(u["groups"]), "| levels:", [l["code"] for l in u["levels"]],
+          "| AEI:", u["aei_latest"])
     v = build_vacancies()
     if v:
         write("vacancies.json", v)
         print("  vacancy snapshots:", v["dates"], "codes:", len(v["by_code"]))
     else:
         print("vacancies.json      skipped (no data/nav_vacancies/nav_vacancies_by_styrk.csv yet)")
-    dl = os.path.join(OUT_DIR, "panels")
-    os.makedirs(dl, exist_ok=True)
-    for src in ["styrk08_aei_collaboration.csv", "styrk08_aei_tasks.csv", "styrk08_task_neighbours.csv"]:
-        copy_to(dl, os.path.join(EXPO_DIR, src))
-    for src in ["institutions_summary.csv", "institutions_by_field_level.csv",
-                "institutions_top_occupations.csv", "national_field_level_top_occupations.csv",
-                "education_exposure_by_group.csv"]:
-        copy_to(dl, os.path.join(EDU_DIR, src))
+    # No CSV downloads for Yrker and Utdanning (taken off 2026-09-07): the
+    # pages read only the JSON above. The data live in data/ai_exposure/ and
+    # data/education_analysis/ for analysis.
 
 
 if __name__ == "__main__":
