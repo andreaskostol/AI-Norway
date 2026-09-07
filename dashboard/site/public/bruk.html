@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KI-bruk per land — Arbeidsmarkedet</title>
+<meta name="description" content="Hvor mye brukes KI i Norge sammenlignet med andre land, og hva vet vi om tokens og brukere hos Anthropic, OpenAI og OpenRouter? Notater og tall fra Anthropic Economic Index.">
+<link rel="canonical" href="https://kiindeksen.no/bruk.html">
+<link rel="alternate" hreflang="nb" href="https://kiindeksen.no/bruk.html">
+<link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/usage.html">
+<link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/bruk.html">
+<link rel="stylesheet" href="/style.css?v=20260907a">
+<link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
+</head>
+<body data-panel="bruk">
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-logos">
+      <a href="/" title="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI">
+        <img src="/assets/ki-logo.png"
+             alt="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI"></a>
+    </div>
+    <nav class="site-nav">
+      <a href="#fig1">Per innbygger</a>
+      <a href="#fig2">Automatisering</a>
+      <a href="#tabell">Norge</a>
+      <a href="#leverandorer">Leverandører</a>
+      <a href="#metode">Metode</a>
+    </nav>
+    <div class="brand">
+      <a class="lang-toggle" href="/en/usage.html" hreflang="en" lang="en">English</a>
+      <p class="site-name"><a href="/">Arbeidsmarkedet</a></p>
+      <p class="tagline">KI-indeksen og andre indikatorer for kunstig intelligens og det norske arbeidsmarkedet</p>
+    </div>
+  </div>
+</header>
+<nav class="panel-nav" aria-label="Paneler">
+  <div class="container">
+    <a href="/">KI-indeksen</a>
+    <a href="/yrker.html">Yrker</a>
+    <a href="/utdanning.html">Utdanning</a>
+    <a href="/bruk.html" class="active">KI-bruk per land</a>
+    <a href="/om.html">Om</a>
+  </div>
+</nav>
+
+<div class="layout">
+<aside class="toc" aria-label="Innhold">
+  <nav id="toc-nav">
+    <a href="#intro">KI-bruk per land</a>
+    <a href="#fig1">1 · Bruk per innbygger</a>
+    <a href="#fig2">2 · Automatisering over tid</a>
+    <a href="#fig3">3 · Arbeid, privat, skole</a>
+    <a href="#tabell">4 · Norge i tall</a>
+    <a href="#leverandorer">Tokens og brukere</a>
+    <a href="#metode">Metode</a>
+  </nav>
+</aside>
+<div class="content">
+
+<main class="container">
+
+  <section id="intro" class="hero">
+    <h2 class="hero-title">Hvor mye brukes KI i Norge, og hva vet vi om tokens og brukere?</h2>
+    <p class="panel-lede">
+      Kort svar: bare Anthropic publiserer landtall som kan følges over
+      tid. OpenAI oppgir ingen tall for Norge utover enkeltutsagn i
+      pressemeldinger. OpenRouter viser bare de ti største landene.
+      Denne siden samler det som finnes, med Norge mot ni land vi liker
+      å sammenligne oss med. Tallene gjelder samtaler i Claude.ai, ikke
+      antall brukere og ikke tokens.
+    </p>
+    <p class="panel-kpi" id="b-kpi"></p>
+    <p class="panel-status"></p>
+    <details class="quick-summary" open>
+      <summary>Oppsummering for den utålmodige leseren</summary>
+      <ul>
+        <li><strong>Norge bruker Claude mye per innbygger.</strong>
+          Per capita-indeksen ligger rundt fire, på linje med Sveits og
+          Island og godt over Tyskland.</li>
+        <li><strong>Norske samtaler er mer augmenterende enn
+          amerikanske.</strong> Om lag 40 prosent av de klassifiserte
+          samtalene er automatisering, mot om lag 50 i USA.</li>
+        <li><strong>Ingen publiserer brukertall per land.</strong>
+          Anthropic gir andeler av samtaler. Tokens finnes bare globalt,
+          for API-et.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="fig1" class="chart-section">
+    <h2>1 · Bruk per innbygger</h2>
+    <p class="chart-intro">
+      Anthropics egen indeks: landets andel av alle Claude.ai-samtaler
+      delt på landets andel av verdens arbeidsføre befolkning. Én betyr
+      bruk i takt med folketallet.
+    </p>
+    <div id="chart-b1" class="chart chart-short"></div>
+    <p class="chart-footnote" id="b1-note"></p>
+  </section>
+
+  <section id="fig2" class="chart-section">
+    <h2>2 · Automatisering over tid</h2>
+    <p class="chart-intro">
+      Andelen av samtalene der personen delegerer oppgaven, mot andelen
+      der personen og modellen jobber sammen. Definisjonene er de samme
+      som på yrkessiden.
+    </p>
+    <div id="chart-b2" class="chart"></div>
+    <p class="chart-footnote" id="b2-note"></p>
+  </section>
+
+  <section id="fig3" class="chart-section">
+    <h2>3 · Arbeid, privat eller skolearbeid</h2>
+    <p class="chart-intro">
+      Hva samtalene handler om. Skolearbeid er påfallende høyt i Norge
+      og steg fra april til mai 2026. Det kan være eksamensperioden.
+    </p>
+    <div id="chart-b3" class="chart chart-short"></div>
+    <p class="chart-footnote" id="b3-note"></p>
+  </section>
+
+  <section id="tabell" class="chart-section">
+    <h2>4 · Norge i tall</h2>
+    <p class="chart-intro">
+      Alle tidspunktene Anthropic har publisert med Norge som egen rad.
+      De tre første er én uke hver fra rådataene. De to siste er
+      månedsfiler fra juni 2026, der bare de to samlekategoriene er
+      oppgitt.
+    </p>
+    <div class="table-wrap" id="b-table"></div>
+    <p class="chart-footnote">
+      Andel av global bruk: prosent av alle Claude.ai-samtaler i
+      utvalget. Per capita-indeks: publisert av Anthropic bare i
+      månedsfilene. Interaksjonstypene er andeler av de klassifiserte
+      samtalene.
+    </p>
+  </section>
+
+  <section id="leverandorer" class="prose-section">
+    <h2>Tokens og brukere hos de store leverandørene</h2>
+    <p>
+      <strong>Anthropic.</strong> Economic Index er den eneste kilden
+      med ekte mikrodata aggregert til land. Den dekker Claude.ai, altså
+      chat og Cowork. API-bruk, der utviklere og agenter kaller
+      modellen, publiseres bare globalt. Token- og kostnadstall finnes i
+      API-filene, men ikke per land. Brukertall publiseres ikke.
+    </p>
+    <p>
+      <strong>OpenAI.</strong> Ingen nedlastbare landtall. Det som finnes
+      om Norge er en pressemelding om Stargate Norway, der antall
+      ukentlig aktive ChatGPT-brukere i Norge sies å ha firedoblet seg
+      på ett år. Nivået oppgis ikke. OpenAIs egne bruksstudier gjelder
+      USA eller verden samlet.
+    </p>
+    <p>
+      <strong>OpenRouter.</strong> Rapporten State of AI 2025 bygger på
+      100 billioner tokens og gir ekte tokentall, men bare for de ti
+      største landene. Norge ligger i restgruppen på 60 land. Geografien
+      er fakturaland, ikke brukssted.
+    </p>
+    <p>
+      <strong>Andre kilder.</strong> Tredjeparts trafikkestimater setter
+      Norge høyt i Europa i andel som har prøvd generativ KI. De bygger
+      på spørreundersøkelser og nettrafikk, ikke plattformdata, og
+      kan ikke settes sammen med tallene over.
+    </p>
+  </section>
+
+  <section id="metode" class="prose-section">
+    <h2>Metode</h2>
+    <p>
+      Kilden er Anthropic Economic Index på Hugging Face. De tre
+      ukesutvalgene er hentet fra rådatafilene i utgivelsene fra
+      september 2025, januar 2026 og mars 2026. Månedstallene er hentet
+      fra landfilen i utgivelsen fra juni 2026. Automatisering er
+      direkte delegering pluss tilbakemeldingssløyfe, augmentering er
+      oppgaveiterasjon, validering og læring. Uklassifiserte samtaler er
+      tatt ut av nevneren. Per capita-indeksen er Anthropics egen. Vår
+      egen beregning med FNs befolkningstall lander 25 til 30 prosent
+      lavere, så den vises ikke.
+    </p>
+    <p>
+      Ny utgivelse ventes hvert kvartal. Siden oppdateres når Anthropic
+      publiserer en ny landfil.
+    </p>
+  </section>
+
+</main>
+
+</div><!-- .content -->
+</div><!-- .layout -->
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      Arbeidsmarkedet · KI-indeksen · Øystein Hernæs (Frischsenteret) og
+      Andreas R. Kostøl (Handelshøyskolen BI) ·
+      Data: Anthropic Economic Index ·
+      <a href="/">KI-indeksen</a> ·
+      <a href="/yrker.html">Yrker</a> ·
+      <a href="/utdanning.html">Utdanning</a> ·
+      <a href="/om.html">Om KI-indeksen</a>
+    </p>
+  </div>
+</footer>
+
+<script src="/vendor/echarts.min.js"></script>
+<script src="/panels.js?v=20260907a"></script>
+</body>
+</html>

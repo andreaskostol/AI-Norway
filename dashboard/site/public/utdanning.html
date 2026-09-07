@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Utdanning — Arbeidsmarkedet</title>
+<meta name="description" content="Hvilke utdanninger gir norske læresteder, hvilke yrker går kandidatene til, og hvor KI-eksponerte er de yrkene? Kandidattall fra DBH koblet til registerdata fra utdanning.no og KI-indeksens yrkeseksponering.">
+<link rel="canonical" href="https://kiindeksen.no/utdanning.html">
+<link rel="alternate" hreflang="nb" href="https://kiindeksen.no/utdanning.html">
+<link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/education.html">
+<link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/utdanning.html">
+<link rel="stylesheet" href="/style.css?v=20260907a">
+<link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
+</head>
+<body data-panel="utdanning">
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-logos">
+      <a href="/" title="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI">
+        <img src="/assets/ki-logo.png"
+             alt="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI"></a>
+    </div>
+    <nav class="site-nav">
+      <a href="#fig1">Institusjoner</a>
+      <a href="#fig3">Fagfelt</a>
+      <a href="#tabell">Hvor jobber de</a>
+      <a href="#metode">Metode</a>
+      <a href="#data">Data</a>
+    </nav>
+    <div class="brand">
+      <a class="lang-toggle" href="/en/education.html" hreflang="en" lang="en">English</a>
+      <p class="site-name"><a href="/">Arbeidsmarkedet</a></p>
+      <p class="tagline">KI-indeksen og andre indikatorer for kunstig intelligens og det norske arbeidsmarkedet</p>
+    </div>
+  </div>
+</header>
+<nav class="panel-nav" aria-label="Paneler">
+  <div class="container">
+    <a href="/">KI-indeksen</a>
+    <a href="/yrker.html">Yrker</a>
+    <a href="/utdanning.html" class="active">Utdanning</a>
+    <a href="/bruk.html">KI-bruk per land</a>
+    <a href="/om.html">Om</a>
+  </div>
+</nav>
+
+<div class="layout">
+<aside class="toc" aria-label="Innhold">
+  <nav id="toc-nav">
+    <a href="#intro">Utdanning</a>
+    <a href="#fig1">1 · Eksponering per institusjon</a>
+    <a href="#fig2">2 · Kvintilfordeling</a>
+    <a href="#fig3">3 · Fagfelt nasjonalt</a>
+    <a href="#fig4">4 · Fagfeltmiks</a>
+    <a href="#tabell">5 · Hvor jobber de?</a>
+    <a href="#metode">Metode</a>
+    <a href="#data">Last ned data</a>
+  </nav>
+</aside>
+<div class="content">
+
+<main class="container">
+
+  <section id="intro" class="hero">
+    <h2 class="hero-title">Hva utdanner vi, og hvor KI-eksponert er jobben?</h2>
+    <p class="panel-lede">
+      Hvert lærested gir kandidater med bestemte utdanninger. Hver
+      utdanning fører typisk til bestemte yrker. Og hvert yrke har en
+      KI-eksponering, den samme som KI-indeksen bruker. Denne siden
+      kobler de tre leddene. Resultatet er et mål på hvor KI-eksponerte
+      jobbene til kandidatene fra hver institusjon vanligvis er. Første
+      versjon dekker seks læresteder: UiO, UiB, NTNU, UiS, NHH og BI.
+    </p>
+    <p class="panel-kpi" id="u-kpi"></p>
+    <p class="panel-status"></p>
+    <details class="quick-summary" open>
+      <summary>Oppsummering for den utålmodige leseren</summary>
+      <ul>
+        <li><strong>Økonomiskolene ligger øverst.</strong> NHH og BI
+          sender kandidatene til regnskap, finans, eiendom og
+          saksbehandling. Det er yrker høyt oppe i eksponeringsskalaen.</li>
+        <li><strong>Breddeuniversitetene ligger nær hverandre.</strong>
+          UiO, UiB og NTNU har omtrent samme snitt, fordi lærere,
+          helsepersonell og ingeniører trekker ned der jurister og
+          økonomer trekker opp.</li>
+        <li><strong>Målet bestemmer avstanden.</strong> Med Mouchel m.fl.
+          (2026) som mål blir gapet mellom økonomiskolene og
+          universitetene større, fordi det målet løfter revisjon,
+          finansanalyse og saksbehandling mest.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="fig1" class="chart-section">
+    <h2>1 · Snitt-eksponering per institusjon</h2>
+    <p class="chart-intro">
+      Kandidatvektet snitt av yrkeseksponeringen til jobbene
+      kandidatene typisk går til, for det siste kandidatkullet. To mål
+      vises: Eloundou m.fl. (2024), som er standard på KI-indeks-siden,
+      og Mouchel m.fl. (2026). Begge er skalert 0 til 1.
+    </p>
+    <div id="chart-u1" class="chart chart-short"></div>
+    <p class="chart-footnote">
+      Snittet er over alle sysselsatte i Norge med de samme
+      utdanningene, ikke institusjonens egne kandidater. En siviløkonom
+      fra BI og en fra NHH får samme yrkesprofil når programmene har
+      samme utdanningskode. Se metode.
+    </p>
+  </section>
+
+  <section id="fig2" class="chart-section">
+    <h2>2 · Kvintilfordeling per institusjon</h2>
+    <p class="chart-intro">
+      Snittet skjuler spredningen. Her er kandidatene fordelt på de fem
+      eksponeringskvintilene fra KI-indeks-siden, etter yrkene de typisk
+      går til. Velg mål under.
+    </p>
+    <div class="btn-row" id="u-version-buttons"></div>
+    <div id="chart-u2" class="chart chart-short"></div>
+    <p class="chart-footnote" id="u2-note"></p>
+  </section>
+
+  <section id="fig3" class="chart-section">
+    <h2>3 · Fagfelt nasjonalt</h2>
+    <p class="chart-intro">
+      Samme regnestykke for hele befolkningen, etter fagfeltet til
+      høyeste fullførte utdanning. Stolpen er andelen sysselsatte som
+      jobber i den mest eksponerte femdelen av yrkene. Målet følger
+      valget i figur 2.
+    </p>
+    <div id="chart-u3" class="chart chart-short"></div>
+    <p class="chart-footnote" id="u3-note"></p>
+  </section>
+
+  <section id="fig4" class="chart-section">
+    <h2>4 · Fagfeltmiks per institusjon</h2>
+    <p class="chart-intro">
+      Forskjellen mellom institusjonene i figur 1 er først og fremst
+      en forskjell i hva de utdanner. Her er kandidatene fordelt på
+      fagfelt.
+    </p>
+    <div id="chart-u4" class="chart chart-short"></div>
+    <p class="chart-footnote">
+      Kandidater i siste år i DBH, begge semestre. Ph.d. telles som eget
+      felt. Kilde: DBH (HK-dir), tabell 104 og 101.
+    </p>
+  </section>
+
+  <section id="tabell" class="chart-section">
+    <h2>5 · Hvor jobber de?</h2>
+    <p class="chart-intro">
+      De ti vanligste yrkene for personer med utdanningene institusjonen
+      gir, vektet med kandidattallene. Velg institusjon, og velg om
+      tabellen skal gjelde alle eller bare nyutdannede.
+    </p>
+    <div class="btn-row" id="u-inst-buttons"></div>
+    <div class="btn-row" id="u-cohort-buttons"></div>
+    <div class="table-wrap" id="u-top-table"></div>
+    <p class="chart-footnote" id="u-table-note"></p>
+  </section>
+
+  <section id="metode" class="prose-section">
+    <h2>Metode</h2>
+    <p>
+      Tre kilder kobles. DBH (HK-dir) gir kandidater per studieprogram
+      med utdanningskode (NUS2000). utdanning.no gir, fra SSBs
+      registerdata, hvor mange personer med hver utdanningskode som
+      jobber i hvert yrke (STYRK-08). Yrkeseksponeringen er den samme
+      som på KI-indeks-siden. Eksponeringen for en utdanning er det
+      personvektede snittet over yrkene kandidatene faktisk har.
+      Eksponeringen for en institusjon er det kandidatvektede snittet
+      over programmene.
+    </p>
+    <details class="method-details">
+      <summary>Forbehold</summary>
+      <ol>
+        <li>Yrkesprofilene er nasjonale per utdanningskode, ikke per
+          institusjon. Det er den viktigste forenklingen.</li>
+        <li>Registerkoblingen er fra november 2024 og dekker bosatte
+          20 til 70 år. Kandidattallene er for 2025.</li>
+        <li>DBH skjermer små celler. Programrader summerer litt lavere
+          enn institusjonstotalene.</li>
+        <li>Kandidater er tildelte kvalifikasjoner, ikke personer.</li>
+        <li>Begge eksponeringsmålene er teoretiske vurderinger av
+          oppgaver, ikke observert bruk.</li>
+        <li>Nyutdannede bygger på en kolonne i utdanning.no som ikke er
+          dokumentert i API-et. Vi tolker den som fullført for ett til
+          tre år siden.</li>
+      </ol>
+    </details>
+    <details class="method-details">
+      <summary>Neste steg</summary>
+      <p>Første versjon dekker seks institusjoner. Pipelinen kan kjøres
+        for alle læresteder med akkrediterte program i DBH, trolig 30
+        til 40. Små institusjoner vil få tynnere tall fordi DBH skjermer
+        små celler. Utvidelsen er planlagt.</p>
+    </details>
+  </section>
+
+  <section id="data" class="prose-section">
+    <h2>Last ned data</h2>
+    <p>
+      Institusjonstabellen har én rad per lærested med kandidattall,
+      snitt-eksponering etter begge mål, kvintilandeler og nivå- og
+      fagfeltmiks. Dataene kan brukes fritt med kildehenvisning til
+      Arbeidsmarkedet (kiindeksen.no).
+    </p>
+    <div class="download-grid">
+      <div class="download-card">
+        <strong>Institusjoner</strong>
+        <a href="/data/panels/institutions_summary.csv" download>CSV</a>
+      </div>
+      <div class="download-card">
+        <strong>Kilder</strong>
+        <a href="https://dbh.hkdir.no/" target="_blank" rel="noopener">DBH</a>
+        <a href="https://utdanning.no/dokumentasjon/yrkes_utdanningstatistikk"
+           target="_blank" rel="noopener">utdanning.no</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</div><!-- .content -->
+</div><!-- .layout -->
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      Arbeidsmarkedet · KI-indeksen · Øystein Hernæs (Frischsenteret) og
+      Andreas R. Kostøl (Handelshøyskolen BI) ·
+      Data: DBH, utdanning.no ·
+      <a href="/">KI-indeksen</a> ·
+      <a href="/yrker.html">Yrker</a> ·
+      <a href="/bruk.html">KI-bruk per land</a> ·
+      <a href="/om.html">Om KI-indeksen</a>
+    </p>
+  </div>
+</footer>
+
+<script src="/vendor/echarts.min.js"></script>
+<script src="/panels.js?v=20260907a"></script>
+</body>
+</html>

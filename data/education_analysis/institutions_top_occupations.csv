@@ -1,0 +1,181 @@
+inst,inst_short,cohort,rank,styrk08,styrk08_name,share,exposure_norm,exposure_class,exposure2_norm,exposure2_class,quintile_v1,quintile_v2
+1110,UiO,all,1,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.124129,0.597785,E2,0.766679,E3,5,5
+1110,UiO,all,2,2341,Grunnskolelærere,0.066063,0.337763,E1,0.288960,E0,3,3
+1110,UiO,all,3,2310,Universitets- og høyskolelektorer/-lærere,0.061839,0.496858,E1,0.510385,E2,4,4
+1110,UiO,all,4,2511,Systemanalytikere/-arkitekter,0.043442,0.633256,E2,0.838163,E3,5,5
+1110,UiO,all,5,5223,Butikkmedarbeidere,0.037514,0.351263,E1,0.329793,E0,3,3
+1110,UiO,all,6,2330,Lektorer mv. (videregående skole),0.035457,0.341880,E1,0.306723,E0,3,3
+1110,UiO,all,7,2212,Legespesialister,0.032365,0.427128,E1,0.216526,E0,4,3
+1110,UiO,all,8,2611,Jurister og advokater,0.030442,0.435897,E1,0.715612,E3,4,5
+1110,UiO,all,9,2634,Psykologer,0.028134,0.477818,E1,0.474873,E1,4,4
+1110,UiO,all,10,2519,Andre programvare- og applikasjonsutviklere,0.027255,0.754652,E3,0.823038,E3,5,5
+1110,UiO,all,11,4110,Kontormedarbeidere,0.023796,0.610279,E2,0.665079,E2,5,5
+1110,UiO,all,12,5311,Barnehage- og skolefritidsassistenter mv.,0.020682,0.145058,E0,0.255320,E0,2,3
+1110,UiO,all,13,3511,"Driftsteknikere, IKT",0.015953,0.626781,E2,0.745853,E3,5,5
+1110,UiO,all,14,2423,Personal- og karriererådgivere,0.013886,0.501224,E2,0.635356,E2,4,5
+1110,UiO,all,15,2512,Programvareutviklere,0.013793,0.890688,E3,0.836406,E3,5,5
+1110,UiO,recent,1,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.147382,0.597785,E2,0.766679,E3,5,5
+1110,UiO,recent,2,2310,Universitets- og høyskolelektorer/-lærere,0.085721,0.496858,E1,0.510385,E2,4,4
+1110,UiO,recent,3,2341,Grunnskolelærere,0.075192,0.337763,E1,0.288960,E0,3,3
+1110,UiO,recent,4,2511,Systemanalytikere/-arkitekter,0.047400,0.633256,E2,0.838163,E3,5,5
+1110,UiO,recent,5,5223,Butikkmedarbeidere,0.045712,0.351263,E1,0.329793,E0,3,3
+1110,UiO,recent,6,2212,Legespesialister,0.038459,0.427128,E1,0.216526,E0,4,3
+1110,UiO,recent,7,2330,Lektorer mv. (videregående skole),0.034957,0.341880,E1,0.306723,E0,3,3
+1110,UiO,recent,8,2519,Andre programvare- og applikasjonsutviklere,0.034346,0.754652,E3,0.823038,E3,5,5
+1110,UiO,recent,9,2611,Jurister og advokater,0.033267,0.435897,E1,0.715612,E3,4,5
+1110,UiO,recent,10,4110,Kontormedarbeidere,0.031930,0.610279,E2,0.665079,E2,5,5
+1110,UiO,recent,11,2634,Psykologer,0.029333,0.477818,E1,0.474873,E1,4,4
+1110,UiO,recent,12,5311,Barnehage- og skolefritidsassistenter mv.,0.019403,0.145058,E0,0.255320,E0,2,3
+1110,UiO,recent,13,3511,"Driftsteknikere, IKT",0.017799,0.626781,E2,0.745853,E3,5,5
+1110,UiO,recent,14,2512,Programvareutviklere,0.017259,0.890688,E3,0.836406,E3,5,5
+1110,UiO,recent,15,5329,Andre pleiemedarbeidere,0.015718,0.268401,E0,0.152646,E0,3,2
+1120,UiB,all,1,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.119839,0.597785,E2,0.766679,E3,5,5
+1120,UiB,all,2,2611,Jurister og advokater,0.052467,0.435897,E1,0.715612,E3,4,5
+1120,UiB,all,3,2341,Grunnskolelærere,0.049348,0.337763,E1,0.288960,E0,3,3
+1120,UiB,all,4,2310,Universitets- og høyskolelektorer/-lærere,0.047107,0.496858,E1,0.510385,E2,4,4
+1120,UiB,all,5,5223,Butikkmedarbeidere,0.043709,0.351263,E1,0.329793,E0,3,3
+1120,UiB,all,6,2511,Systemanalytikere/-arkitekter,0.035376,0.633256,E2,0.838163,E3,5,5
+1120,UiB,all,7,2330,Lektorer mv. (videregående skole),0.033036,0.341880,E1,0.306723,E0,3,3
+1120,UiB,all,8,2634,Psykologer,0.031768,0.477818,E1,0.474873,E1,4,4
+1120,UiB,all,9,2212,Legespesialister,0.029635,0.427128,E1,0.216526,E0,4,3
+1120,UiB,all,10,2519,Andre programvare- og applikasjonsutviklere,0.025134,0.754652,E3,0.823038,E3,5,5
+1120,UiB,all,11,4110,Kontormedarbeidere,0.022971,0.610279,E2,0.665079,E2,5,5
+1120,UiB,all,12,5311,Barnehage- og skolefritidsassistenter mv.,0.017658,0.145058,E0,0.255320,E0,2,3
+1120,UiB,all,13,5329,Andre pleiemedarbeidere,0.017419,0.268401,E0,0.152646,E0,3,2
+1120,UiB,all,14,2642,Journalister,0.014593,0.663650,E2,0.790019,E3,5,5
+1120,UiB,all,15,3511,"Driftsteknikere, IKT",0.013542,0.626781,E2,0.745853,E3,5,5
+1120,UiB,recent,1,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.124618,0.597785,E2,0.766679,E3,5,5
+1120,UiB,recent,2,2310,Universitets- og høyskolelektorer/-lærere,0.069078,0.496858,E1,0.510385,E2,4,4
+1120,UiB,recent,3,5223,Butikkmedarbeidere,0.068988,0.351263,E1,0.329793,E0,3,3
+1120,UiB,recent,4,2341,Grunnskolelærere,0.066694,0.337763,E1,0.288960,E0,3,3
+1120,UiB,recent,5,2611,Jurister og advokater,0.058259,0.435897,E1,0.715612,E3,4,5
+1120,UiB,recent,6,2634,Psykologer,0.037213,0.477818,E1,0.474873,E1,4,4
+1120,UiB,recent,7,2511,Systemanalytikere/-arkitekter,0.036952,0.633256,E2,0.838163,E3,5,5
+1120,UiB,recent,8,2212,Legespesialister,0.035288,0.427128,E1,0.216526,E0,4,3
+1120,UiB,recent,9,2519,Andre programvare- og applikasjonsutviklere,0.032087,0.754652,E3,0.823038,E3,5,5
+1120,UiB,recent,10,2330,Lektorer mv. (videregående skole),0.027541,0.341880,E1,0.306723,E0,3,3
+1120,UiB,recent,11,5329,Andre pleiemedarbeidere,0.027081,0.268401,E0,0.152646,E0,3,2
+1120,UiB,recent,12,4110,Kontormedarbeidere,0.025712,0.610279,E2,0.665079,E2,5,5
+1120,UiB,recent,13,3511,"Driftsteknikere, IKT",0.017060,0.626781,E2,0.745853,E3,5,5
+1120,UiB,recent,14,2642,Journalister,0.016331,0.663650,E2,0.790019,E3,5,5
+1120,UiB,recent,15,5311,Barnehage- og skolefritidsassistenter mv.,0.014776,0.145058,E0,0.255320,E0,2,3
+1150,NTNU,all,1,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.061439,0.597785,E2,0.766679,E3,5,5
+1150,NTNU,all,2,2341,Grunnskolelærere,0.059599,0.337763,E1,0.288960,E0,3,3
+1150,NTNU,all,3,2223,Sykepleiere,0.045158,0.389938,E1,0.284363,E0,3,3
+1150,NTNU,all,4,2511,Systemanalytikere/-arkitekter,0.043797,0.633256,E2,0.838163,E3,5,5
+1150,NTNU,all,5,2310,Universitets- og høyskolelektorer/-lærere,0.038805,0.496858,E1,0.510385,E2,4,4
+1150,NTNU,all,6,2519,Andre programvare- og applikasjonsutviklere,0.034729,0.754652,E3,0.823038,E3,5,5
+1150,NTNU,all,7,2142,Sivilingeniører (bygg og anlegg),0.033193,0.494505,E1,0.522526,E2,4,4
+1150,NTNU,all,8,3119,Andre ingeniører,0.025483,0.365983,E1,0.336583,E1,3,3
+1150,NTNU,all,9,2330,Lektorer mv. (videregående skole),0.025248,0.341880,E1,0.306723,E0,3,3
+1150,NTNU,all,10,5223,Butikkmedarbeidere,0.019752,0.351263,E1,0.329793,E0,3,3
+1150,NTNU,all,11,2221,Spesialsykepleiere,0.019416,0.373494,E1,0.284363,E0,3,3
+1150,NTNU,all,12,2146,"Sivilingeniører (geofag, petro-leumsteknologi, metallurgi mv.)",0.018784,0.507647,E2,0.506291,E2,4,4
+1150,NTNU,all,13,3511,"Driftsteknikere, IKT",0.018649,0.626781,E2,0.745853,E3,5,5
+1150,NTNU,all,14,2512,Programvareutviklere,0.015424,0.890688,E3,0.836406,E3,5,5
+1150,NTNU,all,15,2212,Legespesialister,0.014456,0.427128,E1,0.216526,E0,4,3
+1150,NTNU,recent,1,2341,Grunnskolelærere,0.067665,0.337763,E1,0.288960,E0,3,3
+1150,NTNU,recent,2,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.066311,0.597785,E2,0.766679,E3,5,5
+1150,NTNU,recent,3,2310,Universitets- og høyskolelektorer/-lærere,0.055844,0.496858,E1,0.510385,E2,4,4
+1150,NTNU,recent,4,2223,Sykepleiere,0.054942,0.389938,E1,0.284363,E0,3,3
+1150,NTNU,recent,5,2519,Andre programvare- og applikasjonsutviklere,0.046136,0.754652,E3,0.823038,E3,5,5
+1150,NTNU,recent,6,2511,Systemanalytikere/-arkitekter,0.044840,0.633256,E2,0.838163,E3,5,5
+1150,NTNU,recent,7,2330,Lektorer mv. (videregående skole),0.026208,0.341880,E1,0.306723,E0,3,3
+1150,NTNU,recent,8,3119,Andre ingeniører,0.024481,0.365983,E1,0.336583,E1,3,3
+1150,NTNU,recent,9,2142,Sivilingeniører (bygg og anlegg),0.022690,0.494505,E1,0.522526,E2,4,4
+1150,NTNU,recent,10,5223,Butikkmedarbeidere,0.022058,0.351263,E1,0.329793,E0,3,3
+1150,NTNU,recent,11,3511,"Driftsteknikere, IKT",0.021124,0.626781,E2,0.745853,E3,5,5
+1150,NTNU,recent,12,2512,Programvareutviklere,0.019621,0.890688,E3,0.836406,E3,5,5
+1150,NTNU,recent,13,2212,Legespesialister,0.019548,0.427128,E1,0.216526,E0,4,3
+1150,NTNU,recent,14,2221,Spesialsykepleiere,0.017123,0.373494,E1,0.284363,E0,3,3
+1150,NTNU,recent,15,3114,Elektronikkingeniører,0.016472,0.416062,E1,0.376329,E1,4,4
+1160,UiS,all,1,2341,Grunnskolelærere,0.077328,0.337763,E1,0.288960,E0,3,3
+1160,UiS,all,2,2223,Sykepleiere,0.070140,0.389938,E1,0.284363,E0,3,3
+1160,UiS,all,3,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.067531,0.597785,E2,0.766679,E3,5,5
+1160,UiS,all,4,2342,Førskolelærere,0.040493,0.235974,E0,0.105222,E0,2,2
+1160,UiS,all,5,2635,Rådgivere innen sosiale fagfelt,0.028436,0.278593,E0,0.297383,E0,3,3
+1160,UiS,all,6,2221,Spesialsykepleiere,0.028429,0.373494,E1,0.284363,E0,3,3
+1160,UiS,all,7,2310,Universitets- og høyskolelektorer/-lærere,0.025835,0.496858,E1,0.510385,E2,4,4
+1160,UiS,all,8,2330,Lektorer mv. (videregående skole),0.023450,0.341880,E1,0.306723,E0,3,3
+1160,UiS,all,9,2511,Systemanalytikere/-arkitekter,0.023026,0.633256,E2,0.838163,E3,5,5
+1160,UiS,all,10,3351,Tollere,0.022920,0.483637,E1,0.382370,E1,4,4
+1160,UiS,all,11,3412,Miljøarbeidere innen sosiale fagfelt,0.022464,0.402930,E1,0.304279,E0,3,3
+1160,UiS,all,12,5223,Butikkmedarbeidere,0.020960,0.351263,E1,0.329793,E0,3,3
+1160,UiS,all,13,2411,"Revisorer, regnskapsrådgivere",0.018232,0.582906,E2,0.789512,E3,5,5
+1160,UiS,all,14,3119,Andre ingeniører,0.017931,0.365983,E1,0.336583,E1,3,3
+1160,UiS,all,15,4110,Kontormedarbeidere,0.017168,0.610279,E2,0.665079,E2,5,5
+1160,UiS,recent,1,2341,Grunnskolelærere,0.084261,0.337763,E1,0.288960,E0,3,3
+1160,UiS,recent,2,2223,Sykepleiere,0.078567,0.389938,E1,0.284363,E0,3,3
+1160,UiS,recent,3,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.077698,0.597785,E2,0.766679,E3,5,5
+1160,UiS,recent,4,2342,Førskolelærere,0.042142,0.235974,E0,0.105222,E0,2,2
+1160,UiS,recent,5,2310,Universitets- og høyskolelektorer/-lærere,0.036882,0.496858,E1,0.510385,E2,4,4
+1160,UiS,recent,6,2635,Rådgivere innen sosiale fagfelt,0.035133,0.278593,E0,0.297383,E0,3,3
+1160,UiS,recent,7,2511,Systemanalytikere/-arkitekter,0.026028,0.633256,E2,0.838163,E3,5,5
+1160,UiS,recent,8,5223,Butikkmedarbeidere,0.024909,0.351263,E1,0.329793,E0,3,3
+1160,UiS,recent,9,3412,Miljøarbeidere innen sosiale fagfelt,0.024792,0.402930,E1,0.304279,E0,3,3
+1160,UiS,recent,10,2330,Lektorer mv. (videregående skole),0.023346,0.341880,E1,0.306723,E0,3,3
+1160,UiS,recent,11,2221,Spesialsykepleiere,0.023136,0.373494,E1,0.284363,E0,3,3
+1160,UiS,recent,12,3119,Andre ingeniører,0.021160,0.365983,E1,0.336583,E1,3,3
+1160,UiS,recent,13,2519,Andre programvare- og applikasjonsutviklere,0.021110,0.754652,E3,0.823038,E3,5,5
+1160,UiS,recent,14,2411,"Revisorer, regnskapsrådgivere",0.020972,0.582906,E2,0.789512,E3,5,5
+1160,UiS,recent,15,2142,Sivilingeniører (bygg og anlegg),0.018992,0.494505,E1,0.522526,E2,4,4
+1240,NHH,all,1,2411,"Revisorer, regnskapsrådgivere",0.101728,0.582906,E2,0.789512,E3,5,5
+1240,NHH,all,2,4311,Regnskapsmedarbeidere,0.080095,0.808274,E3,0.772580,E3,5,5
+1240,NHH,all,3,3313,Regnskapsførere,0.070385,0.822898,E3,0.793052,E3,5,5
+1240,NHH,all,4,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.064713,0.597785,E2,0.766679,E3,5,5
+1240,NHH,all,5,3312,Kundebehandlere lån og kreditt,0.053257,0.623543,E2,0.698251,E3,5,5
+1240,NHH,all,6,1211,Finans- og økonomisjefer,0.048076,0.497493,E1,0.643716,E2,4,5
+1240,NHH,all,7,2412,Finans- og investeringsrådgivere,0.047911,0.493097,E1,0.746503,E3,4,5
+1240,NHH,all,8,2413,Finansanalytikere,0.042116,0.518665,E2,0.695875,E3,4,5
+1240,NHH,all,9,2421,Organisasjonsrådgivere mv.,0.038950,0.509832,E2,0.705829,E3,4,5
+1240,NHH,all,10,3311,Finansmeglere,0.035186,0.586054,E2,0.573453,E2,5,4
+1240,NHH,all,11,1120,Administrerende direktører,0.025919,0.511564,E2,0.585440,E2,4,5
+1240,NHH,all,12,4110,Kontormedarbeidere,0.022084,0.610279,E2,0.665079,E2,5,5
+1240,NHH,all,13,2511,Systemanalytikere/-arkitekter,0.019875,0.633256,E2,0.838163,E3,5,5
+1240,NHH,all,14,1219,Andre administrative ledere,0.018443,0.520145,E2,0.530638,E2,4,4
+1240,NHH,all,15,3322,Selgere (engros),0.018293,0.552398,E2,0.587087,E2,5,5
+1240,NHH,recent,1,2411,"Revisorer, regnskapsrådgivere",0.120907,0.582906,E2,0.789512,E3,5,5
+1240,NHH,recent,2,4311,Regnskapsmedarbeidere,0.094954,0.808274,E3,0.772580,E3,5,5
+1240,NHH,recent,3,3313,Regnskapsførere,0.080093,0.822898,E3,0.793052,E3,5,5
+1240,NHH,recent,4,3312,Kundebehandlere lån og kreditt,0.058269,0.623543,E2,0.698251,E3,5,5
+1240,NHH,recent,5,3311,Finansmeglere,0.057942,0.586054,E2,0.573453,E2,5,4
+1240,NHH,recent,6,2412,Finans- og investeringsrådgivere,0.053435,0.493097,E1,0.746503,E3,4,5
+1240,NHH,recent,7,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.051766,0.597785,E2,0.766679,E3,5,5
+1240,NHH,recent,8,2421,Organisasjonsrådgivere mv.,0.050691,0.509832,E2,0.705829,E3,4,5
+1240,NHH,recent,9,2413,Finansanalytikere,0.047566,0.518665,E2,0.695875,E3,4,5
+1240,NHH,recent,10,1211,Finans- og økonomisjefer,0.044179,0.497493,E1,0.643716,E2,4,5
+1240,NHH,recent,11,2511,Systemanalytikere/-arkitekter,0.022230,0.633256,E2,0.838163,E3,5,5
+1240,NHH,recent,12,4110,Kontormedarbeidere,0.021780,0.610279,E2,0.665079,E2,5,5
+1240,NHH,recent,13,3322,Selgere (engros),0.020007,0.552398,E2,0.587087,E2,5,5
+1240,NHH,recent,14,2519,Andre programvare- og applikasjonsutviklere,0.016196,0.754652,E3,0.823038,E3,5,5
+1240,NHH,recent,15,3321,Forsikringsagenter,0.015898,0.575803,E2,0.568044,E2,5,4
+8241,BI,all,1,3334,Eiendomsmeglere og - forvaltere,0.061058,0.491723,E1,0.495463,E1,4,4
+8241,BI,all,2,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.058425,0.597785,E2,0.766679,E3,5,5
+8241,BI,all,3,3312,Kundebehandlere lån og kreditt,0.052211,0.623543,E2,0.698251,E3,5,5
+8241,BI,all,4,2411,"Revisorer, regnskapsrådgivere",0.050834,0.582906,E2,0.789512,E3,5,5
+8241,BI,all,5,3313,Regnskapsførere,0.049224,0.822898,E3,0.793052,E3,5,5
+8241,BI,all,6,4110,Kontormedarbeidere,0.043417,0.610279,E2,0.665079,E2,5,5
+8241,BI,all,7,3322,Selgere (engros),0.038829,0.552398,E2,0.587087,E2,5,5
+8241,BI,all,8,4311,Regnskapsmedarbeidere,0.036187,0.808274,E3,0.772580,E3,5,5
+8241,BI,all,9,2413,Finansanalytikere,0.034596,0.518665,E2,0.695875,E3,4,5
+8241,BI,all,10,5223,Butikkmedarbeidere,0.031520,0.351263,E1,0.329793,E0,3,3
+8241,BI,all,11,2412,Finans- og investeringsrådgivere,0.031185,0.493097,E1,0.746503,E3,4,5
+8241,BI,all,12,1120,Administrerende direktører,0.028403,0.511564,E2,0.585440,E2,4,5
+8241,BI,all,13,2423,Personal- og karriererådgivere,0.026388,0.501224,E2,0.635356,E2,4,5
+8241,BI,all,14,1211,Finans- og økonomisjefer,0.024049,0.497493,E1,0.643716,E2,4,5
+8241,BI,all,15,2421,Organisasjonsrådgivere mv.,0.020282,0.509832,E2,0.705829,E3,4,5
+8241,BI,recent,1,3312,Kundebehandlere lån og kreditt,0.077496,0.623543,E2,0.698251,E3,5,5
+8241,BI,recent,2,3334,Eiendomsmeglere og - forvaltere,0.069264,0.491723,E1,0.495463,E1,4,4
+8241,BI,recent,3,2422,Høyere saksbehandlere i offentlig og privat virksomhet,0.062295,0.597785,E2,0.766679,E3,5,5
+8241,BI,recent,4,4311,Regnskapsmedarbeidere,0.062253,0.808274,E3,0.772580,E3,5,5
+8241,BI,recent,5,2413,Finansanalytikere,0.060542,0.518665,E2,0.695875,E3,4,5
+8241,BI,recent,6,3313,Regnskapsførere,0.052986,0.822898,E3,0.793052,E3,5,5
+8241,BI,recent,7,2411,"Revisorer, regnskapsrådgivere",0.048713,0.582906,E2,0.789512,E3,5,5
+8241,BI,recent,8,2412,Finans- og investeringsrådgivere,0.043186,0.493097,E1,0.746503,E3,4,5
+8241,BI,recent,9,4110,Kontormedarbeidere,0.042433,0.610279,E2,0.665079,E2,5,5
+8241,BI,recent,10,3322,Selgere (engros),0.039220,0.552398,E2,0.587087,E2,5,5
+8241,BI,recent,11,3311,Finansmeglere,0.035276,0.586054,E2,0.573453,E2,5,4
+8241,BI,recent,12,2431,Reklame- og markedsføringsrådgivere,0.029948,0.718834,E3,0.891906,E3,5,5
+8241,BI,recent,13,2421,Organisasjonsrådgivere mv.,0.029149,0.509832,E2,0.705829,E3,4,5
+8241,BI,recent,14,3321,Forsikringsagenter,0.028482,0.575803,E2,0.568044,E2,5,4
+8241,BI,recent,15,2423,Personal- og karriererådgivere,0.021740,0.501224,E2,0.635356,E2,4,5

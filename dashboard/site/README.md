@@ -10,16 +10,52 @@ Canaries Dashboard.
 site/
   prepare_data.py   # release-CSV -> public/data/dashboard.json,
                     # public/data/occupations.json (yrkesvelgeren) + nedlastbare CSV-er
+  prepare_panels.py # panelene: public/data/yrker.json, utdanning.json, bruk.json
+                    # + public/data/panels/*.csv (egen kadens, se under)
   public/           # alt som serveres
-    index.html
-    app.js          # figurer (ECharts), kontroller, nedlastingsliste
+    index.html      # KI-indeksen (flaggskipet, forsiden)
+    yrker.html      # panel: automatisering/augmentering yrke for yrke
+    utdanning.html  # panel: institusjoner, fagfelt, toppyrker
+    bruk.html       # panel: KI-bruk per land, tokens og brukere
+    om.html
+    en/             # engelske tvillinger: index, occupations, education, usage, about
+    app.js          # KI-indeksen: figurer (ECharts), kontroller, nedlastingsliste
+    panels.js       # de tre panelene, ett script, språk fra <html lang>
     style.css
     vendor/echarts.min.js
-    data/           # generert av prepare_data.py (sjekkes ikke inn på nytt manuelt)
+    data/           # generert av prepare_data.py og prepare_panels.py
   Dockerfile        # nginx:alpine, serverer public/ på port 8080
   nginx.conf
   fly.toml          # app "kiindeksen", region arn (Stockholm)
 ```
+
+## Panelene (Arbeidsmarkedet, sept. 2026)
+
+Nettstedet heter Arbeidsmarkedet. KI-indeksen er fortsatt forsiden og
+flaggskipet. Panelnavigasjonen (`.panel-nav`) ligger under toppfeltet på
+alle sider. De tre panelene oppdateres når kildene oppdateres, ikke
+månedlig:
+
+- **Yrker** (`yrker.html`, data `yrker.json`): Anthropic Economic Index,
+  tabellen O*NET-oppgave × interaksjonstype, koblet til STYRK-08 med samme
+  kjede som Handa-målet. Kjede for ny utgivelse:
+  `analysis/03_mappings/extract_aei_release_slices.py <råfil ...>` (last ned
+  fra Hugging Face med `curl -L` først) →
+  `analysis/03_mappings/build_aei_collaboration_mapping.py` →
+  `dashboard/site/prepare_panels.py`. Automatisering = directive + feedback
+  loop (Anthropics regel). Forsidens bruksgrupper bruker fortsatt bare
+  directive og det opprinnelige Handa-utvalget.
+- **Utdanning** (`utdanning.html`, data `utdanning.json`): Edutech-pipelinen
+  (`AI-research/Edutech/education-analysis/`), utdata kopiert til
+  `data/education_analysis/`. Seks institusjoner i første versjon.
+- **KI-bruk per land** (`bruk.html`, data `bruk.json`): landfilene fra
+  Anthropic (`data/ai_usage_cross_platform/` + ukesutvalgene i
+  `data/ai_exposure/handa/aei_releases/usage_by_country_*` og
+  `collaboration_by_country_*`).
+
+Ny side eller ny JSON må også inn i `nginx.conf` (no-cache) og
+`sitemap.xml`. Cache-parameteren på `style.css` og `panels.js` er
+`v=20260907a`.
 
 ## Månedlig oppdatering
 

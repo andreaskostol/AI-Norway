@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Education — Arbeidsmarkedet</title>
+<meta name="description" content="Which degrees do Norwegian institutions award, which occupations do graduates go to, and how AI-exposed are those occupations? Graduate counts from DBH linked to register data from utdanning.no and the index's occupational AI exposure.">
+<link rel="canonical" href="https://kiindeksen.no/en/education.html">
+<link rel="alternate" hreflang="nb" href="https://kiindeksen.no/utdanning.html">
+<link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/education.html">
+<link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/utdanning.html">
+<link rel="stylesheet" href="/style.css?v=20260907a">
+<link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
+</head>
+<body data-panel="utdanning">
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-logos">
+      <a href="/en/" title="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School">
+        <img src="/assets/ki-logo.png"
+             alt="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School"></a>
+    </div>
+    <nav class="site-nav">
+      <a href="#fig1">Institutions</a>
+      <a href="#fig3">Fields</a>
+      <a href="#tabell">Where they work</a>
+      <a href="#metode">Method</a>
+      <a href="#data">Data</a>
+    </nav>
+    <div class="brand">
+      <a class="lang-toggle" href="/utdanning.html" hreflang="nb" lang="nb">Norsk</a>
+      <p class="site-name"><a href="/en/">Arbeidsmarkedet</a></p>
+      <p class="tagline">The AI Labor Market Index and companion indicators on artificial intelligence and the Norwegian labor market</p>
+    </div>
+  </div>
+</header>
+<nav class="panel-nav" aria-label="Panels">
+  <div class="container">
+    <a href="/en/">The AI Labor Market Index</a>
+    <a href="/en/occupations.html">Occupations</a>
+    <a href="/en/education.html" class="active">Education</a>
+    <a href="/en/usage.html">AI use by country</a>
+    <a href="/en/about.html">About</a>
+  </div>
+</nav>
+
+<div class="layout">
+<aside class="toc" aria-label="Contents">
+  <nav id="toc-nav">
+    <a href="#intro">Education</a>
+    <a href="#fig1">1 · Exposure by institution</a>
+    <a href="#fig2">2 · Quintile split</a>
+    <a href="#fig3">3 · Fields, national</a>
+    <a href="#fig4">4 · Field mix</a>
+    <a href="#tabell">5 · Where do they work?</a>
+    <a href="#metode">Method</a>
+    <a href="#data">Download data</a>
+  </nav>
+</aside>
+<div class="content">
+
+<main class="container">
+
+  <section id="intro" class="hero">
+    <h2 class="hero-title">What do we educate for, and how AI-exposed is the job?</h2>
+    <p class="panel-lede">
+      Each institution awards degrees in particular fields. Each degree
+      typically leads to particular occupations. And each occupation has
+      an AI exposure, the same one the index uses. This page links the
+      three. The result is a measure of how AI-exposed the jobs of each
+      institution's graduates usually are. The first version covers six
+      institutions: UiO, UiB, NTNU, UiS, NHH and BI.
+    </p>
+    <p class="panel-kpi" id="u-kpi"></p>
+    <p class="panel-status"></p>
+    <details class="quick-summary" open>
+      <summary>Summary for the impatient reader</summary>
+      <ul>
+        <li><strong>The business schools are on top.</strong> NHH and BI
+          send graduates into accounting, finance, real estate and case
+          handling. Those are occupations high on the exposure scale.</li>
+        <li><strong>The comprehensive universities sit close
+          together.</strong> UiO, UiB and NTNU have about the same mean,
+          because teachers, health workers and engineers pull down where
+          lawyers and economists pull up.</li>
+        <li><strong>The measure sets the distance.</strong> With Mouchel
+          et al. (2026) as the measure, the gap between the business
+          schools and the universities widens, because that measure
+          lifts auditing, financial analysis and case handling most.</li>
+      </ul>
+    </details>
+  </section>
+
+  <section id="fig1" class="chart-section">
+    <h2>1 · Mean exposure by institution</h2>
+    <p class="chart-intro">
+      Graduate-weighted mean of the occupational exposure of the jobs
+      graduates typically go to, for the latest graduating cohort. Two
+      measures are shown: Eloundou et al. (2024), the default on the
+      index page, and Mouchel et al. (2026). Both are scaled 0 to 1.
+    </p>
+    <div id="chart-u1" class="chart chart-short"></div>
+    <p class="chart-footnote">
+      The mean is over everyone employed in Norway with the same
+      degrees, not the institution's own graduates. A business graduate
+      from BI and one from NHH get the same occupational profile when
+      the programmes share an education code. See method.
+    </p>
+  </section>
+
+  <section id="fig2" class="chart-section">
+    <h2>2 · Quintile split by institution</h2>
+    <p class="chart-intro">
+      The mean hides the spread. Here graduates are split across the
+      five exposure quintiles from the index page, by the occupations
+      they typically go to. Pick the measure below.
+    </p>
+    <div class="btn-row" id="u-version-buttons"></div>
+    <div id="chart-u2" class="chart chart-short"></div>
+    <p class="chart-footnote" id="u2-note"></p>
+  </section>
+
+  <section id="fig3" class="chart-section">
+    <h2>3 · Fields of study, national</h2>
+    <p class="chart-intro">
+      The same calculation for the whole population, by field of the
+      highest completed education. The bar is the share of employed
+      people working in the most exposed fifth of occupations. The
+      measure follows the choice in figure 2.
+    </p>
+    <div id="chart-u3" class="chart chart-short"></div>
+    <p class="chart-footnote" id="u3-note"></p>
+  </section>
+
+  <section id="fig4" class="chart-section">
+    <h2>4 · Field mix by institution</h2>
+    <p class="chart-intro">
+      The difference between institutions in figure 1 is first of all
+      a difference in what they teach. Here graduates are split by
+      field.
+    </p>
+    <div id="chart-u4" class="chart chart-short"></div>
+    <p class="chart-footnote">
+      Graduates in the latest DBH year, both semesters. PhDs count as
+      their own field. Source: DBH (HK-dir), tables 104 and 101. Field
+      names are in Norwegian, as in the source.
+    </p>
+  </section>
+
+  <section id="tabell" class="chart-section">
+    <h2>5 · Where do they work?</h2>
+    <p class="chart-intro">
+      The ten most common occupations for people with the degrees the
+      institution awards, weighted by graduate counts. Pick an
+      institution, and whether the table covers everyone or only recent
+      graduates.
+    </p>
+    <div class="btn-row" id="u-inst-buttons"></div>
+    <div class="btn-row" id="u-cohort-buttons"></div>
+    <div class="table-wrap" id="u-top-table"></div>
+    <p class="chart-footnote" id="u-table-note"></p>
+  </section>
+
+  <section id="metode" class="prose-section">
+    <h2>Method</h2>
+    <p>
+      Three sources are linked. DBH (HK-dir) gives graduates per study
+      programme with an education code (NUS2000). utdanning.no gives,
+      from Statistics Norway's register data, how many people with each
+      education code work in each occupation (STYRK-08). Occupational
+      exposure is the same as on the index page. The exposure of a
+      degree is the person-weighted mean over the occupations graduates
+      actually hold. The exposure of an institution is the
+      graduate-weighted mean over its programmes.
+    </p>
+    <details class="method-details">
+      <summary>Caveats</summary>
+      <ol>
+        <li>Occupational profiles are national per education code, not
+          per institution. That is the main simplification.</li>
+        <li>The register link is from November 2024 and covers residents
+          aged 20 to 70. Graduate counts are for 2025.</li>
+        <li>DBH suppresses small cells. Programme rows sum slightly
+          below institution totals.</li>
+        <li>Graduates are qualifications awarded, not persons.</li>
+        <li>Both exposure measures are theoretical task assessments, not
+          observed use.</li>
+        <li>Recent graduates rest on a column in utdanning.no that is
+          not documented in the API. We read it as completed one to
+          three years ago.</li>
+      </ol>
+    </details>
+    <details class="method-details">
+      <summary>Next step</summary>
+      <p>The first version covers six institutions. The pipeline can be
+        run for every institution with accredited programmes in DBH,
+        probably 30 to 40. Small institutions will get thinner numbers
+        because DBH suppresses small cells. The extension is
+        planned.</p>
+    </details>
+  </section>
+
+  <section id="data" class="prose-section">
+    <h2>Download data</h2>
+    <p>
+      The institution table has one row per institution with graduate
+      counts, mean exposure under both measures, quintile shares and the
+      level and field mix. The data may be used freely with attribution
+      to Arbeidsmarkedet (kiindeksen.no).
+    </p>
+    <div class="download-grid">
+      <div class="download-card">
+        <strong>Institutions</strong>
+        <a href="/data/panels/institutions_summary.csv" download>CSV</a>
+      </div>
+      <div class="download-card">
+        <strong>Sources</strong>
+        <a href="https://dbh.hkdir.no/" target="_blank" rel="noopener">DBH</a>
+        <a href="https://utdanning.no/dokumentasjon/yrkes_utdanningstatistikk"
+           target="_blank" rel="noopener">utdanning.no</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+</div><!-- .content -->
+</div><!-- .layout -->
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      Arbeidsmarkedet · The AI Labor Market Index · Øystein Hernæs (Frisch Centre) and
+      Andreas R. Kostøl (BI Norwegian Business School) ·
+      Data: DBH, utdanning.no ·
+      <a href="/en/">The AI Labor Market Index</a> ·
+      <a href="/en/occupations.html">Occupations</a> ·
+      <a href="/en/usage.html">AI use by country</a> ·
+      <a href="/en/about.html">About</a>
+    </p>
+  </div>
+</footer>
+
+<script src="/vendor/echarts.min.js"></script>
+<script src="/panels.js?v=20260907a"></script>
+</body>
+</html>

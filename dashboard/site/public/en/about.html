@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>About the AI Labor Market Index — method and sources</title>
+<title>About the AI Labor Market Index — Arbeidsmarkedet</title>
 <meta name="description" content="About the AI Labor Market Index: data source (the A-ordningen via microdata.no), AI exposure measure (Eloundou et al. 2024), outcomes, smoothing and differences from Stanford Digital Economy Lab's Canaries Dashboard.">
 <link rel="canonical" href="https://kiindeksen.no/en/about.html">
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/om.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/about.html">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/om.html">
-<link rel="stylesheet" href="/style.css?v=20260904i">
+<link rel="stylesheet" href="/style.css?v=20260907a">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -18,7 +18,8 @@
   <div class="container">
     <div class="brand">
       <a class="lang-toggle" href="/om.html" hreflang="nb" lang="nb">Norsk</a>
-      <p class="tagline"><a href="/en/" style="text-decoration:none;color:inherit">Monthly indicators on artificial intelligence and the Norwegian labor market</a></p>
+      <p class="site-name"><a href="/en/">Arbeidsmarkedet</a></p>
+      <p class="tagline"><a href="/en/" style="text-decoration:none;color:inherit">The AI Labor Market Index and companion indicators on artificial intelligence and the Norwegian labor market</a></p>
     </div>
     <div class="header-logos">
       <a href="/en/" title="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School">
@@ -27,6 +28,15 @@
     </div>
   </div>
 </header>
+<nav class="panel-nav" aria-label="Panels">
+  <div class="container">
+    <a href="/en/">The AI Labor Market Index</a>
+    <a href="/en/occupations.html">Occupations</a>
+    <a href="/en/education.html">Education</a>
+    <a href="/en/usage.html">AI use by country</a>
+    <a href="/en/about.html" class="active">About</a>
+  </div>
+</nav>
 
 <main class="container" style="max-width: 1060px; margin: 0 auto;">
 
@@ -103,7 +113,23 @@
          rel="noopener">Handa et al. 2025</a>) and follow the grouping in
       <a href="https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
          target="_blank" rel="noopener">Brynjolfsson, Chandar and Chen
-      (2025)</a>.
+      (2025)</a>. The usage groups rest on the first Handa et al.
+      sample, conversations from December 2024 to January 2025, and
+      count only directive use as automation. Anthropic has since
+      published the task × interaction-type table three more times, for
+      August 2025, November 2025 and February 2026, and from August 2025
+      also for the API. The five-way classification (directive, feedback
+      loop, task iteration, validation, learning), and Anthropic's own
+      bucketing where both directive and feedback loop count as
+      automation, is shown occupation by occupation on the
+      <a href="/en/occupations.html">occupations page</a>. The
+      <a href="https://www.anthropic.com/research/economic-index-march-2026-report"
+         target="_blank" rel="noopener">March</a> and
+      <a href="https://www.anthropic.com/research/economic-index-june-2026-report"
+         target="_blank" rel="noopener">June 2026</a> reports give no
+      occupation-level split of automation, and the June release drops
+      the task table. The usage groups on the front page are therefore
+      unchanged.
     </p>
     <p>
       <strong>Alternative exposure measure.</strong> From the 2026-09
@@ -200,9 +226,12 @@
 <footer class="site-footer">
   <div class="container">
     <p>
-      The AI Labor Market Index · Øystein Hernæs (Frisch Centre) and
+      Arbeidsmarkedet · The AI Labor Market Index · Øystein Hernæs (Frisch Centre) and
       Andreas R. Kostøl (BI Norwegian Business School) ·
-      Data: the A-ordningen via microdata.no · Updated monthly
+      Data: the A-ordningen via microdata.no · Updated monthly ·
+      <a href="/en/occupations.html">Occupations</a> ·
+      <a href="/en/education.html">Education</a> ·
+      <a href="/en/usage.html">AI use by country</a>
     </p>
   </div>
 </footer>
