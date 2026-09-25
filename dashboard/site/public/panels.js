@@ -12,7 +12,7 @@
   var EN = (document.documentElement.lang || "nb")
              .toLowerCase().indexOf("en") === 0;
   var PANEL = document.body.getAttribute("data-panel");
-  var V = "20260907d";
+  var V = "20260925a";
 
   // ---------- Farger og etiketter ----------
 
@@ -1124,6 +1124,68 @@
     }
     makeVintageButtons();
     renderKpi(); renderY1(); renderY2();
+
+    // Hele lista for én eksponeringsgruppe, nederst paa siden (2026-09-25).
+    // Universet er alle yrker siden kjenner: Y.occupations, Y.extra og
+    // occupations.json fra forsiden. Kvintilen er den samme i alle tre.
+    var allOcc = {};
+    OCC.occupations.forEach(function (o) {
+      if (o.quintile) allOcc[o.code] = { code: o.code, name: o.name, name_en: o.name_en, n: o.n_base, q: o.quintile, beta: null };
+    });
+    Object.keys(extra).forEach(function (c) {
+      var o = extra[c];
+      var prev = allOcc[c];
+      if (o.q) allOcc[c] = { code: c, name: o.name, name_en: o.name_en, n: o.n || (prev ? prev.n : null), q: o.q, beta: o.beta };
+    });
+    Y.occupations.forEach(function (o) {
+      var prev = allOcc[o.code];
+      if (o.q) allOcc[o.code] = { code: o.code, name: o.name, name_en: o.name_en,
+                                  n: o.n || (prev ? prev.n : null), q: o.q, beta: o.beta };
+    });
+    state.group = 5;
+    function renderGroup() {
+      var box = el("grp-table");
+      if (!box) return;
+      var rows = Object.keys(allOcc).map(function (c) { return allOcc[c]; })
+        .filter(function (o) { return o.q === state.group; })
+        .sort(function (a, b) {
+          var ba = a.beta === null || a.beta === undefined ? -1 : a.beta;
+          var bb = b.beta === null || b.beta === undefined ? -1 : b.beta;
+          return bb - ba || occName(a).localeCompare(occName(b), EN ? "en" : "nb");
+        });
+      var tot = rows.reduce(function (s, o) { return s + (o.n || 0); }, 0);
+      setText("grp-summary", EN
+        ? GROUP_NAMES[state.group - 1] + ": " + rows.length + " occupations with " + thousands(tot) + " private-sector employees in November 2022."
+        : GROUP_NAMES[state.group - 1] + ": " + rows.length + " yrker med " + thousands(tot) + " lønnstakere i privat sektor i november 2022.");
+      var h = "<table class='data-table'><thead><tr><th>#</th><th>" + (EN ? "Occupation (STYRK-08)" : "Yrke (STYRK-08)") +
+        "</th><th class='num'>" + (EN ? "Employees Nov 2022" : "Lønnstakere nov. 2022") +
+        "</th><th class='num'>" + (EN ? "AI exposure (0–1)" : "KI-eksponering (0–1)") + "</th></tr></thead><tbody>";
+      rows.forEach(function (o, i) {
+        var link = byCode[o.code]
+          ? "<a href='#velg' class='grp-pick' data-code='" + o.code + "'>" + occName(o) + "</a>"
+          : occName(o);
+        h += "<tr><td>" + (i + 1) + "</td><td>" + link + " <span class='occ-code'>" + o.code + "</span></td><td class='num'>" +
+          (o.n ? thousands(o.n) : "–") + "</td><td class='num'>" +
+          (o.beta === null || o.beta === undefined ? "–" : num(o.beta, 2)) + "</td></tr>";
+      });
+      h += "</tbody></table>";
+      box.innerHTML = h;
+      Array.prototype.forEach.call(box.querySelectorAll("a.grp-pick"), function (a) {
+        a.addEventListener("click", function (e) {
+          e.preventDefault();
+          state.random = false;
+          setFocus(a.getAttribute("data-code"));
+          var top = el("velg");
+          if (top) top.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+      setText("grp-note", EN
+        ? "Occupations without a link have no Claude data and cannot be selected above. A dash under employees means the data have no private-sector count for the occupation. A dash under exposure means the page has no score for it. Sources: Eloundou et al. (2024), A-ordningen via microdata.no."
+        : "Yrker uten lenke har ikke Claude-data og kan ikke velges øverst. Strek under lønnstakere betyr at dataene ikke har tall for privat sektor i yrket. Strek under eksponering betyr at siden ikke har skår for yrket. Kilder: Eloundou m.fl. (2024), A-ordningen via microdata.no.");
+    }
+    makeButtons("grp-buttons", [1, 2, 3, 4, 5].map(function (q) { return { value: q, label: GROUP_NAMES[q - 1] }; }),
+      function () { return state.group; }, function (q) { state.group = q; renderGroup(); });
+    renderGroup();
 
     var fromUrl = (location.search.match(/[?&]yrke=(\d{4})/) || [])[1];
     if (fromUrl && byCode[fromUrl]) { state.random = false; startFrom(fromUrl); }

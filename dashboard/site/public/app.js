@@ -1244,13 +1244,28 @@
     return name.length > 30 ? name.slice(0, 28).replace(/[ ,]+$/, "") + "…"
                             : name;
   }
+  // Antall lønnstakere i referansemåneden til valgt hendelse (2026-09-25).
+  // n_base er antallet i nov. 2022, der indeksen er 100. For en senere
+  // hendelse regnes antallet ut fra den ujusterte indeksen i hendelsens
+  // måned: n_base · indeks / 100. Indeksen har to desimaler, så tallet
+  // kan avvike med noen få personer, og teksten sier «ca.».
+  function occHeadcount(o) {
+    var b = epoch().base, i = OCC && OCC.dates ? OCC.dates.indexOf(b) : -1;
+    var raw = o.employment && o.employment.raw ? o.employment.raw[i] : null;
+    if (b === "2022-11-01" || i < 0 || raw == null)
+      return { n: o.n_base, month: EN ? "Nov 2022" : "nov. 2022", approx: false };
+    return { n: Math.round(o.n_base * raw / 100), month: epoch().baseLabel,
+             approx: true };
+  }
   function occChipTitle(o) {
-    var n = o.n_base.toLocaleString(EN ? "en-US" : "nb-NO");
+    var h = occHeadcount(o);
+    var n = (h.approx ? (EN ? "about " : "ca. ") : "") +
+            h.n.toLocaleString(EN ? "en-US" : "nb-NO");
     var q = o.quintile == null
       ? (EN ? "no exposure score" : "ingen eksponeringsskår")
       : (EN ? "exposure quintile " : "eksponeringskvintil ") + o.quintile;
-    return (EN ? "STYRK-08 " + o.name + " · " + n + " employees in Nov 2022 · "
-               : n + " lønnstakere i nov. 2022 · ") + q;
+    return (EN ? "STYRK-08 " + o.name + " · " + n + " employees in " + h.month + " · "
+               : n + " lønnstakere i " + h.month + " · ") + q;
   }
 
   // ?yrker=2512,4110 leses fortsatt, slik at lenker som alt er delt
@@ -1264,7 +1279,7 @@
   }
   function renderOccChips() {
     var holder = document.getElementById("occ-chips");
-    if (!holder) return;
+    if (!holder || !OCC) return;
     holder.innerHTML = "";
     state.occs.forEach(function (code, i) {
       var o = OCC.byCode[code];
@@ -1708,6 +1723,7 @@
     renderOccupations();
     renderUsage();
     renderPublic();
+    renderOccChips();
     renderOccChart();
     renderUsageInfographic();
   }
