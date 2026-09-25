@@ -83,9 +83,16 @@
   // Figurene viser raa serier (som DEL); sesong- og befolknings-
   // justerte varianter finnes kun i de nedlastbare filene.
   var state = { outcome: "employment", adjustment: "sa", measure: "eloundou",
-                smoothing: 6, epoch: "claudecode", ageFacet: "21-30",
+                smoothing: 6, epoch: "chatgpt", ageFacet: "21-30",
                 publicAgeFacet: "21-30",
-                usagePattern: "Automation", usageAge: "All ages" };
+                usagePattern: "Automation", usageAge: "All ages",
+                usageInfoAge: "All ages" };
+  // Aldersgruppene i KI-bruk-pakkene (figur 10 og 11). "All ages"
+  // foerst, deretter de fire tiaarsgruppene.
+  var USAGE_AGES = ["All ages", "21-30", "31-40", "41-50", "51-60"];
+  function usageAgeLab(a) {
+    return a === "All ages" ? (EN ? "All ages" : "Alle aldre") : ageLab(a);
+  }
 
   // Referansepunkter: indeksene normaliseres til 100 i basismaaneden,
   // den vertikale markeringen flyttes, og foer-perioden i
@@ -120,11 +127,13 @@
       refNote: EN
         ? "The steep rise in 2021–2022 (shaded area) is the labor " +
           "market's post-pandemic recovery. The reference sits right at " +
-          "the end of that period, in the three months just before ChatGPT."
+          "the end of that period, in the three months just before " +
+          "ChatGPT. Select Claude Code above to measure from 2025 instead."
         : "Den bratte oppgangen i 2021–2022 (skyggelagt felt) er " +
           "gjeninnhentingen i arbeidsmarkedet etter pandemien. Referansen " +
           "ligger helt på slutten av den perioden, i de tre månedene rett " +
-          "før ChatGPT.",
+          "før ChatGPT. Velg Claude Code øverst for å måle fra 2025 i " +
+          "stedet.",
       note: EN
         ? "Index = 100 in November 2022 (launch of ChatGPT)"
         : "Indeks = 100 i november 2022 (lansering av ChatGPT)"
@@ -823,11 +832,12 @@
     });
   }
 
-  // Vekstfiguren foer figur 9: sysselsettingsvekst per bruksgruppe,
-  // automatisering oeverst og augmentering nederst. Etter = snittet av
-  // de tre siste maanedene; foer = referanseperioden for valgt epoke
-  // (foer ChatGPT, eller siste aar foer Claude Code). Alltid
-  // sysselsetting, alle aldre, raa indeks.
+  // Figur 10: sysselsettingsvekst per bruksgruppe, automatisering
+  // oeverst og augmentering nederst. Etter = snittet av de tre siste
+  // maanedene; foer = referanseperioden for valgt epoke (de tre
+  // maanedene foer ChatGPT eller foer Claude Code). Alltid
+  // sysselsetting; justeringen foelger valget oeverst, og aldersgruppen
+  // (alle aldre som standard) velges med knapperaden over figuren.
   function usageGrowth(values, dates) {
     var g = epochGrowth(values, dates);
     return g == null ? null : g / 100;
@@ -850,22 +860,30 @@
           color: USE_COLORS[i + 1],
           value: usageGrowth(
             pkg.series[adjFor("usage_patterns_by_age")][
-              pattern + "|All ages"][c], dates)
+              pattern + "|" + state.usageInfoAge][c], dates)
         };
       });
     }
+    // Aldersgruppen skrives inn i setningene og undertittelen naar en
+    // annen gruppe enn alle aldre er valgt.
+    var ag = state.usageInfoAge;
+    var ageIn = ag === "All ages" ? ""
+      : (EN ? " among " + ag + "-year-olds" : " blant " + ag + "-åringer");
+    var ageHead = ag === "All ages"
+      ? (EN ? "all ages" : "alle aldre")
+      : (EN ? "ages " + ag : ag + " år");
     // ordNo/ordEn: "automatiserende"/"automating" osv.
     function rowText(points, ordNo, ordEn) {
       var q5 = points[points.length - 1].value, q1 = points[0].value;
       if (q5 == null || q1 == null) return "";
       if (EN) {
         return "Where Claude usage is most " + ordEn +
-          ", employment has " + fellRose(q5) + ", versus " + signedPct(q1) +
-          " where it is least " + ordEn + ".";
+          ", employment" + ageIn + " has " + fellRose(q5) + ", versus " +
+          signedPct(q1) + " where it is least " + ordEn + ".";
       }
       return "Der Claude-bruken er mest " + ordNo +
-        " har sysselsettingen " + verbNo(q5) + ", mot " + signedPct(q1) +
-        " der den er minst " + ordNo + ".";
+        " har sysselsettingen" + ageIn + " " + verbNo(q5) + ", mot " +
+        signedPct(q1) + " der den er minst " + ordNo + ".";
     }
     var rA = points("Automation"), rB = points("Augmentation");
     var rows = [
@@ -880,11 +898,11 @@
     var m1 = fmtMonth(dates[dates.length - 3]);
     var m2 = fmtMonth(dates[dates.length - 1]);
     document.getElementById("usage-summary-subtitle").textContent = EN
-      ? "Employment growth by usage group, all ages: the average of the " +
-        "last three months (" + m1 + "–" + m2 + ") versus " +
+      ? "Employment growth by usage group, " + ageHead + ": the average " +
+        "of the last three months (" + m1 + "–" + m2 + ") versus " +
         epoch().preText + "."
-      : "Vekst i sysselsettingen per bruksgruppe, alle aldre: snittet av " +
-        "de tre siste månedene (" + m1 + "–" + m2 + ") mot " +
+      : "Vekst i sysselsettingen per bruksgruppe, " + ageHead + ": " +
+        "snittet av de tre siste månedene (" + m1 + "–" + m2 + ") mot " +
         epoch().preText + ".";
 
     if (!holder.children.length) {
@@ -1713,12 +1731,21 @@
         function (v) { state.publicAgeFacet = v; renderPublic(); });
     }
 
+    // Figur 10: aldersgruppe for vekstfiguren etter KI-bruk.
+    if (document.getElementById("usage-info-age-buttons")) {
+      makeButtons("usage-info-age-buttons",
+        USAGE_AGES.map(function (a) {
+          return { value: a, label: usageAgeLab(a) };
+        }),
+        function () { return state.usageInfoAge; },
+        function (v) { state.usageInfoAge = v; renderUsageInfographic(); });
+    }
+
     var ageSel = document.getElementById("sel-usage-age");
-    ["All ages", "21-30", "31-40", "41-50", "51-60"].forEach(function (a) {
+    USAGE_AGES.forEach(function (a) {
       var o = document.createElement("option");
       o.value = a;
-      o.textContent = a === "All ages"
-        ? (EN ? "All ages" : "Alle aldre") : ageLab(a);
+      o.textContent = usageAgeLab(a);
       ageSel.appendChild(o);
     });
 
@@ -1850,10 +1877,11 @@
       "fluctuations by showing the average of the last 3 or 6 months. " +
       "This makes trends easier to see, but the average lags turning " +
       "points somewhat.",
-    referanse: "The point in time the series are measured from. Claude " +
-      "Code (February 2025) marks the breakthrough of “agentic” AI that " +
-      "carries out longer tasks on its own, and is the default; ChatGPT " +
-      "(November 2022) marks the breakthrough of large language models.",
+    referanse: "The point in time the series are measured from. ChatGPT " +
+      "(November 2022) marks the breakthrough of large language models " +
+      "and is the default. Claude Code (February 2025) marks the " +
+      "breakthrough of “agentic” AI that carries out longer tasks on its " +
+      "own.",
     kvintil: "Occupations are sorted by AI exposure and split into five " +
       "equal-sized groups (“quintiles”). Quintile 1 is the fifth of " +
       "occupations with the lowest exposure, quintile 5 the fifth with " +
@@ -1880,8 +1908,8 @@
       "the occupations within each quintile differ. The sectors are " +
       "therefore shown separately.",
     indeks: "Every series is set to 100 in the reference month you " +
-      "select at the top: February 2025 (Claude Code, agentic AI) by " +
-      "default, November 2022 if you switch to ChatGPT. 105 means 5% " +
+      "select at the top: November 2022 (ChatGPT) by default, February " +
+      "2025 if you switch to Claude Code (agentic AI). 105 means 5% " +
       "more than in that month, 95 means 5% fewer. This lets large and " +
       "small groups be compared directly."
   } : {
@@ -1901,10 +1929,10 @@
       "måned til måned ved å vise gjennomsnittet av de siste 3 eller 6 " +
       "månedene. Det gjør trendene lettere å se, men snittet henger " +
       "litt etter vendepunktene.",
-    referanse: "Tidspunktet seriene regnes fra. Claude Code (februar " +
-      "2025) markerer gjennombruddet for «agentisk» KI som utfører " +
-      "lengre oppgaver på egen hånd, og er standardvalget; ChatGPT " +
-      "(november 2022) markerer gjennombruddet for språkmodeller.",
+    referanse: "Tidspunktet seriene regnes fra. ChatGPT (november 2022) " +
+      "markerer gjennombruddet for språkmodeller og er standardvalget. " +
+      "Claude Code (februar 2025) markerer gjennombruddet for «agentisk» " +
+      "KI som utfører lengre oppgaver på egen hånd.",
     kvintil: "Yrkene er sortert etter KI-eksponering og delt i fem " +
       "like store grupper («kvintiler»). Kvintil 1 er femtedelen av " +
       "yrkene med lavest eksponering, kvintil 5 femtedelen med " +
@@ -1930,8 +1958,8 @@
       "innenfor hver kvintil er ulike. Sektorene vises derfor hver for " +
       "seg.",
     indeks: "Alle serier settes til 100 i referansemåneden du velger " +
-      "øverst: februar 2025 (Claude Code, agentisk KI) som standard, " +
-      "november 2022 hvis du bytter til ChatGPT. 105 betyr 5 % flere " +
+      "øverst: november 2022 (ChatGPT) som standard, februar 2025 hvis " +
+      "du bytter til Claude Code (agentisk KI). 105 betyr 5 % flere " +
       "enn den måneden, 95 betyr 5 % færre. Slik kan store og små " +
       "grupper sammenlignes direkte."
   };

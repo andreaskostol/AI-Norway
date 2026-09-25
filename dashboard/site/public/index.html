@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="style.css?v=20260904i">
+<link rel="stylesheet" href="style.css?v=20260925a">
 <link rel="icon" href="assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -85,12 +85,12 @@
       </div>
     </div>
     <div id="headline-rows" class="headline-rows"
-         aria-label="KI-indeksen for alle aldre og for unge: sysselsettingsvekst per eksponeringskvintil før og etter agentisk KI"></div>
+         aria-label="KI-indeksen for alle aldre og for unge: sysselsettingsvekst per eksponeringskvintil før og etter valgt referanse (ChatGPT som standard)"></div>
     <p class="kpi-note" id="kpi-note"></p>
     <details class="def-details def-details-below">
       <summary>Hva tallet viser, og hvordan det er beregnet</summary>
       <p>KI-indeksen viser om jobbveksten siden <span
-        id="headline-def-since">Claude Code</span> har vært sterkere
+        id="headline-def-since">ChatGPT</span> har vært sterkere
         eller svakere i yrkene der KI kan utføre flest arbeidsoppgaver,
         sammenlignet med yrkene der KI kan utføre færrest. Et positivt
         tall betyr at de mest KI-utsatte yrkene har vokst mest; et
@@ -99,9 +99,9 @@
       <p>Regnestykket er sysselsettingsvekst i de mest KI-eksponerte
         yrkene minus veksten i de minst eksponerte: snittet av de tre
         siste månedene mot <span id="headline-def-ref">gjennomsnittet av
-        de tre månedene før Claude Code (november 2024–januar 2025),
-        lanseringen av agentisk KI. Før- og etter-siden måles over like
-        mange måneder.</span> Justering, eksponeringsmål og referanse
+        de tre månedene før ChatGPT (august–oktober 2022). Før- og
+        etter-siden måles over like mange måneder.</span> Justering,
+        eksponeringsmål og referanse
         følger valgene under.</p>
       <p>Indeksen følger sysselsettingen i norsk privat sektor med bruk
         av <a href="https://www.microdata.no/" target="_blank"
@@ -126,10 +126,10 @@
       <ul>
         <li id="qs-1"><strong>Ingen jobbkrise i Norge:</strong>
           samlet sysselsetting i privat sektor er høyere enn de tre
-          månedene før Claude Code, og andelen sysselsatte er om lag
+          månedene før ChatGPT, og andelen sysselsatte er om lag
           stabil.</li>
         <li id="qs-2"><strong>KI-indeksen er om lag null:</strong>
-          siden de tre månedene før Claude Code har samlet sysselsetting
+          siden de tre månedene før ChatGPT har samlet sysselsetting
           i de mest KI-eksponerte yrkene vokst om lag like mye som i de
           minst eksponerte.</li>
         <li id="qs-3"><strong>Men det er viktige forskjeller på tvers av
@@ -194,12 +194,12 @@
       <button class="info-btn" type="button" data-term="referanse"
               aria-label="Hva betyr dette?">?</button>
       <select id="sel-epoch">
-        <option value="claudecode" selected>Agentisk KI – Claude Code (feb. 2025)</option>
-        <option value="chatgpt">ChatGPT (nov. 2022)</option>
+        <option value="chatgpt" selected>ChatGPT (nov. 2022)</option>
+        <option value="claudecode">Agentisk KI – Claude Code (feb. 2025)</option>
       </select>
     </div>
     <div class="control control-note" id="idx-note">
-      Indeks = 100 i februar 2025 (lansering av Claude Code, agentisk KI)
+      Indeks = 100 i november 2022 (lansering av ChatGPT)
     </div>
   </div>
 </div>
@@ -223,15 +223,16 @@
         aria-label="Hva betyr dette?">?</button>. Linjene
       viser hver gruppes utfall — sysselsetting, nyansettelser eller
       FTE-justert gjennomsnittslønn, etter valget øverst — indeksert til
-      100 i <span id="fig1-base">februar 2025</span><button
+      100 i <span id="fig1-base">november 2022</span><button
         class="info-btn" type="button"
         data-term="indeks" aria-label="Hva betyr dette?">?</button>.
       Hvis en linje ligger lavere enn de andre, har den gruppen hatt
-      svakere utvikling siden <span id="fig1-since">Claude Code</span>
-      kom. <span id="fig1-refnote">Referansen er de tre månedene rett
-      før Claude Code, slik at sammenligningen er med arbeidsmarkedet
-      slik det var like før agentisk KI. Velg ChatGPT øverst for å måle
-      fra 2022 i stedet.</span>
+      svakere utvikling siden <span id="fig1-since">ChatGPT</span>
+      kom. <span id="fig1-refnote">Den bratte oppgangen i 2021–2022
+      (skyggelagt felt) er gjeninnhentingen i arbeidsmarkedet etter
+      pandemien. Referansen ligger helt på slutten av den perioden, i de
+      tre månedene rett før ChatGPT. Velg Claude Code øverst for å måle
+      fra 2025 i stedet.</span>
       Eksponeringsmålet kan byttes øverst: Eloundou m.fl. (2024) er
       standard, Mouchel m.fl. (2026) er et evidensbasert alternativ over
       de samme 397 yrkene<button class="info-btn" type="button"
@@ -348,12 +349,13 @@
   <section id="bruk-vekst" class="chart-section">
     <h2>10 · Vekst etter KI-bruk</h2>
     <p class="chart-intro" id="usage-summary-subtitle"></p>
+    <div class="btn-row" id="usage-info-age-buttons" role="tablist"></div>
     <div id="usage-infographic" class="infographic"></div>
     <p class="chart-footnote">
       Yrker gruppert etter andelen av yrkets Claude-forespørsler som er
       automatiserende (øverst) hhv. augmenterende (nederst), jf.
-      figur 11 under. Sysselsetting, alle aldre samlet; justeringen
-      følger valget øverst. Kilde:
+      figur 11 under. Sysselsetting; velg aldersgruppe over figuren.
+      Justeringen følger valget øverst. Kilde:
       <a href="https://www.anthropic.com/economic-index" target="_blank"
          rel="noopener">Anthropic Economic Index</a>
       (<a href="https://arxiv.org/abs/2503.04761" target="_blank"
@@ -832,6 +834,6 @@
 </footer>
 
 <script src="vendor/echarts.min.js"></script>
-<script src="app.js?v=20260904i"></script>
+<script src="app.js?v=20260925a"></script>
 </body>
 </html>

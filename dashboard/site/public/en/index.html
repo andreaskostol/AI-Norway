@@ -9,7 +9,7 @@
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="/style.css?v=20260904i">
+<link rel="stylesheet" href="/style.css?v=20260925a">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -84,12 +84,12 @@
       </div>
     </div>
     <div id="headline-rows" class="headline-rows"
-         aria-label="The index for all ages and for the young: employment growth by exposure quintile before and after agentic AI"></div>
+         aria-label="The index for all ages and for the young: employment growth by exposure quintile before and after the selected reference (ChatGPT by default)"></div>
     <p class="kpi-note" id="kpi-note"></p>
     <details class="def-details def-details-below">
       <summary>What the number shows, and how it is calculated</summary>
       <p>The AI Labor Market Index shows whether job growth since <span
-        id="headline-def-since">Claude Code</span> has been stronger or
+        id="headline-def-since">ChatGPT</span> has been stronger or
         weaker in the occupations where AI can perform the most tasks,
         compared with the occupations where it can perform the fewest. A
         positive number means the most AI-exposed occupations have grown
@@ -98,9 +98,9 @@
       <p>The calculation is employment growth in the most AI-exposed
         occupations minus growth in the least exposed: the average of the
         last three months against <span id="headline-def-ref">the average
-        of the three months before Claude Code (November 2024–January
-        2025), the launch of agentic AI. The before and after sides are
-        averaged over the same number of months.</span> Adjustment,
+        of the three months before ChatGPT (August–October 2022). The
+        before and after sides are averaged over the same number of
+        months.</span> Adjustment,
         exposure measure and reference follow the selections below.</p>
       <p>The index tracks employment in the Norwegian private sector
         using <a href="https://www.microdata.no/" target="_blank"
@@ -126,10 +126,10 @@
       <ul>
         <li id="qs-1"><strong>No job crisis in Norway:</strong>
           total private-sector employment is above its level in the three
-          months before Claude Code, and the employment rate is roughly
+          months before ChatGPT, and the employment rate is roughly
           stable.</li>
         <li id="qs-2"><strong>The AI Labor Market Index is roughly
-          zero:</strong> since the three months before Claude Code, total
+          zero:</strong> since the three months before ChatGPT, total
           employment in the most AI-exposed occupations has grown about as
           much as in the least exposed.</li>
         <li id="qs-3"><strong>But there are important differences across
@@ -194,12 +194,12 @@
       <button class="info-btn" type="button" data-term="referanse"
               aria-label="What does this mean?">?</button>
       <select id="sel-epoch">
-        <option value="claudecode" selected>Agentic AI – Claude Code (Feb 2025)</option>
-        <option value="chatgpt">ChatGPT (Nov 2022)</option>
+        <option value="chatgpt" selected>ChatGPT (Nov 2022)</option>
+        <option value="claudecode">Agentic AI – Claude Code (Feb 2025)</option>
       </select>
     </div>
     <div class="control control-note" id="idx-note">
-      Index = 100 in February 2025 (launch of Claude Code, agentic AI)
+      Index = 100 in November 2022 (launch of ChatGPT)
     </div>
   </div>
 </div>
@@ -223,15 +223,16 @@
         aria-label="What does this mean?">?</button>. The lines show each
       group's outcome — employment, new hires or FTE-adjusted average pay,
       depending on the selection above — indexed to 100 in <span
-        id="fig1-base">February 2025</span><button class="info-btn"
+        id="fig1-base">November 2022</span><button class="info-btn"
         type="button"
         data-term="indeks" aria-label="What does this mean?">?</button>.
       If a line lies below the others, that group has had weaker
-      development since <span id="fig1-since">Claude Code</span> arrived.
-      <span id="fig1-refnote">The reference is the three months just
-      before Claude Code, so the comparison is with the labor market as it
-      was immediately before agentic AI. Select ChatGPT above to measure
-      from 2022 instead.</span>
+      development since <span id="fig1-since">ChatGPT</span> arrived.
+      <span id="fig1-refnote">The steep rise in 2021–2022 (shaded area)
+      is the labor market's post-pandemic recovery. The reference sits
+      right at the end of that period, in the three months just before
+      ChatGPT. Select Claude Code above to measure from 2025
+      instead.</span>
       The exposure measure can be switched above: Eloundou et al. (2024)
       is the default, Mouchel et al. (2026) is an evidence-grounded
       alternative over the same 397 occupations<button class="info-btn"
@@ -354,12 +355,13 @@
   <section id="bruk-vekst" class="chart-section">
     <h2>10 · Growth by AI usage</h2>
     <p class="chart-intro" id="usage-summary-subtitle"></p>
+    <div class="btn-row" id="usage-info-age-buttons" role="tablist"></div>
     <div id="usage-infographic" class="infographic"></div>
     <p class="chart-footnote">
       Occupations grouped by the share of the occupation's Claude requests
       that are automating (top) or augmenting (bottom), cf. figure 11
-      below. Employment, all ages combined; the adjustment follows the
-      selection above. Source:
+      below. Employment; pick an age group above the figure. The
+      adjustment follows the selection at the top. Source:
       <a href="https://www.anthropic.com/economic-index" target="_blank"
          rel="noopener">Anthropic Economic Index</a>
       (<a href="https://arxiv.org/abs/2503.04761" target="_blank"
@@ -842,6 +844,6 @@
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/app.js?v=20260904i"></script>
+<script src="/app.js?v=20260925a"></script>
 </body>
 </html>

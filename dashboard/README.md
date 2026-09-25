@@ -129,9 +129,11 @@ python analysis/06_figures/recursive_kiindeks_headline.py mouchel claudecode you
 python dashboard/site/prepare_data.py
 
 # 4) Rett de hardkodede tallene i «Hovedfunn» (om.html) og «Key findings»
-#    (en/about.html). De er skrevet mot STANDARDREFERANSEN, som siden
-#    2026-09-04 er agentisk KI (Claude Code, snitt feb. 2024–jan. 2025) —
-#    ikke ChatGPT. Bump cache-parameteren, forhåndsvis, deploy
+#    (en/about.html). De er skrevet mot referansen Claude Code (snitt
+#    nov. 2024–jan. 2025). Standardreferansen på forsiden er ChatGPT fra
+#    2026-09-25 (var Claude Code 2026-09-04 til 2026-09-25); planen er
+#    agentisk KI som standard igjen fra november 2026. Bump
+#    cache-parameteren, forhåndsvis, deploy
 cd "dashboard/site" && flyctl deploy
 ```
 
