@@ -1,0 +1,15 @@
+nivaakode,nivaanavn,hovednivaakode,beskrivelse,orden
+B3,"Bachelor, 3-årig",LN,"Normert studietid 3 år, 180 studiepoeng.",1
+B4,"Bachelor, 4-årig",LN,"Normert studietd 4 år, 240 studiepoeng.",2
+HK,"Høyskolekandidat, 2-årig",LN,"Normert studietid 2 år, 120 studiepoeng. Gir rett til tittelen høgskolekandidat.",3
+YU,"Yrkesutdanning, 4-årig",LN,Omfatter allmennlærerutdanning/grunnskolelærerutdanning og faglærerutdanning med normert studietid 4 år. 240 studiepoeng.,4
+AR,"Årsstudium, 60-studiepoeng",LN,"Programmer og eventuelle kandidatbenevnelser på 60 studiepoeng, f.eks. PPU skal regnes som kandidatbenevnelse",5
+LN,Lavere nivå (øvrige),LN,"Omfatter programmer på mindre enn 60 studiepoeng på lavere nivå, programmer og kandidatbenevnelser over 60 og mindre enn 120 studiepoeng som ikke inngår i nivåkategoriene B3, B4, HK og YU, f.eks. videreutdanninger innen helsefag på 90 studiepoeng (anestesi/operasjon/intensiv, barnepleie etc.), annet på lavere nivå som ikke passer i kategoriene over.",6
+M2,"Master, 2-årig",HN,Iht. § 3 i forskrift om krav til mastergrad.,7
+ME,"Master, erfaringsbasert, 1,5-2 år",HN,90-120 studiepoeng. Iht. § 5 i forskrift om krav til mastergrad.,8
+MX,"Master, 1-1,5-årig",HN,60-90 studiepoeng. Iht. § 7 i forskrift om krav til mastergrad.,9
+HN,Høyere nivå (øvrige),HN,"Omfatter hovedfag-/magistergradsprogrammer (utfaset), 2-årige videreutdanninger (120 studiepoeng) innen helsefag, f.eks. jordmor",10
+M5,"Master, 5-årig",MP,Normert studietid 5 år. 300 studiepoeng. Iht. § 2-8 i universitets- og høyskoleforskriften.,11
+PR,Profesjonsstudium,MP,"Omfatter profesjonsstudier på mer enn 240 studiepoeng for hele studietiden; teologi, medisin, psykologi, veterinær etc. (5-7 år).",12
+FU,Forskerutdanning,FU,Doktorgrads-/ph.d.-programmer.,13
+VS,Videregående skoles nivå,AN,"Programmer på videregående skoles nivå, forkurs osv.",14

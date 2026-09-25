@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Education — The AI Labor Market Index</title>
+<meta name="description" content="Which jobs does a degree lead to, and how exposed are they to AI? Pick a field and a level and see the ten most common tasks in those jobs, how exposed each task is to language models, how Claude is used on it, and the most common jobs. Register data from utdanning.no, O*NET, Eloundou et al. and the Anthropic Economic Index.">
+<link rel="canonical" href="https://kiindeksen.no/en/education.html">
+<link rel="alternate" hreflang="nb" href="https://kiindeksen.no/utdanning.html">
+<link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/education.html">
+<link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/utdanning.html">
+<link rel="stylesheet" href="/style.css?v=20260925a">
+<link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
+</head>
+<body data-panel="utdanning">
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-logos">
+      <a href="/en/" title="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School">
+        <img src="/assets/ki-logo.png"
+             alt="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School"></a>
+    </div>
+    <nav class="site-nav">
+      <a href="#velg">Pick a degree</a>
+      <a href="#oppgaver">The tasks</a>
+      <a href="#jobber">The jobs</a>
+      <a href="#metode">Method</a>
+    </nav>
+    <div class="brand">
+      <div class="brand-top">
+        <nav class="panel-nav" aria-label="Pages">
+          <a href="/en/">The AI Labor Market Index</a>
+          <a href="/en/occupations.html">Occupations</a>
+          <a href="/en/education.html" class="active">Education</a>
+          <a href="/en/about.html">About</a>
+        </nav>
+        <a class="lang-toggle" href="/utdanning.html" hreflang="nb" lang="nb">Norsk</a>
+      </div>
+      <p class="tagline">Monthly indicators on artificial intelligence and the Norwegian labor market</p>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+<aside class="toc" aria-label="Contents">
+  <nav id="toc-nav">
+    <a href="#velg">Pick a degree</a>
+    <a href="#oppgaver">The ten most common tasks</a>
+    <a href="#jobber">The most common jobs</a>
+    <a href="#metode">Method</a>
+  </nav>
+</aside>
+<div class="content">
+
+<main class="container">
+
+  <section id="velg" class="hero">
+    <h2 class="hero-title hero-title-wide">Which jobs does a degree lead to, and how exposed are they to AI?</h2>
+    <p class="lede">
+      Pick a field and a level. You get the ten most common tasks in the
+      jobs the degree leads to, how exposed each task is to language
+      models, how Claude is used on it, and finally the most common jobs.
+    </p>
+    <details class="more">
+      <summary>About the numbers</summary>
+      <p>The jobs come from Statistics Norway's registers via
+        utdanning.no: every resident aged 20–70 with the degree as their
+        highest education, linked to occupation. The tasks come from
+        O*NET, the US occupational database, through the same crosswalk
+        as the index. Exposure per task is Eloundou et al. (2024). Claude
+        use is the Anthropic Economic Index, latest sample. Bachelor is
+        the default; switch level for master, PhD, vocational college or
+        upper secondary. Field names are in Norwegian, as in the
+        source.</p>
+    </details>
+    <p class="panel-status"></p>
+    <div class="control-row panel-controls">
+      <div class="control">
+        <label for="u-level">Level</label>
+        <select id="u-level"></select>
+      </div>
+      <div class="control control-search">
+        <label for="u-search">Field</label>
+        <div class="occ-picker">
+          <input type="search" id="u-search" autocomplete="off"
+                 aria-label="Search for a field or degree"
+                 placeholder="Click for the list, or type: nursing, law, master in economics …">
+          <ul id="u-hits" class="occ-hits" hidden></ul>
+        </div>
+      </div>
+    </div>
+    <p class="pick-hint">
+      Type what you call your degree. The search matches the fields and
+      the names of more than 2,400 individual degrees in the register,
+      in Norwegian and English.
+    </p>
+    <div id="u-lead" class="pick-summary"></div>
+  </section>
+
+  <section id="oppgaver" class="chart-section">
+    <h2>The ten most common tasks for <span class="u-group-name">the chosen degree</span></h2>
+    <p class="chart-intro">
+      The tasks in the jobs the degree leads to, with AI exposure and the
+      share of Claude use on the task that is automation. A task often
+      belongs to several of the occupations; the column shows the main
+      ones. Click a task.
+    </p>
+    <details class="more">
+      <summary>How the list is made</summary>
+      <p>Every occupation has a task list in O*NET, with how important
+        each task is and how many in the occupation do it. A task's
+        weight for a degree is importance × share who do it, weighted by
+        how many with the degree hold the occupation. The ten with the
+        largest weight are shown. AI exposure is a score from 0 to 1 per
+        task, the mean of Eloundou et al.'s three ratings of whether a
+        language model can halve the time the task takes, and the group
+        the score falls in using the same five groups as the
+        occupations: least exposed, low, medium, high, most exposed.
+        Automation is Anthropic's bucketing, directive and feedback loop,
+        as a share of Claude.ai conversations about the task. Tasks
+        Anthropic has no data for are shown without a number.</p>
+    </details>
+    <div class="table-wrap" id="u-task-table"></div>
+    <p class="chart-footnote" id="u-task-foot"></p>
+
+    <h3 id="u-task-title">How Claude is used on the task</h3>
+    <div id="chart-u-task" class="chart chart-short"></div>
+    <p class="chart-footnote" id="u-task-note"></p>
+  </section>
+
+  <section id="jobber" class="chart-section">
+    <h2>The most common jobs for <span class="u-group-name">the chosen degree</span></h2>
+    <p class="chart-intro">
+      The ten occupations most people with the degree work in, with
+      exposure and automation.
+    </p>
+    <div class="btn-row" id="u-cohort-buttons"></div>
+    <div class="table-wrap" id="u-occ-table"></div>
+    <p class="chart-footnote" id="u-occ-note"></p>
+  </section>
+
+  <section id="metode" class="prose-section">
+    <h2>Method</h2>
+    <p>
+      The page joins four sources in one chain: from degree to
+      occupation, from occupation to tasks, and for each task exposure
+      and Claude use. Institutions have been taken off the page and will
+      come as a separate analysis.
+    </p>
+
+    <details class="method-details">
+      <summary>From degree to occupation</summary>
+      <p>The starting point is utdanning.no's register statistics, built
+        on Statistics Norway's registers: for each education code in
+        NUS2000, the number of residents aged 20–70 who hold the code as
+        their highest completed education, split by occupation (STYRK-08)
+        for those employed. Codes are summed to the three-digit group in
+        NUS2000: the first digit is level, the next two are field. Groups
+        with fewer than 100 employed persons with an exposure score are
+        left out. The link is from November 2024. Recent graduates are
+        those who completed one to three years ago, a column utdanning.no
+        does not document.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>From occupation to tasks</summary>
+      <p>O*NET is the US Department of Labor's occupational database.
+        Every occupation has a task list, and for each task a sample of
+        incumbents has said how important it is (1–5) and whether they do
+        it. Norwegian STYRK-08 codes go to US SOC codes through the same
+        crosswalk as the exposure measures (ISCO-08, BLS). Where O*NET has
+        specialties under a SOC code, the base code is used. A task's
+        weight for a degree is importance × share who do it, split
+        equally between the SOC codes a STYRK occupation maps to, and
+        weighted by the share of the employed who hold the occupation.
+        O*NET version 30.1.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Exposure per task</summary>
+      <p>Eloundou et al. (2024) had GPT-4 and humans rate every O*NET
+        task: E1 when a language model alone can halve the time the task
+        takes at the same quality, E2 when that needs software built on
+        the model, E0 otherwise. The score in the table is E1 = 1,
+        E2 = 0.5, E0 = 0, the same "beta" weighting as the occupation
+        measure on the index page. The degree's task score is the
+        weighted mean over all tasks in its occupations, not only the ten
+        shown.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Claude use per task</summary>
+      <p>The Anthropic Economic Index classifies a sample of
+        conversations by O*NET task and by five interaction types. Two
+        are automation: the person asks for a finished result
+        (directive), or the model does the work and the person relays
+        what happened (feedback loop). Three are augmentation: task
+        iteration, validation and learning. The numbers here are the
+        latest Claude.ai (chat) sample. Tasks are
+        matched on text. Anthropic publishes only tasks with use, so
+        about a third of the tasks in the tables have a number. The
+        degree's automation share is weighted by each task's share of
+        all Claude.ai use.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Caveats</summary>
+      <ol>
+        <li>Task texts are O*NET's English statements and describe US
+          occupations.</li>
+        <li>The register is national per education code. It does not
+          distinguish institutions.</li>
+        <li>Claude conversations are global and count conversations, not
+          working time.</li>
+        <li>Eloundou's labels are assessments of what is possible, not
+          observed use.</li>
+        <li>Small groups get thin numbers. Groups with fewer than 100
+          employed are left out.</li>
+      </ol>
+    </details>
+    <p class="chart-footnote">Sources: <a href="https://utdanning.no/dokumentasjon/yrkes_utdanningstatistikk" target="_blank" rel="noopener">utdanning.no</a> · <a href="https://www.onetcenter.org/database.html" target="_blank" rel="noopener">O*NET</a> · <a href="https://www.science.org/doi/10.1126/science.adj0998" target="_blank" rel="noopener">Eloundou et al. (2024)</a> · <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex" target="_blank" rel="noopener">Anthropic Economic Index</a>.</p>
+  </section>
+
+</main>
+
+</div><!-- .content -->
+</div><!-- .layout -->
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      The AI Labor Market Index · Øystein Hernæs (Frisch Centre) and
+      Andreas R. Kostøl (BI Norwegian Business School) ·
+      Data: utdanning.no, O*NET, Eloundou et al. (2024), Anthropic Economic Index ·
+      <a href="/en/">The AI Labor Market Index</a> ·
+      <a href="/en/occupations.html">Occupations</a> ·
+      <a href="/en/about.html">About</a>
+    </p>
+  </div>
+</footer>
+
+<script src="/vendor/echarts.min.js"></script>
+<script src="/panels.js?v=20260925a"></script>
+</body>
+</html>

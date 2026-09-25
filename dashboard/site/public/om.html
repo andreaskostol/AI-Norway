@@ -3,27 +3,35 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Om KI-indeksen — metode og kilder</title>
-<meta name="description" content="Om KI-indeksen: datagrunnlag (A-ordningen via microdata.no), KI-eksponeringsmål (Eloundou m.fl. 2024), utfall, glatting og forskjeller fra Stanford Digital Economy Lab sitt Canaries Dashboard.">
+<title>Om KI-indeksen</title>
+<meta name="description" content="Om KI-indeksen og de to som lager den: Øystein Hernæs (Frischsenteret) og Andreas R. Kostøl (Handelshøyskolen BI). Bestill en tilrettelagt rapport eller presentasjon. Metode, kilder og sitering finnes på forsiden.">
 <link rel="canonical" href="https://kiindeksen.no/om.html">
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/om.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/about.html">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/om.html">
-<link rel="stylesheet" href="style.css?v=20260904i">
+<link rel="stylesheet" href="style.css?v=20260925a">
 <link rel="icon" href="assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
 
 <header class="site-header">
   <div class="container">
-    <div class="brand">
-      <a class="lang-toggle" href="/en/about.html" hreflang="en" lang="en">English</a>
-      <p class="tagline"><a href="/" style="text-decoration:none;color:inherit">Månedlige indikatorer for kunstig intelligens og det norske arbeidsmarkedet</a></p>
-    </div>
     <div class="header-logos">
       <a href="/" title="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI">
         <img src="assets/ki-logo.png"
              alt="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI"></a>
+    </div>
+    <div class="brand">
+      <div class="brand-top">
+        <nav class="panel-nav" aria-label="Sider">
+          <a href="/">KI-indeksen</a>
+          <a href="/yrker.html">Yrker</a>
+          <a href="/utdanning.html">Utdanning</a>
+          <a href="/om.html" class="active">Om</a>
+        </nav>
+        <a class="lang-toggle" href="/en/about.html" hreflang="en" lang="en">English</a>
+      </div>
+      <p class="tagline">Månedlige indikatorer for kunstig intelligens og det norske arbeidsmarkedet</p>
     </div>
   </div>
 </header>
@@ -32,165 +40,108 @@
 
   <section class="prose-section">
     <h2>Om KI-indeksen</h2>
-    <p>
-      KI-indeksen er et månedlig oppdatert dashbord for hvordan kunstig
-      intelligens påvirker det norske arbeidsmarkedet, utarbeidet av
-      Øystein Hernæs (Frischsenteret) og Andreas R. Kostøl
-      (Handelshøyskolen BI). Indeksen følger sysselsetting,
-      nyansettelser og lønn i norsk privat sektor, gruppert etter
-      yrkenes KI-eksponering og arbeidstakernes alder — en norsk
-      parallell til Stanford Digital Economy Lab (DEL) sitt Canaries
-      Dashboard. Fra september 2026 vises de samme kuttene også for
-      offentlig sektor, i egne figurer. Selve dashbordet finnes på
-      <a href="https://kiindeksen.no/">kiindeksen.no</a>.
+    <p class="lede">
+      KI-indeksen følger måned for måned hvordan kunstig intelligens
+      påvirker det norske arbeidsmarkedet, bygget på registerdata for
+      alle lønnstakere i privat sektor.
     </p>
-
-    <h2>Hovedfunn</h2>
-    <p class="chart-footnote">Per juni 2026 (release september 2026).
-      Tallene er målt mot de tre månedene før Claude Code (november
-      2024–januar 2025). Forsiden viser som standard referansen ChatGPT
-      (august–oktober 2022); velg Claude Code der for samme
-      sammenligning. Før- og etter-siden måles over like mange måneder.
-      Oppdaterte tall på <a href="https://kiindeksen.no/">forsiden</a>.</p>
-    <ul>
-      <li><strong>Ingen jobbkrise i Norge:</strong> samlet sysselsetting
-        i privat sektor er 0,6 % høyere enn de tre månedene før Claude
-        Code, og sysselsettingen per innbygger er om lag uendret.</li>
-      <li><strong>KI-indeksen er om lag null (+0,0):</strong>
-        sysselsettingen i de mest KI-eksponerte yrkene har falt med
-        0,6 %, og i de minst eksponerte like mye. 95 %-intervallet fra
-        bootstrap går fra −2,1 til +2,1 prosentpoeng. Med det
-        alternative eksponeringsmålet fra Mouchel m.fl. (2026) er
-        indeksen −0,0. Måler vi i stedet fra de tre månedene før
-        ChatGPT, er den +1,6. Indeksen ligger nær null uansett mål, og
-        er bare tydelig positiv når vi måler helt tilbake til 2022.</li>
-      <li><strong>Men det er viktige forskjeller på tvers av
-        alder:</strong> blant de yngste (21–30 år) i de mest
-        KI-eksponerte yrkene har sysselsettingen falt med 4,6 %. For
-        unge i de minst eksponerte yrkene er fallet 1,6 %. Arbeidstakere
-        31–60 år i de samme yrkene har hatt en vekst på 0,6 %. Siste
-        tolv måneder er fallet blant de yngste 3,7 %.</li>
-      <li><strong>To mekanismer virker i hver sin retning:</strong>
-        der KI-bruken er mest augmenterende (KI hjelper arbeidstakeren)
-        har sysselsettingen vokst med 1,0 %, mot 0,5 % der den er minst
-        augmenterende. Der bruken er mest automatiserende (KI utfører
-        oppgaven) er tallet −0,6 %, mot −0,5 % der den er minst
-        automatiserende.</li>
-    </ul>
-
-    <h2>Metode</h2>
-    <p>
-      Datagrunnlaget er A-ordningen via
-      <a href="https://www.microdata.no/" target="_blank"
-         rel="noopener">microdata.no</a>: hele populasjonen av
-      lønnstakere i privat sektor, månedlig fra januar 2021, i
-      aldersgruppene 21–30, 31–40, 41–50 og 51–60 år.
-      Referanseperioden for hver måned er uken som inneholder den 16.
-    </p>
-    <p>
-      <strong>KI-eksponering.</strong> Hvert yrke (firesifret STYRK-08)
-      er koblet til eksponeringsmålet «beta» fra
-      <a href="https://www.science.org/doi/10.1126/science.adj0998"
-         target="_blank" rel="noopener">Eloundou m.fl. (2024,
-      <em>Science</em>)</a> via yrkeskodeverkene ISCO-08 og SOC.
-      Kvintilene er likevektet per yrke, samme konstruksjon som i
-      DEL-dashboardet. Bruksgruppene bygger på
-      <a href="https://www.anthropic.com/economic-index" target="_blank"
-         rel="noopener">Anthropic Economic Index</a>
-      (<a href="https://arxiv.org/abs/2503.04761" target="_blank"
-         rel="noopener">Handa m.fl. 2025</a>) og følger grupperingen i
-      <a href="https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
-         target="_blank" rel="noopener">Brynjolfsson, Chandar og Chen
-      (2025)</a>.
-    </p>
-    <p>
-      <strong>Alternativt eksponeringsmål.</strong> Fra release 2026-09
-      kan brukeren bytte til det evidensbaserte målet fra
-      <a href="https://arxiv.org/abs/2605.15474" target="_blank" rel="noopener">Mouchel m.fl.
-      (2026)</a>, som bygger på dokumentert KI-bruk. Kvintilene har like
-      mange yrker over de samme 397 yrkene som Eloundou-målet.
-      Rangkorrelasjonen mellom målene er 0,94, og to tredjedeler av
-      yrkene havner i samme kvintil. Målvelgeren gjelder hovedfiguren,
-      figur 1–2; usikkerhetsbåndet er
-      bootstrappet separat for hvert mål.
-    </p>
-    <p>
-      <strong>Utfall.</strong> <em>Sysselsetting</em> er antall
-      lønnstakere i gruppen. <em>Nyansettelser</em> er antall jobber med
-      registrert startdato i vinduet mellom forrige og gjeldende
-      månedlige referansedato. <em>Lønn</em> er gruppens
-      gjennomsnittlige kontantlønn per måned, vektet opp til
-      fulltidsekvivalent (FTE) med hver yrke-alder-celles
-      gjennomsnittlige stillingsprosent — en deltidsstilling teller som
-      sin andel av et årsverk, slik at lønnsendringer ikke blandes med
-      endringer i arbeidstid; lønnsseriene er nominelle.
-    </p>
-    <p>
-      <strong>Glatting og sesongjustering.</strong> Figurene viser som
-      standard sesongjusterte serier glattet med et glidende snitt over de
-      siste 6 månedene, skalert til 100 i referansemåneden etter glattingen (februar 2025 som standard, november 2022 med ChatGPT som referanse); rå (ujusterte) serier — samme metode som DEL —
-      kan også velges. Sesongjusteringen er en X-11-kjerne i
-      logaritmer med faktorer estimert på 2021–2024 og deretter frosset.
-      I de nedlastbare datafilene finnes i tillegg befolkningsjusterte
-      varianter av hver serie (kolonnen <code>adjustment</code>).
-    </p>
-    <p>
-      <strong>Befolkningsjustering (per innbygger).</strong>
-      Befolkningen vokser ulikt på tvers av aldersgrupper, så
-      headcount-serier blander arbeidsmarkedsendringer med demografi.
-      Per innbygger-variantene deler antall sysselsatte på den bosatte
-      befolkningen i samme aldersgruppe
-      (<a href="https://www.ssb.no/statbank/table/07459" target="_blank"
-         rel="noopener">SSB tabell 07459</a>,
-      kvartalstall interpolert til måned), slik at indeksen måler
-      jobber per person i stedet for antall jobber. Alle varianter
-      ligger i de nedlastbare datafilene (kolonnen
-      <code>adjustment</code>).
-    </p>
-    <p>
-      <strong>Offentlig sektor.</strong> Fra release 2026-09 publiseres
-      hovedkuttene også for lønnstakere i offentlig sektor: offentlig
-      forvaltning og offentlig eide foretak (institusjonell sektor 1110,
-      1120, 1510, 1520, 6100 og 6500), 21–60 år. Yrkene får samme
-      nasjonale eksponeringskvintil som i privat sektor. Men yrkene
-      innenfor hver kvintil er helt andre. Nesten halvparten av den mest
-      eksponerte kvintilen i offentlig sektor er høyere saksbehandlere
-      (STYRK-08 2422), og over en tredjedel av all offentlig sysselsetting
-      ligger i kvintil 3, dominert av lærere og sykepleiere. Nivåene bør
-      derfor ikke sammenlignes på tvers av sektor. KI-indeksen beregnes
-      bare for privat sektor.
-    </p>
-    <p>
-      <strong>Forskjeller fra DEL-dashboardet.</strong> DEL bruker et
-      balansert panel på ~25&nbsp;000 amerikanske firmaer med
-      ADP-lønnsdata; vi bruker hele den norske populasjonen av private
-      lønnstakere uten utvalgsseleksjon. Aldersgruppene er tiårsgrupper
-      (deres er finere). Sammensetningen er svært ulik: i ADP-panelet
-      ligger 66 prosent av sysselsettingen i de to mest eksponerte
-      kvintilene, i Norge omtrent 40 prosent.
-    </p>
-    <p>
-      <strong>Reviderbarhet.</strong> A-ordningen kan revidere ferske
-      måneder. Hver månedlige datarelease arkiveres derfor som en egen
-      årgang («vintage») og endres ikke i ettertid.
-    </p>
-
-    <h2>Sitering og kontakt</h2>
-    <p>
-      Data og figurer kan fritt brukes med kildehenvisning til
-      KI-indeksen (kiindeksen.no) — se
-      <a href="/#sitering">siteringsinformasjon med BibTeX</a>.
-      Forskningsartikkelen med fullstendig metodebeskrivelse og
-      analyse: Hernæs, Øystein and Andreas Ravndal Kostøl (2026).
-      “Has AI Widened Employment Gaps? Tracking Early-Career Employment
-      by Occupational Exposure in Norway”. RFBerlin Discussion Paper
-      179/26
+    <p class="about-links">
+      <a href="/#metode">Metode og kilder</a> ·
+      <a href="/#sitering">Siter KI-indeksen</a> ·
+      Forskningsartikkel: Hernæs og Kostøl (2026), RFBerlin Discussion
+      Paper 179/26
       (<a href="https://www.rfberlin.com/wp-content/uploads/2026/07/26179.pdf"
-          target="_blank" rel="noopener">PDF</a>). Kontakt:
-      <a href="mailto:andreas.r.kostol@bi.no">andreas.r.kostol@bi.no</a>.
+          target="_blank" rel="noopener">PDF</a>) ·
+      Kontakt: <a href="mailto:andreas.r.kostol@bi.no">andreas.r.kostol@bi.no</a>
     </p>
-    <p><a href="/">← Til dashbordet</a> ·
-       <a href="/#data">Last ned data</a></p>
+
+    <div class="about-people">
+      <div class="person">
+        <img src="assets/team/oystein-hernaes.jpg" alt="Øystein Hernæs">
+        <div>
+          <h3>Øystein Hernæs</h3>
+          <p class="team-role">Seniorforsker, Frischsenteret</p>
+          <p>Forsker på arbeidsmarked, velferdsordninger og utdanning
+            med norske registerdata. Frischsenteret er et uavhengig
+            forskningsinstitutt i Oslo, knyttet til Universitetet i
+            Oslo.</p>
+          <p class="team-links">
+            <a href="https://frischsenteret.no/person-details/?person_id=oysteimh"
+               target="_blank" rel="noopener">Frischsenteret</a> ·
+            <a href="https://sites.google.com/site/oeysteinmhernaes/"
+               target="_blank" rel="noopener">Hjemmeside</a> ·
+            <a href="https://scholar.google.com/citations?user=dNIe1mYAAAAJ"
+               target="_blank" rel="noopener">Google Scholar</a> ·
+            <a href="https://www.linkedin.com/in/%C3%B8ystein-hern%C3%A6s-a526402/"
+               target="_blank" rel="noopener">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+      <div class="person">
+        <img src="assets/team/andreas-kostol.jpg" alt="Andreas R. Kostøl">
+        <div>
+          <h3>Andreas R. Kostøl</h3>
+          <p class="team-role">Førsteamanuensis, Handelshøyskolen BI</p>
+          <p>Førsteamanuensis i samfunnsøkonomi ved Handelshøyskolen
+            BI. Forsker på arbeidsmarked, trygd og hvordan kunstig
+            intelligens endrer jobber.</p>
+          <p class="team-links">
+            <a href="https://www.bi.no/om-bi/ansatte/institutt-for-samfunnsokonomi/andreas-ravndal-kostol/"
+               target="_blank" rel="noopener">BI</a> ·
+            <a href="https://www.andreaskostol.no/"
+               target="_blank" rel="noopener">Hjemmeside</a> ·
+            <a href="https://scholar.google.com/citations?user=d3J86oQAAAAJ"
+               target="_blank" rel="noopener">Google Scholar</a> ·
+            <a href="https://www.linkedin.com/in/andreas-kostol-19b388b9/"
+               target="_blank" rel="noopener">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="prose-section" id="bestill">
+    <h2>Bestill en tilrettelagt rapport eller presentasjon</h2>
+    <p>
+      Vi lager gjerne en analyse eller et foredrag for din virksomhet,
+      bransje eller utdanning, med de samme dataene som nettstedet.
+      Fyll ut det du vet, så åpnes en e-post til oss med bestillingen.
+    </p>
+    <form id="order-form" class="order-form" novalidate>
+      <label>Navn
+        <input name="navn" required autocomplete="name"></label>
+      <label>Virksomhet eller organisasjon
+        <input name="virksomhet" autocomplete="organization"></label>
+      <label>Din e-post
+        <input type="email" name="epost" required autocomplete="email"></label>
+      <label>Format
+        <select name="format">
+          <option>Presentasjon</option>
+          <option>Rapport</option>
+          <option>Presentasjon og rapport</option>
+          <option>Vet ikke ennå</option>
+        </select></label>
+      <label class="wide">Ønsket fokus
+        <textarea name="fokus" rows="3"
+                  placeholder="For eksempel: yrkene i bank og finans, sykepleierutdanningen, unge i vår bransje, en region"></textarea></label>
+      <label>Målgruppe
+        <input name="malgruppe" placeholder="Ledergruppe, studenter, tillitsvalgte, styre …"></label>
+      <label>Ønsket tidspunkt
+        <input name="tidspunkt" placeholder="Dato eller periode"></label>
+      <label>Sted eller digitalt
+        <input name="sted" placeholder="By, lokale eller videomøte"></label>
+      <label>Varighet
+        <input name="varighet" placeholder="For eksempel 30 minutter, 1 time, halv dag"></label>
+      <label class="wide">Annet
+        <textarea name="annet" rows="2"
+                  placeholder="Spørsmål dere vil ha svar på, egne data dere kan dele, budsjett"></textarea></label>
+      <div class="order-actions">
+        <button type="submit">Lag e-post med bestillingen</button>
+        <p class="order-note">Knappen åpner e-postprogrammet ditt med
+          bestillingen ferdig utfylt, til andreas.r.kostol@bi.no.
+          Ingenting sendes før du trykker send.</p>
+      </div>
+    </form>
   </section>
 
 </main>
@@ -200,10 +151,36 @@
     <p>
       KI-indeksen · Øystein Hernæs (Frischsenteret) og
       Andreas R. Kostøl (Handelshøyskolen BI) ·
-      Data: A-ordningen via microdata.no · Oppdateres månedlig
+      Data: A-ordningen via microdata.no · Oppdateres månedlig ·
+      <a href="/yrker.html">Yrker</a> ·
+      <a href="/utdanning.html">Utdanning</a>
     </p>
   </div>
 </footer>
 
+<script>
+(function () {
+  // Bestillingen: bygg en mailto-lenke fra skjemaet. Ingen tjener,
+  // ingenting sendes fra nettstedet; leseren sender selv.
+  var form = document.getElementById("order-form");
+  if (!form) return;
+  var FIELDS = [["navn", "Navn"], ["virksomhet", "Virksomhet"], ["epost", "E-post"],
+                ["format", "Format"], ["fokus", "Ønsket fokus"], ["malgruppe", "Målgruppe"],
+                ["tidspunkt", "Ønsket tidspunkt"], ["sted", "Sted eller digitalt"],
+                ["varighet", "Varighet"], ["annet", "Annet"]];
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var lines = ["Hei,", "", "Jeg vil gjerne bestille en tilrettelagt analyse fra KI-indeksen.", ""];
+    FIELDS.forEach(function (f) {
+      var v = (form.elements[f[0]].value || "").trim();
+      lines.push(f[1] + ": " + (v || "–"));
+    });
+    lines.push("", "Sendt fra kiindeksen.no/om.html");
+    var subject = "Bestilling: tilrettelagt " + (form.elements.format.value || "analyse").toLowerCase() + " fra KI-indeksen";
+    window.location.href = "mailto:andreas.r.kostol@bi.no?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(lines.join("\n"));
+  });
+})();
+</script>
 </body>
 </html>

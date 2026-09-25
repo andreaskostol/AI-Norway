@@ -37,4 +37,40 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
+  <url>
+    <loc>https://kiindeksen.no/yrker.html</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://kiindeksen.no/yrker.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/occupations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/yrker.html"/>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kiindeksen.no/en/occupations.html</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://kiindeksen.no/yrker.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/occupations.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/yrker.html"/>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kiindeksen.no/utdanning.html</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://kiindeksen.no/utdanning.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/education.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/utdanning.html"/>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kiindeksen.no/en/education.html</loc>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://kiindeksen.no/utdanning.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/education.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/utdanning.html"/>
+    <lastmod>2026-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Occupations — The AI Labor Market Index</title>
+<meta name="description" content="How exposed is your job to AI? Search for your occupation and see its AI exposure, how Claude is used on its tasks, similar occupations, and employment and pay since Claude Code. Built on the Anthropic Economic Index, O*NET and Norwegian register data.">
+<link rel="canonical" href="https://kiindeksen.no/en/occupations.html">
+<link rel="alternate" hreflang="nb" href="https://kiindeksen.no/yrker.html">
+<link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/occupations.html">
+<link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/yrker.html">
+<link rel="stylesheet" href="/style.css?v=20260925a">
+<link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
+</head>
+<body data-panel="yrker">
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-logos">
+      <a href="/en/" title="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School">
+        <img src="/assets/ki-logo.png"
+             alt="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School"></a>
+    </div>
+    <nav class="site-nav">
+      <a href="#velg">Pick an occupation</a>
+      <a href="#bruk">How AI is used</a>
+      <a href="#ligner">Similar occupations</a>
+      <a href="#alle">All occupations</a>
+      <a href="#metode">Method</a>
+    </nav>
+    <div class="brand">
+      <div class="brand-top">
+        <nav class="panel-nav" aria-label="Pages">
+          <a href="/en/">The AI Labor Market Index</a>
+          <a href="/en/occupations.html" class="active">Occupations</a>
+          <a href="/en/education.html">Education</a>
+          <a href="/en/about.html">About</a>
+        </nav>
+        <a class="lang-toggle" href="/yrker.html" hreflang="nb" lang="nb">Norsk</a>
+      </div>
+      <p class="tagline">Monthly indicators on artificial intelligence and the Norwegian labor market</p>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+<aside class="toc" aria-label="Contents">
+  <nav id="toc-nav">
+    <a href="#velg">Pick an occupation</a>
+    <a href="#utvikling">Employment and pay</a>
+    <a href="#bruk">How AI is used</a>
+    <a href="#ligner">Similar occupations</a>
+    <a href="#tid">Over time</a>
+    <a href="#alle">All occupations</a>
+    <a href="#metode">Method</a>
+  </nav>
+</aside>
+<div class="content">
+
+<main class="container">
+
+  <section id="velg" class="hero">
+    <h2 class="hero-title">How exposed is your job to AI?</h2>
+    <p class="lede">
+      Search for your occupation and see how exposed it is, how Claude
+      is used on its tasks, and how employment and pay have moved since
+      Claude Code.
+    </p>
+    <div class="occ-picker">
+      <input type="search" id="occ-search" autocomplete="off"
+             aria-label="Search for an occupation"
+             placeholder="Type an occupation, for example nurse or accountant">
+      <ul id="occ-hits" class="occ-hits" hidden></ul>
+    </div>
+    <p class="panel-status"></p>
+    <div id="occ-chips" class="occ-chips"></div>
+    <p class="text-actions">
+      The first occupation in the list is the main one. Click another
+      to switch.
+      <button type="button" class="link-btn" id="occ-random">Draw one at random</button> ·
+      <button type="button" class="link-btn" id="occ-add-nb">Add the three most similar</button>
+    </p>
+    <p class="pick-hint" id="pick-hint"></p>
+    <div id="pick-summary" class="pick-summary"></div>
+  </section>
+
+  <section id="utvikling" class="chart-section">
+    <h2>Employment and pay since 2023</h2>
+    <p class="chart-intro">
+      The occupations in the list, index 100 in February 2025, when
+      Claude Code launched.
+    </p>
+    <div class="control-row panel-controls">
+      <div class="btn-row" id="lm-outcome-buttons"></div>
+      <div class="control">
+        <label for="lm-smooth">Smoothing</label>
+        <select id="lm-smooth">
+          <option value="1">None</option>
+          <option value="3">3-month moving average</option>
+          <option value="6" selected>6-month moving average</option>
+        </select>
+      </div>
+    </div>
+    <div id="chart-lm" class="chart chart-tall"></div>
+    <p class="chart-footnote" id="lm-note"></p>
+    <details class="more">
+      <summary>More about the figure</summary>
+      <p>The same series as figure 9 on the index page: employees and
+        pay per full-time equivalent in the private sector, ages 21–60,
+        seasonally adjusted. The series is smoothed with a trailing
+        moving average and then rescaled so that February 2025 is 100,
+        as on the index page. The window starts two years before Claude
+        Code. Only occupations with at least 30 employees in every month
+        since 2021 have a series. Open vacancies from NAV will be added
+        in a later version.</p>
+    </details>
+  </section>
+
+  <section id="bruk" class="chart-section">
+    <h2>How Claude is used on the tasks of <span class="occ-focus-name">the chosen occupation</span></h2>
+    <p class="chart-intro">
+      The five or ten tasks in the occupation Claude is used on most. The
+      dark part of the bar is automation: Claude does the job. "Change
+      since" shows whether use of each task is growing or shrinking. Click
+      a task for details, or see the bottom figure for the whole occupation.
+      Under each task is how important O*NET rates it for the occupation.
+    </p>
+    <div class="control-row panel-controls">
+      <div class="btn-row" id="tasks-count-buttons"></div>
+      <div class="control">
+        <label for="tasks-compare">Show</label>
+        <select id="tasks-compare"></select>
+      </div>
+    </div>
+    <div id="chart-tasks" class="chart"></div>
+    <p class="chart-footnote" id="y4-note"></p>
+
+    <h3 id="task-title">How Claude is used on the task</h3>
+    <div class="control-row panel-controls">
+      <div class="control">
+        <label for="task-compare">Show</label>
+        <select id="task-compare"></select>
+      </div>
+    </div>
+    <div id="chart-task" class="chart chart-short"></div>
+    <p class="chart-footnote" id="task-note"></p>
+
+    <h3>All the occupation's tasks together</h3>
+    <p class="chart-intro">
+      The five types of use for the whole occupation, latest sample. The
+      first two are automation. Pick an earlier sample to see the change.
+    </p>
+    <details class="more">
+      <summary>What the five types mean</summary>
+      <p>Anthropic sorts conversations about the occupation's tasks into
+        five types. Two count as <strong>automation</strong>, because the
+        model does the work: <strong>directive</strong>, where the person
+        asks for a finished result and gets it, and <strong>feedback
+        loop</strong>, where the model does the work and the person only
+        relays what happened, such as an error message. Three count as
+        <strong>augmentation</strong>, because the person contributes
+        along the way: <strong>task iteration</strong> (the person and the
+        model build the result together), <strong>validation</strong>
+        (the person checks their own work) and <strong>learning</strong>
+        (the person wants to understand something). The automation share
+        in the figures is the sum of the first two. The figures use
+        Claude.ai (chat); the API appears only in the Chat vs API figure.
+        Task texts are O*NET's English statements.</p>
+    </details>
+    <div class="control-row panel-controls">
+      <div class="control">
+        <label for="types-compare">Show</label>
+        <select id="types-compare"></select>
+      </div>
+    </div>
+    <div id="chart-types" class="chart chart-short"></div>
+    <p class="chart-footnote" id="types-note"></p>
+  </section>
+
+  <section id="ligner" class="chart-section">
+    <h2>Occupations similar to <span class="occ-focus-name">the chosen occupation</span></h2>
+    <p class="chart-intro">
+      The three occupations with most of the same work content.
+    </p>
+    <details class="more">
+      <summary>How similarity is measured</summary>
+      <p>O*NET gives every occupation a profile over 41 work activities
+        and 35 skills. Similarity is the cosine between profiles. Under
+        each occupation is what pulls the two together. Add them to the
+        list to compare employment and pay. Occupations without Claude
+        usage data cannot be added. See the method.</p>
+    </details>
+    <ol id="pick-neighbours" class="nb-list"></ol>
+    <p class="chart-footnote" id="nb-note"></p>
+  </section>
+
+  <section id="tid" class="chart-section">
+    <h2>Claude use over time</h2>
+    <p class="chart-intro">
+      The occupations' share of all Claude use at each sample Anthropic
+      has published, or the automation share. If both fall, the automated
+      tasks are leaving the channel.
+    </p>
+    <div class="control-row panel-controls">
+      <div class="btn-row" id="tid-measure-buttons"></div>
+    </div>
+    <div id="chart-y3" class="chart"></div>
+    <p class="chart-footnote" id="y3-note"></p>
+  </section>
+
+  <section id="alle" class="chart-section">
+    <h2>All occupations</h2>
+    <h3>The 30 largest occupations</h3>
+    <p class="chart-intro">
+      Each bar is one occupation, sorted by automation share. Dark is
+      automation, light is augmentation; the five types behind them show
+      on hover.
+    </p>
+    <p class="chart-intro" id="y-kpi"></p>
+    <div class="control-row panel-controls">
+      <div class="btn-row" id="y-vintage-buttons"></div>
+    </div>
+    <div id="chart-y1" class="chart chart-xtall"></div>
+    <p class="chart-footnote" id="y1-note"></p>
+
+    <h3>Chat vs API</h3>
+    <p class="chart-intro">
+      The same occupation can be used quite differently in chat and in
+      the API, where developers and agents call the model. Each circle
+      is one occupation.
+    </p>
+    <div id="chart-y2" class="chart chart-tall"></div>
+    <p class="chart-footnote" id="y2-note"></p>
+  </section>
+
+  <section id="metode" class="prose-section">
+    <h2>Method</h2>
+    <p>
+      The page combines four sources. AI exposure comes from Eloundou et
+      al. (2024) and Mouchel et al. (2026), as on the index page.
+      Automation and augmentation come from the Anthropic Economic Index.
+      Similar occupations come from O*NET. Employment and pay come from
+      the A-ordningen via microdata.no.
+    </p>
+
+    <details class="method-details">
+      <summary>Automation and augmentation: what the numbers mean</summary>
+      <p>Anthropic takes a sample of Claude conversations and has a
+        model classify each one in two ways. First: which O*NET task is
+        the conversation about? Second: how do the person and the model
+        interact? The second classification has five outcomes, described
+        above the figure. Conversations that cannot be placed are dropped.</p>
+      <p><strong>Automation</strong> is the sum of directive and feedback
+        loop. In both, the model does the work. The person writes the
+        request and, in the loop, relays what happened when the result
+        was tried. <strong>Augmentation</strong> is the sum of task
+        iteration, validation and learning. In all three the person
+        contributes content, judgement or questions along the way. This
+        is Anthropic's own bucketing and the one used here.</p>
+      <p>The automation share of an occupation is the share of
+        conversations about its tasks that are automation. The share does
+        not say how much of the work is done by AI. It says how AI is
+        used when it is used. An occupation where Claude is rarely used
+        can still have a high share, from few conversations. The number
+        of classified conversations is therefore shown in the summary
+        and in the tooltip.</p>
+      <p>Why separate the two? The two modes of use can affect
+        employment in opposite directions. Where use is automating, the
+        model does the task instead of the person. Where use is
+        augmenting, the person does more or better work with the model as
+        help. The index page shows that employment has developed
+        differently in the two groups of occupations.</p>
+      <p>Two differences from the front page. There, only directive use
+        counts as automation, and the numbers come from the first sample
+        in Handa et al. (2025). Here, Anthropic's bucketing and every
+        published sample are used.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Four samples, two platforms</summary>
+      <p>The task × type table has been published four times. The first
+        sample is Claude.ai conversations from December 2024 to January
+        2025 (Handa et al. 2025). The next three are one week each:
+        August 2025, November 2025 and February 2026. From August 2025
+        the table also exists for the API, where developers and agents
+        call the model. The ranking of occupations moves between
+        samples. Between August 2025 and February 2026 the rank
+        correlation in chat is about 0.7. Against the Handa sample it is
+        lower, about 0.3, and about 0.6 for occupations with at least a
+        thousand conversations.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>From O*NET task to Norwegian occupation</summary>
+      <p>Each O*NET task belongs to one or more US SOC occupations.
+        Conversations are split equally between them. SOC goes to
+        ISCO-08 with the BLS crosswalk, and the ISCO code is the STYRK-08
+        code when it exists in the Norwegian standard. The share for a
+        STYRK occupation is the mean over the contributing SOC
+        occupations. The chain is the same as for the Handa measure on
+        the index page and yields 300 to 320 occupations per sample.
+        Occupations with no Claude use on any of their tasks drop out.
+        The task figure shows the 15 O*NET tasks with most use among the
+        SOC occupations the code maps to, with at least ten classified
+        conversations. Task texts are O*NET's English statements.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Similar occupations: how O*NET is used</summary>
+      <p>O*NET is the US Department of Labor's occupational database.
+        For every occupation, O*NET has asked a sample of incumbents how
+        important each of 41 generalized work activities is, for example
+        "programming", "assisting and caring for others" or "operating
+        vehicles". The same is done for 35 skills, such as "critical
+        thinking" and "repairing". The scale runs from 1 to 5. Together
+        this gives every occupation a profile of 76 numbers.</p>
+      <p>We do not use the task statements to find neighbours, although
+        O*NET has them. Tasks are written for each occupation and almost
+        never repeat across occupations. Software developers share two
+        task statements with one other occupation, and office clerks
+        share none. The activity and skill profiles exist for every
+        occupation on the same scale, and those are what we compare.</p>
+      <p>The calculation: each of the 76 numbers is standardized across
+        occupations, so activities every occupation scores high on, like
+        "getting information", do not dominate. The similarity between
+        two occupations is the cosine between the standardized profiles,
+        a number from −1 to 1. The three occupations with the highest
+        similarity are shown. Under each are the three activities or
+        skills that both occupations score high on and that contribute
+        most to the similarity.</p>
+      <p>The profiles sit on US SOC codes. They go to Norwegian STYRK-08
+        codes through the same crosswalk as the exposure measures. A
+        STYRK occupation mapped to several SOC occupations gets the mean
+        of their profiles. Norwegian codes that share the same SOC set,
+        for example nurses, specialist nurses and social educators, get
+        an identical profile and similarity 1.</p>
+      <p>What the measure does not capture: Norwegian conditions, pay,
+        education requirements, and how easy a switch actually is. It
+        only says that the work consists of much the same things.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Employment and pay</summary>
+      <p>The series are the same as in figure 9 on the index page:
+        number of employees and mean pay per full-time equivalent in the
+        private sector, ages 21–60, per four-digit STYRK-08 code,
+        seasonally adjusted. The series is smoothed with a trailing
+        moving average over the last 6 months (changeable above the
+        figure) and then rescaled to 100 in February 2025, the month
+        Claude Code launched, the same way as on the index page. The
+        window here starts in February 2023, two years earlier. Only
+        occupations with at least 30 employees in every month since
+        January 2021 have a series, 358 in all. The change in the summary
+        is the latest month with data against February 2025 in the
+        smoothed series. Open vacancies from NAV will be added in a later
+        version.</p>
+    </details>
+
+    <details class="method-details">
+      <summary>Caveats</summary>
+      <ol>
+        <li>The conversations are global. They say how Claude is used on
+          the occupation's tasks, not how Norwegian workers use AI.</li>
+        <li>Claude only. OpenAI publishes no comparable table.</li>
+        <li>The shares are of conversations, not of working time.</li>
+        <li>The API gives little variation across occupations. Nearly all
+          are above 80 percent directive.</li>
+        <li>O*NET describes US occupations. Norwegian occupations with the
+          same code may differ in content.</li>
+      </ol>
+    </details>
+    <p class="chart-footnote">Sources: <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex" target="_blank" rel="noopener">Anthropic Economic Index</a> · <a href="https://www.onetcenter.org/database.html" target="_blank" rel="noopener">O*NET</a>.</p>
+  </section>
+
+</main>
+
+</div><!-- .content -->
+</div><!-- .layout -->
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      The AI Labor Market Index · Øystein Hernæs (Frisch Centre) and
+      Andreas R. Kostøl (BI Norwegian Business School) ·
+      Data: Anthropic Economic Index, O*NET, the A-ordningen via microdata.no ·
+      <a href="/en/">The AI Labor Market Index</a> ·
+      <a href="/en/education.html">Education</a> ·
+      <a href="/en/about.html">About</a>
+    </p>
+  </div>
+</footer>
+
+<script src="/vendor/echarts.min.js"></script>
+<script src="/panels.js?v=20260925a"></script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+styrk08,navn,navn_en,kortnavn,antall_personer,antall_menn,antall_kvinner,antall_privat,antall_offentlig,antall_13,antall_40,antall_710,kildedato
+0000,Uoppgitt / yrker som ikke kan identifiseres,,Uoppgitt / yrker som ikke kan identifiseres,6276,3794,2482,4696,1580,537,3402,1025,2024-11-01
+0110,Offiserer fra fenrik og høyere grad,,Offiser i militæret,4890,4178,712,31,4859,696,2151,902,2024-11-01
+0210,Befal med sersjant grad,,Sersjant,4654,3969,685,11,4643,808,3128,1379,2024-11-01
+0310,Menige,,Menig i militæret,10379,7622,2757,142,10237,2293,10145,926,2024-11-01
+1111,Politikere,,Politiker,1108,641,467,285,823,85,372,177,2024-11-01
+1112,Toppledere i offentlig administrasjon,,Toppleder i offentlig administrasjon,959,554,405,129,830,38,104,110,2024-11-01
+1114,Toppledere i interesseorganisasjoner,,Toppleder i interesseorganisasjon,2312,1169,1143,2194,118,119,481,269,2024-11-01
+1120,Administrerende direktører,,Daglig leder,36541,27113,9428,35352,1189,1001,5928,3034,2024-11-01
+1211,Finans- og økonomisjefer,,Økonomisjef,8587,4780,3807,8080,507,252,1628,1081,2024-11-01
+1212,Personalsjefer,,Personalsjef,2257,813,1444,1987,270,82,372,267,2024-11-01
+1213,Strategi- og planleggingssjefer,,Planleggingssjef,4708,2088,2620,475,4233,217,552,581,2024-11-01
+1219,Andre administrative ledere,,Administrativ leder,24482,12349,12133,10537,13945,999,3597,2807,2024-11-01
+1221,Salgs- og markedssjefer,,Salgs- eller markedssjef,16103,11399,4704,16060,43,499,4004,1803,2024-11-01
+1222,PR- og informasjonssjefer,,PR- eller informasjonssjef,1810,960,850,1667,143,78,532,288,2024-11-01
+1223,Forsknings- og utviklingsledere,,Forsknings- eller utviklingsleder,3007,2077,930,2493,514,152,631,402,2024-11-01
+1311,"Ledere i skogbruk, gartnerier mv.",,Leder i skogbruk eller gartneri,676,419,257,383,293,25,134,83,2024-11-01
+1312,Ledere innen akvakultur mv.,,Leder i akvakultur,369,297,72,364,5,28,121,78,2024-11-01
+1321,Ledere av industriproduksjon mv.,,Leder i industri,12078,10413,1665,11989,89,409,2335,1264,2024-11-01
+1322,Ledere av olje- og gassutvinning mv.,,Leder av olje- eller gassutvinning,8628,6619,2009,8603,25,219,1183,625,2024-11-01
+1323,Ledere av bygge- og anleggsvirksomhet,,Leder av bygge- eller anleggsvirksomhet,15392,14299,1093,14352,1040,721,3884,1856,2024-11-01
+1324,Ledere av logistikk og transport mv.,,Leder av logistikk eller transport,8906,7308,1598,8729,177,256,1856,814,2024-11-01
+1330,Ledere av IKT-enheter,,IKT-sjef,5971,5032,939,5713,258,166,1143,588,2024-11-01
+1341,Ledere av omsorgstjenester for barn,,Barnehagestyrer,4012,458,3554,2106,1906,307,606,743,2024-11-01
+1342,Ledere av helsetjenester,,Leder av helsetjeneste,12088,2926,9162,1706,10382,874,2130,2275,2024-11-01
+1343,Ledere av eldreomsorg,,"Enhetsleder, eldreomsorg",2197,527,1670,104,2093,148,299,401,2024-11-01
+1344,Ledere av sosialomsorg,,Leder av sosialomsorg,1738,876,862,1384,354,114,381,274,2024-11-01
+1345,Ledere av utdanning og undervisning,,Skoleleder,11221,4554,6667,2323,8898,895,1207,1810,2024-11-01
+1346,Ledere av forsikring og finansvirksomhet,,"Leder, forsikring eller finans",5003,3224,1779,4966,37,146,994,612,2024-11-01
+1349,Andre ledere av produksjon og tjenesteyting,,Leder av produksjon eller tjenesteyting,5753,3504,2249,3668,2085,213,904,606,2024-11-01
+1411,Hotellsjefer,,Hotellsjef,758,407,351,758,0,39,311,105,2024-11-01
+1412,Restaurantsjefer,,Restaurantsjef,3479,2160,1319,3393,86,248,1929,610,2024-11-01
+1420,Varehandelssjefer,,Butikksjef,33376,16531,16845,33364,12,1675,12266,4293,2024-11-01
+1431,"Sports-, rekreasjons- og kultursenterledere",,"Sports-, rekreasjons- eller kultursenterleder",2836,1429,1407,2008,828,145,747,394,2024-11-01
+1439,Andre daglige ledere i tjenesteytende virksomheter,,Daglig leder i tjenesteytende virksomhet,1128,352,776,1077,51,46,347,153,2024-11-01
+2112,Meteorologer,,Meteorolog,293,164,129,23,270,37,136,59,2024-11-01
+2113,Kjemikere,,Kjemiker,944,393,551,863,81,123,440,237,2024-11-01
+2114,Geologer og geofysikere,,Geolog eller geofysiker,2761,1775,986,2516,245,258,1169,491,2024-11-01
+2120,"Matematikere, statistikere mv.",,"Matematiker, statistiker",1587,858,729,739,848,223,772,304,2024-11-01
+2131,"Biologer, botanikere, zoologer mv.",,Biolog eller fiskeriforsker,1722,781,941,1108,614,237,781,415,2024-11-01
+2132,Sivilagronomer mv.,,Sivilagronom,464,249,215,268,196,53,153,96,2024-11-01
+2133,Miljøvernrådgivere,,Miljøvernrådgiver,916,351,565,749,167,154,530,220,2024-11-01
+2141,Sivilingeniører (industri og produksjon),,Sivilingeniør (industri eller produksjon),1180,950,230,484,696,116,509,204,2024-11-01
+2142,Sivilingeniører (bygg og anlegg),,Sivilingeniør (bygg eller anlegg),26520,21149,5371,22327,4193,2502,10912,5162,2024-11-01
+2143,Sivilingeniører (miljøteknikk),,Sivilingeniør (miljøteknikk),413,180,233,392,21,76,252,106,2024-11-01
+2144,Sivilingeniører (maskin- og marin-teknikk),,Sivilingeniør (maskin- eller marinteknikk),4031,3372,659,3798,233,377,1589,589,2024-11-01
+2145,Sivilingeniører (kjemi),,Sivilingeniør (kjemi),858,471,387,652,206,91,340,158,2024-11-01
+2146,"Sivilingeniører (geofag, petro-leumsteknologi, metallurgi mv.)",,"Sivilingeniør (geofag, petroleumsteknologi, metallurgi)",15059,10901,4158,14385,674,821,3976,1736,2024-11-01
+2149,Andre sivilingeniører (unntatt elektroteknologi),,Sivilingeniør (unntatt elektroteknologi),7900,4621,3279,5892,2008,882,2561,1575,2024-11-01
+2151,Sivilingeniører (elkraftteknikk),,Sivilingeniør (elkraftteknikk),4131,3340,791,4094,37,364,1551,738,2024-11-01
+2152,Sivilingeniører (elektronikk),,Sivilingeniør (elektronikk),4691,4094,597,4245,446,390,1726,800,2024-11-01
+2153,Sivilingeniører (telekommunikasjon),,Sivilingeniør (telekommunikasjon),573,485,88,357,216,52,207,86,2024-11-01
+2161,Sivilarkitekter,,Arkitekt,6278,2806,3472,5653,625,619,2626,1374,2024-11-01
+2162,Landskapsarkitekter,,Landskapsarkitekt,950,302,648,928,22,122,497,227,2024-11-01
+2163,Produkt- og klesdesignere,,Produkt- eller klesdesigner,867,347,520,853,14,91,433,172,2024-11-01
+2164,Arealplanleggere,,Arealplanlegger,1480,777,703,983,497,191,676,304,2024-11-01
+2165,"Landmålere, kartografer mv.",,"Landmåler, kartograf",866,598,268,241,625,50,268,138,2024-11-01
+2166,Grafiske- og multimediadesignere,,Grafisk- eller multimediadesigner,4905,2282,2623,4824,81,597,2795,1129,2024-11-01
+2211,Allmennpraktiserende leger,,Allmennpraktiserende lege,7393,2936,4457,1404,5989,1063,4504,1386,2024-11-01
+2212,Legespesialister,,Legespesialist,16676,7041,9635,1832,14844,2248,6664,4623,2024-11-01
+2221,Spesialsykepleiere,,Spesialsykepleier,28555,2941,25614,1549,27006,3687,7482,7378,2024-11-01
+2222,Jordmødre,,Jordmor,2752,6,2746,39,2713,375,986,646,2024-11-01
+2223,Sykepleiere,,Sykepleier,59748,6170,53578,6058,53690,10008,33875,12606,2024-11-01
+2224,Vernepleiere,,Vernepleier,21454,5224,16230,3111,18343,3631,10871,5097,2024-11-01
+2250,Veterinærer,,Veterinær,1817,333,1484,1675,142,317,926,401,2024-11-01
+2261,Tannleger,,Tannlege,2901,1032,1869,1485,1416,272,1068,559,2024-11-01
+2262,Farmasøyter,,Farmasøyt,1802,368,1434,1678,124,227,980,428,2024-11-01
+2263,Helse- og miljørådgivere,,Helse- eller miljørådgiver,113,41,72,98,15,8,42,24,2024-11-01
+2265,Ernæringsfysiologer,,Ernæringsfysiolog,864,179,685,489,375,137,453,188,2024-11-01
+2266,Audiografer og logopeder,,Audiograf eller logoped,681,123,558,292,389,114,364,195,2024-11-01
+2267,Ergoterapeuter,,Ergoterapeut,3073,380,2693,252,2821,472,1669,766,2024-11-01
+2269,Kiropraktorer mv.,,Kiropraktor,359,231,128,0,0,14,133,86,2024-11-01
+2310,Universitets- og høyskolelektorer/-lærere,,Forsker i høyere utdanning,31253,14696,16557,3011,28242,5476,15498,6349,2024-11-01
+2320,Yrkesfaglærere,,Yrkesfaglærer,884,471,413,355,529,133,344,159,2024-11-01
+2330,Lektorer mv. (videregående skole),,Lektor (videregående skole),26518,11349,15169,2609,23909,3683,7593,5974,2024-11-01
+2341,Grunnskolelærere,,Grunnskolelærer,81218,21412,59806,5117,76101,13361,36692,17350,2024-11-01
+2342,Førskolelærere,,Barnehagelærer,34492,3630,30862,14744,19748,5645,17972,8397,2024-11-01
+2352,Spesiallærere / spesialpedagoger,,Spesiallærer / spesialpedagog,2894,232,2662,287,2607,428,1034,744,2024-11-01
+2353,Andre språklærere,,Lærer (språkkurs),242,62,180,237,5,31,107,47,2024-11-01
+2354,Andre musikklærere,,Musikklærer,3017,1275,1742,176,2841,351,1105,476,2024-11-01
+2355,Andre lærere i estetiske fag,,Lærer i estetiske fag,204,20,184,179,25,24,146,35,2024-11-01
+2356,Andre IKT-lærere,,IKT-lærer,66,33,33,51,15,12,27,17,2024-11-01
+2359,Andre lærere,,Lærer,2624,1331,1293,2133,491,273,991,406,2024-11-01
+2411,"Revisorer, regnskapsrådgivere",,Revisor eller regnskapsrådgiver,15389,6845,8544,12458,2931,1624,6585,2874,2024-11-01
+2412,Finans- og investeringsrådgivere,,Finans- eller investeringsrådgiver,9368,5008,4360,9276,92,1059,4374,2038,2024-11-01
+2413,Finansanalytikere,,Finansanalytiker,16771,9221,7550,15784,987,1684,7596,3286,2024-11-01
+2422,Høyere saksbehandlere i offentlig og privat virksomhet,,Saksbehandler,87356,30224,57132,9344,78012,7761,27719,15980,2024-11-01
+2424,Rådgivere innen kompetanseutvikling,,Rådgiver i kompetanseutvikling,1031,631,400,1000,31,107,321,160,2024-11-01
+2431,Reklame- og markedsføringsrådgivere,,Reklame- eller markedsføringsrådgiver,8682,3172,5510,8541,141,1141,5211,1994,2024-11-01
+2432,Informasjonsrådgivere,,Informasjonsrådgiver,4439,1618,2821,3092,1347,476,2008,920,2024-11-01
+2433,Salgskonsulenter innen tekniske og medisinske produkter,,"Salgskonsulent, tekniske eller medisinske produkt",2946,2593,353,2946,0,146,845,391,2024-11-01
+2434,Salgskonsulenter innen IKT-produkter,,Salgskonsulenter for IKT-produkt,666,518,148,666,0,71,308,119,2024-11-01
+2511,Systemanalytikere/-arkitekter,,Systemanalytiker/-arkitekt,32711,24025,8686,26328,6383,3401,14309,5824,2024-11-01
+2512,Programvareutviklere,,Programvareutvikler,7668,6559,1109,7637,31,1101,4767,1727,2024-11-01
+2513,Nett- og multimediautviklere,,Nett- eller multimediautvikler,749,594,155,743,6,119,532,187,2024-11-01
+2514,Applikasjonsprogrammerere,,Applikasjonsprogrammerer,317,263,54,286,31,37,201,66,2024-11-01
+2519,Andre programvare- og applikasjonsutviklere,,IKT-konsulent,22064,16934,5130,20324,1740,2993,11926,4171,2024-11-01
+2521,Databasedesignere og -administratorer,,Databaseadministrator,514,361,153,504,10,56,236,91,2024-11-01
+2522,Systemadministratorer,,Systemadministrator,1543,1145,398,1429,114,120,595,234,2024-11-01
+2523,Nettverksansvarlige,,Nettverksansvarlig,10,5,5,0,0,5,0,3,2024-11-01
+2529,Sikkerhetsanalytikere mv.,,IKT-systemansvarlig,1904,1541,363,1773,131,119,553,232,2024-11-01
+2611,Jurister og advokater,,Jurist eller advokat,10986,4806,6180,8153,2833,1444,6021,2602,2024-11-01
+2612,Dommere,,Dommer,815,421,394,0,815,76,164,55,2024-11-01
+2619,Andre juridiske yrker,,Juridisk rådgiver,1158,388,770,811,347,182,679,251,2024-11-01
+2621,Arkivarer og kuratorer,,Arkivar eller kurator,1416,415,1001,480,936,119,479,235,2024-11-01
+2622,Bibliotekarer og andre informasjonsarbeidere,,Bibliotekar,2481,581,1900,158,2323,231,723,477,2024-11-01
+2631,"Rådgivere/forskere, samfunnsøkonomi",,"Rådgiver/forsker, samfunnsøkonomi",1190,628,562,680,510,128,458,218,2024-11-01
+2632,"Rådgivere/forskere, samfunnsvitenskap",,"Rådgiver/forsker, samfunnsvitenskap",1086,420,666,948,138,123,347,237,2024-11-01
+2633,"Rådgivere/forskere, humanistiske fag",,"Arkeologer, historikere eller kunsthistorikere",241,107,134,103,138,28,90,52,2024-11-01
+2634,Psykologer,,Psykolog,9304,1780,7524,1494,7810,1530,4621,2462,2024-11-01
+2636,Geistlige yrker,,Prest,2183,1338,845,715,1468,162,446,318,2024-11-01
+2641,Forfattere mv.,,Forfatter eller forlagsmedarbeider,1255,478,777,1133,122,91,427,233,2024-11-01
+2642,Journalister,,Journalist,7552,3973,3579,5572,1980,781,3420,1266,2024-11-01
+2643,"Oversettere, tolker mv.",,"Oversetter, tolk",2138,640,1498,1482,656,205,768,318,2024-11-01
+2651,"Skulptører, kunstmalere og andre billedkunstnere",,Animatør eller billedkunstner,343,224,119,338,5,37,187,58,2024-11-01
+2652,"Dirigenter, komponister, musikere og sangere",,Musiker,2174,1264,910,492,1682,141,673,292,2024-11-01
+2653,Koreografer og dansere,,Danser eller koreograf,225,83,142,117,108,25,155,45,2024-11-01
+2654,Regissører,,Regissør eller produsent (film/tv/teater),1300,790,510,1175,125,115,606,274,2024-11-01
+2655,Skuespillere,,Skuespiller,532,254,278,230,302,59,260,104,2024-11-01
+2656,Programledere i TV og radio,,Programleder i TV eller radio,291,141,150,240,51,16,119,49,2024-11-01
+2659,Andre utøvende kunstneriske yrker,,Artist,179,108,71,0,0,11,91,34,2024-11-01
+3112,Bygningsingeniører,,Bygningsingeniør,17211,14026,3185,12102,5109,1554,7030,3374,2024-11-01
+3113,Elkraftingeniører,,Elkraftingeniør,5754,5003,751,5648,106,665,2516,1059,2024-11-01
+3114,Elektronikkingeniører,,Elektronikkingeniør,14423,12759,1664,14136,287,1614,6671,2562,2024-11-01
+3115,Maskiningeniører,,Maskiningeniør,8418,7690,728,8250,168,760,3508,1371,2024-11-01
+3116,Kjemiingeniører,,Kjemiingeniør,2787,1491,1296,2581,206,341,1270,517,2024-11-01
+3117,"Ingeniører innen petroleum, bergverk og metallurgi",,Petroleumingeniør,13483,11310,2173,13413,70,1157,5196,1955,2024-11-01
+3118,Tekniske tegnere,,Teknisk tegner,2169,1444,725,1975,194,186,733,303,2024-11-01
+3119,Andre ingeniører,,Ingeniør,28260,22280,5980,23194,5066,2501,10862,4442,2024-11-01
+3121,"Arbeidsleder, bergfag",,"Arbeidsleder, bergfag",157,151,6,157,0,7,34,14,2024-11-01
+3122,"Arbeidsleder, industri",,"Arbeidsleder, industri",3921,3567,354,3811,110,170,1047,440,2024-11-01
+3123,"Arbeidsleder, bygg og anlegg",,"Arbeidsleder, bygg eller anlegg",10821,10439,382,9978,843,814,3703,1667,2024-11-01
+3131,Energikontrolloperatører,,Energikontrolloperatør,1519,1392,127,1509,10,117,563,251,2024-11-01
+3132,Kontrolloperatører ved forbrennings- kjøle- og vannrenseanlegg mv.,,Kontrolloperatør ved forbrennings- kjøle- eller vannrenseanlegg,10,5,5,3,7,0,0,0,2024-11-01
+3133,Kontrolloperatører innen kjemisk prosessindustri,,Kontrolloperatør i kjemisk prosessindustri,318,293,25,318,0,14,63,40,2024-11-01
+3134,Kontrolloperatører ved olje- og naturgassraffineringsanlegg,,Kontrolloperatør raffineringsanlegg,1864,1704,160,1848,16,120,625,271,2024-11-01
+3135,Kontrolloperatører innen metallproduksjon,,Kontrolloperatør i metallproduksjon,186,177,9,186,0,11,37,25,2024-11-01
+3139,Andre prosesskontrolloperatører,,Prosesskontrolloperatør,78,56,22,75,3,3,22,21,2024-11-01
+3141,Bioteknikere (ikke-medisinske laboratorier),,Biotekniker (ikke-medisinske laboratorier),1350,467,883,902,448,167,628,186,2024-11-01
+3142,Agroteknikere,,Agrotekniker,619,326,293,472,147,59,266,107,2024-11-01
+3143,Skogteknikere,,Skogtekniker,631,534,97,521,110,50,227,99,2024-11-01
+3151,Skipsmaskinister,,Skipsmaskinist,3096,3023,73,3004,92,340,1357,516,2024-11-01
+3153,Flygere,,Flyger,1797,1703,94,1797,0,81,538,252,2024-11-01
+3155,Teknikere innen luftfartssikkerhet,,Flytekniker,462,440,22,0,0,43,184,72,2024-11-01
+3211,Radiografer mv.,,Radiograf,3122,810,2312,361,2761,428,1591,681,2024-11-01
+3212,Bioingeniører,,Bioingeniør,7196,1387,5809,1740,5456,877,3412,1382,2024-11-01
+3213,Reseptarer,,Reseptar,2106,514,1592,2096,10,280,1129,577,2024-11-01
+3214,Protese- og tannteknikere,,Protese- eller tanntekniker,999,479,520,995,4,106,381,144,2024-11-01
+3230,Yrker innen alternativ medisin,,Alternativ behandler,205,83,122,0,0,16,79,38,2024-11-01
+3240,Dyrepleiere,,Dyrepleier,1111,49,1062,1058,53,155,798,261,2024-11-01
+3251,Tannpleiere,,Tannpleier,1050,29,1021,394,656,142,559,237,2024-11-01
+3256,Helsesekretærer,,Helsesekretær,9117,159,8958,4494,4623,906,3123,1726,2024-11-01
+3257,Helse- og miljøkontrollører,,Helse- eller miljøkontrollør,4936,2307,2629,3729,1207,344,1387,738,2024-11-01
+3258,Ambulansepersonell,,Ambulansepersonell,5260,2722,2538,92,5168,846,3125,1209,2024-11-01
+3259,Andre helseyrker,,Helseyrke,1674,682,992,903,771,95,329,242,2024-11-01
+3311,Finansmeglere,,Finansmegler,4980,3191,1789,4929,51,691,2786,1051,2024-11-01
+3312,Kundebehandlere lån og kreditt,,Kundebehandler lån eller kreditt,15193,7099,8094,15186,7,1789,7480,2679,2024-11-01
+3313,Regnskapsførere,,Regnskapsfører,18847,6065,12782,17413,1434,1538,6099,2866,2024-11-01
+3315,Takstmenn,,Takstmann,2197,1654,543,0,0,116,813,352,2024-11-01
+3321,Forsikringsagenter,,Forsikringsagenter,9472,5062,4410,9446,26,982,4518,1625,2024-11-01
+3322,Selgere (engros),,Selger (engros),43565,30500,13065,43499,66,2801,16045,5848,2024-11-01
+3323,Innkjøpere,,Innkjøper,6664,3781,2883,6386,278,554,2718,979,2024-11-01
+3324,Handels- og skipsmeglere,,Skips- elelr handelsmegler,754,640,114,754,0,57,299,110,2024-11-01
+3331,Speditører og befraktere,,Speditør eller befrakter,4801,3217,1584,4768,33,274,1729,607,2024-11-01
+3332,Konferanse- og arrangementsplanleggere mv.,,Konferanse- eller arrangementsplanlegger,1153,495,658,1075,78,122,551,206,2024-11-01
+3334,Eiendomsmeglere og - forvaltere,,Eiendomsmegler eller - forvalter,6454,3914,2540,6379,75,722,3512,1439,2024-11-01
+3339,Andre yrker innen forretningstjenester,,Megler eller agent (andre),76,51,25,0,0,7,42,18,2024-11-01
+3341,Arbeidsledere for kontorpersonell,,Arbeidsleder for kontorpersonell,7015,2982,4033,5281,1734,308,1470,894,2024-11-01
+3343,Sjefssekretærer,,Administrasjonskonsulent,10936,3087,7849,7170,3766,878,3636,1487,2024-11-01
+3351,Tollere,,Toller,1072,579,493,9,1063,42,389,118,2024-11-01
+3352,Skattefunksjonærer,,Skattefunksjonær,2575,810,1765,6,2569,135,478,279,2024-11-01
+3353,Saksbehandlere innen sosiale ytelser,,NAV-veileder eller -konsulent,4712,1144,3568,432,4280,697,2266,1105,2024-11-01
+3354,"Saksbehandlere for førerkort, importlisenser mv.",,"Saksbehandler, førerkort eller importlisenser",11,6,5,8,3,0,6,0,2024-11-01
+3355,Politibetjenter mv.,,Politibetjent,11953,7480,4473,0,0,1794,6888,3472,2024-11-01
+3359,Andre yrker innen offentlig forvaltning,,Saksbehandler i offentlig forvaltning,6555,2085,4470,1385,5170,516,1966,959,2024-11-01
+3411,Privatetterforskere mv.,,Privatetterforsker,8,0,0,8,0,0,3,0,2024-11-01
+3412,Miljøarbeidere innen sosiale fagfelt,,Miljøarbeider i sosiale fagfelt,15857,4108,11749,6399,9458,2250,7207,3397,2024-11-01
+3413,Religiøse yrker,,Menighetsarbeider eller misjonær,2656,838,1818,1106,1550,252,952,438,2024-11-01
+3421,Idrettsutøvere,,Idrettsutøver,1663,1281,382,1663,0,367,1638,298,2024-11-01
+3423,Sports- og aktivitetsinstruktører,,Sports- eller trenginsinstruktør,2844,1082,1762,2771,73,395,1809,417,2024-11-01
+3432,Interiørdesignere og dekoratører,,Interiørdesigner eller dekoratør,1517,289,1228,1496,21,98,710,237,2024-11-01
+3433,Tekniske konservatorer,,Teknisk konservator,179,94,85,107,72,4,49,33,2024-11-01
+3439,Andre yrker innen estetiske fag,,Andre yrker innen estetiske fag,1771,1059,712,1003,768,195,903,317,2024-11-01
+3511,"Driftsteknikere, IKT",,"Driftstekniker, IKT",15826,12688,3138,11958,3868,1894,8195,2623,2024-11-01
+3512,"Brukerstøtte, IKT",,"Brukerstøtte, IKT",4573,3042,1531,4262,311,575,2681,937,2024-11-01
+3513,"Nettverks- og systemteknikere, IKT",,"Nettverks- eller systemtekniker, IKT",771,637,134,718,53,84,362,130,2024-11-01
+3514,Internett-teknikere,,Internett-tekniker,233,113,120,225,8,26,120,41,2024-11-01
+3521,Teknikere innen radio og tv,,"Tekniker, radio eller tv",1490,1169,321,1120,370,164,773,275,2024-11-01
+3522,Teknikere innen telekom,,"Tekniker, telekom",1450,979,471,1340,110,203,1031,325,2024-11-01
+4110,Kontormedarbeidere,,Kontormedarbeider,53121,12604,40517,36502,16619,4206,20370,6829,2024-11-01
+4131,Stenografer mv.,,Stenograf,13,0,0,0,0,0,0,0,2024-11-01
+4132,Dataregistrere,,Dataregistrer,552,279,273,522,30,83,312,101,2024-11-01
+4211,"Kundebehandlere, bank og postkontor",,Kundebehandler i bank eller postkontor,624,285,339,0,0,67,278,99,2024-11-01
+4212,"Bingoverter, bookmakere mv.",,"Bingovert, bookmaker",515,184,331,515,0,39,216,57,2024-11-01
+4214,Inkassomedarbeidere mv.,,Inkassomedarbeider,1397,496,901,1385,12,171,779,224,2024-11-01
+4221,Reisebyråmedarbeidere mv.,,Reisebyråmedarbeider,4005,1284,2721,3987,18,433,2024,627,2024-11-01
+4222,Kundesentermedarbeidere,,Kundesentermedarbeider,5212,2384,2828,5033,179,716,3430,1066,2024-11-01
+4227,Intervjuere,,Intervjuer,510,263,247,424,86,56,284,75,2024-11-01
+4229,Andre opplysningsmedarbeidere,,Opplysningsmedarbeider,716,309,407,693,23,73,360,111,2024-11-01
+4311,Regnskapsmedarbeidere,,Regnskapsmedarbeider,16267,4026,12241,15974,293,1693,6711,1862,2024-11-01
+4312,Forsikrings- og finansmedarbeidere,,Forsikrings- eller finansmedarbeider,362,78,284,357,5,31,127,49,2024-11-01
+4313,Lønningsmedarbeidere,,Lønningsmedarbeider,2109,226,1883,1856,253,139,590,229,2024-11-01
+4321,Lagermedarbeidere og material-forvaltere,,Lagermedarbeider eller materialforvalter,34495,28070,6425,34095,400,3362,17241,5725,2024-11-01
+4322,Logistikkmedarbeidere,,Logistikkmedarbeider,9473,6845,2628,9014,459,902,4148,1566,2024-11-01
+4323,Transportfunksjonærer,,Transportfunksjonær,6372,4912,1460,5277,1095,686,2902,1022,2024-11-01
+4411,Bibliotekassistenter,,Bibliotekassistent,279,69,210,13,266,33,136,41,2024-11-01
+4413,Kodere mv.,,Koder,9,5,4,9,0,0,5,0,2024-11-01
+4415,Arkivassistenter,,Arkivassistent,1037,347,690,386,651,63,258,109,2024-11-01
+4416,Personalkontormedarbeidere,,Personalkontormedarbeider,792,129,663,777,15,125,541,135,2024-11-01
+5111,"Flyverter, båtverter mv.",,"Flyvert, båtvert",2508,583,1925,2508,0,314,1324,395,2024-11-01
+5112,Konduktører,,Konduktør,1346,779,567,1335,11,73,534,200,2024-11-01
+5131,Servitører,,Servitør,17141,6880,10261,17090,51,2775,13110,2540,2024-11-01
+5141,Frisører,,Frisør,8457,991,7466,8442,15,1045,5000,1569,2024-11-01
+5151,Renholdsledere i virksomheter,,Renholdsleder i bedrift,2283,568,1715,1635,648,136,587,270,2024-11-01
+5152,Husholdere,,Husholder,204,48,156,163,41,5,51,18,2024-11-01
+5153,Vaktmestre,,Vaktmester,20101,17806,2295,11468,8633,1179,4885,2016,2024-11-01
+5161,Astrologer,,Astrolog,4,0,4,4,0,0,0,0,2024-11-01
+5163,Begravelsesbyrå- og krematoriearbeidere,,Begravelsesbyrå- eller krematoriearbeider,856,463,393,844,12,41,230,86,2024-11-01
+5164,Dyrepassere og - trenere mv.,,Dyrepasser eller - trener,819,120,699,811,8,118,595,176,2024-11-01
+5165,Kjøreskolelærere,,Kjøreskolelærer,1907,1426,481,1907,0,235,937,417,2024-11-01
+5169,Andre personlige tjenesteytere,,Personlig assistent,313,158,155,248,65,37,174,44,2024-11-01
+5211,Torghandlere,,Torghandler,273,192,81,273,0,16,86,32,2024-11-01
+5212,"Gateselgere, mat",,"Gateselger, mat",18,11,7,18,0,4,10,3,2024-11-01
+5221,Innehavere av kiosk/liten butikk,,Butikk- eller kioskeier,146,47,99,146,0,4,31,17,2024-11-01
+5222,Butikkavdelingssjefer,,Butikkavdelingssjef,5209,2150,3059,5204,5,314,2329,777,2024-11-01
+5223,Butikkmedarbeidere,,Butikkmedarbeider,119642,45531,74111,119529,113,16293,76512,17457,2024-11-01
+5230,Billettselgere,,Billettselger,350,118,232,266,84,44,217,48,2024-11-01
+5241,Mannekenger og modeller,,Mannekeng eller modell,43,9,34,43,0,8,38,10,2024-11-01
+5242,Demonstrasjonsselgere,,Demonstrasjonsselger,84,44,40,0,0,9,28,8,2024-11-01
+5243,Dørselgere,,Dørselger,227,185,42,227,0,32,162,44,2024-11-01
+5244,Telefon- og nettselgere,,Telefon- eller nettselger,3588,2123,1465,3565,23,517,2376,655,2024-11-01
+5245,Servicemedarbeidere (bensinstasjon),,Servicemedarbeider (bensinstasjon),508,315,193,508,0,49,262,85,2024-11-01
+5246,Gatekjøkken- og kafémedarbeidere mv.,,Gatekjøkken- eller kafémedarbeider,8571,3755,4816,8502,69,1482,6262,1311,2024-11-01
+5249,Andre salgsmedarbeidere,,Selger,3251,1804,1447,3212,39,403,2106,576,2024-11-01
+5311,Barnehage- og skolefritidsassistenter mv.,,Barnehage- eller skolefritidsassistent,84832,14591,70241,31640,53192,12222,41690,16132,2024-11-01
+5312,Skoleassistenter,,Skoleassistent,12410,3793,8617,1803,10607,1538,6201,1534,2024-11-01
+5321,Helsefagarbeidere,,Helsefagarbeider,91678,16124,75554,10479,81199,12673,35790,16345,2024-11-01
+5322,Hjemmehjelper,,Hjemmehjelper,12548,2638,9910,7895,4653,1552,6767,1590,2024-11-01
+5329,Andre pleiemedarbeidere,,Pleiemedarbeider,60069,14543,45526,8338,51731,8396,35754,8044,2024-11-01
+5413,Fengselsbetjenter,,Fengselsbetjent,3661,2004,1657,0,0,605,1931,573,2024-11-01
+5414,Vektere,,Vekter,9390,7109,2281,8814,576,1647,6392,1940,2024-11-01
+5419,Andre sikkerhetsarbeidere,,Sikkerhetsarbeider,2414,1400,1014,1232,1182,262,1374,324,2024-11-01
+6111,Korn- og grønnsaksprodusenter,,Korn- eller grønnsaksprodusent,98,79,19,0,0,6,46,9,2024-11-01
+6112,Frukt- og bærprodusenter,,Frukt- eller bærprodusent,10,7,3,10,0,0,5,3,2024-11-01
+6113,Gartnere,,Gartner,4748,3157,1591,3892,856,452,2111,585,2024-11-01
+6121,Melke- og husdyrprodusenter,,Melke- eller husdyrprodusent,2211,1442,769,2161,50,286,1201,292,2024-11-01
+6122,Egg- og fjærfeprodusenter,,Egg- eller fjærfeprodusent,229,140,89,229,0,17,87,14,2024-11-01
+6123,Birøktere,,Birøkter,7,4,3,7,0,0,4,0,2024-11-01
+6130,Plante- og husdyrprodusenter (kombinasjonsbruk),,Plante- eller husdyrprodusent (kombinasjonsbruk),2966,2038,928,2924,42,324,1517,323,2024-11-01
+6210,Skogbrukere,,Skogbruker,687,665,22,681,6,69,334,85,2024-11-01
+6221,Havbruksarbeidere,,Havbruksarbeider,6550,5283,1267,6541,9,1149,4172,1360,2024-11-01
+6222,Fiskere,,Fisker,451,397,54,409,42,37,188,51,2024-11-01
+6224,Fangstfolk,,Jeger,7,0,0,0,0,0,0,0,2024-11-01
+7112,Murere,,Murer,3713,3662,51,3707,6,268,1440,407,2024-11-01
+7113,Steinhoggere mv.,,Steinhogger,626,581,45,619,7,48,212,76,2024-11-01
+7114,Betongarbeidere,,Betongarbeider,8208,8101,107,8186,22,781,3797,1072,2024-11-01
+7115,Tømrere og snekkere,,Tømrer eller snekker,38907,38217,690,37904,1003,3991,19055,5470,2024-11-01
+7119,Andre bygningsarbeidere,,Bygningsarbeider,3593,3437,156,0,0,353,1853,507,2024-11-01
+7121,Taktekkere,,Taktekker,1356,1342,14,1356,0,115,610,146,2024-11-01
+7122,Gulv- og flisleggere,,Gulv- eller flislegger,1983,1948,35,1983,0,94,741,158,2024-11-01
+7123,Gips- og sparklingsarbeidere,,Gips- eller sparklingsarbeider,7,0,0,0,0,0,0,0,2024-11-01
+7124,Isolatører mv.,,Isolatør,954,913,41,954,0,60,363,136,2024-11-01
+7125,Glassarbeidere,,Glassarbeider,1203,1183,20,1203,0,92,484,142,2024-11-01
+7126,Rørleggere og VVS-montører,,Rørlegger eller VVS-montør,16810,16359,451,16437,373,2104,9037,3003,2024-11-01
+7127,Kuldemontører mv.,,Kuldemontør,1280,1266,14,1277,3,185,734,260,2024-11-01
+7131,Malere og byggtapetserere,,Maler eller byggtapetserer,6746,6221,525,6642,104,446,2582,726,2024-11-01
+7132,Overflatebehandlere og lakkerere,,Overflatebehandler eller lakkerer,2725,2496,229,0,0,261,1233,434,2024-11-01
+7133,"Feiere, fasaderenholdere mv.",,"Feier, fasaderenholder",792,677,115,91,701,115,364,186,2024-11-01
+7211,Støpere,,Støper,255,243,12,255,0,27,71,40,2024-11-01
+7212,Sveisere,,Sveiser,5005,4791,214,4995,10,416,1795,582,2024-11-01
+7213,Kopper- og blikkenslagere,,Kopper- eller blikkenslager,4220,4056,164,4206,14,525,2163,684,2024-11-01
+7214,Platearbeidere,,Platearbeider,3612,3525,87,3595,17,300,1402,430,2024-11-01
+7215,Riggere og spleisere,,Rigger eller spleiser,1386,1341,45,1382,4,121,741,294,2024-11-01
+7221,Smeder,,Smed,236,178,58,221,15,34,123,51,2024-11-01
+7222,"Verktøymaker, låsesmeder mv.",,"Verktøymaker, låsesmed",2261,2145,116,2258,3,295,1274,428,2024-11-01
+7223,Metalldreiere mv.,,Metalldreier,2248,2065,183,2040,208,257,999,288,2024-11-01
+7224,Metallslipere,,Metallsliper,64,59,5,64,0,5,19,8,2024-11-01
+7231,Bilmekanikere,,Bilmekaniker,19580,19039,541,18516,1064,2622,11416,3428,2024-11-01
+7232,Mekanikere innen flytekniske fag,,Flymekaniker,1140,1053,87,0,0,114,625,143,2024-11-01
+7233,Anleggsmaskin- og industrimekanikere,,Anleggsmaskin- eller industrimekaniker,19857,18947,910,19106,751,2380,10255,3478,2024-11-01
+7311,Presisjonsinstrumentmakere og -reparatører,,Presisjonsinstrumentmaker eller -reparatør,508,454,54,434,74,43,204,99,2024-11-01
+7312,Musikkinstrumentmakere og -stemmere,,Musikkinstrumentmaker eller -stemmer,52,42,10,52,0,0,17,5,2024-11-01
+7313,"Gull- og sølvsmeder, gravører mv.",,"Gull- eller sølvsmed, gravør",342,145,197,0,0,19,105,36,2024-11-01
+7314,Keramikere mv.,,Keramiker,25,4,21,20,5,0,14,6,2024-11-01
+7315,Glasshåndverkere,,Glasshåndverker,61,46,15,57,4,0,19,8,2024-11-01
+7316,Dekormalere,,Dekormaler,12,7,5,0,0,0,5,0,2024-11-01
+7317,Kunsthåndverkere i tre mv.,,Kunsthåndverker i tre,12,7,5,0,0,4,7,0,2024-11-01
+7318,"Vevere, strikkere mv. (innen husflidsproduksjon)",,"Vever, strikker (innen husflidsproduksjon)",367,19,348,360,7,30,95,51,2024-11-01
+7319,Andre kunsthåndverkere,,Kunsthåndverker,194,130,64,194,0,19,90,31,2024-11-01
+7321,Førtrykkere,,Førtrykker,815,463,352,811,4,50,251,79,2024-11-01
+7322,Trykkere,,Trykker,1011,758,253,998,13,80,350,101,2024-11-01
+7323,Innbindere mv.,,Innbinder,188,142,46,0,0,9,45,10,2024-11-01
+7411,Elektrikere,,Elektriker,29187,28102,1085,28323,864,5453,18738,5762,2024-11-01
+7412,Automatikere,,Automatiker,5518,5194,324,5315,203,962,3458,1051,2024-11-01
+7413,Energimontører,,Energimontører,3576,3420,156,3565,11,729,2201,645,2024-11-01
+7421,Serviceelektronikere,,Serviceelektroniker,1642,1463,179,1637,5,134,694,238,2024-11-01
+7422,Tele- og IKT-installatører,,Tele- eller IKT-installatør,2965,2783,182,2646,319,532,1942,603,2024-11-01
+7511,"Slaktere, fiskehandlere mv.",,"Slakter, fiskehandler",1884,1500,384,0,0,142,799,209,2024-11-01
+7512,"Bakere, konditorer mv.",,"Baker, konditor",1527,865,662,1520,7,154,797,238,2024-11-01
+7513,Ystere mv. (gårdsproduksjon),,Yster (gårdsproduksjon),4,0,4,4,0,0,0,0,2024-11-01
+7514,"Saftere, syltere mv. (gårdsproduksjon)",,"Safter, sylter (gårdsproduksjon)",5,0,0,5,0,0,0,0,2024-11-01
+7515,Prøvesmakere og kvalitetsbedømmere av mat og drikke,,"Kvalitetsbedømmer, mat/drikke",93,51,42,93,0,3,21,7,2024-11-01
+7531,"Skreddere, buntmakere mv.",,"Skredder, buntmaker",497,84,413,289,208,48,157,68,2024-11-01
+7532,Gradører,,Gradør,50,19,31,0,0,3,19,4,2024-11-01
+7534,Møbeltapetserere mv.,,Møbeltapetserer,302,191,111,293,9,12,83,41,2024-11-01
+7535,Skinnberedere og garvere,,Skinnbereder eller garver,78,22,56,71,7,8,27,7,2024-11-01
+7536,Skomakere,,Skomaker,40,26,14,37,3,3,13,11,2024-11-01
+7541,Yrkesdykkere,,Yrkesdykker,437,422,15,0,0,47,270,92,2024-11-01
+7542,Skytebaser og sprengningsarbeidere,,Skytebas eller sprengningsarbeider,1552,1518,34,0,0,290,953,310,2024-11-01
+7543,Produkttestere (ikke matprodukter),,Produkttester (ikke matprodukter),31,21,10,0,0,6,15,4,2024-11-01
+7544,Desinfeksjonsarbeidere og skadedyrbekjempere,,Desinfeksjonsarbeider eller skadedyrbekjemper,419,370,49,419,0,18,172,58,2024-11-01
+8111,Bergfagarbeidere,,Bergfagarbeider,664,623,41,661,3,68,350,128,2024-11-01
+8112,Prosessoperatører (oppredning),,Prosessoperatør (oppredning),208,180,28,208,0,23,93,32,2024-11-01
+8113,Operatører innen boring mv.,,Boreoperatør,12405,11182,1223,0,0,1301,5929,2389,2024-11-01
+8114,Operatører innen produksjon av betong mv.,,Operatør innen produksjon av betong,1873,1787,86,1873,0,157,808,284,2024-11-01
+8121,Operatører innen metallurgiske prosessfag,,Operatør innen metallurgiske prosessfag,7493,6438,1055,7490,3,850,3371,1204,2024-11-01
+8131,Operatører innen kjemisk industri,,Operatør i kjemisk industri,9280,7608,1672,9257,23,1099,4766,1802,2024-11-01
+8132,Operatører innen produksjon av fotofilm og -papir mv.,,Operatør i produksjon av fotofilm eller -papir,38,26,12,0,0,6,24,10,2024-11-01
+8141,Operatører innen produksjon av gummiprodukter,,"Operatør, produksjon av gummiprodukt",274,260,14,274,0,20,98,43,2024-11-01
+8142,Operatører innen plastprodukter,,"Operatør, plastprodukt",2250,1889,361,2250,0,250,921,360,2024-11-01
+8143,Operatører innen papirprodukter,,"Operatør, papir",594,461,133,594,0,36,254,92,2024-11-01
+8151,Spinne- og nøstemaskinoperatører,,Spinne- eller nøstemaskinoperatør,136,51,85,0,0,9,60,15,2024-11-01
+8152,Operatører innen tekstilproduksjon mv.,,Operatør i tekstilproduksjon,856,452,404,0,0,66,354,111,2024-11-01
+8153,Industrisyere,,Industrisyer,708,149,559,0,0,47,196,63,2024-11-01
+8154,Operatører innen tekstilbearbeiding,,"Operatør, tekstilbearbeiding",58,33,25,0,0,5,16,8,2024-11-01
+8156,Operatører innen skinn og lærprodukter,,"Operatør, skinn eller lærprodukter",45,18,27,45,0,0,17,7,2024-11-01
+8157,Renseri- og vaskerimaskinoperatører,,Renseri- eller vaskerimaskinoperatør,2383,868,1515,2089,294,219,904,312,2024-11-01
+8160,Operatører innen næringsmiddelproduksjon,,Næringsmiddelproduksjonsarbeider,23382,14434,8948,23379,3,2428,10867,3356,2024-11-01
+8171,Operatører innen treforedling,,Treforedlingsarbeider,2780,2352,428,2760,20,234,1095,394,2024-11-01
+8172,Operatører innen trelastproduksjon,,Trelastarbeider,3425,3066,359,0,0,235,1263,423,2024-11-01
+8181,Operatører innen glass- og keramisk produksjon,,Operatør (glass- eller keramikk),1083,892,191,0,0,92,465,183,2024-11-01
+8182,Fyrkjele- og turbinoperatører,,Fyrkjele- eller turbinoperatør,1245,1173,72,444,801,69,341,174,2024-11-01
+8183,"Pakke-, tappe- og etikettmaskinoperatører",,"Pakke-, tappe- eller etikettmaskinoperatør",866,559,307,866,0,82,316,127,2024-11-01
+8211,Montører av mekaniske produkter,,Montører av mekaniske produkter,1906,1808,98,1885,21,163,877,273,2024-11-01
+8212,Montører av elektriske og elektroniske produkter,,Montør av elektriske eller elektroniske produkt,4131,2756,1375,0,0,416,1937,736,2024-11-01
+8219,Andre montører,,Montør,73,73,0,73,0,0,28,11,2024-11-01
+8311,Lokomotiv og T-baneførere,,Lokomotiv- eller T-banefører,2068,1827,241,2049,19,273,904,407,2024-11-01
+8312,Skiftekonduktører mv,,Skiftekonduktør,129,108,21,129,0,5,48,24,2024-11-01
+8322,"Bil-, drosje- og varebilførere",,"Bil-, drosje- eller varebilfører",13959,12636,1323,13400,559,1185,6288,2070,2024-11-01
+8331,Bussjåfører og trikkeførere,,Bussjåfør eller trikkefører,15395,14071,1324,15319,76,1058,2810,2221,2024-11-01
+8332,Lastebil- og trailersjåfører,,Lastebil- eller trailersjåfører,23756,22734,1022,23678,78,1405,8432,2503,2024-11-01
+8341,Jordbruks- og skogbruksmaskinførere,,Jordbruks- eller skogbruksmaskinfører,734,715,19,722,12,77,361,112,2024-11-01
+8342,Anleggsmaskinførere,,Anleggsmaskinfører,18498,17765,733,15137,3361,2077,8897,3041,2024-11-01
+8343,Kran- og heisførere mv.,,Kran- eller heisfører,1739,1658,81,1736,3,108,610,248,2024-11-01
+8344,Truckførere,,Truckfører,697,669,28,697,0,52,219,72,2024-11-01
+8350,Dekks- og maskinmannskap (skip),,Dekks- eller maskinmannskap (skip),4986,4640,346,4898,88,687,2883,944,2024-11-01
+9111,Renholdere i private hjem,,Renholder i private hjem,316,20,296,0,0,10,138,28,2024-11-01
+9112,Renholdere i virksomheter,,Renholder i bedrift,52607,10832,41775,33232,19375,4084,16225,6412,2024-11-01
+9122,Bilvaskere,,Bilvasker,2795,2453,342,0,0,270,1626,441,2024-11-01
+9123,Vinduspussere,,Vinduspusser,110,0,0,110,0,3,53,16,2024-11-01
+9129,Andre rengjørere,,Renholder,10,0,0,10,0,0,4,0,2024-11-01
+9211,Hjelpearbeidere i nyttevekstproduksjon,,Hjelpearbeider i nyttevekstproduksjon,60,23,37,60,0,7,32,0,2024-11-01
+9212,Hjelpearbeidere i husdyrproduksjon,,Hjelpearbeider i husdyrproduksjon,480,127,353,467,13,77,344,93,2024-11-01
+9213,Hjelpearbeidere i kombinasjonsbruk,,Hjelpearbeider i kombinasjonsbruk,321,202,119,309,12,42,178,24,2024-11-01
+9214,Hjelpearbeidere i gartneri mv.,,Hjelpearbeider i gartneri,1179,925,254,792,387,108,553,122,2024-11-01
+9215,Hjelpearbeidere i skogbruk,,Hjelpearbeider i skogbruk,46,40,6,41,5,7,25,4,2024-11-01
+9216,Hjelpearbeidere innen havbruk,,"Hjelpearbeider, havbruk",74,55,19,66,8,12,47,7,2024-11-01
+9311,Hjelpearbeidere i bergverk,,Hjelpearbeider i bergverk,24,24,0,24,0,3,17,5,2024-11-01
+9312,Hjelpearbeidere i anlegg,,Hjelpearbeider i anlegg,12575,11852,723,12203,372,1495,7046,2017,2024-11-01
+9313,Hjelpearbeidere i bygg,,Hjelpearbeider i bygg,4994,4715,279,4990,4,521,2712,608,2024-11-01
+9321,Håndpakkere mv.,,Håndpakker,933,573,360,926,7,57,456,135,2024-11-01
+9329,Andre hjelpearbeidere i industri,,Hjelpearbeider i industri,6623,5433,1190,6614,9,821,3640,1122,2024-11-01
+9333,Laste- og lossearbeidere,,Laste- eller lossearbeider,4336,3779,557,4290,46,655,2647,721,2024-11-01
+9334,Varepåfyllere,,Varepåfyller,970,753,217,958,12,131,589,157,2024-11-01
+9412,Kjøkkenassistenter,,Kjøkkenassistent,14767,4407,10360,12072,2695,1525,6761,1847,2024-11-01
+9510,Reklamedistributører mv.,,Reklamedistributør,263,229,34,263,0,17,114,28,2024-11-01
+9611,Renovasjonsarbeidere,,Renovasjonsarbeider,5198,4701,497,3934,1264,365,2070,686,2024-11-01
+9612,Gjenvinningsarbeidere,,Gjenvinningsarbeider,1014,855,159,716,298,114,452,178,2024-11-01
+9613,Gatefeiere mv.,,Snømåker,23,0,0,0,0,0,13,3,2024-11-01
+9621,Bud mv.,,Bud,2059,1638,421,1987,72,227,1057,264,2024-11-01
+9622,Altmuligmann,,Altmuligmann,2759,1879,880,2146,613,246,1297,350,2024-11-01
+9623,Måleravlesere mv.,,Måleravleser,86,54,32,80,6,6,29,9,2024-11-01
+9629,Andre hjelpearbeidere,,Hjelpearbeider,1713,861,852,1070,643,188,782,191,2024-11-01
+9994,Uføretrygdet eller på arbeidsavklaringspenger (AAP),,Uføretrygd,346926,146375,200551,0,0,9231,74316,32538,2024-11-01
+9995,Registrert arbeidsledig eller på arbeidsmarkedstiltak,,Arbeidsledig / på tiltak,97761,51122,46639,0,0,14155,56322,17207,2024-11-01
+9996,Utenfor arbeidsstyrken,,Ikke i arbeid,178633,91734,86899,0,0,19178,102008,27453,2024-11-01
+9997,Utenfor arbeidsstyrken og under utdanning,,I utdanning,103422,47685,55737,0,0,23664,95766,10749,2024-11-01
+9999,Selvstendige,,Selvstendig næringsdrivende,140162,91157,49005,140162,0,7272,36674,15235,2024-11-01
+2423,Personal- og karriererådgivere,,Personal- eller karriererådgiver,15588,4111,11477,10313,5275,1444,5587,2699,2024-11-01
+2635,Rådgivere innen sosiale fagfelt,,Barnevern- eller familievernmedarbeider,15317,3004,12313,3764,11553,2457,7420,3877,2024-11-01
+2111,Fysikere og astronomer,,Fysiker eller astronom,497,331,166,314,183,77,244,105,2024-11-01
+5142,Kosmetologer mv.,,Kosmetolog,2651,196,2455,2603,48,288,1501,461,2024-11-01
+2421,Organisasjonsrådgivere mv.,,Organisasjonsrådgiver,13371,6959,6412,11817,1554,1715,6003,2370,2024-11-01
+3333,Arbeidsformidlere,,Arbeidsformidler,2475,898,1577,2377,98,332,1276,458,2024-11-01
+3342,Advokatsekretær,,Advokatsekretær,800,68,732,800,0,76,345,60,2024-11-01
+7234,Sykkelreparatører mv.,,Sykkelreparatør,261,251,10,261,0,32,177,36,2024-11-01
+4412,Postbud og postsorterere,,Postbud eller postsorterer,3144,1856,1288,3140,4,255,1261,365,2024-11-01
+5132,Bartendere,,Bartender,5924,2784,3140,5895,29,1153,5111,993,2024-11-01
+3154,Flygeledere,,Flygeleder,464,350,114,464,0,22,169,57,2024-11-01
+2351,Spesialister i pedagogikk,,Undervisningsinspektør eller -konsulent,2051,632,1419,770,1281,215,586,404,2024-11-01
+3254,Optikere,,Optiker,1429,452,977,1375,54,180,699,236,2024-11-01
+2264,Fysioterapeuter,,Fysioterapeut,6021,1439,4582,1581,4440,794,3048,1490,2024-11-01
+3152,Dekksoffiserer og loser,,Dekksoffiser eller los,6647,6393,254,6180,467,739,2952,1179,2024-11-01
+3431,Fotografer og filmfotografer,,Fotograf eller filmfotograf,1180,822,358,1132,48,122,611,211,2024-11-01
+3434,Sjefskokker,,Sjefskokk,2880,1486,1394,2546,334,125,1000,333,2024-11-01
+4223,Sentralbordoperatører,,Sentralbordoperatør,744,202,542,640,104,63,296,69,2024-11-01
+4224,Hotellresepsjonister,,Hotellresepsjonist,7495,2441,5054,7458,37,1167,4937,1176,2024-11-01
+4225,Informasjonsskrankemedarbeidere,,Informasjonsskrankemedarbeider,429,272,157,353,76,41,180,52,2024-11-01
+4226,Resepsjonister (ekskl. hotell),,Resepsjonist (utenom hotell),7170,3455,3715,7002,168,794,4061,1018,2024-11-01
+5113,Reiseledere og guider,,Reiseleder eller guide,1362,614,748,1097,265,180,842,161,2024-11-01
+5120,Kokker,,Kokk,19365,11168,8197,15750,3615,1888,10199,2782,2024-11-01
+5411,Brannkonstabler,,Brannkonstabel,3707,3446,261,640,3067,189,1451,540,2024-11-01
+7549,Andre håndverkere,,Håndverker,806,42,764,0,0,96,364,143,2024-11-01
+3422,Trenere og idrettsdommere,,Trener eller idrettsdommer,3941,2784,1157,3903,38,542,2529,603,2024-11-01
+7522,Møbelsnekkere,,Møbelsnekker,1800,1652,148,1782,18,117,697,226,2024-11-01
