@@ -1,0 +1,25 @@
+observation_date,Age Group,Share,Usage Group
+2022-11-01,21-30,1.1246,No usage
+2022-11-01,21-30,3.0142,Quintile 1 (least usage)
+2022-11-01,21-30,5.9981,Quintile 2
+2022-11-01,21-30,4.1892,Quintile 3
+2022-11-01,21-30,7.1207,Quintile 4
+2022-11-01,21-30,4.8303,Quintile 5 (most usage)
+2022-11-01,31-40,1.1068,No usage
+2022-11-01,31-40,3.042,Quintile 1 (least usage)
+2022-11-01,31-40,6.5229,Quintile 2
+2022-11-01,31-40,5.3407,Quintile 3
+2022-11-01,31-40,6.4681,Quintile 4
+2022-11-01,31-40,5.0507,Quintile 5 (most usage)
+2022-11-01,41-50,1.0344,No usage
+2022-11-01,41-50,2.5807,Quintile 1 (least usage)
+2022-11-01,41-50,5.8861,Quintile 2
+2022-11-01,41-50,4.9758,Quintile 3
+2022-11-01,41-50,6.0419,Quintile 4
+2022-11-01,41-50,4.1975,Quintile 5 (most usage)
+2022-11-01,51-60,0.9321,No usage
+2022-11-01,51-60,2.1645,Quintile 1 (least usage)
+2022-11-01,51-60,5.1523,Quintile 2
+2022-11-01,51-60,4.2568,Quintile 3
+2022-11-01,51-60,5.6635,Quintile 4
+2022-11-01,51-60,3.3059,Quintile 5 (most usage)

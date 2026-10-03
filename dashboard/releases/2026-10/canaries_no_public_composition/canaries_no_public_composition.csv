@@ -1,0 +1,21 @@
+observation_date,Age Group,Share,Exposure Group
+2022-11-01,21-30,2.5397,Quintile 1 (least exposed)
+2022-11-01,21-30,6.1405,Quintile 2
+2022-11-01,21-30,7.7054,Quintile 3
+2022-11-01,21-30,2.0643,Quintile 4
+2022-11-01,21-30,1.9965,Quintile 5 (most exposed)
+2022-11-01,31-40,3.1216,Quintile 1 (least exposed)
+2022-11-01,31-40,4.8114,Quintile 2
+2022-11-01,31-40,9.8479,Quintile 3
+2022-11-01,31-40,3.5323,Quintile 4
+2022-11-01,31-40,3.9823,Quintile 5 (most exposed)
+2022-11-01,41-50,3.6435,Quintile 1 (least exposed)
+2022-11-01,41-50,4.4045,Quintile 2
+2022-11-01,41-50,9.6372,Quintile 3
+2022-11-01,41-50,4.6418,Quintile 4
+2022-11-01,41-50,4.5677,Quintile 5 (most exposed)
+2022-11-01,51-60,4.4233,Quintile 1 (least exposed)
+2022-11-01,51-60,4.2099,Quintile 2
+2022-11-01,51-60,8.6761,Quintile 3
+2022-11-01,51-60,5.0178,Quintile 4
+2022-11-01,51-60,5.0361,Quintile 5 (most exposed)
