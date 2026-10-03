@@ -1,0 +1,42 @@
+---
+title: "KI og det norske arbeidsmarkedet"
+subtitle: "KI-indeksen og hva registerdataene viser til og med juli 2026"
+author:
+  - name: Øystein Hernæs
+    affiliation: Frischsenteret
+  - name: Andreas R. Kostøl
+    affiliation: Handelshøyskolen BI
+date: 2026-10-06
+date-format: "D. MMMM YYYY"
+lang: nb
+format:
+  revealjs:
+    theme: [default, theme/aid.scss]
+    css: theme/modules.css
+    include-after-body: modules/_scripts.html
+    embed-resources: true
+    html-math-method: plain
+    width: 1280
+    height: 720
+    margin: 0
+    center: false
+    controls: false
+    progress: false
+    menu: false
+    preview-links: false
+    slide-number: c/t
+    hash: true
+    history: true
+    transition: fade
+    transition-speed: fast
+    pdf-separate-fragments: false
+    auto-stretch: false
+    title-slide-attributes:
+      data-background-color: "#fbfaf7"
+---
+
+{{< include sections/_03_maal.qmd >}}
+
+{{< include sections/_04_indeks.qmd >}}
+
+{{< include sections/_90_vedlegg.qmd >}}

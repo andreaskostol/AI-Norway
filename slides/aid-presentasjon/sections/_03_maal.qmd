@@ -1,0 +1,32 @@
+## {#h09 .pl-slide background-color="#fbfaf7"}
+
+```{=html}
+<div class="pl map" id="map-eloundou" data-skip="6,7,8">
+  <canvas role="img" aria-label="Animasjon fra O*NET-oppgaver til norske yrker, Eloundou, kort versjon"></canvas>
+  <div class="pl-head">
+    <div class="pl-kicker"></div>
+    <div class="pl-title"></div>
+    <div class="pl-sub"></div>
+  </div>
+  <div class="pl-card"></div>
+  <div class="pl-tab"></div>
+  <div class="pl-note"></div>
+  <div class="pl-tag"></div>
+  <div class="pl-dots"></div>
+  <span class="fragment" data-fragment-index="0"></span>
+  <span class="fragment" data-fragment-index="1"></span>
+  <span class="fragment" data-fragment-index="2"></span>
+  <span class="fragment" data-fragment-index="3"></span>
+  <span class="fragment" data-fragment-index="4"></span>
+  <span class="fragment" data-fragment-index="5"></span>
+  <span class="fragment" data-fragment-index="6"></span>
+</div>
+```
+
+::: {.jump}
+[Alle steg: V02](#/v02) [Mouchel: V03](#/v03) [Hvorfor Eloundou: V05](#/v05)
+:::
+
+::: {.notes}
+NOTES_H09
+:::

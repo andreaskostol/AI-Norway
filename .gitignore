@@ -90,3 +90,16 @@ to_RA/data_aggregated.zip
 data/education_analysis/dbh/raw/*
 !data/education_analysis/dbh/raw/104_kandidater_totaler.json
 !data/education_analysis/dbh/raw/123_registrerte_totaler.json
+
+# Quarto-decks: de bygde HTML-filene er store og selvstendige (byggeprodukter)
+slides/data-pipeline/*.html
+!slides/data-pipeline/_*-scripts.html
+slides/mapping-pipeline/*.html
+!slides/mapping-pipeline/_*-scripts.html
+slides/aid-presentasjon/*.html
+slides/aid-presentasjon/dist/
+slides/aid-presentasjon/.quarto/
+slides/aid-presentasjon/*_files/
+# Celledata bygd fra microdata-output (yrke x alder x maaned): holdes utenfor git som microdata-output/
+slides/data-pipeline/data/pipeline-data*.js
+slides/aid-presentasjon/modules/data/pipeline-data*.js

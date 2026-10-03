@@ -1,0 +1,118 @@
+---
+title: "Fra O*NET til norske yrker"
+subtitle: "Eksponeringsskår: Eloundou og Mouchel"
+author: "Øystein Hernæs"
+institute: "Frischsenteret"
+lang: nb
+format:
+  revealjs:
+    embed-resources: true
+    html-math-method: plain
+    width: 1280
+    height: 720
+    margin: 0
+    center: false
+    controls: false
+    progress: false
+    slide-number: false
+    menu: false
+    preview-links: false
+    transition: fade
+    transition-speed: fast
+    css: mapping.css
+    include-after-body: _mapping-scripts.html
+    title-slide-attributes:
+      data-background-color: "#fbfaf7"
+---
+
+## {.pl-slide background-color="#fbfaf7"}
+
+```{=html}
+<div class="pl" id="map-eloundou">
+  <canvas role="img" aria-label="Animasjon: fra O*NET-oppgaver til norske yrker, Eloundou"></canvas>
+  <div class="pl-head">
+    <div class="pl-kicker"></div>
+    <div class="pl-title"></div>
+    <div class="pl-sub"></div>
+  </div>
+  <div class="pl-card"></div>
+  <div class="pl-tab"></div>
+  <div class="pl-note"></div>
+  <div class="pl-tag"></div>
+  <div class="pl-dots"></div>
+  <span class="fragment" data-fragment-index="0"></span>
+  <span class="fragment" data-fragment-index="1"></span>
+  <span class="fragment" data-fragment-index="2"></span>
+  <span class="fragment" data-fragment-index="3"></span>
+  <span class="fragment" data-fragment-index="4"></span>
+  <span class="fragment" data-fragment-index="5"></span>
+  <span class="fragment" data-fragment-index="6"></span>
+  <span class="fragment" data-fragment-index="7"></span>
+  <span class="fragment" data-fragment-index="8"></span>
+  <span class="fragment" data-fragment-index="9"></span>
+</div>
+```
+
+::: {.notes}
+Eloundou mfl. (2024). Ett trykk per steg. Eksempelet er informasjonsrådgivere.
+
+1. O*NET (Occupational Information Network) er et datasett fra US Department of Labor. Versjon 27.2 har 1 016 yrker, og 923 av dem har oppgavebeskrivelser. Til sammen er det 19 265 oppgaver.
+2. Informasjonsrådgivere har 18 oppgaver, 15 kjerneoppgaver og 3 tilleggsoppgaver.
+3. GPT-4 vurderer hver oppgave. E0 er ingen eksponering. E1 betyr at språkmodellen alene halverer tiden. E2 betyr at tiden halveres med tilleggsprogramvare. Forfatterne og en gruppe innleide vurderere merket også oppgavene for hånd. Vi bruker GPT-4s vurdering, og den publiserte yrkesfilen bygger på den.
+4. Hver vurdering får et poeng: E1 gir 1, E2 gir 0,5 og E0 gir 0.
+5. Kjerneoppgaver teller 2 og tilleggsoppgaver 1. Summen av vekt ganger poeng er 19,5 og summen av vekter er 33, så skåren er 0,591. Uvektet snitt er 0,583. Vi bruker Eloundous publiserte yrkesfil, som veier slik.
+6. Skåren følger koden. SOC er Standard Occupational Classification, ISCO-08 er International Standard Classification of Occupations, STYRK-08 er den norske versjonen av ISCO-08 og BLS er Bureau of Labor Statistics. O*NET-koden blir en SOC 2018-kode, og detaljkoder innen samme SOC får snittet av skårene. SOC 2018 går til SOC 2010 med BLS-krysskoblingen fra 2017. Dette steget trengs fordi O*NET bruker SOC 2018, mens BLS-tabellen mot ISCO-08 er laget for SOC 2010. Programvareutviklere har for eksempel kode 15-1252 i SOC 2018 og 15-1132 i SOC 2010. SOC 2010 går til ISCO-08 med BLS-krysskoblingen fra 2012, oppdatert i 2015. ISCO-08 går til STYRK-08 ved at samme firesifrede kode beholdes når den finnes i STYRK. Tallene under boksene er antall koder i hele filen.
+7. Koblingene er ikke alltid én til én. Elektrikere får snittet av to SOC-koder, 0,146 og 0,110. Én SOC-kode, ledere i generell drift, deles på sju norske koder. De får samme skår, 0,481, og alle sju koblingene er markert som delvise i BLS-filen. Skåren til hver norske kode kan også få bidrag fra andre SOC-koder.
+8. Fire norske koder får skår på annen måte. Sykepleiere og vernepleiere kopierer spesialsykepleiere. Ergoterapeuter og kiropraktorer henter skår direkte fra SOC, fordi ISCO-koden betyr noe annet i Norge.
+9. 397 av 407 firesifrede STYRK-koder har skår, altså 97,5 prosent. Prikkene står først i kodens egen rekkefølge, og høyden er skåren.
+10. Yrkene rangeres etter skår og deles i fem grupper med like mange yrker, 80, 79, 79, 79 og 80. Lik skår rangeres etter kode. Q1 er minst og Q5 mest eksponert.
+11. Resultatet er filen styrk08_eloundou_beta_mapping.csv. Hvert yrke har skår, plass og gruppe. Tabellen viser seks yrker, sortert med høyeste skår først.
+:::
+
+## {.pl-slide background-color="#fbfaf7"}
+
+```{=html}
+<div class="pl" id="map-mouchel">
+  <canvas role="img" aria-label="Animasjon: fra O*NET-oppgaver til norske yrker, Mouchel"></canvas>
+  <div class="pl-head">
+    <div class="pl-kicker"></div>
+    <div class="pl-title"></div>
+    <div class="pl-sub"></div>
+  </div>
+  <div class="pl-card"></div>
+  <div class="pl-tab"></div>
+  <div class="pl-note"></div>
+  <div class="pl-tag"></div>
+  <div class="pl-dots"></div>
+  <span class="fragment" data-fragment-index="0"></span>
+  <span class="fragment" data-fragment-index="1"></span>
+  <span class="fragment" data-fragment-index="2"></span>
+  <span class="fragment" data-fragment-index="3"></span>
+  <span class="fragment" data-fragment-index="4"></span>
+  <span class="fragment" data-fragment-index="5"></span>
+  <span class="fragment" data-fragment-index="6"></span>
+</div>
+```
+
+::: {.notes}
+Mouchel, Bouquet og Sheffi (2026). Ett trykk per steg. Eksempelet er informasjonsrådgivere.
+
+1. Samme type O*NET-oppgaver, men vurdert på nytt av sju åpne språkmodeller. Mouchel bruker O*NET 30.2 med 18 796 oppgave-yrke-par, mens Eloundou bruker versjon 27.2 med 19 265 oppgaver. Derfor viser sliden ikke antall her.
+
+   Slik brukes grunnlaget, for hvert oppgave-yrke-par:
+
+   - Et søk bygges av yrkestittel, yrkesbeskrivelse, arbeidsaktiviteter og oppgaveteksten.
+   - Søket slår opp i rundt 30 000 nyhetsartikler om bruk av KI og rundt 24 000 forskningssammendrag om KI og arbeid. Først finner et hybrid søk kandidater, både på betydning og på ordtreff. Deretter rangerer en egen modell kandidatene på nytt, slik at bare de mest relevante utdragene beholdes.
+   - Utdragene legges inn i spørsmålet til modellen, sammen med O*NET-beskrivelser av arbeidsmiljøet. Beskrivelsene gjelder for eksempel ansikt til ansikt-kontakt, ansvar for andres sikkerhet og krav til presisjon. De er ikke bevis for eksponering, men setter oppgaven inn i en realistisk arbeidssituasjon.
+   - Modellen velger E0 til E3 og begrunner valget. Grunnlaget er kontekst i spørsmålet i en søkebasert løsning (RAG). Modellene trenes ikke på det.
+   - Effekten, ifølge artikkelen: uten grunnlag endrer mer enn 20 prosent av parene merke når samplingtemperaturen skrus fra 0 til 1. Med grunnlag er uenigheten under 1,6 prosent. Menneskelige vurderere og språkmodeller foretrekker merket med grunnlag i over 70 prosent av tilfellene der de to variantene er uenige.
+
+   Tallene er fra GitHub-utgaven fra juli 2026 (29 857 artikler og 23 669 sammendrag). Artikkelversjonen i literature/ oppgir over 34 000 artikler, 19 000 sammendrag og tre modeller.
+2. Rubrikken er som hos Eloundou, men for agentisk KI i 2026. E1 betyr at en agent med vanlige nettleser- og arbeidsverktøy halverer tiden. E2 trenger tilleggsprogramvare eller integrasjoner i virksomheten. E3 finnes også hos Eloundou, men ble slått sammen med E2 i analysene. Hos Mouchel betyr E3 at tiden først halveres når modellen kan tolke bilder eller video. Poeng er 1 for E1, 0,5 for E2 og E3 og 0 for E0.
+3. Oppgavene veies med O*NET-oppgavetid til en skår per yrke. A1 er snittet av de sju modellene og er ikke kalibrert. S0 er kalibrert mot faktisk Claude-bruk i Anthropic Economic Index, og er derfor ikke uavhengig av bruksmålene. For informasjonsrådgivere er Eloundou 0,591, A1 0,705 og S0 0,635.
+4. Samme kobling som for Eloundou: O*NET til SOC 2018, SOC 2010, ISCO-08 og STYRK-08. O*NET bruker SOC 2018, men BLS-tabellen mot ISCO-08 er laget for SOC 2010. Flere koder som blir én får gjennomsnitt. Én kode som blir flere kopieres. Fire norske koder får skår fra en annen kode eller direkte fra SOC.
+5. 397 norske yrker har skår, her på varianten A1.
+6. Gruppene lages på A1, med fem like store grupper og samme regel som for Eloundou. S0 får sin egen gruppeinndeling, som brukes bare som kontroll.
+7. Hvert yrke er en prikk: Eloundou-skåren til høyre og Mouchel-skåren opp. Korrelasjonen er 0,92, og Spearman er 0,94. 66 prosent havner i samme gruppe og 99 prosent innen én gruppe. Jurister og advokater og mannekenger går mest opp. Andre salgsmedarbeidere og skoleassistenter går mest ned.
+8. Resultatet er filen styrk08_mouchel_mapping.csv, med A1 og S0, og en gruppe for hver.
+:::

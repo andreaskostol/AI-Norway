@@ -1,0 +1,258 @@
+/* mapping.css: the mapping slides. Same look as data-pipeline. Everything lives in a fixed 1280 x 720 box. */
+
+.reveal, .reveal h1, .reveal h2, .reveal h3, .reveal .title, .reveal .subtitle,
+.reveal .author, .reveal .institute {
+  font-family: "Segoe UI", Calibri, Arial, sans-serif;
+}
+.reveal h1.title { font-size: 2.2em; font-weight: 600; color: #1d2733; }
+.reveal p.subtitle { color: #4a5868; font-size: 1.1em; }
+
+.reveal .slides section.pl-slide {
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: left;
+}
+
+.pl {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  height: 720px;
+  color: #1d2733;
+  font-family: "Segoe UI", Calibri, Arial, sans-serif;
+  text-align: left;
+  line-height: 1.25;
+}
+.pl canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  height: 720px;
+  margin: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+/* caption, top left */
+.pl-head {
+  position: absolute;
+  left: 64px;
+  top: 26px;
+  width: 820px;
+  transition: opacity 0.17s ease, transform 0.17s ease;
+}
+.pl-head.out { opacity: 0; transform: translateY(6px); }
+.pl-kicker {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5d6772;
+}
+.pl-title {
+  margin: 4px 0 8px;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #1d2733;
+}
+.pl-sub { margin: 0; font-size: 26px; line-height: 1.28; color: #3d4a59; }
+
+/* formula chip, top right */
+.pl-formula {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  width: 330px;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(29, 39, 51, 0.08), 0 6px 18px rgba(29, 39, 51, 0.08);
+  font-size: 28px;
+  line-height: 1.25;
+  color: #1d2733;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+.pl-formula.on { opacity: 1; transform: none; }
+.pl-formula .op { font-weight: 700; color: #8c1515; padding: 0 2px; }
+
+/* html layers that change from step to step: right-hand card, wide area, note row */
+.pl-card, .pl-tab, .pl-note {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  color: #3d4a59;
+}
+.pl-card.on, .pl-tab.on, .pl-note.on, .pl-tag.on { opacity: 1; }
+
+/* the example that the slide is about, top right on every slide */
+.pl-tag {
+  position: absolute;
+  right: 40px;
+  top: 28px;
+  width: 380px;
+  box-sizing: border-box;
+  padding: 12px 20px 14px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(29, 39, 51, 0.08), 0 6px 18px rgba(29, 39, 51, 0.1);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  color: #1d2733;
+}
+.pl-tag .k { font-size: 16px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #5d6772; }
+.pl-tag .n { margin-top: 2px; font-size: 30px; font-weight: 700; line-height: 1.1; color: #1f4e79; }
+.pl-tag .c { margin-top: 4px; font-size: 18px; color: #5d6772; }
+.pl-tag .n.m { font-size: 26px; margin-top: 4px; }
+.pl-card { left: 944px; top: 262px; width: 300px; font-size: 22px; }
+.pl-tab { left: 64px; top: 258px; width: 1152px; font-size: 22px; }
+.pl-note { left: 64px; top: 556px; width: 1152px; font-size: 22px; }
+
+/* acronyms spelled out where the code chain appears */
+.pl .acr { font-size: 20px; line-height: 1.3; color: #3d4a59; }
+.pl .acr > div { display: flex; margin-bottom: 4px; }
+.pl .acr b { flex: none; width: 130px; color: #1f4e79; }
+
+/* the pieces inside them rise in one after the other */
+.pl .rise { animation: rise 0.55s ease both; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes grow { from { width: 0; } }
+
+.pl .lab {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5d6772;
+  margin-bottom: 6px;
+}
+.pl .big { font-size: 58px; font-weight: 600; line-height: 1.05; color: #1d2733; }
+.pl .small { margin-top: 6px; font-size: 20px; color: #5d6772; }
+
+/* evaluation chips */
+.pl .chip {
+  display: inline-block;
+  min-width: 52px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.pl .chip.e0 { background: #e6e3dc; color: #5d6772; }
+.pl .chip.e1 { background: #8c1515; color: #ffffff; }
+.pl .chip.e2 { background: #e6a817; color: #1d2733; }
+.pl .chip.e3 { background: #0b7a75; color: #ffffff; }
+.pl .chip.q1 { background: #577590; color: #ffffff; }
+.pl .chip.q2 { background: #e6a817; color: #1d2733; }
+.pl .chip.q3 { background: #e54a2b; color: #ffffff; }
+.pl .chip.q4 { background: #8c1515; color: #ffffff; }
+.pl .chip.q5 { background: #401415; color: #ffffff; }
+
+/* legend rows: a chip and a short sentence */
+.pl .leg-row { margin-bottom: 18px; line-height: 1.25; }
+.pl .leg-row .tx { margin-top: 6px; }
+.pl .leg-row .val { margin-left: 12px; font-size: 24px; font-weight: 700; color: #1d2733; white-space: nowrap; }
+
+/* the division with the numbers under each other */
+.pl table.calc { border-collapse: collapse; margin: 6px 0 8px; font-size: 24px; }
+.pl .calc td { padding: 3px 0; border: 0; }
+.pl .calc td.op { width: 28px; font-weight: 700; color: #8c1515; }
+.pl .calc td.n {
+  text-align: right;
+  padding-right: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #1d2733;
+}
+.pl .calc td.t { font-size: 20px; font-weight: 600; }
+.pl .calc tr.sum td { border-top: 2px solid #1d2733; padding-top: 6px; }
+.pl .calc tr.sum td.t { color: #1d2733; }
+
+/* wide tables (results) */
+.pl table.res { border-collapse: collapse; width: 100%; font-size: 24px; }
+.pl .res th {
+  text-align: left;
+  padding: 0 14px 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5d6772;
+  border-bottom: 2px solid #c9c6bd;
+}
+.pl .res td { padding: 9px 14px 9px 0; border-bottom: 1px solid #e2dfd7; vertical-align: middle; }
+.pl .res td.code { font-family: Consolas, "Courier New", monospace; font-size: 22px; color: #5d6772; }
+.pl .res tr.hl td { background: #e8f0f7; font-weight: 600; }
+.pl .res td.num, .pl .res th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.pl .res td.num { font-weight: 600; }
+
+/* the process boxes and the rubric (Mouchel) */
+.pl .flow { display: flex; align-items: stretch; gap: 0; margin-top: 18px; }
+.pl .flow .arrow { flex: none; width: 54px; align-self: center; text-align: center; font-size: 34px; color: #8d97a1; }
+.pl .box {
+  flex: 1;
+  min-height: 250px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(29, 39, 51, 0.08), 0 6px 18px rgba(29, 39, 51, 0.08);
+  font-size: 22px;
+  color: #1d2733;
+}
+.pl .box.short { min-height: 0; padding-bottom: 24px; }
+.pl .box .k { font-size: 18px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #5d6772; margin-bottom: 10px; }
+.pl .box .n { font-size: 46px; font-weight: 600; line-height: 1.05; }
+.pl .box .t { margin-top: 8px; color: #3d4a59; }
+.pl .box .dotrow { display: flex; flex-wrap: nowrap; gap: 6px; margin: 12px 0; }
+.pl .box .dotrow i { width: 20px; height: 20px; border-radius: 5px; background: #1f4e79; display: block; }
+.pl .box .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+
+.pl .rub { display: flex; gap: 20px; margin-top: 18px; }
+.pl .rub .col { flex: 1; padding: 18px 20px; border-radius: 12px; background: #ffffff; min-height: 300px;
+  box-shadow: 0 1px 2px rgba(29, 39, 51, 0.08), 0 6px 18px rgba(29, 39, 51, 0.08); }
+.pl .rub .chip { font-size: 30px; padding: 4px 14px; }
+.pl .rub .d { margin-top: 14px; font-size: 22px; color: #3d4a59; min-height: 116px; }
+.pl .rub .b { margin-top: 10px; font-size: 20px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #5d6772; }
+.pl .rub .bv { font-size: 54px; font-weight: 600; line-height: 1.05; color: #1d2733; }
+
+/* horizontal bars */
+.pl .bars { margin-top: 24px; width: 760px; }
+.pl .bars .bar { display: flex; align-items: center; margin-bottom: 26px; }
+.pl .bars .nm { width: 250px; flex: none; font-size: 24px; font-weight: 600; color: #1d2733; }
+.pl .bars .nm span { display: block; font-size: 20px; font-weight: 400; color: #5d6772; }
+.pl .bars .tr { flex: 1; height: 46px; background: #ece9e2; border-radius: 8px; position: relative; }
+.pl .bars .fl { height: 100%; border-radius: 8px; animation: grow 0.9s ease both; }
+.pl .bars .v { position: absolute; right: 12px; top: 0; line-height: 46px; font-size: 26px; font-weight: 700; color: #1d2733; }
+
+/* step dots, bottom centre */
+.pl-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.pl-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #d9d6ce;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.pl-dots span.past { background: #a8afb7; }
+.pl-dots span.on { background: #1f4e79; transform: scale(1.4); }
+
+/* the empty fragments only count clicks */
+.pl .fragment { position: absolute; width: 0; height: 0; overflow: hidden; }

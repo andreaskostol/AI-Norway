@@ -1,0 +1,168 @@
+/* pipeline.css: the pipeline slide. Everything lives in a fixed 1280 x 720 box. */
+
+/* system fonts only, so the file needs no network and looks the same on any Windows machine */
+.reveal, .reveal h1, .reveal h2, .reveal h3, .reveal .title, .reveal .subtitle,
+.reveal .author, .reveal .institute {
+  font-family: "Segoe UI", Calibri, Arial, sans-serif;
+}
+.reveal h1.title { font-size: 2.2em; font-weight: 600; color: #1d2733; }
+.reveal p.subtitle { color: #4a5868; font-size: 1.1em; }
+
+.reveal .slides section.pl-slide {
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: left;
+}
+
+.pl {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  height: 720px;
+  color: #1d2733;
+  font-family: "Segoe UI", Calibri, Arial, sans-serif;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.pl canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  height: 720px;
+  margin: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+/* caption, top left */
+.pl-head {
+  position: absolute;
+  left: 64px;
+  top: 26px;
+  width: 820px;
+  transition: opacity 0.17s ease, transform 0.17s ease;
+}
+.pl-head.out { opacity: 0; transform: translateY(6px); }
+
+.pl-kicker {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5d6772;
+}
+.pl-title {
+  margin: 4px 0 8px;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #1d2733;
+}
+.pl-sub {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.28;
+  color: #3d4a59;
+}
+
+/* formula chip, top right */
+.pl-formula {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  width: 330px;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(29, 39, 51, 0.08), 0 6px 18px rgba(29, 39, 51, 0.08);
+  font-size: 28px;
+  line-height: 1.25;
+  color: #1d2733;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+.pl-formula.on { opacity: 1; transform: none; }
+.pl-formula .op { font-weight: 700; color: #8c1515; padding: 0 2px; }
+
+/* side cards */
+.pl-facts {
+  position: absolute;
+  left: 948px;
+  top: 284px;
+  width: 296px;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #3d4a59;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.pl-result {
+  position: absolute;
+  right: 40px;
+  top: 26px;
+  width: 322px;
+  font-size: 22px;
+  line-height: 1.25;
+  color: #3d4a59;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.pl-facts.on, .pl-result.on { opacity: 1; }
+.pl-facts .big { font-size: 76px; font-weight: 600; line-height: 1.05; color: #1d2733; }
+.pl-result .big { font-size: 58px; font-weight: 600; line-height: 1.05; color: #1d2733; }
+.pl-result .lab {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5d6772;
+}
+.pl-facts .kv { margin-top: 22px; color: #1d2733; }
+.pl-facts .kv b { font-size: 30px; font-weight: 600; }
+.pl-result .small { margin-top: 4px; font-size: 20px; color: #5d6772; }
+
+/* the KI-index as a division with the numbers under each other */
+.pl-result table.calc { border-collapse: collapse; margin: 10px 0 8px; font-size: 24px; }
+.pl-result .calc td { padding: 3px 0; border: 0; }
+.pl-result .calc td.op { width: 28px; font-weight: 700; color: #8c1515; }
+.pl-result .calc td.n {
+  text-align: right;
+  padding-right: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #1d2733;
+}
+.pl-result .calc td.t { font-size: 20px; font-weight: 600; }
+.pl-result .calc tr.sum td { border-top: 2px solid #1d2733; padding-top: 6px; }
+.pl-result .calc tr.sum td.t { color: #1d2733; }
+
+/* step dots, bottom centre */
+.pl-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.pl-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #d9d6ce;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.pl-dots span.past { background: #a8afb7; }
+.pl-dots span.on { background: #1f4e79; transform: scale(1.4); }
+
+/* the empty fragments only count clicks */
+.pl .fragment { position: absolute; width: 0; height: 0; overflow: hidden; }

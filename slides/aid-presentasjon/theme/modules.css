@@ -1,0 +1,311 @@
+/* modules.css: the four animations (data-pipeline and mapping-pipeline) in one deck.
+   Merged from slides/data-pipeline/pipeline.css and slides/mapping-pipeline/mapping.css.
+   Shared rules use .pl. Rules that only the mapping animations need use .map, so they
+   cannot reach the pipeline cards. Everything lives in a fixed 1280 x 720 box.
+   Smallest text is 20 px. Labels are in sentence case, not capitals. */
+
+.reveal .slides section.pl-slide {
+  padding: 0 !important;
+  margin: 0 !important;
+  text-align: left;
+}
+
+.pl {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  height: 720px;
+  color: #1d2733;
+  font-family: "Segoe UI", Calibri, Arial, sans-serif;
+  text-align: left;
+  line-height: 1.25;
+}
+
+.pl canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1280px;
+  height: 720px;
+  margin: 0 !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+/* caption, top left */
+.pl-head {
+  position: absolute;
+  left: 64px;
+  top: 26px;
+  width: 820px;
+  transition: opacity 0.17s ease, transform 0.17s ease;
+}
+.pl-head.out { opacity: 0; transform: translateY(6px); }
+
+.pl-kicker {
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #5d6772;
+}
+.pl-title {
+  margin: 4px 0 8px;
+  font-size: 44px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: #1d2733;
+}
+.pl-sub { margin: 0; font-size: 26px; line-height: 1.28; color: #3d4a59; }
+
+/* formula chip, top right */
+.pl-formula {
+  position: absolute;
+  right: 40px;
+  top: 30px;
+  width: 330px;
+  box-sizing: border-box;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(29, 39, 51, 0.08), 0 6px 18px rgba(29, 39, 51, 0.08);
+  font-size: 28px;
+  line-height: 1.25;
+  color: #1d2733;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  pointer-events: none;
+}
+.pl-formula.on { opacity: 1; transform: none; }
+.pl-formula .op { font-weight: 700; color: #8c1515; padding: 0 2px; }
+
+/* step dots, bottom centre */
+.pl-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.pl-dots span {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #d9d6ce;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+.pl-dots span.past { background: #a8afb7; }
+.pl-dots span.on { background: #1f4e79; transform: scale(1.4); }
+
+/* the empty fragments only count clicks */
+.pl .fragment { position: absolute; width: 0; height: 0; overflow: hidden; }
+
+/* ------------------------------------------------------------------ */
+/* data-pipeline: fact card (step 0) and result card (last step)       */
+/* ------------------------------------------------------------------ */
+.pl-facts {
+  position: absolute;
+  left: 948px;
+  top: 284px;
+  width: 296px;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #3d4a59;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.pl-result {
+  position: absolute;
+  right: 40px;
+  top: 26px;
+  width: 322px;
+  font-size: 22px;
+  line-height: 1.25;
+  color: #3d4a59;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.pl-facts.on, .pl-result.on { opacity: 1; }
+.pl-facts .big { font-size: 76px; font-weight: 600; line-height: 1.05; color: #1d2733; }
+.pl-result .big { font-size: 58px; font-weight: 600; line-height: 1.05; color: #1d2733; }
+.pl-result .lab {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #5d6772;
+}
+.pl-facts .kv { margin-top: 22px; color: #1d2733; }
+.pl-facts .kv b { font-size: 30px; font-weight: 600; }
+.pl-result .small { margin-top: 4px; font-size: 20px; color: #5d6772; }
+
+/* the KI-index as a division with the numbers under each other */
+.pl-result table.calc { border-collapse: collapse; margin: 10px 0 8px; font-size: 24px; }
+.pl-result .calc td { padding: 3px 0; border: 0; }
+.pl-result .calc td.op { width: 28px; font-weight: 700; color: #8c1515; }
+.pl-result .calc td.n {
+  text-align: right;
+  padding-right: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #1d2733;
+}
+.pl-result .calc td.t { font-size: 20px; font-weight: 600; }
+.pl-result .calc tr.sum td { border-top: 2px solid #1d2733; padding-top: 6px; }
+.pl-result .calc tr.sum td.t { color: #1d2733; }
+
+/* ------------------------------------------------------------------ */
+/* mapping-pipeline: html layers that change from step to step         */
+/* ------------------------------------------------------------------ */
+.map .pl-card, .map .pl-tab, .map .pl-note {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  color: #3d4a59;
+}
+.map .pl-card.on, .map .pl-tab.on, .map .pl-note.on, .map .pl-tag.on { opacity: 1; }
+
+/* the example that the slide is about, top right */
+.map .pl-tag {
+  position: absolute;
+  right: 40px;
+  top: 28px;
+  width: 380px;
+  box-sizing: border-box;
+  padding: 12px 20px 14px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(29, 39, 51, 0.08), 0 6px 18px rgba(29, 39, 51, 0.1);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  color: #1d2733;
+}
+.map .pl-tag .k { font-size: 20px; font-weight: 600; letter-spacing: 0.02em; color: #5d6772; }
+.map .pl-tag .n { margin-top: 2px; font-size: 30px; font-weight: 700; line-height: 1.1; color: #1f4e79; }
+.map .pl-tag .c { margin-top: 4px; font-size: 20px; color: #5d6772; }
+.map .pl-tag .n.m { font-size: 26px; margin-top: 4px; }
+.map .pl-card { left: 944px; top: 262px; width: 300px; font-size: 22px; }
+.map .pl-tab { left: 64px; top: 258px; width: 1152px; font-size: 22px; }
+.map .pl-note { left: 64px; top: 556px; width: 1152px; font-size: 22px; }
+
+/* acronyms spelled out where the code chain appears */
+.map .acr { font-size: 20px; line-height: 1.3; color: #3d4a59; }
+.map .acr > div { display: flex; margin-bottom: 4px; }
+.map .acr b { flex: none; width: 130px; color: #1f4e79; }
+
+/* the pieces inside them rise in one after the other */
+.map .rise { animation: rise 0.55s ease both; }
+@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes grow { from { width: 0; } }
+
+.map .lab {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #5d6772;
+  margin-bottom: 6px;
+}
+.map .big { font-size: 58px; font-weight: 600; line-height: 1.05; color: #1d2733; }
+.map .small { margin-top: 6px; font-size: 20px; color: #5d6772; }
+
+/* evaluation chips */
+.map .chip {
+  display: inline-block;
+  min-width: 52px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.map .chip.e0 { background: #e6e3dc; color: #5d6772; }
+.map .chip.e1 { background: #8c1515; color: #ffffff; }
+.map .chip.e2 { background: #e6a817; color: #1d2733; }
+.map .chip.e3 { background: #0b7a75; color: #ffffff; }
+.map .chip.q1 { background: #577590; color: #ffffff; }
+.map .chip.q2 { background: #e6a817; color: #1d2733; }
+.map .chip.q3 { background: #e54a2b; color: #ffffff; }
+.map .chip.q4 { background: #8c1515; color: #ffffff; }
+.map .chip.q5 { background: #401415; color: #ffffff; }
+
+/* legend rows: a chip and a short sentence */
+.map .leg-row { margin-bottom: 18px; line-height: 1.25; }
+.map .leg-row .tx { margin-top: 6px; }
+.map .leg-row .val { margin-left: 12px; font-size: 24px; font-weight: 700; color: #1d2733; white-space: nowrap; }
+
+/* the division with the numbers under each other */
+.map table.calc { border-collapse: collapse; margin: 6px 0 8px; font-size: 24px; }
+.map .calc td { padding: 3px 0; border: 0; }
+.map .calc td.op { width: 28px; font-weight: 700; color: #8c1515; }
+.map .calc td.n {
+  text-align: right;
+  padding-right: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: #1d2733;
+}
+.map .calc td.t { font-size: 20px; font-weight: 600; }
+.map .calc tr.sum td { border-top: 2px solid #1d2733; padding-top: 6px; }
+.map .calc tr.sum td.t { color: #1d2733; }
+
+/* wide tables (results) */
+.map table.res { border-collapse: collapse; width: 100%; font-size: 24px; }
+.map .res th {
+  text-align: left;
+  padding: 0 14px 10px 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: #5d6772;
+  border-bottom: 2px solid #c9c6bd;
+}
+.map .res td { padding: 9px 14px 9px 0; border-bottom: 1px solid #e2dfd7; vertical-align: middle; }
+.map .res td.code { font-family: Consolas, "Courier New", monospace; font-size: 22px; color: #5d6772; }
+.map .res tr.hl td { background: #e8f0f7; font-weight: 600; }
+.map .res td.num, .map .res th.num { text-align: right; font-variant-numeric: tabular-nums; }
+.map .res td.num { font-weight: 600; }
+
+/* the process boxes and the rubric (Mouchel) */
+.map .flow { display: flex; align-items: stretch; gap: 0; margin-top: 18px; }
+.map .flow .arrow { flex: none; width: 54px; align-self: center; text-align: center; font-size: 34px; color: #8d97a1; }
+.map .box {
+  flex: 1;
+  min-height: 250px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(29, 39, 51, 0.08), 0 6px 18px rgba(29, 39, 51, 0.08);
+  font-size: 22px;
+  color: #1d2733;
+}
+.map .box.short { min-height: 0; padding-bottom: 24px; }
+.map .box .k { font-size: 20px; font-weight: 600; letter-spacing: 0.02em; color: #5d6772; margin-bottom: 10px; }
+.map .box .n { font-size: 46px; font-weight: 600; line-height: 1.05; }
+.map .box .t { margin-top: 8px; color: #3d4a59; }
+.map .box .dotrow { display: flex; flex-wrap: nowrap; gap: 6px; margin: 12px 0; }
+.map .box .dotrow i { width: 20px; height: 20px; border-radius: 5px; background: #1f4e79; display: block; }
+.map .box .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+
+.map .rub { display: flex; gap: 20px; margin-top: 18px; }
+.map .rub .col { flex: 1; padding: 18px 20px; border-radius: 12px; background: #ffffff; min-height: 300px;
+  box-shadow: 0 1px 2px rgba(29, 39, 51, 0.08), 0 6px 18px rgba(29, 39, 51, 0.08); }
+.map .rub .chip { font-size: 30px; padding: 4px 14px; }
+.map .rub .d { margin-top: 14px; font-size: 22px; color: #3d4a59; min-height: 116px; }
+.map .rub .b { margin-top: 10px; font-size: 20px; font-weight: 600; letter-spacing: 0.02em; color: #5d6772; }
+.map .rub .bv { font-size: 54px; font-weight: 600; line-height: 1.05; color: #1d2733; }
+
+/* horizontal bars */
+.map .bars { margin-top: 24px; width: 760px; }
+.map .bars .bar { display: flex; align-items: center; margin-bottom: 26px; }
+.map .bars .nm { width: 250px; flex: none; font-size: 24px; font-weight: 600; color: #1d2733; }
+.map .bars .nm span { display: block; font-size: 20px; font-weight: 400; color: #5d6772; }
+.map .bars .tr { flex: 1; height: 46px; background: #ece9e2; border-radius: 8px; position: relative; }
+.map .bars .fl { height: 100%; border-radius: 8px; animation: grow 0.9s ease both; }
+.map .bars .v { position: absolute; right: 12px; top: 0; line-height: 46px; font-size: 26px; font-weight: 700; color: #1d2733; }

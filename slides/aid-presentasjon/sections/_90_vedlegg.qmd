@@ -1,0 +1,107 @@
+## {#v01 .pl-slide background-color="#fbfaf7" visibility="uncounted"}
+
+```{=html}
+<div class="pl" id="pl-young">
+  <canvas role="img" aria-label="Animasjon fra rådata til KI-indeksen, 21 til 30 år"></canvas>
+  <div class="pl-head">
+    <div class="pl-kicker"></div>
+    <div class="pl-title"></div>
+    <div class="pl-sub"></div>
+  </div>
+  <div class="pl-formula"></div>
+  <div class="pl-facts"></div>
+  <div class="pl-result"></div>
+  <div class="pl-dots"></div>
+  <span class="fragment" data-fragment-index="0"></span>
+  <span class="fragment" data-fragment-index="1"></span>
+  <span class="fragment" data-fragment-index="2"></span>
+  <span class="fragment" data-fragment-index="3"></span>
+  <span class="fragment" data-fragment-index="4"></span>
+  <span class="fragment" data-fragment-index="5"></span>
+  <span class="fragment" data-fragment-index="6"></span>
+  <span class="fragment" data-fragment-index="7"></span>
+  <span class="fragment" data-fragment-index="8"></span>
+  <span class="fragment" data-fragment-index="9"></span>
+  <span class="fragment" data-fragment-index="10"></span>
+  <span class="fragment" data-fragment-index="11"></span>
+  <span class="fragment" data-fragment-index="12"></span>
+  <span class="fragment" data-fragment-index="13"></span>
+</div>
+```
+
+::: {.jump}
+[Tilbake til rådata-animasjonen](#/h11)
+:::
+
+::: {.notes}
+NOTES_V01
+:::
+
+## {#v02 .pl-slide background-color="#fbfaf7" visibility="uncounted"}
+
+```{=html}
+<div class="pl map" id="map-eloundou-full">
+  <canvas role="img" aria-label="Animasjon fra O*NET-oppgaver til norske yrker, Eloundou, alle steg"></canvas>
+  <div class="pl-head">
+    <div class="pl-kicker"></div>
+    <div class="pl-title"></div>
+    <div class="pl-sub"></div>
+  </div>
+  <div class="pl-card"></div>
+  <div class="pl-tab"></div>
+  <div class="pl-note"></div>
+  <div class="pl-tag"></div>
+  <div class="pl-dots"></div>
+  <span class="fragment" data-fragment-index="0"></span>
+  <span class="fragment" data-fragment-index="1"></span>
+  <span class="fragment" data-fragment-index="2"></span>
+  <span class="fragment" data-fragment-index="3"></span>
+  <span class="fragment" data-fragment-index="4"></span>
+  <span class="fragment" data-fragment-index="5"></span>
+  <span class="fragment" data-fragment-index="6"></span>
+  <span class="fragment" data-fragment-index="7"></span>
+  <span class="fragment" data-fragment-index="8"></span>
+  <span class="fragment" data-fragment-index="9"></span>
+</div>
+```
+
+::: {.jump}
+[Tilbake til O*NET-animasjonen](#/h09)
+:::
+
+::: {.notes}
+NOTES_V02
+:::
+
+## {#v03 .pl-slide background-color="#fbfaf7" visibility="uncounted"}
+
+```{=html}
+<div class="pl map" id="map-mouchel">
+  <canvas role="img" aria-label="Animasjon fra O*NET-oppgaver til norske yrker, Mouchel"></canvas>
+  <div class="pl-head">
+    <div class="pl-kicker"></div>
+    <div class="pl-title"></div>
+    <div class="pl-sub"></div>
+  </div>
+  <div class="pl-card"></div>
+  <div class="pl-tab"></div>
+  <div class="pl-note"></div>
+  <div class="pl-tag"></div>
+  <div class="pl-dots"></div>
+  <span class="fragment" data-fragment-index="0"></span>
+  <span class="fragment" data-fragment-index="1"></span>
+  <span class="fragment" data-fragment-index="2"></span>
+  <span class="fragment" data-fragment-index="3"></span>
+  <span class="fragment" data-fragment-index="4"></span>
+  <span class="fragment" data-fragment-index="5"></span>
+  <span class="fragment" data-fragment-index="6"></span>
+</div>
+```
+
+::: {.jump}
+[Tilbake til O*NET-animasjonen](#/h09)
+:::
+
+::: {.notes}
+NOTES_V03
+:::

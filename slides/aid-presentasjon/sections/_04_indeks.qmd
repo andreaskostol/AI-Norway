@@ -1,0 +1,38 @@
+## {#h11 .pl-slide background-color="#fbfaf7"}
+
+```{=html}
+<div class="pl" id="pl">
+  <canvas role="img" aria-label="Animasjon fra rådata til KI-indeksen, alle aldre 21 til 60 år"></canvas>
+  <div class="pl-head">
+    <div class="pl-kicker"></div>
+    <div class="pl-title"></div>
+    <div class="pl-sub"></div>
+  </div>
+  <div class="pl-formula"></div>
+  <div class="pl-facts"></div>
+  <div class="pl-result"></div>
+  <div class="pl-dots"></div>
+  <span class="fragment" data-fragment-index="0"></span>
+  <span class="fragment" data-fragment-index="1"></span>
+  <span class="fragment" data-fragment-index="2"></span>
+  <span class="fragment" data-fragment-index="3"></span>
+  <span class="fragment" data-fragment-index="4"></span>
+  <span class="fragment" data-fragment-index="5"></span>
+  <span class="fragment" data-fragment-index="6"></span>
+  <span class="fragment" data-fragment-index="7"></span>
+  <span class="fragment" data-fragment-index="8"></span>
+  <span class="fragment" data-fragment-index="9"></span>
+  <span class="fragment" data-fragment-index="10"></span>
+  <span class="fragment" data-fragment-index="11"></span>
+  <span class="fragment" data-fragment-index="12"></span>
+  <span class="fragment" data-fragment-index="13"></span>
+</div>
+```
+
+::: {.jump}
+[21–30 år: vedlegg V01](#/v01)
+:::
+
+::: {.notes}
+NOTES_H11
+:::

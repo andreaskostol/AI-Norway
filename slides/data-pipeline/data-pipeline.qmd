@@ -1,0 +1,138 @@
+---
+title: "Fra rådata til figur"
+subtitle: "KI-indeksen, steg for steg"
+author: "Øystein Hernæs"
+institute: "Frischsenteret"
+lang: nb
+format:
+  revealjs:
+    embed-resources: true
+    html-math-method: plain
+    width: 1280
+    height: 720
+    margin: 0
+    center: false
+    controls: false
+    progress: false
+    slide-number: false
+    menu: false
+    preview-links: false
+    transition: fade
+    transition-speed: fast
+    css: pipeline.css
+    include-after-body: _pipeline-scripts.html
+    title-slide-attributes:
+      data-background-color: "#fbfaf7"
+---
+
+## {.pl-slide background-color="#fbfaf7"}
+
+```{=html}
+<div class="pl" id="pl-young">
+  <canvas id="pl-young-canvas" role="img" aria-label="Animasjon fra rådata til figur, aldersgruppen 21 til 30 år"></canvas>
+  <div class="pl-head">
+    <div class="pl-kicker"></div>
+    <div class="pl-title"></div>
+    <div class="pl-sub"></div>
+  </div>
+  <div class="pl-formula"></div>
+  <div class="pl-facts"></div>
+  <div class="pl-result"></div>
+  <div class="pl-dots"></div>
+  <span class="fragment" data-fragment-index="0"></span>
+  <span class="fragment" data-fragment-index="1"></span>
+  <span class="fragment" data-fragment-index="2"></span>
+  <span class="fragment" data-fragment-index="3"></span>
+  <span class="fragment" data-fragment-index="4"></span>
+  <span class="fragment" data-fragment-index="5"></span>
+  <span class="fragment" data-fragment-index="6"></span>
+  <span class="fragment" data-fragment-index="7"></span>
+  <span class="fragment" data-fragment-index="8"></span>
+  <span class="fragment" data-fragment-index="9"></span>
+  <span class="fragment" data-fragment-index="10"></span>
+  <span class="fragment" data-fragment-index="11"></span>
+  <span class="fragment" data-fragment-index="12"></span>
+  <span class="fragment" data-fragment-index="13"></span>
+</div>
+```
+
+::: {.notes}
+Animasjonen for aldersgruppen 21 til 30 år. Det er den som er eksempelet fra første trykk. Neste slide viser den samme animasjonen for alle aldre. Det er tallet som står som hovedtall på kiindeksen.no.
+
+Ett trykk per steg. Animasjonen starter i tabellen og slutter i figuren.
+
+1. Rådata. Dette er filen bak figuren. Én rad per yrke, aldersgruppe og måned. Her er bare aldersgruppen 21 til 30 år med, i privat sektor.
+2. Hver rad blir ett punkt. Tolv rader i 2021 gir tolv punkter.
+3. Zoom ut i tid. Hele serien for programvareutviklere, 21 til 30 år. Vekst og sesongsvingninger ligger i samme serie.
+4. Tre serier til. Nivåene er svært ulike, så aksen er logaritmisk.
+5. Alle seriene i aldersgruppen. Hver tynn linje er ett yrke.
+6. Fargen viser KI-eksponering etter Eloundou mfl. Fem grupper med like mange yrker.
+7. Første regneoperasjon: summer innen kvintilen. Fem linjer står igjen, bare for de unge.
+8. Andre regneoperasjon: del på folketallet i alderen 21 til 30 år. Befolkningsveksten forsvinner fra kurvene.
+9. Sesongjustering, trinn 1. Vi zoomer inn på kvintil 5 blant de unge. Trenden er et midtstilt glidende gjennomsnitt over 13 måneder, regnet på logaritmen og bare på 2021 til 2024. Det er 13 måneder, der de to ytterste teller halvt, slik at trenden ikke har noe sesongmønster selv. Trenden finnes bare for månedene med full 13-måneders ramme, altså tre år av de fire.
+10. Trinn 2. For hver måned regner vi hvor mange prosent serien ligger over eller under trenden. Hver prikk er én måned. Alle juni-månedene er merket. De ligger lavt alle tre årene.
+11. Trinn 3. Prikkene flyttes til kalendermåneden de hører til. Snittet per kalendermåned er faktoren, justert slik at faktorene summerer til null over året. Faktorene er egne for de unge, én per kvintil og kalendermåned. For Q5 er juni −4,1 prosent og juli +1,6. For alle aldre samlet er juni −5,2 og juli −1,3. Januar er −2,5 for de unge og −1,4 for alle.
+12. Trinn 4. Hver måneds verdi deles på én pluss faktoren for den kalendermåneden. Faktorene er frosset, så de brukes også på månedene etter 2024. Linjene jevnes ut.
+13. Fjerde regneoperasjon: indekser. Alle linjene settes til 100 i november 2022. De trekkes sammen i ett punkt og sprer seg igjen.
+14. Resultatet. Figuren med direkte linjemerking. Seriene er de samme som i datapakken for 21 til 30 år under Alder × KI-eksponering på kiindeksen.no.
+15. KI-indeksen for de unge. Q5 er nå 0,9399 av nivået før (−6,01 prosent) og Q1 0,9490 (−5,10 prosent). Forholdet er 0,9904, altså −0,96 prosent. Differansen i vekst er −0,91 prosentpoeng. På kiindeksen.no står unge-indeksen som −1,0 med standardfeil 3,80 prosentpoeng. Neste slide gjør det samme for alle aldre.
+:::
+
+## {.pl-slide background-color="#fbfaf7"}
+
+```{=html}
+<div class="pl" id="pl">
+  <canvas id="pl-canvas" role="img" aria-label="Animasjon fra rådata til figur"></canvas>
+  <div class="pl-head">
+    <div class="pl-kicker"></div>
+    <div class="pl-title"></div>
+    <div class="pl-sub"></div>
+  </div>
+  <div class="pl-formula"></div>
+  <div class="pl-facts"></div>
+  <div class="pl-result"></div>
+  <div class="pl-dots"></div>
+  <span class="fragment" data-fragment-index="0"></span>
+  <span class="fragment" data-fragment-index="1"></span>
+  <span class="fragment" data-fragment-index="2"></span>
+  <span class="fragment" data-fragment-index="3"></span>
+  <span class="fragment" data-fragment-index="4"></span>
+  <span class="fragment" data-fragment-index="5"></span>
+  <span class="fragment" data-fragment-index="6"></span>
+  <span class="fragment" data-fragment-index="7"></span>
+  <span class="fragment" data-fragment-index="8"></span>
+  <span class="fragment" data-fragment-index="9"></span>
+  <span class="fragment" data-fragment-index="10"></span>
+  <span class="fragment" data-fragment-index="11"></span>
+  <span class="fragment" data-fragment-index="12"></span>
+  <span class="fragment" data-fragment-index="13"></span>
+</div>
+```
+
+::: {.notes}
+Samme animasjon som forrige slide, men for alle aldre samlet, 21 til 60 år. Dette er hovedtallet på kiindeksen.no: +1,6 med standardfeil 2,56 prosentpoeng. Tallet er ikke statistisk forskjellig fra null.
+
+Forskjellene fra forrige slide:
+
+- Alle fire aldersgrupper er med. Summen per kvintil gjelder alle i alderen 21 til 60.
+- Delingen er på folketallet i alderen 21 til 60.
+- Sesongfaktorene er per kvintil og kalendermåned for alle aldre samlet. Det er ikke egne faktorer per aldersgruppe, fordi aldersgruppene er slått sammen før sesongjusteringen.
+
+Ett trykk per steg.
+
+1. Rådata. Dette er filen bak figuren. Én rad per yrke, aldersgruppe og måned. Antall ansatte i privat sektor, 21 til 60 år.
+2. Hver rad blir ett punkt. Tolv rader i 2021 gir tolv punkter.
+3. Zoom ut i tid. Hele serien for programvareutviklere, 21 til 30 år. Vekst og sesongsvingninger ligger i samme serie.
+4. Tre serier til. Nivåene er svært ulike, så aksen er logaritmisk.
+5. Alle seriene. Hver tynn linje er ett yrke i én aldersgruppe.
+6. Fargen viser KI-eksponering etter Eloundou mfl. Fem grupper med like mange yrker.
+7. Første regneoperasjon: summer innen kvintilen. Fem linjer står igjen.
+8. Andre regneoperasjon: del på befolkningen i alderen 21 til 60 år. Befolkningsveksten forsvinner fra kurvene.
+9. Sesongjustering, trinn 1. Vi zoomer inn på kvintil 5. Trenden er et midtstilt glidende gjennomsnitt over 13 måneder, regnet på logaritmen og bare på 2021 til 2024. Det er 13 måneder, der de to ytterste teller halvt, slik at trenden ikke har noe sesongmønster selv. Trenden finnes bare for månedene med full 13-måneders ramme, altså tre år av de fire.
+10. Trinn 2. For hver måned regner vi hvor mange prosent serien ligger over eller under trenden. Hver prikk er én måned. Alle juni-månedene er merket. De ligger lavt alle tre årene.
+11. Trinn 3. Prikkene flyttes til kalendermåneden de hører til. Snittet per kalendermåned er faktoren, justert slik at faktorene summerer til null over året. Faktorene er per kvintil og kalendermåned, ikke per aldersgruppe, fordi aldersgruppene er slått sammen før dette. De små fargede prikkene viser at de andre kvintilene har sine egne tolv faktorer.
+12. Trinn 4. Hver måneds verdi deles på én pluss faktoren for den kalendermåneden. Faktorene er frosset, så de brukes også på månedene etter 2024. Linjene jevnes ut.
+13. Fjerde regneoperasjon: indekser. Alle linjene settes til 100 i november 2022. De trekkes sammen i ett punkt og sprer seg igjen.
+14. Resultatet. Figuren med direkte linjemerking.
+15. KI-indeksen. Den sammenligner bare Q5 og Q1. For hver av dem tar vi snittet av de tre siste månedene og setter det mot snittet av de tre månedene til og med oktober 2022. Q5 er nå 0,9827 av nivået før, altså −1,73 prosent. Q1 er 0,9671 av nivået før, altså −3,29 prosent. Så deler vi Q5 på Q1: 0,9827 delt på 0,9671 er 1,0161. Q5 ligger altså 1,61 prosent høyere i forhold til Q1 enn før. Vi deler fordi gruppene ikke starter på samme nivå, så hver gruppe måles mot sitt eget nivå. Referansen her er oktober 2022, mens figuren er satt til 100 i november. Differansen i vekst, −1,73 minus −3,29, er 1,56 prosentpoeng og altså nesten det samme tallet.
+:::
