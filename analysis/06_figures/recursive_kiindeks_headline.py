@@ -52,7 +52,7 @@ from collections import defaultdict         # nested auto-initialising count map
 import numpy as np                          # arrays, seasonal adjustment, bootstrap
 
 BASE = Path(__file__).resolve().parents[2]  # repo root (this file is 2 levels below it)
-PANEL = BASE / "microdata-output" / "09_occ_agedecade_sektor_kpos_2021m01_2026m06_parsed.csv"  # occ x month counts
+PANEL = BASE / "microdata-output" / "09_occ_agedecade_sektor_kpos_2021m01_2026m07_parsed.csv"  # occ x month counts
 MEASURE = sys.argv[1] if len(sys.argv) > 1 else "eloundou"  # which quintiles define Q1/Q5
 assert MEASURE in ("eloundou", "mouchel"), "measure must be eloundou or mouchel"
 EPOCH = sys.argv[2] if len(sys.argv) > 2 else "chatgpt"  # site reference point
@@ -85,7 +85,7 @@ REF_FROM, REF_TO = ("2022-08", "2022-10") if EPOCH == "chatgpt" else ("2024-11",
 REF_MONTH = REF_TO                      # last month of the reference window (post months counted after it)
 SEAS_FROM, SEAS_TO = "2021-01", "2024-12"  # window the seasonal factors are estimated/frozen on
 FIRST_CUT = "2025-01" if EPOCH == "chatgpt" else "2025-04"  # first vintage (>= 3 post months)
-LAST_CUT = "2026-06"                    # last vintage data-edge
+LAST_CUT = "2026-07"                    # last vintage data-edge
 N_BOOT = 1000                           # bootstrap replications per vintage
 SEED = 12345                            # RNG seed for reproducible bootstrap
 
