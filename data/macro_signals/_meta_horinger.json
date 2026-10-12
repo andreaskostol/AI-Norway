@@ -1,0 +1,7 @@
+{
+ "source": "regjeringen.no, høringer",
+ "url": "https://www.regjeringen.no/no/dokument/hoyringar/id1763/",
+ "fetched": "2026-10-08",
+ "filter": "Høringer publisert fra 2016-01-01. n_svar = antall treff i svarvisningen (?showSvar=true)",
+ "note": "Tellingen omfatter svar uten merknader og enkelte dokumenter fra departementet. Høringer uten svarvisning har n_svar tom."
+}

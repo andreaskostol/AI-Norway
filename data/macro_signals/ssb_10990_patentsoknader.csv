@@ -1,0 +1,121 @@
+ContentsCode_code,ContentsCode_label,Tid_code,Tid_label,value,period
+PatentSoknader,Patentsøknader i alt,2002,2002,6283.0,2002
+PatentSoknader,Patentsøknader i alt,2003,2003,5858.0,2003
+PatentSoknader,Patentsøknader i alt,2004,2004,5481.0,2004
+PatentSoknader,Patentsøknader i alt,2005,2005,5978.0,2005
+PatentSoknader,Patentsøknader i alt,2006,2006,6067.0,2006
+PatentSoknader,Patentsøknader i alt,2007,2007,6640.0,2007
+PatentSoknader,Patentsøknader i alt,2008,2008,5412.0,2008
+PatentSoknader,Patentsøknader i alt,2009,2009,3591.0,2009
+PatentSoknader,Patentsøknader i alt,2010,2010,1800.0,2010
+PatentSoknader,Patentsøknader i alt,2011,2011,1743.0,2011
+PatentSoknader,Patentsøknader i alt,2012,2012,1551.0,2012
+PatentSoknader,Patentsøknader i alt,2013,2013,1744.0,2013
+PatentSoknader,Patentsøknader i alt,2014,2014,1564.0,2014
+PatentSoknader,Patentsøknader i alt,2015,2015,1805.0,2015
+PatentSoknader,Patentsøknader i alt,2016,2016,2062.0,2016
+PatentSoknader,Patentsøknader i alt,2017,2017,2063.0,2017
+PatentSoknader,Patentsøknader i alt,2018,2018,1660.0,2018
+PatentSoknader,Patentsøknader i alt,2019,2019,1531.0,2019
+PatentSoknader,Patentsøknader i alt,2020,2020,1444.0,2020
+PatentSoknader,Patentsøknader i alt,2021,2021,1580.0,2021
+PatentSoknader,Patentsøknader i alt,2022,2022,1410.0,2022
+PatentSoknader,Patentsøknader i alt,2023,2023,1397.0,2023
+PatentSoknader,Patentsøknader i alt,2024,2024,1305.0,2024
+PatentSoknader,Patentsøknader i alt,2025,2025,1729.0,2025
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2002,2002,1170.0,2002
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2003,2003,1059.0,2003
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2004,2004,1132.0,2004
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2005,2005,1130.0,2005
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2006,2006,1085.0,2006
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2007,2007,1097.0,2007
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2008,2008,1029.0,2008
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2009,2009,1147.0,2009
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2010,2010,1063.0,2010
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2011,2011,1053.0,2011
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2012,2012,964.0,2012
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2013,2013,1060.0,2013
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2014,2014,1052.0,2014
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2015,2015,1120.0,2015
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2016,2016,1195.0,2016
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2017,2017,1108.0,2017
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2018,2018,1016.0,2018
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2019,2019,883.0,2019
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2020,2020,834.0,2020
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2021,2021,899.0,2021
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2022,2022,806.0,2022
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2023,2023,782.0,2023
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2024,2024,740.0,2024
+NasjoSoknInnenl,Nasjonale søknader inngitt av innenlandske søkere,2025,2025,1125.0,2025
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2002,2002,770.0,2002
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2003,2003,831.0,2003
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2004,2004,701.0,2004
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2005,2005,708.0,2005
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2006,2006,717.0,2006
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2007,2007,645.0,2007
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2008,2008,264.0,2008
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2009,2009,204.0,2009
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2010,2010,162.0,2010
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2011,2011,186.0,2011
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2012,2012,153.0,2012
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2013,2013,146.0,2013
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2014,2014,95.0,2014
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2015,2015,129.0,2015
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2016,2016,121.0,2016
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2017,2017,136.0,2017
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2018,2018,101.0,2018
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2019,2019,89.0,2019
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2020,2020,101.0,2020
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2021,2021,123.0,2021
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2022,2022,88.0,2022
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2023,2023,101.0,2023
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2024,2024,125.0,2024
+NasjoSoknUtenl,Nasjonale søknader inngitt av utenlandske søkere,2025,2025,172.0,2025
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2002,2002,4343.0,2002
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2003,2003,3968.0,2003
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2004,2004,3648.0,2004
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2005,2005,4140.0,2005
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2006,2006,4265.0,2006
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2007,2007,4898.0,2007
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2008,2008,4119.0,2008
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2009,2009,2240.0,2009
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2010,2010,575.0,2010
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2011,2011,504.0,2011
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2012,2012,434.0,2012
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2013,2013,538.0,2013
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2014,2014,417.0,2014
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2015,2015,556.0,2015
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2016,2016,746.0,2016
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2017,2017,819.0,2017
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2018,2018,543.0,2018
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2019,2019,560.0,2019
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2020,2020,509.0,2020
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2021,2021,558.0,2021
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2022,2022,516.0,2022
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2023,2023,514.0,2023
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2024,2024,440.0,2024
+ViderefIntSokn,Videreførte internasjonale søknader (PCT),2025,2025,432.0,2025
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2002,2002,,2002
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2003,2003,,2003
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2004,2004,,2004
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2005,2005,750.0,2005
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2006,2006,761.0,2006
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2007,2007,831.0,2007
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2008,2008,785.0,2008
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2009,2009,812.0,2009
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2010,2010,726.0,2010
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2011,2011,738.0,2011
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2012,2012,669.0,2012
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2013,2013,768.0,2013
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2014,2014,817.0,2014
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2015,2015,860.0,2015
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2016,2016,840.0,2016
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2017,2017,807.0,2017
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2018,2018,825.0,2018
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2019,2019,752.0,2019
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2020,2020,693.0,2020
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2021,2021,797.0,2021
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2022,2022,699.0,2022
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2023,2023,699.0,2023
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2024,2024,566.0,2024
+AvIAltNoForetak,Av søknader i alt: Patentsøknader fra norske foretak,2025,2025,730.0,2025

@@ -1,0 +1,85 @@
+listeside 20 2025-05-06
+listeside 40 2023-12-08
+listeside 60 2022-06-28
+listeside 80 2021-03-23
+listeside 100 2020-02-17
+listeside 120 2018-07-05
+listeside 140 2017-01-10
+høringer fra 2016-01-01 3104
+0 2026-10-08 {'id': '3175238', 'n_svar': None, 'fetched': '2026-10-08'}
+100 2026-05-22 {'id': '3160311', 'n_svar': 4, 'fetched': '2026-10-08'}
+200 2025-12-16 {'id': '3143140', 'n_svar': 115, 'fetched': '2026-10-08'}
+300 2025-07-08 {'id': '3114574', 'n_svar': 11, 'fetched': '2026-10-08'}
+400 2025-04-02 {'id': '3095040', 'n_svar': 14, 'fetched': '2026-10-08'}
+500 2024-11-18 {'id': '3075197', 'n_svar': 9, 'fetched': '2026-10-08'}
+600 2024-07-03 {'id': '3047810', 'n_svar': 60, 'fetched': '2026-10-08'}
+700 2024-03-19 {'id': '3030029', 'n_svar': 40, 'fetched': '2026-10-08'}
+800 2023-11-06 {'id': '3012863', 'n_svar': 8, 'fetched': '2026-10-08'}
+900 2023-06-23 {'id': '2986699', 'n_svar': 22, 'fetched': '2026-10-08'}
+1000 2023-02-09 {'id': '2962601', 'n_svar': 24, 'fetched': '2026-10-08'}
+1100 2022-10-18 {'id': '2936118', 'n_svar': 21, 'fetched': '2026-10-08'}
+1200 2022-06-13 {'id': '2918552', 'n_svar': 6, 'fetched': '2026-10-08'}
+1300 2022-02-21 {'id': '2901493', 'n_svar': 11, 'fetched': '2026-10-08'}
+1400 2021-10-01 {'id': '2872754', 'n_svar': 25, 'fetched': '2026-10-08'}
+1500 2021-06-17 {'id': '2861872', 'n_svar': 19, 'fetched': '2026-10-08'}
+1600 2021-02-22 {'id': '2835891', 'n_svar': 34, 'fetched': '2026-10-08'}
+1700 2020-11-13 {'id': '2784912', 'n_svar': 23, 'fetched': '2026-10-08'}
+1800 2020-07-29 {'id': '2723754', 'n_svar': 31, 'fetched': '2026-10-08'}
+1900 2020-05-07 {'id': '2701498', 'n_svar': None, 'fetched': '2026-10-08'}
+2000 2019-12-23 {'id': '2684011', 'n_svar': 12, 'fetched': '2026-10-08'}
+2100 2019-08-23 {'id': '2665969', 'n_svar': 45, 'fetched': '2026-10-08'}
+2200 2019-04-12 {'id': '2642070', 'n_svar': 5, 'fetched': '2026-10-08'}
+Traceback (most recent call last):
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\urllib3\connection.py", line 571, in getresponse
+    httplib_response = super().getresponse()
+  File "C:\Program Files\Python3.10\lib\http\client.py", line 1374, in getresponse
+    response.begin()
+  File "C:\Program Files\Python3.10\lib\http\client.py", line 318, in begin
+    version, status, reason = self._read_status()
+  File "C:\Program Files\Python3.10\lib\http\client.py", line 279, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "C:\Program Files\Python3.10\lib\socket.py", line 705, in readinto
+    return self._sock.recv_into(b)
+  File "C:\Program Files\Python3.10\lib\ssl.py", line 1273, in recv_into
+    return self.read(nbytes, buffer)
+  File "C:\Program Files\Python3.10\lib\ssl.py", line 1129, in read
+    return self._sslobj.read(len, buffer)
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\requests\adapters.py", line 645, in send
+    resp = conn.urlopen(
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\urllib3\util\retry.py", line 490, in increment
+    raise reraise(type(error), error, _stacktrace)
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\urllib3\util\util.py", line 39, in reraise
+    raise value
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", line 536, in _make_request
+    self._raise_timeout(err=e, url=url, timeout_value=read_timeout)
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\urllib3\connectionpool.py", line 367, in _raise_timeout
+    raise ReadTimeoutError(
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='www.regjeringen.no', port=443): Read timed out. (read timeout=60)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\oysteimh\Frischsenteret Dropbox\Øystein Hernæs\Research Hernaes\AI-Norway\analysis\09_macro_signals\fetch_horinger.py", line 85, in <module>
+    tx = text(get(BASE + r.url, {"showSvar": "true"}))
+  File "C:\Users\oysteimh\Frischsenteret Dropbox\Øystein Hernæs\Research Hernaes\AI-Norway\analysis\09_macro_signals\fetch_horinger.py", line 38, in get
+    r = S.get(url, params=params, timeout=60)
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\requests\sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\requests\sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\requests\sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\oysteimh\AppData\Roaming\Python\Python310\site-packages\requests\adapters.py", line 691, in send
+    raise ReadTimeout(e, request=request)
+requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.regjeringen.no', port=443): Read timed out. (read timeout=60)

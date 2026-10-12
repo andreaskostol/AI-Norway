@@ -1,0 +1,7 @@
+{
+ "source": "OpenAlex",
+ "url": "https://api.openalex.org/works",
+ "fetched": "2026-10-08",
+ "filter": "institutions.country_code:no, publiseringsdato i maaneden. group_by type og primary_topic.field.id",
+ "note": "Verk med bare aarstall faar ofte 1. januar som dato (se works_jan1). Siste maaneder er ufullstendige fordi OpenAlex indekserer med forsinkelse."
+}

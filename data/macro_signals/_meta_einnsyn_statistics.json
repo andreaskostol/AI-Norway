@@ -1,0 +1,7 @@
+{
+ "source": "eInnsyn (Digdir)",
+ "url": "https://api.einnsyn.no/statistics",
+ "fetched": "2026-10-08",
+ "filter": "aggregateFrom=2016-01-01, aggregateTo=2026-09-30, aggregateInterval=month",
+ "note": "created er opprettet-dato i eInnsyn, med nivåskift i september 2024, årsak ikke sjekket. innsynskrav er krav sendt via eInnsyn, tall fra 2018-02."
+}

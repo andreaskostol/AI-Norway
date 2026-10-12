@@ -1,0 +1,7 @@
+{
+ "source": "Nasjonalbiblioteket, katalog-API",
+ "url": "https://api.nb.no/catalog/v1/items",
+ "fetched": "2026-10-08",
+ "filter": "q=*, mediatype:bøker, year:<aar>, eventuelt languages:nob eller languages:nno",
+ "note": "Utgivelsesaar i katalogen. De siste aarene er ufullstendige fordi katalogisering tar tid."
+}

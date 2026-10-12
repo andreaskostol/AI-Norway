@@ -1,0 +1,10 @@
+{
+ "source": "Bronnoysundregistrene, Enhetsregisteret, full nedlasting",
+ "url": "https://data.brreg.no/enhetsregisteret/api/enheter/lastned/csv",
+ "fetched": "2026-10-08",
+ "file": "attachment; filename=\"enheter_2026-10-08T04-24-15.125250982.csv.gz\"",
+ "last_modified": "Thu Oct 08 04:26:52 CEST 2026",
+ "rows_in_file": 891029,
+ "filter": "registreringsdatoenhetsregisteret fra 2008-01. nace2 = forste to siffer i naeringskode1",
+ "note": "Bare enheter som er registrert i dag. Slettede enheter mangler. Naeringskoder er slik de star i dag."
+}

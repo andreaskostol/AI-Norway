@@ -1,0 +1,25 @@
+{
+ "source": "GitHub Innovation Graph",
+ "url": "https://github.com/github/innovationgraph",
+ "license": "CC0-1.0",
+ "fetched": "2026-10-08",
+ "data_commit": "054c7dbc527518fa2ecfd316efe2aa01f3986c39",
+ "data_commit_date": "2026-07-07T15:25:55Z",
+ "filter": {
+  "iso2_code": [
+   "NO",
+   "US",
+   "SE",
+   "DK",
+   "FI",
+   "EU"
+  ],
+  "metrics": [
+   "git_pushes",
+   "repositories",
+   "developers",
+   "organizations"
+  ]
+ },
+ "note": "Aktivitet tilordnes land etter IP-adresse. Bare offentlige repoer. Boter og svaert aktive kontoer er utelatt. repositories, developers og organizations er bestander ved kvartalsslutt."
+}

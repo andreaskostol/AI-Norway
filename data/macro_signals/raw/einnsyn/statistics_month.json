@@ -1,0 +1,925 @@
+{
+  "summary": {
+    "createdCount": 107116988,
+    "createdWithFulltextCount": 4272527,
+    "createdInnsynskravCount": 3480567,
+    "downloadCount": 183429
+  },
+  "metadata": {
+    "aggregateInterval": "month",
+    "aggregateFrom": "2016-01-01",
+    "aggregateTo": "2026-09-30"
+  },
+  "timeSeries": [
+    {
+      "time": "2016-01-01T00:00:00.000Z",
+      "createdCount": 255,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2016-02-01T00:00:00.000Z",
+      "createdCount": 313,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2016-03-01T00:00:00.000Z",
+      "createdCount": 372,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2016-04-01T00:00:00.000Z",
+      "createdCount": 419,
+      "createdWithFulltextCount": 1,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2016-05-01T00:00:00.000Z",
+      "createdCount": 249,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2016-06-01T00:00:00.000Z",
+      "createdCount": 398,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2016-07-01T00:00:00.000Z",
+      "createdCount": 248,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2016-08-01T00:00:00.000Z",
+      "createdCount": 273,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2016-09-01T00:00:00.000Z",
+      "createdCount": 376,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2016-10-01T00:00:00.000Z",
+      "createdCount": 483,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2016-11-01T00:00:00.000Z",
+      "createdCount": 379,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2016-12-01T00:00:00.000Z",
+      "createdCount": 318,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2017-01-01T00:00:00.000Z",
+      "createdCount": 551,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2017-02-01T00:00:00.000Z",
+      "createdCount": 430,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2017-03-01T00:00:00.000Z",
+      "createdCount": 594,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2017-04-01T00:00:00.000Z",
+      "createdCount": 352,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2017-05-01T00:00:00.000Z",
+      "createdCount": 572,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2017-06-01T00:00:00.000Z",
+      "createdCount": 481,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2017-07-01T00:00:00.000Z",
+      "createdCount": 304,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2017-08-01T00:00:00.000Z",
+      "createdCount": 506,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2017-09-01T00:00:00.000Z",
+      "createdCount": 626,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2017-10-01T00:00:00.000Z",
+      "createdCount": 528,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2017-11-01T00:00:00.000Z",
+      "createdCount": 681,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2017-12-01T00:00:00.000Z",
+      "createdCount": 470,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2018-01-01T00:00:00.000Z",
+      "createdCount": 708,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 0
+    },
+    {
+      "time": "2018-02-01T00:00:00.000Z",
+      "createdCount": 552,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 20564,
+      "downloadCount": 0
+    },
+    {
+      "time": "2018-03-01T00:00:00.000Z",
+      "createdCount": 460,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 18437,
+      "downloadCount": 0
+    },
+    {
+      "time": "2018-04-01T00:00:00.000Z",
+      "createdCount": 791,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 21471,
+      "downloadCount": 0
+    },
+    {
+      "time": "2018-05-01T00:00:00.000Z",
+      "createdCount": 525,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 16812,
+      "downloadCount": 0
+    },
+    {
+      "time": "2018-06-01T00:00:00.000Z",
+      "createdCount": 618,
+      "createdWithFulltextCount": 0,
+      "createdInnsynskravCount": 16739,
+      "downloadCount": 0
+    },
+    {
+      "time": "2018-07-01T00:00:00.000Z",
+      "createdCount": 80820,
+      "createdWithFulltextCount": 72612,
+      "createdInnsynskravCount": 17072,
+      "downloadCount": 0
+    },
+    {
+      "time": "2018-08-01T00:00:00.000Z",
+      "createdCount": 1717,
+      "createdWithFulltextCount": 993,
+      "createdInnsynskravCount": 20566,
+      "downloadCount": 0
+    },
+    {
+      "time": "2018-09-01T00:00:00.000Z",
+      "createdCount": 1074,
+      "createdWithFulltextCount": 412,
+      "createdInnsynskravCount": 21025,
+      "downloadCount": 0
+    },
+    {
+      "time": "2018-10-01T00:00:00.000Z",
+      "createdCount": 1460,
+      "createdWithFulltextCount": 636,
+      "createdInnsynskravCount": 24906,
+      "downloadCount": 0
+    },
+    {
+      "time": "2018-11-01T00:00:00.000Z",
+      "createdCount": 1400,
+      "createdWithFulltextCount": 656,
+      "createdInnsynskravCount": 21186,
+      "downloadCount": 0
+    },
+    {
+      "time": "2018-12-01T00:00:00.000Z",
+      "createdCount": 938,
+      "createdWithFulltextCount": 246,
+      "createdInnsynskravCount": 15115,
+      "downloadCount": 0
+    },
+    {
+      "time": "2019-01-01T00:00:00.000Z",
+      "createdCount": 1646,
+      "createdWithFulltextCount": 482,
+      "createdInnsynskravCount": 24698,
+      "downloadCount": 0
+    },
+    {
+      "time": "2019-02-01T00:00:00.000Z",
+      "createdCount": 1415,
+      "createdWithFulltextCount": 398,
+      "createdInnsynskravCount": 22157,
+      "downloadCount": 0
+    },
+    {
+      "time": "2019-03-01T00:00:00.000Z",
+      "createdCount": 1692,
+      "createdWithFulltextCount": 578,
+      "createdInnsynskravCount": 20989,
+      "downloadCount": 0
+    },
+    {
+      "time": "2019-04-01T00:00:00.000Z",
+      "createdCount": 1651,
+      "createdWithFulltextCount": 472,
+      "createdInnsynskravCount": 21180,
+      "downloadCount": 0
+    },
+    {
+      "time": "2019-05-01T00:00:00.000Z",
+      "createdCount": 3306,
+      "createdWithFulltextCount": 1789,
+      "createdInnsynskravCount": 19074,
+      "downloadCount": 0
+    },
+    {
+      "time": "2019-06-01T00:00:00.000Z",
+      "createdCount": 1717,
+      "createdWithFulltextCount": 628,
+      "createdInnsynskravCount": 17869,
+      "downloadCount": 0
+    },
+    {
+      "time": "2019-07-01T00:00:00.000Z",
+      "createdCount": 1125,
+      "createdWithFulltextCount": 33,
+      "createdInnsynskravCount": 20843,
+      "downloadCount": 0
+    },
+    {
+      "time": "2019-08-01T00:00:00.000Z",
+      "createdCount": 1476,
+      "createdWithFulltextCount": 671,
+      "createdInnsynskravCount": 23838,
+      "downloadCount": 0
+    },
+    {
+      "time": "2019-09-01T00:00:00.000Z",
+      "createdCount": 1307,
+      "createdWithFulltextCount": 364,
+      "createdInnsynskravCount": 20315,
+      "downloadCount": 0
+    },
+    {
+      "time": "2019-10-01T00:00:00.000Z",
+      "createdCount": 1813,
+      "createdWithFulltextCount": 488,
+      "createdInnsynskravCount": 28870,
+      "downloadCount": 0
+    },
+    {
+      "time": "2019-11-01T00:00:00.000Z",
+      "createdCount": 2135,
+      "createdWithFulltextCount": 868,
+      "createdInnsynskravCount": 25476,
+      "downloadCount": 0
+    },
+    {
+      "time": "2019-12-01T00:00:00.000Z",
+      "createdCount": 1391,
+      "createdWithFulltextCount": 386,
+      "createdInnsynskravCount": 17071,
+      "downloadCount": 0
+    },
+    {
+      "time": "2020-01-01T00:00:00.000Z",
+      "createdCount": 2771,
+      "createdWithFulltextCount": 900,
+      "createdInnsynskravCount": 29851,
+      "downloadCount": 0
+    },
+    {
+      "time": "2020-02-01T00:00:00.000Z",
+      "createdCount": 2015,
+      "createdWithFulltextCount": 389,
+      "createdInnsynskravCount": 27490,
+      "downloadCount": 0
+    },
+    {
+      "time": "2020-03-01T00:00:00.000Z",
+      "createdCount": 2552,
+      "createdWithFulltextCount": 461,
+      "createdInnsynskravCount": 24033,
+      "downloadCount": 0
+    },
+    {
+      "time": "2020-04-01T00:00:00.000Z",
+      "createdCount": 1916,
+      "createdWithFulltextCount": 412,
+      "createdInnsynskravCount": 24327,
+      "downloadCount": 0
+    },
+    {
+      "time": "2020-05-01T00:00:00.000Z",
+      "createdCount": 1884,
+      "createdWithFulltextCount": 357,
+      "createdInnsynskravCount": 26347,
+      "downloadCount": 0
+    },
+    {
+      "time": "2020-06-01T00:00:00.000Z",
+      "createdCount": 2277,
+      "createdWithFulltextCount": 400,
+      "createdInnsynskravCount": 21490,
+      "downloadCount": 0
+    },
+    {
+      "time": "2020-07-01T00:00:00.000Z",
+      "createdCount": 1439,
+      "createdWithFulltextCount": 64,
+      "createdInnsynskravCount": 21033,
+      "downloadCount": 0
+    },
+    {
+      "time": "2020-08-01T00:00:00.000Z",
+      "createdCount": 1693,
+      "createdWithFulltextCount": 411,
+      "createdInnsynskravCount": 25119,
+      "downloadCount": 0
+    },
+    {
+      "time": "2020-09-01T00:00:00.000Z",
+      "createdCount": 2592,
+      "createdWithFulltextCount": 425,
+      "createdInnsynskravCount": 27409,
+      "downloadCount": 0
+    },
+    {
+      "time": "2020-10-01T00:00:00.000Z",
+      "createdCount": 3061,
+      "createdWithFulltextCount": 587,
+      "createdInnsynskravCount": 30664,
+      "downloadCount": 0
+    },
+    {
+      "time": "2020-11-01T00:00:00.000Z",
+      "createdCount": 3251,
+      "createdWithFulltextCount": 429,
+      "createdInnsynskravCount": 32004,
+      "downloadCount": 0
+    },
+    {
+      "time": "2020-12-01T00:00:00.000Z",
+      "createdCount": 2478,
+      "createdWithFulltextCount": 337,
+      "createdInnsynskravCount": 22941,
+      "downloadCount": 0
+    },
+    {
+      "time": "2021-01-01T00:00:00.000Z",
+      "createdCount": 8997,
+      "createdWithFulltextCount": 369,
+      "createdInnsynskravCount": 31332,
+      "downloadCount": 0
+    },
+    {
+      "time": "2021-02-01T00:00:00.000Z",
+      "createdCount": 6243,
+      "createdWithFulltextCount": 452,
+      "createdInnsynskravCount": 28588,
+      "downloadCount": 0
+    },
+    {
+      "time": "2021-03-01T00:00:00.000Z",
+      "createdCount": 6066,
+      "createdWithFulltextCount": 312,
+      "createdInnsynskravCount": 29591,
+      "downloadCount": 0
+    },
+    {
+      "time": "2021-04-01T00:00:00.000Z",
+      "createdCount": 5411,
+      "createdWithFulltextCount": 414,
+      "createdInnsynskravCount": 31994,
+      "downloadCount": 0
+    },
+    {
+      "time": "2021-05-01T00:00:00.000Z",
+      "createdCount": 7109,
+      "createdWithFulltextCount": 2180,
+      "createdInnsynskravCount": 25086,
+      "downloadCount": 0
+    },
+    {
+      "time": "2021-06-01T00:00:00.000Z",
+      "createdCount": 8531,
+      "createdWithFulltextCount": 2803,
+      "createdInnsynskravCount": 22649,
+      "downloadCount": 0
+    },
+    {
+      "time": "2021-07-01T00:00:00.000Z",
+      "createdCount": 6992,
+      "createdWithFulltextCount": 18,
+      "createdInnsynskravCount": 17905,
+      "downloadCount": 0
+    },
+    {
+      "time": "2021-08-01T00:00:00.000Z",
+      "createdCount": 5497,
+      "createdWithFulltextCount": 238,
+      "createdInnsynskravCount": 27599,
+      "downloadCount": 0
+    },
+    {
+      "time": "2021-09-01T00:00:00.000Z",
+      "createdCount": 7822,
+      "createdWithFulltextCount": 305,
+      "createdInnsynskravCount": 25105,
+      "downloadCount": 0
+    },
+    {
+      "time": "2021-10-01T00:00:00.000Z",
+      "createdCount": 17717,
+      "createdWithFulltextCount": 399,
+      "createdInnsynskravCount": 32769,
+      "downloadCount": 0
+    },
+    {
+      "time": "2021-11-01T00:00:00.000Z",
+      "createdCount": 26191,
+      "createdWithFulltextCount": 475,
+      "createdInnsynskravCount": 31111,
+      "downloadCount": 0
+    },
+    {
+      "time": "2021-12-01T00:00:00.000Z",
+      "createdCount": 6020,
+      "createdWithFulltextCount": 194,
+      "createdInnsynskravCount": 21904,
+      "downloadCount": 0
+    },
+    {
+      "time": "2022-01-01T00:00:00.000Z",
+      "createdCount": 6480,
+      "createdWithFulltextCount": 502,
+      "createdInnsynskravCount": 36753,
+      "downloadCount": 0
+    },
+    {
+      "time": "2022-02-01T00:00:00.000Z",
+      "createdCount": 5597,
+      "createdWithFulltextCount": 621,
+      "createdInnsynskravCount": 35316,
+      "downloadCount": 0
+    },
+    {
+      "time": "2022-03-01T00:00:00.000Z",
+      "createdCount": 11641,
+      "createdWithFulltextCount": 2611,
+      "createdInnsynskravCount": 36838,
+      "downloadCount": 0
+    },
+    {
+      "time": "2022-04-01T00:00:00.000Z",
+      "createdCount": 26776,
+      "createdWithFulltextCount": 19554,
+      "createdInnsynskravCount": 29869,
+      "downloadCount": 0
+    },
+    {
+      "time": "2022-05-01T00:00:00.000Z",
+      "createdCount": 5712,
+      "createdWithFulltextCount": 950,
+      "createdInnsynskravCount": 34694,
+      "downloadCount": 0
+    },
+    {
+      "time": "2022-06-01T00:00:00.000Z",
+      "createdCount": 4453,
+      "createdWithFulltextCount": 813,
+      "createdInnsynskravCount": 29551,
+      "downloadCount": 0
+    },
+    {
+      "time": "2022-07-01T00:00:00.000Z",
+      "createdCount": 5011,
+      "createdWithFulltextCount": 781,
+      "createdInnsynskravCount": 24008,
+      "downloadCount": 0
+    },
+    {
+      "time": "2022-08-01T00:00:00.000Z",
+      "createdCount": 12918,
+      "createdWithFulltextCount": 3246,
+      "createdInnsynskravCount": 38139,
+      "downloadCount": 0
+    },
+    {
+      "time": "2022-09-01T00:00:00.000Z",
+      "createdCount": 13820,
+      "createdWithFulltextCount": 5228,
+      "createdInnsynskravCount": 39016,
+      "downloadCount": 0
+    },
+    {
+      "time": "2022-10-01T00:00:00.000Z",
+      "createdCount": 26706,
+      "createdWithFulltextCount": 19566,
+      "createdInnsynskravCount": 41596,
+      "downloadCount": 0
+    },
+    {
+      "time": "2022-11-01T00:00:00.000Z",
+      "createdCount": 13050,
+      "createdWithFulltextCount": 6075,
+      "createdInnsynskravCount": 41492,
+      "downloadCount": 0
+    },
+    {
+      "time": "2022-12-01T00:00:00.000Z",
+      "createdCount": 6457,
+      "createdWithFulltextCount": 1383,
+      "createdInnsynskravCount": 74699,
+      "downloadCount": 0
+    },
+    {
+      "time": "2023-01-01T00:00:00.000Z",
+      "createdCount": 11982,
+      "createdWithFulltextCount": 3326,
+      "createdInnsynskravCount": 43078,
+      "downloadCount": 0
+    },
+    {
+      "time": "2023-02-01T00:00:00.000Z",
+      "createdCount": 16482,
+      "createdWithFulltextCount": 5815,
+      "createdInnsynskravCount": 41786,
+      "downloadCount": 0
+    },
+    {
+      "time": "2023-03-01T00:00:00.000Z",
+      "createdCount": 25616,
+      "createdWithFulltextCount": 5002,
+      "createdInnsynskravCount": 41156,
+      "downloadCount": 0
+    },
+    {
+      "time": "2023-04-01T00:00:00.000Z",
+      "createdCount": 12294,
+      "createdWithFulltextCount": 1936,
+      "createdInnsynskravCount": 18511,
+      "downloadCount": 0
+    },
+    {
+      "time": "2023-05-01T00:00:00.000Z",
+      "createdCount": 11405,
+      "createdWithFulltextCount": 2096,
+      "createdInnsynskravCount": 23784,
+      "downloadCount": 0
+    },
+    {
+      "time": "2023-06-01T00:00:00.000Z",
+      "createdCount": 15328,
+      "createdWithFulltextCount": 2531,
+      "createdInnsynskravCount": 29561,
+      "downloadCount": 0
+    },
+    {
+      "time": "2023-07-01T00:00:00.000Z",
+      "createdCount": 7265,
+      "createdWithFulltextCount": 136,
+      "createdInnsynskravCount": 25931,
+      "downloadCount": 0
+    },
+    {
+      "time": "2023-08-01T00:00:00.000Z",
+      "createdCount": 9852,
+      "createdWithFulltextCount": 1673,
+      "createdInnsynskravCount": 34640,
+      "downloadCount": 0
+    },
+    {
+      "time": "2023-09-01T00:00:00.000Z",
+      "createdCount": 16254,
+      "createdWithFulltextCount": 3032,
+      "createdInnsynskravCount": 37979,
+      "downloadCount": 0
+    },
+    {
+      "time": "2023-10-01T00:00:00.000Z",
+      "createdCount": 22566,
+      "createdWithFulltextCount": 2935,
+      "createdInnsynskravCount": 45615,
+      "downloadCount": 0
+    },
+    {
+      "time": "2023-11-01T00:00:00.000Z",
+      "createdCount": 17766,
+      "createdWithFulltextCount": 3125,
+      "createdInnsynskravCount": 40038,
+      "downloadCount": 0
+    },
+    {
+      "time": "2023-12-01T00:00:00.000Z",
+      "createdCount": 42226,
+      "createdWithFulltextCount": 7897,
+      "createdInnsynskravCount": 37339,
+      "downloadCount": 0
+    },
+    {
+      "time": "2024-01-01T00:00:00.000Z",
+      "createdCount": 35082,
+      "createdWithFulltextCount": 3891,
+      "createdInnsynskravCount": 52239,
+      "downloadCount": 0
+    },
+    {
+      "time": "2024-02-01T00:00:00.000Z",
+      "createdCount": 25335,
+      "createdWithFulltextCount": 7291,
+      "createdInnsynskravCount": 50822,
+      "downloadCount": 0
+    },
+    {
+      "time": "2024-03-01T00:00:00.000Z",
+      "createdCount": 20153,
+      "createdWithFulltextCount": 7420,
+      "createdInnsynskravCount": 39991,
+      "downloadCount": 0
+    },
+    {
+      "time": "2024-04-01T00:00:00.000Z",
+      "createdCount": 18555,
+      "createdWithFulltextCount": 3978,
+      "createdInnsynskravCount": 45047,
+      "downloadCount": 0
+    },
+    {
+      "time": "2024-05-01T00:00:00.000Z",
+      "createdCount": 15722,
+      "createdWithFulltextCount": 3487,
+      "createdInnsynskravCount": 39043,
+      "downloadCount": 0
+    },
+    {
+      "time": "2024-06-01T00:00:00.000Z",
+      "createdCount": 18544,
+      "createdWithFulltextCount": 5045,
+      "createdInnsynskravCount": 37986,
+      "downloadCount": 0
+    },
+    {
+      "time": "2024-07-01T00:00:00.000Z",
+      "createdCount": 15473,
+      "createdWithFulltextCount": 794,
+      "createdInnsynskravCount": 33456,
+      "downloadCount": 0
+    },
+    {
+      "time": "2024-08-01T00:00:00.000Z",
+      "createdCount": 23073,
+      "createdWithFulltextCount": 8936,
+      "createdInnsynskravCount": 40420,
+      "downloadCount": 0
+    },
+    {
+      "time": "2024-09-01T00:00:00.000Z",
+      "createdCount": 83255175,
+      "createdWithFulltextCount": 2545205,
+      "createdInnsynskravCount": 34688,
+      "downloadCount": 0
+    },
+    {
+      "time": "2024-10-01T00:00:00.000Z",
+      "createdCount": 1243815,
+      "createdWithFulltextCount": 134242,
+      "createdInnsynskravCount": 32645,
+      "downloadCount": 0
+    },
+    {
+      "time": "2024-11-01T00:00:00.000Z",
+      "createdCount": 958131,
+      "createdWithFulltextCount": 89596,
+      "createdInnsynskravCount": 38358,
+      "downloadCount": 0
+    },
+    {
+      "time": "2024-12-01T00:00:00.000Z",
+      "createdCount": 634282,
+      "createdWithFulltextCount": 44106,
+      "createdInnsynskravCount": 31123,
+      "downloadCount": 0
+    },
+    {
+      "time": "2025-01-01T00:00:00.000Z",
+      "createdCount": 1021212,
+      "createdWithFulltextCount": 43250,
+      "createdInnsynskravCount": 52663,
+      "downloadCount": 0
+    },
+    {
+      "time": "2025-02-01T00:00:00.000Z",
+      "createdCount": 917944,
+      "createdWithFulltextCount": 38995,
+      "createdInnsynskravCount": 47216,
+      "downloadCount": 0
+    },
+    {
+      "time": "2025-03-01T00:00:00.000Z",
+      "createdCount": 990960,
+      "createdWithFulltextCount": 52304,
+      "createdInnsynskravCount": 36910,
+      "downloadCount": 0
+    },
+    {
+      "time": "2025-04-01T00:00:00.000Z",
+      "createdCount": 909348,
+      "createdWithFulltextCount": 68349,
+      "createdInnsynskravCount": 32092,
+      "downloadCount": 0
+    },
+    {
+      "time": "2025-05-01T00:00:00.000Z",
+      "createdCount": 891428,
+      "createdWithFulltextCount": 54260,
+      "createdInnsynskravCount": 33594,
+      "downloadCount": 0
+    },
+    {
+      "time": "2025-06-01T00:00:00.000Z",
+      "createdCount": 919696,
+      "createdWithFulltextCount": 44886,
+      "createdInnsynskravCount": 36807,
+      "downloadCount": 0
+    },
+    {
+      "time": "2025-07-01T00:00:00.000Z",
+      "createdCount": 828023,
+      "createdWithFulltextCount": 31966,
+      "createdInnsynskravCount": 38859,
+      "downloadCount": 0
+    },
+    {
+      "time": "2025-08-01T00:00:00.000Z",
+      "createdCount": 701908,
+      "createdWithFulltextCount": 31785,
+      "createdInnsynskravCount": 43547,
+      "downloadCount": 0
+    },
+    {
+      "time": "2025-09-01T00:00:00.000Z",
+      "createdCount": 924019,
+      "createdWithFulltextCount": 44724,
+      "createdInnsynskravCount": 49053,
+      "downloadCount": 0
+    },
+    {
+      "time": "2025-10-01T00:00:00.000Z",
+      "createdCount": 1048404,
+      "createdWithFulltextCount": 54035,
+      "createdInnsynskravCount": 55909,
+      "downloadCount": 0
+    },
+    {
+      "time": "2025-11-01T00:00:00.000Z",
+      "createdCount": 1009020,
+      "createdWithFulltextCount": 68518,
+      "createdInnsynskravCount": 51084,
+      "downloadCount": 0
+    },
+    {
+      "time": "2025-12-01T00:00:00.000Z",
+      "createdCount": 847751,
+      "createdWithFulltextCount": 57091,
+      "createdInnsynskravCount": 42095,
+      "downloadCount": 0
+    },
+    {
+      "time": "2026-01-01T00:00:00.000Z",
+      "createdCount": 1111474,
+      "createdWithFulltextCount": 85531,
+      "createdInnsynskravCount": 53879,
+      "downloadCount": 0
+    },
+    {
+      "time": "2026-02-01T00:00:00.000Z",
+      "createdCount": 1017383,
+      "createdWithFulltextCount": 64400,
+      "createdInnsynskravCount": 57221,
+      "downloadCount": 0
+    },
+    {
+      "time": "2026-03-01T00:00:00.000Z",
+      "createdCount": 1011872,
+      "createdWithFulltextCount": 74402,
+      "createdInnsynskravCount": 59387,
+      "downloadCount": 0
+    },
+    {
+      "time": "2026-04-01T00:00:00.000Z",
+      "createdCount": 1084082,
+      "createdWithFulltextCount": 70411,
+      "createdInnsynskravCount": 52038,
+      "downloadCount": 0
+    },
+    {
+      "time": "2026-05-01T00:00:00.000Z",
+      "createdCount": 987426,
+      "createdWithFulltextCount": 73869,
+      "createdInnsynskravCount": 53045,
+      "downloadCount": 0
+    },
+    {
+      "time": "2026-06-01T00:00:00.000Z",
+      "createdCount": 1206956,
+      "createdWithFulltextCount": 73760,
+      "createdInnsynskravCount": 54532,
+      "downloadCount": 0
+    },
+    {
+      "time": "2026-07-01T00:00:00.000Z",
+      "createdCount": 835072,
+      "createdWithFulltextCount": 60045,
+      "createdInnsynskravCount": 40070,
+      "downloadCount": 0
+    },
+    {
+      "time": "2026-08-01T00:00:00.000Z",
+      "createdCount": 846779,
+      "createdWithFulltextCount": 57277,
+      "createdInnsynskravCount": 53271,
+      "downloadCount": 0
+    },
+    {
+      "time": "2026-09-01T00:00:00.000Z",
+      "createdCount": 1132772,
+      "createdWithFulltextCount": 71797,
+      "createdInnsynskravCount": 65474,
+      "downloadCount": 183401
+    },
+    {
+      "time": "2026-10-01T00:00:00.000Z",
+      "createdCount": 22,
+      "createdWithFulltextCount": 3,
+      "createdInnsynskravCount": 0,
+      "downloadCount": 28
+    }
+  ]
+}

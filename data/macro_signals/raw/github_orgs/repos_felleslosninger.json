@@ -1,0 +1,842 @@
+[
+ {
+  "full_name": "felleslosninger/efm-integrasjonspunkt",
+  "created_at": "2014-09-23T10:41:24Z",
+  "pushed_at": "2026-10-07T12:36:49Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/efm-certvalidator",
+  "created_at": "2014-11-06T13:58:18Z",
+  "pushed_at": "2023-10-18T12:59:22Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/efm-asic",
+  "created_at": "2015-06-25T13:13:20Z",
+  "pushed_at": "2026-10-07T08:07:11Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/efm-commons-libs",
+  "created_at": "2015-07-27T19:14:43Z",
+  "pushed_at": "2024-10-17T19:27:13Z",
+  "fork": false,
+  "archived": true,
+  "language": "XSLT"
+ },
+ {
+  "full_name": "felleslosninger/eid-jenkins-docker",
+  "created_at": "2016-05-10T13:31:20Z",
+  "pushed_at": "2023-09-08T12:20:22Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/poc-statistics",
+  "created_at": "2016-06-15T06:46:30Z",
+  "pushed_at": "2023-11-22T20:58:40Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/efm-common",
+  "created_at": "2016-10-12T14:33:18Z",
+  "pushed_at": "2026-10-07T16:06:09Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/kontaktregister-statistikk-klient",
+  "created_at": "2016-10-27T11:18:23Z",
+  "pushed_at": "2024-03-15T14:26:41Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/dc17-eventrest",
+  "created_at": "2017-06-13T08:00:44Z",
+  "pushed_at": "2017-08-02T07:23:54Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/dc17-norgeProfil",
+  "created_at": "2017-06-13T08:01:14Z",
+  "pushed_at": "2017-08-02T07:56:04Z",
+  "fork": false,
+  "archived": true,
+  "language": "HTML"
+ },
+ {
+  "full_name": "felleslosninger/idporten-test-certificate-generator-lib",
+  "created_at": "2017-10-19T08:11:09Z",
+  "pushed_at": "2026-09-15T06:35:57Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/idporten-innlogging-statistikk-klient",
+  "created_at": "2017-11-15T08:33:30Z",
+  "pushed_at": "2022-06-27T16:18:39Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/idporten-design",
+  "created_at": "2017-12-12T12:16:38Z",
+  "pushed_at": "2020-04-01T11:38:07Z",
+  "fork": false,
+  "archived": true,
+  "language": "HTML"
+ },
+ {
+  "full_name": "felleslosninger/efm-mocks",
+  "created_at": "2018-04-13T12:43:42Z",
+  "pushed_at": "2024-12-06T07:12:00Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "felleslosninger/dc18-webAuth",
+  "created_at": "2018-06-11T11:58:06Z",
+  "pushed_at": "2018-07-17T07:48:09Z",
+  "fork": false,
+  "archived": true,
+  "language": "HTML"
+ },
+ {
+  "full_name": "felleslosninger/dc18-TokenExchange",
+  "created_at": "2018-06-11T12:00:12Z",
+  "pushed_at": "2018-07-27T10:37:39Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/dc18-AI",
+  "created_at": "2018-07-18T09:52:25Z",
+  "pushed_at": "2018-08-03T08:09:04Z",
+  "fork": false,
+  "archived": true,
+  "language": "Jupyter Notebook"
+ },
+ {
+  "full_name": "felleslosninger/eid-elk",
+  "created_at": "2018-11-09T11:04:16Z",
+  "pushed_at": "2018-12-07T15:58:08Z",
+  "fork": false,
+  "archived": true,
+  "language": "Python"
+ },
+ {
+  "full_name": "felleslosninger/jwt-grant-generator",
+  "created_at": "2018-11-26T07:35:51Z",
+  "pushed_at": "2026-10-08T01:06:28Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/maskinporten-test-jwt-grant",
+  "created_at": "2018-12-06T09:32:52Z",
+  "pushed_at": "2024-03-15T14:25:40Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/docs",
+  "created_at": "2019-01-08T12:54:58Z",
+  "pushed_at": "2026-10-07T13:38:19Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "felleslosninger/efm-kosmos",
+  "created_at": "2019-01-16T13:51:07Z",
+  "pushed_at": "2026-10-07T12:09:50Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/minid-updater",
+  "created_at": "2019-02-25T13:11:07Z",
+  "pushed_at": "2021-05-31T13:00:29Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/eidas-proxies",
+  "created_at": "2019-03-28T07:39:14Z",
+  "pushed_at": "2023-06-14T22:27:42Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/dc19-eInnsyn",
+  "created_at": "2019-06-11T09:56:43Z",
+  "pushed_at": "2019-08-08T07:52:01Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/dc19-IDP-IOT",
+  "created_at": "2019-06-11T09:58:10Z",
+  "pushed_at": "2019-07-16T12:47:04Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/eid-postman-test-collections",
+  "created_at": "2019-08-21T12:00:21Z",
+  "pushed_at": "2021-03-07T22:23:27Z",
+  "fork": false,
+  "archived": false,
+  "language": "Shell"
+ },
+ {
+  "full_name": "felleslosninger/sp-web-puppeteer",
+  "created_at": "2019-11-06T08:56:59Z",
+  "pushed_at": "2023-07-08T14:04:44Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "felleslosninger/idporten-oidc-spa-example",
+  "created_at": "2019-11-18T12:20:16Z",
+  "pushed_at": "2020-02-18T12:38:57Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "felleslosninger/maskinporten-rs-spring-example",
+  "created_at": "2020-04-29T18:40:59Z",
+  "pushed_at": "2021-05-06T06:20:13Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/dc20-digitalborger-frontend",
+  "created_at": "2020-06-29T06:24:06Z",
+  "pushed_at": "2021-05-26T14:12:55Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/idporten-oidc-client-example",
+  "created_at": "2020-09-17T06:56:34Z",
+  "pushed_at": "2023-07-19T09:08:17Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/.github",
+  "created_at": "2020-12-18T09:26:18Z",
+  "pushed_at": "2026-03-05T09:29:23Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/idporten-oidc-demo-client",
+  "created_at": "2021-01-25T18:56:59Z",
+  "pushed_at": "2026-10-07T08:02:47Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/efm-dpi-example",
+  "created_at": "2021-05-18T10:37:27Z",
+  "pushed_at": "2023-10-18T12:51:16Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/dc21-self-sovereign-identity",
+  "created_at": "2021-06-15T06:16:25Z",
+  "pushed_at": "2021-09-03T06:52:13Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/idporten-certificate-validator-lib",
+  "created_at": "2021-08-12T10:52:14Z",
+  "pushed_at": "2026-10-07T07:16:08Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/eid-pipeline-config",
+  "created_at": "2021-08-27T08:33:48Z",
+  "pushed_at": "2023-03-29T13:32:58Z",
+  "fork": false,
+  "archived": true,
+  "language": "Shell"
+ },
+ {
+  "full_name": "felleslosninger/eid-jenkins-pipeline",
+  "created_at": "2021-08-30T06:29:33Z",
+  "pushed_at": "2022-03-28T05:21:23Z",
+  "fork": false,
+  "archived": true,
+  "language": "Groovy"
+ },
+ {
+  "full_name": "felleslosninger/eid-github-workflows",
+  "created_at": "2021-11-04T11:53:58Z",
+  "pushed_at": "2024-10-18T10:03:16Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/devops.digdir.no",
+  "created_at": "2021-11-26T11:18:25Z",
+  "pushed_at": "2024-12-03T23:58:23Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "felleslosninger/digdir-hugo-theme",
+  "created_at": "2022-01-12T17:26:19Z",
+  "pushed_at": "2026-04-08T11:24:46Z",
+  "fork": false,
+  "archived": false,
+  "language": "SCSS"
+ },
+ {
+  "full_name": "felleslosninger/idporten-im-api-starter",
+  "created_at": "2022-03-21T13:08:22Z",
+  "pushed_at": "2023-08-28T17:35:09Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/idporten-fnr-generate",
+  "created_at": "2022-03-23T11:24:06Z",
+  "pushed_at": "2026-10-07T17:13:17Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/eid-statistikk-inndata-api",
+  "created_at": "2022-04-06T12:18:45Z",
+  "pushed_at": "2023-07-21T01:12:50Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/eid-statistikk-utdata-api",
+  "created_at": "2022-04-06T12:20:09Z",
+  "pushed_at": "2023-07-20T23:16:14Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/eid-statistikk-client-lib",
+  "created_at": "2022-04-06T13:05:15Z",
+  "pushed_at": "2023-07-24T00:32:08Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/eid-statistikk-common-api-lib",
+  "created_at": "2022-04-06T13:07:57Z",
+  "pushed_at": "2023-07-28T00:21:20Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/idporten-access-log-spring-boot-starter",
+  "created_at": "2022-06-17T11:31:57Z",
+  "pushed_at": "2026-10-07T09:37:38Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/idporten-seid2-certificate-validator-lib",
+  "created_at": "2022-06-28T11:16:53Z",
+  "pushed_at": "2026-09-29T12:52:49Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/idporten-actuator-starter",
+  "created_at": "2022-07-25T12:04:36Z",
+  "pushed_at": "2026-09-29T19:32:27Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/minid.no",
+  "created_at": "2022-11-11T08:46:46Z",
+  "pushed_at": "2025-08-01T07:07:42Z",
+  "fork": false,
+  "archived": true,
+  "language": "HTML"
+ },
+ {
+  "full_name": "felleslosninger/tlp-static-hotel",
+  "created_at": "2023-02-17T09:41:07Z",
+  "pushed_at": "2025-02-11T08:00:43Z",
+  "fork": false,
+  "archived": true,
+  "language": "CSS"
+ },
+ {
+  "full_name": "felleslosninger/dpi-roadmap",
+  "created_at": "2023-02-20T14:49:01Z",
+  "pushed_at": "2023-02-20T14:49:02Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/minid-roadmap",
+  "created_at": "2023-02-21T09:32:13Z",
+  "pushed_at": "2023-02-21T09:32:14Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/idporten-roadmap",
+  "created_at": "2023-03-06T11:57:51Z",
+  "pushed_at": "2023-03-06T11:57:51Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/tlp-react",
+  "created_at": "2023-03-29T17:31:01Z",
+  "pushed_at": "2024-09-27T16:58:51Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/tlp-next-eid",
+  "created_at": "2023-05-02T12:05:36Z",
+  "pushed_at": "2023-08-30T07:53:48Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/dc23-button-seeker-backend",
+  "created_at": "2023-08-04T09:12:01Z",
+  "pushed_at": "2023-08-04T09:12:17Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/dc23-button-seeker",
+  "created_at": "2023-08-07T11:12:50Z",
+  "pushed_at": "2023-08-07T11:13:53Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/product_idporten",
+  "created_at": "2023-08-09T11:57:59Z",
+  "pushed_at": "2023-08-09T11:58:00Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/skyporten-examples",
+  "created_at": "2023-08-22T11:13:23Z",
+  "pushed_at": "2023-12-19T11:16:22Z",
+  "fork": false,
+  "archived": false,
+  "language": "Jupyter Notebook"
+ },
+ {
+  "full_name": "felleslosninger/slides",
+  "created_at": "2023-09-06T07:40:03Z",
+  "pushed_at": "2023-09-06T07:40:59Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/einnsyn-backend",
+  "created_at": "2023-09-07T11:13:47Z",
+  "pushed_at": "2026-10-07T13:30:07Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/github-workflows",
+  "created_at": "2023-09-19T09:48:47Z",
+  "pushed_at": "2026-10-06T05:27:17Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/product_maskinporten",
+  "created_at": "2023-10-08T10:06:25Z",
+  "pushed_at": "2023-10-08T10:06:26Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/eformidling-artifacts",
+  "created_at": "2023-11-02T09:15:54Z",
+  "pushed_at": "2023-11-02T09:15:55Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/einnsyn-api-spec",
+  "created_at": "2023-12-01T08:03:09Z",
+  "pushed_at": "2026-09-24T11:17:17Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeSpec"
+ },
+ {
+  "full_name": "felleslosninger/einnsyn-codegen",
+  "created_at": "2023-12-14T10:39:50Z",
+  "pushed_at": "2026-09-22T08:05:28Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/tlp-dashboard",
+  "created_at": "2024-01-26T12:32:46Z",
+  "pushed_at": "2024-12-14T14:16:46Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/github-actions",
+  "created_at": "2024-01-31T13:50:59Z",
+  "pushed_at": "2026-10-08T05:49:29Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/tlp-organisation-chart",
+  "created_at": "2024-02-06T09:02:51Z",
+  "pushed_at": "2026-09-14T10:53:09Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/idporten-metric-constants-lib",
+  "created_at": "2024-03-13T13:50:02Z",
+  "pushed_at": "2026-09-09T13:50:09Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/efm-cloud-config",
+  "created_at": "2024-03-15T20:32:18Z",
+  "pushed_at": "2025-04-25T08:09:16Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/eidas-demo-countries",
+  "created_at": "2024-04-17T06:50:05Z",
+  "pushed_at": "2026-09-04T10:26:01Z",
+  "fork": false,
+  "archived": false,
+  "language": "Dockerfile"
+ },
+ {
+  "full_name": "felleslosninger/eidas-proxy",
+  "created_at": "2024-04-24T13:10:17Z",
+  "pushed_at": "2026-10-06T11:53:29Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/eidas-redis-lib",
+  "created_at": "2024-04-25T11:32:21Z",
+  "pushed_at": "2026-05-12T09:54:59Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/minid-web-components",
+  "created_at": "2024-05-02T07:52:32Z",
+  "pushed_at": "2026-09-22T07:30:57Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/eidas-connector",
+  "created_at": "2024-05-15T12:33:44Z",
+  "pushed_at": "2026-09-09T11:38:59Z",
+  "fork": false,
+  "archived": false,
+  "language": "Dockerfile"
+ },
+ {
+  "full_name": "felleslosninger/dc24-eu-wallet",
+  "created_at": "2024-06-13T11:21:31Z",
+  "pushed_at": "2024-08-09T06:04:47Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/dc24-wallet-verifier",
+  "created_at": "2024-07-08T07:23:24Z",
+  "pushed_at": "2026-08-13T18:50:49Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/dc24-wallet-issuer",
+  "created_at": "2024-07-24T10:56:26Z",
+  "pushed_at": "2024-10-15T19:13:40Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "felleslosninger/idporten-login-client-example",
+  "created_at": "2025-02-03T13:39:29Z",
+  "pushed_at": "2025-05-06T08:42:49Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/einnsyn-sdk-typescript",
+  "created_at": "2025-03-07T14:27:32Z",
+  "pushed_at": "2026-10-08T08:15:40Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/einnsyn-sdk-java",
+  "created_at": "2025-03-14T08:55:10Z",
+  "pushed_at": "2026-09-30T06:39:02Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "felleslosninger/tlp-svg-kit",
+  "created_at": "2025-03-17T12:48:48Z",
+  "pushed_at": "2026-06-16T01:21:18Z",
+  "fork": false,
+  "archived": false,
+  "language": "CSS"
+ },
+ {
+  "full_name": "felleslosninger/efm-nhn-adapter",
+  "created_at": "2025-05-13T09:42:06Z",
+  "pushed_at": "2026-10-08T04:55:15Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "felleslosninger/einnsyn-frontend",
+  "created_at": "2025-05-16T08:54:47Z",
+  "pushed_at": "2026-10-07T12:53:56Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/fiks-helseid-client",
+  "created_at": "2025-05-22T10:49:45Z",
+  "pushed_at": "2026-08-13T18:57:37Z",
+  "fork": true,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "felleslosninger/fiks-nhn-client",
+  "created_at": "2025-06-05T07:24:53Z",
+  "pushed_at": "2026-08-20T18:33:24Z",
+  "fork": true,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "felleslosninger/dc25-data_cleansing_digdir_docs",
+  "created_at": "2025-06-16T13:18:43Z",
+  "pushed_at": "2025-06-16T13:18:43Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/SorteringBrukerInput",
+  "created_at": "2025-06-16T13:49:37Z",
+  "pushed_at": "2025-06-16T14:12:08Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "felleslosninger/brui",
+  "created_at": "2025-09-15T08:00:20Z",
+  "pushed_at": "2026-09-10T20:58:34Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/eudi-lib-sdjwt-swift",
+  "created_at": "2025-11-26T09:07:17Z",
+  "pushed_at": "2026-02-12T14:53:20Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/sec-csp-reportto",
+  "created_at": "2026-03-10T13:19:00Z",
+  "pushed_at": "2026-10-01T09:49:05Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "felleslosninger/drift-motehjelp",
+  "created_at": "2026-03-16T12:08:24Z",
+  "pushed_at": "2026-05-12T11:04:12Z",
+  "fork": false,
+  "archived": false,
+  "language": "CSS"
+ },
+ {
+  "full_name": "felleslosninger/ai-gateway",
+  "created_at": "2026-03-24T13:19:23Z",
+  "pushed_at": "2026-06-20T09:15:02Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/digdir-camp-wallet-ios-app",
+  "created_at": "2026-06-15T13:24:03Z",
+  "pushed_at": "2026-07-31T08:06:34Z",
+  "fork": true,
+  "archived": false,
+  "language": "Swift"
+ },
+ {
+  "full_name": "felleslosninger/digdir-camp-wallet-android-app",
+  "created_at": "2026-06-16T07:00:31Z",
+  "pushed_at": "2026-08-04T07:23:50Z",
+  "fork": true,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "felleslosninger/sec-agent-sandbox",
+  "created_at": "2026-07-03T09:35:19Z",
+  "pushed_at": "2026-07-29T07:51:45Z",
+  "fork": false,
+  "archived": false,
+  "language": "Shell"
+ },
+ {
+  "full_name": "felleslosninger/DC-26-Innboks-server",
+  "created_at": "2026-07-08T08:57:51Z",
+  "pushed_at": "2026-09-29T04:19:28Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "felleslosninger/DC-26-messaging-backend",
+  "created_at": "2026-07-08T08:57:53Z",
+  "pushed_at": "2026-09-03T11:08:56Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "felleslosninger/sec-fetch-github-admins",
+  "created_at": "2026-07-13T10:40:27Z",
+  "pushed_at": "2026-07-13T10:44:15Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "felleslosninger/efm-peppol-meldingsformat",
+  "created_at": "2026-08-19T09:57:29Z",
+  "pushed_at": "2026-09-17T10:57:31Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "felleslosninger/oxalis-ng",
+  "created_at": "2026-09-23T13:57:38Z",
+  "pushed_at": "2026-09-29T10:12:43Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ }
+]

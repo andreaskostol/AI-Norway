@@ -1,0 +1,914 @@
+<!doctype html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KI forandrer stigen</title>
+<style>
+  :root {
+    --paper: #FAF9F6; --ink: #16213A; --muted: #5B6478; --accent: #1F3A7A; --accent-soft: #E7EBF6;
+    --red: #B23A2E; --grey: #7C8492; --green: #1F7A4D; --teal: #1F7A7A; --amber: #B7791F;
+    --line: #DAD6CC; --chip: #EFECE4; --card: #FFFFFF; --blue: #2F6FB0; --q1: #999999;
+    --shadow: 0 1px 3px rgba(22, 33, 58, 0.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #101626; --ink: #E9ECF5; --muted: #9BA3B8; --accent: #93ACEF; --accent-soft: #1B2544;
+      --red: #E37E6A; --grey: #9AA1AE; --green: #57BD8D; --teal: #5AC0C0; --amber: #E0B15A;
+      --line: #2A3350; --chip: #1B2340; --card: #171F35; --blue: #7FA6D3; --q1: #AAB0B8;
+      --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #101626; --ink: #E9ECF5; --muted: #9BA3B8; --accent: #93ACEF; --accent-soft: #1B2544;
+    --red: #E37E6A; --grey: #9AA1AE; --green: #57BD8D; --teal: #5AC0C0; --amber: #E0B15A;
+    --line: #2A3350; --chip: #1B2340; --card: #171F35; --blue: #7FA6D3; --q1: #AAB0B8;
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body { margin: 0; background: var(--paper); color: var(--ink);
+    font-family: "Seravek", "Avenir Next", "Segoe UI", system-ui, sans-serif; font-size: 16px; line-height: 1.5; overflow: hidden; }
+  h1, h2, h3 { font-family: "Avenir Next", "Futura", "Segoe UI", system-ui, sans-serif; line-height: 1.12; text-wrap: balance; margin: 0; }
+
+  .progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); width: 0%; z-index: 40; transition: width .25s ease; }
+  .hud { position: fixed; bottom: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center;
+    padding: .6rem 1.2rem; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .72rem; color: var(--muted); z-index: 40; pointer-events: none; }
+  .hud button { pointer-events: auto; font: inherit; color: inherit; background: none; border: 1px solid var(--line); border-radius: 6px; padding: .2rem .55rem; margin-left: .4rem; cursor: pointer; }
+  .hud button:hover { border-color: var(--accent); color: var(--accent); }
+
+  .slide { position: fixed; inset: 0; display: none; flex-direction: column; justify-content: center;
+    padding: clamp(1.6rem, 5vh, 3rem) clamp(1.6rem, 6vw, 6rem) clamp(3.6rem, 9vh, 5rem); overflow-y: auto; }
+  .slide.current { display: flex; }
+  .eyebrow { font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif; font-size: .78rem; font-weight: 600; text-transform: uppercase; letter-spacing: .16em; color: var(--accent); margin-bottom: .9rem; }
+  .slide h2 { font-size: clamp(1.6rem, 3.4vw, 2.4rem); font-weight: 600; margin-bottom: clamp(.9rem, 2.6vh, 1.6rem); max-width: 30ch; }
+  .slide .lead { font-size: clamp(1.1rem, 2vw, 1.45rem); color: var(--muted); max-width: 56ch; margin: 0 0 1rem; }
+  .slide ul.big { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: clamp(.7rem, 2vh, 1.2rem); font-size: clamp(1.15rem, 2.2vw, 1.6rem); max-width: 60ch; }
+  .slide ul.big li { padding-left: 1.4em; position: relative; }
+  .slide ul.big li::before { content: ""; position: absolute; left: 0; top: .62em; width: .55em; height: 3px; background: var(--accent); }
+  .sub { color: var(--muted); font-size: .84em; display: block; }
+  .notes { display: none; }
+  .src { color: var(--muted); font-size: clamp(.75rem, 1.2vw, .9rem); margin-top: auto; padding-top: .6rem; max-width: 110ch; line-height: 1.35; }
+
+  .slide.title { align-items: flex-start; }
+  .slide.title h1 { font-size: clamp(2.5rem, 6.4vw, 4.6rem); font-weight: 700; max-width: 18ch; margin-bottom: 1.2rem; }
+  .slide.title .who { margin-top: clamp(1.6rem, 5vh, 3rem); padding-top: 1rem; border-top: 1px solid var(--line); font-size: 1.05rem; color: var(--muted); }
+  .slide.title .who strong { color: var(--ink); font-weight: 600; }
+  .kicker { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .78rem; color: var(--muted); letter-spacing: .05em; margin-bottom: 1.4rem; }
+  .slide.divider { background: var(--accent-soft); }
+  .slide.divider h2 { font-size: clamp(2.2rem, 5.2vw, 3.8rem); max-width: 20ch; }
+
+  .cols { display: grid; gap: clamp(.9rem, 2.2vw, 1.8rem); width: 100%; }
+  .cols.two { grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 78rem; }
+  @media (max-width: 800px) { .cols.two { grid-template-columns: 1fr; } }
+  .cols.three { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); max-width: 82rem; }
+  .cols.fig { grid-template-columns: minmax(0, 2.4fr) minmax(220px, 1fr); align-items: start; max-width: 86rem; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); padding: clamp(.9rem, 2vw, 1.4rem); }
+  .card h3 { font-size: clamp(1.05rem, 1.8vw, 1.3rem); font-weight: 600; margin-bottom: .6rem; color: var(--accent); }
+  .card.red h3 { color: var(--red); } .card.green h3 { color: var(--green); } .card.teal h3 { color: var(--teal); } .card.amber h3 { color: var(--amber); }
+  .card ul { margin: 0; padding-left: 1.1rem; font-size: clamp(.92rem, 1.5vw, 1.1rem); }
+  .card li { margin-bottom: .4rem; } .card li:last-child { margin-bottom: 0; }
+  .card p { margin: 0; font-size: clamp(.98rem, 1.7vw, 1.2rem); }
+  .numcard { background: var(--card); border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); padding: .9rem 1.1rem; margin-bottom: .8rem; }
+  .numcard .k { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); font-weight: 600; }
+  .numcard .v { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; color: var(--accent); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .numcard .v.small { font-size: clamp(1.3rem, 2.4vw, 1.8rem); }
+  .numcard .u { font-size: .9rem; color: var(--muted); line-height: 1.4; }
+  .numcard .q5 { color: var(--blue); font-weight: 600; } .numcard .q1 { color: var(--q1); font-weight: 600; }
+
+  figure { margin: 0; width: 100%; }
+  figure svg { max-width: 100%; height: auto; display: block; max-height: 56vh; }
+  figure img { max-width: 100%; max-height: 54vh; display: block; }
+  figcaption { font-size: clamp(.85rem, 1.4vw, 1rem); color: var(--muted); margin-top: .6rem; max-width: 100ch; }
+  .board { background: #FFFFFF; border: 1px solid var(--line); border-radius: 10px; box-shadow: var(--shadow); padding: .8rem 1rem .5rem; width: 100%; }
+  .anim { width: 100%; max-width: 86rem; }
+  .anim svg { width: 100%; height: auto; max-height: 58vh; display: block; }
+
+  .quote { font-size: clamp(1.3rem, 2.6vw, 2rem); max-width: 42ch; border-left: 4px solid var(--green); padding-left: 1rem; margin: 0 0 1rem; font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif; font-weight: 500; }
+  .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: .8rem; align-items: stretch; max-width: 84rem; }
+  .steps.three { grid-template-columns: repeat(3, 1fr); }
+  .step { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: .9rem 1rem; box-shadow: var(--shadow); }
+  .step .n { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .75rem; color: var(--accent); letter-spacing: .08em; }
+  .step .t { font-weight: 600; font-size: clamp(1rem, 1.8vw, 1.3rem); margin: .2rem 0 .3rem; }
+  .step .b { color: var(--muted); font-size: clamp(.9rem, 1.5vw, 1.05rem); }
+  .step.on { border-color: var(--accent); background: var(--accent-soft); }
+  table.t { border-collapse: collapse; width: 100%; font-size: clamp(.9rem, 1.5vw, 1.1rem); }
+  table.t td, table.t th { padding: .45rem .6rem; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; }
+  table.t th { color: var(--muted); font-weight: 600; font-size: .85em; text-transform: uppercase; letter-spacing: .08em; }
+  table.t td.lab { font-weight: 600; white-space: nowrap; }
+  table.t td.cite { color: var(--muted); font-size: .82em; }
+  .chip { display: inline-block; font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .72em; border-radius: 5px; padding: .1em .5em; margin-right: .4em; color: #fff; }
+  .chip.e0 { background: #8A9099; } .chip.e1 { background: #2F6FB0; } .chip.e2 { background: #7FA6D3; }
+
+  /* presseveggen */
+  .press { position: relative; height: 66vh; width: 100%; max-width: 86rem; }
+  .press img { position: absolute; height: 46vh; border: 1px solid var(--line); box-shadow: 0 6px 18px rgba(0,0,0,.18); background: #fff; }
+  .press .np { position: absolute; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: .8rem 1rem; width: 24rem; box-shadow: 0 6px 18px rgba(0,0,0,.14); }
+  .press .np .o { font-size: .75rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+  .press .np .h { font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif; font-weight: 700; font-size: 1.25rem; line-height: 1.2; margin: .2rem 0; }
+  .press .np .d { font-size: .8rem; color: var(--muted); }
+
+  /* fragmenter */
+  .frag { opacity: 0; transform: translateY(6px); transition: opacity .35s ease, transform .35s ease; }
+  .frag.on { opacity: 1; transform: none; }
+  .frag.dim.on { opacity: .35; }
+  .swap > * { display: none; } .swap > .on { display: block; }
+
+  .notes-drawer { position: fixed; left: 0; right: 0; bottom: 0; background: var(--card); border-top: 2px solid var(--accent); padding: 1rem 1.4rem 2.2rem;
+    font-size: .95rem; max-height: 38vh; overflow-y: auto; z-index: 50; display: none; color: var(--ink); }
+  .notes-drawer.open { display: block; }
+  .notes-drawer .label { font-family: ui-monospace, "SF Mono", Menlo, monospace; font-size: .68rem; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); margin-bottom: .5rem; }
+  .notes-drawer p { margin: 0 0 .6rem; max-width: 80ch; }
+  @media (prefers-reduced-motion: reduce) { .progress, .frag { transition: none; } }
+  @media print {
+    body { overflow: visible; }
+    .slide { position: static; display: flex !important; min-height: 100vh; page-break-after: always; }
+    .hud, .progress, .notes-drawer { display: none !important; }
+    .frag { opacity: 1 !important; transform: none !important; }
+    .swap > * { display: block; }
+  }
+</style>
+</head>
+<body>
+<div class="progress" id="bar"></div>
+
+<!-- ============ 1 · TITTEL ============ -->
+<section class="slide title current">
+  <div class="kicker">KI-geriljaen · websamling · 6. oktober 2026</div>
+  <h1>KI forandrer stigen: hva skjer med inngangen til arbeidslivet?</h1>
+  <p class="lead">Hva registerdataene viser til og med juli 2026, og hvorfor oppgavene i en jobb er nøkkelen til å lese dem.</p>
+  <div class="who"><strong>Andreas R. Kostøl</strong>, Handelshøyskolen BI · KI-indeksen er laget sammen med <strong>Øystein Hernæs</strong>, Frischsenteret · kiindeksen.no</div>
+  <aside class="notes">
+    <p>Tre deler. Først et rammeverk for hvorfor oppgaver er det riktige nivået. Så hvordan eksponering måles, oppgave for oppgave. Til slutt tallene, med to referansepunkter: ChatGPT og agentisk KI.</p>
+    <p>Chatham House. Avbryt gjerne underveis.</p>
+  </aside>
+</section>
+
+<!-- ============ 2 · OVERSKRIFTENE ============ -->
+<section class="slide" data-steps="4">
+  <div class="eyebrow">Utgangspunktet</div>
+  <h2>KI og arbeidsmarkedet i overskriftene</h2>
+  <div class="press">
+    <img src="{{img:presse_economist.jpg}}" alt="The Economist, forside 16. mai 2026: The jobs apocalypse" style="left:2%; top:4%; transform:rotate(-4deg)">
+    <img class="frag" data-step="1" src="{{img:presse_atlantic.jpg}}" alt="The Atlantic, 2. juni 2026: AI Has Ruined the Job Market" style="left:30%; top:10%; transform:rotate(2deg)">
+    <img class="frag" data-step="2" src="{{img:presse_axios.jpg}}" alt="Axios, 28. mai 2025: a white-collar bloodbath" style="left:58%; top:2%; transform:rotate(-2deg)">
+    <div class="np frag" data-step="3" style="left:12%; top:62%; transform:rotate(1deg)"><div class="o">DN, kommentar</div><div class="h">Sterk kunstig intelligens kan gi høy ledighet</div><div class="d">16. juni 2026</div></div>
+    <div class="np frag" data-step="4" style="left:52%; top:66%; transform:rotate(-1deg)"><div class="o">E24, kronikk</div><div class="h">KI tar ikke jobbene, men inngangsporten</div><div class="d">17. april 2026</div></div>
+  </div>
+  <aside class="notes">
+    <p>Ett trykk per oppslag. The Economist 16. mai, The Atlantic 2. juni, Axios med Dario Amodei i mai i fjor. Så DN om SSBs beregning og E24 om inngangsporten.</p>
+    <p>Overskriftene peker samme vei. Forskningen er mer delt.</p>
+  </aside>
+</section>
+
+<!-- ============ 3 · SPØRSMÅLET ============ -->
+<section class="slide">
+  <div class="eyebrow">Et spørsmål fra Arendalsuka i august</div>
+  <p class="quote">«Juniorer og helt nyutdannede sliter med å komme inn, i hvert fall innen IT-utvikling og kommunikasjon. Det skyldes neppe bare KI. Men vises virkelig ikke dette i statistikken?»</p>
+  <p class="lead">Spørsmålet kom inn på forhånd til Øystein Hernæs' innlegg i Arendalsgata 13. august. Det er et godt spørsmål. Svaret krever at vi er enige om hva vi måler.</p>
+  <aside class="notes">
+    <p>Spørsmålet er gjengitt med lett omskriving. Hele foredraget er et svar på det. Først trenger vi et språk for hva KI gjør med en jobb.</p>
+  </aside>
+</section>
+
+<!-- ============ 4 · TRE SVAR ============ -->
+<section class="slide" data-steps="2">
+  <div class="eyebrow">Tre svar først</div>
+  <div class="cols three">
+    <div class="card"><h3>Ingen jobbkrise</h3><p>Yrkene der KI kan effektivisere mest, har ikke falt bak yrkene der KI kan effektivisere minst. KI-indeksen er {{n:eloundou_chatgpt.ki|pp}} prosentpoeng i juli 2026, med standardfeil {{n:eloundou_chatgpt.se}}.</p></div>
+    <div class="card frag" data-step="1"><h3>Men stigen endres</h3><p>Unge i flere av de mest KI-eksponerte yrkene har falt. Programvareutviklere 21–30 år ligger på {{n:utviklere_2130_chatgpt|0}} mot oktober 2022 = 100. De eldste i samme yrke ligger på {{n:utviklere_5160_chatgpt|0}}.</p></div>
+    <div class="card frag" data-step="2"><h3>Oppgavene avgjør</h3><p>Hvor KI tas i bruk, bestemmes ikke av hva modellen kan, men av hva det koster å bruke den trygt. De første trinnene på stigen er billigst å automatisere.</p></div>
+  </div>
+  <aside class="notes">
+    <p>Det første svaret er hovedtallet. Usikkerheten er større enn tallet. Det andre svaret er der utslaget finnes. Det tredje er rammeverket, og det kommer nå.</p>
+  </aside>
+</section>
+
+<!-- ============ 5 · EN JOBB ER OPPGAVER (animasjon) ============ -->
+<section class="slide" data-steps="4" data-anim="tasks">
+  <div class="eyebrow">Rammeverk · 1</div>
+  <h2>En jobb er en bunt av oppgaver, og KI treffer dem ulikt</h2>
+  <div class="anim board"><svg id="svg-tasks" viewBox="0 0 1000 440" role="img" aria-label="En informasjonsrådgiver med ti oppgavekort som får merkelappene E0, E1 og E2"></svg></div>
+  <div class="src">Oppgavene er ti av informasjonsrådgiverens 18 O*NET-oppgaver. Merkelapper fra Eloundou mfl. (2024). Rammeverk: Autor, Levy og Murnane (2003), Acemoglu og Autor (2011).</div>
+  <aside class="notes">
+    <p>Trykk 1: oppgavene legges ut. Trykk 2: de som en språkmodell alene kan halvere tiden på, blir blå (E1). Trykk 3: de som krever tilleggsprogramvare, lyseblå (E2). Trykk 4: de som ikke påvirkes, grå (E0).</p>
+    <p>Poenget: KI tar ikke yrket, men noen av oppgavene. Yrket består så lenge viktige oppgaver krever mennesker.</p>
+  </aside>
+</section>
+
+<!-- ============ 6 · EKSPONERING ER IKKE BRUK (animasjon) ============ -->
+<section class="slide" data-steps="5" data-anim="usercost">
+  <div class="eyebrow">Rammeverk · 2</div>
+  <h2>Eksponering er hva KI kan. Bruk er hva det lønner seg å la KI gjøre.</h2>
+  <div class="anim board"><svg id="svg-usercost" viewBox="0 0 1000 460" role="img" aria-label="Eksponerte oppgaver sortert etter hvor mye kontroll de krever. En terskel flytter seg når lønnen øker."></svg></div>
+  <div class="src">Kostøl (2026), arbeidsnotat. Bygger på Lindenlaub, Oh, Rodríguez og Veldkamp (2026) og Acemoglu og Restrepo (2018).</div>
+  <aside class="notes">
+    <p>Trykk 1: de eksponerte oppgavene i et yrke, sortert etter hvor stor del av tiden som går med til å sjekke KI-ens svar. Trykk 2: KI-ruten koster datakraft pluss kontrolltid, priset med arbeidstakerens lønn. Trykk 3: terskelen. Oppgaver som er lette å sjekke, går til KI. Trykk 4: høyere lønn flytter terskelen. Den sparte timen er mer verdt. Trykk 5: bruk = eksponering ganger andelen som passerer terskelen.</p>
+    <p>Dette er grunnen til at eksponeringsmål og bruksmål ikke er det samme. Og til at vi må måle utfall, ikke bare kapasitet.</p>
+  </aside>
+</section>
+
+<!-- ============ 7 · TRE KREFTER (animasjon) ============ -->
+<section class="slide" data-steps="4" data-anim="forces">
+  <div class="eyebrow">Rammeverk · 3</div>
+  <h2>Når KI tar en oppgave, trekker tre krefter i sysselsettingen</h2>
+  <div class="anim board"><svg id="svg-forces" viewBox="0 0 1000 420" role="img" aria-label="Tre krefter: fortrengning ned, produktivitet opp, nye oppgaver opp"></svg></div>
+  <div class="src">Acemoglu og Restrepo (2019), «Automation and New Tasks». Nettoeffekten følger ikke av hva modellen teknisk kan gjøre.</div>
+  <aside class="notes">
+    <p>Trykk 1: fortrengning. Arbeidets andel av oppgavene faller. Trykk 2: produktivitet. Lavere kostnad gir mer produksjon og mer arbeid i oppgavene som står igjen. Trykk 3: nye oppgaver, blant dem å kontrollere KI. Trykk 4: nettoen er et empirisk spørsmål.</p>
+  </aside>
+</section>
+
+<!-- ============ 8 · STIGEN (animasjon) ============ -->
+<section class="slide" data-steps="4" data-anim="ladder">
+  <div class="eyebrow">Rammeverk · 4</div>
+  <h2>Derfor stigen: de nederste trinnene er lettest å sjekke</h2>
+  <div class="anim board"><svg id="svg-ladder" viewBox="0 0 1000 460" role="img" aria-label="En stige der de nederste trinnene tas av KI, en junior står nederst og en senior øverst kontrollerer KI-ens arbeid"></svg></div>
+  <div class="src">Garicano (2025) om Beckers problem: juniorene betalte for opplæringen med enkle oppgaver. Imas og Schaal (2026): unge gjør oppgaver med minst kontekst.</div>
+  <aside class="notes">
+    <p>Trykk 1: stigen og de to personene. Trykk 2: de nederste trinnene er førsteutkast og rutine. De er lette å sjekke, så de passerer terskelen først. Trykk 3: juniorens vei inn blir borte. Trykk 4: senioren får en ny oppgave, å kontrollere KI. Det er en av de nye oppgavene fra forrige bilde.</p>
+    <p>Dette er hypotesen vi tester i dataene: utslaget bør komme først hos unge i eksponerte yrker.</p>
+  </aside>
+</section>
+
+<!-- ============ 9 · ELOUNDOU (steg) ============ -->
+<section class="slide divider">
+  <div class="eyebrow">Del 2</div>
+  <h2>Hvordan eksponering måles, oppgave for oppgave</h2>
+  <p class="lead">To mål: Eloundou mfl. (2024), som er standard på kiindeksen.no, og Mouchel, Bouquet og Sheffi (2026), som bygger på dokumentert evidens.</p>
+</section>
+
+<section class="slide" data-steps="5">
+  <div class="eyebrow">Måling · Eloundou mfl. (2024)</div>
+  <h2>Fra O*NET-oppgaver til én skår per norsk yrke</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1 · O*NET</div><div class="t">923 yrker, 19 265 oppgaver</div><div class="b">Det amerikanske arbeidsdepartementets oppgavebeskrivelser. Hver oppgave er merket kjerne eller tillegg.</div></div>
+    <div class="step frag" data-step="1"><div class="n">2 · Rubrikk</div><div class="t">E0, E1 eller E2 per oppgave</div><div class="b">E1: en språkmodell alene halverer tiden. E2: halvering med tilleggsprogramvare. E0: ingen av delene. GPT-4 merker, mennesker kontrollerer.</div></div>
+    <div class="step frag" data-step="2"><div class="n">3 · Poeng</div><div class="t">β = 1 · E1 + 0,5 · E2</div><div class="b">Kjerneoppgaver teller dobbelt. Snittet over oppgavene er yrkets skår.</div></div>
+    <div class="step frag" data-step="3"><div class="n">4 · Kobling</div><div class="t">O*NET → SOC → ISCO → STYRK-08</div><div class="b">Fire koblinger. Flere koder til én: snitt. Én til flere: kopi. 397 av 407 norske yrkeskoder får skår.</div></div>
+  </div>
+  <p class="lead frag" data-step="4" style="margin-top:1.2rem">Yrkene rangeres og deles i fem like store grupper. Q1 er minst eksponert, Q5 mest. Indeksen sammenligner Q5 med Q1.</p>
+  <div class="src frag" data-step="5">Grupper på 80, 79, 79, 79 og 80 yrker. Dekker 99,8 prosent av sysselsettingen i privat sektor. Kilde: Eloundou, Manning, Mishkin og Rock (2024), Science, og egen kobling.</div>
+  <aside class="notes">
+    <p>Dette er maskineriet bak hvert tall på kiindeksen.no. Merk at rubrikken handler om tid, ikke om kvalitet eller ansvar.</p>
+  </aside>
+</section>
+
+<!-- ============ 10 · INFORMASJONSRÅDGIVERE (animasjon) ============ -->
+<section class="slide" data-steps="3" data-anim="pr">
+  <div class="eyebrow">Måling · et regneeksempel</div>
+  <h2>Informasjonsrådgivere: 18 oppgaver gir skåren 0,591</h2>
+  <div class="anim board"><svg id="svg-pr" viewBox="0 0 1000 440" role="img" aria-label="Atten oppgaver for informasjonsrådgivere med merkelapp og poeng, summert til 19,5 av 33"></svg></div>
+  <div class="src">STYRK-08 2432, O*NET 27-3031. 15 kjerneoppgaver og 3 tilleggsoppgaver. 1 E0, 4 E1 og 13 E2. Poengsum 19,5 av 33 gir 0,591, som plasserer yrket i Q5. Oppgavetekstene er oversatt fra O*NET.</div>
+  <aside class="notes">
+    <p>Trykk 1: merkelappene. Trykk 2: poengene, kjerne ganger to. Trykk 3: summen. Uvektet snitt ville gitt 0,583, så vektingen betyr lite her.</p>
+    <p>Legg merke til at bare én oppgave er E0: å bygge relasjoner til interessegrupper.</p>
+  </aside>
+</section>
+
+<!-- ============ 11 · TRE YRKER (animasjon) ============ -->
+<section class="slide" data-steps="4" data-anim="occ">
+  <div class="eyebrow">Måling · tre yrker</div>
+  <h2>Samme rubrikk, tre yrker: utviklere, kundesenter og elektrikere</h2>
+  <div class="anim board"><svg id="svg-occ" viewBox="0 0 1000 470" role="img" aria-label="Oppgaver i tre yrker med merkelapper, og hvor stor del av Anthropics API-trafikk som faller på utviklernes oppgaver"></svg></div>
+  <div class="src">Merkelapper: Eloundou mfl. (2024). Bruk: Anthropic Economic Index, 1P API, februar 2026, andel av all trafikk som faller på oppgaven. Oppgavetekstene er forkortet.</div>
+  <aside class="notes">
+    <p>Trykk 1 til 3: ett yrke om gangen. Utviklere har skår 0,87 og nesten bare E1. Kundesenter 0,57, nesten bare E2. Elektrikere 0,09, nesten bare E0.</p>
+    <p>Trykk 4: faktisk bruk. Om lag 16 prosent av all trafikk gjennom Anthropics API faller på programvareutviklernes oppgaver. Én oppgave, å endre eksisterende kode, står alene for 8,7 prosent. Kundesenterets oppgaver får 0,7 prosent, elektrikernes 0,1.</p>
+    <p>Dette er brua fra forrige del: høy eksponering, lav kontrollkostnad, høy bruk. Alle tre faller sammen hos utviklerne.</p>
+  </aside>
+</section>
+
+<!-- ============ 12 · CLAUDE CODE ============ -->
+<section class="slide" data-steps="2">
+  <div class="eyebrow">Måling · agentisk KI</div>
+  <h2>Claude Code flyttet terskelen for utviklerne</h2>
+  <div class="cols three">
+    <div class="card"><h3>Hva som endret seg</h3><ul><li>Modellen tar flere steg selv: leser koden, endrer, kjører testene, retter.</li><li>Mennesket kontrollerer sluttresultatet, ikke hvert steg.</li><li>Kontrolltiden per oppgave faller. Flere oppgaver passerer terskelen.</li></ul></div>
+    <div class="card frag" data-step="1"><h3>Hvor lange oppgaver</h3><ul><li>METR måler hvor lange programmeringsoppgaver modellene klarer i halvparten av forsøkene.</li><li>Lengden har doblet seg om lag hver fjerde måned siden 2023.</li><li>Claude Code kom som forhåndsversjon i februar 2025, i vanlig salg i mai 2025.</li></ul></div>
+    <div class="card frag" data-step="2"><h3>Derfor to referanser</h3><ul><li>ChatGPT: oktober 2022 er siste måned før lanseringen.</li><li>Agentisk KI: januar 2025 er siste måned før Claude Code.</li><li>Begge finnes som valg på kiindeksen.no. Tallene kommer i del 3.</li></ul></div>
+  </div>
+  <div class="src">METR (2026), «Measuring AI ability to complete long tasks», lastet ned av Hernæs 3. oktober 2026. Anthropic (2025, 2026), Economic Index.</div>
+  <aside class="notes">
+    <p>I rammeverket er dette en endring i kontrollandelen v. Agentisk KI gjør hele kjeden av småoppgaver, og mennesket sjekker på slutten. Derfor er det rimelig å lete etter et brudd rundt februar 2025, ikke bare rundt november 2022.</p>
+  </aside>
+</section>
+
+<!-- ============ 13 · MOUCHEL ============ -->
+<section class="slide" data-steps="2">
+  <div class="eyebrow">Måling · Mouchel, Bouquet og Sheffi (2026)</div>
+  <h2>Et mål bygget på evidens, ikke på modellens magefølelse</h2>
+  <div class="cols fig">
+    <figure><img src="{{img:figure_mouchel_vs_eloundou_cases.png}}" alt="Spredningsplott: Mouchel-målet mot Eloundou-målet for 397 norske yrker, med utviklere, kundesenter, elektrikere og hjemmehjelpere merket"><figcaption>Én prikk per STYRK-08-kode. Grå linje: like verdier. Samfunnsøkonomer og jurister ligger høyere på det nye målet.</figcaption></figure>
+    <div>
+      <div class="numcard"><div class="k">Metoden</div><div class="u">Samme 18 796 oppgaver som Eloundou. Sju åpne språkmodeller merker hver oppgave med 30 000 nyhetsartikler og 24 000 forskningssammendrag som evidens. Rubrikken er utvidet til agentisk KI.</div></div>
+      <div class="numcard frag" data-step="1"><div class="k">Hvorfor det er bedre</div><div class="u">Uten evidens bytter 20 prosent av merkelappene når bare temperaturen endres. Med evidens under 1,6 prosent. Menneskelige dommere foretrekker den evidensbaserte merkingen i 72 prosent av uenighetene.</div></div>
+      <div class="numcard frag" data-step="2"><div class="k">Samsvar med Eloundou</div><div class="v small">ρ = 0,94</div><div class="u">66 prosent av yrkene i samme femdel, 99 prosent innen én. Informasjonsrådgivere: 0,59 → 0,71. Utviklere: 0,87 → 0,74.</div></div>
+    </div>
+  </div>
+  <aside class="notes">
+    <p>Mouchel-målet er et posisjonspapir fra MIT og EPFL: eksponering bør måles med gjenfinnbar evidens, ikke zero-shot-prompting av én lukket modell. Vi bruker varianten A1, snittet av modellene, som aldri ser Anthropics bruksdata.</p>
+    <p>Tallene om temperatur og dommere er fra artikkelens sammendrag og innledning. Korrelasjonene er egne. Begge mål kan velges øverst på kiindeksen.no.</p>
+  </aside>
+</section>
+
+<!-- ============ 14 · HVEM ER MEST EKSPONERT ============ -->
+<section class="slide">
+  <div class="eyebrow">Måling · hvem er mest eksponert</div>
+  <h2>Yrke for yrke: grå er Eloundou, blå er Mouchel</h2>
+  <figure>{{svg:occ_exposure_no}}<figcaption>Antall sysselsatte i parentes. Eloundou er standard på kiindeksen.no fordi det forklarer rapportert KI-bruk best av fire mål: R² 0,30, mot 0,26 for Handa, 0,26 for Felten og 0,02 for Webb (Lindenlaub mfl. 2026, figur 1).</figcaption></figure>
+  <aside class="notes">
+    <p>Den mest eksponerte femdelen er salg, kontor, IT og regnskap. Den minst eksponerte er håndverk, renhold og produksjon. Rekkefølgen er nesten den samme på de to målene.</p>
+  </aside>
+</section>
+
+<!-- ============ 15 · DEL 3 ============ -->
+<section class="slide divider">
+  <div class="eyebrow">Del 3</div>
+  <h2>Hva registerdataene viser, til og med juli 2026</h2>
+  <p class="lead">Alle ansatte i privat sektor, 21–60 år, hver måned fra januar 2021. Sesongjustert. To referansepunkter: ChatGPT og agentisk KI.</p>
+</section>
+
+<section class="slide" data-steps="1">
+  <div class="eyebrow">Data · hva KI-indeksen måler</div>
+  <h2>Fire steg fra registeret til ett tall</h2>
+  <div class="steps">
+    <div class="step"><div class="n">1 · Register</div><div class="t">A-ordningen</div><div class="b">Alle lønnstakerforhold i Norge, status den 16. i hver måned. Via microdata.no.</div></div>
+    <div class="step"><div class="n">2 · Utvalg</div><div class="t">Privat sektor, 21–60 år</div><div class="b">Fordelt på yrke, aldersgruppe og måned. 67 måneder.</div></div>
+    <div class="step"><div class="n">3 · Eksponering</div><div class="t">Fem grupper</div><div class="b">Hvert yrke får sin skår og sin femdel, som i del 2.</div></div>
+    <div class="step on"><div class="n">4 · Sammenligning</div><div class="t">Q5 mot Q1</div><div class="b">Vekst i sysselsettingen i de mest eksponerte yrkene mot de minst eksponerte, fra referansemåneden til siste måned.</div></div>
+  </div>
+  <p class="lead frag" data-step="1" style="margin-top:1.2rem">KI-indeksen = relativ vekst i Q5 mot Q1, i prosentpoeng. Snitt av de tre siste månedene mot snittet av de tre månedene fram til referansen. Usikkerheten kommer fra en bootstrap over yrker.</p>
+  <div class="src">Hernæs og Kostøl (2026), RFBerlin Discussion Paper 179/26. Metoden står på kiindeksen.no/#metode.</div>
+  <aside class="notes">
+    <p>Indeksen måler det siste leddet i kjeden: kapasitet, bruk, oppgaveendring, utfall. Den sier ingenting om bruken i hvert yrke. Det er derfor del 2 var nødvendig.</p>
+  </aside>
+</section>
+
+<!-- ============ 16 · ALLE ALDRE (to referanser) ============ -->
+<section class="slide" data-steps="1" data-anim="swap">
+  <div class="eyebrow">Data · alle aldre 21–60</div>
+  <h2>De mest eksponerte yrkene har ikke falt bak</h2>
+  <div class="cols fig">
+    <figure class="swap">
+      <div class="on" data-step="0">{{svg:alle_chatgpt}}</div>
+      <div data-step="1">{{svg:alle_agentisk}}</div>
+    </figure>
+    <div class="swap">
+      <div class="on" data-step="0">
+        <div class="numcard"><div class="k">KI-indeksen, juli 2026 · ChatGPT-referanse</div><div class="v">{{n:eloundou_chatgpt.ki|pp}}</div><div class="u">prosentpoeng. Standardfeil {{n:eloundou_chatgpt.se}}. Intervall {{n:eloundou_chatgpt.lo|pp}} til {{n:eloundou_chatgpt.hi|pp}}.</div></div>
+        <div class="numcard"><div class="k">Vekst siden oktober 2022</div><div class="u"><span class="q5">Q5 mest eksponert</span> {{n:eloundou_chatgpt.g5|pp}} %<br><span class="q1">Q1 minst eksponert</span> {{n:eloundou_chatgpt.g1|pp}} %<br>Hele privat sektor {{n:total_chatgpt|pp}} %</div></div>
+      </div>
+      <div data-step="1">
+        <div class="numcard"><div class="k">KI-indeksen, juli 2026 · agentisk referanse</div><div class="v">{{n:eloundou_agentisk.ki|pp}}</div><div class="u">prosentpoeng. Standardfeil {{n:eloundou_agentisk.se}}. Intervall {{n:eloundou_agentisk.lo|pp}} til {{n:eloundou_agentisk.hi|pp}}.</div></div>
+        <div class="numcard"><div class="k">Vekst siden januar 2025</div><div class="u"><span class="q5">Q5 mest eksponert</span> {{n:eloundou_agentisk.g5|pp}} %<br><span class="q1">Q1 minst eksponert</span> {{n:eloundou_agentisk.g1|pp}} %<br>Hele privat sektor {{n:total_agentisk|pp}} %</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="src">Ansatte i privat sektor 21–60 år, sesongjustert, referansemåneden = 100. Femdeler etter Eloundou mfl. (2024). Trykk for å bytte til agentisk referanse.</div>
+  <aside class="notes">
+    <p>Første bilde: hele perioden med ChatGPT som referanse. Q5 ligger over Q1, men begge intervaller dekker null. Trykk: samme serier fra 2024 med januar 2025 som referanse. Indeksen er om lag null. Begge grupper har falt litt siden januar 2025.</p>
+    <p>Mouchel-målet gir {{n:mouchel_chatgpt.ki|pp}} mot ChatGPT og {{n:mouchel_agentisk.ki|pp}} mot agentisk referanse.</p>
+  </aside>
+</section>
+
+<!-- ============ 17 · ETTER ALDER ============ -->
+<section class="slide" data-steps="1" data-anim="swap">
+  <div class="eyebrow">Data · etter alder, alle yrker</div>
+  <h2>Heller ikke de yngste faller bak som gruppe</h2>
+  <div class="cols fig">
+    <figure class="swap">
+      <div class="on" data-step="0">{{svg:alder_chatgpt}}</div>
+      <div data-step="1">{{svg:alder_agentisk}}</div>
+    </figure>
+    <div>
+      <div class="numcard"><div class="k">Lesing</div><div class="u">Hver linje er en aldersgruppe, alle yrker samlet. De yngste ligger ikke lavest. Veksten siden januar 2025 er svak i alle grupper.</div></div>
+      <div class="numcard"><div class="k">Hvorfor det likevel kan skje noe</div><div class="u">Bedrifter kan bemanne ned ved å ansette færre, uten å si opp. Det synes først hos dem som skal inn, og i de yrkene der terskelen er passert.</div></div>
+    </div>
+  </div>
+  <div class="src">Ansatte i privat sektor etter aldersgruppe, sesongjustert, referansemåneden = 100. Trykk for å bytte referanse.</div>
+  <aside class="notes">
+    <p>Dette er svaret på «vises det ikke i statistikken» for de unge samlet. Nei, ikke som gruppe. Neste bilde deler de unge etter eksponering.</p>
+  </aside>
+</section>
+
+<!-- ============ 18 · UNGE (to referanser) ============ -->
+<section class="slide" data-steps="1" data-anim="swap">
+  <div class="eyebrow">Data · 21–30 år etter eksponering</div>
+  <h2>Men blant de yngste faller de mest eksponerte yrkene</h2>
+  <div class="cols fig">
+    <figure class="swap">
+      <div class="on" data-step="0">{{svg:unge_chatgpt}}</div>
+      <div data-step="1">{{svg:unge_agentisk}}</div>
+    </figure>
+    <div class="swap">
+      <div class="on" data-step="0">
+        <div class="numcard"><div class="k">Unge-indeksen · ChatGPT-referanse</div><div class="v">{{n:eloundou_chatgpt.ki_young|pp}}</div><div class="u">Standardfeil {{n:eloundou_chatgpt.se_young}}. Intervall {{n:eloundou_chatgpt.lo_young|pp}} til {{n:eloundou_chatgpt.hi_young|pp}}.</div></div>
+        <div class="numcard"><div class="k">Vekst siden oktober 2022, 21–30 år</div><div class="u"><span class="q5">Mest eksponert</span> {{n:eloundou_chatgpt.y5|pp}} %<br><span class="q1">Minst eksponert</span> {{n:eloundou_chatgpt.y1|pp}} %<br>Begge grupper faller. Det er et bredt ungdomsfall mot 2022.</div></div>
+      </div>
+      <div data-step="1">
+        <div class="numcard"><div class="k">Unge-indeksen · agentisk referanse</div><div class="v">{{n:eloundou_agentisk.ki_young|pp}}</div><div class="u">Standardfeil {{n:eloundou_agentisk.se_young}}. Intervall {{n:eloundou_agentisk.lo_young|pp}} til {{n:eloundou_agentisk.hi_young|pp}}.</div></div>
+        <div class="numcard"><div class="k">Vekst siden januar 2025, 21–30 år</div><div class="u"><span class="q5">Mest eksponert</span> {{n:eloundou_agentisk.y5|pp}} %<br><span class="q1">Minst eksponert</span> {{n:eloundou_agentisk.y1|pp}} %<br>Med Mouchel-målet er unge-indeksen {{n:mouchel_agentisk.ki_young|pp}}, intervall {{n:mouchel_agentisk.lo_young|pp}} til {{n:mouchel_agentisk.hi_young|pp}}. Det eneste intervallet som ikke dekker null.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="src">Ansatte 21–30 år i privat sektor, sesongjustert, referansemåneden = 100. Stiplet: alle aldre. Siste tolv måneder for unge i Q5: {{n:young_q5_yoy|pp}} %.</div>
+  <aside class="notes">
+    <p>Mot ChatGPT faller unge i begge grupper nesten like mye. Mot agentisk referanse skiller de lag: de mest eksponerte faller videre, de minst eksponerte flater ut. Det er stigen fra del 1, og tidspunktet passer med Claude Code.</p>
+    <p>Forbehold: unge er få i hver femdel, så intervallene er vide. Og Q2 og Q3 ligger høyere enn Q4 og Q5, så rekkefølgen følger ikke eksponeringen fullt ut.</p>
+  </aside>
+</section>
+
+<!-- ============ 19 · UTVIKLERE ============ -->
+<section class="slide" data-steps="1" data-anim="swap">
+  <div class="eyebrow">Data · ett yrke</div>
+  <h2>Programvareutviklere: de yngste faller, de eldste vokser</h2>
+  <div class="cols fig">
+    <figure class="swap">
+      <div class="on" data-step="0">{{svg:utviklere_chatgpt}}</div>
+      <div data-step="1">{{svg:utviklere_agentisk}}</div>
+    </figure>
+    <div class="swap">
+      <div class="on" data-step="0">
+        <div class="numcard"><div class="k">21–30 år, juli 2026</div><div class="v">{{n:utviklere_2130_chatgpt|0}}</div><div class="u">oktober 2022 = 100</div></div>
+        <div class="numcard"><div class="k">51–60 år, juli 2026</div><div class="v">{{n:utviklere_5160_chatgpt|0}}</div><div class="u">Samme yrke, samme periode. STYRK-08 2512–2514 og 2519. Rundt 26 000 ansatte i 2022.</div></div>
+      </div>
+      <div data-step="1">
+        <div class="numcard"><div class="k">21–30 år, juli 2026</div><div class="v">{{n:utviklere_2130_agentisk|0}}</div><div class="u">januar 2025 = 100</div></div>
+        <div class="numcard"><div class="k">51–60 år, juli 2026</div><div class="v">{{n:utviklere_5160_agentisk|0}}</div><div class="u">Fallet for de yngste begynte før Claude Code, og fortsatte etter.</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="src">Ansatte i privat sektor etter aldersgruppe, sesongjustert, referansemåneden = 100. Dette er yrket der Claude Code brukes. Trykk for å bytte referanse.</div>
+  <aside class="notes">
+    <p>Yrket med høyest eksponering, lavest kontrollkostnad og høyest bruk. Her er stigen tydeligst. Fallet for 21–30 år startet i 2023, før agentisk KI, så KI er neppe hele forklaringen. Renter, konsulentkutt og normalisering etter pandemien er med.</p>
+  </aside>
+</section>
+
+<!-- ============ 20 · FIRE YRKER ============ -->
+<section class="slide">
+  <div class="eyebrow">Data · fire yrkescase fra kiindeksen.no</div>
+  <h2>To eksponerte yrker og to referanseyrker</h2>
+  <figure>{{svg:yrkescase}}<figcaption>Ansatte i privat sektor etter aldersgruppe, sesongjustert, oktober 2022 = 100. Egen akse per panel. Prikkede linjer: ChatGPT og Claude Code. 21–30 år i juli 2026: utviklere {{n:case_software_developers_2130|0}}, kundesenter {{n:case_customer_service_2130|0}}, elektrikere {{n:case_electricians_2130|0}}, hjemmehjelpere {{n:case_home_health_aides_2130|0}}.</figcaption></figure>
+  <aside class="notes">
+    <p>I de to eksponerte yrkene faller de unge mens de eldre vokser. I elektrikeryrket skjer det ikke. Hjemmehjelpere vokser i alle aldre, og juli er en uvanlig måned i den serien.</p>
+  </aside>
+</section>
+
+<!-- ============ 21 · SPESIFIKASJONER ============ -->
+<section class="slide">
+  <div class="eyebrow">Data · alle spesifikasjoner på ett bilde</div>
+  <h2>Ett intervall av åtte holder seg unna null</h2>
+  <figure>{{svg:spesifikasjoner}}<figcaption>KI-indeksen i juli 2026 for to mål, to referanser og to aldersgrupper. Punkt: bootstrap-estimatet. Strek: 95 prosent intervall fra 1 000 trekk over yrker. Grå: Eloundou. Blå: Mouchel.</figcaption></figure>
+  <aside class="notes">
+    <p>Alle aldre: nær null uansett. Unge: negativt i alle fire, og med Mouchel-målet mot agentisk referanse holder intervallet seg under null. Det er ett av åtte, så det er et tegn, ikke et bevis.</p>
+  </aside>
+</section>
+
+<!-- ============ 22 · ANDRE LAND ============ -->
+<section class="slide" data-steps="3">
+  <div class="eyebrow">Andre land · oversikt etter Imas og Schaal (2026)</div>
+  <h2>Samme mønster i USA, Sverige og Storbritannia</h2>
+  <div class="cols two">
+    <div class="card red"><h3>Tegn for unge i eksponerte yrker</h3><ul><li>USA: 22–25 år ligger 19 prosent bak mindre eksponerte jevnaldrende. Brynjolfsson, Chandar og Chen (2026).</li><li>Sverige: 22–25 år 5,5 prosent lavere hos samme arbeidsgiver. Lodefalk mfl. (2026).</li><li>Storbritannia: juniorstillinger faller først. Klein Teeselink (2025).</li></ul></div>
+    <div class="card amber frag" data-step="1"><h3>Forklaringer som konkurrerer</h3><ul><li>Fjernarbeid følger eksponering tett, rangkorrelasjon 0,77. Lambert og Schindler (2026).</li><li>Renter og normalisering etter pandemien. Imas og Schaal (2026).</li></ul></div>
+    <div class="card frag" data-step="2"><h3>Foretak som tar i bruk KI</h3><ul><li>Danmark: ingen effekt over 2 prosent på lønn og timer. Humlum og Vestergaard (2026).</li><li>USA: 7,7 prosent færre juniorer etter seks kvartaler. Hosseini og Lichtinger (2025).</li><li>41 land: juniorandelen 1,9 prosentpoeng lavere. Chandar og Klein Teeselink (2026).</li></ul></div>
+    <div class="card teal frag" data-step="3"><h3>Samlet stabilitet</h3><ul><li>USA: ledigheten for nyutdannede på nivå med 2022–2025. Fairlie og Wu (2026).</li><li>Norge: KI-indeksen {{n:eloundou_chatgpt.ki|pp}}, standardfeil {{n:eloundou_chatgpt.se}}.</li></ul></div>
+  </div>
+  <div class="src">Tallene er kontrollert mot originalstudiene av Hernæs 3. oktober 2026.</div>
+  <aside class="notes">
+    <p>Ingen samlet økning i ledighet eller oppsigelser noe sted. Men inngangen til de mest eksponerte kontoryrkene ser ut til å bli trangere, og årsaken er omstridt.</p>
+  </aside>
+</section>
+
+<!-- ============ 23 · SER / SER IKKE ============ -->
+<section class="slide" data-steps="1">
+  <div class="eyebrow">Svaret på spørsmålet fra Arendalsuka</div>
+  <h2>Vises det i statistikken? Ja, noe. Men ikke bredt.</h2>
+  <div class="cols two">
+    <div class="card"><h3>Dette ser vi</h3><ul><li>Unge i de mest eksponerte yrkene: {{n:eloundou_chatgpt.y5|pp}} prosent siden oktober 2022, {{n:eloundou_agentisk.y5|pp}} siden januar 2025. De eldre i samme yrker vokser.</li><li>Utviklere 21–30 år på {{n:utviklere_2130_chatgpt|0}}, kundesenter på {{n:case_customer_service_2130|0}}, mot 100 i oktober 2022.</li><li>Skillet mellom unge i mest og minst eksponerte yrker åpner seg etter agentisk KI.</li></ul></div>
+    <div class="card frag" data-step="1"><h3>Dette ser vi ikke</h3><ul><li>Noe bredt fall i de mest eksponerte yrkene samlet, eller for 21–30-åringene samlet.</li><li>Hva som driver fallet: erstattet av KI, junioroppgaver som forsvinner, strengere krav eller seniorer som rekker mer. Renter og konsulentkutt er også med.</li><li>Offentlig sektor i hovedtallet. Den har egne figurer på kiindeksen.no.</li></ul></div>
+  </div>
+  <div class="src">Indeksen er et beskrivende vekstgap, ikke en årsakseffekt. Yrkeskodene er fra 2011 og oppgavene amerikanske. Feil i kodingen visker ut forskjeller heller enn å skape dem.</div>
+  <aside class="notes">
+    <p>Dette er Øysteins svar fra Arendalsgata, oppdatert med julitallene. Derfor følger vi det månedlig.</p>
+  </aside>
+</section>
+
+<!-- ============ 24 · POLITIKK OG RÅD ============ -->
+<section class="slide" data-steps="1">
+  <div class="eyebrow">Hva som kan gjøres</div>
+  <h2>Forslag fra forskning og debatt, og råd til dem som skal inn</h2>
+  <div class="cols two">
+    <div>
+      <table class="t">
+        <tr><td class="lab">Inngang</td><td>Inntekt under omskolering, flere lønnstilskudd, traineestillinger og mål for nyutdannede i staten.</td><td class="cite">Kostøl og Harang, DN juli 2026</td></tr>
+        <tr><td class="lab">Opplæring</td><td>Staten betaler sertifisert opplæring og lærlingløp når juniorarbeidet ikke lenger finansierer læringen.</td><td class="cite">Garicano (2025), Garicano og Rayo (2025)</td></tr>
+        <tr><td class="lab">Skatt</td><td>Skatt som ikke favoriserer maskiner framfor ansatte. Offentlige innkjøp av KI som gjør ansatte bedre.</td><td class="cite">Harang og Kostøl, DN juni 2026. Acemoglu, Autor og Johnson (2026)</td></tr>
+        <tr><td class="lab">Beredskap</td><td>Følg utviklingen, stresstest, skalerbart sikkerhetsnett.</td><td class="cite">Korinek (2023)</td></tr>
+      </table>
+    </div>
+    <div class="card frag" data-step="1"><h3>Råd til unge</h3><ul><li>Bruk KI på virkelige oppgaver. Dokumenter arbeidsmåten, finn feilene, sjekk kildene.</li><li>Gjør et eget forsøk først. Kontrollkompetansen er den nye inngangen.</li><li>Fullfør grad eller fagbrev, og lær KI i selve faget.</li><li>Spør arbeidsgiver hvordan de trener juniorer når rutineoppgavene blir færre.</li></ul></div>
+  </div>
+  <div class="src">Forslagene er hentet fra kildene og ikke evaluert som én samlet pakke. Rådene bygger på Mollick (2023), Deming (2025), Brynjolfsson (2026) og Garicano (2025).</div>
+  <aside class="notes">
+    <p>Rammeverket gir rådet retning: det som er igjen for mennesker, er å sjekke, vurdere og ta ansvar. Det lærer man ved å gjøre arbeidet selv først.</p>
+  </aside>
+</section>
+
+<!-- ============ 25 · KIINDEKSEN.NO ============ -->
+<section class="slide">
+  <div class="eyebrow">Følg med videre</div>
+  <h2>kiindeksen.no oppdateres hver måned</h2>
+  <div class="cols fig">
+    <figure><img src="{{img:kiindeksen_2026-10-05.png}}" alt="Skjermbilde av kiindeksen.no 5. oktober 2026 med hovedtallet for juli 2026" style="border:1px solid var(--line); border-radius:8px"></figure>
+    <div>
+      <div class="numcard"><div class="k">Velg selv</div><div class="u">Utfall, aldersgruppe, eksponeringsmål, referanse, enkeltyrker, utdanning og offentlig sektor. Alt kan lastes ned.</div></div>
+      <div class="numcard"><div class="k">Forskningsartikkelen</div><div class="u">Hernæs og Kostøl (2026), «Has AI Widened Employment Gaps?», RFBerlin Discussion Paper 179/26.</div></div>
+      <div class="numcard"><div class="k">Engelsk</div><div class="u">kiindeksen.no/en</div></div>
+    </div>
+  </div>
+  <div class="src">Øystein Hernæs, Frischsenteret · Andreas R. Kostøl, Handelshøyskolen BI. Skjermbilde 5. oktober 2026.</div>
+  <aside class="notes">
+    <p>Takk. Spørsmål.</p>
+  </aside>
+</section>
+
+<div class="hud">
+  <div class="hud-left"><span class="keys">← → bla · N notater · F fullskjerm</span></div>
+  <div><span id="counter"></span><button id="prevBtn">←</button><button id="nextBtn">→</button><button id="notesBtn">Notater</button></div>
+</div>
+<div class="notes-drawer" id="drawer"><div class="label">Talenotater</div><div id="drawerBody"></div></div>
+
+<script>
+/* ---------- Tegnekassen: enkle figurer i stil med studenttegningen (runde lemmer, mørk kontur) ---------- */
+var NS = 'http://www.w3.org/2000/svg';
+var LINE = '#3d3d3d', SKIN = '#F2D2B6', INK = '#16213A', BLUE = '#2F6FB0', LBLUE = '#7FA6D3', GREY = '#8A9099', RED = '#B23A2E', TEAL = '#1F7A7A', NAVY = '#1F3A7A';
+function el(parent, tag, attrs, text) {
+  var e = document.createElementNS(NS, tag);
+  for (var k in attrs) e.setAttribute(k, attrs[k]);
+  if (text !== undefined) e.textContent = text;
+  parent.appendChild(e); return e;
+}
+function txt(parent, x, y, s, attrs) {
+  var a = {x: x, y: y, 'font-family': 'Seravek, Avenir Next, Segoe UI, system-ui, sans-serif', 'font-size': 15, fill: INK};
+  for (var k in (attrs || {})) a[k] = attrs[k];
+  return el(parent, 'text', a, s);
+}
+/* En person: hode, kropp, armer, bein. opts: shirt, hair, glasses, young, scale, flip */
+function person(parent, x, y, o) {
+  o = o || {};
+  var s = o.scale || 1;
+  var g = el(parent, 'g', {transform: 'translate(' + x + ',' + y + ') scale(' + s + ')', 'stroke-linecap': 'round', 'stroke-linejoin': 'round'});
+  var shirt = o.shirt || '#E75A8B', hair = o.hair || '#3a3a3a';
+  // bein
+  el(g, 'line', {x1: -9, y1: 40, x2: -11, y2: 92, stroke: LINE, 'stroke-width': 17});
+  el(g, 'line', {x1: -9, y1: 40, x2: -11, y2: 92, stroke: '#27384F', 'stroke-width': 13});
+  el(g, 'line', {x1: 9, y1: 40, x2: 12, y2: 92, stroke: LINE, 'stroke-width': 17});
+  el(g, 'line', {x1: 9, y1: 40, x2: 12, y2: 92, stroke: '#1d2a3c', 'stroke-width': 13});
+  el(g, 'path', {d: 'M -22 92 h 24 q 8 1 9 8 h -33 z', fill: '#fff', stroke: LINE, 'stroke-width': 1.6});
+  el(g, 'path', {d: 'M 1 92 h 24 q 8 1 9 8 h -33 z', fill: '#fff', stroke: LINE, 'stroke-width': 1.6});
+  // kropp
+  el(g, 'line', {x1: 0, y1: -4, x2: 0, y2: 44, stroke: LINE, 'stroke-width': 40});
+  el(g, 'line', {x1: 0, y1: -4, x2: 0, y2: 44, stroke: shirt, 'stroke-width': 36});
+  // armer
+  var a1 = o.armL || [-30, 34], a2 = o.armR || [30, 34];
+  el(g, 'polyline', {points: '-17,2 ' + a1[0] + ',' + a1[1], fill: 'none', stroke: LINE, 'stroke-width': 17});
+  el(g, 'polyline', {points: '-17,2 ' + a1[0] + ',' + a1[1], fill: 'none', stroke: shirt, 'stroke-width': 13});
+  el(g, 'circle', {cx: a1[0], cy: a1[1], r: 7, fill: SKIN, stroke: LINE, 'stroke-width': 1.6});
+  el(g, 'polyline', {points: '17,2 ' + a2[0] + ',' + a2[1], fill: 'none', stroke: LINE, 'stroke-width': 17});
+  el(g, 'polyline', {points: '17,2 ' + a2[0] + ',' + a2[1], fill: 'none', stroke: shirt, 'stroke-width': 13});
+  el(g, 'circle', {cx: a2[0], cy: a2[1], r: 7, fill: SKIN, stroke: LINE, 'stroke-width': 1.6});
+  // hals og hode
+  el(g, 'line', {x1: 0, y1: -14, x2: 0, y2: -4, stroke: LINE, 'stroke-width': 13});
+  el(g, 'line', {x1: 0, y1: -14, x2: 0, y2: -4, stroke: SKIN, 'stroke-width': 10});
+  el(g, 'circle', {cx: 0, cy: -34, r: 22, fill: SKIN, stroke: LINE, 'stroke-width': 1.8});
+  if (o.grey) hair = '#B9B9B9';
+  el(g, 'path', {d: o.young ? 'M -22 -40 C -18 -62 18 -62 22 -40 C 14 -46 -4 -50 -22 -40 Z' : 'M -22 -38 C -20 -60 20 -60 22 -38 C 10 -44 -10 -44 -22 -38 Z', fill: hair, stroke: hair, 'stroke-width': 1.5});
+  el(g, 'circle', {cx: -7, cy: -36, r: 2.4, fill: '#262626'});
+  el(g, 'circle', {cx: 7, cy: -36, r: 2.4, fill: '#262626'});
+  if (o.glasses) {
+    el(g, 'circle', {cx: -7, cy: -36, r: 6.5, fill: 'none', stroke: LINE, 'stroke-width': 1.4});
+    el(g, 'circle', {cx: 7, cy: -36, r: 6.5, fill: 'none', stroke: LINE, 'stroke-width': 1.4});
+    el(g, 'line', {x1: -0.5, y1: -36, x2: 0.5, y2: -36, stroke: LINE, 'stroke-width': 1.4});
+  }
+  el(g, 'path', {d: o.mouth === 'flat' ? 'M -5 -25 h 10' : (o.mouth === 'sad' ? 'M -5 -23 q 5 -4 10 0' : 'M -6 -27 q 6 5 12 0'), fill: 'none', stroke: '#262626', 'stroke-width': 1.6});
+  if (o.label) txt(g, 0, 118, o.label, {'text-anchor': 'middle', 'font-size': 14, fill: '#5B6478'});
+  if (o.mark) {
+    txt(g, 24, -62, o.mark, {'font-size': 26, 'font-weight': 700, fill: o.markColor || RED});
+  }
+  return g;
+}
+/* En KI-agent: avrundet boks med skjerm, ledetekst og antenne */
+function robot(parent, x, y, o) {
+  o = o || {}; var s = o.scale || 1;
+  var g = el(parent, 'g', {transform: 'translate(' + x + ',' + y + ') scale(' + s + ')'});
+  el(g, 'line', {x1: 0, y1: -46, x2: 0, y2: -34, stroke: LINE, 'stroke-width': 3});
+  el(g, 'circle', {cx: 0, cy: -49, r: 4, fill: BLUE, stroke: LINE, 'stroke-width': 1.5});
+  el(g, 'rect', {x: -30, y: -34, width: 60, height: 50, rx: 10, fill: '#EAF1FA', stroke: LINE, 'stroke-width': 2});
+  el(g, 'rect', {x: -22, y: -26, width: 44, height: 30, rx: 4, fill: '#16213A'});
+  txt(g, -17, -7, '>_', {fill: '#7CE38B', 'font-family': 'ui-monospace, Menlo, monospace', 'font-size': 15, 'font-weight': 700});
+  el(g, 'rect', {x: -22, y: 20, width: 44, height: 34, rx: 6, fill: '#EAF1FA', stroke: LINE, 'stroke-width': 2});
+  el(g, 'line', {x1: -22, y1: 30, x2: -40, y2: 44, stroke: LINE, 'stroke-width': 6, 'stroke-linecap': 'round'});
+  el(g, 'line', {x1: 22, y1: 30, x2: 40, y2: 44, stroke: LINE, 'stroke-width': 6, 'stroke-linecap': 'round'});
+  el(g, 'line', {x1: -10, y1: 54, x2: -10, y2: 70, stroke: LINE, 'stroke-width': 6, 'stroke-linecap': 'round'});
+  el(g, 'line', {x1: 10, y1: 54, x2: 10, y2: 70, stroke: LINE, 'stroke-width': 6, 'stroke-linecap': 'round'});
+  if (o.label) txt(g, 0, 92, o.label, {'text-anchor': 'middle', 'font-size': 14, fill: '#5B6478'});
+  return g;
+}
+function card(parent, x, y, w, h, label, fill, stroke, cls) {
+  var g = el(parent, 'g', {'class': cls || ''});
+  el(g, 'rect', {x: x, y: y, width: w, height: h, rx: 7, fill: fill, stroke: stroke || LINE, 'stroke-width': 1.4});
+  txt(g, x + 10, y + h / 2 + 5, label, {'font-size': 14});
+  return g;
+}
+function chip(parent, x, y, s, color) {
+  var g = el(parent, 'g', {});
+  el(g, 'rect', {x: x, y: y - 11, width: 30, height: 20, rx: 5, fill: color});
+  txt(g, x + 15, y + 4, s, {'text-anchor': 'middle', fill: '#fff', 'font-size': 12, 'font-weight': 700, 'font-family': 'ui-monospace, Menlo, monospace'});
+  return g;
+}
+function clear(svg) { while (svg.firstChild) svg.removeChild(svg.firstChild); }
+var ECOL = {E0: GREY, E1: BLUE, E2: LBLUE};
+
+/* ---------- Animasjon 1: en jobb er en bunt av oppgaver ---------- */
+var PR10 = [
+  ['Skrive pressemeldinger', 'E1'], ['Oppdatere nettsider og sosiale medier', 'E1'], ['Redigere internavis og rapporter', 'E1'], ['Skrive og holde taler', 'E1'],
+  ['Svare mediene', 'E2'], ['Planlegge kampanjer med byråer', 'E2'], ['Gjennomføre opinionsundersøkelser', 'E2'], ['Rådgi ledelsen om trender', 'E2'],
+  ['Trene talspersoner', 'E2'], ['Bygge relasjoner til interessegrupper', 'E0']
+];
+function animTasks(svg, step) {
+  clear(svg);
+  person(svg, 120, 200, {shirt: '#E75A8B', label: 'informasjonsrådgiver', armR: [60, 10]});
+  txt(svg, 40, 70, 'Én jobb', {'font-size': 20, 'font-weight': 700});
+  txt(svg, 330, 70, step >= 1 ? 'Ti av de 18 oppgavene' : '', {'font-size': 20, 'font-weight': 700});
+  var legend = [['E1', 'språkmodellen alene halverer tiden'], ['E2', 'halverer med tilleggsprogramvare'], ['E0', 'ingen eksponering']];
+  var show = {E1: step >= 2, E2: step >= 3, E0: step >= 4};
+  // legende som rad
+  var lx = 330;
+  legend.forEach(function (l) {
+    if (!show[l[0]]) return;
+    chip(svg, lx, 412, l[0], ECOL[l[0]]);
+    txt(svg, lx + 36, 416, l[1], {'font-size': 13, fill: '#5B6478'});
+    lx += 36 + l[1].length * 6.3 + 18;
+  });
+  if (step >= 1) {
+    PR10.forEach(function (t, i) {
+      var col = i % 2, row = Math.floor(i / 2);
+      var x = 330 + col * 330, y = 90 + row * 58;
+      var lit = show[t[1]];
+      card(svg, x, y, 310, 46, t[0], lit ? (t[1] === 'E0' ? '#EEF0F2' : (t[1] === 'E1' ? '#DCE8F6' : '#EAF1FA')) : '#FFFFFF', lit ? ECOL[t[1]] : LINE);
+      if (lit) chip(svg, x + 268, y + 23, t[1], ECOL[t[1]]);
+    });
+  }
+  if (step >= 4) txt(svg, 40, 400, 'Yrket består.', {'font-size': 18, 'font-weight': 700});
+  if (step >= 4) txt(svg, 40, 424, 'Noen oppgaver går raskere.', {'font-size': 15, fill: '#5B6478'});
+}
+
+/* ---------- Animasjon 2: brukerkostnad og terskel ---------- */
+function animUserCost(svg, step) {
+  clear(svg);
+  var tasks = [0.08, 0.14, 0.2, 0.27, 0.33, 0.4, 0.47, 0.55, 0.62, 0.7, 0.78, 0.9];
+  var x0 = 110, x1 = 900, yb = 330;
+  // akse
+  el(svg, 'line', {x1: x0, y1: yb, x2: x1 + 20, y2: yb, stroke: LINE, 'stroke-width': 1.5});
+  txt(svg, x0, yb + 28, 'lett å sjekke', {'font-size': 13, fill: '#5B6478'});
+  txt(svg, x1, yb + 28, 'vanskelig å sjekke', {'font-size': 13, fill: '#5B6478', 'text-anchor': 'end'});
+  txt(svg, (x0 + x1) / 2, yb + 50, 'kontrollandel v: hvor stor del av oppgavens tid som går med til å sjekke KI-ens svar', {'font-size': 14, 'text-anchor': 'middle'});
+  var thr = step >= 4 ? 0.66 : 0.45;
+  tasks.forEach(function (v, i) {
+    var x = x0 + v * (x1 - x0);
+    var h = 30 + v * 130;
+    var ai = step >= 3 && v < thr;
+    el(svg, 'rect', {x: x - 16, y: yb - h, width: 32, height: h, rx: 5, fill: ai ? '#DCE8F6' : '#FFFFFF', stroke: ai ? BLUE : LINE, 'stroke-width': 1.5});
+    if (ai) { robot(svg, x, yb - h - 46, {scale: 0.42}); }
+    else { person(svg, x, yb - h - 58, {scale: 0.42, shirt: i % 2 ? '#E75A8B' : '#C4436F'}); }
+  });
+  if (step >= 2) {
+    txt(svg, 40, 40, 'KI-ruten koster:  datakraft  +  kontrolltid × lønn', {'font-size': 17, 'font-weight': 700});
+    txt(svg, 40, 64, 'Menneskeruten koster:  hele oppgavens tid × lønn', {'font-size': 17, 'font-weight': 700, fill: '#5B6478'});
+  }
+  if (step >= 3) {
+    var xt = x0 + thr * (x1 - x0);
+    el(svg, 'line', {x1: xt, y1: 100, x2: xt, y2: yb, stroke: RED, 'stroke-width': 2.5, 'stroke-dasharray': '7 5'});
+    txt(svg, xt + 8, 114, 'terskel', {fill: RED, 'font-weight': 700});
+    txt(svg, 40, 88, 'KI tar oppgaven når  1 − v  >  datakraft / (lønn × tid)', {'font-size': 15, fill: RED, 'font-weight': 600});
+
+  }
+  if (step >= 4) {
+    txt(svg, 620, 40, 'Lønnen øker. Terskelen flytter seg.', {'font-size': 17, 'font-weight': 700, fill: RED});
+    txt(svg, 620, 64, 'Den sparte timen er mer verdt.', {'font-size': 14, fill: '#5B6478'});
+    txt(svg, 620, 84, 'Flere oppgaver går til KI.', {'font-size': 14, fill: '#5B6478'});
+  }
+  if (step >= 5) {
+    el(svg, 'rect', {x: 40, y: 395, width: 920, height: 54, rx: 8, fill: '#E7EBF6', stroke: NAVY, 'stroke-width': 1.2});
+    txt(svg, 60, 418, 'Eksponering = antall søyler.   Bruk = antall søyler til venstre for terskelen.', {'font-size': 17, 'font-weight': 700, fill: NAVY});
+    txt(svg, 60, 440, 'To yrker med samme eksponering kan ha helt ulik bruk. Derfor måler vi utfall.', {'font-size': 14, fill: NAVY});
+  }
+}
+
+/* ---------- Animasjon 3: tre krefter ---------- */
+function animForces(svg, step) {
+  clear(svg);
+  var bx = 120, by = 90, bw = 90, bh = 240;
+  txt(svg, bx + bw / 2, 70, 'sysselsetting', {'text-anchor': 'middle', 'font-size': 15, fill: '#5B6478'});
+  el(svg, 'rect', {x: bx, y: by, width: bw, height: bh, rx: 8, fill: '#E7EBF6', stroke: NAVY, 'stroke-width': 1.5});
+  var level = 0;
+  if (step >= 1) level -= 70;
+  if (step >= 2) level += 40;
+  if (step >= 3) level += 35;
+  var top = by + 60 - level;
+  el(svg, 'rect', {x: bx + 8, y: top, width: bw - 16, height: by + bh - 8 - top, rx: 5, fill: NAVY});
+  el(svg, 'line', {x1: bx - 10, y1: by + 60, x2: bx + bw + 10, y2: by + 60, stroke: LINE, 'stroke-width': 1.5, 'stroke-dasharray': '4 4'});
+  txt(svg, bx + bw + 16, by + 64, 'før KI', {'font-size': 13, fill: '#5B6478'});
+  var F = [
+    ['Fortrengning', 'Oppgaver flyttes til maskiner. Arbeidets andel faller.', RED, -1],
+    ['Produktivitet', 'Lavere kostnad gir mer produksjon og mer arbeid i oppgavene som står igjen.', TEAL, 1],
+    ['Nye oppgaver', 'Kontroll, nye produkter, nye funksjoner. Arbeidets andel kan øke igjen.', NAVY, 1]
+  ];
+  F.forEach(function (f, i) {
+    if (step < i + 1) return;
+    var x = 330 + i * 225, y = 120;
+    el(svg, 'rect', {x: x, y: y, width: 205, height: 150, rx: 10, fill: '#fff', stroke: f[2], 'stroke-width': 1.6});
+    txt(svg, x + 14, y + 30, f[0], {'font-size': 18, 'font-weight': 700, fill: f[2]});
+    var words = f[1].split(' '), line = '', ly = y + 56;
+    words.forEach(function (w) {
+      if ((line + ' ' + w).length > 26) { txt(svg, x + 14, ly, line, {'font-size': 13, fill: '#5B6478'}); ly += 18; line = w; }
+      else line = line ? line + ' ' + w : w;
+    });
+    txt(svg, x + 14, ly, line, {'font-size': 13, fill: '#5B6478'});
+    // pil
+    var ax = x + 102, ay1 = f[3] < 0 ? 290 : 350, ay2 = f[3] < 0 ? 350 : 290;
+    el(svg, 'line', {x1: ax, y1: ay1, x2: ax, y2: ay2, stroke: f[2], 'stroke-width': 5, 'stroke-linecap': 'round'});
+    el(svg, 'path', {d: f[3] < 0 ? 'M ' + (ax - 10) + ' 338 L ' + ax + ' 352 L ' + (ax + 10) + ' 338' : 'M ' + (ax - 10) + ' 302 L ' + ax + ' 288 L ' + (ax + 10) + ' 302', fill: 'none', stroke: f[2], 'stroke-width': 5, 'stroke-linecap': 'round', 'stroke-linejoin': 'round'});
+  });
+  person(svg, 60, 370, {scale: 0.5, shirt: '#E75A8B'});
+  robot(svg, 300 - 60, 380, {scale: 0.5});
+  if (step >= 4) {
+    el(svg, 'rect', {x: 330, y: 380, width: 630, height: 34, rx: 8, fill: '#E7EBF6'});
+    txt(svg, 345, 403, 'Nettoen er et empirisk spørsmål. Priser, etterspørsel og nye oppgaver avgjør.', {'font-size': 14, fill: NAVY, 'font-weight': 600});
+  }
+}
+
+/* ---------- Animasjon 4: stigen ---------- */
+var RUNGS = ['Førsteutkast og rutine', 'Enkel kode og referater', 'Feilsøking', 'Kundedialog', 'Vurdering og ansvar', 'Ledelse'];
+function animLadder(svg, step) {
+  clear(svg);
+  var lx = 420, lw = 260, top = 40, bottom = 400, n = RUNGS.length;
+  el(svg, 'line', {x1: lx, y1: top, x2: lx, y2: bottom, stroke: LINE, 'stroke-width': 8, 'stroke-linecap': 'round'});
+  el(svg, 'line', {x1: lx + lw, y1: top, x2: lx + lw, y2: bottom, stroke: LINE, 'stroke-width': 8, 'stroke-linecap': 'round'});
+  RUNGS.forEach(function (r, i) {
+    var y = bottom - 40 - i * ((bottom - top - 60) / (n - 1));
+    var taken = step >= 2 && i < 2;
+    el(svg, 'line', {x1: lx, y1: y, x2: lx + lw, y2: y, stroke: taken ? BLUE : LINE, 'stroke-width': 8, 'stroke-linecap': 'round', 'stroke-dasharray': taken ? '12 10' : 'none', opacity: taken ? 0.55 : 1});
+    txt(svg, lx + lw + 18, y + 5, r, {'font-size': 15, fill: taken ? BLUE : INK, 'font-weight': taken ? 700 : 400});
+    if (taken) robot(svg, lx + lw / 2, y - 30, {scale: 0.38});
+  });
+  person(svg, 340, 330, {shirt: '#E75A8B', young: true, label: 'junior', mouth: step >= 3 ? 'sad' : 'smile', mark: step >= 3 ? '?' : null});
+  person(svg, 935, 120, {shirt: '#2F6FB0', grey: true, glasses: true, label: 'senior', scale: 0.85, armL: [-44, -10]});
+  txt(svg, 60, 70, 'Lett å sjekke nederst,', {'font-size': 17, 'font-weight': 700});
+  txt(svg, 60, 94, 'vanskelig å sjekke øverst.', {'font-size': 17, 'font-weight': 700});
+  if (step >= 2) {
+    txt(svg, 60, 140, 'De nederste trinnene passerer', {'font-size': 14, fill: BLUE});
+    txt(svg, 60, 160, 'terskelen først.', {'font-size': 14, fill: BLUE});
+  }
+  if (step >= 3) {
+    txt(svg, 60, 206, 'Juniorens vei inn blir borte.', {'font-size': 14, fill: RED});
+    txt(svg, 60, 226, 'Læringen skjedde på de trinnene.', {'font-size': 14, fill: RED});
+  }
+  if (step >= 4) {
+    el(svg, 'rect', {x: 40, y: 262, width: 250, height: 62, rx: 8, fill: '#E7EBF6', stroke: NAVY, 'stroke-width': 1.2});
+    txt(svg, 54, 286, 'Senior får en ny oppgave:', {'font-size': 14, 'font-weight': 700, fill: NAVY});
+    txt(svg, 54, 308, 'sjekke KI-ens arbeid.', {'font-size': 14, 'font-weight': 700, fill: NAVY});
+  }
+}
+
+/* ---------- Animasjon 5: informasjonsrådgivere, 18 oppgaver ---------- */
+var PR18 = [
+  ['Svare mediene eller utpeke talsperson', 'E2', 1], ['Planlegge kommunikasjonsprogrammer', 'E2', 1], ['Oppdatere nettside og sosiale medier', 'E1', 1],
+  ['Skrive pressemeldinger og medietekst', 'E1', 1], ['Bygge relasjoner til interessegrupper', 'E0', 1], ['Rådgi ledere om trender og interesser', 'E2', 1],
+  ['Trene talspersoner i kommunikasjon', 'E2', 1], ['Utvikle PR-strategier', 'E2', 1], ['Redigere interne og eksterne publikasjoner', 'E1', 1],
+  ['Arrangere opptredener og arrangementer', 'E2', 1], ['Gjennomføre markeds- og opinionsundersøkelser', 'E2', 1], ['Formidle miljø- og samfunnstiltak', 'E2', 1],
+  ['Koordinere reklame- og kampanjeproduksjon', 'E2', 1], ['Planlegge kampanjer med byråer og medier', 'E2', 1], ['Skrive eller holde taler', 'E1', 1],
+  ['Håndtere offentlig respons ved hendelser', 'E2', 0], ['Markedsføre miljøteknologi og -tjenester', 'E2', 0], ['Kjøpe annonseplass og sendetid', 'E2', 0]
+];
+function animPR(svg, step) {
+  clear(svg);
+  var pts = {E0: 0, E1: 1, E2: 0.5};
+  var sum = 0, den = 0;
+  PR18.forEach(function (t, i) {
+    var col = i % 2, row = Math.floor(i / 2);
+    var x = 30 + col * 470, y = 20 + row * 38;
+    var w = t[2] ? 2 : 1;
+    txt(svg, x, y + 18, t[0] + (t[2] ? '' : ' (till.)'), {'font-size': 14});
+    if (step >= 1) chip(svg, x + 322, y + 14, t[1], ECOL[t[1]]);
+    if (step >= 2) txt(svg, x + 384, y + 18, (pts[t[1]] * w).toString().replace('.', ','), {'font-size': 14, 'font-weight': 700, 'text-anchor': 'end', fill: '#5B6478'});
+    if (step >= 2) txt(svg, x + 392, y + 18, '/ ' + w, {'font-size': 12, fill: '#9BA3B8'});
+    sum += pts[t[1]] * w; den += w;
+  });
+  el(svg, 'line', {x1: 30, y1: 372, x2: 970, y2: 372, stroke: LINE, 'stroke-width': 1});
+  if (step >= 3) {
+    txt(svg, 30, 400, '1 E0 · 4 E1 · 13 E2.  Kjerne teller 2, tillegg teller 1.', {'font-size': 16});
+    txt(svg, 30, 428, 'Sum ' + sum.toString().replace('.', ',') + ' av ' + den + '  →  β = ' + (sum / den).toFixed(3).replace('.', ',') + '  →  Q5, mest eksponert', {'font-size': 19, 'font-weight': 700, fill: NAVY});
+  } else if (step >= 1) {
+    txt(svg, 30, 400, 'E1 gir 1 poeng, E2 et halvt, E0 null.', {'font-size': 16, fill: '#5B6478'});
+  }
+}
+
+/* ---------- Animasjon 6: tre yrker ---------- */
+var OCC = [
+  {name: 'Programvareutviklere', beta: '0,87', q: 'Q5', api: '15,9 % av API-bruken', tasks: [['Rette feil i eksisterende kode', 'E1', 8.7], ['Analysere brukerbehov og krav', 'E1', 1.5], ['Utforme og endre systemer', 'E1', null], ['Teste og validere programvare', 'E1', 0.4], ['Skrive rapporter om status', 'E1', null], ['Rådføre seg med kunder', 'E2', null], ['Lære opp brukere', 'E0', null]]},
+  {name: 'Kundesentermedarbeidere', beta: '0,57', q: 'Q5', api: '0,7 % av API-bruken', tasks: [['Snakke med kunder om produkter', 'E2', 0.18], ['Føre logg over kundekontakt', 'E2', 0.35], ['Løse klager på service og faktura', 'E2', null], ['Henvise klager videre', 'E2', null], ['Selge inn ekstra tjenester', 'E2', null], ['Fylle ut kontraktskjema', 'E1', null], ['Sammenligne vare med faktura', 'E1', null]]},
+  {name: 'Elektrikere', beta: '0,09', q: 'Q1', api: '0,1 % av API-bruken', tasks: [['Trekke kabler i vegger og rør', 'E0', null], ['Koble ledninger i sikringsskap', 'E0', null], ['Arbeide fra stiger og stillas', 'E0', null], ['Feilsøke med testutstyr', 'E0', null], ['Reparere og bytte utstyr', 'E0', null], ['Planlegge føringer etter tegning', 'E2', null], ['Føre registre og bestille rekvisita', 'E1', null]]}
+];
+function animOcc(svg, step) {
+  clear(svg);
+  OCC.forEach(function (o, c) {
+    if (step < c + 1) return;
+    var x = 20 + c * 325, w = 305;
+    el(svg, 'rect', {x: x, y: 10, width: w, height: 395, rx: 10, fill: '#fff', stroke: LINE, 'stroke-width': 1.2});
+    txt(svg, x + 14, 38, o.name, {'font-size': 17, 'font-weight': 700});
+    txt(svg, x + 14, 60, 'β = ' + o.beta + '  ·  ' + o.q, {'font-size': 14, fill: '#5B6478'});
+    o.tasks.forEach(function (t, i) {
+      var y = 92 + i * 42;
+      chip(svg, x + 14, y, t[1], ECOL[t[1]]);
+      txt(svg, x + 52, y + 4, t[0], {'font-size': 13.5});
+      if (step >= 4 && t[2] !== null) {
+        var bw = Math.min(240, t[2] * 26);
+        el(svg, 'rect', {x: x + 52, y: y + 10, width: bw, height: 6, rx: 3, fill: '#1F7A4D', opacity: 0.8});
+        txt(svg, x + 52 + bw + 6, y + 16, t[2].toString().replace('.', ',') + ' %', {'font-size': 11, fill: '#1F7A4D'});
+      }
+    });
+    if (step >= 4) {
+      el(svg, 'rect', {x: x + 10, y: 360, width: w - 20, height: 34, rx: 6, fill: '#E6F2EA'});
+      txt(svg, x + 20, 382, o.api, {'font-size': 14, 'font-weight': 700, fill: '#1F7A4D'});
+    }
+  });
+  if (step >= 4) txt(svg, 20, 440, 'Grønt: andelen av all trafikk gjennom Anthropics API (februar 2026) som faller på oppgaven. Høy eksponering, lav kontrollkostnad og høy bruk faller sammen hos utviklerne.', {'font-size': 13, fill: '#5B6478'});
+  else txt(svg, 20, 440, 'Samme rubrikk, samme poeng. Skåren følger av oppgavene, ikke av yrkestittelen.', {'font-size': 13, fill: '#5B6478'});
+}
+
+var ANIM = {
+  tasks: function (s, k) { animTasks(s.querySelector('#svg-tasks'), k); },
+  usercost: function (s, k) { animUserCost(s.querySelector('#svg-usercost'), k); },
+  forces: function (s, k) { animForces(s.querySelector('#svg-forces'), k); },
+  ladder: function (s, k) { animLadder(s.querySelector('#svg-ladder'), k); },
+  pr: function (s, k) { animPR(s.querySelector('#svg-pr'), k); },
+  occ: function (s, k) { animOcc(s.querySelector('#svg-occ'), k); },
+  swap: function (s, k) {
+    s.querySelectorAll('.swap').forEach(function (sw) {
+      sw.querySelectorAll(':scope > *').forEach(function (c) { c.classList.toggle('on', parseInt(c.dataset.step || '0', 10) === k); });
+    });
+  }
+};
+
+/* ---------- Navigasjon med fragmenter ---------- */
+var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+var bar = document.getElementById('bar'), counter = document.getElementById('counter');
+var drawer = document.getElementById('drawer'), drawerBody = document.getElementById('drawerBody');
+var i = 0, step = 0;
+function maxStep(s) { return parseInt(s.dataset.steps || '0', 10); }
+function render() {
+  var s = slides[i];
+  s.querySelectorAll('.frag').forEach(function (f) { f.classList.toggle('on', parseInt(f.dataset.step, 10) <= step); });
+  if (s.dataset.anim && ANIM[s.dataset.anim]) ANIM[s.dataset.anim](s, step);
+}
+function show() {
+  slides.forEach(function (s, k) { s.classList.toggle('current', k === i); s.setAttribute('aria-hidden', k === i ? 'false' : 'true'); });
+  bar.style.width = ((i + 1) / slides.length * 100) + '%';
+  counter.textContent = (i + 1) + ' / ' + slides.length;
+  if (!location.hash.match(/^#s\d+\.\d+$/) && location.hash !== '#s' + (i + 1)) history.replaceState(null, '', '#s' + (i + 1));
+  var notes = slides[i].querySelector('.notes');
+  drawerBody.innerHTML = notes ? notes.innerHTML : '<p>Ingen notater.</p>';
+  render();
+}
+function go(d) {
+  if (d > 0) {
+    if (step < maxStep(slides[i])) { step++; render(); return; }
+    if (i < slides.length - 1) { i++; step = 0; show(); }
+  } else {
+    if (step > 0) { step--; render(); return; }
+    if (i > 0) { i--; step = maxStep(slides[i]); show(); }
+  }
+}
+function fromHash() {
+  var m = location.hash.match(/^#s(\d+)(?:\.(\d+))?$/);
+  if (m) { var n = parseInt(m[1], 10) - 1; if (n >= 0 && n < slides.length) i = n; step = m[2] ? parseInt(m[2], 10) : 0; }
+}
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') { e.preventDefault(); go(1); }
+  else if (e.key === 'ArrowLeft' || e.key === 'PageUp') { e.preventDefault(); go(-1); }
+  else if (e.key === 'Home') { i = 0; step = 0; show(); }
+  else if (e.key === 'End') { i = slides.length - 1; step = 0; show(); }
+  else if (e.key === 'n' || e.key === 'N') { drawer.classList.toggle('open'); }
+  else if (e.key === 'f' || e.key === 'F') { if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(function () {}); }
+  else if (e.key === 'Escape') { drawer.classList.remove('open'); }
+});
+document.getElementById('prevBtn').addEventListener('click', function () { go(-1); });
+document.getElementById('nextBtn').addEventListener('click', function () { go(1); });
+document.getElementById('notesBtn').addEventListener('click', function () { drawer.classList.toggle('open'); });
+window.addEventListener('hashchange', function () { step = 0; fromHash(); show(); });
+fromHash(); show();
+</script>
+</body>
+</html>

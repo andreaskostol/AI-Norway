@@ -1,0 +1,826 @@
+[
+ {
+  "full_name": "Skatteetaten/saf-t",
+  "created_at": "2015-12-15T14:31:57Z",
+  "pushed_at": "2026-09-01T06:48:17Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "Skatteetaten/trekktabell",
+  "created_at": "2016-08-23T10:16:39Z",
+  "pushed_at": "2025-12-09T09:26:44Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/land-for-land-rapportering",
+  "created_at": "2016-11-18T09:06:44Z",
+  "pushed_at": "2023-09-14T10:04:07Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "Skatteetaten/ao",
+  "created_at": "2016-12-02T07:00:50Z",
+  "pushed_at": "2022-09-22T11:48:51Z",
+  "fork": false,
+  "archived": true,
+  "language": "Go"
+ },
+ {
+  "full_name": "Skatteetaten/checkstyle-config",
+  "created_at": "2016-12-29T08:28:30Z",
+  "pushed_at": "2021-12-15T07:17:16Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "Skatteetaten/architect",
+  "created_at": "2017-01-12T11:44:21Z",
+  "pushed_at": "2022-10-27T09:08:59Z",
+  "fork": false,
+  "archived": true,
+  "language": "Go"
+ },
+ {
+  "full_name": "Skatteetaten/wingnut",
+  "created_at": "2017-01-25T14:37:48Z",
+  "pushed_at": "2018-09-06T09:06:56Z",
+  "fork": false,
+  "archived": true,
+  "language": "Shell"
+ },
+ {
+  "full_name": "Skatteetaten/skatteetaten.github.io",
+  "created_at": "2017-02-21T07:38:46Z",
+  "pushed_at": "2026-02-20T22:04:09Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "Skatteetaten/boober",
+  "created_at": "2017-03-09T19:50:28Z",
+  "pushed_at": "2022-09-29T06:47:22Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/resources",
+  "created_at": "2017-03-20T09:03:59Z",
+  "pushed_at": "2017-03-20T09:04:00Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "Skatteetaten/aurora-openshift",
+  "created_at": "2017-03-20T09:09:37Z",
+  "pushed_at": "2019-10-10T11:25:18Z",
+  "fork": false,
+  "archived": true,
+  "language": "Ruby"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-gradle-plugin",
+  "created_at": "2017-04-06T08:10:34Z",
+  "pushed_at": "2022-11-29T13:13:21Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-git-version",
+  "created_at": "2017-04-06T08:14:54Z",
+  "pushed_at": "2022-05-25T10:09:05Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-prometheus",
+  "created_at": "2017-05-25T19:04:07Z",
+  "pushed_at": "2020-01-17T12:12:51Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/maven-plugin-continuous-delivery",
+  "created_at": "2017-06-02T07:49:17Z",
+  "pushed_at": "2018-06-25T20:13:10Z",
+  "fork": false,
+  "archived": true,
+  "language": "Groovy"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-spring-boot-starters",
+  "created_at": "2017-06-02T08:08:13Z",
+  "pushed_at": "2018-10-23T12:29:13Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-header-mdc-filter",
+  "created_at": "2017-06-02T09:45:45Z",
+  "pushed_at": "2021-12-01T04:28:46Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-docker-gradle-plugin",
+  "created_at": "2017-07-11T09:59:40Z",
+  "pushed_at": "2021-09-29T08:51:13Z",
+  "fork": false,
+  "archived": true,
+  "language": "Groovy"
+ },
+ {
+  "full_name": "Skatteetaten/generator-aurora-openshift",
+  "created_at": "2017-07-31T13:40:39Z",
+  "pushed_at": "2017-10-03T19:11:41Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/folkeregisteret-api-dokumentasjon",
+  "created_at": "2017-09-12T11:12:55Z",
+  "pushed_at": "2026-09-30T08:19:14Z",
+  "fork": false,
+  "archived": false,
+  "language": "Handlebars"
+ },
+ {
+  "full_name": "Skatteetaten/dbh",
+  "created_at": "2017-09-13T08:49:22Z",
+  "pushed_at": "2022-08-18T11:01:59Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/mokey",
+  "created_at": "2017-09-20T12:53:28Z",
+  "pushed_at": "2022-09-02T10:41:19Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-management-interface-js",
+  "created_at": "2017-10-06T12:57:20Z",
+  "pushed_at": "2022-10-12T12:53:34Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "Skatteetaten/wrench",
+  "created_at": "2017-10-16T09:24:52Z",
+  "pushed_at": "2018-07-23T14:27:14Z",
+  "fork": false,
+  "archived": true,
+  "language": "Shell"
+ },
+ {
+  "full_name": "Skatteetaten/bitbucket-precommit-hook-boober-validate",
+  "created_at": "2017-10-25T22:27:26Z",
+  "pushed_at": "2017-10-28T23:02:18Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-ide-konfigurasjon",
+  "created_at": "2017-11-23T19:05:26Z",
+  "pushed_at": "2021-09-22T06:41:19Z",
+  "fork": false,
+  "archived": true,
+  "language": "Shell"
+ },
+ {
+  "full_name": "Skatteetaten/red",
+  "created_at": "2018-01-22T11:45:14Z",
+  "pushed_at": "2019-08-31T02:04:48Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-springboot2-starter",
+  "created_at": "2018-03-01T18:38:56Z",
+  "pushed_at": "2020-03-09T13:05:56Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/openshift-container-platform",
+  "created_at": "2018-03-11T15:46:52Z",
+  "pushed_at": "2018-06-14T08:16:30Z",
+  "fork": true,
+  "archived": false,
+  "language": "Shell"
+ },
+ {
+  "full_name": "Skatteetaten/gorg",
+  "created_at": "2018-04-23T08:40:47Z",
+  "pushed_at": "2022-08-17T07:28:57Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/aurora",
+  "created_at": "2018-04-25T08:30:13Z",
+  "pushed_at": "2026-04-15T06:12:13Z",
+  "fork": false,
+  "archived": false,
+  "language": "CSS"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-spring-boot-presentation",
+  "created_at": "2018-05-24T07:22:03Z",
+  "pushed_at": "2019-09-03T12:22:43Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "Skatteetaten/radish",
+  "created_at": "2018-05-28T08:41:36Z",
+  "pushed_at": "2022-10-26T09:54:15Z",
+  "fork": false,
+  "archived": true,
+  "language": "Go"
+ },
+ {
+  "full_name": "Skatteetaten/gillis",
+  "created_at": "2018-05-29T08:11:03Z",
+  "pushed_at": "2022-08-23T11:57:22Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/gobo",
+  "created_at": "2018-05-29T08:12:44Z",
+  "pushed_at": "2022-10-24T08:09:03Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/openshift-origin",
+  "created_at": "2018-06-14T11:14:13Z",
+  "pushed_at": "2018-05-21T23:55:33Z",
+  "fork": true,
+  "archived": false,
+  "language": "Shell"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-konsoll",
+  "created_at": "2018-08-21T10:38:33Z",
+  "pushed_at": "2022-10-12T13:32:53Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "Skatteetaten/cantus",
+  "created_at": "2018-12-17T12:37:56Z",
+  "pushed_at": "2022-10-10T11:42:52Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/postgresql-container",
+  "created_at": "2018-12-20T09:20:33Z",
+  "pushed_at": "2019-03-12T12:39:19Z",
+  "fork": true,
+  "archived": false,
+  "language": "Shell"
+ },
+ {
+  "full_name": "Skatteetaten/mattermost-server",
+  "created_at": "2019-01-08T13:50:45Z",
+  "pushed_at": "2019-01-08T10:36:56Z",
+  "fork": true,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "Skatteetaten/test-app",
+  "created_at": "2019-01-09T14:57:45Z",
+  "pushed_at": "2019-01-09T14:57:46Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "Skatteetaten/clerk",
+  "created_at": "2019-02-28T12:29:46Z",
+  "pushed_at": "2022-10-31T11:25:55Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/sprocket",
+  "created_at": "2019-04-02T07:48:18Z",
+  "pushed_at": "2019-09-23T08:52:57Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/dsop-account-consumer-contract",
+  "created_at": "2019-05-22T11:39:16Z",
+  "pushed_at": "2024-10-03T18:21:59Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-sprocket-presentation",
+  "created_at": "2019-06-14T10:56:09Z",
+  "pushed_at": "2020-03-10T12:06:22Z",
+  "fork": false,
+  "archived": true,
+  "language": "CSS"
+ },
+ {
+  "full_name": "Skatteetaten/openshift-reference-springboot-server-multids",
+  "created_at": "2019-06-27T11:42:28Z",
+  "pushed_at": "2019-06-28T15:31:04Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/ktf",
+  "created_at": "2019-08-13T11:36:08Z",
+  "pushed_at": "2019-08-13T11:36:09Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "Skatteetaten/aurora-presentation-template",
+  "created_at": "2019-08-20T05:38:11Z",
+  "pushed_at": "2020-10-28T09:12:04Z",
+  "fork": false,
+  "archived": true,
+  "language": "CSS"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-ci-scripts-js",
+  "created_at": "2019-08-23T07:41:11Z",
+  "pushed_at": "2022-10-12T12:14:02Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-artifact-deployer-js",
+  "created_at": "2019-08-23T07:41:46Z",
+  "pushed_at": "2021-10-27T12:53:03Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "Skatteetaten/frontend-components",
+  "created_at": "2019-09-09T12:12:05Z",
+  "pushed_at": "2026-06-04T07:05:17Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "Skatteetaten/Encryptor4j",
+  "created_at": "2019-09-13T12:13:44Z",
+  "pushed_at": "2019-09-13T12:17:45Z",
+  "fork": true,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/mean-genie",
+  "created_at": "2019-09-20T10:41:07Z",
+  "pushed_at": "2022-08-23T12:29:41Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/kubernetes-reactor-coroutines-client",
+  "created_at": "2019-12-03T21:47:31Z",
+  "pushed_at": "2022-12-01T14:23:34Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/brio",
+  "created_at": "2020-01-10T13:39:23Z",
+  "pushed_at": "2020-03-10T13:35:25Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-management-interface-go",
+  "created_at": "2020-03-03T09:01:18Z",
+  "pushed_at": "2020-03-24T08:48:25Z",
+  "fork": false,
+  "archived": true,
+  "language": "Go"
+ },
+ {
+  "full_name": "Skatteetaten/cognito-eks",
+  "created_at": "2020-03-11T10:41:38Z",
+  "pushed_at": "2020-03-16T10:13:22Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-spring-boot-base-starter",
+  "created_at": "2020-03-24T14:51:15Z",
+  "pushed_at": "2022-12-07T09:40:40Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-spring-boot-mvc-starter",
+  "created_at": "2020-03-25T13:39:16Z",
+  "pushed_at": "2022-12-06T13:24:44Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/aurora-spring-boot-webflux-starter",
+  "created_at": "2020-04-02T11:35:57Z",
+  "pushed_at": "2022-12-07T07:25:18Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/vagrant-hashistack",
+  "created_at": "2020-05-27T07:41:01Z",
+  "pushed_at": "2021-09-07T08:20:08Z",
+  "fork": false,
+  "archived": false,
+  "language": "Makefile"
+ },
+ {
+  "full_name": "Skatteetaten/skattemeldingen",
+  "created_at": "2020-06-09T07:22:50Z",
+  "pushed_at": "2026-10-08T00:26:29Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/vagrant-hashistack-template",
+  "created_at": "2020-06-25T06:12:11Z",
+  "pushed_at": "2021-09-07T08:20:07Z",
+  "fork": false,
+  "archived": false,
+  "language": "Makefile"
+ },
+ {
+  "full_name": "Skatteetaten/mockwebserver-extensions-kotlin",
+  "created_at": "2020-07-28T12:07:41Z",
+  "pushed_at": "2022-11-04T09:21:19Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/herkimer",
+  "created_at": "2020-08-10T08:16:32Z",
+  "pushed_at": "2022-08-23T08:08:23Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/testnorge-tenor-dokumentasjon",
+  "created_at": "2020-08-14T07:55:42Z",
+  "pushed_at": "2026-10-06T11:52:51Z",
+  "fork": false,
+  "archived": false,
+  "language": "MDX"
+ },
+ {
+  "full_name": "Skatteetaten/terraform-nomad-minio",
+  "created_at": "2020-08-19T08:28:09Z",
+  "pushed_at": "2021-06-04T12:13:05Z",
+  "fork": false,
+  "archived": false,
+  "language": "HCL"
+ },
+ {
+  "full_name": "Skatteetaten/terraform-nomad-hive",
+  "created_at": "2020-08-21T11:24:37Z",
+  "pushed_at": "2021-06-04T11:29:04Z",
+  "fork": false,
+  "archived": false,
+  "language": "HCL"
+ },
+ {
+  "full_name": "Skatteetaten/terraform-nomad-trino",
+  "created_at": "2020-08-21T11:25:20Z",
+  "pushed_at": "2024-09-03T21:05:28Z",
+  "fork": false,
+  "archived": false,
+  "language": "HCL"
+ },
+ {
+  "full_name": "Skatteetaten/terraform-nomad-postgres",
+  "created_at": "2020-08-26T10:22:04Z",
+  "pushed_at": "2024-04-05T15:50:53Z",
+  "fork": false,
+  "archived": false,
+  "language": "HCL"
+ },
+ {
+  "full_name": "Skatteetaten/terraform-nomad-redash",
+  "created_at": "2020-08-27T10:17:47Z",
+  "pushed_at": "2021-06-18T13:42:22Z",
+  "fork": false,
+  "archived": false,
+  "language": "HCL"
+ },
+ {
+  "full_name": "Skatteetaten/kubernetes-uia",
+  "created_at": "2020-09-02T06:33:00Z",
+  "pushed_at": "2020-09-10T10:50:34Z",
+  "fork": false,
+  "archived": false,
+  "language": "CSS"
+ },
+ {
+  "full_name": "Skatteetaten/caf-terraform-landingzones",
+  "created_at": "2020-09-14T07:52:09Z",
+  "pushed_at": "2020-09-14T06:57:28Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "Skatteetaten/mva-meldingen",
+  "created_at": "2020-10-06T07:51:56Z",
+  "pushed_at": "2025-11-04T07:01:22Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "Skatteetaten/graphql",
+  "created_at": "2020-10-06T11:01:22Z",
+  "pushed_at": "2021-10-07T07:21:35Z",
+  "fork": true,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "Skatteetaten/documentation-template",
+  "created_at": "2020-10-07T07:23:26Z",
+  "pushed_at": "2023-03-28T08:40:01Z",
+  "fork": false,
+  "archived": true,
+  "language": "CSS"
+ },
+ {
+  "full_name": "Skatteetaten/terraform-nomad-nifi",
+  "created_at": "2020-10-30T12:29:29Z",
+  "pushed_at": "2021-02-18T10:10:58Z",
+  "fork": false,
+  "archived": false,
+  "language": "HCL"
+ },
+ {
+  "full_name": "Skatteetaten/terraform-nomad-nifiregistry",
+  "created_at": "2020-12-03T08:04:24Z",
+  "pushed_at": "2021-02-18T10:18:47Z",
+  "fork": false,
+  "archived": false,
+  "language": "HCL"
+ },
+ {
+  "full_name": "Skatteetaten/fergus",
+  "created_at": "2021-02-02T08:18:15Z",
+  "pushed_at": "2022-08-29T06:33:26Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/testnorge-tenor-adapter",
+  "created_at": "2021-02-17T09:08:01Z",
+  "pushed_at": "2025-09-18T07:41:22Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/supernova",
+  "created_at": "2021-03-05T13:04:41Z",
+  "pushed_at": "2021-05-05T09:32:09Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/terraform-nomad-redis",
+  "created_at": "2021-04-29T05:56:34Z",
+  "pushed_at": "2021-05-12T06:27:26Z",
+  "fork": false,
+  "archived": false,
+  "language": "HCL"
+ },
+ {
+  "full_name": "Skatteetaten/openshift-reference-springboot-server-kotlin",
+  "created_at": "2021-10-18T11:09:39Z",
+  "pushed_at": "2021-11-01T08:05:43Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "Skatteetaten/openshift-reference-springboot-server",
+  "created_at": "2021-10-18T11:12:02Z",
+  "pushed_at": "2021-11-01T08:06:02Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "Skatteetaten/skatteprosessen-task",
+  "created_at": "2021-11-25T14:54:14Z",
+  "pushed_at": "2025-12-04T18:16:16Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/skatteprosessen-feed",
+  "created_at": "2021-11-25T14:55:50Z",
+  "pushed_at": "2025-03-03T19:39:31Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/skatteprosessen-structural-type",
+  "created_at": "2021-11-25T14:56:51Z",
+  "pushed_at": "2025-10-14T13:03:39Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/skatteprosessen-document-sql",
+  "created_at": "2021-11-25T14:57:47Z",
+  "pushed_at": "2025-02-22T19:21:16Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/beta-apier",
+  "created_at": "2022-06-02T13:05:32Z",
+  "pushed_at": "2026-05-21T13:18:52Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "Skatteetaten/data-science-template",
+  "created_at": "2022-11-18T13:30:17Z",
+  "pushed_at": "2020-01-08T11:24:06Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "Skatteetaten/naiserator",
+  "created_at": "2023-01-20T08:32:05Z",
+  "pushed_at": "2023-07-03T06:42:14Z",
+  "fork": true,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "Skatteetaten/api-dokumentasjon",
+  "created_at": "2023-02-23T11:22:48Z",
+  "pushed_at": "2026-10-07T11:10:35Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "Skatteetaten/designsystemet",
+  "created_at": "2023-03-21T08:01:48Z",
+  "pushed_at": "2026-09-24T10:00:09Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "Skatteetaten/terraform-provider-tilgangsportalen",
+  "created_at": "2024-04-15T12:27:53Z",
+  "pushed_at": "2026-09-25T08:46:45Z",
+  "fork": false,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "Skatteetaten/skatteprosessen-typescript-dto-translator",
+  "created_at": "2024-08-23T12:20:36Z",
+  "pushed_at": "2024-10-04T09:05:19Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/Sava",
+  "created_at": "2024-10-24T05:40:50Z",
+  "pushed_at": "2024-10-24T05:40:50Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "Skatteetaten/suppleringsskatt",
+  "created_at": "2025-01-31T13:27:48Z",
+  "pushed_at": "2025-10-30T08:50:56Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "Skatteetaten/skatteetaten-statuspage",
+  "created_at": "2025-06-27T12:46:50Z",
+  "pushed_at": "2026-04-16T13:25:42Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "Skatteetaten/tdg-backend",
+  "created_at": "2025-09-19T11:34:13Z",
+  "pushed_at": "2025-12-10T13:15:49Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "Skatteetaten/tdg-frontend",
+  "created_at": "2025-09-19T12:48:05Z",
+  "pushed_at": "2025-12-12T11:46:49Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "Skatteetaten/tdg-kotlin-compiler-server",
+  "created_at": "2025-09-19T12:50:29Z",
+  "pushed_at": "2025-12-16T10:13:05Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "Skatteetaten/uu-status",
+  "created_at": "2025-10-20T07:33:53Z",
+  "pushed_at": "2026-10-08T01:52:52Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "Skatteetaten/Sok-stil-og-tone",
+  "created_at": "2025-12-02T08:32:31Z",
+  "pushed_at": "2026-10-05T12:14:57Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ }
+]

@@ -1,0 +1,2378 @@
+[
+ {
+  "full_name": "kartverket/kivyMaps",
+  "created_at": "2011-11-23T11:57:57Z",
+  "pushed_at": "2014-09-22T05:26:31Z",
+  "fork": false,
+  "archived": true,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/anathem",
+  "created_at": "2012-10-25T06:36:57Z",
+  "pushed_at": "2018-06-14T11:25:33Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/fyba",
+  "created_at": "2012-12-05T13:27:04Z",
+  "pushed_at": "2026-08-12T14:02:04Z",
+  "fork": false,
+  "archived": false,
+  "language": "C++"
+ },
+ {
+  "full_name": "kartverket/mapserver",
+  "created_at": "2012-12-06T08:51:47Z",
+  "pushed_at": "2013-10-07T07:29:04Z",
+  "fork": true,
+  "archived": true,
+  "language": "C"
+ },
+ {
+  "full_name": "kartverket/geowebcache",
+  "created_at": "2012-12-06T09:09:18Z",
+  "pushed_at": "2020-11-16T20:42:06Z",
+  "fork": true,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/norgeskart.no",
+  "created_at": "2012-12-11T17:51:47Z",
+  "pushed_at": "2016-10-26T07:11:52Z",
+  "fork": false,
+  "archived": true,
+  "language": "CSS"
+ },
+ {
+  "full_name": "kartverket/gdal",
+  "created_at": "2013-04-10T08:50:54Z",
+  "pushed_at": "2013-10-01T05:58:11Z",
+  "fork": true,
+  "archived": true,
+  "language": "C++"
+ },
+ {
+  "full_name": "kartverket/GIS.Lib.MetadataCSW",
+  "created_at": "2013-06-11T12:04:43Z",
+  "pushed_at": "2025-10-06T09:30:08Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/GIS.Lib.SerializeUtil",
+  "created_at": "2013-06-11T13:45:11Z",
+  "pushed_at": "2025-10-06T09:15:00Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/GeoNorgeAPI",
+  "created_at": "2013-06-17T09:07:50Z",
+  "pushed_at": "2026-07-29T13:41:19Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/TileShaver",
+  "created_at": "2013-08-06T12:03:27Z",
+  "pushed_at": "2013-08-06T12:01:53Z",
+  "fork": true,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/mapserverSldGenerator",
+  "created_at": "2013-10-01T11:32:13Z",
+  "pushed_at": "2014-07-31T12:30:41Z",
+  "fork": false,
+  "archived": true,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/sosi.js",
+  "created_at": "2013-10-09T08:40:22Z",
+  "pushed_at": "2013-12-13T09:05:16Z",
+  "fork": true,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/government.github.com",
+  "created_at": "2013-10-24T12:01:48Z",
+  "pushed_at": "2020-12-10T08:45:48Z",
+  "fork": true,
+  "archived": true,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/xslt-for-ogc-services",
+  "created_at": "2013-11-08T08:32:37Z",
+  "pushed_at": "2015-02-09T08:37:39Z",
+  "fork": false,
+  "archived": true,
+  "language": "CSS"
+ },
+ {
+  "full_name": "kartverket/MetadataEditor",
+  "created_at": "2013-11-13T08:18:19Z",
+  "pushed_at": "2026-09-11T13:59:46Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/MetadataMonitor",
+  "created_at": "2013-11-13T08:19:03Z",
+  "pushed_at": "2019-12-10T09:37:08Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/wxs.threejs",
+  "created_at": "2014-08-21T08:47:07Z",
+  "pushed_at": "2014-11-13T14:47:51Z",
+  "fork": true,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/cesium",
+  "created_at": "2014-11-12T09:39:52Z",
+  "pushed_at": "2020-09-18T09:11:35Z",
+  "fork": true,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/core-geonetwork",
+  "created_at": "2014-11-12T14:24:45Z",
+  "pushed_at": "2024-04-15T12:19:36Z",
+  "fork": true,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/example-clients",
+  "created_at": "2014-11-13T13:15:06Z",
+  "pushed_at": "2024-05-21T14:12:40Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/core-geoserver",
+  "created_at": "2014-11-18T07:02:22Z",
+  "pushed_at": "2024-03-11T14:20:52Z",
+  "fork": true,
+  "archived": true,
+  "language": "Scheme"
+ },
+ {
+  "full_name": "kartverket/ol",
+  "created_at": "2014-11-27T14:16:33Z",
+  "pushed_at": "2025-08-28T07:32:21Z",
+  "fork": true,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/TileStache",
+  "created_at": "2015-03-03T09:17:07Z",
+  "pushed_at": "2015-03-03T09:22:40Z",
+  "fork": true,
+  "archived": true,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/coverage",
+  "created_at": "2015-03-12T12:56:14Z",
+  "pushed_at": "2018-12-03T14:56:28Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/UML-modelleringsskript",
+  "created_at": "2016-03-16T13:34:03Z",
+  "pushed_at": "2026-09-10T12:52:04Z",
+  "fork": false,
+  "archived": false,
+  "language": "VBScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.NedlastingAPI",
+  "created_at": "2016-04-08T10:46:05Z",
+  "pushed_at": "2026-10-07T06:22:12Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/eksempelklient-etinglysing-altinn",
+  "created_at": "2016-05-12T05:59:47Z",
+  "pushed_at": "2026-06-03T10:37:27Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/faktaark",
+  "created_at": "2016-06-27T07:07:03Z",
+  "pushed_at": "2024-04-05T13:12:29Z",
+  "fork": false,
+  "archived": true,
+  "language": "XSLT"
+ },
+ {
+  "full_name": "kartverket/geosynkronisering",
+  "created_at": "2016-08-16T12:45:39Z",
+  "pushed_at": "2026-08-10T06:26:31Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/norgeskart3",
+  "created_at": "2016-08-18T07:01:30Z",
+  "pushed_at": "2026-04-08T12:45:18Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/MapLib",
+  "created_at": "2016-09-06T07:28:38Z",
+  "pushed_at": "2023-07-17T20:20:15Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/nk3config",
+  "created_at": "2016-09-06T12:15:18Z",
+  "pushed_at": "2026-07-29T11:24:11Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/SOSIModelValidation",
+  "created_at": "2016-09-08T09:03:27Z",
+  "pushed_at": "2026-07-29T11:24:44Z",
+  "fork": false,
+  "archived": false,
+  "language": "VBScript"
+ },
+ {
+  "full_name": "kartverket/finnposisjon",
+  "created_at": "2016-10-25T10:43:09Z",
+  "pushed_at": "2026-08-24T10:33:42Z",
+  "fork": false,
+  "archived": false,
+  "language": "CSS"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Register",
+  "created_at": "2016-10-31T10:24:16Z",
+  "pushed_at": "2026-09-11T14:00:07Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Produktark",
+  "created_at": "2016-10-31T10:25:15Z",
+  "pushed_at": "2026-07-29T12:20:41Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Rapportgenerator",
+  "created_at": "2016-10-31T10:25:52Z",
+  "pushed_at": "2026-07-29T12:27:52Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.MetadataValidator",
+  "created_at": "2016-10-31T10:26:16Z",
+  "pushed_at": "2023-03-03T09:32:14Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.GmlEksempelgenerator",
+  "created_at": "2016-10-31T10:27:17Z",
+  "pushed_at": "2026-09-11T14:00:22Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.ApiServices",
+  "created_at": "2016-10-31T10:27:39Z",
+  "pushed_at": "2026-09-29T10:51:59Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Data.Redirect",
+  "created_at": "2016-10-31T10:28:10Z",
+  "pushed_at": "2026-07-29T12:08:59Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Kartkatalog",
+  "created_at": "2016-10-31T10:29:19Z",
+  "pushed_at": "2026-10-07T16:17:31Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Kartkatalog.Solr",
+  "created_at": "2016-10-31T10:30:41Z",
+  "pushed_at": "2026-09-22T12:06:27Z",
+  "fork": false,
+  "archived": false,
+  "language": "XSLT"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Fellesbibliotek",
+  "created_at": "2016-10-31T10:32:18Z",
+  "pushed_at": "2026-07-29T13:30:21Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Tjenestestatus.Old",
+  "created_at": "2016-11-15T08:59:49Z",
+  "pushed_at": "2023-12-21T15:06:40Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Kartografi",
+  "created_at": "2016-12-22T13:26:36Z",
+  "pushed_at": "2026-07-29T12:14:23Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/maputility",
+  "created_at": "2017-02-01T09:52:13Z",
+  "pushed_at": "2023-07-17T20:19:40Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Symbol",
+  "created_at": "2017-02-16T06:34:53Z",
+  "pushed_at": "2026-07-29T12:40:24Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Tjenestestatus",
+  "created_at": "2017-03-24T14:36:34Z",
+  "pushed_at": "2023-12-21T15:06:37Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/FileBackupService",
+  "created_at": "2017-05-04T08:05:16Z",
+  "pushed_at": "2018-02-20T22:02:08Z",
+  "fork": false,
+  "archived": true,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/BorderGo",
+  "created_at": "2017-05-04T08:56:46Z",
+  "pushed_at": "2023-07-17T20:19:44Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/ModelValidation",
+  "created_at": "2017-05-16T08:35:11Z",
+  "pushed_at": "2026-07-29T11:24:13Z",
+  "fork": false,
+  "archived": false,
+  "language": "VBScript"
+ },
+ {
+  "full_name": "kartverket/etinglysing-systembeskrivelse",
+  "created_at": "2017-06-13T10:53:12Z",
+  "pushed_at": "2026-09-15T12:06:09Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/Geonorge.Statistikk",
+  "created_at": "2017-08-08T10:45:22Z",
+  "pushed_at": "2023-12-21T15:06:22Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/r_map",
+  "created_at": "2017-10-18T11:01:53Z",
+  "pushed_at": "2026-09-08T12:04:36Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/geonorgeskart",
+  "created_at": "2017-11-06T07:37:41Z",
+  "pushed_at": "2023-07-17T20:20:09Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/where",
+  "created_at": "2017-11-23T11:44:29Z",
+  "pushed_at": "2026-09-30T12:58:41Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/BorderGoARCoreDev",
+  "created_at": "2017-12-13T12:23:30Z",
+  "pushed_at": "2023-07-17T20:19:50Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/etinglysing-tjenester",
+  "created_at": "2017-12-20T12:23:19Z",
+  "pushed_at": "2026-09-15T12:06:10Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/Geonorge.SharedPartials",
+  "created_at": "2018-02-05T11:47:49Z",
+  "pushed_at": "2023-03-04T03:38:36Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.NedlastingKlient",
+  "created_at": "2018-02-06T09:46:31Z",
+  "pushed_at": "2026-07-29T13:39:52Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Endringslogg",
+  "created_at": "2018-02-26T13:38:14Z",
+  "pushed_at": "2026-09-28T13:30:47Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.MinSide",
+  "created_at": "2018-03-13T10:08:44Z",
+  "pushed_at": "2026-09-11T13:59:22Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/ForSnow",
+  "created_at": "2018-03-20T11:02:22Z",
+  "pushed_at": "2018-03-20T11:02:23Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/midgard",
+  "created_at": "2018-04-27T07:00:45Z",
+  "pushed_at": "2026-10-02T07:34:09Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/CORESubscriber",
+  "created_at": "2018-06-19T13:40:25Z",
+  "pushed_at": "2023-07-17T20:20:12Z",
+  "fork": false,
+  "archived": true,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/SOSIModelValidationAddIn",
+  "created_at": "2018-09-18T09:23:30Z",
+  "pushed_at": "2026-09-10T12:53:29Z",
+  "fork": false,
+  "archived": false,
+  "language": "Visual Basic .NET"
+ },
+ {
+  "full_name": "kartverket/hack4no_info",
+  "created_at": "2018-10-25T10:34:56Z",
+  "pushed_at": "2018-10-27T11:40:23Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/seplan",
+  "created_at": "2018-11-27T08:41:48Z",
+  "pushed_at": "2025-11-27T10:12:09Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Kartkatalog.React",
+  "created_at": "2018-11-27T10:19:12Z",
+  "pushed_at": "2026-09-29T08:29:08Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/geosynk-TMP",
+  "created_at": "2018-12-13T13:04:24Z",
+  "pushed_at": "2024-02-15T15:42:28Z",
+  "fork": false,
+  "archived": true,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.FeedReader",
+  "created_at": "2018-12-17T20:47:12Z",
+  "pushed_at": "2023-12-21T14:59:47Z",
+  "fork": false,
+  "archived": true,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/NGIS-OpenAPI",
+  "created_at": "2019-01-10T12:32:40Z",
+  "pushed_at": "2026-09-10T09:54:08Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/mapfish-print",
+  "created_at": "2019-01-16T13:37:46Z",
+  "pushed_at": "2019-04-12T07:41:40Z",
+  "fork": true,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/vectorTilesDemo",
+  "created_at": "2019-01-25T13:21:13Z",
+  "pushed_at": "2024-02-23T07:57:52Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.AuthLib",
+  "created_at": "2019-02-21T13:49:29Z",
+  "pushed_at": "2026-07-29T13:31:26Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/geotools",
+  "created_at": "2019-03-15T09:49:40Z",
+  "pushed_at": "2026-07-30T04:36:01Z",
+  "fork": true,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Forvaltningsinformasjon",
+  "created_at": "2019-09-05T13:32:41Z",
+  "pushed_at": "2026-10-05T06:44:25Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/den-norsk-los-extensions",
+  "created_at": "2019-09-16T11:01:22Z",
+  "pushed_at": "2024-02-15T09:48:41Z",
+  "fork": false,
+  "archived": true,
+  "language": "Vue"
+ },
+ {
+  "full_name": "kartverket/map",
+  "created_at": "2019-09-25T06:52:59Z",
+  "pushed_at": "2026-04-16T23:31:50Z",
+  "fork": false,
+  "archived": true,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/den-norske-los-kart",
+  "created_at": "2019-10-25T08:58:06Z",
+  "pushed_at": "2024-02-15T09:48:45Z",
+  "fork": false,
+  "archived": true,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/kvib",
+  "created_at": "2020-02-14T12:19:21Z",
+  "pushed_at": "2026-09-29T11:34:25Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.NedlastingIndex",
+  "created_at": "2020-07-03T08:23:52Z",
+  "pushed_at": "2023-12-21T15:05:55Z",
+  "fork": false,
+  "archived": true,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.WebComponents",
+  "created_at": "2020-09-22T08:43:42Z",
+  "pushed_at": "2026-07-29T13:42:29Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Tiltaksplan",
+  "created_at": "2020-10-15T07:25:40Z",
+  "pushed_at": "2026-04-22T12:38:34Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.TiltaksplanApi",
+  "created_at": "2020-10-15T08:36:24Z",
+  "pushed_at": "2026-04-22T12:21:16Z",
+  "fork": false,
+  "archived": true,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/SFKB-QGISAPI-klient",
+  "created_at": "2020-10-19T11:44:16Z",
+  "pushed_at": "2026-08-11T10:07:54Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/digitaltvillinger.github.io",
+  "created_at": "2020-11-23T07:02:29Z",
+  "pushed_at": "2024-10-29T09:52:42Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/GeolettApi",
+  "created_at": "2021-01-13T08:55:29Z",
+  "pushed_at": "2026-10-01T09:38:33Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geolett",
+  "created_at": "2021-01-13T11:05:18Z",
+  "pushed_at": "2026-07-29T13:35:16Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/NDR",
+  "created_at": "2021-01-15T14:48:34Z",
+  "pushed_at": "2023-07-17T20:19:56Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/tjenestedokumentasjon",
+  "created_at": "2021-03-23T11:08:37Z",
+  "pushed_at": "2025-10-23T14:48:19Z",
+  "fork": false,
+  "archived": true,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/geokassa",
+  "created_at": "2021-03-26T17:44:46Z",
+  "pushed_at": "2026-10-07T12:42:46Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/UML-dokumentasjon-AsciiDoc-Script",
+  "created_at": "2021-04-09T07:38:57Z",
+  "pushed_at": "2026-09-10T12:53:51Z",
+  "fork": false,
+  "archived": false,
+  "language": "Visual Basic .NET"
+ },
+ {
+  "full_name": "kartverket/kartverket.vectortiles",
+  "created_at": "2021-05-18T11:48:51Z",
+  "pushed_at": "2026-07-29T11:15:24Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/Geonorge.3Dklient",
+  "created_at": "2021-06-11T09:25:58Z",
+  "pushed_at": "2023-12-21T14:59:28Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/Standardisering",
+  "created_at": "2021-06-11T12:07:14Z",
+  "pushed_at": "2026-07-29T11:01:32Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/digital_tvilling_poc",
+  "created_at": "2021-08-16T14:31:35Z",
+  "pushed_at": "2025-11-26T09:39:14Z",
+  "fork": false,
+  "archived": true,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/terriajs",
+  "created_at": "2021-08-19T12:19:46Z",
+  "pushed_at": "2023-07-20T13:05:51Z",
+  "fork": true,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/TerriaMap",
+  "created_at": "2021-08-19T12:20:44Z",
+  "pushed_at": "2023-06-23T00:21:58Z",
+  "fork": true,
+  "archived": true,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/etinglysing-vedlegg",
+  "created_at": "2021-09-08T10:42:59Z",
+  "pushed_at": "2026-09-15T12:06:21Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/Geonorge.Validator",
+  "created_at": "2021-09-15T14:44:30Z",
+  "pushed_at": "2026-10-05T12:18:26Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Validator.Client",
+  "created_at": "2021-09-15T14:47:42Z",
+  "pushed_at": "2026-07-29T13:29:10Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/docker-dind",
+  "created_at": "2021-11-01T08:43:58Z",
+  "pushed_at": "2023-10-25T11:33:39Z",
+  "fork": false,
+  "archived": true,
+  "language": "Dockerfile"
+ },
+ {
+  "full_name": "kartverket/3d-tiles-example",
+  "created_at": "2021-11-04T14:19:56Z",
+  "pushed_at": "2023-07-17T20:19:42Z",
+  "fork": false,
+  "archived": true,
+  "language": "Shell"
+ },
+ {
+  "full_name": "kartverket/transformasjoner",
+  "created_at": "2021-12-14T08:36:12Z",
+  "pushed_at": "2026-10-07T09:26:47Z",
+  "fork": false,
+  "archived": false,
+  "language": "CSS"
+ },
+ {
+  "full_name": "kartverket/Geonorge.GmlKart",
+  "created_at": "2021-12-21T14:32:45Z",
+  "pushed_at": "2026-10-05T07:53:30Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.GmlKart.Client",
+  "created_at": "2021-12-21T14:33:48Z",
+  "pushed_at": "2026-09-17T12:54:14Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/skip.kartverket.no",
+  "created_at": "2021-12-28T07:12:42Z",
+  "pushed_at": "2026-10-07T15:22:26Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/nibas-frontend",
+  "created_at": "2022-01-20T11:07:10Z",
+  "pushed_at": "2026-10-08T07:23:28Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/etinglysing-fullmakter",
+  "created_at": "2022-02-03T12:15:54Z",
+  "pushed_at": "2026-09-15T12:05:14Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/GeomCompare",
+  "created_at": "2022-02-18T11:54:07Z",
+  "pushed_at": "2026-07-29T11:21:08Z",
+  "fork": false,
+  "archived": true,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/postgres-operator-examples",
+  "created_at": "2022-03-01T09:13:53Z",
+  "pushed_at": "2022-02-18T21:29:54Z",
+  "fork": true,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/postgres-operator-helm",
+  "created_at": "2022-03-08T12:47:35Z",
+  "pushed_at": "2024-02-26T07:55:22Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/k8s-workshop",
+  "created_at": "2022-03-24T11:22:24Z",
+  "pushed_at": "2022-03-24T14:46:10Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/ol-react-kart",
+  "created_at": "2022-03-31T06:30:43Z",
+  "pushed_at": "2026-07-29T12:48:32Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/skiperator",
+  "created_at": "2022-05-03T18:27:00Z",
+  "pushed_at": "2026-10-05T06:18:47Z",
+  "fork": false,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "kartverket/sosi-kontroll-definisjonsfiler",
+  "created_at": "2022-05-27T12:12:51Z",
+  "pushed_at": "2022-05-27T12:12:53Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/nibas-events",
+  "created_at": "2022-05-31T05:59:47Z",
+  "pushed_at": "2026-10-07T23:32:34Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/prodspek_punktsky_tools",
+  "created_at": "2022-06-03T12:29:45Z",
+  "pushed_at": "2026-08-11T10:16:10Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/NGIS-OpenAPI-felleskomponent-delt-geometri",
+  "created_at": "2022-06-09T09:24:53Z",
+  "pushed_at": "2026-08-10T06:25:53Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/ShapeChange-Add-In",
+  "created_at": "2022-06-13T08:54:31Z",
+  "pushed_at": "2026-09-10T12:53:03Z",
+  "fork": false,
+  "archived": false,
+  "language": "XSLT"
+ },
+ {
+  "full_name": "kartverket/github-workflows",
+  "created_at": "2022-07-08T10:17:56Z",
+  "pushed_at": "2026-09-09T07:08:14Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/vault-jwt-auth-action",
+  "created_at": "2022-07-12T10:17:23Z",
+  "pushed_at": "2024-03-25T07:47:30Z",
+  "fork": true,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.KodelisteApi",
+  "created_at": "2022-10-05T07:40:55Z",
+  "pushed_at": "2026-10-01T07:18:27Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/komreg-backend",
+  "created_at": "2022-10-10T10:56:39Z",
+  "pushed_at": "2026-10-06T07:48:13Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/ogc-api-testing",
+  "created_at": "2022-10-28T10:55:20Z",
+  "pushed_at": "2025-05-20T13:49:23Z",
+  "fork": false,
+  "archived": true,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/skiperator-argocd-example",
+  "created_at": "2022-11-19T00:13:07Z",
+  "pushed_at": "2023-01-11T11:26:47Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/skipper",
+  "created_at": "2022-12-14T08:48:05Z",
+  "pushed_at": "2024-03-25T07:44:59Z",
+  "fork": false,
+  "archived": true,
+  "language": "Go"
+ },
+ {
+  "full_name": "kartverket/matrikkel-jasperreports-fonts",
+  "created_at": "2023-01-03T12:53:16Z",
+  "pushed_at": "2026-10-01T06:37:58Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/matrikkel-scope",
+  "created_at": "2023-01-18T09:42:02Z",
+  "pushed_at": "2026-09-02T06:25:53Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/homebrew-skipper",
+  "created_at": "2023-01-24T13:51:02Z",
+  "pushed_at": "2023-07-17T20:20:15Z",
+  "fork": false,
+  "archived": true,
+  "language": "Ruby"
+ },
+ {
+  "full_name": "kartverket/kartverket.vectortiles.sprites",
+  "created_at": "2023-01-25T09:08:22Z",
+  "pushed_at": "2026-07-29T12:47:29Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/matrikkel-transform",
+  "created_at": "2023-02-23T10:40:25Z",
+  "pushed_at": "2026-09-29T05:55:00Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/argokit",
+  "created_at": "2023-02-24T14:41:35Z",
+  "pushed_at": "2026-10-07T08:39:00Z",
+  "fork": false,
+  "archived": false,
+  "language": "Jsonnet"
+ },
+ {
+  "full_name": "kartverket/nacho-skip",
+  "created_at": "2023-03-01T13:33:48Z",
+  "pushed_at": "2026-08-13T07:45:19Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/pharos",
+  "created_at": "2023-03-20T07:56:48Z",
+  "pushed_at": "2026-10-08T07:56:48Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/matrikkel-wsclient",
+  "created_at": "2023-04-13T08:46:08Z",
+  "pushed_at": "2026-10-05T10:41:53Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/matrikkel-wls-auth",
+  "created_at": "2023-04-24T10:10:10Z",
+  "pushed_at": "2026-09-28T06:45:04Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Opplasting",
+  "created_at": "2023-05-03T09:41:52Z",
+  "pushed_at": "2026-02-12T12:13:17Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.OpplastingsApi",
+  "created_at": "2023-05-03T10:25:18Z",
+  "pushed_at": "2026-02-13T12:39:09Z",
+  "fork": false,
+  "archived": true,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/matrikkel-stedsnavn-launcher",
+  "created_at": "2023-05-12T08:18:07Z",
+  "pushed_at": "2026-10-06T07:27:41Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/dokumentbestilling-systembeskrivelse",
+  "created_at": "2023-05-23T13:55:13Z",
+  "pushed_at": "2024-10-28T12:08:08Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/SkTools",
+  "created_at": "2023-05-24T07:20:45Z",
+  "pushed_at": "2026-10-06T07:24:22Z",
+  "fork": false,
+  "archived": false,
+  "language": "Groovy"
+ },
+ {
+  "full_name": "kartverket/skif",
+  "created_at": "2023-06-01T11:42:43Z",
+  "pushed_at": "2026-10-07T07:29:06Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/kompass-frontend",
+  "created_at": "2023-06-05T06:44:35Z",
+  "pushed_at": "2023-10-07T01:24:26Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/gcloud-kms-import",
+  "created_at": "2023-07-11T08:44:25Z",
+  "pushed_at": "2026-07-29T11:40:06Z",
+  "fork": false,
+  "archived": false,
+  "language": "Dockerfile"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_arealbruk",
+  "created_at": "2023-08-14T11:56:25Z",
+  "pushed_at": "2026-10-06T06:54:13Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/skip-scripts",
+  "created_at": "2023-08-22T11:49:53Z",
+  "pushed_at": "2026-08-13T07:48:57Z",
+  "fork": false,
+  "archived": false,
+  "language": "Shell"
+ },
+ {
+  "full_name": "kartverket/SOSI-AsciiDocTest",
+  "created_at": "2023-08-23T10:01:26Z",
+  "pushed_at": "2026-07-29T11:11:39Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/Geonorge.Forvaltning",
+  "created_at": "2023-08-24T11:47:39Z",
+  "pushed_at": "2026-09-30T13:40:48Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Forvaltning.Client",
+  "created_at": "2023-08-24T11:51:07Z",
+  "pushed_at": "2026-09-09T09:21:51Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/smseagle-proxy",
+  "created_at": "2023-08-29T11:04:33Z",
+  "pushed_at": "2026-09-28T10:38:48Z",
+  "fork": false,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "kartverket/skyline",
+  "created_at": "2023-09-04T08:38:36Z",
+  "pushed_at": "2026-09-28T10:33:38Z",
+  "fork": false,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "kartverket/smia-kommuneinfo",
+  "created_at": "2023-09-06T07:05:24Z",
+  "pushed_at": "2026-10-05T05:09:45Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/skip-lab",
+  "created_at": "2023-09-18T08:24:46Z",
+  "pushed_at": "2023-09-18T10:47:48Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/standard_fkb_generell_del",
+  "created_at": "2023-09-19T08:52:56Z",
+  "pushed_at": "2026-10-06T06:24:31Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/matrikkel-keycloak",
+  "created_at": "2023-09-19T09:30:25Z",
+  "pushed_at": "2026-10-06T12:10:43Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/matrikkel-rest-api-eiendom",
+  "created_at": "2023-09-19T11:02:16Z",
+  "pushed_at": "2026-10-08T06:51:41Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/matrikkel-rest-api-kommunereform",
+  "created_at": "2023-09-19T11:20:20Z",
+  "pushed_at": "2026-05-20T07:20:07Z",
+  "fork": false,
+  "archived": true,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/dask-modules",
+  "created_at": "2023-09-25T10:16:32Z",
+  "pushed_at": "2026-10-07T07:02:46Z",
+  "fork": false,
+  "archived": false,
+  "language": "HCL"
+ },
+ {
+  "full_name": "kartverket/BiScEF",
+  "created_at": "2023-09-26T07:18:44Z",
+  "pushed_at": "2026-07-29T10:25:18Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/prodspek_elveg",
+  "created_at": "2023-10-04T06:38:14Z",
+  "pushed_at": "2026-08-11T10:15:24Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_ar5",
+  "created_at": "2023-10-04T06:42:35Z",
+  "pushed_at": "2026-08-11T08:40:46Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_bane",
+  "created_at": "2023-10-04T06:44:56Z",
+  "pushed_at": "2026-08-11T10:13:17Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_bygnanlegg",
+  "created_at": "2023-10-04T07:32:31Z",
+  "pushed_at": "2026-10-06T06:56:29Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_bygning",
+  "created_at": "2023-10-04T07:37:47Z",
+  "pushed_at": "2026-08-11T10:13:59Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_hoydekurve",
+  "created_at": "2023-10-04T08:01:43Z",
+  "pushed_at": "2026-08-11T08:41:09Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_ledning",
+  "created_at": "2023-10-05T10:06:53Z",
+  "pushed_at": "2026-08-11T10:14:18Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_lufthavn",
+  "created_at": "2023-10-05T10:09:47Z",
+  "pushed_at": "2026-10-06T11:31:36Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_naturinfo",
+  "created_at": "2023-10-05T10:13:36Z",
+  "pushed_at": "2026-08-11T08:42:36Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_tiltak",
+  "created_at": "2023-10-05T10:16:12Z",
+  "pushed_at": "2026-08-10T06:22:14Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_traktorvegsti",
+  "created_at": "2023-10-05T10:18:31Z",
+  "pushed_at": "2026-08-11T08:41:39Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_vann",
+  "created_at": "2023-10-05T10:20:58Z",
+  "pushed_at": "2026-08-11T10:12:55Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_veg",
+  "created_at": "2023-10-05T10:23:22Z",
+  "pushed_at": "2026-08-11T10:14:37Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_avvik_kartdata",
+  "created_at": "2023-10-05T10:26:29Z",
+  "pushed_at": "2026-08-11T08:41:59Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/standard_pabg",
+  "created_at": "2023-10-05T10:29:54Z",
+  "pushed_at": "2026-10-07T14:35:45Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_punktsky",
+  "created_at": "2023-10-05T10:32:56Z",
+  "pushed_at": "2026-08-11T08:50:33Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/dask-eksempel-notebooks",
+  "created_at": "2023-10-09T08:44:29Z",
+  "pushed_at": "2024-10-29T09:47:13Z",
+  "fork": false,
+  "archived": true,
+  "language": "Jupyter Notebook"
+ },
+ {
+  "full_name": "kartverket/backstage-demo",
+  "created_at": "2023-10-25T12:55:53Z",
+  "pushed_at": "2024-04-12T11:11:43Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/skip-baseline-backend",
+  "created_at": "2023-11-07T07:52:40Z",
+  "pushed_at": "2023-11-07T07:52:40Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/automatisk-generalisering",
+  "created_at": "2023-11-08T07:46:36Z",
+  "pushed_at": "2026-10-08T06:31:56Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/github-backup",
+  "created_at": "2023-11-13T11:05:25Z",
+  "pushed_at": "2026-09-24T07:39:24Z",
+  "fork": false,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "kartverket/prodspek_n5_presentasjonsdata",
+  "created_at": "2023-11-17T08:05:43Z",
+  "pushed_at": "2026-08-11T08:42:16Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/kartverket.dev",
+  "created_at": "2023-11-21T16:59:46Z",
+  "pushed_at": "2026-10-07T08:36:38Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/Maler-for-SOSI-standarder-og-produktspesifikasjoner",
+  "created_at": "2023-11-22T12:10:32Z",
+  "pushed_at": "2026-09-15T11:05:38Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/DOK.Arealanalyse.Spesifikasjon",
+  "created_at": "2023-11-30T08:13:42Z",
+  "pushed_at": "2026-08-13T05:35:09Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/DOK.Arealanalyse.Demonstrator",
+  "created_at": "2023-11-30T08:20:16Z",
+  "pushed_at": "2026-07-29T12:52:27Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/backstage-plugin-risk-scorecard-backend",
+  "created_at": "2024-01-02T13:38:25Z",
+  "pushed_at": "2026-10-05T18:05:05Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/backstage-plugin-risk-scorecard-frontend",
+  "created_at": "2024-01-04T12:39:17Z",
+  "pushed_at": "2026-10-02T08:44:54Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/matrikkel-actions",
+  "created_at": "2024-01-24T15:00:42Z",
+  "pushed_at": "2026-10-06T07:42:08Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/matrikkel-proxy",
+  "created_at": "2024-01-31T13:43:13Z",
+  "pushed_at": "2026-10-08T06:51:30Z",
+  "fork": false,
+  "archived": false,
+  "language": "Dockerfile"
+ },
+ {
+  "full_name": "kartverket/argo-landing",
+  "created_at": "2024-02-01T15:12:51Z",
+  "pushed_at": "2026-08-13T08:25:02Z",
+  "fork": false,
+  "archived": false,
+  "language": "CSS"
+ },
+ {
+  "full_name": "kartverket/backstage-techdocs-action",
+  "created_at": "2024-02-05T13:14:42Z",
+  "pushed_at": "2026-08-12T12:24:19Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/argocd-apps-repo-demo",
+  "created_at": "2024-02-06T17:24:43Z",
+  "pushed_at": "2024-02-06T18:57:46Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/skpyproj",
+  "created_at": "2024-02-08T08:29:05Z",
+  "pushed_at": "2026-09-15T10:36:26Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/prodspek_arealplan",
+  "created_at": "2024-02-26T21:53:34Z",
+  "pushed_at": "2026-08-27T13:44:31Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/sosi-ea-plugin",
+  "created_at": "2024-03-08T07:14:30Z",
+  "pushed_at": "2026-09-15T09:55:01Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/modspecFKBBane",
+  "created_at": "2024-04-10T11:39:04Z",
+  "pushed_at": "2026-09-10T10:22:00Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/google-jit-access",
+  "created_at": "2024-05-02T07:59:58Z",
+  "pushed_at": "2026-04-16T18:49:14Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/regelrett_implementasjon",
+  "created_at": "2024-05-15T12:04:45Z",
+  "pushed_at": "2025-09-29T15:42:43Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/docs.geonorge.no",
+  "created_at": "2024-05-23T12:29:28Z",
+  "pushed_at": "2026-08-12T14:08:26Z",
+  "fork": false,
+  "archived": true,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/prodspek_fkb_gronnstruktur",
+  "created_at": "2024-05-27T09:57:44Z",
+  "pushed_at": "2026-08-11T10:19:55Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/nibas-arbeidsliste",
+  "created_at": "2024-06-13T07:28:03Z",
+  "pushed_at": "2026-10-05T05:13:21Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/fagproeveDSAFrontend",
+  "created_at": "2024-06-14T06:36:59Z",
+  "pushed_at": "2024-07-08T13:36:02Z",
+  "fork": false,
+  "archived": true,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/dokumentbestilling-smart-sladding",
+  "created_at": "2024-06-21T10:31:31Z",
+  "pushed_at": "2026-10-02T23:33:00Z",
+  "fork": false,
+  "archived": false,
+  "language": "Jupyter Notebook"
+ },
+ {
+  "full_name": "kartverket/skipctl",
+  "created_at": "2024-07-03T12:58:38Z",
+  "pushed_at": "2026-10-06T16:59:03Z",
+  "fork": false,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "kartverket/backstage-plugin-risk-crypto-service",
+  "created_at": "2024-07-09T08:50:37Z",
+  "pushed_at": "2026-03-03T03:08:44Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/docker-mapserver",
+  "created_at": "2024-07-29T07:23:40Z",
+  "pushed_at": "2026-08-12T14:05:44Z",
+  "fork": true,
+  "archived": false,
+  "language": "Dockerfile"
+ },
+ {
+  "full_name": "kartverket/homebrew-taps",
+  "created_at": "2024-07-31T12:06:36Z",
+  "pushed_at": "2026-09-18T07:32:33Z",
+  "fork": false,
+  "archived": false,
+  "language": "Ruby"
+ },
+ {
+  "full_name": "kartverket/pdfbox",
+  "created_at": "2024-08-06T07:36:25Z",
+  "pushed_at": "2026-08-12T12:40:44Z",
+  "fork": true,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/bygning-github-workflows",
+  "created_at": "2024-08-06T11:28:30Z",
+  "pushed_at": "2026-09-25T06:52:15Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/sosi-faq",
+  "created_at": "2024-08-27T09:50:29Z",
+  "pushed_at": "2026-08-12T14:05:02Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/sosi-veileder-i-standardisering",
+  "created_at": "2024-08-27T09:52:50Z",
+  "pushed_at": "2026-08-12T14:04:35Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/sosi-installasjonsveileder",
+  "created_at": "2024-08-27T10:04:47Z",
+  "pushed_at": "2026-08-13T05:34:36Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/sosi-utplukk-fra-generell-objektkatalog",
+  "created_at": "2024-09-04T08:15:39Z",
+  "pushed_at": "2026-08-12T14:04:02Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/frisk-backend",
+  "created_at": "2024-09-04T13:22:31Z",
+  "pushed_at": "2026-03-09T18:47:15Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/frisk-frontend",
+  "created_at": "2024-09-04T13:22:45Z",
+  "pushed_at": "2026-03-09T12:56:21Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/retningslinjer-fagomrade-produktspesifikasjon",
+  "created_at": "2024-09-09T12:04:39Z",
+  "pushed_at": "2026-08-12T14:03:42Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/Asciidocveileder",
+  "created_at": "2024-09-17T08:28:38Z",
+  "pushed_at": "2026-08-17T05:30:49Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/SOSI-Veileder-for-utarbeidelse-av-SOSI-produktspesifikasjoner",
+  "created_at": "2024-09-23T10:49:07Z",
+  "pushed_at": "2026-08-17T05:31:21Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/opencost-cacher",
+  "created_at": "2024-10-07T11:22:03Z",
+  "pushed_at": "2026-09-28T09:00:25Z",
+  "fork": false,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "kartverket/initialize-risc-api",
+  "created_at": "2024-11-04T12:12:17Z",
+  "pushed_at": "2026-04-07T13:22:45Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/kv-dataplattform-consumer",
+  "created_at": "2024-11-06T15:51:22Z",
+  "pushed_at": "2026-03-26T12:59:01Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "kartverket/smia-valgdata",
+  "created_at": "2025-01-02T08:06:11Z",
+  "pushed_at": "2026-10-05T05:11:51Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/metadata_FastAPI-test",
+  "created_at": "2025-01-13T10:40:07Z",
+  "pushed_at": "2026-08-13T05:35:33Z",
+  "fork": false,
+  "archived": true,
+  "language": "PLpgSQL"
+ },
+ {
+  "full_name": "kartverket/geogpt",
+  "created_at": "2025-01-16T08:27:20Z",
+  "pushed_at": "2025-12-04T13:35:45Z",
+  "fork": false,
+  "archived": true,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/BirdAI",
+  "created_at": "2025-01-21T08:26:59Z",
+  "pushed_at": "2026-07-29T11:23:29Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/actions",
+  "created_at": "2025-02-13T14:52:01Z",
+  "pushed_at": "2026-08-17T06:06:21Z",
+  "fork": false,
+  "archived": false,
+  "language": "Shell"
+ },
+ {
+  "full_name": "kartverket/FindinGeo",
+  "created_at": "2025-02-25T08:55:50Z",
+  "pushed_at": "2025-10-28T13:52:32Z",
+  "fork": false,
+  "archived": true,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/dask.dev",
+  "created_at": "2025-02-25T11:19:23Z",
+  "pushed_at": "2026-09-18T07:25:14Z",
+  "fork": true,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/meldingstjeneste",
+  "created_at": "2025-02-25T13:18:18Z",
+  "pushed_at": "2026-10-06T10:52:30Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/egenreg-varsling-frontend",
+  "created_at": "2025-02-25T13:52:33Z",
+  "pushed_at": "2026-10-06T11:05:20Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/tnt-topo",
+  "created_at": "2025-03-03T09:05:00Z",
+  "pushed_at": "2026-09-18T18:09:52Z",
+  "fork": false,
+  "archived": false,
+  "language": "QML"
+ },
+ {
+  "full_name": "kartverket/hydris-pygeoapi",
+  "created_at": "2025-03-12T10:42:25Z",
+  "pushed_at": "2025-11-04T07:47:33Z",
+  "fork": true,
+  "archived": true,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/ALB_Best_Practice_Manual",
+  "created_at": "2025-04-07T10:40:14Z",
+  "pushed_at": "2026-08-10T08:00:20Z",
+  "fork": false,
+  "archived": false,
+  "language": "QML"
+ },
+ {
+  "full_name": "kartverket/ztoperator",
+  "created_at": "2025-04-07T11:52:41Z",
+  "pushed_at": "2026-10-07T12:22:00Z",
+  "fork": false,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "kartverket/altinn3-file-transfer-proxy",
+  "created_at": "2025-04-09T11:07:34Z",
+  "pushed_at": "2026-09-15T11:57:53Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/Norgeskart",
+  "created_at": "2025-04-14T10:22:44Z",
+  "pushed_at": "2026-10-08T08:49:42Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/GIS.Lib.MetadataCSW-fork",
+  "created_at": "2025-05-14T12:54:37Z",
+  "pushed_at": "2025-09-06T15:06:43Z",
+  "fork": true,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/GIS.Lib.SerializeUtil-fork",
+  "created_at": "2025-05-14T12:54:57Z",
+  "pushed_at": "2025-07-02T12:58:13Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/dask-felleskomponenter",
+  "created_at": "2025-05-21T12:40:03Z",
+  "pushed_at": "2026-08-14T10:37:14Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/DOK.Arealanalyse.Process",
+  "created_at": "2025-05-26T08:56:25Z",
+  "pushed_at": "2026-04-16T07:57:45Z",
+  "fork": true,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/DOK.Arealanalyse.Config",
+  "created_at": "2025-05-26T09:32:35Z",
+  "pushed_at": "2026-07-29T13:38:45Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/Snuplasser",
+  "created_at": "2025-06-13T10:48:23Z",
+  "pushed_at": "2026-02-01T18:13:43Z",
+  "fork": false,
+  "archived": false,
+  "language": "Jupyter Notebook"
+ },
+ {
+  "full_name": "kartverket/gpkg-docgen",
+  "created_at": "2025-07-29T08:01:24Z",
+  "pushed_at": "2026-09-15T10:52:24Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/Regelrett",
+  "created_at": "2025-08-21T13:22:19Z",
+  "pushed_at": "2026-10-08T08:24:17Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/security-champion-plugin",
+  "created_at": "2025-08-29T12:08:27Z",
+  "pushed_at": "2025-10-20T08:09:02Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/security-champion-api",
+  "created_at": "2025-08-29T12:11:27Z",
+  "pushed_at": "2026-09-29T06:10:33Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/mapproxy",
+  "created_at": "2025-09-04T06:07:33Z",
+  "pushed_at": "2026-03-24T17:59:41Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/catalog-creator-plugin",
+  "created_at": "2025-09-16T07:27:44Z",
+  "pushed_at": "2025-10-21T11:27:50Z",
+  "fork": false,
+  "archived": true,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/OGC-API-frontend",
+  "created_at": "2025-09-29T06:56:41Z",
+  "pushed_at": "2026-10-08T08:45:08Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/kv-deltashare-examples",
+  "created_at": "2025-10-02T09:41:44Z",
+  "pushed_at": "2026-09-25T10:15:14Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/matrikkel-arkitektur",
+  "created_at": "2025-10-20T14:08:34Z",
+  "pushed_at": "2026-06-22T07:24:12Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/produktspesifikasjon_admenheter",
+  "created_at": "2025-10-27T10:24:28Z",
+  "pushed_at": "2025-11-27T12:40:17Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/pygeoapi-features-workshop",
+  "created_at": "2025-11-06T12:25:28Z",
+  "pushed_at": "2025-11-20T08:40:10Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "kartverket/token-proxy",
+  "created_at": "2025-12-01T11:35:34Z",
+  "pushed_at": "2026-06-03T21:10:10Z",
+  "fork": false,
+  "archived": true,
+  "language": "Go"
+ },
+ {
+  "full_name": "kartverket/funksjonsregister-PoC",
+  "created_at": "2025-12-10T11:00:51Z",
+  "pushed_at": "2026-03-02T13:07:05Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/accesserator",
+  "created_at": "2025-12-16T08:33:12Z",
+  "pushed_at": "2026-10-07T13:59:00Z",
+  "fork": false,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "kartverket/sosi2gpkg",
+  "created_at": "2025-12-16T13:40:25Z",
+  "pushed_at": "2026-03-10T11:28:54Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/bakgrunnskart",
+  "created_at": "2025-12-21T07:42:24Z",
+  "pushed_at": "2026-03-10T13:44:40Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/produktspesifikasjon_bopliktsomrader",
+  "created_at": "2026-01-06T11:12:36Z",
+  "pushed_at": "2026-01-06T11:26:06Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/kvseek",
+  "created_at": "2026-01-08T13:25:06Z",
+  "pushed_at": "2026-04-08T07:49:01Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/kv-designsystem-test",
+  "created_at": "2026-01-20T12:02:30Z",
+  "pushed_at": "2026-10-07T12:29:14Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/smia-ogc-api",
+  "created_at": "2026-02-16T05:48:16Z",
+  "pushed_at": "2026-10-07T14:39:20Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/matrikkel-ekstern-data",
+  "created_at": "2026-03-02T13:27:12Z",
+  "pushed_at": "2026-10-08T07:15:32Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/initial-riscs-collection",
+  "created_at": "2026-03-05T11:40:54Z",
+  "pushed_at": "2026-09-17T07:01:05Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/DOK.Arealanalyse.Pygeoapi",
+  "created_at": "2026-03-06T14:48:17Z",
+  "pushed_at": "2026-03-09T13:32:54Z",
+  "fork": false,
+  "archived": false,
+  "language": "Dockerfile"
+ },
+ {
+  "full_name": "kartverket/topografisk-gdb-api",
+  "created_at": "2026-04-20T10:46:54Z",
+  "pushed_at": "2026-10-07T17:27:26Z",
+  "fork": false,
+  "archived": false,
+  "language": "PLpgSQL"
+ },
+ {
+  "full_name": "kartverket/gcp-sts-proxy",
+  "created_at": "2026-04-28T11:49:48Z",
+  "pushed_at": "2026-09-15T11:13:49Z",
+  "fork": false,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "kartverket/matrikkel-token-test",
+  "created_at": "2026-05-15T06:39:56Z",
+  "pushed_at": "2026-05-15T06:46:48Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/norge-digitalt-medlemsliste",
+  "created_at": "2026-05-15T14:16:47Z",
+  "pushed_at": "2026-05-15T15:14:39Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/matrikkel-kafka-light",
+  "created_at": "2026-05-22T11:56:41Z",
+  "pushed_at": "2026-10-06T07:31:42Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/ogc-api-starter",
+  "created_at": "2026-05-28T06:35:28Z",
+  "pushed_at": "2026-10-05T12:57:20Z",
+  "fork": false,
+  "archived": false,
+  "language": "Dockerfile"
+ },
+ {
+  "full_name": "kartverket/sosi-ps-editor-actions",
+  "created_at": "2026-06-05T10:36:09Z",
+  "pushed_at": "2026-06-05T10:39:36Z",
+  "fork": true,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "kartverket/matrikkel-pdf-generering",
+  "created_at": "2026-06-08T14:15:19Z",
+  "pushed_at": "2026-07-15T07:40:08Z",
+  "fork": false,
+  "archived": true,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/matrikkel-geoserver",
+  "created_at": "2026-06-10T08:12:10Z",
+  "pushed_at": "2026-10-08T07:02:54Z",
+  "fork": false,
+  "archived": false,
+  "language": "Scheme"
+ },
+ {
+  "full_name": "kartverket/matrikkel-dokument-generering",
+  "created_at": "2026-06-10T08:40:51Z",
+  "pushed_at": "2026-10-04T11:53:17Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/heimdall-common-utils",
+  "created_at": "2026-06-11T08:17:25Z",
+  "pushed_at": "2026-10-08T06:47:01Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/geonorge-kartkatalog",
+  "created_at": "2026-06-18T06:47:12Z",
+  "pushed_at": "2026-10-08T08:13:19Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/datacontract-cli",
+  "created_at": "2026-06-19T08:19:58Z",
+  "pushed_at": "2026-09-17T08:48:25Z",
+  "fork": true,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/smia-workflows",
+  "created_at": "2026-06-30T10:45:43Z",
+  "pushed_at": "2026-09-30T14:11:43Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/ibis",
+  "created_at": "2026-06-30T13:39:58Z",
+  "pushed_at": "2026-06-30T13:49:03Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/pdf-generator",
+  "created_at": "2026-07-08T12:28:33Z",
+  "pushed_at": "2026-09-28T10:11:44Z",
+  "fork": false,
+  "archived": false,
+  "language": "Dockerfile"
+ },
+ {
+  "full_name": "kartverket/matrikkel-adressesok",
+  "created_at": "2026-07-10T11:33:52Z",
+  "pushed_at": "2026-10-07T10:34:23Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/liberator",
+  "created_at": "2026-08-10T11:10:26Z",
+  "pushed_at": "2026-09-02T07:53:40Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/digdirator",
+  "created_at": "2026-08-10T11:10:43Z",
+  "pushed_at": "2026-09-02T07:40:41Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/envoy",
+  "created_at": "2026-08-12T10:07:34Z",
+  "pushed_at": "2026-09-19T01:09:37Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/Geonorge.Kartkatalog.Tilgangstyring.Poc",
+  "created_at": "2026-08-17T11:49:35Z",
+  "pushed_at": "2026-09-01T13:21:44Z",
+  "fork": true,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/Geonorge.Kartkatalog.React.Tilgangstyring.Poc",
+  "created_at": "2026-08-17T11:50:18Z",
+  "pushed_at": "2026-09-03T10:38:34Z",
+  "fork": true,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "kartverket/Geonorge.NedlastingAPI.Tilgangstyring.Poc",
+  "created_at": "2026-08-31T12:24:30Z",
+  "pushed_at": "2026-09-04T10:22:18Z",
+  "fork": true,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "kartverket/altinn-pdp",
+  "created_at": "2026-09-04T08:36:23Z",
+  "pushed_at": "2026-10-05T06:03:12Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/matrikkel-ekstern-data-ingestor",
+  "created_at": "2026-09-15T10:12:25Z",
+  "pushed_at": "2026-10-06T07:28:43Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "kartverket/komreg-frontend",
+  "created_at": "2026-09-21T12:17:37Z",
+  "pushed_at": "2026-10-08T05:14:57Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "kartverket/altinn-resource-management-client",
+  "created_at": "2026-09-30T13:07:27Z",
+  "pushed_at": "2026-09-30T13:10:44Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "kartverket/maskinporten-management",
+  "created_at": "2026-10-05T08:33:43Z",
+  "pushed_at": "2026-10-05T08:44:47Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ }
+]

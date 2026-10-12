@@ -1,0 +1,10 @@
+{
+ "source": "Wikimedia Analytics REST API",
+ "url": "https://wikimedia.org/api/rest_v1/metrics",
+ "fetched": "2026-10-08",
+ "filter": "editor-type=user (ikke boter), page-type=content, monthly",
+ "projects": [
+  "no.wikipedia.org",
+  "nn.wikipedia.org"
+ ]
+}

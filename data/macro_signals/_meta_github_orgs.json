@@ -1,0 +1,70 @@
+{
+ "source": "GitHub REST og GraphQL API",
+ "url": "https://api.github.com",
+ "fetched": "2026-10-08",
+ "orgs": {
+  "navikt": {
+   "group": "navikt",
+   "agency": "NAV"
+  },
+  "Skatteetaten": {
+   "group": "offentlig",
+   "agency": "Skatteetaten"
+  },
+  "digdir": {
+   "group": "offentlig",
+   "agency": "Digdir"
+  },
+  "felleslosninger": {
+   "group": "offentlig",
+   "agency": "Digdir"
+  },
+  "entur": {
+   "group": "offentlig",
+   "agency": "Entur"
+  },
+  "oslokommune": {
+   "group": "offentlig",
+   "agency": "Oslo kommune"
+  },
+  "vegvesen": {
+   "group": "offentlig",
+   "agency": "Statens vegvesen"
+  },
+  "nvdb-vegdata": {
+   "group": "offentlig",
+   "agency": "Statens vegvesen"
+  },
+  "NPRA": {
+   "group": "offentlig",
+   "agency": "Statens vegvesen"
+  },
+  "svvsaga": {
+   "group": "offentlig",
+   "agency": "Statens vegvesen"
+  },
+  "nrkno": {
+   "group": "offentlig",
+   "agency": "NRK"
+  },
+  "kartverket": {
+   "group": "offentlig",
+   "agency": "Kartverket"
+  },
+  "politiet": {
+   "group": "offentlig",
+   "agency": "Politiet"
+  }
+ },
+ "filter": {
+  "commits": "navikt: REST search/commits org:X committer-date:<maaned>. Andre: GraphQL history paa standardgrenen per repo, summert. Ikke forks",
+  "commits_search": "REST search/commits der soket ble fullfort, til kontroll",
+  "prs": "GraphQL search org:X is:pr created:<maaned>",
+  "prs_nodep": "GraphQL search org:X is:pr created:<maaned> -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview",
+  "prs_merged": "GraphQL search org:X is:pr merged:<maaned>",
+  "prs_merged_nodep": "GraphQL search org:X is:pr merged:<maaned> -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview",
+  "prs_copilot_agent": "GraphQL search org:X is:pr created:<maaned> author:app/copilot-swe-agent",
+  "new_repos": "REST orgs/X/repos type=public, created_at, ikke forks"
+ },
+ "note": "Bare offentlige repoer. Repoer som er slettet eller gjort private er ikke med. incomplete=True betyr at GitHub-soket ikke ble komplett, verdien er da en nedre grense."
+}

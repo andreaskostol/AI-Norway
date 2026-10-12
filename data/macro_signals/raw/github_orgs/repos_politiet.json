@@ -1,0 +1,66 @@
+[
+ {
+  "full_name": "politiet/OpenID-Connect-Java-Spring-Server",
+  "created_at": "2017-09-21T17:18:15Z",
+  "pushed_at": "2017-09-21T18:18:14Z",
+  "fork": true,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "politiet/idk-ios-nfcreader",
+  "created_at": "2021-09-14T08:14:08Z",
+  "pushed_at": "2023-06-26T08:20:57Z",
+  "fork": true,
+  "archived": false,
+  "language": "Swift"
+ },
+ {
+  "full_name": "politiet/CoE-IaC-labs",
+  "created_at": "2023-04-16T14:32:19Z",
+  "pushed_at": "2022-09-27T13:19:34Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "politiet/tokendings",
+  "created_at": "2023-07-11T10:29:00Z",
+  "pushed_at": "2023-07-20T08:19:51Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "politiet/helsesjekk-bot",
+  "created_at": "2023-11-08T11:28:51Z",
+  "pushed_at": "2026-08-28T13:12:42Z",
+  "fork": true,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "politiet/politiet.github.io",
+  "created_at": "2024-11-13T12:49:09Z",
+  "pushed_at": "2025-09-25T10:21:18Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "politiet/k8s-digester",
+  "created_at": "2025-12-12T08:38:23Z",
+  "pushed_at": "2025-12-13T21:49:36Z",
+  "fork": true,
+  "archived": false,
+  "language": "Go"
+ },
+ {
+  "full_name": "politiet/opa-scorecard",
+  "created_at": "2026-02-20T10:38:34Z",
+  "pushed_at": "2026-02-20T11:34:55Z",
+  "fork": true,
+  "archived": false,
+  "language": "Go"
+ }
+]

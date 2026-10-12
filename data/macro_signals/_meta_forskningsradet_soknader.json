@@ -1,0 +1,8 @@
+{
+ "source": "Forskningsrådet, åpne data, Søknader - versjon 2",
+ "url": "https://raw.githubusercontent.com/Forskningsradet/open-data/main/datasets/soknader2/dataset.csv",
+ "fetched": "2026-10-08",
+ "updated": "2026-08-27 15:00",
+ "filter": "År etter søknadsdato. granted = prosjektfase Bevilgning eller Avsluttet",
+ "note": "Trukne, lukkede og avviste søknader er ikke med. Søknader i saksbehandlingssystemet Tibi er ikke med, så 2026 er ufullstendig. Søknadstyper ble lagt om i 2019/2020."
+}

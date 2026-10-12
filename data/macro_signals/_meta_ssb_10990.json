@@ -1,0 +1,12 @@
+{
+ "table": "10990",
+ "title": "10990: Patentsøknader, etter statistikkvariabel og år",
+ "url": "https://data.ssb.no/api/v0/no/table/10990",
+ "fetched": "2026-10-08",
+ "updated": "2026-06-29T06:00:00Z",
+ "filter": {},
+ "note": [
+  ".. = Tallgrunnlag mangler. Tall er ikke kommet inn i våre databaser eller er for usikre til å publiseres."
+ ],
+ "kategori_noter": {}
+}

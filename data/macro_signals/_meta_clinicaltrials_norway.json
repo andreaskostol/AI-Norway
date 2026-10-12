@@ -1,0 +1,7 @@
+{
+ "source": "ClinicalTrials.gov API v2",
+ "url": "https://clinicaltrials.gov/api/v2/studies",
+ "fetched": "2026-10-08",
+ "filter": "AREA[LocationCountry]Norway og RANGE paa StartDate eller StudyFirstSubmitDate per maaned",
+ "note": "Startdato kan vaere planlagt (anticipated) for de siste maanedene. Studier registrert bare i EU CTIS er ikke med."
+}

@@ -1,0 +1,290 @@
+[
+ {
+  "full_name": "nvdb-vegdata/klienteksperiment",
+  "created_at": "2015-02-12T12:23:02Z",
+  "pushed_at": "2015-09-24T08:46:48Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "nvdb-vegdata/registratordemonstrator",
+  "created_at": "2015-02-13T11:12:46Z",
+  "pushed_at": "2015-03-27T11:50:20Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "nvdb-vegdata/regdem2015",
+  "created_at": "2015-06-17T11:29:54Z",
+  "pushed_at": "2015-07-30T08:02:26Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "nvdb-vegdata/regdem2015-server",
+  "created_at": "2015-07-20T06:20:25Z",
+  "pushed_at": "2015-07-29T13:08:58Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-gml-generator",
+  "created_at": "2015-08-31T10:11:57Z",
+  "pushed_at": "2015-12-01T08:56:11Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-utviklerkonferanse-2015",
+  "created_at": "2015-09-21T08:47:06Z",
+  "pushed_at": "2015-10-02T07:44:35Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-api-client",
+  "created_at": "2016-01-07T13:26:07Z",
+  "pushed_at": "2025-09-05T10:36:54Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-qgis",
+  "created_at": "2016-01-18T12:29:36Z",
+  "pushed_at": "2015-02-26T12:57:45Z",
+  "fork": true,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-kontoutskrift",
+  "created_at": "2016-01-29T07:26:00Z",
+  "pushed_at": "2018-03-07T09:16:20Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-rapporter",
+  "created_at": "2016-01-29T08:42:44Z",
+  "pushed_at": "2016-01-29T08:44:13Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "nvdb-vegdata/sosi-reader",
+  "created_at": "2016-05-25T11:27:55Z",
+  "pushed_at": "2021-08-11T10:36:25Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-utviklerkonferanse-2016",
+  "created_at": "2016-09-06T08:38:50Z",
+  "pushed_at": "2017-10-26T19:28:16Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "nvdb-vegdata/apidokumentasjon",
+  "created_at": "2017-05-18T11:19:36Z",
+  "pushed_at": "2023-06-08T11:06:42Z",
+  "fork": false,
+  "archived": false,
+  "language": "CSS"
+ },
+ {
+  "full_name": "nvdb-vegdata/apiskrivdokumentasjon",
+  "created_at": "2017-05-21T09:28:10Z",
+  "pushed_at": "2023-08-17T10:25:30Z",
+  "fork": false,
+  "archived": false,
+  "language": "CSS"
+ },
+ {
+  "full_name": "nvdb-vegdata/Webhook-transformer",
+  "created_at": "2017-05-23T10:49:48Z",
+  "pushed_at": "2018-10-09T09:14:12Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "nvdb-vegdata/dakatreact",
+  "created_at": "2017-09-19T13:56:08Z",
+  "pushed_at": "2017-09-25T07:10:10Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "nvdb-vegdata/datakatalogen",
+  "created_at": "2017-10-05T08:15:26Z",
+  "pushed_at": "2017-10-10T21:11:55Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-utviklerkonferanse-2017",
+  "created_at": "2017-10-14T07:02:25Z",
+  "pushed_at": "2017-11-12T13:14:28Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "nvdb-vegdata/format-sql-output",
+  "created_at": "2017-12-16T20:24:01Z",
+  "pushed_at": "2017-12-16T20:24:17Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "nvdb-vegdata/rpm-repo",
+  "created_at": "2018-03-21T17:25:13Z",
+  "pushed_at": "2018-03-22T12:46:17Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "nvdb-vegdata/utviklerkonferanse-2018",
+  "created_at": "2018-07-06T12:12:25Z",
+  "pushed_at": "2018-12-03T09:08:51Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "nvdb-vegdata/endringslogg",
+  "created_at": "2018-11-01T14:26:36Z",
+  "pushed_at": "2026-09-01T07:54:50Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "nvdb-vegdata/fake-openam-oidc",
+  "created_at": "2019-03-22T13:26:54Z",
+  "pushed_at": "2019-03-22T17:07:36Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "nvdb-vegdata/utviklerkonferanse-2019",
+  "created_at": "2019-06-20T09:47:36Z",
+  "pushed_at": "2019-10-25T12:16:52Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-commons",
+  "created_at": "2019-08-22T18:47:14Z",
+  "pushed_at": "2021-01-13T12:43:29Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-visrute",
+  "created_at": "2019-09-09T09:22:14Z",
+  "pushed_at": "2026-03-27T07:54:34Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdbtransportportal",
+  "created_at": "2019-10-30T10:48:08Z",
+  "pushed_at": "2023-02-08T07:29:27Z",
+  "fork": false,
+  "archived": false,
+  "language": "Jupyter Notebook"
+ },
+ {
+  "full_name": "nvdb-vegdata/apiskrivproduktdokumentasjon",
+  "created_at": "2022-05-22T10:17:36Z",
+  "pushed_at": "2022-05-22T11:53:20Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-openapi-public",
+  "created_at": "2024-02-22T10:29:11Z",
+  "pushed_at": "2026-03-20T15:36:25Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "nvdb-vegdata/db-scheduler-ui",
+  "created_at": "2024-04-11T08:49:15Z",
+  "pushed_at": "2026-02-06T17:51:39Z",
+  "fork": true,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "nvdb-vegdata/reststop",
+  "created_at": "2024-05-15T10:40:56Z",
+  "pushed_at": "2026-02-20T09:25:22Z",
+  "fork": true,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-tnits-public",
+  "created_at": "2025-08-26T14:08:11Z",
+  "pushed_at": "2026-03-02T12:41:58Z",
+  "fork": false,
+  "archived": false,
+  "language": "Java"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-vegref-api",
+  "created_at": "2025-11-12T06:49:43Z",
+  "pushed_at": "2026-05-19T09:53:40Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-kafka-streams",
+  "created_at": "2025-12-11T12:46:44Z",
+  "pushed_at": "2025-12-16T18:39:42Z",
+  "fork": false,
+  "archived": false,
+  "language": "Kotlin"
+ },
+ {
+  "full_name": "nvdb-vegdata/nvdb-finn-vegdata",
+  "created_at": "2026-01-19T15:34:11Z",
+  "pushed_at": "2026-06-15T13:18:15Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "nvdb-vegdata/kostra",
+  "created_at": "2026-02-09T07:20:33Z",
+  "pushed_at": "2026-10-01T06:48:54Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ }
+]

@@ -1,0 +1,504 @@
+{"endpoint": "commits", "q": "org:navikt committer-date:2016-01-01..2016-01-31", "total_count": 545, "incomplete": false, "fetched": "2026-10-08T07:44:10.745600+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-01-01..2016-01-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:44:13.620099+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-01-01..2016-01-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:44:16.607512+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2016-02-01..2016-02-29", "total_count": 632, "incomplete": false, "fetched": "2026-10-08T07:44:19.551359+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-02-01..2016-02-29", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:44:22.440700+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-02-01..2016-02-29 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:44:25.441425+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2016-03-01..2016-03-31", "total_count": 942, "incomplete": false, "fetched": "2026-10-08T07:44:28.340344+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-03-01..2016-03-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:44:31.188647+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-03-01..2016-03-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:44:34.079956+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2016-04-01..2016-04-30", "total_count": 714, "incomplete": false, "fetched": "2026-10-08T07:44:36.837867+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-04-01..2016-04-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:44:39.729728+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-04-01..2016-04-30 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:44:42.653809+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2016-05-01..2016-05-31", "total_count": 570, "incomplete": false, "fetched": "2026-10-08T07:44:45.487881+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-05-01..2016-05-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:44:48.312501+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-05-01..2016-05-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:45:21.626800+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2016-06-01..2016-06-30", "total_count": 895, "incomplete": false, "fetched": "2026-10-08T07:45:24.575680+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-06-01..2016-06-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:45:27.710189+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-06-01..2016-06-30 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:45:30.759517+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2016-07-01..2016-07-31", "total_count": 382, "incomplete": false, "fetched": "2026-10-08T07:45:33.665713+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-07-01..2016-07-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:45:36.514271+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-07-01..2016-07-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:45:39.483061+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2016-08-01..2016-08-31", "total_count": 694, "incomplete": false, "fetched": "2026-10-08T07:45:42.418492+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-08-01..2016-08-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:45:45.342955+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-08-01..2016-08-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:45:48.243944+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2016-09-01..2016-09-30", "total_count": 762, "incomplete": false, "fetched": "2026-10-08T07:45:50.992803+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-09-01..2016-09-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:45:53.858668+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-09-01..2016-09-30 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:45:56.695548+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2016-10-01..2016-10-31", "total_count": 648, "incomplete": false, "fetched": "2026-10-08T07:45:59.546557+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-10-01..2016-10-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:46:32.737837+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-10-01..2016-10-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:46:35.852186+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2016-11-01..2016-11-30", "total_count": 556, "incomplete": false, "fetched": "2026-10-08T07:46:38.639136+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-11-01..2016-11-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:46:41.459783+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-11-01..2016-11-30 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:46:44.402745+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2016-12-01..2016-12-31", "total_count": 494, "incomplete": false, "fetched": "2026-10-08T07:46:47.643993+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-12-01..2016-12-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:46:50.567978+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2016-12-01..2016-12-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:46:53.551444+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2017-01-01..2017-01-31", "total_count": 1256, "incomplete": false, "fetched": "2026-10-08T07:46:56.566884+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-01-01..2017-01-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:46:59.416437+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-01-01..2017-01-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:47:02.285698+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2017-02-01..2017-02-28", "total_count": 2044, "incomplete": false, "fetched": "2026-10-08T07:47:05.160708+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-02-01..2017-02-28", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:47:08.066529+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-02-01..2017-02-28 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:47:11.067760+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2017-03-01..2017-03-31", "total_count": 3190, "incomplete": false, "fetched": "2026-10-08T07:47:44.177404+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-03-01..2017-03-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:47:47.075886+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-03-01..2017-03-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:47:50.072705+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2017-04-01..2017-04-30", "total_count": 1753, "incomplete": false, "fetched": "2026-10-08T07:47:53.025859+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-04-01..2017-04-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:47:55.921579+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-04-01..2017-04-30 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T07:47:58.814183+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2017-05-01..2017-05-31", "total_count": 1764, "incomplete": false, "fetched": "2026-10-08T07:48:01.851763+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-05-01..2017-05-31", "total_count": 2, "incomplete": false, "fetched": "2026-10-08T07:48:04.866000+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-05-01..2017-05-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 2, "incomplete": false, "fetched": "2026-10-08T07:48:08.050295+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2017-06-01..2017-06-30", "total_count": 1863, "incomplete": false, "fetched": "2026-10-08T07:48:11.061052+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-06-01..2017-06-30", "total_count": 20, "incomplete": false, "fetched": "2026-10-08T07:48:14.087775+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-06-01..2017-06-30 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 20, "incomplete": false, "fetched": "2026-10-08T07:48:17.141211+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2017-07-01..2017-07-31", "total_count": 1176, "incomplete": false, "fetched": "2026-10-08T07:48:20.072158+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-07-01..2017-07-31", "total_count": 10, "incomplete": false, "fetched": "2026-10-08T07:48:53.416370+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-07-01..2017-07-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 10, "incomplete": false, "fetched": "2026-10-08T07:48:56.400829+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2017-08-01..2017-08-31", "total_count": 2933, "incomplete": false, "fetched": "2026-10-08T07:48:59.580302+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-08-01..2017-08-31", "total_count": 75, "incomplete": false, "fetched": "2026-10-08T07:49:02.527760+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-08-01..2017-08-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 75, "incomplete": false, "fetched": "2026-10-08T07:49:05.529977+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2017-09-01..2017-09-30", "total_count": 2510, "incomplete": false, "fetched": "2026-10-08T07:49:08.433093+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-09-01..2017-09-30", "total_count": 100, "incomplete": false, "fetched": "2026-10-08T07:49:11.507205+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-09-01..2017-09-30 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 100, "incomplete": false, "fetched": "2026-10-08T07:49:14.442365+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2017-10-01..2017-10-31", "total_count": 3708, "incomplete": false, "fetched": "2026-10-08T07:49:17.307138+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-10-01..2017-10-31", "total_count": 139, "incomplete": false, "fetched": "2026-10-08T07:49:20.269687+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-10-01..2017-10-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 139, "incomplete": false, "fetched": "2026-10-08T07:49:23.221747+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2017-11-01..2017-11-30", "total_count": 3540, "incomplete": false, "fetched": "2026-10-08T07:49:25.961091+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-11-01..2017-11-30", "total_count": 101, "incomplete": false, "fetched": "2026-10-08T07:49:28.890765+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-11-01..2017-11-30 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 101, "incomplete": false, "fetched": "2026-10-08T07:49:31.875966+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2017-12-01..2017-12-31", "total_count": 2474, "incomplete": false, "fetched": "2026-10-08T07:49:35.393311+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-12-01..2017-12-31", "total_count": 117, "incomplete": false, "fetched": "2026-10-08T07:50:08.739014+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2017-12-01..2017-12-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 117, "incomplete": false, "fetched": "2026-10-08T07:50:11.713059+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2018-01-01..2018-01-31", "total_count": 3087, "incomplete": false, "fetched": "2026-10-08T07:50:14.566921+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-01-01..2018-01-31", "total_count": 157, "incomplete": false, "fetched": "2026-10-08T07:50:17.587765+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-01-01..2018-01-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 157, "incomplete": false, "fetched": "2026-10-08T07:50:20.650093+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2018-02-01..2018-02-28", "total_count": 3309, "incomplete": false, "fetched": "2026-10-08T07:50:24.098594+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-02-01..2018-02-28", "total_count": 204, "incomplete": false, "fetched": "2026-10-08T07:50:27.131851+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-02-01..2018-02-28 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 204, "incomplete": false, "fetched": "2026-10-08T07:50:30.197719+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2018-03-01..2018-03-31", "total_count": 3050, "incomplete": false, "fetched": "2026-10-08T07:50:33.238350+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-03-01..2018-03-31", "total_count": 226, "incomplete": false, "fetched": "2026-10-08T07:50:36.265712+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-03-01..2018-03-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 226, "incomplete": false, "fetched": "2026-10-08T07:50:39.210426+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2018-04-01..2018-04-30", "total_count": 4550, "incomplete": false, "fetched": "2026-10-08T07:51:15.749525+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-04-01..2018-04-30", "total_count": 387, "incomplete": false, "fetched": "2026-10-08T07:51:18.715694+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-04-01..2018-04-30 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 387, "incomplete": false, "fetched": "2026-10-08T07:51:21.780656+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2018-05-01..2018-05-31", "total_count": 4119, "incomplete": false, "fetched": "2026-10-08T07:51:25.071838+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-05-01..2018-05-31", "total_count": 372, "incomplete": false, "fetched": "2026-10-08T07:51:28.135158+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-05-01..2018-05-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 372, "incomplete": false, "fetched": "2026-10-08T07:51:31.215026+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2018-06-01..2018-06-30", "total_count": 5379, "incomplete": false, "fetched": "2026-10-08T07:51:34.546023+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-06-01..2018-06-30", "total_count": 504, "incomplete": false, "fetched": "2026-10-08T07:51:37.482094+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-06-01..2018-06-30 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 504, "incomplete": false, "fetched": "2026-10-08T07:51:40.368154+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2018-07-01..2018-07-31", "total_count": 3965, "incomplete": false, "fetched": "2026-10-08T07:51:43.422471+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-07-01..2018-07-31", "total_count": 318, "incomplete": false, "fetched": "2026-10-08T07:51:46.494236+00:00"}
+{"endpoint": "issues", "q": "org:navikt type:pr created:2018-07-01..2018-07-31 -author:app/dependabot -author:app/renovate -author:app/github-actions -author:app/dependabot-preview", "total_count": 318, "incomplete": false, "fetched": "2026-10-08T07:52:21.772987+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2018-08-01..2018-08-31", "total_count": 5357, "incomplete": false, "fetched": "2026-10-08T07:56:47.337170+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2018-09-01..2018-09-30", "total_count": 6478, "incomplete": false, "fetched": "2026-10-08T07:56:50.476606+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2018-10-01..2018-10-31", "total_count": 8584, "incomplete": false, "fetched": "2026-10-08T07:56:53.275614+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2018-11-01..2018-11-30", "total_count": 9663, "incomplete": false, "fetched": "2026-10-08T07:56:56.105846+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2018-12-01..2018-12-31", "total_count": 5947, "incomplete": false, "fetched": "2026-10-08T07:56:59.150321+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2019-01-01..2019-01-31", "total_count": 8033, "incomplete": false, "fetched": "2026-10-08T07:57:02.012484+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2019-02-01..2019-02-28", "total_count": 7967, "incomplete": false, "fetched": "2026-10-08T07:57:04.777678+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2019-03-01..2019-03-31", "total_count": 9026, "incomplete": false, "fetched": "2026-10-08T07:57:07.665335+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2019-04-01..2019-04-30", "total_count": 7725, "incomplete": false, "fetched": "2026-10-08T07:57:11.123362+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2019-05-01..2019-05-31", "total_count": 8877, "incomplete": false, "fetched": "2026-10-08T07:57:14.009747+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2019-06-01..2019-06-30", "total_count": 8444, "incomplete": false, "fetched": "2026-10-08T07:57:16.844165+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2019-07-01..2019-07-31", "total_count": 7835, "incomplete": false, "fetched": "2026-10-08T07:57:19.667706+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2019-08-01..2019-08-31", "total_count": 9558, "incomplete": false, "fetched": "2026-10-08T07:57:22.445826+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2019-09-01..2019-09-30", "total_count": 10676, "incomplete": false, "fetched": "2026-10-08T07:57:25.255240+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2019-10-01..2019-10-31", "total_count": 12122, "incomplete": false, "fetched": "2026-10-08T07:57:28.309156+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2019-11-01..2019-11-30", "total_count": 12105, "incomplete": false, "fetched": "2026-10-08T07:57:31.094070+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2019-12-01..2019-12-31", "total_count": 8791, "incomplete": false, "fetched": "2026-10-08T07:58:04.372355+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2020-01-01..2020-01-31", "total_count": 13504, "incomplete": false, "fetched": "2026-10-08T07:58:07.607152+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2020-02-01..2020-02-29", "total_count": 11270, "incomplete": false, "fetched": "2026-10-08T07:58:10.678944+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2020-03-01..2020-03-31", "total_count": 15566, "incomplete": false, "fetched": "2026-10-08T07:58:13.567360+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2020-04-01..2020-04-30", "total_count": 11574, "incomplete": false, "fetched": "2026-10-08T07:58:16.306011+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2020-05-01..2020-05-31", "total_count": 11016, "incomplete": false, "fetched": "2026-10-08T07:58:19.182538+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2020-06-01..2020-06-30", "total_count": 12150, "incomplete": false, "fetched": "2026-10-08T07:58:22.234162+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2020-07-01..2020-07-31", "total_count": 7836, "incomplete": false, "fetched": "2026-10-08T07:58:25.114159+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2020-08-01..2020-08-31", "total_count": 10835, "incomplete": false, "fetched": "2026-10-08T07:58:28.148775+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2020-09-01..2020-09-30", "total_count": 14316, "incomplete": false, "fetched": "2026-10-08T07:58:31.080465+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2020-10-01..2020-10-31", "total_count": 15238, "incomplete": false, "fetched": "2026-10-08T07:58:34.195425+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2020-11-01..2020-11-30", "total_count": 14214, "incomplete": false, "fetched": "2026-10-08T07:58:36.983912+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2020-12-01..2020-12-31", "total_count": 10050, "incomplete": false, "fetched": "2026-10-08T07:58:40.071683+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2021-01-01..2021-01-31", "total_count": 12696, "incomplete": false, "fetched": "2026-10-08T07:58:42.892163+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2021-02-01..2021-02-28", "total_count": 12275, "incomplete": false, "fetched": "2026-10-08T07:59:15.987831+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2021-03-01..2021-03-31", "total_count": 13547, "incomplete": false, "fetched": "2026-10-08T07:59:18.876993+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2021-04-01..2021-04-30", "total_count": 11537, "incomplete": false, "fetched": "2026-10-08T07:59:21.634107+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2021-05-01..2021-05-31", "total_count": 11353, "incomplete": false, "fetched": "2026-10-08T07:59:24.368616+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2021-06-01..2021-06-30", "total_count": 14073, "incomplete": false, "fetched": "2026-10-08T07:59:27.410127+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2021-07-01..2021-07-31", "total_count": 6668, "incomplete": false, "fetched": "2026-10-08T07:59:30.258957+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2021-08-01..2021-08-31", "total_count": 10092, "incomplete": false, "fetched": "2026-10-08T07:59:33.145827+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2021-09-01..2021-09-30", "total_count": 12471, "incomplete": false, "fetched": "2026-10-08T07:59:36.208933+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2021-10-01..2021-10-31", "total_count": 12847, "incomplete": false, "fetched": "2026-10-08T07:59:39.263562+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2021-11-01..2021-11-30", "total_count": 14496, "incomplete": false, "fetched": "2026-10-08T07:59:42.099296+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2021-12-01..2021-12-31", "total_count": 11076, "incomplete": false, "fetched": "2026-10-08T07:59:45.090656+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2022-01-01..2022-01-31", "total_count": 13875, "incomplete": false, "fetched": "2026-10-08T07:59:48.068891+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2022-02-01..2022-02-28", "total_count": 14280, "incomplete": false, "fetched": "2026-10-08T07:59:50.874461+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2022-03-01..2022-03-31", "total_count": 17066, "incomplete": false, "fetched": "2026-10-08T07:59:53.738152+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2022-04-01..2022-04-30", "total_count": 11656, "incomplete": false, "fetched": "2026-10-08T07:59:56.441259+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2022-05-01..2022-05-31", "total_count": 14032, "incomplete": false, "fetched": "2026-10-08T07:59:59.176275+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2022-06-01..2022-06-30", "total_count": 14598, "incomplete": false, "fetched": "2026-10-08T08:00:02.306318+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2022-07-01..2022-07-31", "total_count": 9893, "incomplete": false, "fetched": "2026-10-08T08:00:35.859169+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2022-08-01..2022-08-31", "total_count": 14859, "incomplete": false, "fetched": "2026-10-08T08:00:38.630348+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2022-09-01..2022-09-30", "total_count": 16079, "incomplete": false, "fetched": "2026-10-08T08:00:41.654557+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2022-10-01..2022-10-31", "total_count": 15584, "incomplete": false, "fetched": "2026-10-08T08:00:44.444749+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2022-11-01..2022-11-30", "total_count": 16540, "incomplete": false, "fetched": "2026-10-08T08:00:47.298068+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2022-12-01..2022-12-31", "total_count": 11614, "incomplete": false, "fetched": "2026-10-08T08:00:50.013975+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2023-01-01..2023-01-31", "total_count": 14597, "incomplete": false, "fetched": "2026-10-08T08:00:52.836483+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2023-02-01..2023-02-28", "total_count": 14548, "incomplete": false, "fetched": "2026-10-08T08:00:58.607199+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2023-03-01..2023-03-31", "total_count": 19177, "incomplete": false, "fetched": "2026-10-08T08:01:01.630227+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2023-04-01..2023-04-30", "total_count": 15680, "incomplete": false, "fetched": "2026-10-08T08:01:04.416088+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2023-05-01..2023-05-31", "total_count": 15646, "incomplete": false, "fetched": "2026-10-08T08:01:07.196060+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2023-06-01..2023-06-30", "total_count": 15376, "incomplete": false, "fetched": "2026-10-08T08:01:10.107657+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2023-07-01..2023-07-31", "total_count": 9726, "incomplete": false, "fetched": "2026-10-08T08:01:13.257420+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2023-08-01..2023-08-31", "total_count": 14663, "incomplete": false, "fetched": "2026-10-08T08:01:16.159430+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2023-09-01..2023-09-30", "total_count": 16328, "incomplete": false, "fetched": "2026-10-08T08:01:18.877226+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2023-10-01..2023-10-31", "total_count": 18616, "incomplete": false, "fetched": "2026-10-08T08:01:21.634339+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2023-11-01..2023-11-30", "total_count": 17629, "incomplete": false, "fetched": "2026-10-08T08:01:24.496787+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2023-12-01..2023-12-31", "total_count": 13830, "incomplete": false, "fetched": "2026-10-08T08:01:27.384123+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2024-01-01..2024-01-31", "total_count": 18488, "incomplete": false, "fetched": "2026-10-08T08:02:01.549365+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2024-02-01..2024-02-29", "total_count": 19433, "incomplete": false, "fetched": "2026-10-08T08:02:04.683660+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2024-03-01..2024-03-31", "total_count": 15883, "incomplete": false, "fetched": "2026-10-08T08:02:07.656282+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2024-04-01..2024-04-30", "total_count": 17513, "incomplete": false, "fetched": "2026-10-08T08:02:10.483824+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2024-05-01..2024-05-31", "total_count": 16378, "incomplete": false, "fetched": "2026-10-08T08:02:13.368951+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2024-06-01..2024-06-30", "total_count": 15802, "incomplete": false, "fetched": "2026-10-08T08:02:16.337006+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2024-07-01..2024-07-31", "total_count": 11895, "incomplete": false, "fetched": "2026-10-08T08:02:19.036125+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2024-08-01..2024-08-31", "total_count": 16185, "incomplete": false, "fetched": "2026-10-08T08:02:21.938624+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2024-09-01..2024-09-30", "total_count": 17932, "incomplete": false, "fetched": "2026-10-08T08:02:24.664473+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2024-10-01..2024-10-31", "total_count": 22143, "incomplete": false, "fetched": "2026-10-08T08:02:28.052030+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2024-11-01..2024-11-30", "total_count": 20280, "incomplete": false, "fetched": "2026-10-08T08:02:30.868745+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2024-12-01..2024-12-31", "total_count": 14293, "incomplete": false, "fetched": "2026-10-08T08:02:33.744596+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2025-01-01..2025-01-31", "total_count": 19179, "incomplete": false, "fetched": "2026-10-08T08:02:36.606498+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2025-02-01..2025-02-28", "total_count": 19612, "incomplete": false, "fetched": "2026-10-08T08:02:39.514110+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2025-03-01..2025-03-31", "total_count": 23772, "incomplete": false, "fetched": "2026-10-08T08:02:42.238609+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2025-04-01..2025-04-30", "total_count": 17126, "incomplete": false, "fetched": "2026-10-08T08:02:45.048863+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2025-05-01..2025-05-31", "total_count": 18234, "incomplete": false, "fetched": "2026-10-08T08:02:47.943657+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2025-06-01..2025-06-30", "total_count": 18127, "incomplete": false, "fetched": "2026-10-08T08:02:50.852841+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2025-07-01..2025-07-31", "total_count": 13470, "incomplete": false, "fetched": "2026-10-08T08:03:23.918102+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2025-08-01..2025-08-31", "total_count": 17582, "incomplete": false, "fetched": "2026-10-08T08:03:26.995199+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2025-09-01..2025-09-30", "total_count": 19902, "incomplete": false, "fetched": "2026-10-08T08:03:29.920955+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2025-10-01..2025-10-31", "total_count": 21999, "incomplete": false, "fetched": "2026-10-08T08:03:32.835598+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2025-11-01..2025-11-30", "total_count": 21383, "incomplete": false, "fetched": "2026-10-08T08:03:35.531076+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2025-12-01..2025-12-31", "total_count": 16114, "incomplete": false, "fetched": "2026-10-08T08:03:38.469359+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2026-01-01..2026-01-31", "total_count": 20711, "incomplete": false, "fetched": "2026-10-08T08:03:41.391016+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2026-02-01..2026-02-28", "total_count": 22141, "incomplete": false, "fetched": "2026-10-08T08:03:44.147735+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2026-03-01..2026-03-31", "total_count": 21851, "incomplete": false, "fetched": "2026-10-08T08:03:46.917635+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2026-04-01..2026-04-30", "total_count": 21575, "incomplete": false, "fetched": "2026-10-08T08:03:49.707167+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2026-05-01..2026-05-31", "total_count": 22160, "incomplete": false, "fetched": "2026-10-08T08:03:52.553736+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2026-06-01..2026-06-30", "total_count": 24249, "incomplete": false, "fetched": "2026-10-08T08:03:55.552216+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2026-07-01..2026-07-31", "total_count": 17024, "incomplete": false, "fetched": "2026-10-08T08:03:58.378298+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2026-08-01..2026-08-31", "total_count": 23435, "incomplete": false, "fetched": "2026-10-08T08:04:01.222157+00:00"}
+{"endpoint": "commits", "q": "org:navikt committer-date:2026-09-01..2026-09-30", "total_count": 27121, "incomplete": false, "fetched": "2026-10-08T08:04:07.167248+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2016-01-01..2016-01-31", "total_count": 31, "incomplete": false, "fetched": "2026-10-08T08:06:30.250395+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2016-02-01..2016-02-29", "total_count": 5, "incomplete": false, "fetched": "2026-10-08T08:06:32.971405+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2016-03-01..2016-03-31", "total_count": 7, "incomplete": false, "fetched": "2026-10-08T08:06:35.637639+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2016-04-01..2016-04-30", "total_count": 6, "incomplete": false, "fetched": "2026-10-08T08:06:38.323118+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2016-05-01..2016-05-31", "total_count": 1, "incomplete": false, "fetched": "2026-10-08T08:06:41.080103+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2016-06-01..2016-06-30", "total_count": 18, "incomplete": false, "fetched": "2026-10-08T08:06:43.775708+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2016-07-01..2016-07-31", "total_count": 6, "incomplete": false, "fetched": "2026-10-08T08:06:46.466102+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2016-08-01..2016-08-31", "total_count": 16, "incomplete": false, "fetched": "2026-10-08T08:06:49.147154+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2016-09-01..2016-09-30", "total_count": 25, "incomplete": false, "fetched": "2026-10-08T08:06:51.822421+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2016-10-01..2016-10-31", "total_count": 27, "incomplete": false, "fetched": "2026-10-08T08:06:54.647770+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2016-11-01..2016-11-30", "total_count": 21, "incomplete": false, "fetched": "2026-10-08T08:06:57.525258+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2016-12-01..2016-12-31", "total_count": 63, "incomplete": false, "fetched": "2026-10-08T08:07:00.275553+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2017-01-01..2017-01-31", "total_count": 68, "incomplete": false, "fetched": "2026-10-08T08:07:03.062484+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2017-02-01..2017-02-28", "total_count": 11, "incomplete": false, "fetched": "2026-10-08T08:07:05.963611+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2017-03-01..2017-03-31", "total_count": 261, "incomplete": false, "fetched": "2026-10-08T08:07:08.696669+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2017-04-01..2017-04-30", "total_count": 223, "incomplete": false, "fetched": "2026-10-08T08:07:11.355442+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2017-05-01..2017-05-31", "total_count": 246, "incomplete": false, "fetched": "2026-10-08T08:07:14.150362+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2017-06-01..2017-06-30", "total_count": 124, "incomplete": false, "fetched": "2026-10-08T08:07:16.915705+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2017-07-01..2017-07-31", "total_count": 92, "incomplete": false, "fetched": "2026-10-08T08:07:19.692816+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2017-08-01..2017-08-31", "total_count": 146, "incomplete": false, "fetched": "2026-10-08T08:07:22.347316+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2017-09-01..2017-09-30", "total_count": 277, "incomplete": false, "fetched": "2026-10-08T08:07:25.034138+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2017-10-01..2017-10-31", "total_count": 120, "incomplete": false, "fetched": "2026-10-08T08:07:28.144178+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2017-11-01..2017-11-30", "total_count": 109, "incomplete": false, "fetched": "2026-10-08T08:07:30.841015+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2017-12-01..2017-12-31", "total_count": 123, "incomplete": false, "fetched": "2026-10-08T08:07:33.524965+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2018-01-01..2018-01-31", "total_count": 256, "incomplete": false, "fetched": "2026-10-08T08:07:36.329154+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2018-02-01..2018-02-28", "total_count": 64, "incomplete": false, "fetched": "2026-10-08T08:07:39.020755+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2018-03-01..2018-03-31", "total_count": 39, "incomplete": false, "fetched": "2026-10-08T08:07:41.712303+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2018-04-01..2018-04-30", "total_count": 90, "incomplete": false, "fetched": "2026-10-08T08:07:44.391573+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2018-05-01..2018-05-31", "total_count": 124, "incomplete": false, "fetched": "2026-10-08T08:07:47.064107+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2018-06-01..2018-06-30", "total_count": 150, "incomplete": false, "fetched": "2026-10-08T08:07:49.737515+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2018-07-01..2018-07-31", "total_count": 52, "incomplete": false, "fetched": "2026-10-08T08:07:52.500287+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2018-08-01..2018-08-31", "total_count": 164, "incomplete": false, "fetched": "2026-10-08T08:07:55.411384+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2018-09-01..2018-09-30", "total_count": 124, "incomplete": false, "fetched": "2026-10-08T08:07:58.072474+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2018-10-01..2018-10-31", "total_count": 113, "incomplete": false, "fetched": "2026-10-08T08:08:00.788119+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2018-11-01..2018-11-30", "total_count": 200, "incomplete": false, "fetched": "2026-10-08T08:08:03.494445+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2018-12-01..2018-12-31", "total_count": 79, "incomplete": false, "fetched": "2026-10-08T08:08:06.153828+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2019-01-01..2019-01-31", "total_count": 125, "incomplete": false, "fetched": "2026-10-08T08:08:08.862395+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2019-02-01..2019-02-28", "total_count": 141, "incomplete": false, "fetched": "2026-10-08T08:08:11.546346+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2019-03-01..2019-03-31", "total_count": 265, "incomplete": false, "fetched": "2026-10-08T08:08:14.348164+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2019-04-01..2019-04-30", "total_count": 142, "incomplete": false, "fetched": "2026-10-08T08:08:17.236321+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2019-05-01..2019-05-31", "total_count": 117, "incomplete": false, "fetched": "2026-10-08T08:08:19.962443+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2019-06-01..2019-06-30", "total_count": 121, "incomplete": false, "fetched": "2026-10-08T08:08:22.723387+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2019-07-01..2019-07-31", "total_count": 74, "incomplete": false, "fetched": "2026-10-08T08:08:25.372232+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2019-08-01..2019-08-31", "total_count": 144, "incomplete": false, "fetched": "2026-10-08T08:08:28.057222+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2019-09-01..2019-09-30", "total_count": 284, "incomplete": false, "fetched": "2026-10-08T08:08:30.775965+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2019-10-01..2019-10-31", "total_count": 359, "incomplete": false, "fetched": "2026-10-08T08:08:33.611992+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2019-11-01..2019-11-30", "total_count": 366, "incomplete": false, "fetched": "2026-10-08T08:08:36.290849+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2019-12-01..2019-12-31", "total_count": 435, "incomplete": false, "fetched": "2026-10-08T08:08:39.118111+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2020-01-01..2020-01-31", "total_count": 243, "incomplete": false, "fetched": "2026-10-08T08:08:41.931818+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2020-02-01..2020-02-29", "total_count": 292, "incomplete": false, "fetched": "2026-10-08T08:08:44.604451+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2020-03-01..2020-03-31", "total_count": 253, "incomplete": false, "fetched": "2026-10-08T08:08:47.377837+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2020-04-01..2020-04-30", "total_count": 428, "incomplete": false, "fetched": "2026-10-08T08:08:50.169372+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2020-05-01..2020-05-31", "total_count": 294, "incomplete": false, "fetched": "2026-10-08T08:08:52.818331+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2020-06-01..2020-06-30", "total_count": 416, "incomplete": false, "fetched": "2026-10-08T08:08:55.909155+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2020-07-01..2020-07-31", "total_count": 163, "incomplete": false, "fetched": "2026-10-08T08:08:59.022631+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2020-08-01..2020-08-31", "total_count": 379, "incomplete": false, "fetched": "2026-10-08T08:09:01.792167+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2020-09-01..2020-09-30", "total_count": 599, "incomplete": false, "fetched": "2026-10-08T08:09:04.620835+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2020-10-01..2020-10-31", "total_count": 472, "incomplete": false, "fetched": "2026-10-08T08:09:07.326457+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2020-11-01..2020-11-30", "total_count": 498, "incomplete": false, "fetched": "2026-10-08T08:09:09.967567+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2020-12-01..2020-12-31", "total_count": 231, "incomplete": false, "fetched": "2026-10-08T08:09:12.697354+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2021-01-01..2021-01-31", "total_count": 218, "incomplete": false, "fetched": "2026-10-08T08:09:15.410254+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2021-02-01..2021-02-28", "total_count": 233, "incomplete": false, "fetched": "2026-10-08T08:09:18.074717+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2021-03-01..2021-03-31", "total_count": 373, "incomplete": false, "fetched": "2026-10-08T08:09:20.835643+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2021-04-01..2021-04-30", "total_count": 282, "incomplete": false, "fetched": "2026-10-08T08:09:23.602564+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2021-05-01..2021-05-31", "total_count": 356, "incomplete": false, "fetched": "2026-10-08T08:09:26.688735+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2021-06-01..2021-06-30", "total_count": 264, "incomplete": false, "fetched": "2026-10-08T08:09:29.570401+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2021-07-01..2021-07-31", "total_count": 49, "incomplete": false, "fetched": "2026-10-08T08:09:32.212292+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2021-08-01..2021-08-31", "total_count": 270, "incomplete": false, "fetched": "2026-10-08T08:09:34.920278+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2021-09-01..2021-09-30", "total_count": 326, "incomplete": false, "fetched": "2026-10-08T08:09:37.636168+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2021-10-01..2021-10-31", "total_count": 339, "incomplete": false, "fetched": "2026-10-08T08:09:40.305726+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2021-11-01..2021-11-30", "total_count": 404, "incomplete": false, "fetched": "2026-10-08T08:09:42.949812+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2021-12-01..2021-12-31", "total_count": 206, "incomplete": false, "fetched": "2026-10-08T08:09:45.640224+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2022-01-01..2022-01-31", "total_count": 397, "incomplete": false, "fetched": "2026-10-08T08:09:48.774682+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2022-02-01..2022-02-28", "total_count": 234, "incomplete": false, "fetched": "2026-10-08T08:09:51.459081+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2022-03-01..2022-03-31", "total_count": 231, "incomplete": false, "fetched": "2026-10-08T08:09:54.166948+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2022-04-01..2022-04-30", "total_count": 160, "incomplete": false, "fetched": "2026-10-08T08:09:56.897169+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2022-05-01..2022-05-31", "total_count": 194, "incomplete": false, "fetched": "2026-10-08T08:09:59.792025+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2022-06-01..2022-06-30", "total_count": 236, "incomplete": false, "fetched": "2026-10-08T08:10:02.526724+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2022-07-01..2022-07-31", "total_count": 79, "incomplete": false, "fetched": "2026-10-08T08:10:05.219970+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2022-08-01..2022-08-31", "total_count": 238, "incomplete": false, "fetched": "2026-10-08T08:10:07.979430+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2022-09-01..2022-09-30", "total_count": 267, "incomplete": false, "fetched": "2026-10-08T08:10:10.933330+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2022-10-01..2022-10-31", "total_count": 297, "incomplete": false, "fetched": "2026-10-08T08:10:13.746100+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2022-11-01..2022-11-30", "total_count": 362, "incomplete": false, "fetched": "2026-10-08T08:10:16.437788+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2022-12-01..2022-12-31", "total_count": 196, "incomplete": false, "fetched": "2026-10-08T08:10:19.141866+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2023-01-01..2023-01-31", "total_count": 257, "incomplete": false, "fetched": "2026-10-08T08:10:21.882550+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2023-02-01..2023-02-28", "total_count": 109, "incomplete": false, "fetched": "2026-10-08T08:10:24.498102+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2023-03-01..2023-03-31", "total_count": 765, "incomplete": false, "fetched": "2026-10-08T08:10:27.168889+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2023-04-01..2023-04-30", "total_count": 112, "incomplete": false, "fetched": "2026-10-08T08:10:29.904361+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2023-05-01..2023-05-31", "total_count": 93, "incomplete": false, "fetched": "2026-10-08T08:10:32.574805+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2023-06-01..2023-06-30", "total_count": 217, "incomplete": false, "fetched": "2026-10-08T08:10:35.272890+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2023-07-01..2023-07-31", "total_count": 104, "incomplete": false, "fetched": "2026-10-08T08:10:37.946886+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2023-08-01..2023-08-31", "total_count": 289, "incomplete": false, "fetched": "2026-10-08T08:10:40.700946+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2023-09-01..2023-09-30", "total_count": 302, "incomplete": false, "fetched": "2026-10-08T08:10:43.432827+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2023-10-01..2023-10-31", "total_count": 300, "incomplete": false, "fetched": "2026-10-08T08:10:46.181277+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2023-11-01..2023-11-30", "total_count": 325, "incomplete": false, "fetched": "2026-10-08T08:10:48.838930+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2023-12-01..2023-12-31", "total_count": 175, "incomplete": false, "fetched": "2026-10-08T08:10:51.506977+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2024-01-01..2024-01-31", "total_count": 172, "incomplete": false, "fetched": "2026-10-08T08:10:54.170891+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2024-02-01..2024-02-29", "total_count": 266, "incomplete": false, "fetched": "2026-10-08T08:10:56.827807+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2024-03-01..2024-03-31", "total_count": 223, "incomplete": false, "fetched": "2026-10-08T08:10:59.597901+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2024-04-01..2024-04-30", "total_count": 202, "incomplete": false, "fetched": "2026-10-08T08:11:02.357609+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2024-05-01..2024-05-31", "total_count": 247, "incomplete": false, "fetched": "2026-10-08T08:11:05.083640+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2024-06-01..2024-06-30", "total_count": 280, "incomplete": false, "fetched": "2026-10-08T08:11:07.866498+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2024-07-01..2024-07-31", "total_count": 78, "incomplete": false, "fetched": "2026-10-08T08:11:10.919162+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2024-08-01..2024-08-31", "total_count": 245, "incomplete": false, "fetched": "2026-10-08T08:11:13.683605+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2024-09-01..2024-09-30", "total_count": 234, "incomplete": false, "fetched": "2026-10-08T08:11:16.588035+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2024-10-01..2024-10-31", "total_count": 261, "incomplete": false, "fetched": "2026-10-08T08:11:19.290675+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2024-11-01..2024-11-30", "total_count": 190, "incomplete": false, "fetched": "2026-10-08T08:11:21.937919+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2024-12-01..2024-12-31", "total_count": 127, "incomplete": false, "fetched": "2026-10-08T08:11:24.672605+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2025-01-01..2025-01-31", "total_count": 260, "incomplete": false, "fetched": "2026-10-08T08:11:27.306418+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2025-02-01..2025-02-28", "total_count": 209, "incomplete": false, "fetched": "2026-10-08T08:11:30.069318+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2025-03-01..2025-03-31", "total_count": 332, "incomplete": false, "fetched": "2026-10-08T08:11:32.835974+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2025-04-01..2025-04-30", "total_count": 148, "incomplete": false, "fetched": "2026-10-08T08:11:35.502271+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2025-05-01..2025-05-31", "total_count": 234, "incomplete": false, "fetched": "2026-10-08T08:11:38.350932+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2025-06-01..2025-06-30", "total_count": 226, "incomplete": false, "fetched": "2026-10-08T08:11:41.057553+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2025-07-01..2025-07-31", "total_count": 68, "incomplete": false, "fetched": "2026-10-08T08:11:43.717432+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2025-08-01..2025-08-31", "total_count": 208, "incomplete": false, "fetched": "2026-10-08T08:11:46.397520+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2025-09-01..2025-09-30", "total_count": 462, "incomplete": false, "fetched": "2026-10-08T08:11:49.333433+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2025-10-01..2025-10-31", "total_count": 547, "incomplete": false, "fetched": "2026-10-08T08:11:52.028074+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2025-11-01..2025-11-30", "total_count": 350, "incomplete": false, "fetched": "2026-10-08T08:11:54.769728+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2025-12-01..2025-12-31", "total_count": 242, "incomplete": false, "fetched": "2026-10-08T08:11:57.757154+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2026-01-01..2026-01-31", "total_count": 252, "incomplete": false, "fetched": "2026-10-08T08:12:00.529671+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2026-02-01..2026-02-28", "total_count": 226, "incomplete": false, "fetched": "2026-10-08T08:12:03.176208+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2026-03-01..2026-03-31", "total_count": 340, "incomplete": false, "fetched": "2026-10-08T08:12:06.012187+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2026-04-01..2026-04-30", "total_count": 225, "incomplete": false, "fetched": "2026-10-08T08:12:08.768273+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2026-05-01..2026-05-31", "total_count": 212, "incomplete": false, "fetched": "2026-10-08T08:12:11.514784+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2026-06-01..2026-06-30", "total_count": 263, "incomplete": false, "fetched": "2026-10-08T08:12:14.432431+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2026-07-01..2026-07-31", "total_count": 56, "incomplete": false, "fetched": "2026-10-08T08:12:17.266335+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2026-08-01..2026-08-31", "total_count": 275, "incomplete": false, "fetched": "2026-10-08T08:12:19.981727+00:00"}
+{"endpoint": "commits", "q": "org:Skatteetaten committer-date:2026-09-01..2026-09-30", "total_count": 298, "incomplete": false, "fetched": "2026-10-08T08:12:22.702422+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2019-05-01..2019-05-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:13:44.387415+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2019-06-01..2019-06-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:13:47.041800+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2019-07-01..2019-07-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:13:49.815235+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2019-08-01..2019-08-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:13:52.432686+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2019-09-01..2019-09-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:13:55.055931+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2019-10-01..2019-10-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:13:57.705734+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2019-11-01..2019-11-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:00.404291+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2019-12-01..2019-12-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:03.072074+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2020-01-01..2020-01-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:05.729000+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2020-02-01..2020-02-29", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:08.821110+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2020-03-01..2020-03-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:11.462600+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2020-04-01..2020-04-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:14.100938+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2020-05-01..2020-05-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:16.736388+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2020-06-01..2020-06-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:19.385934+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2020-07-01..2020-07-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:22.033463+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2020-08-01..2020-08-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:24.651390+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2020-09-01..2020-09-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:27.313614+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2020-10-01..2020-10-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:29.940693+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2020-11-01..2020-11-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:32.572717+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2020-12-01..2020-12-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:35.277676+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2021-01-01..2021-01-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:37.932376+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2021-02-01..2021-02-28", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:40.704479+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2021-03-01..2021-03-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:43.385488+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2021-04-01..2021-04-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:46.067772+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2021-05-01..2021-05-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:48.713687+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2021-06-01..2021-06-30", "total_count": 10, "incomplete": false, "fetched": "2026-10-08T08:14:51.387653+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2021-07-01..2021-07-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:54.020360+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2021-08-01..2021-08-31", "total_count": 4, "incomplete": false, "fetched": "2026-10-08T08:14:56.719742+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2021-09-01..2021-09-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:14:59.429256+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2021-10-01..2021-10-31", "total_count": 11, "incomplete": false, "fetched": "2026-10-08T08:15:02.275693+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2021-11-01..2021-11-30", "total_count": 9, "incomplete": false, "fetched": "2026-10-08T08:15:05.170303+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2021-12-01..2021-12-31", "total_count": 1, "incomplete": false, "fetched": "2026-10-08T08:15:07.883827+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2022-01-01..2022-01-31", "total_count": 1, "incomplete": false, "fetched": "2026-10-08T08:15:10.608636+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2022-02-01..2022-02-28", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:15:13.247158+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2022-03-01..2022-03-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:15:15.953953+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2022-04-01..2022-04-30", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:15:18.672868+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2022-05-01..2022-05-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:15:21.333544+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2022-06-01..2022-06-30", "total_count": 1, "incomplete": false, "fetched": "2026-10-08T08:15:24.071108+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2022-07-01..2022-07-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:15:26.698292+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2022-08-01..2022-08-31", "total_count": 4, "incomplete": false, "fetched": "2026-10-08T08:15:29.356655+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2022-09-01..2022-09-30", "total_count": 11, "incomplete": false, "fetched": "2026-10-08T08:15:32.269671+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2022-10-01..2022-10-31", "total_count": 0, "incomplete": false, "fetched": "2026-10-08T08:15:34.947430+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2022-11-01..2022-11-30", "total_count": 71, "incomplete": false, "fetched": "2026-10-08T08:15:37.665530+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2022-12-01..2022-12-31", "total_count": 76, "incomplete": false, "fetched": "2026-10-08T08:15:40.446532+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2023-01-01..2023-01-31", "total_count": 94, "incomplete": false, "fetched": "2026-10-08T08:15:43.177429+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2023-02-01..2023-02-28", "total_count": 52, "incomplete": false, "fetched": "2026-10-08T08:15:45.826808+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2023-03-01..2023-03-31", "total_count": 69, "incomplete": false, "fetched": "2026-10-08T08:15:48.505389+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2023-04-01..2023-04-30", "total_count": 64, "incomplete": false, "fetched": "2026-10-08T08:15:51.242849+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2023-05-01..2023-05-31", "total_count": 132, "incomplete": false, "fetched": "2026-10-08T08:15:53.931500+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2023-06-01..2023-06-30", "total_count": 182, "incomplete": false, "fetched": "2026-10-08T08:15:56.826946+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2023-07-01..2023-07-31", "total_count": 100, "incomplete": false, "fetched": "2026-10-08T08:15:59.524893+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2023-08-01..2023-08-31", "total_count": 132, "incomplete": false, "fetched": "2026-10-08T08:16:02.245912+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2023-09-01..2023-09-30", "total_count": 105, "incomplete": false, "fetched": "2026-10-08T08:16:04.914892+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2023-10-01..2023-10-31", "total_count": 136, "incomplete": false, "fetched": "2026-10-08T08:16:07.760938+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2023-11-01..2023-11-30", "total_count": 101, "incomplete": false, "fetched": "2026-10-08T08:16:10.442524+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2023-12-01..2023-12-31", "total_count": 72, "incomplete": false, "fetched": "2026-10-08T08:16:14.111566+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2024-01-01..2024-01-31", "total_count": 96, "incomplete": false, "fetched": "2026-10-08T08:16:16.822542+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2024-02-01..2024-02-29", "total_count": 206, "incomplete": false, "fetched": "2026-10-08T08:16:19.578705+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2024-03-01..2024-03-31", "total_count": 152, "incomplete": false, "fetched": "2026-10-08T08:16:22.322343+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2024-04-01..2024-04-30", "total_count": 292, "incomplete": false, "fetched": "2026-10-08T08:16:25.004199+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2024-05-01..2024-05-31", "total_count": 213, "incomplete": false, "fetched": "2026-10-08T08:16:28.838932+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2024-06-01..2024-06-30", "total_count": 453, "incomplete": false, "fetched": "2026-10-08T08:16:31.530276+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2024-07-01..2024-07-31", "total_count": 191, "incomplete": false, "fetched": "2026-10-08T08:16:34.262243+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2024-08-01..2024-08-31", "total_count": 297, "incomplete": false, "fetched": "2026-10-08T08:16:37.115370+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2024-09-01..2024-09-30", "total_count": 265, "incomplete": false, "fetched": "2026-10-08T08:16:39.802769+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2024-10-01..2024-10-31", "total_count": 302, "incomplete": false, "fetched": "2026-10-08T08:16:42.482256+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2024-11-01..2024-11-30", "total_count": 339, "incomplete": false, "fetched": "2026-10-08T08:16:45.187865+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2024-12-01..2024-12-31", "total_count": 147, "incomplete": false, "fetched": "2026-10-08T08:16:47.890499+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2025-01-01..2025-01-31", "total_count": 274, "incomplete": false, "fetched": "2026-10-08T08:16:50.640814+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2025-02-01..2025-02-28", "total_count": 365, "incomplete": false, "fetched": "2026-10-08T08:16:53.326892+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2025-03-01..2025-03-31", "total_count": 253, "incomplete": false, "fetched": "2026-10-08T08:16:56.025448+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2025-04-01..2025-04-30", "total_count": 199, "incomplete": false, "fetched": "2026-10-08T08:16:58.689217+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2025-05-01..2025-05-31", "total_count": 242, "incomplete": false, "fetched": "2026-10-08T08:17:01.370670+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2025-06-01..2025-06-30", "total_count": 217, "incomplete": false, "fetched": "2026-10-08T08:17:04.067469+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2025-07-01..2025-07-31", "total_count": 185, "incomplete": false, "fetched": "2026-10-08T08:17:06.838363+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2025-08-01..2025-08-31", "total_count": 264, "incomplete": false, "fetched": "2026-10-08T08:17:09.541646+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2025-09-01..2025-09-30", "total_count": 233, "incomplete": false, "fetched": "2026-10-08T08:17:12.224206+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2025-10-01..2025-10-31", "total_count": 346, "incomplete": false, "fetched": "2026-10-08T08:17:14.985701+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2025-11-01..2025-11-30", "total_count": 212, "incomplete": false, "fetched": "2026-10-08T08:17:17.681625+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2025-12-01..2025-12-31", "total_count": 273, "incomplete": false, "fetched": "2026-10-08T08:17:20.403785+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2026-01-01..2026-01-31", "total_count": 329, "incomplete": false, "fetched": "2026-10-08T08:17:23.169769+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2026-02-01..2026-02-28", "total_count": 243, "incomplete": false, "fetched": "2026-10-08T08:17:25.895917+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2026-03-01..2026-03-31", "total_count": 272, "incomplete": false, "fetched": "2026-10-08T08:17:28.542191+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2026-04-01..2026-04-30", "total_count": 281, "incomplete": false, "fetched": "2026-10-08T08:17:31.276297+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2026-05-01..2026-05-31", "total_count": 555, "incomplete": false, "fetched": "2026-10-08T08:17:33.980539+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2026-06-01..2026-06-30", "total_count": 662, "incomplete": false, "fetched": "2026-10-08T08:17:37.076603+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2026-07-01..2026-07-31", "total_count": 345, "incomplete": false, "fetched": "2026-10-08T08:17:39.775068+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2026-08-01..2026-08-31", "total_count": 471, "incomplete": false, "fetched": "2026-10-08T08:17:42.646707+00:00"}
+{"endpoint": "commits", "q": "org:digdir committer-date:2026-09-01..2026-09-30", "total_count": 537, "incomplete": false, "fetched": "2026-10-08T08:17:45.361748+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2020-06-01..2020-06-30", "total_count": 155, "incomplete": false, "fetched": "2026-10-08T08:19:08.203156+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2020-07-01..2020-07-31", "total_count": 608, "incomplete": false, "fetched": "2026-10-08T08:19:11.019522+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2020-08-01..2020-08-31", "total_count": 59, "incomplete": false, "fetched": "2026-10-08T08:19:13.734883+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2020-09-01..2020-09-30", "total_count": 182, "incomplete": false, "fetched": "2026-10-08T08:19:16.524798+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2020-10-01..2020-10-31", "total_count": 69, "incomplete": false, "fetched": "2026-10-08T08:19:19.237391+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2020-11-01..2020-11-30", "total_count": 52, "incomplete": false, "fetched": "2026-10-08T08:19:21.947082+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2020-12-01..2020-12-31", "total_count": 202, "incomplete": false, "fetched": "2026-10-08T08:19:24.992629+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2021-01-01..2021-01-31", "total_count": 181, "incomplete": false, "fetched": "2026-10-08T08:19:27.715782+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2021-02-01..2021-02-28", "total_count": 263, "incomplete": false, "fetched": "2026-10-08T08:19:30.441310+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2021-03-01..2021-03-31", "total_count": 168, "incomplete": false, "fetched": "2026-10-08T08:19:33.237359+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2021-04-01..2021-04-30", "total_count": 163, "incomplete": false, "fetched": "2026-10-08T08:19:35.902775+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2021-05-01..2021-05-31", "total_count": 170, "incomplete": false, "fetched": "2026-10-08T08:19:38.954953+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2021-06-01..2021-06-30", "total_count": 440, "incomplete": false, "fetched": "2026-10-08T08:19:41.651025+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2021-07-01..2021-07-31", "total_count": 415, "incomplete": false, "fetched": "2026-10-08T08:19:44.359862+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2021-08-01..2021-08-31", "total_count": 221, "incomplete": false, "fetched": "2026-10-08T08:19:47.158269+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2021-09-01..2021-09-30", "total_count": 115, "incomplete": false, "fetched": "2026-10-08T08:19:49.837321+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2021-10-01..2021-10-31", "total_count": 154, "incomplete": false, "fetched": "2026-10-08T08:19:52.678102+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2021-11-01..2021-11-30", "total_count": 152, "incomplete": false, "fetched": "2026-10-08T08:19:55.383758+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2021-12-01..2021-12-31", "total_count": 94, "incomplete": false, "fetched": "2026-10-08T08:19:58.088072+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2022-01-01..2022-01-31", "total_count": 282, "incomplete": false, "fetched": "2026-10-08T08:20:01.106609+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2022-02-01..2022-02-28", "total_count": 226, "incomplete": false, "fetched": "2026-10-08T08:20:03.762911+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2022-03-01..2022-03-31", "total_count": 187, "incomplete": false, "fetched": "2026-10-08T08:20:06.443991+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2022-04-01..2022-04-30", "total_count": 191, "incomplete": false, "fetched": "2026-10-08T08:20:09.114577+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2022-05-01..2022-05-31", "total_count": 113, "incomplete": false, "fetched": "2026-10-08T08:20:11.852944+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2022-06-01..2022-06-30", "total_count": 91, "incomplete": false, "fetched": "2026-10-08T08:20:14.583710+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2022-07-01..2022-07-31", "total_count": 88, "incomplete": false, "fetched": "2026-10-08T08:20:17.303966+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2022-08-01..2022-08-31", "total_count": 116, "incomplete": false, "fetched": "2026-10-08T08:20:20.098567+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2022-09-01..2022-09-30", "total_count": 95, "incomplete": false, "fetched": "2026-10-08T08:20:22.821225+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2022-10-01..2022-10-31", "total_count": 103, "incomplete": false, "fetched": "2026-10-08T08:20:25.505061+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2022-11-01..2022-11-30", "total_count": 228, "incomplete": false, "fetched": "2026-10-08T08:20:28.256620+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2022-12-01..2022-12-31", "total_count": 131, "incomplete": false, "fetched": "2026-10-08T08:20:31.076222+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2023-01-01..2023-01-31", "total_count": 212, "incomplete": false, "fetched": "2026-10-08T08:20:33.775136+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2023-02-01..2023-02-28", "total_count": 148, "incomplete": false, "fetched": "2026-10-08T08:20:36.482484+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2023-03-01..2023-03-31", "total_count": 227, "incomplete": false, "fetched": "2026-10-08T08:20:39.195419+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2023-04-01..2023-04-30", "total_count": 104, "incomplete": false, "fetched": "2026-10-08T08:20:41.944439+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2023-05-01..2023-05-31", "total_count": 238, "incomplete": false, "fetched": "2026-10-08T08:20:45.101920+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2023-06-01..2023-06-30", "total_count": 253, "incomplete": false, "fetched": "2026-10-08T08:20:47.793760+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2023-07-01..2023-07-31", "total_count": 249, "incomplete": false, "fetched": "2026-10-08T08:20:50.583455+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2023-08-01..2023-08-31", "total_count": 101, "incomplete": false, "fetched": "2026-10-08T08:20:53.284387+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2023-09-01..2023-09-30", "total_count": 267, "incomplete": false, "fetched": "2026-10-08T08:20:55.970049+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2023-10-01..2023-10-31", "total_count": 291, "incomplete": false, "fetched": "2026-10-08T08:20:58.651044+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2023-11-01..2023-11-30", "total_count": 308, "incomplete": false, "fetched": "2026-10-08T08:21:01.331192+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2023-12-01..2023-12-31", "total_count": 185, "incomplete": false, "fetched": "2026-10-08T08:21:04.071444+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2024-01-01..2024-01-31", "total_count": 267, "incomplete": false, "fetched": "2026-10-08T08:21:06.764789+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2024-02-01..2024-02-29", "total_count": 459, "incomplete": false, "fetched": "2026-10-08T08:21:09.476128+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2024-03-01..2024-03-31", "total_count": 279, "incomplete": false, "fetched": "2026-10-08T08:21:12.209940+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2024-04-01..2024-04-30", "total_count": 213, "incomplete": false, "fetched": "2026-10-08T08:21:14.998752+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2024-05-01..2024-05-31", "total_count": 213, "incomplete": false, "fetched": "2026-10-08T08:21:17.661792+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2024-06-01..2024-06-30", "total_count": 178, "incomplete": false, "fetched": "2026-10-08T08:21:20.383662+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2024-07-01..2024-07-31", "total_count": 491, "incomplete": false, "fetched": "2026-10-08T08:21:23.162549+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2024-08-01..2024-08-31", "total_count": 262, "incomplete": false, "fetched": "2026-10-08T08:21:25.922040+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2024-09-01..2024-09-30", "total_count": 314, "incomplete": false, "fetched": "2026-10-08T08:21:28.603425+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2024-10-01..2024-10-31", "total_count": 486, "incomplete": false, "fetched": "2026-10-08T08:21:31.379707+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2024-11-01..2024-11-30", "total_count": 417, "incomplete": false, "fetched": "2026-10-08T08:21:34.151547+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2024-12-01..2024-12-31", "total_count": 126, "incomplete": false, "fetched": "2026-10-08T08:21:36.810116+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2025-01-01..2025-01-31", "total_count": 460, "incomplete": false, "fetched": "2026-10-08T08:21:39.634702+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2025-02-01..2025-02-28", "total_count": 293, "incomplete": false, "fetched": "2026-10-08T08:21:42.371863+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2025-03-01..2025-03-31", "total_count": 468, "incomplete": false, "fetched": "2026-10-08T08:21:45.067888+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2025-04-01..2025-04-30", "total_count": 351, "incomplete": false, "fetched": "2026-10-08T08:21:47.795650+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2025-05-01..2025-05-31", "total_count": 283, "incomplete": false, "fetched": "2026-10-08T08:21:50.795904+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2025-06-01..2025-06-30", "total_count": 434, "incomplete": false, "fetched": "2026-10-08T08:21:53.491138+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2025-07-01..2025-07-31", "total_count": 194, "incomplete": false, "fetched": "2026-10-08T08:21:56.171361+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2025-08-01..2025-08-31", "total_count": 190, "incomplete": false, "fetched": "2026-10-08T08:21:58.853602+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2025-09-01..2025-09-30", "total_count": 261, "incomplete": false, "fetched": "2026-10-08T08:22:01.617856+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2025-10-01..2025-10-31", "total_count": 374, "incomplete": false, "fetched": "2026-10-08T08:22:04.331477+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2025-11-01..2025-11-30", "total_count": 229, "incomplete": false, "fetched": "2026-10-08T08:22:07.048440+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2025-12-01..2025-12-31", "total_count": 186, "incomplete": false, "fetched": "2026-10-08T08:22:09.762054+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2026-01-01..2026-01-31", "total_count": 224, "incomplete": false, "fetched": "2026-10-08T08:22:12.491176+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2026-02-01..2026-02-28", "total_count": 399, "incomplete": false, "fetched": "2026-10-08T08:22:15.239962+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2026-03-01..2026-03-31", "total_count": 309, "incomplete": false, "fetched": "2026-10-08T08:22:17.889756+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2026-04-01..2026-04-30", "total_count": 399, "incomplete": false, "fetched": "2026-10-08T08:22:20.673180+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2026-05-01..2026-05-31", "total_count": 335, "incomplete": false, "fetched": "2026-10-08T08:22:23.428725+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2026-06-01..2026-06-30", "total_count": 274, "incomplete": false, "fetched": "2026-10-08T08:22:26.138522+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2026-07-01..2026-07-31", "total_count": 170, "incomplete": false, "fetched": "2026-10-08T08:22:28.887608+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2026-08-01..2026-08-31", "total_count": 467, "incomplete": false, "fetched": "2026-10-08T08:22:31.631560+00:00"}
+{"endpoint": "commits", "q": "org:felleslosninger committer-date:2026-09-01..2026-09-30", "total_count": 513, "incomplete": false, "fetched": "2026-10-08T08:22:34.370326+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2016-11-01..2016-11-30", "total_count": 534, "incomplete": false, "fetched": "2026-10-08T08:25:56.488740+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2016-12-01..2016-12-31", "total_count": 421, "incomplete": false, "fetched": "2026-10-08T08:26:02.451702+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2017-01-01..2017-01-31", "total_count": 724, "incomplete": false, "fetched": "2026-10-08T08:27:02.794397+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2017-02-01..2017-02-28", "total_count": 642, "incomplete": false, "fetched": "2026-10-08T08:27:05.549514+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2017-03-01..2017-03-31", "total_count": 575, "incomplete": false, "fetched": "2026-10-08T08:27:08.482593+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2017-04-01..2017-04-30", "total_count": 620, "incomplete": false, "fetched": "2026-10-08T08:27:11.257710+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2017-05-01..2017-05-31", "total_count": 641, "incomplete": false, "fetched": "2026-10-08T08:27:13.945883+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2017-06-01..2017-06-30", "total_count": 533, "incomplete": false, "fetched": "2026-10-08T08:27:16.907853+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2017-07-01..2017-07-31", "total_count": 190, "incomplete": false, "fetched": "2026-10-08T08:27:19.789198+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2017-08-01..2017-08-31", "total_count": 599, "incomplete": false, "fetched": "2026-10-08T08:27:22.593374+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2017-09-01..2017-09-30", "total_count": 581, "incomplete": false, "fetched": "2026-10-08T08:27:25.448685+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2017-10-01..2017-10-31", "total_count": 419, "incomplete": false, "fetched": "2026-10-08T08:27:28.399878+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2017-11-01..2017-11-30", "total_count": 394, "incomplete": false, "fetched": "2026-10-08T08:27:31.299213+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2017-12-01..2017-12-31", "total_count": 228, "incomplete": false, "fetched": "2026-10-08T08:27:34.258184+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2018-01-01..2018-01-31", "total_count": 301, "incomplete": false, "fetched": "2026-10-08T08:27:40.015599+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2018-02-01..2018-02-28", "total_count": 257, "incomplete": false, "fetched": "2026-10-08T08:27:42.886077+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2018-03-01..2018-03-31", "total_count": 266, "incomplete": false, "fetched": "2026-10-08T08:27:45.724993+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2018-04-01..2018-04-30", "total_count": 155, "incomplete": false, "fetched": "2026-10-08T08:27:48.938406+00:00"}
+{"endpoint": "commits", "q": "org:entur committer-date:2018-05-01..2018-05-31", "total_count": 183, "incomplete": false, "fetched": "2026-10-08T08:27:52.530263+00:00"}

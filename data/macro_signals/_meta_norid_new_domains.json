@@ -1,0 +1,10 @@
+{
+ "source": "Norid AS, Nokkeltall",
+ "url": "https://www.norid.no/en/om-domenenavn/statistics/key-figures/",
+ "api": "https://www.norid.no/wp-json/nrd/v1/dataset/table_antall-nyregistreringer-per-maned",
+ "fetched": "2026-10-08",
+ "updated_at": "2026-10-07 08:15:17",
+ "label": "Antall nye domener",
+ "filter": "Alle nyregistrerte domenenavn per maaned, hele landet",
+ "note": "Norid nevner tre regelendringer: feb. 2001, feb. 2004 (nasjonale tegn), juni 2014 (privatpersoner direkte under .no)."
+}

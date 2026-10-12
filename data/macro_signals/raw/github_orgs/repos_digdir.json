@@ -1,0 +1,266 @@
+[
+ {
+  "full_name": "digdir/portfolio",
+  "created_at": "2021-06-02T16:53:27Z",
+  "pushed_at": "2025-07-23T08:44:06Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/designsystemet",
+  "created_at": "2022-08-30T08:05:21Z",
+  "pushed_at": "2026-10-08T07:40:15Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "digdir/baksia",
+  "created_at": "2023-01-25T13:27:33Z",
+  "pushed_at": "2026-10-06T08:30:40Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "digdir/roadmap",
+  "created_at": "2023-03-15T12:54:00Z",
+  "pushed_at": "2026-01-27T09:18:55Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/innsiktsbibliotek",
+  "created_at": "2023-04-13T12:16:06Z",
+  "pushed_at": "2024-05-13T08:37:59Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/renovate-config",
+  "created_at": "2023-06-30T12:33:04Z",
+  "pushed_at": "2025-12-23T09:31:56Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/digdir-ai-lab",
+  "created_at": "2023-08-08T08:42:59Z",
+  "pushed_at": "2025-10-06T05:45:39Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/release.digdir.no",
+  "created_at": "2023-12-05T12:58:00Z",
+  "pushed_at": "2026-10-08T08:25:47Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "digdir/digdir-ai-assistants",
+  "created_at": "2024-02-14T14:55:15Z",
+  "pushed_at": "2026-10-07T17:27:45Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "digdir/pg-portaler-og-brukeropplevelse",
+  "created_at": "2024-10-22T14:26:23Z",
+  "pushed_at": "2026-03-14T18:26:49Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/user-experience",
+  "created_at": "2024-11-07T12:49:27Z",
+  "pushed_at": "2024-11-07T12:49:27Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/bod-roadmapreport",
+  "created_at": "2025-01-02T12:15:05Z",
+  "pushed_at": "2026-09-16T22:10:53Z",
+  "fork": false,
+  "archived": false,
+  "language": "C#"
+ },
+ {
+  "full_name": "digdir/norge.no",
+  "created_at": "2025-03-20T07:21:34Z",
+  "pushed_at": "2026-06-30T10:57:51Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "digdir/vss-data",
+  "created_at": "2025-03-27T09:57:09Z",
+  "pushed_at": "2025-07-18T12:28:25Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "digdir/digdir-chunker",
+  "created_at": "2025-04-10T15:57:17Z",
+  "pushed_at": "2026-10-06T19:45:54Z",
+  "fork": false,
+  "archived": false,
+  "language": "PHP"
+ },
+ {
+  "full_name": "digdir/digdir-ai-mcp-servers",
+  "created_at": "2025-04-28T08:48:01Z",
+  "pushed_at": "2025-04-28T08:56:24Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/digdir-agents",
+  "created_at": "2025-08-11T10:46:12Z",
+  "pushed_at": "2026-10-07T18:21:35Z",
+  "fork": false,
+  "archived": false,
+  "language": "Rust"
+ },
+ {
+  "full_name": "digdir/digdir.no",
+  "created_at": "2025-09-23T07:37:38Z",
+  "pushed_at": "2026-09-14T07:59:24Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/digdir-ai-components",
+  "created_at": "2025-09-30T12:12:59Z",
+  "pushed_at": "2026-03-01T16:00:21Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "digdir/designsystemet-mcp",
+  "created_at": "2025-10-16T06:53:43Z",
+  "pushed_at": "2026-02-14T09:34:13Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/uustatus.no",
+  "created_at": "2025-11-03T09:21:35Z",
+  "pushed_at": "2025-11-05T22:32:04Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/digdir-headless-rag",
+  "created_at": "2025-11-28T07:44:34Z",
+  "pushed_at": "2026-10-06T15:53:36Z",
+  "fork": false,
+  "archived": false,
+  "language": "Clojure"
+ },
+ {
+  "full_name": "digdir/digdir-rag-frontend",
+  "created_at": "2025-12-01T08:49:21Z",
+  "pushed_at": "2026-04-07T05:07:54Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "digdir/kunnskapsassistenten",
+  "created_at": "2025-12-12T08:57:05Z",
+  "pushed_at": "2026-10-07T13:34:15Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "digdir/ki.norge.no",
+  "created_at": "2026-01-12T09:48:23Z",
+  "pushed_at": "2026-10-08T06:45:04Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "digdir/.github",
+  "created_at": "2026-01-28T09:58:16Z",
+  "pushed_at": "2026-01-28T10:01:53Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/skills",
+  "created_at": "2026-03-19T11:49:29Z",
+  "pushed_at": "2026-03-26T15:38:29Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "digdir/nasjonal-arkitektur",
+  "created_at": "2026-04-29T09:26:35Z",
+  "pushed_at": "2026-09-30T17:48:53Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "digdir/ASR",
+  "created_at": "2026-05-05T11:36:56Z",
+  "pushed_at": "2026-10-06T13:28:47Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "digdir/varde",
+  "created_at": "2026-05-12T10:11:47Z",
+  "pushed_at": "2026-10-08T08:25:42Z",
+  "fork": false,
+  "archived": false,
+  "language": "CSS"
+ },
+ {
+  "full_name": "digdir/saman",
+  "created_at": "2026-09-15T13:44:24Z",
+  "pushed_at": "2026-10-06T06:22:01Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "digdir/libkrunfw",
+  "created_at": "2026-09-25T08:26:18Z",
+  "pushed_at": "2026-10-04T12:13:56Z",
+  "fork": true,
+  "archived": false,
+  "language": "C"
+ },
+ {
+  "full_name": "digdir/microsandbox",
+  "created_at": "2026-09-25T08:28:03Z",
+  "pushed_at": "2026-10-04T12:14:03Z",
+  "fork": true,
+  "archived": false,
+  "language": "Rust"
+ }
+]

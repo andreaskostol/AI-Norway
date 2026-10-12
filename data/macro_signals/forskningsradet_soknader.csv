@@ -1,0 +1,1117 @@
+metric,dim,group,period,value
+applications,all,all,1989,1
+applications,all,all,1991,1
+applications,all,all,1994,15
+applications,all,all,1995,2
+applications,all,all,1996,5
+applications,all,all,1997,4
+applications,all,all,1998,1
+applications,all,all,1999,2
+applications,all,all,2000,4
+applications,all,all,2001,107
+applications,all,all,2002,30
+applications,all,all,2003,40
+applications,all,all,2004,96
+applications,all,all,2005,340
+applications,all,all,2006,840
+applications,all,all,2007,1951
+applications,all,all,2008,2695
+applications,all,all,2009,3580
+applications,all,all,2010,3883
+applications,all,all,2011,4255
+applications,all,all,2012,5048
+applications,all,all,2013,5002
+applications,all,all,2014,4631
+applications,all,all,2015,5124
+applications,all,all,2016,5644
+applications,all,all,2017,5588
+applications,all,all,2018,5165
+applications,all,all,2019,5622
+applications,all,all,2020,5525
+applications,all,all,2021,5435
+applications,all,all,2022,4340
+applications,all,all,2023,3299
+applications,all,all,2024,3568
+applications,all,all,2025,4723
+applications,all,all,2026,1695
+applications,soknadstype,Annen institusjonsstøtte,2025,1
+applications,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),1995,1
+applications,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),2006,1
+applications,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),2008,2
+applications,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),2009,5
+applications,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),2011,4
+applications,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),2012,1
+applications,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),2013,1
+applications,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2005,1
+applications,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2006,23
+applications,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2007,10
+applications,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2008,18
+applications,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2009,48
+applications,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2010,86
+applications,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2011,84
+applications,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2012,138
+applications,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2013,18
+applications,soknadstype,Annen støtte (t.o.m. 2019),1998,1
+applications,soknadstype,Annen støtte (t.o.m. 2019),2006,5
+applications,soknadstype,Annen støtte (t.o.m. 2019),2007,10
+applications,soknadstype,Annen støtte (t.o.m. 2019),2008,8
+applications,soknadstype,Annen støtte (t.o.m. 2019),2009,34
+applications,soknadstype,Annen støtte (t.o.m. 2019),2010,98
+applications,soknadstype,Annen støtte (t.o.m. 2019),2011,123
+applications,soknadstype,Annen støtte (t.o.m. 2019),2012,30
+applications,soknadstype,Annen støtte (t.o.m. 2019),2013,231
+applications,soknadstype,Annen støtte (t.o.m. 2019),2014,331
+applications,soknadstype,Annen støtte (t.o.m. 2019),2015,285
+applications,soknadstype,Annen støtte (t.o.m. 2019),2016,668
+applications,soknadstype,Annen støtte (t.o.m. 2019),2017,375
+applications,soknadstype,Annen støtte (t.o.m. 2019),2018,415
+applications,soknadstype,Annen støtte (t.o.m. 2019),2019,108
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2002,2
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2003,10
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2004,16
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2005,7
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2006,19
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2007,134
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2008,264
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2009,255
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2010,252
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2011,205
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2012,224
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2013,283
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2014,199
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2015,31
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2016,27
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2017,21
+applications,soknadstype,Diverse personlige stipend (t.o.m. 2018),2018,16
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2007,1
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2008,2
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2009,16
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2010,108
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2011,102
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2012,96
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2013,197
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2014,134
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2015,206
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2016,170
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2017,206
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2018,100
+applications,soknadstype,Forprosjekt (t.o.m. 2019),2019,4
+applications,soknadstype,Forskerprosjekt,1997,1
+applications,soknadstype,Forskerprosjekt,2003,10
+applications,soknadstype,Forskerprosjekt,2004,49
+applications,soknadstype,Forskerprosjekt,2005,110
+applications,soknadstype,Forskerprosjekt,2006,497
+applications,soknadstype,Forskerprosjekt,2007,1359
+applications,soknadstype,Forskerprosjekt,2008,1716
+applications,soknadstype,Forskerprosjekt,2009,1993
+applications,soknadstype,Forskerprosjekt,2010,1850
+applications,soknadstype,Forskerprosjekt,2011,1913
+applications,soknadstype,Forskerprosjekt,2012,2178
+applications,soknadstype,Forskerprosjekt,2013,2555
+applications,soknadstype,Forskerprosjekt,2014,2002
+applications,soknadstype,Forskerprosjekt,2015,2544
+applications,soknadstype,Forskerprosjekt,2016,2475
+applications,soknadstype,Forskerprosjekt,2017,2904
+applications,soknadstype,Forskerprosjekt,2018,2527
+applications,soknadstype,Forskerprosjekt,2019,2936
+applications,soknadstype,Forskerprosjekt,2020,2427
+applications,soknadstype,Forskerprosjekt,2021,2496
+applications,soknadstype,Forskerprosjekt,2022,2116
+applications,soknadstype,Forskerprosjekt,2023,1135
+applications,soknadstype,Forskerprosjekt,2024,1024
+applications,soknadstype,Forskerprosjekt,2025,1402
+applications,soknadstype,Forskerprosjekt,2026,574
+applications,soknadstype,Forskningsinfrastruktur,2004,6
+applications,soknadstype,Forskningsinfrastruktur,2005,9
+applications,soknadstype,Forskningsinfrastruktur,2006,14
+applications,soknadstype,Forskningsinfrastruktur,2007,24
+applications,soknadstype,Forskningsinfrastruktur,2009,230
+applications,soknadstype,Forskningsinfrastruktur,2010,150
+applications,soknadstype,Forskningsinfrastruktur,2011,12
+applications,soknadstype,Forskningsinfrastruktur,2012,69
+applications,soknadstype,Forskningsinfrastruktur,2013,1
+applications,soknadstype,Forskningsinfrastruktur,2014,88
+applications,soknadstype,Forskningsinfrastruktur,2015,3
+applications,soknadstype,Forskningsinfrastruktur,2016,93
+applications,soknadstype,Forskningsinfrastruktur,2017,3
+applications,soknadstype,Forskningsinfrastruktur,2018,116
+applications,soknadstype,Forskningsinfrastruktur,2019,2
+applications,soknadstype,Forskningsinfrastruktur,2020,123
+applications,soknadstype,Forskningsinfrastruktur,2023,161
+applications,soknadstype,Forskningsinfrastruktur,2025,102
+applications,soknadstype,Forskningssenter,2001,95
+applications,soknadstype,Forskningssenter,2002,18
+applications,soknadstype,Forskningssenter,2005,130
+applications,soknadstype,Forskningssenter,2006,26
+applications,soknadstype,Forskningssenter,2008,40
+applications,soknadstype,Forskningssenter,2010,49
+applications,soknadstype,Forskningssenter,2011,110
+applications,soknadstype,Forskningssenter,2012,34
+applications,soknadstype,Forskningssenter,2013,3
+applications,soknadstype,Forskningssenter,2014,57
+applications,soknadstype,Forskningssenter,2015,133
+applications,soknadstype,Forskningssenter,2016,34
+applications,soknadstype,Forskningssenter,2018,22
+applications,soknadstype,Forskningssenter,2019,71
+applications,soknadstype,Forskningssenter,2020,127
+applications,soknadstype,Forskningssenter,2021,61
+applications,soknadstype,Forskningssenter,2022,8
+applications,soknadstype,Forskningssenter,2023,37
+applications,soknadstype,Forskningssenter,2024,65
+applications,soknadstype,Forskningssenter,2025,192
+applications,soknadstype,Grunnbevilgninger,1989,1
+applications,soknadstype,Grunnbevilgninger,1994,13
+applications,soknadstype,Grunnbevilgninger,1996,4
+applications,soknadstype,Grunnbevilgninger,1999,1
+applications,soknadstype,Grunnbevilgninger,2001,1
+applications,soknadstype,Grunnbevilgninger,2002,3
+applications,soknadstype,Grunnbevilgninger,2003,5
+applications,soknadstype,Grunnbevilgninger,2009,23
+applications,soknadstype,Grunnbevilgninger,2011,4
+applications,soknadstype,Grunnbevilgninger,2012,20
+applications,soknadstype,Grunnbevilgninger,2013,24
+applications,soknadstype,Grunnbevilgninger,2014,19
+applications,soknadstype,Grunnbevilgninger,2015,49
+applications,soknadstype,Grunnbevilgninger,2016,19
+applications,soknadstype,Grunnbevilgninger,2017,26
+applications,soknadstype,Grunnbevilgninger,2018,6
+applications,soknadstype,Grunnbevilgninger,2019,16
+applications,soknadstype,Grunnbevilgninger,2020,46
+applications,soknadstype,Grunnbevilgninger,2021,2
+applications,soknadstype,Grunnbevilgninger,2022,1
+applications,soknadstype,Grunnbevilgninger,2023,94
+applications,soknadstype,Grunnbevilgninger,2024,8
+applications,soknadstype,Ingen søknadstype,1994,1
+applications,soknadstype,Ingen søknadstype,1995,1
+applications,soknadstype,Ingen søknadstype,1997,3
+applications,soknadstype,Ingen søknadstype,1999,1
+applications,soknadstype,Ingen søknadstype,2000,1
+applications,soknadstype,Ingen søknadstype,2001,10
+applications,soknadstype,Ingen søknadstype,2002,5
+applications,soknadstype,Ingen søknadstype,2003,4
+applications,soknadstype,Ingen søknadstype,2004,1
+applications,soknadstype,Ingen søknadstype,2005,2
+applications,soknadstype,Ingen søknadstype,2006,17
+applications,soknadstype,Ingen søknadstype,2007,17
+applications,soknadstype,Ingen søknadstype,2008,23
+applications,soknadstype,Ingen søknadstype,2009,13
+applications,soknadstype,Ingen søknadstype,2010,23
+applications,soknadstype,Ingen søknadstype,2011,36
+applications,soknadstype,Ingen søknadstype,2012,37
+applications,soknadstype,Ingen søknadstype,2013,39
+applications,soknadstype,Ingen søknadstype,2014,42
+applications,soknadstype,Ingen søknadstype,2015,33
+applications,soknadstype,Ingen søknadstype,2016,41
+applications,soknadstype,Ingen søknadstype,2017,53
+applications,soknadstype,Ingen søknadstype,2018,79
+applications,soknadstype,Ingen søknadstype,2019,33
+applications,soknadstype,Ingen søknadstype,2020,25
+applications,soknadstype,Ingen søknadstype,2021,31
+applications,soknadstype,Ingen søknadstype,2022,28
+applications,soknadstype,Ingen søknadstype,2023,10
+applications,soknadstype,Ingen søknadstype,2024,5
+applications,soknadstype,Ingen søknadstype,2025,39
+applications,soknadstype,Ingen søknadstype,2026,10
+applications,soknadstype,Innovasjonsprosjekt,2004,2
+applications,soknadstype,Innovasjonsprosjekt,2005,19
+applications,soknadstype,Innovasjonsprosjekt,2006,64
+applications,soknadstype,Innovasjonsprosjekt,2007,141
+applications,soknadstype,Innovasjonsprosjekt,2008,269
+applications,soknadstype,Innovasjonsprosjekt,2009,339
+applications,soknadstype,Innovasjonsprosjekt,2010,406
+applications,soknadstype,Innovasjonsprosjekt,2011,515
+applications,soknadstype,Innovasjonsprosjekt,2012,550
+applications,soknadstype,Innovasjonsprosjekt,2013,511
+applications,soknadstype,Innovasjonsprosjekt,2014,478
+applications,soknadstype,Innovasjonsprosjekt,2015,640
+applications,soknadstype,Innovasjonsprosjekt,2016,763
+applications,soknadstype,Innovasjonsprosjekt,2017,615
+applications,soknadstype,Innovasjonsprosjekt,2018,648
+applications,soknadstype,Innovasjonsprosjekt,2019,614
+applications,soknadstype,Innovasjonsprosjekt,2020,691
+applications,soknadstype,Innovasjonsprosjekt,2021,689
+applications,soknadstype,Innovasjonsprosjekt,2022,518
+applications,soknadstype,Innovasjonsprosjekt,2023,575
+applications,soknadstype,Innovasjonsprosjekt,2024,699
+applications,soknadstype,Innovasjonsprosjekt,2025,644
+applications,soknadstype,Innovasjonsprosjekt,2026,131
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2001,1
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2002,1
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2003,3
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2004,2
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2005,13
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2006,39
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2007,80
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2008,22
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2009,115
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2010,48
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2011,28
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2012,128
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2013,12
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2014,62
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2015,7
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2016,16
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2017,68
+applications,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2018,58
+applications,soknadstype,Internasjonale utlysninger,2003,7
+applications,soknadstype,Internasjonale utlysninger,2004,18
+applications,soknadstype,Internasjonale utlysninger,2005,18
+applications,soknadstype,Internasjonale utlysninger,2006,41
+applications,soknadstype,Internasjonale utlysninger,2007,38
+applications,soknadstype,Internasjonale utlysninger,2008,8
+applications,soknadstype,Internasjonale utlysninger,2012,4
+applications,soknadstype,Internasjonale utlysninger,2013,27
+applications,soknadstype,Internasjonale utlysninger,2014,23
+applications,soknadstype,Internasjonale utlysninger,2015,10
+applications,soknadstype,Internasjonale utlysninger,2016,6
+applications,soknadstype,Internasjonale utlysninger,2018,5
+applications,soknadstype,Internasjonale utlysninger,2019,107
+applications,soknadstype,Internasjonale utlysninger,2020,158
+applications,soknadstype,Internasjonale utlysninger,2021,163
+applications,soknadstype,Internasjonale utlysninger,2022,95
+applications,soknadstype,Internasjonale utlysninger,2023,119
+applications,soknadstype,Internasjonale utlysninger,2024,146
+applications,soknadstype,Internasjonale utlysninger,2025,180
+applications,soknadstype,Internasjonale utlysninger,2026,56
+applications,soknadstype,Kommersialiseringsprosjekt,2007,1
+applications,soknadstype,Kommersialiseringsprosjekt,2008,5
+applications,soknadstype,Kommersialiseringsprosjekt,2009,64
+applications,soknadstype,Kommersialiseringsprosjekt,2010,110
+applications,soknadstype,Kommersialiseringsprosjekt,2011,83
+applications,soknadstype,Kommersialiseringsprosjekt,2012,55
+applications,soknadstype,Kommersialiseringsprosjekt,2013,68
+applications,soknadstype,Kommersialiseringsprosjekt,2014,83
+applications,soknadstype,Kommersialiseringsprosjekt,2015,90
+applications,soknadstype,Kommersialiseringsprosjekt,2016,167
+applications,soknadstype,Kommersialiseringsprosjekt,2017,175
+applications,soknadstype,Kommersialiseringsprosjekt,2018,100
+applications,soknadstype,Kommersialiseringsprosjekt,2019,116
+applications,soknadstype,Kommersialiseringsprosjekt,2020,141
+applications,soknadstype,Kommersialiseringsprosjekt,2021,185
+applications,soknadstype,Kommersialiseringsprosjekt,2022,115
+applications,soknadstype,Kommersialiseringsprosjekt,2023,205
+applications,soknadstype,Kommersialiseringsprosjekt,2024,237
+applications,soknadstype,Kommersialiseringsprosjekt,2025,217
+applications,soknadstype,Kommersialiseringsprosjekt,2026,114
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2004,1
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2005,25
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2006,79
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2007,120
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2008,218
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2009,198
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2010,175
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2011,144
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2012,91
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2013,227
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2014,124
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2015,133
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2016,132
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2017,113
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2018,111
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2019,495
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2020,567
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2021,612
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2022,562
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2023,436
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2024,484
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2025,658
+applications,soknadstype,Kompetanse- og samarbeidsprosjekt,2026,55
+applications,soknadstype,Koordinerings- og støtteaktivitet,1991,1
+applications,soknadstype,Koordinerings- og støtteaktivitet,1994,1
+applications,soknadstype,Koordinerings- og støtteaktivitet,1996,1
+applications,soknadstype,Koordinerings- og støtteaktivitet,2000,3
+applications,soknadstype,Koordinerings- og støtteaktivitet,2002,1
+applications,soknadstype,Koordinerings- og støtteaktivitet,2003,1
+applications,soknadstype,Koordinerings- og støtteaktivitet,2004,1
+applications,soknadstype,Koordinerings- og støtteaktivitet,2005,5
+applications,soknadstype,Koordinerings- og støtteaktivitet,2006,14
+applications,soknadstype,Koordinerings- og støtteaktivitet,2007,15
+applications,soknadstype,Koordinerings- og støtteaktivitet,2008,84
+applications,soknadstype,Koordinerings- og støtteaktivitet,2009,217
+applications,soknadstype,Koordinerings- og støtteaktivitet,2010,485
+applications,soknadstype,Koordinerings- og støtteaktivitet,2011,856
+applications,soknadstype,Koordinerings- og støtteaktivitet,2012,1338
+applications,soknadstype,Koordinerings- og støtteaktivitet,2013,756
+applications,soknadstype,Koordinerings- og støtteaktivitet,2014,945
+applications,soknadstype,Koordinerings- og støtteaktivitet,2015,921
+applications,soknadstype,Koordinerings- og støtteaktivitet,2016,1001
+applications,soknadstype,Koordinerings- og støtteaktivitet,2017,993
+applications,soknadstype,Koordinerings- og støtteaktivitet,2018,937
+applications,soknadstype,Koordinerings- og støtteaktivitet,2019,1098
+applications,soknadstype,Koordinerings- og støtteaktivitet,2020,1214
+applications,soknadstype,Koordinerings- og støtteaktivitet,2021,1185
+applications,soknadstype,Koordinerings- og støtteaktivitet,2022,886
+applications,soknadstype,Koordinerings- og støtteaktivitet,2023,514
+applications,soknadstype,Koordinerings- og støtteaktivitet,2024,882
+applications,soknadstype,Koordinerings- og støtteaktivitet,2025,1276
+applications,soknadstype,Koordinerings- og støtteaktivitet,2026,753
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2005,1
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2006,1
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2007,1
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2008,16
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2009,30
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2010,43
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2011,36
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2012,55
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2013,49
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2014,44
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2015,39
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2016,32
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2017,36
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2018,25
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2019,22
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2020,6
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2021,11
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2022,11
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2023,13
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2024,18
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2025,12
+applications,soknadstype,Støtte fra andre enn Forskningsrådet,2026,2
+applications,sektor,Helseforetak,2001,2
+applications,sektor,Helseforetak,2002,1
+applications,sektor,Helseforetak,2005,15
+applications,sektor,Helseforetak,2006,30
+applications,sektor,Helseforetak,2007,48
+applications,sektor,Helseforetak,2008,117
+applications,sektor,Helseforetak,2009,125
+applications,sektor,Helseforetak,2010,117
+applications,sektor,Helseforetak,2011,156
+applications,sektor,Helseforetak,2012,172
+applications,sektor,Helseforetak,2013,233
+applications,sektor,Helseforetak,2014,138
+applications,sektor,Helseforetak,2015,188
+applications,sektor,Helseforetak,2016,227
+applications,sektor,Helseforetak,2017,246
+applications,sektor,Helseforetak,2018,247
+applications,sektor,Helseforetak,2019,247
+applications,sektor,Helseforetak,2020,214
+applications,sektor,Helseforetak,2021,224
+applications,sektor,Helseforetak,2022,210
+applications,sektor,Helseforetak,2023,137
+applications,sektor,Helseforetak,2024,98
+applications,sektor,Helseforetak,2025,134
+applications,sektor,Helseforetak,2026,58
+applications,sektor,Instituttsektor,1989,1
+applications,sektor,Instituttsektor,1994,14
+applications,sektor,Instituttsektor,1995,2
+applications,sektor,Instituttsektor,1996,4
+applications,sektor,Instituttsektor,1997,1
+applications,sektor,Instituttsektor,2001,33
+applications,sektor,Instituttsektor,2002,7
+applications,sektor,Instituttsektor,2003,17
+applications,sektor,Instituttsektor,2004,33
+applications,sektor,Instituttsektor,2005,118
+applications,sektor,Instituttsektor,2006,261
+applications,sektor,Instituttsektor,2007,593
+applications,sektor,Instituttsektor,2008,882
+applications,sektor,Instituttsektor,2009,1125
+applications,sektor,Instituttsektor,2010,1166
+applications,sektor,Instituttsektor,2011,1018
+applications,sektor,Instituttsektor,2012,1262
+applications,sektor,Instituttsektor,2013,1522
+applications,sektor,Instituttsektor,2014,1288
+applications,sektor,Instituttsektor,2015,1367
+applications,sektor,Instituttsektor,2016,1445
+applications,sektor,Instituttsektor,2017,1397
+applications,sektor,Instituttsektor,2018,1228
+applications,sektor,Instituttsektor,2019,1398
+applications,sektor,Instituttsektor,2020,1333
+applications,sektor,Instituttsektor,2021,1288
+applications,sektor,Instituttsektor,2022,1004
+applications,sektor,Instituttsektor,2023,923
+applications,sektor,Instituttsektor,2024,968
+applications,sektor,Instituttsektor,2025,1306
+applications,sektor,Instituttsektor,2026,403
+applications,sektor,Næringsliv,1998,1
+applications,sektor,Næringsliv,2001,1
+applications,sektor,Næringsliv,2004,3
+applications,sektor,Næringsliv,2005,19
+applications,sektor,Næringsliv,2006,56
+applications,sektor,Næringsliv,2007,132
+applications,sektor,Næringsliv,2008,267
+applications,sektor,Næringsliv,2009,371
+applications,sektor,Næringsliv,2010,545
+applications,sektor,Næringsliv,2011,760
+applications,sektor,Næringsliv,2012,794
+applications,sektor,Næringsliv,2013,652
+applications,sektor,Næringsliv,2014,841
+applications,sektor,Næringsliv,2015,949
+applications,sektor,Næringsliv,2016,1213
+applications,sektor,Næringsliv,2017,1014
+applications,sektor,Næringsliv,2018,986
+applications,sektor,Næringsliv,2019,929
+applications,sektor,Næringsliv,2020,1068
+applications,sektor,Næringsliv,2021,1172
+applications,sektor,Næringsliv,2022,727
+applications,sektor,Næringsliv,2023,669
+applications,sektor,Næringsliv,2024,845
+applications,sektor,Næringsliv,2025,711
+applications,sektor,Næringsliv,2026,263
+applications,sektor,Offentlig sektor,1999,1
+applications,sektor,Offentlig sektor,2004,1
+applications,sektor,Offentlig sektor,2005,2
+applications,sektor,Offentlig sektor,2006,5
+applications,sektor,Offentlig sektor,2007,6
+applications,sektor,Offentlig sektor,2008,8
+applications,sektor,Offentlig sektor,2009,11
+applications,sektor,Offentlig sektor,2010,27
+applications,sektor,Offentlig sektor,2011,31
+applications,sektor,Offentlig sektor,2012,32
+applications,sektor,Offentlig sektor,2013,18
+applications,sektor,Offentlig sektor,2014,54
+applications,sektor,Offentlig sektor,2015,61
+applications,sektor,Offentlig sektor,2016,106
+applications,sektor,Offentlig sektor,2017,185
+applications,sektor,Offentlig sektor,2018,218
+applications,sektor,Offentlig sektor,2019,163
+applications,sektor,Offentlig sektor,2020,116
+applications,sektor,Offentlig sektor,2021,90
+applications,sektor,Offentlig sektor,2022,119
+applications,sektor,Offentlig sektor,2023,70
+applications,sektor,Offentlig sektor,2024,90
+applications,sektor,Offentlig sektor,2025,124
+applications,sektor,Offentlig sektor,2026,74
+applications,sektor,UoH-sektor,1997,1
+applications,sektor,UoH-sektor,1999,1
+applications,sektor,UoH-sektor,2000,1
+applications,sektor,UoH-sektor,2001,69
+applications,sektor,UoH-sektor,2002,21
+applications,sektor,UoH-sektor,2003,23
+applications,sektor,UoH-sektor,2004,59
+applications,sektor,UoH-sektor,2005,179
+applications,sektor,UoH-sektor,2006,476
+applications,sektor,UoH-sektor,2007,1126
+applications,sektor,UoH-sektor,2008,1345
+applications,sektor,UoH-sektor,2009,1820
+applications,sektor,UoH-sektor,2010,1749
+applications,sektor,UoH-sektor,2011,1990
+applications,sektor,UoH-sektor,2012,2472
+applications,sektor,UoH-sektor,2013,2322
+applications,sektor,UoH-sektor,2014,2075
+applications,sektor,UoH-sektor,2015,2381
+applications,sektor,UoH-sektor,2016,2472
+applications,sektor,UoH-sektor,2017,2573
+applications,sektor,UoH-sektor,2018,2349
+applications,sektor,UoH-sektor,2019,2748
+applications,sektor,UoH-sektor,2020,2650
+applications,sektor,UoH-sektor,2021,2493
+applications,sektor,UoH-sektor,2022,2139
+applications,sektor,UoH-sektor,2023,1363
+applications,sektor,UoH-sektor,2024,1364
+applications,sektor,UoH-sektor,2025,2162
+applications,sektor,UoH-sektor,2026,721
+applications,sektor,Utlandet,1991,1
+applications,sektor,Utlandet,1996,1
+applications,sektor,Utlandet,2000,1
+applications,sektor,Utlandet,2005,2
+applications,sektor,Utlandet,2006,2
+applications,sektor,Utlandet,2007,14
+applications,sektor,Utlandet,2008,43
+applications,sektor,Utlandet,2009,23
+applications,sektor,Utlandet,2010,103
+applications,sektor,Utlandet,2011,130
+applications,sektor,Utlandet,2012,181
+applications,sektor,Utlandet,2013,112
+applications,sektor,Utlandet,2014,95
+applications,sektor,Utlandet,2015,21
+applications,sektor,Utlandet,2016,13
+applications,sektor,Utlandet,2017,2
+applications,sektor,Utlandet,2018,3
+applications,sektor,Utlandet,2019,4
+applications,sektor,Utlandet,2020,1
+applications,sektor,Utlandet,2021,3
+applications,sektor,Utlandet,2022,1
+applications,sektor,Utlandet,2025,11
+applications,sektor,ukjent,2008,3
+applications,sektor,ukjent,2009,14
+applications,sektor,ukjent,2010,11
+applications,sektor,ukjent,2011,2
+applications,sektor,ukjent,2012,6
+applications,sektor,ukjent,2013,1
+applications,sektor,ukjent,2015,1
+applications,sektor,ukjent,2017,1
+applications,sektor,ukjent,2018,3
+applications,sektor,ukjent,2019,1
+applications,sektor,ukjent,2020,10
+applications,sektor,ukjent,2021,12
+applications,sektor,ukjent,2022,27
+applications,sektor,ukjent,2023,16
+applications,sektor,ukjent,2024,32
+applications,sektor,ukjent,2025,97
+applications,sektor,ukjent,2026,73
+applications,sektor,Øvrige,1994,1
+applications,sektor,Øvrige,1997,2
+applications,sektor,Øvrige,2000,2
+applications,sektor,Øvrige,2001,2
+applications,sektor,Øvrige,2002,1
+applications,sektor,Øvrige,2005,5
+applications,sektor,Øvrige,2006,10
+applications,sektor,Øvrige,2007,32
+applications,sektor,Øvrige,2008,30
+applications,sektor,Øvrige,2009,91
+applications,sektor,Øvrige,2010,165
+applications,sektor,Øvrige,2011,168
+applications,sektor,Øvrige,2012,129
+applications,sektor,Øvrige,2013,142
+applications,sektor,Øvrige,2014,140
+applications,sektor,Øvrige,2015,156
+applications,sektor,Øvrige,2016,168
+applications,sektor,Øvrige,2017,170
+applications,sektor,Øvrige,2018,131
+applications,sektor,Øvrige,2019,132
+applications,sektor,Øvrige,2020,133
+applications,sektor,Øvrige,2021,153
+applications,sektor,Øvrige,2022,113
+applications,sektor,Øvrige,2023,121
+applications,sektor,Øvrige,2024,171
+applications,sektor,Øvrige,2025,178
+applications,sektor,Øvrige,2026,103
+granted,all,all,1989,1
+granted,all,all,1991,1
+granted,all,all,1994,15
+granted,all,all,1995,2
+granted,all,all,1996,5
+granted,all,all,1997,4
+granted,all,all,1998,1
+granted,all,all,1999,2
+granted,all,all,2000,4
+granted,all,all,2001,12
+granted,all,all,2002,17
+granted,all,all,2003,39
+granted,all,all,2004,87
+granted,all,all,2005,194
+granted,all,all,2006,534
+granted,all,all,2007,807
+granted,all,all,2008,787
+granted,all,all,2009,978
+granted,all,all,2010,1278
+granted,all,all,2011,1604
+granted,all,all,2012,1828
+granted,all,all,2013,1663
+granted,all,all,2014,1902
+granted,all,all,2015,1928
+granted,all,all,2016,2066
+granted,all,all,2017,2003
+granted,all,all,2018,1987
+granted,all,all,2019,2129
+granted,all,all,2020,2017
+granted,all,all,2021,1841
+granted,all,all,2022,1306
+granted,all,all,2023,1105
+granted,all,all,2024,1416
+granted,all,all,2025,1711
+granted,all,all,2026,645
+granted,soknadstype,Annen institusjonsstøtte,2025,1
+granted,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),1995,1
+granted,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),2006,1
+granted,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),2008,2
+granted,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),2009,5
+granted,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),2011,4
+granted,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),2012,1
+granted,soknadstype,Annen institusjonsstøtte (t.o.m. 2019),2013,1
+granted,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2005,1
+granted,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2006,6
+granted,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2007,5
+granted,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2008,5
+granted,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2009,30
+granted,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2010,53
+granted,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2011,70
+granted,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2012,91
+granted,soknadstype,Annen prosjektstøtte (t.o.m. 2014),2013,18
+granted,soknadstype,Annen støtte (t.o.m. 2019),1998,1
+granted,soknadstype,Annen støtte (t.o.m. 2019),2006,5
+granted,soknadstype,Annen støtte (t.o.m. 2019),2007,8
+granted,soknadstype,Annen støtte (t.o.m. 2019),2008,8
+granted,soknadstype,Annen støtte (t.o.m. 2019),2009,28
+granted,soknadstype,Annen støtte (t.o.m. 2019),2010,58
+granted,soknadstype,Annen støtte (t.o.m. 2019),2011,90
+granted,soknadstype,Annen støtte (t.o.m. 2019),2012,26
+granted,soknadstype,Annen støtte (t.o.m. 2019),2013,93
+granted,soknadstype,Annen støtte (t.o.m. 2019),2014,169
+granted,soknadstype,Annen støtte (t.o.m. 2019),2015,189
+granted,soknadstype,Annen støtte (t.o.m. 2019),2016,287
+granted,soknadstype,Annen støtte (t.o.m. 2019),2017,260
+granted,soknadstype,Annen støtte (t.o.m. 2019),2018,244
+granted,soknadstype,Annen støtte (t.o.m. 2019),2019,69
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2002,2
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2003,9
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2004,16
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2005,6
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2006,17
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2007,31
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2008,38
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2009,34
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2010,40
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2011,33
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2012,38
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2013,39
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2014,34
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2015,8
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2016,7
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2017,6
+granted,soknadstype,Diverse personlige stipend (t.o.m. 2018),2018,5
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2007,1
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2008,1
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2009,10
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2010,48
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2011,57
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2012,75
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2013,109
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2014,88
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2015,124
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2016,96
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2017,56
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2018,76
+granted,soknadstype,Forprosjekt (t.o.m. 2019),2019,3
+granted,soknadstype,Forskerprosjekt,1997,1
+granted,soknadstype,Forskerprosjekt,2003,10
+granted,soknadstype,Forskerprosjekt,2004,44
+granted,soknadstype,Forskerprosjekt,2005,93
+granted,soknadstype,Forskerprosjekt,2006,266
+granted,soknadstype,Forskerprosjekt,2007,468
+granted,soknadstype,Forskerprosjekt,2008,353
+granted,soknadstype,Forskerprosjekt,2009,334
+granted,soknadstype,Forskerprosjekt,2010,319
+granted,soknadstype,Forskerprosjekt,2011,382
+granted,soknadstype,Forskerprosjekt,2012,314
+granted,soknadstype,Forskerprosjekt,2013,441
+granted,soknadstype,Forskerprosjekt,2014,373
+granted,soknadstype,Forskerprosjekt,2015,421
+granted,soknadstype,Forskerprosjekt,2016,337
+granted,soknadstype,Forskerprosjekt,2017,386
+granted,soknadstype,Forskerprosjekt,2018,363
+granted,soknadstype,Forskerprosjekt,2019,414
+granted,soknadstype,Forskerprosjekt,2020,295
+granted,soknadstype,Forskerprosjekt,2021,318
+granted,soknadstype,Forskerprosjekt,2022,157
+granted,soknadstype,Forskerprosjekt,2023,135
+granted,soknadstype,Forskerprosjekt,2024,191
+granted,soknadstype,Forskerprosjekt,2025,241
+granted,soknadstype,Forskerprosjekt,2026,14
+granted,soknadstype,Forskningsinfrastruktur,2004,2
+granted,soknadstype,Forskningsinfrastruktur,2007,2
+granted,soknadstype,Forskningsinfrastruktur,2009,44
+granted,soknadstype,Forskningsinfrastruktur,2010,28
+granted,soknadstype,Forskningsinfrastruktur,2011,12
+granted,soknadstype,Forskningsinfrastruktur,2012,18
+granted,soknadstype,Forskningsinfrastruktur,2013,1
+granted,soknadstype,Forskningsinfrastruktur,2014,35
+granted,soknadstype,Forskningsinfrastruktur,2015,3
+granted,soknadstype,Forskningsinfrastruktur,2016,23
+granted,soknadstype,Forskningsinfrastruktur,2017,3
+granted,soknadstype,Forskningsinfrastruktur,2018,22
+granted,soknadstype,Forskningsinfrastruktur,2019,2
+granted,soknadstype,Forskningsinfrastruktur,2020,26
+granted,soknadstype,Forskningsinfrastruktur,2023,30
+granted,soknadstype,Forskningsinfrastruktur,2025,2
+granted,soknadstype,Forskningssenter,2001,7
+granted,soknadstype,Forskningssenter,2002,6
+granted,soknadstype,Forskningssenter,2005,14
+granted,soknadstype,Forskningssenter,2006,8
+granted,soknadstype,Forskningssenter,2008,8
+granted,soknadstype,Forskningssenter,2010,10
+granted,soknadstype,Forskningssenter,2012,13
+granted,soknadstype,Forskningssenter,2013,1
+granted,soknadstype,Forskningssenter,2014,17
+granted,soknadstype,Forskningssenter,2015,10
+granted,soknadstype,Forskningssenter,2016,10
+granted,soknadstype,Forskningssenter,2018,14
+granted,soknadstype,Forskningssenter,2019,24
+granted,soknadstype,Forskningssenter,2020,1
+granted,soknadstype,Forskningssenter,2021,18
+granted,soknadstype,Forskningssenter,2022,7
+granted,soknadstype,Forskningssenter,2023,12
+granted,soknadstype,Forskningssenter,2024,2
+granted,soknadstype,Forskningssenter,2025,16
+granted,soknadstype,Grunnbevilgninger,1989,1
+granted,soknadstype,Grunnbevilgninger,1994,13
+granted,soknadstype,Grunnbevilgninger,1996,4
+granted,soknadstype,Grunnbevilgninger,1999,1
+granted,soknadstype,Grunnbevilgninger,2001,1
+granted,soknadstype,Grunnbevilgninger,2002,3
+granted,soknadstype,Grunnbevilgninger,2003,5
+granted,soknadstype,Grunnbevilgninger,2009,23
+granted,soknadstype,Grunnbevilgninger,2011,4
+granted,soknadstype,Grunnbevilgninger,2012,20
+granted,soknadstype,Grunnbevilgninger,2013,24
+granted,soknadstype,Grunnbevilgninger,2014,19
+granted,soknadstype,Grunnbevilgninger,2015,49
+granted,soknadstype,Grunnbevilgninger,2016,19
+granted,soknadstype,Grunnbevilgninger,2017,26
+granted,soknadstype,Grunnbevilgninger,2018,6
+granted,soknadstype,Grunnbevilgninger,2019,16
+granted,soknadstype,Grunnbevilgninger,2020,46
+granted,soknadstype,Grunnbevilgninger,2021,2
+granted,soknadstype,Grunnbevilgninger,2022,1
+granted,soknadstype,Grunnbevilgninger,2023,1
+granted,soknadstype,Ingen søknadstype,1994,1
+granted,soknadstype,Ingen søknadstype,1995,1
+granted,soknadstype,Ingen søknadstype,1997,3
+granted,soknadstype,Ingen søknadstype,1999,1
+granted,soknadstype,Ingen søknadstype,2000,1
+granted,soknadstype,Ingen søknadstype,2001,3
+granted,soknadstype,Ingen søknadstype,2002,4
+granted,soknadstype,Ingen søknadstype,2003,4
+granted,soknadstype,Ingen søknadstype,2004,1
+granted,soknadstype,Ingen søknadstype,2005,2
+granted,soknadstype,Ingen søknadstype,2006,17
+granted,soknadstype,Ingen søknadstype,2007,16
+granted,soknadstype,Ingen søknadstype,2008,23
+granted,soknadstype,Ingen søknadstype,2009,13
+granted,soknadstype,Ingen søknadstype,2010,22
+granted,soknadstype,Ingen søknadstype,2011,35
+granted,soknadstype,Ingen søknadstype,2012,37
+granted,soknadstype,Ingen søknadstype,2013,39
+granted,soknadstype,Ingen søknadstype,2014,42
+granted,soknadstype,Ingen søknadstype,2015,33
+granted,soknadstype,Ingen søknadstype,2016,41
+granted,soknadstype,Ingen søknadstype,2017,53
+granted,soknadstype,Ingen søknadstype,2018,79
+granted,soknadstype,Ingen søknadstype,2019,33
+granted,soknadstype,Ingen søknadstype,2020,25
+granted,soknadstype,Ingen søknadstype,2021,31
+granted,soknadstype,Ingen søknadstype,2022,28
+granted,soknadstype,Ingen søknadstype,2023,6
+granted,soknadstype,Ingen søknadstype,2024,4
+granted,soknadstype,Ingen søknadstype,2025,4
+granted,soknadstype,Innovasjonsprosjekt,2004,2
+granted,soknadstype,Innovasjonsprosjekt,2005,18
+granted,soknadstype,Innovasjonsprosjekt,2006,57
+granted,soknadstype,Innovasjonsprosjekt,2007,96
+granted,soknadstype,Innovasjonsprosjekt,2008,165
+granted,soknadstype,Innovasjonsprosjekt,2009,140
+granted,soknadstype,Innovasjonsprosjekt,2010,178
+granted,soknadstype,Innovasjonsprosjekt,2011,193
+granted,soknadstype,Innovasjonsprosjekt,2012,256
+granted,soknadstype,Innovasjonsprosjekt,2013,272
+granted,soknadstype,Innovasjonsprosjekt,2014,251
+granted,soknadstype,Innovasjonsprosjekt,2015,234
+granted,soknadstype,Innovasjonsprosjekt,2016,285
+granted,soknadstype,Innovasjonsprosjekt,2017,251
+granted,soknadstype,Innovasjonsprosjekt,2018,277
+granted,soknadstype,Innovasjonsprosjekt,2019,356
+granted,soknadstype,Innovasjonsprosjekt,2020,353
+granted,soknadstype,Innovasjonsprosjekt,2021,312
+granted,soknadstype,Innovasjonsprosjekt,2022,178
+granted,soknadstype,Innovasjonsprosjekt,2023,173
+granted,soknadstype,Innovasjonsprosjekt,2024,196
+granted,soknadstype,Innovasjonsprosjekt,2025,226
+granted,soknadstype,Innovasjonsprosjekt,2026,54
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2001,1
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2002,1
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2003,3
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2004,2
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2005,13
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2006,32
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2007,48
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2008,12
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2009,40
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2010,33
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2011,18
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2012,37
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2013,10
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2014,14
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2015,4
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2016,4
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2017,17
+granted,soknadstype,Institusjonsforankret strategisk prosjekt (t.o.m. 2018),2018,11
+granted,soknadstype,Internasjonale utlysninger,2003,7
+granted,soknadstype,Internasjonale utlysninger,2004,18
+granted,soknadstype,Internasjonale utlysninger,2005,18
+granted,soknadstype,Internasjonale utlysninger,2006,41
+granted,soknadstype,Internasjonale utlysninger,2007,38
+granted,soknadstype,Internasjonale utlysninger,2008,8
+granted,soknadstype,Internasjonale utlysninger,2012,4
+granted,soknadstype,Internasjonale utlysninger,2013,27
+granted,soknadstype,Internasjonale utlysninger,2014,23
+granted,soknadstype,Internasjonale utlysninger,2015,10
+granted,soknadstype,Internasjonale utlysninger,2016,6
+granted,soknadstype,Internasjonale utlysninger,2018,5
+granted,soknadstype,Internasjonale utlysninger,2019,68
+granted,soknadstype,Internasjonale utlysninger,2020,133
+granted,soknadstype,Internasjonale utlysninger,2021,138
+granted,soknadstype,Internasjonale utlysninger,2022,91
+granted,soknadstype,Internasjonale utlysninger,2023,119
+granted,soknadstype,Internasjonale utlysninger,2024,142
+granted,soknadstype,Internasjonale utlysninger,2025,141
+granted,soknadstype,Internasjonale utlysninger,2026,24
+granted,soknadstype,Kommersialiseringsprosjekt,2007,1
+granted,soknadstype,Kommersialiseringsprosjekt,2008,4
+granted,soknadstype,Kommersialiseringsprosjekt,2009,31
+granted,soknadstype,Kommersialiseringsprosjekt,2010,46
+granted,soknadstype,Kommersialiseringsprosjekt,2011,40
+granted,soknadstype,Kommersialiseringsprosjekt,2012,31
+granted,soknadstype,Kommersialiseringsprosjekt,2013,25
+granted,soknadstype,Kommersialiseringsprosjekt,2014,43
+granted,soknadstype,Kommersialiseringsprosjekt,2015,49
+granted,soknadstype,Kommersialiseringsprosjekt,2016,74
+granted,soknadstype,Kommersialiseringsprosjekt,2017,82
+granted,soknadstype,Kommersialiseringsprosjekt,2018,55
+granted,soknadstype,Kommersialiseringsprosjekt,2019,50
+granted,soknadstype,Kommersialiseringsprosjekt,2020,80
+granted,soknadstype,Kommersialiseringsprosjekt,2021,118
+granted,soknadstype,Kommersialiseringsprosjekt,2022,62
+granted,soknadstype,Kommersialiseringsprosjekt,2023,119
+granted,soknadstype,Kommersialiseringsprosjekt,2024,134
+granted,soknadstype,Kommersialiseringsprosjekt,2025,129
+granted,soknadstype,Kommersialiseringsprosjekt,2026,59
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2004,1
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2005,24
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2006,70
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2007,77
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2008,95
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2009,78
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2010,67
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2011,47
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2012,55
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2013,82
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2014,48
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2015,62
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2016,47
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2017,36
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2018,41
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2019,158
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2020,178
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2021,145
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2022,123
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2023,99
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2024,127
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2025,139
+granted,soknadstype,Kompetanse- og samarbeidsprosjekt,2026,2
+granted,soknadstype,Koordinerings- og støtteaktivitet,1991,1
+granted,soknadstype,Koordinerings- og støtteaktivitet,1994,1
+granted,soknadstype,Koordinerings- og støtteaktivitet,1996,1
+granted,soknadstype,Koordinerings- og støtteaktivitet,2000,3
+granted,soknadstype,Koordinerings- og støtteaktivitet,2002,1
+granted,soknadstype,Koordinerings- og støtteaktivitet,2003,1
+granted,soknadstype,Koordinerings- og støtteaktivitet,2004,1
+granted,soknadstype,Koordinerings- og støtteaktivitet,2005,5
+granted,soknadstype,Koordinerings- og støtteaktivitet,2006,13
+granted,soknadstype,Koordinerings- og støtteaktivitet,2007,15
+granted,soknadstype,Koordinerings- og støtteaktivitet,2008,58
+granted,soknadstype,Koordinerings- og støtteaktivitet,2009,154
+granted,soknadstype,Koordinerings- og støtteaktivitet,2010,356
+granted,soknadstype,Koordinerings- og støtteaktivitet,2011,597
+granted,soknadstype,Koordinerings- og støtteaktivitet,2012,799
+granted,soknadstype,Koordinerings- og støtteaktivitet,2013,464
+granted,soknadstype,Koordinerings- og støtteaktivitet,2014,724
+granted,soknadstype,Koordinerings- og støtteaktivitet,2015,708
+granted,soknadstype,Koordinerings- og støtteaktivitet,2016,812
+granted,soknadstype,Koordinerings- og støtteaktivitet,2017,808
+granted,soknadstype,Koordinerings- og støtteaktivitet,2018,778
+granted,soknadstype,Koordinerings- og støtteaktivitet,2019,924
+granted,soknadstype,Koordinerings- og støtteaktivitet,2020,874
+granted,soknadstype,Koordinerings- og støtteaktivitet,2021,748
+granted,soknadstype,Koordinerings- og støtteaktivitet,2022,648
+granted,soknadstype,Koordinerings- og støtteaktivitet,2023,398
+granted,soknadstype,Koordinerings- og støtteaktivitet,2024,604
+granted,soknadstype,Koordinerings- og støtteaktivitet,2025,800
+granted,soknadstype,Koordinerings- og støtteaktivitet,2026,490
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2006,1
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2007,1
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2008,7
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2009,14
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2010,20
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2011,22
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2012,13
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2013,17
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2014,22
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2015,24
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2016,18
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2017,19
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2018,11
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2019,12
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2020,6
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2021,11
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2022,11
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2023,13
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2024,16
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2025,12
+granted,soknadstype,Støtte fra andre enn Forskningsrådet,2026,2
+granted,sektor,Helseforetak,2005,11
+granted,sektor,Helseforetak,2006,17
+granted,sektor,Helseforetak,2007,22
+granted,sektor,Helseforetak,2008,30
+granted,sektor,Helseforetak,2009,18
+granted,sektor,Helseforetak,2010,18
+granted,sektor,Helseforetak,2011,32
+granted,sektor,Helseforetak,2012,35
+granted,sektor,Helseforetak,2013,45
+granted,sektor,Helseforetak,2014,34
+granted,sektor,Helseforetak,2015,56
+granted,sektor,Helseforetak,2016,64
+granted,sektor,Helseforetak,2017,64
+granted,sektor,Helseforetak,2018,57
+granted,sektor,Helseforetak,2019,60
+granted,sektor,Helseforetak,2020,53
+granted,sektor,Helseforetak,2021,51
+granted,sektor,Helseforetak,2022,48
+granted,sektor,Helseforetak,2023,31
+granted,sektor,Helseforetak,2024,44
+granted,sektor,Helseforetak,2025,48
+granted,sektor,Helseforetak,2026,18
+granted,sektor,Instituttsektor,1989,1
+granted,sektor,Instituttsektor,1994,14
+granted,sektor,Instituttsektor,1995,2
+granted,sektor,Instituttsektor,1996,4
+granted,sektor,Instituttsektor,1997,1
+granted,sektor,Instituttsektor,2001,5
+granted,sektor,Instituttsektor,2002,5
+granted,sektor,Instituttsektor,2003,17
+granted,sektor,Instituttsektor,2004,32
+granted,sektor,Instituttsektor,2005,78
+granted,sektor,Instituttsektor,2006,194
+granted,sektor,Instituttsektor,2007,295
+granted,sektor,Instituttsektor,2008,255
+granted,sektor,Instituttsektor,2009,319
+granted,sektor,Instituttsektor,2010,366
+granted,sektor,Instituttsektor,2011,353
+granted,sektor,Instituttsektor,2012,446
+granted,sektor,Instituttsektor,2013,475
+granted,sektor,Instituttsektor,2014,484
+granted,sektor,Instituttsektor,2015,487
+granted,sektor,Instituttsektor,2016,479
+granted,sektor,Instituttsektor,2017,480
+granted,sektor,Instituttsektor,2018,407
+granted,sektor,Instituttsektor,2019,466
+granted,sektor,Instituttsektor,2020,459
+granted,sektor,Instituttsektor,2021,440
+granted,sektor,Instituttsektor,2022,287
+granted,sektor,Instituttsektor,2023,314
+granted,sektor,Instituttsektor,2024,353
+granted,sektor,Instituttsektor,2025,415
+granted,sektor,Instituttsektor,2026,133
+granted,sektor,Næringsliv,1998,1
+granted,sektor,Næringsliv,2004,3
+granted,sektor,Næringsliv,2005,16
+granted,sektor,Næringsliv,2006,49
+granted,sektor,Næringsliv,2007,91
+granted,sektor,Næringsliv,2008,165
+granted,sektor,Næringsliv,2009,159
+granted,sektor,Næringsliv,2010,279
+granted,sektor,Næringsliv,2011,400
+granted,sektor,Næringsliv,2012,459
+granted,sektor,Næringsliv,2013,375
+granted,sektor,Næringsliv,2014,570
+granted,sektor,Næringsliv,2015,554
+granted,sektor,Næringsliv,2016,695
+granted,sektor,Næringsliv,2017,631
+granted,sektor,Næringsliv,2018,721
+granted,sektor,Næringsliv,2019,714
+granted,sektor,Næringsliv,2020,703
+granted,sektor,Næringsliv,2021,596
+granted,sektor,Næringsliv,2022,388
+granted,sektor,Næringsliv,2023,301
+granted,sektor,Næringsliv,2024,388
+granted,sektor,Næringsliv,2025,385
+granted,sektor,Næringsliv,2026,150
+granted,sektor,Offentlig sektor,1999,1
+granted,sektor,Offentlig sektor,2004,1
+granted,sektor,Offentlig sektor,2005,1
+granted,sektor,Offentlig sektor,2006,5
+granted,sektor,Offentlig sektor,2007,4
+granted,sektor,Offentlig sektor,2008,7
+granted,sektor,Offentlig sektor,2009,3
+granted,sektor,Offentlig sektor,2010,19
+granted,sektor,Offentlig sektor,2011,16
+granted,sektor,Offentlig sektor,2012,16
+granted,sektor,Offentlig sektor,2013,12
+granted,sektor,Offentlig sektor,2014,38
+granted,sektor,Offentlig sektor,2015,14
+granted,sektor,Offentlig sektor,2016,67
+granted,sektor,Offentlig sektor,2017,86
+granted,sektor,Offentlig sektor,2018,76
+granted,sektor,Offentlig sektor,2019,91
+granted,sektor,Offentlig sektor,2020,82
+granted,sektor,Offentlig sektor,2021,64
+granted,sektor,Offentlig sektor,2022,81
+granted,sektor,Offentlig sektor,2023,34
+granted,sektor,Offentlig sektor,2024,48
+granted,sektor,Offentlig sektor,2025,64
+granted,sektor,Offentlig sektor,2026,60
+granted,sektor,UoH-sektor,1997,1
+granted,sektor,UoH-sektor,1999,1
+granted,sektor,UoH-sektor,2000,1
+granted,sektor,UoH-sektor,2001,7
+granted,sektor,UoH-sektor,2002,12
+granted,sektor,UoH-sektor,2003,22
+granted,sektor,UoH-sektor,2004,51
+granted,sektor,UoH-sektor,2005,81
+granted,sektor,UoH-sektor,2006,258
+granted,sektor,UoH-sektor,2007,372
+granted,sektor,UoH-sektor,2008,304
+granted,sektor,UoH-sektor,2009,418
+granted,sektor,UoH-sektor,2010,455
+granted,sektor,UoH-sektor,2011,613
+granted,sektor,UoH-sektor,2012,750
+granted,sektor,UoH-sektor,2013,625
+granted,sektor,UoH-sektor,2014,648
+granted,sektor,UoH-sektor,2015,691
+granted,sektor,UoH-sektor,2016,634
+granted,sektor,UoH-sektor,2017,630
+granted,sektor,UoH-sektor,2018,621
+granted,sektor,UoH-sektor,2019,706
+granted,sektor,UoH-sektor,2020,621
+granted,sektor,UoH-sektor,2021,567
+granted,sektor,UoH-sektor,2022,413
+granted,sektor,UoH-sektor,2023,343
+granted,sektor,UoH-sektor,2024,460
+granted,sektor,UoH-sektor,2025,623
+granted,sektor,UoH-sektor,2026,193
+granted,sektor,Utlandet,1991,1
+granted,sektor,Utlandet,1996,1
+granted,sektor,Utlandet,2000,1
+granted,sektor,Utlandet,2005,2
+granted,sektor,Utlandet,2006,2
+granted,sektor,Utlandet,2008,15
+granted,sektor,Utlandet,2009,10
+granted,sektor,Utlandet,2010,64
+granted,sektor,Utlandet,2011,85
+granted,sektor,Utlandet,2012,42
+granted,sektor,Utlandet,2013,52
+granted,sektor,Utlandet,2014,34
+granted,sektor,Utlandet,2015,18
+granted,sektor,Utlandet,2016,10
+granted,sektor,Utlandet,2017,2
+granted,sektor,Utlandet,2018,3
+granted,sektor,Utlandet,2019,3
+granted,sektor,Utlandet,2020,1
+granted,sektor,Utlandet,2021,1
+granted,sektor,Utlandet,2022,1
+granted,sektor,Utlandet,2025,3
+granted,sektor,ukjent,2011,1
+granted,sektor,ukjent,2012,1
+granted,sektor,ukjent,2018,2
+granted,sektor,ukjent,2019,1
+granted,sektor,ukjent,2020,2
+granted,sektor,ukjent,2021,4
+granted,sektor,ukjent,2022,8
+granted,sektor,ukjent,2023,6
+granted,sektor,ukjent,2024,19
+granted,sektor,ukjent,2025,57
+granted,sektor,ukjent,2026,35
+granted,sektor,Øvrige,1994,1
+granted,sektor,Øvrige,1997,2
+granted,sektor,Øvrige,2000,2
+granted,sektor,Øvrige,2005,5
+granted,sektor,Øvrige,2006,9
+granted,sektor,Øvrige,2007,23
+granted,sektor,Øvrige,2008,11
+granted,sektor,Øvrige,2009,51
+granted,sektor,Øvrige,2010,77
+granted,sektor,Øvrige,2011,104
+granted,sektor,Øvrige,2012,79
+granted,sektor,Øvrige,2013,79
+granted,sektor,Øvrige,2014,94
+granted,sektor,Øvrige,2015,108
+granted,sektor,Øvrige,2016,117
+granted,sektor,Øvrige,2017,110
+granted,sektor,Øvrige,2018,100
+granted,sektor,Øvrige,2019,88
+granted,sektor,Øvrige,2020,96
+granted,sektor,Øvrige,2021,118
+granted,sektor,Øvrige,2022,80
+granted,sektor,Øvrige,2023,76
+granted,sektor,Øvrige,2024,104
+granted,sektor,Øvrige,2025,116
+granted,sektor,Øvrige,2026,56

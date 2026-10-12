@@ -1,0 +1,122 @@
+[
+ {
+  "full_name": "vegvesen/SOSI-LR",
+  "created_at": "2015-09-30T07:42:32Z",
+  "pushed_at": "2018-08-30T08:59:18Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "vegvesen/Sykkeldata",
+  "created_at": "2016-11-09T15:45:17Z",
+  "pushed_at": "2017-10-18T13:28:33Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "vegvesen/NVDB-Datakatalogen",
+  "created_at": "2017-01-27T13:40:02Z",
+  "pushed_at": "2026-10-05T13:22:24Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "vegvesen/vegbilder",
+  "created_at": "2019-05-26T05:59:34Z",
+  "pushed_at": "2022-06-28T19:42:05Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "vegvesen/nap-help",
+  "created_at": "2019-08-15T13:23:08Z",
+  "pushed_at": "2020-09-28T05:52:27Z",
+  "fork": false,
+  "archived": false,
+  "language": "HTML"
+ },
+ {
+  "full_name": "vegvesen/asic",
+  "created_at": "2019-09-09T14:29:39Z",
+  "pushed_at": "2020-02-25T16:08:27Z",
+  "fork": true,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "vegvesen/datex-client",
+  "created_at": "2019-10-29T11:39:15Z",
+  "pushed_at": "2021-08-19T10:46:27Z",
+  "fork": false,
+  "archived": true,
+  "language": "Java"
+ },
+ {
+  "full_name": "vegvesen/SOSI-Vegkropp",
+  "created_at": "2020-06-18T07:33:16Z",
+  "pushed_at": "2022-05-04T09:03:15Z",
+  "fork": false,
+  "archived": false,
+  "language": "JavaScript"
+ },
+ {
+  "full_name": "vegvesen/nvdb-arcmap-plugin",
+  "created_at": "2020-08-10T07:11:35Z",
+  "pushed_at": "2023-02-20T18:21:33Z",
+  "fork": false,
+  "archived": false,
+  "language": "Python"
+ },
+ {
+  "full_name": "vegvesen/TN-ITS-Open",
+  "created_at": "2021-06-25T11:42:57Z",
+  "pushed_at": "2021-08-11T15:04:56Z",
+  "fork": false,
+  "archived": true,
+  "language": null
+ },
+ {
+  "full_name": "vegvesen/periodisk-kjoretoy-kontroll",
+  "created_at": "2024-05-27T10:22:23Z",
+  "pushed_at": "2026-01-21T10:48:07Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "vegvesen/R110-Modellgrunnlag",
+  "created_at": "2024-11-19T10:34:25Z",
+  "pushed_at": "2026-05-07T11:44:51Z",
+  "fork": false,
+  "archived": false,
+  "language": "Game Maker Language"
+ },
+ {
+  "full_name": "vegvesen/.github",
+  "created_at": "2025-08-07T06:24:37Z",
+  "pushed_at": "2025-12-04T08:32:58Z",
+  "fork": false,
+  "archived": false,
+  "language": null
+ },
+ {
+  "full_name": "vegvesen/adr-sjekk",
+  "created_at": "2026-02-25T16:18:02Z",
+  "pushed_at": "2026-10-05T00:44:44Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ },
+ {
+  "full_name": "vegvesen/jira-skill",
+  "created_at": "2026-02-26T08:24:26Z",
+  "pushed_at": "2026-10-05T07:09:53Z",
+  "fork": false,
+  "archived": false,
+  "language": "TypeScript"
+ }
+]
