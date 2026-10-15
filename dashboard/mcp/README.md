@@ -1,11 +1,14 @@
 # MCP-kobling til KI-indeksen
 
 En MCP-server (Model Context Protocol) som gir avanserte brukere tilgang til
-dataene bak kiindeksen.no, Yrker og Utdanning som verktøy, fra Claude, Claude Code
-eller et eget script. Alt er lesetilgang til de aggregerte tallene nettstedet
+dataene bak kiindeksen.no, Yrker og Utdanning som verktøy, fra Claude, Codex, Kimi,
+GLM, andre MCP-klienter eller et eget script. Alt er lesetilgang til de aggregerte tallene nettstedet
 allerede publiserer. Ingen personopplysninger.
 
 - Endepunkt: `https://kiindeksen-mcp.fly.dev/mcp` (Streamable HTTP, JSON-RPC 2.0)
+- Andre transporter (2026-10-15): `GET /sse` + `POST /messages` (eldre HTTP+SSE),
+  `python3 server.py --stdio` (stdio), REST `GET|POST /tools/<navn>` og
+  `GET /openapi.json` for funksjonskall hos andre modelleverandører
 - Brukerside: https://kiindeksen.no/mcp.html (under Labben), engelsk `en/mcp.html`;
   nettstedet serverer en kopi av `client_example.py` på `/mcp/client_example.py`
 - Kilde: `dashboard/mcp/server.py`, bare Pythons standardbibliotek
@@ -24,6 +27,30 @@ claude mcp add --transport http kiindeksen https://kiindeksen-mcp.fly.dev/mcp
 
 claude.ai: Settings, Connectors, Add custom connector, lim inn adressen over.
 Ingen innlogging; dataene er offentlige.
+
+Andre klienter, samme adresse:
+
+```bash
+codex mcp add kiindeksen --url https://kiindeksen-mcp.fly.dev/mcp          # Codex CLI (OpenAI)
+kimi mcp add --transport http kiindeksen https://kiindeksen-mcp.fly.dev/mcp # Kimi Code CLI
+```
+
+OpenCode: `"mcp": {"kiindeksen": {"type": "remote", "url": "https://kiindeksen-mcp.fly.dev/mcp", "enabled": true}}`
+i `opencode.json`. Gemini CLI: `"mcpServers": {"kiindeksen": {"httpUrl": "https://kiindeksen-mcp.fly.dev/mcp"}}`
+i `~/.gemini/settings.json`. GLM fra Z.ai brukes gjennom Claude Code, OpenCode, Cline
+eller Kilo Code; legg koblingen til der. Klienter som bare kjenner den eldre
+SSE-transporten, bruker `https://kiindeksen-mcp.fly.dev/sse`. Klienter som bare starter
+lokale servere, registrerer kommandoen `python3 server.py --stdio`.
+
+Fra kode uten MCP-klient: OpenAI Responses API tar verktøyet
+`{"type": "mcp", "server_label": "kiindeksen", "server_url": "https://kiindeksen-mcp.fly.dev/mcp", "require_approval": "never"}`;
+Anthropic Messages API (beta `mcp-client-2025-11-20`) tar
+`{"type": "url", "url": "https://kiindeksen-mcp.fly.dev/mcp", "name": "kiindeksen"}` i
+`mcp_servers` og `{"type": "mcp_toolset", "mcp_server_name": "kiindeksen"}` i `tools`.
+Alle modeller med funksjonskall (Kimi, GLM, Gemini, Mistral ...) kan bruke REST-kallene
+`GET /tools/<navn>?arg=verdi` (lister kommaseparert) eller `POST /tools/<navn>` med
+JSON-kropp; `GET /openapi.json` beskriver dem. Eksempel:
+`curl "https://kiindeksen-mcp.fly.dev/tools/compare_occupations?codes=4110,3312&index_base=2025-02"`.
 
 Eget script: `client_example.py` viser hele samtalen med serveren uten andre
 avhengigheter enn Python. Prøv:

@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
 """MCP-kobling til KI-indeksen: dataene bak kiindeksen.no, Yrker og Utdanning som verktøy.
 
-Serveren snakker Model Context Protocol over Streamable HTTP (JSON-RPC 2.0 på POST /mcp) og
-bruker bare standardbiblioteket, så den kan kjøre hvor som helst uten installasjon.
+Serveren snakker Model Context Protocol og bruker bare standardbiblioteket, så den kan kjøre
+hvor som helst uten installasjon. Transporter (2026-10-15, for alle klienter og leverandører):
+    POST /mcp                 Streamable HTTP, JSON-RPC 2.0 (Claude, Codex, Kimi, OpenCode, Gemini CLI ...)
+    GET /mcp                  lyttestrøm (SSE) for klienter som åpner en; serveren sender ingenting selv
+    GET /sse + POST /messages eldre HTTP+SSE-transport (protokoll 2024-11-05) for eldre klienter
+    --stdio                   MCP over stdin/stdout for klienter som bare starter lokale servere
+    GET /tools/<navn>         samme verktøy som vanlige HTTP-kall (REST), argumenter i spørrestrengen
+    POST /tools/<navn>        samme med JSON-kropp
+    GET /openapi.json         OpenAPI 3.1 for REST-kallene, til funksjonskall hos andre modeller og GPT-er
 
     python3 server.py                          # henter dataene fra https://kiindeksen.no/data/
     python3 server.py --data-dir ../site/public/data --port 8765   # lokale filer, til testing
+    python3 server.py --stdio                  # stdio-transport, logg på stderr
 
 Dataene leses inn ved oppstart og hentes på nytt hver KIINDEKSEN_REFRESH_HOURS time (standard 6),
 så koblingen følger den månedlige releasen uten ny utrulling. Alt er lesetilgang; ingen
@@ -14,12 +22,18 @@ personopplysninger, bare de aggregerte tallene nettstedet allerede publiserer.
 Koble til:
     Claude Code:   claude mcp add --transport http kiindeksen https://<vert>/mcp
     claude.ai:     Settings -> Connectors -> Add custom connector -> https://<vert>/mcp
+    Codex CLI:     codex mcp add kiindeksen --url https://<vert>/mcp
+    Kimi Code CLI: kimi mcp add --transport http kiindeksen https://<vert>/mcp
     Eget script:   se client_example.py (JSON-RPC over HTTP, ingen avhengigheter)
+    Flere klienter og API-kall fra kode: https://kiindeksen.no/mcp.html
 
 Verktøyene står i TOOLS nederst; README.md i samme mappe forklarer dataene og har et
 gjennomgått eksempel på en analyse.
 """
 import argparse, json, os, sys, threading, time, urllib.request
+import queue, uuid
+from urllib.parse import parse_qs
+
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 VERSION = "1.0.0"
@@ -629,6 +643,124 @@ def handle_message(msg, proto):
     return {"jsonrpc": "2.0", "id": id_, "result": result}
 
 
+# ---------------------------------------------------------------- andre transporter og REST
+# Eldre HTTP+SSE-transport (protokoll 2024-11-05): sessionId -> kø med svar som skal ut på
+# klientens strøm. Streamable HTTP over POST /mcp er fortsatt hovedveien.
+SESSIONS = {}
+SESSIONS_LOCK = threading.Lock()
+SSE_KEEPALIVE = 15          # sekunder mellom kommentarlinjer som holder strømmen åpen
+SSE_MAX_SECONDS = 3600      # en strøm lukkes etter en time; klienten kobler til på nytt
+
+
+def _types(prop):
+    t = prop.get("type", "string")
+    return t if isinstance(t, list) else [t]
+
+
+def coerce_args(schema, raw):
+    """Spørrestreng (alle verdier er tekst) -> argumenter etter verktøyets JSON-skjema.
+    Lister gis kommaseparert (codes=4110,3312)."""
+    props = schema.get("properties", {})
+    out = {}
+    for k, vals in raw.items():
+        v = vals[-1] if isinstance(vals, list) else vals
+        if k not in props:
+            out[k] = v
+            continue
+        types = _types(props[k])
+        if "array" in types and ("," in v or "string" not in types):
+            out[k] = [x.strip() for x in v.split(",") if x.strip()]
+        elif "integer" in types:
+            out[k] = int(v)
+        elif "number" in types:
+            out[k] = float(v)
+        elif "boolean" in types:
+            out[k] = v.lower() in ("1", "true", "ja", "yes")
+        else:
+            out[k] = v
+    return out
+
+
+def rest_call(name, args):
+    """Kall et verktøy utenom MCP. Returnerer (HTTP-status, JSON-objekt)."""
+    if name not in TOOL_MAP:
+        return 404, {"error": f"ukjent verktøy {name!r}", "tools": [n for n, *_ in TOOLS]}
+    try:
+        return 200, TOOL_MAP[name][2](args)
+    except ToolError as e:
+        return 400, {"error": str(e)}
+    except (ValueError, TypeError, KeyError) as e:
+        return 400, {"error": f"ugyldig argument: {e}"}
+
+
+def _query_param(name, prop, required):
+    types = [t for t in _types(prop) if t != "null"]
+    desc = prop.get("description", "")
+    if "array" in types:
+        sch = {"type": "string"}
+        desc = (desc + " (kommaseparert liste)").strip()
+    else:
+        sch = {"type": types[0] if types else "string"}
+        for key in ("enum", "default"):
+            if key in prop:
+                sch[key] = prop[key]
+    p = {"name": name, "in": "query", "required": required, "schema": sch}
+    if desc:
+        p["description"] = desc
+    return p
+
+
+def openapi_spec(public_url):
+    """OpenAPI 3.1 for REST-endepunktene, generert fra verktøyskjemaene, så GPT-er,
+    agentplattformer og funksjonskall hos andre modelleverandører kan bruke dataene."""
+    ok = {"description": "Resultat som JSON", "content": {"application/json": {"schema": {"type": "object"}}}}
+    err = {"description": "Feil i argumentene", "content": {"application/json": {
+        "schema": {"type": "object", "properties": {"error": {"type": "string"}}}}}}
+    paths = {}
+    for name, desc, schema, _ in TOOLS:
+        req = set(schema.get("required", []))
+        params = [_query_param(k, p, k in req) for k, p in schema.get("properties", {}).items()]
+        paths[f"/tools/{name}"] = {
+            "get": {"operationId": name, "summary": desc, "parameters": params,
+                    "responses": {"200": ok, "400": err}},
+            "post": {"operationId": name + "_post", "summary": desc,
+                     "requestBody": {"required": bool(req), "content": {"application/json": {"schema": schema}}},
+                     "responses": {"200": ok, "400": err}}}
+    return {"openapi": "3.1.0",
+            "info": {"title": "KI-indeksen", "version": VERSION,
+                     "description": "Dataene bak kiindeksen.no som enkle HTTP-kall, samme verktøy som MCP-serveren. " + INSTRUCTIONS},
+            "servers": [{"url": public_url}],
+            "paths": paths}
+
+
+def serve_stdio():
+    """MCP stdio-transport: én JSON-RPC-melding per linje inn på stdin, svar ut på stdout.
+    For klienter som bare starter lokale servere. Alt annet (logg) går til stderr."""
+    out = sys.stdout
+    sys.stdout = sys.stderr
+    load_data()
+    print(f"lastet release {STATE['data']['dashboard']['release']} fra {DATA_DIR or BASE}", flush=True)
+    if not DATA_DIR:
+        threading.Thread(target=refresher, daemon=True).start()
+    proto = PROTOCOLS[0]
+    for line in sys.stdin:
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            msg = json.loads(line)
+        except Exception:
+            reply = rpc_error(None, -32700, "ugyldig JSON")
+        else:
+            if isinstance(msg, dict) and msg.get("method") == "initialize":
+                req = (msg.get("params") or {}).get("protocolVersion", proto)
+                proto = req if req in PROTOCOLS else PROTOCOLS[0]
+            reply = handle_message(msg, proto)
+        if reply is not None:
+            out.write(json.dumps(reply, ensure_ascii=False) + "\n")
+            out.flush()
+
+
 class Handler(BaseHTTPRequestHandler):
     server_version = f"kiindeksen-mcp/{VERSION}"
 
@@ -658,28 +790,134 @@ class Handler(BaseHTTPRequestHandler):
         if path in ("/", "/index.html"):
             d = STATE["data"]
             rel = d["dashboard"]["release"] if d else "ikke lastet"
-            text = (f"KI-indeksen MCP-kobling {VERSION}. Release {rel}. Endepunkt: POST /mcp (Streamable HTTP, JSON-RPC 2.0).\n"
-                    f"Verktøy: {', '.join(n for n, *_ in TOOLS)}.\nDokumentasjon: https://github.com/andreaskostol/AI-Norway (dashboard/mcp/README.md). Nettsted: https://kiindeksen.no\n")
+            text = (f"KI-indeksen MCP-kobling {VERSION}. Release {rel}.\n"
+                    "MCP: POST /mcp (Streamable HTTP, JSON-RPC 2.0). Eldre HTTP+SSE: GET /sse, POST /messages. "
+                    "Stdio: python3 server.py --stdio.\n"
+                    "REST: GET /tools, GET eller POST /tools/<navn>, GET /openapi.json.\n"
+                    f"Verktøy: {', '.join(n for n, *_ in TOOLS)}.\n"
+                    "Dokumentasjon: https://kiindeksen.no/mcp.html. Kode: https://github.com/andreaskostol/AI-Norway (dashboard/mcp).\n")
             self._send(200, text.encode("utf-8"), "text/plain; charset=utf-8")
         elif path == "/health":
             ok = STATE["data"] is not None
             self._send(200 if ok else 503, (b"ok\n" if ok else b"loading\n"), "text/plain")
         elif path == "/mcp":
-            self._send(405, b"", extra={"Allow": "POST, OPTIONS"})
+            # Streamable HTTP: klienter kan åpne en lyttestrøm med GET. Serveren sender
+            # ingen egne meldinger, men holder strømmen åpen så klienten ikke feiler.
+            if "text/event-stream" in (self.headers.get("Accept") or ""):
+                self._sse_headers()
+                self._sse_loop(queue.Queue())
+            else:
+                self._send(405, b"", extra={"Allow": "POST, OPTIONS"})
+        elif path == "/sse":
+            # Eldre HTTP+SSE-transport: klienten åpner GET /sse, får en endpoint-hendelse
+            # med adressen den skal POSTe til, og mottar alle svar på denne strømmen.
+            sid = uuid.uuid4().hex
+            q = queue.Queue()
+            with SESSIONS_LOCK:
+                SESSIONS[sid] = q
+            try:
+                self._sse_headers()
+                self.wfile.write(f"event: endpoint\ndata: /messages?sessionId={sid}\n\n".encode("utf-8"))
+                self.wfile.flush()
+                self._sse_loop(q)
+            except (BrokenPipeError, ConnectionResetError, OSError):
+                pass
+            finally:
+                with SESSIONS_LOCK:
+                    SESSIONS.pop(sid, None)
+        elif path == "/openapi.json":
+            self._send(200, json.dumps(openapi_spec(self._public_url()), ensure_ascii=False).encode("utf-8"))
+        elif path == "/tools":
+            body = {"tools": [{"name": n, "description": d, "inputSchema": sch} for n, d, sch, _ in TOOLS]}
+            self._send(200, json.dumps(body, ensure_ascii=False).encode("utf-8"))
+        elif path.startswith("/tools/"):
+            name = path[len("/tools/"):]
+            qs = parse_qs(self.path.partition("?")[2], keep_blank_values=False)
+            schema = TOOL_MAP[name][1] if name in TOOL_MAP else {}
+            try:
+                status, out = rest_call(name, coerce_args(schema, qs))
+            except ValueError as e:
+                status, out = 400, {"error": f"ugyldig argument: {e}"}
+            self._send(status, json.dumps(out, ensure_ascii=False).encode("utf-8"))
         else:
             self._send(404, b"not found\n", "text/plain")
+
+    def _public_url(self):
+        proto = self.headers.get("X-Forwarded-Proto") or "http"
+        return f"{proto}://{self.headers.get('Host', 'localhost')}"
+
+    def _sse_headers(self):
+        self.send_response(200)
+        self._cors()
+        self.send_header("Content-Type", "text/event-stream; charset=utf-8")
+        self.send_header("Cache-Control", "no-cache")
+        self.send_header("Connection", "keep-alive")
+        self.send_header("X-Accel-Buffering", "no")
+        self.end_headers()
+
+    def _sse_loop(self, q):
+        """Skriv svar fra køen til strømmen, med kommentarlinjer som holder den åpen,
+        til klienten kobler fra eller tiden er ute."""
+        t0 = time.time()
+        while time.time() - t0 < SSE_MAX_SECONDS:
+            try:
+                item = q.get(timeout=SSE_KEEPALIVE)
+            except queue.Empty:
+                item = None
+            try:
+                if item is None:
+                    self.wfile.write(b": keep-alive\n\n")
+                else:
+                    self.wfile.write(f"event: message\ndata: {json.dumps(item, ensure_ascii=False)}\n\n".encode("utf-8"))
+                self.wfile.flush()
+            except (BrokenPipeError, ConnectionResetError, OSError):
+                break
+
+    def _body(self):
+        n = int(self.headers.get("Content-Length") or 0)
+        if n > MAX_BODY:
+            self._send(413, b"for stor\n", "text/plain")
+            return None
+        return self.rfile.read(n) if n else b""
 
     def do_DELETE(self):
         self._send(200 if self.path.split("?")[0] == "/mcp" else 404)
 
     def do_POST(self):
-        path = self.path.split("?")[0]
+        path, _, query = self.path.partition("?")
+        if path.startswith("/tools/"):                   # REST med JSON-kropp
+            raw = self._body()
+            if raw is None:
+                return
+            try:
+                args = json.loads(raw.decode("utf-8") or "{}")
+            except Exception:
+                return self._send(400, b'{"error": "ugyldig JSON"}')
+            status, out = rest_call(path[len("/tools/"):], args if isinstance(args, dict) else {})
+            return self._send(status, json.dumps(out, ensure_ascii=False).encode("utf-8"))
+        if path == "/messages":                          # eldre HTTP+SSE: svaret går på strømmen
+            sid = (parse_qs(query).get("sessionId") or parse_qs(query).get("session_id") or [""])[0]
+            with SESSIONS_LOCK:
+                q = SESSIONS.get(sid)
+            if q is None:
+                return self._send(404, b"ukjent eller utloept sesjon; aapne GET /sse paa nytt\n", "text/plain")
+            raw = self._body()
+            if raw is None:
+                return
+            try:
+                msg = json.loads(raw.decode("utf-8") or "null")
+            except Exception:
+                return self._send(400, json.dumps(rpc_error(None, -32700, "ugyldig JSON")).encode("utf-8"))
+            for m in (msg if isinstance(msg, list) else [msg]):
+                r = handle_message(m, "2024-11-05")
+                if r is not None:
+                    q.put(r)
+            return self._send(202)
         if path not in ("/mcp", "/"):
             return self._send(404, b"not found\n", "text/plain")
-        n = int(self.headers.get("Content-Length") or 0)
-        if n > MAX_BODY:
-            return self._send(413, b"for stor\n", "text/plain")
-        raw = self.rfile.read(n) if n else b""
+        raw = self._body()
+        if raw is None:
+            return
         try:
             msg = json.loads(raw.decode("utf-8") or "null")
         except Exception:
@@ -704,11 +942,15 @@ def main():
     ap.add_argument("--host", default="0.0.0.0")
     ap.add_argument("--base", help="nettsted dataene hentes fra (standard https://kiindeksen.no)")
     ap.add_argument("--data-dir", help="les JSON-filene lokalt i stedet (dashboard/site/public/data)")
+    ap.add_argument("--stdio", action="store_true",
+                    help="MCP over stdin/stdout for klienter som bare starter lokale servere; dataene hentes fortsatt fra nettstedet")
     a = ap.parse_args()
     if a.base:
         BASE = a.base.rstrip("/")
     if a.data_dir:
         DATA_DIR = a.data_dir
+    if a.stdio:
+        return serve_stdio()
     load_data()
     print(f"lastet release {STATE['data']['dashboard']['release']} fra {DATA_DIR or BASE}", flush=True)
     if not DATA_DIR:

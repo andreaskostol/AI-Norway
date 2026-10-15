@@ -55,8 +55,8 @@
     <h2>MCP-kobling til dataene</h2>
     <p class="lede">
       Alt nettstedet viser, kan du spørre om selv. En MCP-server (Model
-      Context Protocol) gir Claude, Claude Code og egne script de samme
-      tallene som verktøy: tidsseriene bak indeksen, hvert yrke med
+      Context Protocol) gir Claude, Codex, Kimi, GLM og egne script de
+      samme tallene som verktøy: tidsseriene bak indeksen, hvert yrke med
       oppgaver og Claude-bruk, og hver utdanning. Alt er aggregerte tall
       som allerede er offentlige. Ingen innlogging.
     </p>
@@ -74,6 +74,42 @@
       <a href="/mcp/client_example.py">client_example.py</a> viser hele
       samtalen med serveren og trenger bare Python, ingen pakker:</p>
 <pre><code>python3 client_example.py</code></pre>
+
+    <h3>Andre klienter og modeller</h3>
+    <p>Koblingen er åpen MCP over HTTP og er ikke knyttet til Claude. Alle
+      klienter som tar en adresse, kan bruke den, og adressen er den samme
+      overalt: <code>https://kiindeksen-mcp.fly.dev/mcp</code>.</p>
+    <div class="table-wrap">
+    <table class="mcp-table">
+      <thead><tr><th>Klient</th><th>Slik legger du til</th></tr></thead>
+      <tbody>
+        <tr><td>Codex CLI (OpenAI)</td><td><code>codex mcp add kiindeksen --url https://kiindeksen-mcp.fly.dev/mcp</code>, eller i <code>~/.codex/config.toml</code>: <code>[mcp_servers.kiindeksen]</code> med <code>url = "https://kiindeksen-mcp.fly.dev/mcp"</code></td></tr>
+        <tr><td>Kimi Code CLI (Moonshot)</td><td><code>kimi mcp add --transport http kiindeksen https://kiindeksen-mcp.fly.dev/mcp</code></td></tr>
+        <tr><td>GLM fra Z.ai</td><td>Modellene brukes gjennom Claude Code, OpenCode, Cline eller Kilo Code. Legg koblingen til i den klienten du bruker; kommandoen for Claude Code står over.</td></tr>
+        <tr><td>OpenCode</td><td>I <code>opencode.json</code>: <code>"mcp": {"kiindeksen": {"type": "remote", "url": "https://kiindeksen-mcp.fly.dev/mcp", "enabled": true}}</code></td></tr>
+        <tr><td>Gemini CLI</td><td>I <code>~/.gemini/settings.json</code>: <code>"mcpServers": {"kiindeksen": {"httpUrl": "https://kiindeksen-mcp.fly.dev/mcp"}}</code></td></tr>
+        <tr><td>Cursor, VS Code, Cline og andre</td><td>Legg til en server av typen HTTP (Streamable HTTP) med adressen over. Klienter som bare kjenner den eldre SSE-transporten, bruker <code>https://kiindeksen-mcp.fly.dev/sse</code>.</td></tr>
+        <tr><td>Klienter som bare starter lokale servere</td><td>Last ned <a href="/mcp/server.py">server.py</a> og registrer kommandoen <code>python3 server.py --stdio</code>. Den henter dataene fra nettstedet og trenger ingen pakker.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>Fra kode, hos hvilken som helst leverandør</h3>
+    <p>Modell-API-ene til OpenAI og Anthropic kaller serveren direkte, uten
+      egen MCP-klient. Hos OpenAI (Responses API) er verktøyet
+      <code>{"type": "mcp", "server_label": "kiindeksen", "server_url": "https://kiindeksen-mcp.fly.dev/mcp", "require_approval": "never"}</code>.
+      Hos Anthropic (Messages API, beta-hode <code>mcp-client-2025-11-20</code>)
+      står serveren som <code>{"type": "url", "url": "https://kiindeksen-mcp.fly.dev/mcp", "name": "kiindeksen"}</code>
+      i <code>mcp_servers</code>, og verktøyet er
+      <code>{"type": "mcp_toolset", "mcp_server_name": "kiindeksen"}</code>.</p>
+    <p>Alle andre modeller med funksjonskall, som Kimi, GLM, Gemini eller
+      Mistral, kan bruke de samme verktøyene som vanlige HTTP-kall. Hvert
+      verktøy finnes som <code>GET /tools/&lt;navn&gt;</code> med argumentene i
+      spørrestrengen (lister kommaseparert) eller som <code>POST</code> med
+      JSON-kropp. <a href="https://kiindeksen-mcp.fly.dev/openapi.json">openapi.json</a> beskriver dem,
+      så GPT-er, Dify, Coze og lignende plattformer kan importere dem. Prøv:</p>
+<pre><code>curl "https://kiindeksen-mcp.fly.dev/tools/get_headline?young=true&amp;reference=claudecode"
+curl "https://kiindeksen-mcp.fly.dev/tools/compare_occupations?codes=4110,3312&amp;index_base=2025-02"</code></pre>
 
     <h3>Verktøyene</h3>
     <div class="table-wrap">
@@ -175,8 +211,9 @@
         sjette time, så den følger den månedlige releasen uten ny
         utrulling. Den er skrevet i Pythons standardbibliotek og kjører som
         egen Fly.io-app i Stockholm. Kildekoden ligger i
-        <code>dashboard/mcp/</code> i prosjektets repo. Du kan kjøre den
-        lokalt mot nedlastede datafiler med
+        <code>dashboard/mcp/</code> i prosjektets repo, og
+        <a href="/mcp/server.py">server.py</a> kan lastes ned herfra. Du kan
+        kjøre den lokalt mot nedlastede datafiler med
         <code>python3 server.py --data-dir &lt;mappe&gt; --port 8765</code>.</p>
     </details>
   </section>

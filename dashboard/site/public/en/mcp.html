@@ -55,7 +55,7 @@
     <h2>MCP connector to the data</h2>
     <p class="lede">
       Everything the site shows, you can query yourself. An MCP server
-      (Model Context Protocol) gives Claude, Claude Code and your own
+      (Model Context Protocol) gives Claude, Codex, Kimi, GLM and your own
       scripts the same numbers as tools: the time series behind the index,
       every occupation with its tasks and Claude use, and every field of
       study. All of it is aggregate data that is already public. No login.
@@ -74,6 +74,42 @@
       <a href="/mcp/client_example.py">client_example.py</a> shows the
       whole exchange with the server and needs only Python, no packages:</p>
 <pre><code>python3 client_example.py</code></pre>
+
+    <h3>Other clients and models</h3>
+    <p>The connector is open MCP over HTTP and is not tied to Claude. Any
+      client that takes a URL can use it, and the URL is the same
+      everywhere: <code>https://kiindeksen-mcp.fly.dev/mcp</code>.</p>
+    <div class="table-wrap">
+    <table class="mcp-table">
+      <thead><tr><th>Client</th><th>How to add it</th></tr></thead>
+      <tbody>
+        <tr><td>Codex CLI (OpenAI)</td><td><code>codex mcp add kiindeksen --url https://kiindeksen-mcp.fly.dev/mcp</code>, or in <code>~/.codex/config.toml</code>: <code>[mcp_servers.kiindeksen]</code> with <code>url = "https://kiindeksen-mcp.fly.dev/mcp"</code></td></tr>
+        <tr><td>Kimi Code CLI (Moonshot)</td><td><code>kimi mcp add --transport http kiindeksen https://kiindeksen-mcp.fly.dev/mcp</code></td></tr>
+        <tr><td>GLM from Z.ai</td><td>The models are used through Claude Code, OpenCode, Cline or Kilo Code. Add the connector in the client you use; the Claude Code command is above.</td></tr>
+        <tr><td>OpenCode</td><td>In <code>opencode.json</code>: <code>"mcp": {"kiindeksen": {"type": "remote", "url": "https://kiindeksen-mcp.fly.dev/mcp", "enabled": true}}</code></td></tr>
+        <tr><td>Gemini CLI</td><td>In <code>~/.gemini/settings.json</code>: <code>"mcpServers": {"kiindeksen": {"httpUrl": "https://kiindeksen-mcp.fly.dev/mcp"}}</code></td></tr>
+        <tr><td>Cursor, VS Code, Cline and others</td><td>Add a server of type HTTP (Streamable HTTP) with the URL above. Clients that only know the older SSE transport use <code>https://kiindeksen-mcp.fly.dev/sse</code>.</td></tr>
+        <tr><td>Clients that only launch local servers</td><td>Download <a href="/mcp/server.py">server.py</a> and register the command <code>python3 server.py --stdio</code>. It fetches the data from the site and needs no packages.</td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h3>From code, with any provider</h3>
+    <p>The OpenAI and Anthropic model APIs call the server directly, without
+      an MCP client of your own. With OpenAI (Responses API) the tool is
+      <code>{"type": "mcp", "server_label": "kiindeksen", "server_url": "https://kiindeksen-mcp.fly.dev/mcp", "require_approval": "never"}</code>.
+      With Anthropic (Messages API, beta header <code>mcp-client-2025-11-20</code>)
+      the server is <code>{"type": "url", "url": "https://kiindeksen-mcp.fly.dev/mcp", "name": "kiindeksen"}</code>
+      in <code>mcp_servers</code>, and the tool is
+      <code>{"type": "mcp_toolset", "mcp_server_name": "kiindeksen"}</code>.</p>
+    <p>Any other model with function calling, such as Kimi, GLM, Gemini or
+      Mistral, can use the same tools as plain HTTP calls. Every tool exists
+      as <code>GET /tools/&lt;name&gt;</code> with the arguments in the query
+      string (lists comma-separated) or as <code>POST</code> with a JSON
+      body. <a href="https://kiindeksen-mcp.fly.dev/openapi.json">openapi.json</a> describes them, so
+      GPTs, Dify, Coze and similar platforms can import them. Try:</p>
+<pre><code>curl "https://kiindeksen-mcp.fly.dev/tools/get_headline?young=true&amp;reference=claudecode"
+curl "https://kiindeksen-mcp.fly.dev/tools/compare_occupations?codes=4110,3312&amp;index_base=2025-02"</code></pre>
 
     <h3>The tools</h3>
     <div class="table-wrap">
@@ -178,8 +214,9 @@
         and every six hours, so it follows the monthly release without a
         new deployment. It is written in Python's standard library and runs
         as its own Fly.io app in Stockholm. The source is in
-        <code>dashboard/mcp/</code> in the project repository. You can run
-        it locally against downloaded data files with
+        <code>dashboard/mcp/</code> in the project repository, and
+        <a href="/mcp/server.py">server.py</a> can be downloaded here. You can
+        run it locally against downloaded data files with
         <code>python3 server.py --data-dir &lt;folder&gt; --port 8765</code>.</p>
     </details>
   </section>
