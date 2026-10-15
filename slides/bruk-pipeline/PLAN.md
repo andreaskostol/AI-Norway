@@ -42,14 +42,19 @@ Tall for eksempelet, lest fra `data/ai_exposure/` 15. oktober:
 - Yrket har én SOC-kode og én ISCO-kode, så kodekjeden er enkel.
 - I det sammenslåtte målet havner yrket i den laveste av tre grupper.
 
-Tre andre yrker brukes der eksempelet ikke viser poenget. Alle fire er
+Fire andre yrker brukes der eksempelet ikke viser poenget. Tre av dem er
 også eksempler i `mapping-pipeline`.
 
 | Yrke | Hva det viser | Tall |
 |---|---|---|
 | Programvareutviklere (2512) | Definisjonen betyr mye | Feb. 2026: bare directive 0,255, Anthropics regel 0,655 |
-| Elektrikere (7411) | Ukjent andel, og to SOC-koder blir én | Mars 2025: andel 0 fordi alt er filtrert. Sammenslått: 0,506 med 1 083 samtaler |
+| Elektrikere (7411) | To SOC-koder blir én | Feb. 2026: 0,472 og 0,667 gir snittet 0,569. Sammenslått: 0,506 med 1 083 samtaler |
 | Butikkmedarbeidere (5223) | Ett ukesutvalg er ustabilt | 0,788 i aug. 2025, 0,413 i nov. 2025 og 0,450 i feb. 2026 |
+| Hotellsjefer (1411) | Ukjent andel i mars 2025 | Mars 2025: alle oppgavene filtrert, andelen satt til 0 og yrket i Q1 på forsiden. Sammenslått: 0,430 med 581 samtaler |
+
+Rettet 15. oktober: en tidligere versjon brukte elektrikere som eksempel på
+ukjent andel. Elektrikere hadde klassifiserte samtaler i mars 2025, men
+alle lignet augmentering. Andelen 0 var derfor reell.
 
 ## Animasjon 1: fra samtale til oppgave og mønster
 
@@ -81,11 +86,11 @@ februar 2026.
 | 5 | Tre utvalg | Tre søyler for informasjonsrådgivere: august 2025, november 2025 og februar 2026. Høyden er andelen og bredden er antall samtaler. Butikkmedarbeidere vises ved siden av: 0,788, 0,413 og 0,450. Ett utvalg alene holder ikke. |
 | 6 | Slik slås de sammen | Utregningen vises linje for linje, som kortet «Skår for yrket» i Eloundou-animasjonen. Se under tabellen. |
 | 7 | Fra SOC til STYRK | Samme kodekjede som for Eloundou, men uten SOC 2018. Anthropics oppgaveliste bruker koder fra SOC 2010. SOC 2010 går til ISCO-08 og ISCO-08 til STYRK-08. |
-| 8 | Når kodene ikke passer | Flere koder blir én: snitt. Elektrikere har to SOC-koder. Én kode blir flere: kopi. De fire norske unntakene som i Eloundou-animasjonen. |
-| 9 | For lite bruk | Yrker med under 100 klassifiserte samtaler i de tre utvalgene til sammen får gruppen «too_few». 106 av 397 yrker havner der, 85 av dem i de to laveste Eloundou-kvintilene. |
+| 8 | Når kodene ikke passer | Flere koder blir én: snitt. Elektrikere har to SOC-koder, med 0,472 og 0,667 i feb. 2026. Én kode blir flere: kopi. SOC 11-1021 går til sju koder, men bare to av dem får nøyaktig 0,431. De fem andre får også bidrag fra andre SOC-koder. De fire norske unntakene som i Eloundou-animasjonen. |
+| 9 | For lite bruk | Yrker med under 100 klassifiserte samtaler i de tre utvalgene til sammen får gruppen «too_few». 106 av 397 yrker havner der: 61 uten noen data og 45 under terskelen. 85 av de 106 ligger i de to laveste Eloundou-kvintilene. |
 | 10 | Alle yrker | 291 prikker i kodens rekkefølge. Høyden er automatiseringsandelen. |
 | 11 | Tre grupper | Rangert og delt i tre like store grupper, 97 i hver. Notatene forklarer hvorfor ikke fem: rangkorrelasjonen mellom ukesutvalgene er bare 0,61 til 0,75. |
-| 12 | Mot Eloundou | Spredningsdiagram: eksponering mot automatiseringsandel. Korrelasjonen regnes i `build_data.py`. |
+| 12 | Mot Eloundou | Spredningsdiagram: eksponering mot automatiseringsandel. Rangkorrelasjonen over de 291 yrkene er 0,001. De to målene henger ikke sammen. |
 | 13 | Resultatet | Tabell for de fire eksempelyrkene og to til: andel, antall samtaler, gruppe og andel i mars 2025. |
 
 Sammenslåingen i trykk 6 skjer i to trinn, slik
@@ -148,9 +153,19 @@ Kontroller (assert), som i `mapping-pipeline`:
   `styrk08_automation_groups.csv` (0,3469 og 10 402).
 - Samme utregning gir verdien i `styrk08_automation_groups.csv` for alle
   yrker, ikke bare eksempelet.
-- Oppgavene i eksempelet er de samme 18 som i Eloundou-animasjonen.
+- Oppgavene i eksempelet er de samme 18 som i Eloundou-animasjonen. 17 har
+  samme ID. Den 18. (20556) er en eldre formulering av 23951 i O*NET 27.2,
+  fordi oppgavelista bak Anthropics tabeller er eldre.
 - Gruppestørrelsene er 97, 97, 97 og 106.
 - Antall koder i hvert ledd i kjeden regnes ut og skrives til konsollen.
+- Hele kjeden bygges på nytt fra rådataene for alle fire utvalg i Claude.ai.
+  Andel, directive-andel, bruksandel, antall samtaler og antall SOC-koder
+  skal være lik `styrk08_aei_collaboration.csv` for alle yrker.
+- Sammenslåingen, terskelen og tertilene gir samme verdier og grupper som
+  `styrk08_automation_groups.csv` for alle 397 yrker.
+
+Status 15. oktober: `build_data.py` er skrevet, og alle kontrollene går
+gjennom.
 
 ## Teknisk oppsett
 
