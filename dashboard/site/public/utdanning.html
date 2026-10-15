@@ -6,10 +6,17 @@
 <title>Utdanning — KI-indeksen</title>
 <meta name="description" content="Hvilke jobber gir utdanningen, og hvor utsatt er de for KI? Velg fag og nivå og se de ti vanligste oppgavene i jobbene, hvor utsatt hver oppgave er for språkmodeller, hvordan Claude brukes på den, og de vanligste jobbene. Registerdata fra utdanning.no, O*NET, Eloundou m.fl. og Anthropic Economic Index.">
 <link rel="canonical" href="https://kiindeksen.no/utdanning.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KI-indeksen">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:url" content="https://kiindeksen.no/utdanning.html">
+<meta property="og:title" content="Utdanning — KI-indeksen">
+<meta property="og:description" content="Hvilke jobber gir utdanningen, og hvor utsatt er de for KI? Velg fag og nivå og se de ti vanligste oppgavene i jobbene, hvor utsatt hver oppgave er for språkmodeller, hvordan Claude brukes på den, og de vanligste jobbene. Registerdata fra utdanning.no, O*NET, Eloundou m.fl. og Anthropic Economic Index.">
+<meta property="og:image" content="https://kiindeksen.no/assets/ki-logo.png">
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/utdanning.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/education.html">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/utdanning.html">
-<link rel="stylesheet" href="/style.css?v=20261005a">
+<link rel="stylesheet" href="/style.css?v=20261015a">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body data-panel="utdanning">
@@ -30,13 +37,19 @@
     <div class="brand">
       <div class="brand-top">
         <nav class="panel-nav" aria-label="Sider">
-          <a href="/">KI-indeksen</a>
-          <a href="/yrker.html">Yrker</a>
-          <a href="/utdanning.html" class="active">Utdanning</a>
+          <a href="/">Indeksen</a>
+          <a href="/labben.html" class="active">Labben</a>
+          <a href="/studio.html">Studio</a>
           <a href="/om.html">Om</a>
         </nav>
         <a class="lang-toggle" href="/en/education.html" hreflang="en" lang="en">English</a>
       </div>
+      <nav class="panel-subnav" aria-label="Labben">
+        <span class="subnav-label">Labben:</span>
+        <a href="/yrker.html">Yrker</a>
+        <a href="/utdanning.html" class="active">Utdanning</a>
+        <a href="/mcp.html">MCP</a>
+      </nav>
       <p class="tagline">Månedlige indikatorer for kunstig intelligens og det norske arbeidsmarkedet</p>
     </div>
   </div>
@@ -109,10 +122,12 @@
       <p>Hvert yrke har en oppgaveliste i O*NET, med hvor viktig hver
         oppgave er og hvor mange i yrket som gjør den. Oppgavens vekt for
         en utdanning er viktighet × andel som gjør den, vektet med hvor
-        mange med utdanningen som har yrket. De ti med størst vekt vises.
-        KI-eksponering er en skår fra 0 til 1 per oppgave, snittet av
-        Eloundou m.fl. sine tre vurderinger av om en språkmodell kan
-        halvere tiden oppgaven tar, og gruppen skåren gir i den samme
+        mange med utdanningen som har yrket. De ti med størst vekt vises,
+        høyst tre fra samme yrke.
+        KI-eksponering er Eloundou m.fl. sin GPT-4-vurdering av oppgaven:
+        1 når en språkmodell alene kan halvere tiden oppgaven tar, 0,5
+        når den trenger ekstra programvare, 0 ellers. Det er samme skår
+        som bak yrkenes eksponering. Gruppen er den skåren gir i den samme
         femdelingen som yrkene: minst utsatt, lite utsatt, middels, mye
         utsatt, mest utsatt. Automatisering er Anthropics inndeling:
         direkte delegering og tilbakemeldingssløyfe, som andel av
@@ -204,8 +219,8 @@
     <details class="method-details">
       <summary>Forbehold</summary>
       <ol>
-        <li>Oppgavetekstene er O*NETs engelske formuleringer og beskriver
-          amerikanske yrker.</li>
+        <li>Oppgavetekstene er oversatt fra O*NETs engelske formuleringer
+          og beskriver amerikanske yrker.</li>
         <li>Registeret er nasjonalt per utdanningskode. Det skiller ikke
           mellom læresteder.</li>
         <li>Claude-samtalene er globale og gjelder samtaler, ikke
@@ -230,14 +245,18 @@
       KI-indeksen · Øystein Hernæs (Frischsenteret) og
       Andreas R. Kostøl (Handelshøyskolen BI) ·
       Data: utdanning.no, O*NET, Eloundou m.fl. (2024), Anthropic Economic Index ·
-      <a href="/">KI-indeksen</a> ·
+      <a href="/">Indeksen</a> ·
+      <a href="/labben.html">Labben</a> ·
       <a href="/yrker.html">Yrker</a> ·
+      <a href="/utdanning.html">Utdanning</a> ·
+      <a href="/mcp.html">MCP</a> ·
+      <a href="/studio.html">Studio</a> ·
       <a href="/om.html">Om</a>
     </p>
   </div>
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/panels.js?v=20261005a"></script>
+<script src="/panels.js?v=20261015a"></script>
 </body>
 </html>

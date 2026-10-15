@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCP connector — The AI Labor Market Index</title>
+<meta name="description" content="Connect Claude, Claude Code or your own script to the data behind the index, Occupations and Education through an MCP server. Sixteen tools, open aggregate numbers, no login.">
+<link rel="canonical" href="https://kiindeksen.no/en/mcp.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The AI Labor Market Index">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://kiindeksen.no/en/mcp.html">
+<meta property="og:title" content="MCP connector — The AI Labor Market Index">
+<meta property="og:description" content="Connect Claude, Claude Code or your own script to the data behind the index, Occupations and Education through an MCP server. Sixteen tools, open aggregate numbers, no login.">
+<meta property="og:image" content="https://kiindeksen.no/assets/ki-logo.png">
+<link rel="alternate" hreflang="nb" href="https://kiindeksen.no/mcp.html">
+<link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/mcp.html">
+<link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/mcp.html">
+<link rel="stylesheet" href="/style.css?v=20261015a">
+<link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-logos">
+      <a href="/en/" title="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School">
+        <img src="/assets/ki-logo.png"
+             alt="The AI Labor Market Index — a collaboration between the Frisch Centre and BI Norwegian Business School"></a>
+    </div>
+    <div class="brand">
+      <div class="brand-top">
+        <nav class="panel-nav" aria-label="Pages">
+          <a href="/en/">Index</a>
+          <a href="/en/lab.html" class="active">Lab</a>
+          <a href="/en/studio.html">Studio</a>
+          <a href="/en/about.html">About</a>
+        </nav>
+        <a class="lang-toggle" href="/mcp.html" hreflang="nb" lang="nb">Norsk</a>
+      </div>
+      <nav class="panel-subnav" aria-label="Lab">
+        <span class="subnav-label">Lab:</span>
+        <a href="/en/occupations.html">Occupations</a>
+        <a href="/en/education.html">Education</a>
+        <a href="/en/mcp.html" class="active">MCP</a>
+      </nav>
+      <p class="tagline">Monthly indicators of artificial intelligence and the Norwegian labor market</p>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="max-width: 1060px; margin: 0 auto;">
+
+  <section class="prose-section">
+    <h2>MCP connector to the data</h2>
+    <p class="lede">
+      Everything the site shows, you can query yourself. An MCP server
+      (Model Context Protocol) gives Claude, Claude Code and your own
+      scripts the same numbers as tools: the time series behind the index,
+      every occupation with its tasks and Claude use, and every field of
+      study. All of it is aggregate data that is already public. No login.
+    </p>
+
+    <h3>Connect</h3>
+    <p>The endpoint is <code>https://kiindeksen-mcp.fly.dev/mcp</code>
+      (Streamable HTTP, JSON-RPC 2.0).</p>
+    <p><strong>Claude Code.</strong> One command:</p>
+<pre><code>claude mcp add --transport http kiindeksen https://kiindeksen-mcp.fly.dev/mcp</code></pre>
+    <p><strong>claude.ai.</strong> Settings, Connectors, Add custom
+      connector. Paste the address above. Then ask Claude for, say, "the
+      headline number with uncertainty for those under 31" or "compare
+      occupations 4110 and 3312".</p>
+    <p><strong>Your own script.</strong>
+      <a href="/mcp/client_example.py">client_example.py</a> shows the
+      whole exchange with the server and needs only Python, no packages:</p>
+<pre><code>python3 client_example.py</code></pre>
+
+    <h3>The tools</h3>
+    <div class="table-wrap">
+    <table class="mcp-table">
+      <thead><tr><th>Tool</th><th>What it returns</th></tr></thead>
+      <tbody>
+        <tr><td><code>get_release</code></td><td>Release, period, normalisation month, number of occupations and fields of study, the headline number with uncertainty</td></tr>
+        <tr><td><code>list_packages</code></td><td>Every time-series package: employment, new hires, pay, private and public sector, Eloundou and Mouchel quintiles, occupation cases, usage patterns</td></tr>
+        <tr><td><code>get_series</code></td><td>Series from a package, with a choice of specification (raw, sa, percap, percap_sa), facet, series, period, base month and smoothing</td></tr>
+        <tr><td><code>get_growth</code></td><td>Growth from a reference month to the last month for every series in a package, plus the gap quintile 5 minus quintile 1</td></tr>
+        <tr><td><code>get_headline</code></td><td>The site's headline number: the index with bootstrap standard error and 95 % interval, per measure, reference and age group</td></tr>
+        <tr><td><code>get_composition</code></td><td>Share of employees per age group and quintile</td></tr>
+        <tr><td><code>search_occupations</code></td><td>Search STYRK-08 occupations, Norwegian or English</td></tr>
+        <tr><td><code>get_occupation</code></td><td>One occupation: exposure, quintiles, Claude use per release, closest occupations, tasks with use and automation</td></tr>
+        <tr><td><code>get_occupation_series</code></td><td>Employment or pay for one occupation, monthly from 2021</td></tr>
+        <tr><td><code>compare_occupations</code></td><td>Several occupations side by side on a common base</td></tr>
+        <tr><td><code>list_education_levels</code>, <code>search_education</code>, <code>get_education_group</code></td><td>Education: fields of study, the tasks in the jobs, the most common jobs</td></tr>
+        <tr><td><code>list_downloads</code>, <code>get_data_dictionary</code></td><td>The release's CSV files and their documentation</td></tr>
+        <tr><td><code>get_studio_papers</code></td><td>The Studio reading list</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>Two resources (<code>kiindeksen://om</code>,
+      <code>kiindeksen://konvensjoner</code>) and two prompts
+      (<code>analyser_yrkespar</code>, <code>maanedsrapport</code>) come
+      with it.</p>
+
+    <h3>Conventions</h3>
+    <ul>
+      <li>The series are indices with 100 in November 2022, the month
+        ChatGPT arrived. Use <code>index_base</code> to move the base, for
+        example <code>2025-02</code> for Claude Code.</li>
+      <li><code>sa</code> is seasonally adjusted, <code>percap</code> is per
+        resident in the age group.</li>
+      <li>The index is growth in the most exposed fifth against growth in
+        the least exposed, in percentage points. <code>get_headline</code>
+        gives the site's number with uncertainty. <code>get_growth</code>
+        lets you compute your own references and smoothing.</li>
+      <li>Occupations are four-digit STYRK-08. Only occupations with at
+        least 30 employees every month have a series. Automation is
+        Anthropic's rule: directive plus feedback loop.</li>
+      <li>Fields of study are three-digit NUS groups, level plus field.</li>
+      <li>State the release, specification and base month when you report
+        numbers.</li>
+    </ul>
+
+    <h3>Example: same exposure, different automation</h3>
+    <p>The question: two occupations have almost the same AI exposure. Is
+      AI used the same way in them, and does employment move the same
+      way? This is what <code>client_example.py</code> does, and what
+      Claude does if you ask for the prompt <code>analyser_yrkespar</code>
+      with codes 4110 and 3312.</p>
+    <ol>
+      <li><code>get_release</code> and <code>get_headline</code>. Release
+        2026-10 covers January 2021 to July 2026. The index for ages 21–60
+        with ChatGPT as reference is +1.5 percentage points, standard error
+        2.7. For ages 21–30 since Claude Code it is −2.9, standard error
+        2.0.</li>
+      <li><code>get_growth</code> on <code>by_exposure</code> with reference
+        2025-01 and three-month smoothing. From January 2025 to July 2026,
+        seasonally adjusted: least exposed fifth −0.3 percent, most exposed
+        −0.3 percent. The gap is −0.1 percentage points. The same call on
+        <code>age_by_exposure</code> for ages 21–30: −1.8 in the least
+        exposed, −4.6 in the most exposed.</li>
+      <li><code>compare_occupations</code> with codes 4110 and 3312,
+        employment, seasonally adjusted, base month 2025-02:
+        <div class="table-wrap">
+        <table class="mcp-table">
+          <thead><tr><th>Occupation</th><th>Eloundou</th><th>Mouchel</th><th>Automation (Feb 2026)</th><th>Employment July 2026</th></tr></thead>
+          <tbody>
+            <tr><td>4110 General office clerks</td><td>0.59 (Q5)</td><td>0.59 (Q5)</td><td>67 %</td><td>95.7</td></tr>
+            <tr><td>3312 Credit and loans officers</td><td>0.61 (Q5)</td><td>0.62 (Q5)</td><td>30 %</td><td>96.5</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </li>
+      <li><code>get_occupation</code> for each occupation, platform
+        <code>claude_ai</code>, gives the tasks. Office clerks:
+        troubleshooting office equipment (1.26 percent of all Claude use,
+        automation 60 percent), forms and expense reports (66 percent) and
+        office machines (51 percent). Credit officers: recommending
+        financial strategy (24 percent), explaining credit assessment and
+        regulation (22 percent) and explaining loan types (27 percent).</li>
+      <li>The interpretation is yours: the same exposure score, but in one
+        occupation the work is ordered finished, in the other it is
+        discussed. That is what the exposure measure does not see and the
+        usage data shows.</li>
+    </ol>
+    <p>The same exercise for a field of study: <code>search_education</code>
+      with "økonomi" at bachelor level gives group 641 Business and
+      administration. It has 101 315 employed, exposure 0.55, half in the
+      most exposed fifth and automation 43 percent.
+      <code>get_education_group</code> gives the ten most common tasks in
+      the jobs and the most common jobs, accountants first.</p>
+    <p class="chart-footnote">All numbers above were read from the server
+      on 15 October 2026 with release 2026-10. New releases give new
+      numbers. Run the script again.</p>
+
+    <details class="more">
+      <summary>Operation and source code</summary>
+      <p>The server fetches the JSON files from kiindeksen.no at start-up
+        and every six hours, so it follows the monthly release without a
+        new deployment. It is written in Python's standard library and runs
+        as its own Fly.io app in Stockholm. The source is in
+        <code>dashboard/mcp/</code> in the project repository. You can run
+        it locally against downloaded data files with
+        <code>python3 server.py --data-dir &lt;folder&gt; --port 8765</code>.</p>
+    </details>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      The AI Labor Market Index · Øystein Hernæs (Frisch Centre) and
+      Andreas R. Kostøl (BI Norwegian Business School) ·
+      <a href="/en/">Index</a> ·
+      <a href="/en/lab.html">Lab</a> ·
+      <a href="/en/occupations.html">Occupations</a> ·
+      <a href="/en/education.html">Education</a> ·
+      <a href="/en/mcp.html">MCP</a> ·
+      <a href="/en/studio.html">Studio</a> ·
+      <a href="/en/about.html">About</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

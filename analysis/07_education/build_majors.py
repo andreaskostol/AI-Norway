@@ -18,6 +18,10 @@ Chain
   Eloundou et al. (2024) full_labelset.tsv, gpt4_exposure per task:
   E1 = 1 (a language model alone halves the time), E2 = 0.5 (with extra
   software), E0 = 0                                          -> task exposure
+  styrk08_all_exposure_measures.csv: eloundou_beta / eloundou_q (the GPT-4
+  beta averaged over the occupation's tasks) and mouchel_grounded /
+  mouchel_grounded_q, the scores and groups Yrker and the
+  front page show                                            -> occupation exposure
   Anthropic Economic Index, task x interaction type, latest sample per
   platform: directive + feedback loop = automation           -> how Claude is used
 
@@ -29,15 +33,31 @@ so every occupation's tasks sum to its employment share and long O*NET task
 lists do not outweigh short ones. The ten tasks with the largest weight are
 listed, at most MAX_PER_OCC per occupation so the list spans the common jobs
 rather than the one job with the longest task list. The group's task-based
-exposure is the weight-weighted mean of the task betas over all its tasks.
+exposure is the weight-weighted mean of the task scores over all its tasks,
+and the score in the task table is the same number per task.
+
+Changed 2026-10-15 (review by Øystein Hernæs, items F5 and M15)
+  F5: occupation exposure and group now come from
+  data/ai_exposure/styrk08_all_exposure_measures.csv (eloundou_beta,
+  eloundou_q, mouchel_grounded, mouchel_grounded_q), the file Yrker and the
+  front page read, so an occupation has the same score and group on every
+  page. The group cuts are read off that file (the smallest score in each
+  group) and checked to reproduce its groups; they are written to
+  majors.json for reference. Before, inputs/styrk08_exposure_v2.csv
+  (exposure_norm) and the cuts in quintile_cuts.json put 22 of 224
+  occupations in another group than Yrker (Hernæs). Mouchel is no longer
+  divided by its maximum: exposure_v2 is the raw score, as on Yrker.
+  M15: the per-task score is the GPT-4 beta (E1 = 1, E2 = 0.5, E0 = 0),
+  the label set behind the occupation-level eloundou_beta. Before, the
+  task table showed the mean over three label sets (human, GPT-4, GPT-4
+  alternative rubric) while the group total used GPT-4 only, so 973 of
+  2 150 table rows differed from the score behind the total.
 
 Inputs
   <EDUTECH>/data/utdanning_no/links_nus2styrk08*.csv    (17 MB, not in repo; EDUTECH_DIR)
   data/education_analysis/inputs/nus2000_klass.csv     NUS2000 names (SSB KLASS 36)
   data/education_analysis/inputs/styrk08_codes.csv     STYRK-08 names (utdanning.no)
-  data/education_analysis/inputs/styrk08_exposure_v2.csv   Eloundou exposure_norm, 0-1
-  data/education_analysis/quintile_cuts.json           quintile cuts per measure
-  data/ai_exposure/styrk08_all_exposure_measures.csv   Mouchel (v2)
+  data/ai_exposure/styrk08_all_exposure_measures.csv   Eloundou beta + group, Mouchel + group
   data/ai_exposure/styrk08_names_en.csv
   data/ai_exposure/styrk08_aei_collaboration.csv       occupation-level automation, latest chat
   data/ai_exposure/onet_relational/Task Statements.txt, Task Ratings IM RT.txt   (O*NET 30.1)
@@ -64,8 +84,10 @@ INP = os.path.join(E, "inputs")
 X = os.path.join(REPO, "data", "ai_exposure")
 ONET = os.path.join(X, "onet_relational")
 REL = os.path.join(X, "handa", "aei_releases")
+# The education-analysis project was renamed from Edutech to "AI in the
+# classroom" before 2026-10-15; the old default no longer exists.
 EDUTECH = os.environ.get("EDUTECH_DIR", os.path.join(
-    os.path.expanduser("~"), "Dropbox (Privat)", "AI-research", "Edutech", "education-analysis"))
+    os.path.expanduser("~"), "Dropbox (Privat)", "AI-research", "AI in the classroom", "education-analysis"))
 U = os.path.join(EDUTECH, "data", "utdanning_no")
 
 sys.path.insert(0, os.path.join(REPO, "analysis", "03_mappings"))
@@ -114,22 +136,44 @@ OCC_NAME = {r["styrk08"]: r["navn"] for r in read_csv(os.path.join(INP, "styrk08
 OCC_NAME_EN = {r["styrk08"]: r["name_en"] for r in read_csv(os.path.join(X, "styrk08_names_en.csv"))}
 
 # ---------------------------------------------------------------- exposure per occupation
-expo, expo2 = {}, {}
-for r in read_csv(os.path.join(INP, "styrk08_exposure_v2.csv")):
-    if r["exposure_norm"] not in ("", None):
-        expo[r["styrk08_code"]] = float(r["exposure_norm"])
+# The same file, scores and groups as Yrker and the front page
+# (dashboard/site/prepare_panels.py): v1 = Eloundou GPT-4 beta, v2 = Mouchel
+# grounded, each with its equal-occupation quintile (1 = least exposed).
 meas = read_csv(os.path.join(X, "styrk08_all_exposure_measures.csv"))
-mou = {r["styrk08"]: float(r["mouchel_grounded"]) for r in meas if r["mouchel_grounded"] not in ("", None)}
-MOU_MAX = max(mou.values())
-expo2 = {k: v / MOU_MAX for k, v in mou.items()}
-with open(os.path.join(E, "quintile_cuts.json"), encoding="utf-8") as f:
-    QC = json.load(f)
-QCUTS = QC["qcuts"]
+
+
+def column(rows, col, cast):
+    return {r["styrk08"]: cast(r[col]) for r in rows if r[col] not in ("", None)}
+
+
+expo = column(meas, "eloundou_beta", float)
+expo2 = column(meas, "mouchel_grounded", float)
+SITE_Q = {"v1": column(meas, "eloundou_q", lambda x: int(float(x))),
+          "v2": column(meas, "mouchel_grounded_q", lambda x: int(float(x)))}
+
+
+def site_cuts(values, qs):
+    """The lower edge of groups 2 to 5: the smallest score in each group."""
+    return [min(v for k, v in values.items() if qs.get(k) == q) for q in range(2, 6)]
+
+
+QCUTS = {"v1": site_cuts(expo, SITE_Q["v1"]), "v2": site_cuts(expo2, SITE_Q["v2"])}
 TOP5_CUT = {"v1": QCUTS["v1"][3], "v2": QCUTS["v2"][3]}
 
 
 def quint(v, ver):
+    """Group 1-5 for a score on the occupation scale. Used for tasks; the
+    occupations take their group straight from the file (SITE_Q)."""
     return None if v is None else 1 + sum(v >= c for c in QCUTS[ver])
+
+
+# The cuts must give back the file's own group for every occupation,
+# otherwise a task and an occupation with the same score would land in
+# different groups. Holds for both measures as of 2026-10-15 (no ties on a cut).
+for ver, vals in (("v1", expo), ("v2", expo2)):
+    off = [k for k, v in vals.items() if quint(v, ver) != SITE_Q[ver].get(k)]
+    if off:
+        raise SystemExit(f"{ver}: cuts do not reproduce the file's groups for {off[:5]}")
 
 
 # occupation-level automation, latest chat sample (Anthropic's bucketing)
@@ -210,20 +254,19 @@ for styrk, s10s in soc10_per_styrk.items():
     if onets:
         onet_per_styrk[styrk] = sorted(onets)
 
-# Eloundou labels per task id. `label` is the GPT-4 label; `score` is the
-# mean beta over the three label sets in the file (human, GPT-4, GPT-4 with
-# the alternative rubric), 0-1, and `tq` places that score in the same five
-# groups as the occupations (exposure_norm = beta / 0.975, occupation cuts).
+# Eloundou labels per task id. `label` is the GPT-4 label and `score` its
+# beta (E1 = 1, E2 = 0.5, E0 = 0): the label set behind the occupation-level
+# eloundou_beta on Yrker, so the task table, the group total (task_exposure)
+# and the occupation scores rest on one rating. `tq` places the score in the
+# occupation groups; the scales are the same, so no rescaling. The file also
+# carries human labels and a GPT-4 alternative rubric; they are not used.
 label, score, tq = {}, {}, {}
-BETA_MAX = 0.975
 for r in read_tsv(os.path.join(X, "eloundou", "full_labelset.tsv")):
     tid = r["Task ID"].split(".")[0]
     if r["gpt4_exposure"] in BETA:
         label[tid] = r["gpt4_exposure"]
-    vals = [BETA[r[c]] for c in ("human_labels", "gpt4_exposure", "gpt4_exposure_alt_rubric") if r.get(c) in BETA]
-    if vals:
-        score[tid] = round(sum(vals) / len(vals), 3)
-        tq[tid] = quint(score[tid] / BETA_MAX, "v1")
+        score[tid] = BETA[r["gpt4_exposure"]]
+        tq[tid] = quint(score[tid], "v1")
 
 # Norwegian task texts, when the translation file exists (see
 # analysis/07_education/translate_tasks.py). Missing rows fall back to English.
@@ -310,8 +353,8 @@ def occ_rows(counter, n):
         return out
     for k, v in sorted(emp.items(), key=lambda kv: -kv[1])[:n]:
         out.append({"code": k, "name": OCC_NAME.get(k, k), "name_en": OCC_NAME_EN.get(k, ""),
-                    "share": round(v / tot, 4), "e_v1": expo.get(k), "q_v1": quint(expo.get(k), "v1"),
-                    "q_v2": quint(expo2.get(k), "v2"),
+                    "share": round(v / tot, 4), "e_v1": expo.get(k), "q_v1": SITE_Q["v1"].get(k),
+                    "e_v2": expo2.get(k), "q_v2": SITE_Q["v2"].get(k),
                     "auto": occ_auto.get(k)})
     return out
 
@@ -331,7 +374,9 @@ for g in sorted(dist):
         continue
     scored2 = {k: v for k, v in emp.items() if k in expo2}
     n_sc2 = sum(scored2.values())
-    # occupation-level exposure and quintiles, as elsewhere on the site
+    # occupation-level exposure and groups, the file's own (as on Yrker):
+    # employment-weighted mean score, share in the top group, share per group
+    q1, q2 = SITE_Q["v1"], SITE_Q["v2"]
     rec = {
         "code": g, "level": lvl, "field": g[1], "name": GROUP_NAME[g],
         "field_name": FIELD_NAMES.get(g[1], ""),
@@ -340,10 +385,10 @@ for g in sorted(dist):
         "n_occ": len(emp),
         "exposure_v1": round(sum(expo[k] * v for k, v in scored.items()) / n_sc, 4),
         "exposure_v2": round(sum(expo2[k] * v for k, v in scored2.items()) / n_sc2, 4) if n_sc2 else None,
-        "q5_v1": round(sum(v for k, v in scored.items() if expo[k] >= TOP5_CUT["v1"]) / n_sc, 4),
-        "q5_v2": round(sum(v for k, v in scored2.items() if expo2[k] >= TOP5_CUT["v2"]) / n_sc2, 4) if n_sc2 else None,
-        "q_v1": [round(sum(v for k, v in scored.items() if quint(expo[k], "v1") == q) / n_sc, 4) for q in range(1, 6)],
-        "q_v2": [round(sum(v for k, v in scored2.items() if quint(expo2[k], "v2") == q) / n_sc2, 4) for q in range(1, 6)] if n_sc2 else None,
+        "q5_v1": round(sum(v for k, v in scored.items() if q1[k] == 5) / n_sc, 4),
+        "q5_v2": round(sum(v for k, v in scored2.items() if q2[k] == 5) / n_sc2, 4) if n_sc2 else None,
+        "q_v1": [round(sum(v for k, v in scored.items() if q1[k] == q) / n_sc, 4) for q in range(1, 6)],
+        "q_v2": [round(sum(v for k, v in scored2.items() if q2[k] == q) / n_sc2, 4) for q in range(1, 6)] if n_sc2 else None,
     }
     # occupation-level automation, weighted by employment share
     pairs = [(occ_auto[k], v) for k, v in emp.items() if k in occ_auto]
@@ -372,7 +417,8 @@ for g in sorted(dist):
                 if tid not in task_onet or wt > task_onet[tid][1]:
                     task_onet[tid] = (onet, wt)
     total_w = sum(tw.values())
-    lab_w = [(BETA[label[t]], wv) for t, wv in tw.items() if t in label]
+    # the same per-task score as in the task table (GPT-4 beta)
+    lab_w = [(score[t], wv) for t, wv in tw.items() if t in score]
     rec["task_coverage"] = round(covered / n_emp, 4) if n_emp else None
     rec["task_exposure"] = round(sum(b * wv for b, wv in lab_w) / sum(wv for _, wv in lab_w), 4) if lab_w else None
     # task-level automation, weighted by task weight x Claude usage

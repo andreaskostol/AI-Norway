@@ -23,14 +23,22 @@
     "Quintile 3": "Kvintil 3",
     "Quintile 4": "Kvintil 4",
     "Quintile 5 (most exposed)": "Kvintil 5 (mest eksponert)",
-    "Quintile 1 (least usage)": "Kvintil 1 (minst bruk)",
-    "Quintile 5 (most usage)": "Kvintil 5 (mest bruk)",
+    "Quintile 1 (least usage)": "Kvintil 1 (lavest andel)",
+    "Quintile 5 (most usage)": "Kvintil 5 (høyest andel)",
     "No usage": "Ingen bruk",
     "All ages": "All ages"
   };
-  // De engelske kolonnenavnene fra dataene brukes som de er på EN-siden;
-  // på NO-siden oversettes de via tabellen over.
-  function lab(s) { return EN ? s : (NO_LABELS[s] || s); }
+  // Bruksgruppene (figur 10-12) er delt etter ANDELEN automatiserende
+  // eller augmenterende samtaler, ikke etter hvor mye yrket bruker Claude.
+  // Kolonnenavnene i dataene ("least usage") er misvisende og vises derfor
+  // med egne etiketter paa begge spraak (2026-10-15, Oeysteins notat).
+  var EN_LABELS = {
+    "Quintile 1 (least usage)": "Quintile 1 (lowest share)",
+    "Quintile 5 (most usage)": "Quintile 5 (highest share)"
+  };
+  // De engelske kolonnenavnene fra dataene brukes ellers som de er paa
+  // EN-siden; paa NO-siden oversettes de via tabellen over.
+  function lab(s) { return EN ? (EN_LABELS[s] || s) : (NO_LABELS[s] || s); }
 
   // Stanford-dashboardets palett i kvintilrekkefoelge
   // (jf. canaries_dashboard_oversikt.md).
@@ -215,6 +223,13 @@
   function measurePkg(base) {
     var name = measure().prefix + corePkg(base);
     return DB.packages[name] ? name : corePkg(base);
+  }
+  // Hovedtallet, radene under det og punkt 3 i oppsummeringen gjelder
+  // alltid sysselsetting: etiketten «KI-indeksen» og standardfeilen er
+  // regnet for sysselsetting, uansett utfallsvalget i menyen (2026-10-15).
+  function employmentPkg(base) {
+    var name = measure().prefix + base;
+    return DB.packages[name] ? name : base;
   }
   // Kort maalmerke til titler og tekst naar et annet maal enn standard er valgt.
   function measureTag() {
@@ -457,6 +472,11 @@
     }
     document.getElementById("title-age").textContent =
       "3 · " + word + (EN ? " by age" : " etter alder");
+    // Figur 11 foelger ogsaa utfallet (renderUsage bruker corePkg).
+    var tu = document.getElementById("title-usage");
+    if (tu) {
+      tu.textContent = "11 · " + word + (EN ? " by AI usage" : " etter KI-bruk");
+    }
     // Offentlig sektor (figur 12 og 14) foelger samme utfall.
     var tpe = document.getElementById("title-public-exposure");
     if (tpe) {
@@ -604,8 +624,8 @@
 
   var LEAST_EXP = EN ? "Least exposed" : "Minst eksponert";
   var MOST_EXP = EN ? "Most exposed" : "Mest eksponert";
-  var LEAST_USE = EN ? "Least usage" : "Minst bruk";
-  var MOST_USE = EN ? "Most usage" : "Mest bruk";
+  var LEAST_USE = EN ? "Lowest share" : "Lavest andel";
+  var MOST_USE = EN ? "Highest share" : "Høyest andel";
 
   function yoyOf(pkg, fk, col) {
     var y = DB.packages[pkg].yoy_latest;
@@ -638,7 +658,7 @@
   }
 
   function summaryRowsData() {
-    var be = measurePkg("by_exposure"), ae = measurePkg("age_by_exposure");
+    var be = employmentPkg("by_exposure"), ae = employmentPkg("age_by_exposure");
     var qcols = DB.packages[be].value_cols;
 
     function quintPoints(getVal) {
@@ -744,7 +764,7 @@
             return {
               value: [100 * p.value, yOf[p.inside] || 0],
               fullName: p.name,
-              itemStyle: { color: p.color, borderColor: "#fffdf8",
+              itemStyle: { color: p.color, borderColor: "#ffffff",
                            borderWidth: 1.5 },
               label: { show: p.inside !== "", position: "inside",
                        formatter: p.inside, color: p.labelColor || "#fff",
@@ -1012,8 +1032,13 @@
         (gT >= 0 ? " høyere" : " lavere") + " enn " + ref + pcText + "."));
 
     // 2. KI-indeksen.
+    // «Om lag null» naar bootstrap-intervallet dekker null: fortegnet
+    // alene sier ingenting naar usikkerheten er stoerre enn tallet.
+    var ru0 = uncertaintyFor(false);
+    var nearZero = ru0 ? (ru0.ci_lo <= 0 && ru0.ci_hi >= 0)
+                       : Math.abs(g.rel) < 0.05;
     var grad = Math.abs(g.rel) < 1 ? (EN ? "slightly " : "svakt ") : "";
-    var idxWord = Math.abs(g.rel) < 0.05
+    var idxWord = nearZero
       ? (EN ? "roughly zero" : "om lag null")
       : grad + (EN ? (g.rel >= 0 ? "positive" : "negative")
                    : (g.rel >= 0 ? "positiv" : "negativ"));
@@ -1032,12 +1057,15 @@
 
     // 3. Unge i de mest eksponerte yrkene, mot unge i de minst
     //    eksponerte og mot eldre i de samme yrkene; pluss siste 12 mnd.
-    var ae = measurePkg("age_by_exposure");
+    var ae = employmentPkg("age_by_exposure");
     var y5 = pkgGrowth(ae, Q5L, "21-30"), y1 = pkgGrowth(ae, Q1L, "21-30");
     var o5 = olderGrowth(ae, Q5L);
     var yoy5 = yoyOf(ae, Q5L, "21-30");
+    // «Viktige forskjeller» krever et minstegap paa MIN_GAP_PP
+    // prosentpoeng mot begge sammenligningsgruppene, ikke bare fortegn.
+    var MIN_GAP_PP = 2;
     var gap = (y5 != null && y1 != null && o5 != null) &&
-              y5 < y1 && y5 < o5;
+              y5 < y1 - MIN_GAP_PP && y5 < o5 - MIN_GAP_PP;
     var lead3 = gap
       ? (EN ? "But there are important differences across age:"
             : "Men det er viktige forskjeller på tvers av alder:")
@@ -1582,7 +1610,7 @@
               "hires_by_exposure", "hires_age_by_exposure", "hires_by_age",
               "wages_by_exposure", "wages_age_by_exposure", "wages_by_age"] },
     { title: EN ? "Alternative exposure measure: Mouchel et al. (2026)"
-                : "Alternativt eksponeringsmål: Mouchel et al. (2026)",
+                : "Alternativt eksponeringsmål: Mouchel m.fl. (2026)",
       names: ["mouchel_by_exposure", "mouchel_age_by_exposure",
               "mouchel_hires_by_exposure", "mouchel_hires_age_by_exposure",
               "mouchel_wages_by_exposure", "mouchel_wages_age_by_exposure"] },
@@ -1877,7 +1905,7 @@
   // ---------- Ordforklaringer (?-knappene) ----------
 
   var GLOSSARY = EN ? {
-    utfall: "“Employment” is the number of wage earners in the group. " +
+    utfall: "“Employment” is the number of jobs with cash pay in the month. " +
       "“New hires” is the number of new jobs that started during the " +
       "month. “Pay (FTE-adjusted)” is average monthly pay converted to " +
       "full-time: FTE stands for full-time equivalent, so a part-time " +
@@ -1910,8 +1938,8 @@
     maal: "Both measures rank occupations by how much of their work " +
       "large language models can do. Eloundou et al. (2024) is the " +
       "task-based measure the index has used from the start. Mouchel " +
-      "et al. (2026) is an evidence-grounded measure built from " +
-      "documented AI use. Over the same 397 occupations the two rank " +
+      "et al. (2026) is an evidence-grounded measure: language models " +
+      "rate each task, supported by news and research. Over the same 397 occupations the two rank " +
       "almost alike (rank correlation 0.94; two-thirds of occupations " +
       "in the same quintile), but the quintiles are not identical, so " +
       "levels differ somewhat. The measure applies to the headline " +
@@ -1929,7 +1957,7 @@
       "more than in that month, 95 means 5% fewer. This lets large and " +
       "small groups be compared directly."
   } : {
-    utfall: "«Sysselsetting» er antall lønnstakere i gruppen. " +
+    utfall: "«Sysselsetting» er antall arbeidsforhold med utbetalt kontantlønn i måneden. " +
       "«Nyansettelser» er antall nye jobber som startet i måneden. " +
       "«Lønn (FTE-justert)» er gjennomsnittlig månedslønn omregnet til " +
       "full stilling: FTE står for fulltidsekvivalent, så en deltids- " +
@@ -1961,8 +1989,8 @@
     maal: "Begge målene rangerer yrker etter hvor mye av arbeidet " +
       "store språkmodeller kan gjøre. Eloundou m.fl. (2024) er det " +
       "oppgavebaserte målet indeksen har brukt hele tiden. Mouchel " +
-      "m.fl. (2026) er et evidensbasert mål bygget på dokumentert " +
-      "KI-bruk. Over de samme 397 yrkene rangerer de nesten likt " +
+      "m.fl. (2026) er et evidensbasert mål: språkmodeller vurderer " +
+      "hver oppgave, støttet av nyheter og forskning. Over de samme 397 yrkene rangerer de nesten likt " +
       "(rangkorrelasjon 0,94; to tredjedeler av yrkene i samme " +
       "kvintil), men kvintilene er ikke identiske, så nivåene avviker " +
       "noe. Målet gjelder hovedfiguren og figur 1–2.",

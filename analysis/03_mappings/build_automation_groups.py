@@ -17,7 +17,9 @@ data/ai_exposure/docs/styrk08_automation_groups_README.md:
      correlates 0.13-0.28 with the chat share.
   2. Vintages pooled: Aug 2025, Nov 2025 and Feb 2026, count-weighted
      (sum of automation conversations / sum of classified conversations).
-     The Handa vintage (Dec 2024-Jan 2025) is kept only as a robustness
+     The original vintage (March 2025 release, the 11 days after the
+     launch of Claude 3.7 Sonnet on 24 Feb 2025; keyed 2024-12-01, see
+     HANDA_DATE) is kept only as a robustness
      column: it has no conversation counts, so it cannot be gated, and it
      comes from a different regime (chat-only, pre-agentic, directive
      share 27 percent against 39 percent by Aug 2025).
@@ -71,7 +73,10 @@ OUTPUT_FILE = DATA_DIR / 'styrk08_automation_groups.csv'      # output grouping
 PLATFORM = 'claude_ai'                                   # decision 1
 POOL_DATES = ['2025-08-04', '2025-11-13', '2026-02-05']  # decision 2
 FEB_DATE = '2026-02-05'                                  # robustness: single vintage
-HANDA_DATE = '2024-12-01'                                # robustness: original vintage
+# Robustness: the original vintage. The date is an identifier in the
+# measurement file, not the sample period: the sample is the 11 days from
+# 2025-02-24 (Claude 3.7 Sonnet launch, release_2025_03_27).
+HANDA_DATE = '2024-12-01'
 MIN_N = 100                                              # decision 4
 GROUP_LABELS = ['low', 'mid', 'high']                    # decision 5
 TOO_FEW = 'too_few'                                      # below threshold / absent

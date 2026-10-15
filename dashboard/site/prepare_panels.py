@@ -35,10 +35,15 @@ EXPO_DIR = os.path.join(REPO_DIR, "data", "ai_exposure")
 EDU_DIR = os.path.join(REPO_DIR, "data", "education_analysis")
 OUT_DIR = os.path.join(SITE_DIR, "public", "data")
 
-# Vintage labels. The date is the start of Anthropic's sample window.
+# Vintage labels. The date is the start of Anthropic's sample window, except
+# for the first: 2024-12-01 is only the key the files use for the March 2025
+# release, whose sample is the 11 days after the launch of Claude 3.7 Sonnet
+# on 24 Feb 2025 (not Handa et al. 2025, which covered Dec 2024 to Jan 2025
+# and published no per-task interaction types). Corrected 2026-10-15.
 VINTAGES = [
-    ("claude_ai", "2024-12-01", "des. 2024–jan. 2025", "Dec 2024–Jan 2025",
-     "Handa m.fl. (2025), release mars 2025", "Handa et al. (2025), March 2025 release"),
+    ("claude_ai", "2024-12-01", "feb.–mars 2025", "Feb–Mar 2025",
+     "Anthropic Economic Index, mars 2025 (Claude 3.7 Sonnet)",
+     "Anthropic Economic Index, March 2025 (Claude 3.7 Sonnet)"),
     ("claude_ai", "2025-08-04", "aug. 2025", "Aug 2025", "release september 2025", "September 2025 release"),
     ("claude_ai", "2025-11-13", "nov. 2025", "Nov 2025", "release januar 2026", "January 2026 release"),
     ("claude_ai", "2026-02-05", "feb. 2026", "Feb 2026", "release mars 2026", "March 2026 release"),
@@ -236,19 +241,25 @@ def build_yrker():
             "tasks": task_by_code.get(code, {}),
         })
     occupations.sort(key=lambda o: o["code"])
-    # Neighbours without Claude data are not in `occupations`, but the page
-    # still needs their name, size and exposure, otherwise "the three closest"
-    # shows two entries for 45 occupations.
+    # Occupations without Claude data are not in `occupations`, but the page
+    # still needs their name, size and exposure: as neighbours ("the three
+    # closest" would otherwise show two entries for 45 occupations) and in
+    # the group list at the foot of the page, where an occupation known only
+    # from occupations.json got no score (18 occupations, M13, fixed
+    # 2026-10-15). So every occupation with an exposure group goes in, plus
+    # any neighbour without one.
     have = {o["code"] for o in occupations}
     referenced = {nb["code"] for o in occupations for nb in o["nb"]}
     extra = {}
     for m in measures:
         code = m["styrk08"]
-        if code in have or code not in referenced:
+        scored = bool(m["eloundou_q"] or m["mouchel_grounded_q"])
+        if code in have or not (scored or code in referenced):
             continue
         extra[code] = {"name": m["styrk08_name"], "name_en": names_en.get(code, ""),
                        "n": n_base.get(code), "q": intq(m["eloundou_q"]),
-                       "beta": num(m["eloundou_beta"], 3)}
+                       "q_mouchel": intq(m["mouchel_grounded_q"]),
+                       "beta": num(m["eloundou_beta"], 3), "mouchel": num(m["mouchel_grounded"], 3)}
     vintages = [{"platform": p, "date": d, "key": p + "|" + d, "label": lab,
                  "label_en": lab_en, "source": src, "source_en": src_en}
                 for p, d, lab, lab_en, src, src_en in VINTAGES]

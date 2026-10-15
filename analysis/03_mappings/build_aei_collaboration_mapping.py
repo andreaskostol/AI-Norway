@@ -2,11 +2,14 @@
 Automation vs. augmentation per STYRK-08 occupation from the newer Anthropic
 Economic Index releases (Nov 2025, Feb 2026, and Aug 2025 if extracted).
 
-The original Handa et al. (2025) mapping (build_handa_mapping.py) uses the
-March 2025 release, which covered Claude.ai conversations from Dec 2024 to
-Jan 2025. Anthropic has since published the same task x interaction-type
-table three more times, at the O*NET task level and for both Claude.ai and
-the first-party API. This script walks those tables through the same
+The original mapping (build_handa_mapping.py) uses the March 2025 release
+("Anthropic Economic Index: Insights from Claude 3.7 Sonnet"), which covered
+Claude.ai conversations from the 11 days after the launch of Claude 3.7
+Sonnet on 24 February 2025. Handa et al. (2025), the first report, covered
+Dec 2024 to Jan 2025 but published no per-task interaction types. Anthropic
+has since published the same task x interaction-type table three more
+times, at the O*NET task level and for both Claude.ai and the first-party
+API. This script walks those tables through the same
 chain as the Handa mapping (O*NET task -> SOC 2010 -> ISCO-08 -> STYRK-08),
 so the occupation panel on kiindeksen.no can show how each occupation's
 automation share has moved, and what the API (agentic, enterprise) side
@@ -23,11 +26,18 @@ dashboard's usage groups and the paper text) counts directive ONLY as
 automation. Both conventions are kept here: automation_share follows
 Anthropic, directive_share is the directive-only variant.
 
-The original Handa vintage (release_2025_03_27, Claude.ai conversations
-Dec 2024 to Jan 2025) is included as date 2024-12-01 so the site can show
-all four points in time. It is rebuilt from the task-level shares with
-usage-weighted pseudo-counts, which reproduces the Handa mapping's
+The original vintage (release_2025_03_27, Claude.ai conversations from the
+11 days after 24 February 2025) is included under the key 2024-12-01 so the
+site can show all four points in time. The key is an identifier, not the
+sample period (see HANDA_DATE). It is rebuilt from the task-level shares
+with usage-weighted pseudo-counts, which reproduces the Handa mapping's
 weighting exactly; its conversation counts are unknown and left blank.
+
+Task table: a task statement can sit under several SOC 2010 codes, and two
+of those codes can map to the same STYRK-08 code. The task is then merged
+into one row per occupation (usage pct summed, shares recomputed from the
+summed per-type counts) before the TOP_TASKS largest are chosen, so no
+occupation lists the same task twice (fixed 2026-10-15).
 
 Inputs (written by extract_aei_release_slices.py):
   data/ai_exposure/handa/aei_releases/onet_task_collaboration_{platform}_{date}.csv
@@ -57,7 +67,11 @@ AUTOMATE = TYPES[:2]
 AUGMENT = TYPES[2:]
 TOP_TASKS = 15          # tasks kept per occupation in the task table
 MIN_TASK_N = 10         # a task needs this many classified conversations to be listed
-HANDA_DATE = '2024-12-01'   # the original Handa et al. (2025) vintage
+# Key for the original vintage in the output files and on the site. The date
+# is an identifier only, kept so downstream files need no regeneration: the
+# sample is the 11 days after the launch of Claude 3.7 Sonnet on 2025-02-24
+# (release_2025_03_27), not Dec 2024 to Jan 2025.
+HANDA_DATE = '2024-12-01'
 
 
 def read_handa():
@@ -143,15 +157,18 @@ def main():
                     soc_type[soc][t] += types.get(t, 0.0) / n
                 soc_usage[soc] += usage.get(task, 0.0) / n
                 if classified >= MIN_TASK_N:
+                    # One record per task x SOC. `counts` holds the task's
+                    # per-type conversation counts split 1/n across its SOC
+                    # codes (same split as soc_type above), so records for
+                    # the same task can be summed when two of its SOC codes
+                    # land in the same STYRK-08 code. `n_classified` stays
+                    # the task's full count: the site shows it as the number
+                    # of classified conversations about the task.
                     soc_tasks[soc].append({
                         'task_name': task,
                         'pct': usage.get(task, 0.0) / n,
                         'n_classified': classified,
-                        'directive': types.get('directive', 0.0) / classified,
-                        'feedback_loop': types.get('feedback loop', 0.0) / classified,
-                        'task_iteration': types.get('task iteration', 0.0) / classified,
-                        'validation': types.get('validation', 0.0) / classified,
-                        'learning': types.get('learning', 0.0) / classified,
+                        'counts': {t: types.get(t, 0.0) / n for t in TYPES},
                     })
 
         # Step 2: SOC 2010 -> ISCO-08 (filtered to STYRK-08 codes).
@@ -206,20 +223,45 @@ def main():
             occ_rows.append(row)
 
             if date == latest_by_platform[platform]:
-                pool = [dict(tr, soc=soc) for soc, _, _ in contribs
-                        for tr in soc_tasks.get(soc, [])]
+                # Merge records with the same task text across the SOC codes
+                # that contribute to this occupation: usage pct and the split
+                # per-type counts are summed, the shares recomputed from the
+                # summed counts. The full conversation count is the same
+                # conversations seen through each SOC code, so it is not
+                # summed. `soc` is the contributing SOC code with the largest
+                # usage share; `soc_all` lists every one.
+                merged = {}
+                for soc, _, _ in contribs:
+                    for tr in soc_tasks.get(soc, []):
+                        key = tr['task_name'].lower().strip()
+                        m = merged.get(key)
+                        if m is None:
+                            m = merged[key] = {
+                                'task_name': tr['task_name'], 'pct': 0.0,
+                                'n_classified': tr['n_classified'],
+                                'counts': defaultdict(float), 'socs': {},
+                            }
+                        m['pct'] += tr['pct']
+                        m['n_classified'] = max(m['n_classified'], tr['n_classified'])
+                        for t in TYPES:
+                            m['counts'][t] += tr['counts'][t]
+                        m['socs'][soc] = m['socs'].get(soc, 0.0) + tr['pct']
+                pool = list(merged.values())
                 pool.sort(key=lambda r: -r['pct'])
                 for tr in pool[:TOP_TASKS]:
+                    cls = sum(tr['counts'][t] for t in TYPES)
+                    socs = sorted(tr['socs'], key=lambda s: (-tr['socs'][s], s))
                     task_rows.append({
                         'styrk08': isco, 'platform': platform, 'date_start': date,
-                        'soc': tr['soc'], 'task_name': tr['task_name'],
+                        'soc': socs[0], 'soc_all': ';'.join(socs),
+                        'task_name': tr['task_name'],
                         'pct': round(tr['pct'], 6),
                         'n_classified': round(tr['n_classified'], 1),
-                        'directive_share': round(tr['directive'], 4),
-                        'feedback_loop_share': round(tr['feedback_loop'], 4),
-                        'task_iteration_share': round(tr['task_iteration'], 4),
-                        'validation_share': round(tr['validation'], 4),
-                        'learning_share': round(tr['learning'], 4),
+                        'directive_share': round(tr['counts']['directive'] / cls, 4),
+                        'feedback_loop_share': round(tr['counts']['feedback loop'] / cls, 4),
+                        'task_iteration_share': round(tr['counts']['task iteration'] / cls, 4),
+                        'validation_share': round(tr['counts']['validation'] / cls, 4),
+                        'learning_share': round(tr['counts']['learning'] / cls, 4),
                     })
         n_occ = sum(1 for r in occ_rows if r['platform'] == platform and r['date_start'] == date)
         print(f'{platform} {date}: {matched} tasks matched to SOC, {n_occ} STYRK-08 codes')
@@ -233,7 +275,7 @@ def main():
         w = csv.DictWriter(f, fieldnames=occ_fields, lineterminator='\n')
         w.writeheader()
         w.writerows(occ_rows)
-    task_fields = ['styrk08', 'platform', 'date_start', 'soc', 'task_name', 'pct',
+    task_fields = ['styrk08', 'platform', 'date_start', 'soc', 'soc_all', 'task_name', 'pct',
                    'n_classified', 'directive_share', 'feedback_loop_share',
                    'task_iteration_share', 'validation_share', 'learning_share']
     with open(OUT_TASKS, 'w', newline='', encoding='utf-8') as f:

@@ -4,12 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The AI Labor Market Index — AI and the Norwegian labor market</title>
-<meta name="description" content="Monthly indicators of how artificial intelligence is affecting employment in Norway, by occupations' AI exposure and age groups. Built on register data from the A-ordningen (Norwegian employer reports).">
+<meta name="description" content="Monthly indicators of how artificial intelligence is affecting employment in Norway, by occupations' AI exposure and age groups. Built on register data from the A-ordningen (Norwegian employer reports). The Lab has pages for occupations and education and an MCP connector to the data.">
 <link rel="canonical" href="https://kiindeksen.no/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The AI Labor Market Index">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://kiindeksen.no/en/">
+<meta property="og:title" content="The AI Labor Market Index — AI and the Norwegian labor market">
+<meta property="og:description" content="Monthly indicators of how artificial intelligence is affecting employment in Norway, by occupations' AI exposure and age groups. Built on register data from the A-ordningen (Norwegian employer reports). The Lab has pages for occupations and education and an MCP connector to the data.">
+<meta property="og:image" content="https://kiindeksen.no/assets/ki-logo.png">
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/">
-<link rel="stylesheet" href="/style.css?v=20261005a">
+<link rel="stylesheet" href="/style.css?v=20261015a">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body>
@@ -26,7 +33,7 @@
       <a href="#alder">Age</a>
       <a href="#yrker">Occupations</a>
       <a href="#yrker-velg">Pick occupations</a>
-      <a href="#bruk">AI usage</a>
+      <a href="#bruk-vekst">AI usage</a>
       <a href="#offentlig">Public sector</a>
       <a href="#metode">Method</a>
       <a href="#team">Team</a>
@@ -35,14 +42,14 @@
     <div class="brand">
       <div class="brand-top">
         <nav class="panel-nav" aria-label="Pages">
-          <a href="/en/" class="active">The AI Labor Market Index</a>
-          <a href="/en/occupations.html">Occupations</a>
-          <a href="/en/education.html">Education</a>
+          <a href="/en/" class="active">Index</a>
+          <a href="/en/lab.html">Lab</a>
+          <a href="/en/studio.html">Studio</a>
           <a href="/en/about.html">About</a>
         </nav>
         <a class="lang-toggle" href="/" hreflang="nb" lang="nb">Norsk</a>
       </div>
-      <p class="tagline">Monthly indicators on artificial intelligence and the Norwegian labor market</p>
+      <p class="tagline">Monthly indicators of artificial intelligence and the Norwegian labor market</p>
     </div>
   </div>
 </header>
@@ -103,8 +110,8 @@
         positive number means the most AI-exposed occupations have grown
         the most; a negative number means they have grown the least — an
         early warning that AI may be displacing jobs.</p>
-      <p>The calculation is employment growth in the most AI-exposed
-        occupations minus growth in the least exposed: the average of the
+      <p>The calculation is the relative growth in employment in the most
+        AI-exposed occupations against the least exposed: the average of the
         last three months against <span id="headline-def-ref">the average
         of the three months before ChatGPT (August–October 2022). The
         before and after sides are averaged over the same number of
@@ -129,27 +136,19 @@
       <p class="quick-scope">The index and figures 1–12 cover wage earners
         in the <strong>Norwegian private sector</strong>. The public sector
         is shown separately in <a href="#offentlig">figures 13–16</a>.
-        The points below follow the outcome, adjustment, exposure-measure
-        and reference selections in the menu further down.</p>
+        The points below cover employment and follow the adjustment,
+        exposure-measure and reference selections in the menu further down.</p>
       <ul>
-        <li id="qs-1"><strong>No job crisis in Norway:</strong>
-          total private-sector employment is above its level in the three
-          months before ChatGPT, and the employment rate is roughly
-          stable.</li>
-        <li id="qs-2"><strong>The AI Labor Market Index is roughly
-          zero:</strong> since the three months before ChatGPT, total
-          employment in the most AI-exposed occupations has grown about as
-          much as in the least exposed.</li>
-        <li id="qs-3"><strong>But there are important differences across
-          age:</strong> among the youngest (21–30) in the most AI-exposed
-          occupations, employment has fallen — both relative to young
-          people in other occupations and relative to older workers in the
-          same occupations.</li>
-        <li id="qs-4"><strong>Two mechanisms pull in opposite directions:</strong>
-          in occupations where AI usage is most augmenting (AI assists the
-          worker), employment has grown more than in other occupations,
-          while growth has been weaker where usage is most automating (AI
-          performs the task).</li>
+        <li id="qs-1"><strong>Total employment:</strong> the private
+          sector against the reference months. The numbers are filled in
+          from the latest release.</li>
+        <li id="qs-2"><strong>The index:</strong> growth in the most
+          AI-exposed occupations against growth in the least exposed.</li>
+        <li id="qs-3"><strong>Age:</strong> the youngest in the most
+          AI-exposed occupations against young people in other occupations
+          and against older workers in the same occupations.</li>
+        <li id="qs-4"><strong>AI usage:</strong> employment where Claude
+          use is most augmenting against where it is most automating.</li>
       </ul>
     </details>
   </div>
@@ -372,24 +371,25 @@
       adjustment follows the selection at the top. Source:
       <a href="https://www.anthropic.com/economic-index" target="_blank"
          rel="noopener">Anthropic Economic Index</a>
-      (<a href="https://arxiv.org/abs/2503.04761" target="_blank"
-         rel="noopener">Handa et al. 2025</a>).
+      (<a href="https://www.anthropic.com/news/anthropic-economic-index-insights-from-claude-sonnet-3-7" target="_blank"
+         rel="noopener">the March 2025 report</a>).
     </p>
   </section>
 
   <section id="bruk" class="chart-section">
-    <h2>11 · Employment by AI usage</h2>
+    <h2 id="title-usage">11 · Employment by AI usage</h2>
     <p class="chart-intro">
       The exposure measures are estimates of what language models
       <em>can</em> do. Here occupations are instead grouped by observed
       use of Claude
       (<a href="https://www.anthropic.com/economic-index" target="_blank"
          rel="noopener">Anthropic Economic Index</a>,
-      <a href="https://arxiv.org/abs/2503.04761" target="_blank"
-         rel="noopener">Handa et al. 2025</a>): the share of the
+      <a href="https://www.anthropic.com/news/anthropic-economic-index-insights-from-claude-sonnet-3-7" target="_blank"
+         rel="noopener">the March 2025 report</a>): the share of the
       occupation's requests that are <strong>automating</strong> (the
       model performs the task) or <strong>augmenting</strong> (the model
-      assists). “No usage” is occupations below the query threshold.
+      assists). “No usage” is occupations none of whose tasks appear in
+      Anthropic's usage data.
     </p>
     <div class="control-row">
       <div class="control">
@@ -473,8 +473,8 @@
     <p>
       The data source is the A-ordningen (employers' monthly reporting) via
       <a href="https://www.microdata.no/" target="_blank"
-         rel="noopener">microdata.no</a>: the entire population
-      of wage earners in the Norwegian private sector, monthly from January
+         rel="noopener">microdata.no</a>: every job with cash pay
+      in the Norwegian private sector, monthly from January
       2021, in the age groups 21–30, 31–40, 41–50 and 51–60. Occupations
       are linked to AI exposure from
       <a href="https://www.science.org/doi/10.1126/science.adj0998"
@@ -518,12 +518,19 @@
         dashboard. The usage groups in figures 10–12 are instead based on
         observed use: the share of the occupation's Claude requests
         classified as automating or augmenting in the Anthropic Economic
-        Index
-        (<a href="https://arxiv.org/abs/2503.04761" target="_blank"
-           rel="noopener">Handa et al. 2025</a>), grouped as in
+        Index. The numbers are from
+        <a href="https://www.anthropic.com/news/anthropic-economic-index-insights-from-claude-sonnet-3-7" target="_blank"
+           rel="noopener">the March 2025 report</a>: Claude.ai conversations
+        in the eleven days after the launch of Claude 3.7 Sonnet. The five
+        usage patterns are from
+        <a href="https://arxiv.org/abs/2503.04761" target="_blank"
+           rel="noopener">Handa et al. (2025)</a>. Here only directive use
+        counts as automation. Feedback loop counts as augmentation, unlike
+        at Anthropic and in
         <a href="https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
            target="_blank" rel="noopener">Brynjolfsson, Chandar and Chen
-        (2025)</a>.
+        (2025)</a>, who count both as automation. Occupations are split
+        into five equal groups by the share.
       </p>
     </details>
 
@@ -535,7 +542,8 @@
         task-based measure the index has used from the start. The
         alternative is the evidence-grounded measure from
         <a href="https://arxiv.org/abs/2605.15474" target="_blank" rel="noopener">Mouchel et
-        al. (2026)</a>, built on documented AI use. Both give
+        al. (2026)</a>, where language models rate each task, supported by
+        news and research. Both give
         equal-frequency quintiles over the same 397 occupations. The rank
         correlation between the measures is 0.94, and two-thirds of
         occupations fall in the same quintile. The selector applies to
@@ -549,7 +557,8 @@
     <details class="method-details">
       <summary>Outcomes: employment, new hires and pay</summary>
       <p>
-        <em>Employment</em> is the number of wage earners in the group.
+        <em>Employment</em> is the number of jobs with cash pay in the
+        month.
         <em>New hires</em> is the number of jobs with a registered start
         date in the window between the previous and current monthly
         reference date; the series is strongly seasonal, so a moving
@@ -559,8 +568,8 @@
         contracted hours — so a part-time position counts as its share of
         a full-time year and pay changes are not conflated with changes in
         working time; the pay series are nominal. All series are indexed to
-        100 in the reference month (February 2025, or November 2022 when
-        ChatGPT is selected).
+        100 in the reference month (November 2022 by default, February
+        2025 when Claude Code is selected).
       </p>
     </details>
 
@@ -604,7 +613,8 @@
         employed by the resident population in the same age group
         (<a href="https://www.ssb.no/statbank/table/07459"
            target="_blank" rel="noopener">SSB table 07459</a>,
-        quarterly figures interpolated to month; for series covering all
+        annual figures as of 1 January, interpolated to the middle of each
+        quarter and used for every month in the quarter; for series covering all
         ages, the combined population aged 21–60 is used). The index then
         measures jobs per person — the employment rate — rather than the
         number of jobs. Example: young and old in combined headcount
@@ -640,8 +650,8 @@
         exposed quintiles, in Norway about 40 percent. Aggregate
         cross-country comparisons must take this into account. DEL
         publishes only raw series; the seasonal and population adjustments
-        are our additions, and our raw series reproduce their method
-        exactly.
+        are our additions, and our raw series follow DEL's indexing and
+        quintile construction.
       </p>
     </details>
 
@@ -650,8 +660,8 @@
       <p>
         The A-ordningen can revise recent months. Each monthly data
         release is therefore archived as its own vintage and is not
-        changed afterwards; the site always shows the latest release, and
-        all earlier ones can be downloaded.
+        changed afterwards. The site always shows the latest release.
+        Earlier releases are available on request.
       </p>
     </details>
 
@@ -668,7 +678,7 @@
         occupation; it would rescale every series within an occupation
         by the same factor. New hires are not published by occupation,
         because small occupations have months with no hires. Occupations
-        carry the same exposure quintile as in figure 1. English names
+        carry the Eloundou quintile, regardless of the measure selector. English names
         are Statistics Norway's official English STYRK-08 names; the
         search matches English and Norwegian names and codes.
         The packages are listed under <a href="#data">Download data</a>.
@@ -753,9 +763,9 @@
     <p>
       All series can be downloaded as CSV, in the same format as the DEL
       dashboard's data packages (plus an <code>adjustment</code> column).
-      Current release: <strong id="release-label"></strong>. Each package
-      contains the time series, twelve-month change, annualized growth and
-      a data dictionary.
+      Current release: <strong id="release-label"></strong>. Most packages
+      also contain the twelve-month change, annualized growth and a data
+      dictionary.
     </p>
     <div id="download-list" class="download-groups"></div>
     <p class="chart-footnote">
@@ -846,14 +856,18 @@
       The AI Labor Market Index · Øystein Hernæs (Frisch Centre) and
       Andreas R. Kostøl (BI Norwegian Business School) ·
       Data: the A-ordningen via microdata.no · Updated monthly ·
+      <a href="/en/">Index</a> ·
+      <a href="/en/lab.html">Lab</a> ·
       <a href="/en/occupations.html">Occupations</a> ·
       <a href="/en/education.html">Education</a> ·
-      <a href="about.html">About the AI Labor Market Index</a>
+      <a href="/en/mcp.html">MCP</a> ·
+      <a href="/en/studio.html">Studio</a> ·
+      <a href="/en/about.html">About</a>
     </p>
   </div>
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/app.js?v=20261005a"></script>
+<script src="/app.js?v=20261015a"></script>
 </body>
 </html>

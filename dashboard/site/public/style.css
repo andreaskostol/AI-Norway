@@ -1,7 +1,7 @@
 :root {
   --ink: #1d2733;
   --ink-soft: #4a5868;
-  --bg: #fbfaf7;
+  --bg: #ffffff;   /* hvit bakgrunn (Andreas 2026-10-15); var #fbfaf7 */
   --card: #ffffff;
   --line: #e4e4e4;
   --accent: #0f4c81;
@@ -247,7 +247,7 @@ a { color: var(--accent); }
   position: sticky;
   top: 0;
   z-index: 30;
-  background: #fffdf8;
+  background: #fff;
   border-bottom: 1px solid var(--line);
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
 }
@@ -277,6 +277,8 @@ a { color: var(--accent); }
   font: inherit;
   font-size: 0.9rem;
   line-height: 1.5;
+  max-width: 100%;   /* lange valgtekster (Referanse) skal ikke gi sidelengs rulling paa mobil */
+  min-width: 0;
   padding: 0.3rem 2.25rem 0.3rem 0.75rem;
   border: 1px solid #ced4da;
   border-radius: 0.375rem;
@@ -991,3 +993,94 @@ code {
 
 /* Talkolonner brekker ikke ("100 %" paa en linje). */
 .data-table td.num { white-space: nowrap; }
+
+
+/* Labben og Studio (okt. 2026). Yrker og Utdanning ligger under Labben:
+   sidelenka er aktiv paa begge, og en liten undermeny under den viser
+   hvilket verktoey som er aapent. */
+.panel-subnav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0 1rem;
+  margin: 0.15rem 0 0.35rem;
+  font-size: 0.88rem;
+}
+.panel-subnav .subnav-label { color: var(--ink-soft); }
+.panel-subnav a { color: var(--ink-soft); text-decoration: none; }
+.panel-subnav a:hover { color: var(--accent); text-decoration: underline; }
+.panel-subnav a.active { color: var(--ink); font-weight: 600; }
+.lab-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.2rem;
+  max-width: 56rem;
+  margin: 1.2rem 0 1rem;
+}
+.lab-card {
+  display: block;
+  padding: 1.1rem 1.3rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  text-decoration: none;
+  transition: border-color 0.12s, box-shadow 0.12s;
+}
+.lab-card:hover { border-color: var(--accent); box-shadow: 0 2px 10px rgba(15, 76, 129, 0.08); }
+.lab-card h3 { margin: 0 0 0.2rem; font-size: 1.2rem; }
+.lab-card p { margin: 0.4rem 0; font-size: 0.95rem; }
+.lab-card .lab-goal { font-weight: 600; color: var(--accent); }
+.lab-card .lab-link { color: var(--accent); font-weight: 600; margin-top: 0.6rem; }
+.studio-notice {
+  display: inline-block;
+  margin: 0 0 0.6rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.studio-list { max-width: 56rem; padding-left: 1.2rem; margin: 0.4rem 0 0.8rem; }
+.studio-list li { margin: 0.3rem 0; }
+.studio-count { margin: 0 0 0.5rem; font-size: 0.86rem; color: var(--ink-soft); }
+.studio-foot { font-size: 0.86rem; color: var(--ink-soft); }
+.table-wrap { overflow-x: auto; }
+.paper-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.paper-table th, .paper-table td {
+  padding: 0.5rem 0.6rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  text-align: left;
+}
+.paper-table th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--ink-soft); }
+.paper-table .paper-date { white-space: nowrap; width: 5.5rem; }
+.paper-table .paper-nodate { color: var(--ink-soft); font-style: italic; font-size: 0.82rem; }
+.paper-table .paper-title { min-width: 18rem; }
+.paper-table .paper-authors, .paper-table .paper-note { display: block; font-size: 0.84rem; color: var(--ink-soft); margin-top: 0.15rem; }
+.paper-table .paper-empty { color: var(--ink-soft); font-style: italic; }
+.status-pill {
+  display: inline-block;
+  padding: 0.12rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+  background: #ece9e2;
+  color: var(--ink);
+}
+.status-pill.status-notat, .status-pill.status-video, .status-pill.status-podkast { background: var(--accent-soft); color: var(--accent); }
+.status-pill.status-publisert { background: #e3f1e8; color: #1f6b3a; }
+
+/* MCP-siden (okt. 2026): verktoeytabell og kodeblokker */
+.mcp-table { width: 100%; border-collapse: collapse; font-size: 0.92rem; margin: 0.6rem 0 1rem; }
+.mcp-table th, .mcp-table td { padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--line); vertical-align: top; text-align: left; }
+.mcp-table th { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--ink-soft); }
+.mcp-table td:first-child { white-space: nowrap; }
+.prose-section pre { margin: 0.4rem 0 1rem; padding: 0.7rem 0.9rem; background: #f5f5f3; border: 1px solid var(--line); border-radius: 6px; overflow-x: auto; font-size: 0.85rem; line-height: 1.45; }
+.prose-section pre code { font-size: inherit; }
+.prose-section ol li .table-wrap { margin: 0.5rem 0; }

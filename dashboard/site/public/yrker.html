@@ -6,10 +6,17 @@
 <title>Yrker — KI-indeksen</title>
 <meta name="description" content="Hvor utsatt er jobben din for KI? Søk opp yrket ditt og se KI-eksponering, hvordan Claude brukes på oppgavene, yrker som ligner, og sysselsetting og lønn siden Claude Code. Bygget på Anthropic Economic Index, O*NET og A-ordningen.">
 <link rel="canonical" href="https://kiindeksen.no/yrker.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KI-indeksen">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:url" content="https://kiindeksen.no/yrker.html">
+<meta property="og:title" content="Yrker — KI-indeksen">
+<meta property="og:description" content="Hvor utsatt er jobben din for KI? Søk opp yrket ditt og se KI-eksponering, hvordan Claude brukes på oppgavene, yrker som ligner, og sysselsetting og lønn siden Claude Code. Bygget på Anthropic Economic Index, O*NET og A-ordningen.">
+<meta property="og:image" content="https://kiindeksen.no/assets/ki-logo.png">
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/yrker.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/occupations.html">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/yrker.html">
-<link rel="stylesheet" href="/style.css?v=20261005a">
+<link rel="stylesheet" href="/style.css?v=20261015a">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body data-panel="yrker">
@@ -31,13 +38,19 @@
     <div class="brand">
       <div class="brand-top">
         <nav class="panel-nav" aria-label="Sider">
-          <a href="/">KI-indeksen</a>
-          <a href="/yrker.html" class="active">Yrker</a>
-          <a href="/utdanning.html">Utdanning</a>
+          <a href="/">Indeksen</a>
+          <a href="/labben.html" class="active">Labben</a>
+          <a href="/studio.html">Studio</a>
           <a href="/om.html">Om</a>
         </nav>
         <a class="lang-toggle" href="/en/occupations.html" hreflang="en" lang="en">English</a>
       </div>
+      <nav class="panel-subnav" aria-label="Labben">
+        <span class="subnav-label">Labben:</span>
+        <a href="/yrker.html" class="active">Yrker</a>
+        <a href="/utdanning.html">Utdanning</a>
+        <a href="/mcp.html">MCP</a>
+      </nav>
       <p class="tagline">Månedlige indikatorer for kunstig intelligens og det norske arbeidsmarkedet</p>
     </div>
   </div>
@@ -52,6 +65,7 @@
     <a href="#ligner">Yrker som ligner</a>
     <a href="#tid">Bruk over tid</a>
     <a href="#alle">Alle yrker</a>
+    <a href="#gruppe">Én gruppe</a>
     <a href="#metode">Metode</a>
   </nav>
 </aside>
@@ -162,8 +176,9 @@
         <strong>validering</strong> (personen sjekker eget arbeid) og
         <strong>læring</strong> (personen vil forstå noe).
         Automatiseringsandelen i figurene er summen av de to første.
-        Tallene gjelder Claude.ai (chat). API-et vises bare i figuren
-        «Chat mot API». Oppgavetekstene er O*NETs, oversatt til norsk.</p>
+        Tallene gjelder Claude.ai (chat). API-et vises i figuren
+        «Chat mot API» og i sammendraget. Oppgavetekstene er O*NETs,
+        oversatt til norsk.</p>
     </details>
     <div class="control-row panel-controls">
       <div class="control">
@@ -230,6 +245,22 @@
     <p class="chart-footnote" id="y2-note"></p>
   </section>
 
+  <section id="gruppe" class="chart-section">
+    <h2>Alle yrkene i én eksponeringsgruppe</h2>
+    <p class="chart-intro">
+      Velg en gruppe. Tabellen viser alle yrkene i gruppen, sortert fra
+      høyest til lavest KI-eksponering (Eloundou m.fl. 2024). Gruppene
+      deler yrkene i fem omtrent like store deler. Klikk på et yrke for
+      å se det øverst på siden.
+    </p>
+    <div class="control-row panel-controls">
+      <div class="btn-row" id="grp-buttons"></div>
+    </div>
+    <p class="chart-intro" id="grp-summary"></p>
+    <div class="table-wrap" id="grp-table"></div>
+    <p class="chart-footnote" id="grp-note"></p>
+  </section>
+
   <section id="metode" class="prose-section">
     <h2>Metode</h2>
     <p>
@@ -267,22 +298,27 @@
         Forsiden viser at sysselsettingen har utviklet seg ulikt
         i de to gruppene av yrker.</p>
       <p>Merk to avvik fra forsiden. Der regnes bare direkte delegering
-        som automatisering, og tallene kommer fra det første utvalget til
-        Handa m.fl. (2025). Her brukes Anthropics inndeling og alle
-        publiserte utvalg.</p>
+        som automatisering, og tallene kommer fra utgivelsen fra mars
+        2025 alene. Her brukes Anthropics inndeling og alle fire
+        utgivelsene.</p>
     </details>
 
     <details class="method-details">
       <summary>Fire utvalg, to plattformer</summary>
-      <p>Tabellen oppgave × type er publisert fire ganger. Det første
-        utvalget er samtaler i Claude.ai fra desember 2024 til januar
-        2025 (Handa m.fl. 2025). De tre neste er én uke hver: august
-        2025, november 2025 og februar 2026. Fra august 2025 finnes
-        tabellen også for API-et, der utviklere og agenter kaller
-        modellen. Rangeringen av yrker flytter seg mellom utvalgene.
-        Mellom august 2025 og februar 2026 er rangkorrelasjonen i chat
-        om lag 0,7. Mot Handa-utvalget er den lavere, om lag 0,3, og om
-        lag 0,6 for yrker med minst tusen samtaler.</p>
+      <p>Siden bygger på fire utgivelser av Anthropic Economic Index med
+        tabellen oppgave × type. Den første er fra mars 2025: samtaler i
+        Claude.ai de elleve dagene etter lanseringen av Claude 3.7 Sonnet
+        24. februar 2025. De tre neste er én uke hver: august 2025,
+        november 2025 og februar 2026. Fra august 2025 finnes tabellen
+        også for API-et, der utviklere og agenter kaller modellen.
+        Utgivelsen fra juni 2026 («Cadences») har også tabellen, men med
+        ny metode for å koble samtaler til oppgaver, ny O*NET-versjon og
+        uten antall samtaler. Tallene kan ikke sammenlignes med de
+        tidligere, så den er ikke med. Rangeringen av yrker flytter seg
+        mellom utvalgene. Mellom august 2025 og februar 2026 er
+        rangkorrelasjonen i chat om lag 0,7. Mot utvalget fra mars 2025
+        er den lavere, om lag 0,3, og om lag 0,6 for yrker med minst
+        tusen samtaler.</p>
     </details>
 
     <details class="method-details">
@@ -292,11 +328,12 @@
         med BLS' kryssgang, og ISCO-koden er STYRK-08-koden når den
         finnes i den norske standarden. Andelen for et STYRK-yrke er
         snittet over SOC-yrkene som bidrar. Kjeden er den samme som for
-        Handa-målet på forsiden og gir 300 til 320 yrker per
+        bruksmålet på forsiden og gir 300 til 325 yrker per
         utvalg. Yrker uten Claude-bruk på noen av oppgavene sine faller
-        ut. Oppgavefiguren viser de 15 O*NET-oppgavene med mest bruk blant
-        SOC-yrkene koden er koblet til, med minst ti klassifiserte
-        samtaler. Oppgavetekstene er O*NETs engelske formuleringer.</p>
+        ut. Oppgavefiguren viser de fem eller ti O*NET-oppgavene med mest
+        bruk blant SOC-yrkene koden er koblet til, med minst ti
+        klassifiserte samtaler. Oppgavetekstene er oversatt fra O*NETs
+        engelske formuleringer.</p>
     </details>
 
     <details class="method-details">
@@ -305,8 +342,8 @@
         yrker. For hvert yrke har O*NET spurt et utvalg ansatte hvor
         viktig hver av 41 generelle arbeidsaktiviteter er, for eksempel
         «programmering», «pleie av andre» eller «betjening av kjøretøy».
-        Det samme er gjort for 35 ferdigheter, som «kritisk tenkning» og
-        «reparasjon». Skalaen går fra 1 til 5. Til sammen gir det hvert
+        De 35 ferdighetene, som «kritisk tenkning» og «reparasjon», er
+        vurdert av O*NETs analytikere. Skalaen går fra 1 til 5. Til sammen gir det hvert
         yrke en profil med 76 tall.</p>
       <p>Vi bruker ikke oppgavetekstene til å finne naboer, selv om
         O*NET har dem. Oppgavene er skrevet for hvert yrke og gjentas
@@ -355,8 +392,8 @@
           KI.</li>
         <li>Bare Claude. OpenAI publiserer ingen tilsvarende tabell.</li>
         <li>Andelene gjelder samtaler, ikke arbeidstid.</li>
-        <li>API-et gir lite variasjon mellom yrker. Nesten alle ligger
-          over 80 prosent direkte delegering.</li>
+        <li>API-et gir lite variasjon mellom yrker. Om lag tre av fire
+          ligger over 80 prosent direkte delegering.</li>
         <li>O*NET beskriver amerikanske yrker. Norske yrker med samme
           kode kan ha annet innhold.</li>
       </ol>
@@ -364,21 +401,6 @@
     <p class="chart-footnote">Kilder: <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex" target="_blank" rel="noopener">Anthropic Economic Index</a> · <a href="https://www.onetcenter.org/database.html" target="_blank" rel="noopener">O*NET</a>.</p>
   </section>
 
-  <section id="gruppe" class="chart-section">
-    <h2>Alle yrkene i én eksponeringsgruppe</h2>
-    <p class="chart-intro">
-      Velg en gruppe. Tabellen viser alle yrkene i gruppen, sortert fra
-      høyest til lavest KI-eksponering (Eloundou m.fl. 2024). Gruppene
-      deler yrkene i fem omtrent like store deler. Klikk på et yrke for
-      å se det øverst på siden.
-    </p>
-    <div class="control-row panel-controls">
-      <div class="btn-row" id="grp-buttons"></div>
-    </div>
-    <p class="chart-intro" id="grp-summary"></p>
-    <div class="table-wrap" id="grp-table"></div>
-    <p class="chart-footnote" id="grp-note"></p>
-  </section>
 
 </main>
 
@@ -391,14 +413,18 @@
       KI-indeksen · Øystein Hernæs (Frischsenteret) og
       Andreas R. Kostøl (Handelshøyskolen BI) ·
       Data: Anthropic Economic Index, O*NET, A-ordningen via microdata.no ·
-      <a href="/">KI-indeksen</a> ·
+      <a href="/">Indeksen</a> ·
+      <a href="/labben.html">Labben</a> ·
+      <a href="/yrker.html">Yrker</a> ·
       <a href="/utdanning.html">Utdanning</a> ·
+      <a href="/mcp.html">MCP</a> ·
+      <a href="/studio.html">Studio</a> ·
       <a href="/om.html">Om</a>
     </p>
   </div>
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/panels.js?v=20261005a"></script>
+<script src="/panels.js?v=20261015a"></script>
 </body>
 </html>

@@ -27,7 +27,7 @@ never edited by hand.
 | `directive_share` | Pooled share counting only directive conversations as automation (the convention in `build_handa_mapping.py` and the dashboard's usage groups). |
 | `directive_group` | Terciles of `directive_share` under the same gate. |
 | `automation_share_feb`, `n_feb`, `automation_group_feb` | Feb 2026 vintage alone; gated at `n_feb` >= 100; own terciles. |
-| `automation_share_handa`, `automation_group_handa` | The original Handa et al. (2025) vintage (Claude.ai, Dec 2024-Jan 2025); no counts exist, so no gate; terciles among the 312 covered codes. |
+| `automation_share_handa`, `automation_group_handa` | The original vintage: Anthropic Economic Index, March 2025 release (Claude.ai, the 11 days after the launch of Claude 3.7 Sonnet on 24 Feb 2025). Keyed `2024-12-01` in the measurement file; that date is an identifier, not the sample period. No counts exist, so no gate; terciles among the 312 covered codes. |
 
 Group sizes: 97 / 97 / 97 grouped, 106 `too_few`. Tercile cutpoints of
 the pooled share: 0.408 and 0.512 (Feb alone: 0.371 / 0.488; Handa:

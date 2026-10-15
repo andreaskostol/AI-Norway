@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="nb">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MCP-kobling — KI-indeksen</title>
+<meta name="description" content="Koble Claude, Claude Code eller et eget script til dataene bak KI-indeksen, Yrker og Utdanning gjennom en MCP-server. Seksten verktøy, åpne aggregerte tall, ingen innlogging.">
+<link rel="canonical" href="https://kiindeksen.no/mcp.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="KI-indeksen">
+<meta property="og:locale" content="nb_NO">
+<meta property="og:url" content="https://kiindeksen.no/mcp.html">
+<meta property="og:title" content="MCP-kobling — KI-indeksen">
+<meta property="og:description" content="Koble Claude, Claude Code eller et eget script til dataene bak KI-indeksen, Yrker og Utdanning gjennom en MCP-server. Seksten verktøy, åpne aggregerte tall, ingen innlogging.">
+<meta property="og:image" content="https://kiindeksen.no/assets/ki-logo.png">
+<link rel="alternate" hreflang="nb" href="https://kiindeksen.no/mcp.html">
+<link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/mcp.html">
+<link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/mcp.html">
+<link rel="stylesheet" href="/style.css?v=20261015a">
+<link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <div class="header-logos">
+      <a href="/" title="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI">
+        <img src="/assets/ki-logo.png"
+             alt="KI-indeksen — et samarbeid mellom Frischsenteret og Handelshøyskolen BI"></a>
+    </div>
+    <div class="brand">
+      <div class="brand-top">
+        <nav class="panel-nav" aria-label="Sider">
+          <a href="/">Indeksen</a>
+          <a href="/labben.html" class="active">Labben</a>
+          <a href="/studio.html">Studio</a>
+          <a href="/om.html">Om</a>
+        </nav>
+        <a class="lang-toggle" href="/en/mcp.html" hreflang="en" lang="en">English</a>
+      </div>
+      <nav class="panel-subnav" aria-label="Labben">
+        <span class="subnav-label">Labben:</span>
+        <a href="/yrker.html">Yrker</a>
+        <a href="/utdanning.html">Utdanning</a>
+        <a href="/mcp.html" class="active">MCP</a>
+      </nav>
+      <p class="tagline">Månedlige indikatorer for kunstig intelligens og det norske arbeidsmarkedet</p>
+    </div>
+  </div>
+</header>
+
+<main class="container" style="max-width: 1060px; margin: 0 auto;">
+
+  <section class="prose-section">
+    <h2>MCP-kobling til dataene</h2>
+    <p class="lede">
+      Alt nettstedet viser, kan du spørre om selv. En MCP-server (Model
+      Context Protocol) gir Claude, Claude Code og egne script de samme
+      tallene som verktøy: tidsseriene bak indeksen, hvert yrke med
+      oppgaver og Claude-bruk, og hver utdanning. Alt er aggregerte tall
+      som allerede er offentlige. Ingen innlogging.
+    </p>
+
+    <h3>Koble til</h3>
+    <p>Endepunktet er <code>https://kiindeksen-mcp.fly.dev/mcp</code>
+      (Streamable HTTP, JSON-RPC 2.0).</p>
+    <p><strong>Claude Code.</strong> Én kommando:</p>
+<pre><code>claude mcp add --transport http kiindeksen https://kiindeksen-mcp.fly.dev/mcp</code></pre>
+    <p><strong>claude.ai.</strong> Settings, Connectors, Add custom
+      connector. Lim inn adressen over. Deretter kan du be Claude om for
+      eksempel «hent hovedtallet med usikkerhet for de under 31 år» eller
+      «sammenlign yrkene 4110 og 3312».</p>
+    <p><strong>Eget script.</strong>
+      <a href="/mcp/client_example.py">client_example.py</a> viser hele
+      samtalen med serveren og trenger bare Python, ingen pakker:</p>
+<pre><code>python3 client_example.py</code></pre>
+
+    <h3>Verktøyene</h3>
+    <div class="table-wrap">
+    <table class="mcp-table">
+      <thead><tr><th>Verktøy</th><th>Hva det gir</th></tr></thead>
+      <tbody>
+        <tr><td><code>get_release</code></td><td>Release, periode, normaliseringsmåned, antall yrker og utdanninger, hovedtallet med usikkerhet</td></tr>
+        <tr><td><code>list_packages</code></td><td>Alle tidsseriepakkene: sysselsetting, nyansettelser, lønn, privat og offentlig sektor, Eloundou- og Mouchel-kvintiler, yrkescase, bruksmønster</td></tr>
+        <tr><td><code>get_series</code></td><td>Tidsserier fra en pakke, med valg av spesifikasjon (raw, sa, percap, percap_sa), facet, serie, periode, basismåned og glatting</td></tr>
+        <tr><td><code>get_growth</code></td><td>Vekst fra en referansemåned til siste måned for alle serier i en pakke, pluss gapet kvintil 5 minus kvintil 1</td></tr>
+        <tr><td><code>get_headline</code></td><td>Nettstedets hovedtall: KI-indeksen med bootstrap-standardfeil og 95 %-intervall, per mål, referanse og aldersgruppe</td></tr>
+        <tr><td><code>get_composition</code></td><td>Andel ansatte per aldersgruppe og kvintil</td></tr>
+        <tr><td><code>search_occupations</code></td><td>Søk i STYRK-08-yrker, norsk eller engelsk</td></tr>
+        <tr><td><code>get_occupation</code></td><td>Ett yrke: eksponering, kvintiler, Claude-bruk per utgave, nærmeste yrker, oppgavene med bruk og automatisering</td></tr>
+        <tr><td><code>get_occupation_series</code></td><td>Sysselsetting eller lønn for ett yrke, månedlig fra 2021</td></tr>
+        <tr><td><code>compare_occupations</code></td><td>Flere yrker side om side med felles base</td></tr>
+        <tr><td><code>list_education_levels</code>, <code>search_education</code>, <code>get_education_group</code></td><td>Utdanning: faggrupper, oppgavene i jobbene, vanligste jobber</td></tr>
+        <tr><td><code>list_downloads</code>, <code>get_data_dictionary</code></td><td>CSV-ene for releasen og dokumentasjonen deres</td></tr>
+        <tr><td><code>get_studio_papers</code></td><td>Arbeidslista i Studio</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p>To ressurser (<code>kiindeksen://om</code>,
+      <code>kiindeksen://konvensjoner</code>) og to prompter
+      (<code>analyser_yrkespar</code>, <code>maanedsrapport</code>) følger
+      med.</p>
+
+    <h3>Konvensjoner</h3>
+    <ul>
+      <li>Tidsseriene er indekser med 100 i november 2022, måneden ChatGPT
+        kom. Bruk <code>index_base</code> for å flytte basen, for eksempel
+        <code>2025-02</code> for Claude Code.</li>
+      <li><code>sa</code> er sesongjustert, <code>percap</code> er per
+        innbygger i aldersgruppen.</li>
+      <li>KI-indeksen er veksten i den mest eksponerte femdelen mot veksten
+        i den minst eksponerte, i prosentpoeng. <code>get_headline</code>
+        gir nettstedets tall med usikkerhet. <code>get_growth</code> lar deg
+        regne på egne referanser og glattinger.</li>
+      <li>Yrker er STYRK-08 på fire siffer. Bare yrker med minst 30
+        lønnstakere hver måned har tidsserie. Automatisering er Anthropics
+        regel: direkte delegering pluss tilbakemeldingssløyfe.</li>
+      <li>Utdanninger er NUS-faggrupper på tre siffer, nivå pluss fag.</li>
+      <li>Oppgi release, spesifikasjon og basismåned når du rapporterer
+        tall.</li>
+    </ul>
+
+    <h3>Eksempel: samme eksponering, ulik automatisering</h3>
+    <p>Spørsmålet: to yrker har nesten samme KI-eksponering. Brukes KI
+      likt i dem, og går det likt med sysselsettingen? Dette er det
+      <code>client_example.py</code> gjør, og det Claude gjør hvis du ber
+      om prompten <code>analyser_yrkespar</code> med kodene 4110 og 3312.</p>
+    <ol>
+      <li><code>get_release</code> og <code>get_headline</code>. Release
+        2026-10 dekker januar 2021 til juli 2026. KI-indeksen for 21–60 år
+        med ChatGPT som referanse er +1,5 prosentpoeng, standardfeil 2,7.
+        For 21–30 år siden Claude Code er den −2,9, standardfeil 2,0.</li>
+      <li><code>get_growth</code> på <code>by_exposure</code> med referanse
+        2025-01 og tre måneders glatting. Fra januar 2025 til juli 2026,
+        sesongjustert: minst eksponerte femdel −0,3 prosent, mest
+        eksponerte −0,3 prosent. Gapet er −0,1 prosentpoeng. Samme kall
+        på <code>age_by_exposure</code> for 21–30 år: −1,8 i minst
+        eksponerte, −4,6 i mest eksponerte.</li>
+      <li><code>compare_occupations</code> med kodene 4110 og 3312,
+        sysselsetting, sesongjustert, basismåned 2025-02:
+        <div class="table-wrap">
+        <table class="mcp-table">
+          <thead><tr><th>Yrke</th><th>Eloundou</th><th>Mouchel</th><th>Automatisering (feb. 2026)</th><th>Sysselsetting juli 2026</th></tr></thead>
+          <tbody>
+            <tr><td>4110 Kontormedarbeidere</td><td>0,59 (Q5)</td><td>0,59 (Q5)</td><td>67 %</td><td>95,7</td></tr>
+            <tr><td>3312 Kundebehandlere lån og kreditt</td><td>0,61 (Q5)</td><td>0,62 (Q5)</td><td>30 %</td><td>96,5</td></tr>
+          </tbody>
+        </table>
+        </div>
+      </li>
+      <li><code>get_occupation</code> for hvert yrke, plattform
+        <code>claude_ai</code>, gir oppgavene. Kontormedarbeidere:
+        feilsøking av kontorutstyr (1,26 prosent av all Claude-bruk,
+        automatisering 60 prosent), skjemaer og reiseregninger (66
+        prosent) og kontormaskiner (51 prosent). Kundebehandlere: anbefale
+        økonomisk strategi (24 prosent), forklare kredittvurdering og
+        regelverk (22 prosent) og forklare lånetyper (27 prosent).</li>
+      <li>Tolkningen skriver du selv: samme eksponeringsskår, men i det
+        ene yrket bestilles arbeidet ferdig, i det andre drøftes det. Det
+        er det eksponeringsmålet ikke ser og bruksdataene viser.</li>
+    </ol>
+    <p>Samme øvelse for en utdanning: <code>search_education</code> med
+      «økonomi» på bachelornivå gir faggruppe 641 Økonomisk-administrative
+      fag. Den har 101 315 sysselsatte, eksponering 0,55, halvparten i den
+      mest eksponerte femdelen og automatisering 43 prosent.
+      <code>get_education_group</code> gir de ti vanligste oppgavene i
+      jobbene og de vanligste jobbene, regnskapsførere øverst.</p>
+    <p class="chart-footnote">Alle tall over er lest fra serveren
+      15. oktober 2026 med release 2026-10. Nye releaser gir nye tall.
+      Kjør scriptet på nytt.</p>
+
+    <details class="more">
+      <summary>Drift og kildekode</summary>
+      <p>Serveren henter JSON-filene fra kiindeksen.no ved oppstart og hver
+        sjette time, så den følger den månedlige releasen uten ny
+        utrulling. Den er skrevet i Pythons standardbibliotek og kjører som
+        egen Fly.io-app i Stockholm. Kildekoden ligger i
+        <code>dashboard/mcp/</code> i prosjektets repo. Du kan kjøre den
+        lokalt mot nedlastede datafiler med
+        <code>python3 server.py --data-dir &lt;mappe&gt; --port 8765</code>.</p>
+    </details>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>
+      KI-indeksen · Øystein Hernæs (Frischsenteret) og
+      Andreas R. Kostøl (Handelshøyskolen BI) ·
+      <a href="/">Indeksen</a> ·
+      <a href="/labben.html">Labben</a> ·
+      <a href="/yrker.html">Yrker</a> ·
+      <a href="/utdanning.html">Utdanning</a> ·
+      <a href="/mcp.html">MCP</a> ·
+      <a href="/studio.html">Studio</a> ·
+      <a href="/om.html">Om</a>
+    </p>
+  </div>
+</footer>
+</body>
+</html>

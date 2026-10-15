@@ -6,10 +6,17 @@
 <title>Occupations — The AI Labor Market Index</title>
 <meta name="description" content="How exposed is your job to AI? Search for your occupation and see its AI exposure, how Claude is used on its tasks, similar occupations, and employment and pay since Claude Code. Built on the Anthropic Economic Index, O*NET and Norwegian register data.">
 <link rel="canonical" href="https://kiindeksen.no/en/occupations.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The AI Labor Market Index">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://kiindeksen.no/en/occupations.html">
+<meta property="og:title" content="Occupations — The AI Labor Market Index">
+<meta property="og:description" content="How exposed is your job to AI? Search for your occupation and see its AI exposure, how Claude is used on its tasks, similar occupations, and employment and pay since Claude Code. Built on the Anthropic Economic Index, O*NET and Norwegian register data.">
+<meta property="og:image" content="https://kiindeksen.no/assets/ki-logo.png">
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/yrker.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/occupations.html">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/yrker.html">
-<link rel="stylesheet" href="/style.css?v=20261005a">
+<link rel="stylesheet" href="/style.css?v=20261015a">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body data-panel="yrker">
@@ -31,14 +38,20 @@
     <div class="brand">
       <div class="brand-top">
         <nav class="panel-nav" aria-label="Pages">
-          <a href="/en/">The AI Labor Market Index</a>
-          <a href="/en/occupations.html" class="active">Occupations</a>
-          <a href="/en/education.html">Education</a>
+          <a href="/en/">Index</a>
+          <a href="/en/lab.html" class="active">Lab</a>
+          <a href="/en/studio.html">Studio</a>
           <a href="/en/about.html">About</a>
         </nav>
         <a class="lang-toggle" href="/yrker.html" hreflang="nb" lang="nb">Norsk</a>
       </div>
-      <p class="tagline">Monthly indicators on artificial intelligence and the Norwegian labor market</p>
+      <nav class="panel-subnav" aria-label="Lab">
+        <span class="subnav-label">Lab:</span>
+        <a href="/en/occupations.html" class="active">Occupations</a>
+        <a href="/en/education.html">Education</a>
+        <a href="/en/mcp.html">MCP</a>
+      </nav>
+      <p class="tagline">Monthly indicators of artificial intelligence and the Norwegian labor market</p>
     </div>
   </div>
 </header>
@@ -52,6 +65,7 @@
     <a href="#ligner">Similar occupations</a>
     <a href="#tid">Over time</a>
     <a href="#alle">All occupations</a>
+    <a href="#gruppe">One group</a>
     <a href="#metode">Method</a>
   </nav>
 </aside>
@@ -164,7 +178,8 @@
         (the person checks their own work) and <strong>learning</strong>
         (the person wants to understand something). The automation share
         in the figures is the sum of the first two. The figures use
-        Claude.ai (chat); the API appears only in the Chat vs API figure.
+        Claude.ai (chat). The API appears in the Chat vs API figure and in
+        the summary.
         Task texts are O*NET's English statements.</p>
     </details>
     <div class="control-row panel-controls">
@@ -233,6 +248,22 @@
     <p class="chart-footnote" id="y2-note"></p>
   </section>
 
+  <section id="gruppe" class="chart-section">
+    <h2>Every occupation in one exposure group</h2>
+    <p class="chart-intro">
+      Pick a group. The table lists every occupation in it, from the
+      highest to the lowest AI exposure (Eloundou et al. 2024). The groups
+      split the occupations into five parts of about equal size. Click an
+      occupation to see it at the top of the page.
+    </p>
+    <div class="control-row panel-controls">
+      <div class="btn-row" id="grp-buttons"></div>
+    </div>
+    <p class="chart-intro" id="grp-summary"></p>
+    <div class="table-wrap" id="grp-table"></div>
+    <p class="chart-footnote" id="grp-note"></p>
+  </section>
+
   <section id="metode" class="prose-section">
     <h2>Method</h2>
     <p>
@@ -271,23 +302,28 @@
         help. The index page shows that employment has developed
         differently in the two groups of occupations.</p>
       <p>Two differences from the front page. There, only directive use
-        counts as automation, and the numbers come from the first sample
-        in Handa et al. (2025). Here, Anthropic's bucketing and every
-        published sample are used.</p>
+        counts as automation, and the numbers come from the March 2025
+        release alone. Here, Anthropic's bucketing and all four releases
+        are used.</p>
     </details>
 
     <details class="method-details">
       <summary>Four samples, two platforms</summary>
-      <p>The task × type table has been published four times. The first
-        sample is Claude.ai conversations from December 2024 to January
-        2025 (Handa et al. 2025). The next three are one week each:
-        August 2025, November 2025 and February 2026. From August 2025
-        the table also exists for the API, where developers and agents
-        call the model. The ranking of occupations moves between
+      <p>The page draws on four releases of the Anthropic Economic Index
+        with the task × type table. The first is from March 2025:
+        Claude.ai conversations in the eleven days after the launch of
+        Claude 3.7 Sonnet on 24 February 2025. The next three are one
+        week each: August 2025, November 2025 and February 2026. From
+        August 2025 the table also exists for the API, where developers
+        and agents call the model. The June 2026 release ("Cadences")
+        also has the table, but with a new method for linking
+        conversations to tasks, a new O*NET version and no conversation
+        counts. Its numbers cannot be compared with the earlier ones, so
+        it is left out. The ranking of occupations moves between
         samples. Between August 2025 and February 2026 the rank
-        correlation in chat is about 0.7. Against the Handa sample it is
-        lower, about 0.3, and about 0.6 for occupations with at least a
-        thousand conversations.</p>
+        correlation in chat is about 0.7. Against the March 2025 sample
+        it is lower, about 0.3, and about 0.6 for occupations with at
+        least a thousand conversations.</p>
     </details>
 
     <details class="method-details">
@@ -297,10 +333,10 @@
         ISCO-08 with the BLS crosswalk, and the ISCO code is the STYRK-08
         code when it exists in the Norwegian standard. The share for a
         STYRK occupation is the mean over the contributing SOC
-        occupations. The chain is the same as for the Handa measure on
-        the index page and yields 300 to 320 occupations per sample.
+        occupations. The chain is the same as for the usage measure on
+        the index page and yields 300 to 325 occupations per sample.
         Occupations with no Claude use on any of their tasks drop out.
-        The task figure shows the 15 O*NET tasks with most use among the
+        The task figure shows the five or ten O*NET tasks with most use among the
         SOC occupations the code maps to, with at least ten classified
         conversations. Task texts are O*NET's English statements.</p>
     </details>
@@ -311,8 +347,8 @@
         For every occupation, O*NET has asked a sample of incumbents how
         important each of 41 generalized work activities is, for example
         "programming", "assisting and caring for others" or "operating
-        vehicles". The same is done for 35 skills, such as "critical
-        thinking" and "repairing". The scale runs from 1 to 5. Together
+        vehicles". The 35 skills, such as "critical thinking" and
+        "repairing", are rated by O*NET's analysts. The scale runs from 1 to 5. Together
         this gives every occupation a profile of 76 numbers.</p>
       <p>We do not use the task statements to find neighbours, although
         O*NET has them. Tasks are written for each occupation and almost
@@ -363,8 +399,8 @@
           the occupation's tasks, not how Norwegian workers use AI.</li>
         <li>Claude only. OpenAI publishes no comparable table.</li>
         <li>The shares are of conversations, not of working time.</li>
-        <li>The API gives little variation across occupations. Nearly all
-          are above 80 percent directive.</li>
+        <li>The API gives little variation across occupations. About three
+          in four are above 80 percent directive.</li>
         <li>O*NET describes US occupations. Norwegian occupations with the
           same code may differ in content.</li>
       </ol>
@@ -372,21 +408,6 @@
     <p class="chart-footnote">Sources: <a href="https://huggingface.co/datasets/Anthropic/EconomicIndex" target="_blank" rel="noopener">Anthropic Economic Index</a> · <a href="https://www.onetcenter.org/database.html" target="_blank" rel="noopener">O*NET</a>.</p>
   </section>
 
-  <section id="group" class="chart-section">
-    <h2>Every occupation in one exposure group</h2>
-    <p class="chart-intro">
-      Pick a group. The table lists every occupation in it, from the
-      highest to the lowest AI exposure (Eloundou et al. 2024). The groups
-      split the occupations into five parts of about equal size. Click an
-      occupation to see it at the top of the page.
-    </p>
-    <div class="control-row panel-controls">
-      <div class="btn-row" id="grp-buttons"></div>
-    </div>
-    <p class="chart-intro" id="grp-summary"></p>
-    <div class="table-wrap" id="grp-table"></div>
-    <p class="chart-footnote" id="grp-note"></p>
-  </section>
 
 </main>
 
@@ -399,14 +420,18 @@
       The AI Labor Market Index · Øystein Hernæs (Frisch Centre) and
       Andreas R. Kostøl (BI Norwegian Business School) ·
       Data: Anthropic Economic Index, O*NET, the A-ordningen via microdata.no ·
-      <a href="/en/">The AI Labor Market Index</a> ·
+      <a href="/en/">Index</a> ·
+      <a href="/en/lab.html">Lab</a> ·
+      <a href="/en/occupations.html">Occupations</a> ·
       <a href="/en/education.html">Education</a> ·
+      <a href="/en/mcp.html">MCP</a> ·
+      <a href="/en/studio.html">Studio</a> ·
       <a href="/en/about.html">About</a>
     </p>
   </div>
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/panels.js?v=20261005a"></script>
+<script src="/panels.js?v=20261015a"></script>
 </body>
 </html>

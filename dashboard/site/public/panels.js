@@ -12,7 +12,7 @@
   var EN = (document.documentElement.lang || "nb")
              .toLowerCase().indexOf("en") === 0;
   var PANEL = document.body.getAttribute("data-panel");
-  var V = "20260925a";
+  var V = "20261015a";
 
   // ---------- Farger og etiketter ----------
 
@@ -509,12 +509,12 @@
       var p1, p2, p3 = "";
       if (EN) {
         p1 = "<strong>" + occName(o) + "</strong> (STYRK-08 " + o.code + ")" +
-          (o.n ? " has " + thousands(o.n) + " private-sector employees."
-               : " has fewer than 30 private-sector employees, so there is no monthly series for employment and pay.");
+          (o.n ? " had " + thousands(o.n) + " private-sector employees in November 2022."
+               : " does not have at least 30 private-sector employees in every month since January 2021, so there is no monthly series for employment and pay.");
         if (o.beta !== null) {
           p1 += " Its AI exposure is " + num(o.beta, 2) + " on a scale from 0 to 1 (Eloundou et al. 2024). That puts it in the group " +
             qBadge(o.q) + " (" + o.q + " of 5).";
-          if (o.mouchel !== null) p1 += " The Mouchel et al. (2026) measure, built on documented AI use, gives " +
+          if (o.mouchel !== null) p1 += " The Mouchel et al. (2026) measure, where language models rate each task with support from news and research, gives " +
             num(o.mouchel, 2) + ", group " + qBadge(o.q_mouchel) + ".";
         }
         if (c && c.auto !== null) {
@@ -535,12 +535,12 @@
         }
       } else {
         p1 = "<strong>" + occName(o) + "</strong> (STYRK-08 " + o.code + ")" +
-          (o.n ? " har " + thousands(o.n) + " lønnstakere i privat sektor."
-               : " har under 30 lønnstakere i privat sektor, så det finnes ingen månedsserie for sysselsetting og lønn.");
+          (o.n ? " hadde " + thousands(o.n) + " lønnstakere i privat sektor i november 2022."
+               : " har ikke minst 30 lønnstakere i privat sektor i hver måned siden januar 2021, så det finnes ingen månedsserie for sysselsetting og lønn.");
         if (o.beta !== null) {
           p1 += " KI-eksponeringen er " + num(o.beta, 2) + " på skalaen fra 0 til 1 (Eloundou m.fl. 2024). Det plasserer yrket i gruppen " +
             qBadge(o.q) + " (" + o.q + " av 5).";
-          if (o.mouchel !== null) p1 += " Målet fra Mouchel m.fl. (2026), som bygger på dokumentert KI-bruk, gir " +
+          if (o.mouchel !== null) p1 += " Målet fra Mouchel m.fl. (2026), der språkmodeller vurderer hver oppgave med støtte i nyheter og forskning, gir " +
             num(o.mouchel, 2) + ", gruppe " + qBadge(o.q_mouchel) + ".";
         }
         if (c && c.auto !== null) {
@@ -970,8 +970,8 @@
         series: series
       }, true);
       setText("y3-note", isU
-        ? (EN ? "The occupation's tasks as a share of all Claude.ai use, per sample. A falling share alongside a falling automation share means the automated tasks are leaving the channel, not that automation stopped. The first chat point is Handa et al. (2025), Dec 2024 to Jan 2025; later points are one week each."
-              : "Yrkets oppgaver som andel av all Claude.ai-bruk, per utvalg. Faller bruksandelen samtidig med automatiseringsandelen, er det de automatiserte oppgavene som forlater kanalen, ikke automatiseringen som stopper. Det første chat-punktet er Handa m.fl. (2025), des. 2024 til jan. 2025; de neste er én uke hver.")
+        ? (EN ? "The occupation's tasks as a share of all Claude.ai use, per sample. A falling share alongside a falling automation share means the automated tasks are leaving the channel, not that automation stopped. The first chat point is Anthropic's March 2025 release, the 11 days after the launch of Claude 3.7 Sonnet; later points are one week each."
+              : "Yrkets oppgaver som andel av all Claude.ai-bruk, per utvalg. Faller bruksandelen samtidig med automatiseringsandelen, er det de automatiserte oppgavene som forlater kanalen, ikke automatiseringen som stopper. Det første chat-punktet er Anthropics utgivelse fra mars 2025, de 11 dagene etter lanseringen av Claude 3.7 Sonnet; de neste er én uke hver.")
         : (EN ? "Automation share (directive + feedback loop) per sample, " + PLATFORM_LABELS[state.tidPlatform] + ". Grey dashed line: all occupations, weighted by employment. The share is conditional on the task still being used in the channel, so it understates automation where it succeeds. Occupations with few conversations swing a lot between samples."
               : "Automatiseringsandel (direkte delegering + tilbakemeldingssløyfe) per utvalg, " + PLATFORM_LABELS[state.tidPlatform] + ". Grå stiplet linje: alle yrker, vektet med sysselsetting. Andelen er betinget på at oppgaven fortsatt brukes i kanalen, så den undervurderer automatisering der den lykkes. Yrker med få samtaler svinger mye mellom utvalg."));
     }
@@ -996,7 +996,7 @@
       var data = rows.map(function (o) {
         return { label: occName(o) + " (" + o.code + ")",
                  sub: (EN ? "Employees Nov 2022: " : "Lønnstakere nov. 2022: ") + thousands(o.n) +
-                      (o.q ? (EN ? " · exposure quintile " : " · eksponeringskvintil ") + o.q : ""),
+                      (o.q ? (EN ? " · exposure group: " : " · eksponeringsgruppe: ") + GROUP_NAMES[o.q - 1] : ""),
                  axis: trunc(occName(o), 34) + " (" + o.code + ")", v: o.v[state.vintage] };
       });
       chart("chart-y1").setOption(stackedTypeOption(data, SRC_AEI), true);
@@ -1023,7 +1023,7 @@
           var o = p.data.o;
           return "<b>" + occName(o) + " (" + o.code + ")</b><br>Claude.ai: " + pct(p.value[0], 1) + "<br>API: " + pct(p.value[1], 1) +
             (o.n ? "<br>" + (EN ? "Employees: " : "Lønnstakere: ") + thousands(o.n) : "") +
-            (o.q ? "<br>" + (EN ? "Exposure quintile " : "Eksponeringskvintil ") + o.q : "");
+            (o.q ? "<br>" + (EN ? "Exposure group: " : "Eksponeringsgruppe: ") + GROUP_NAMES[o.q - 1] : "");
         } },
         xAxis: { name: EN ? "Automation share, Claude.ai (%)" : "Automatiseringsandel, Claude.ai (%)", nameLocation: "middle", nameGap: 28,
                  min: 0, max: 100, splitLine: { lineStyle: { color: "#eee" } } },
@@ -1034,8 +1034,8 @@
                                data: [[{ coord: [0, 0] }, { coord: [100, 100] }]] } }]
       }, true);
       setText("y2-note", EN
-        ? "Each circle is one occupation, " + vlabel(vintByKey[latestKey.claude_ai]) + ". Circle size is private-sector employment (Nov 2022), colour is the Eloundou exposure quintile (grey: no score). Points above the dashed line are more automated in the API than in chat."
-        : "Hver sirkel er ett yrke, " + vlabel(vintByKey[latestKey.claude_ai]) + ". Størrelsen er sysselsetting i privat sektor (nov. 2022), fargen er eksponeringskvintilen etter Eloundou (grå: mangler skår). Punkter over den stiplede linjen er mer automatiserte i API-et enn i chat.");
+        ? "Each circle is one occupation, " + vlabel(vintByKey[latestKey.claude_ai]) + ". Circle size is private-sector employment (Nov 2022), colour is the Eloundou exposure group (grey: no score). Points above the dashed line are more automated in the API than in chat."
+        : "Hver sirkel er ett yrke, " + vlabel(vintByKey[latestKey.claude_ai]) + ". Størrelsen er sysselsetting i privat sektor (nov. 2022), fargen er eksponeringsgruppen etter Eloundou (grå: mangler skår). Punkter over den stiplede linjen er mer automatiserte i API-et enn i chat.");
     }
 
     function renderAll() {

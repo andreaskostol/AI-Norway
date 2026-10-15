@@ -6,10 +6,17 @@
 <title>Education — The AI Labor Market Index</title>
 <meta name="description" content="Which jobs does a degree lead to, and how exposed are they to AI? Pick a field and a level and see the ten most common tasks in those jobs, how exposed each task is to language models, how Claude is used on it, and the most common jobs. Register data from utdanning.no, O*NET, Eloundou et al. and the Anthropic Economic Index.">
 <link rel="canonical" href="https://kiindeksen.no/en/education.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="The AI Labor Market Index">
+<meta property="og:locale" content="en_GB">
+<meta property="og:url" content="https://kiindeksen.no/en/education.html">
+<meta property="og:title" content="Education — The AI Labor Market Index">
+<meta property="og:description" content="Which jobs does a degree lead to, and how exposed are they to AI? Pick a field and a level and see the ten most common tasks in those jobs, how exposed each task is to language models, how Claude is used on it, and the most common jobs. Register data from utdanning.no, O*NET, Eloundou et al. and the Anthropic Economic Index.">
+<meta property="og:image" content="https://kiindeksen.no/assets/ki-logo.png">
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/utdanning.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/education.html">
 <link rel="alternate" hreflang="x-default" href="https://kiindeksen.no/utdanning.html">
-<link rel="stylesheet" href="/style.css?v=20261005a">
+<link rel="stylesheet" href="/style.css?v=20261015a">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 </head>
 <body data-panel="utdanning">
@@ -30,14 +37,20 @@
     <div class="brand">
       <div class="brand-top">
         <nav class="panel-nav" aria-label="Pages">
-          <a href="/en/">The AI Labor Market Index</a>
-          <a href="/en/occupations.html">Occupations</a>
-          <a href="/en/education.html" class="active">Education</a>
+          <a href="/en/">Index</a>
+          <a href="/en/lab.html" class="active">Lab</a>
+          <a href="/en/studio.html">Studio</a>
           <a href="/en/about.html">About</a>
         </nav>
         <a class="lang-toggle" href="/utdanning.html" hreflang="nb" lang="nb">Norsk</a>
       </div>
-      <p class="tagline">Monthly indicators on artificial intelligence and the Norwegian labor market</p>
+      <nav class="panel-subnav" aria-label="Lab">
+        <span class="subnav-label">Lab:</span>
+        <a href="/en/occupations.html">Occupations</a>
+        <a href="/en/education.html" class="active">Education</a>
+        <a href="/en/mcp.html">MCP</a>
+      </nav>
+      <p class="tagline">Monthly indicators of artificial intelligence and the Norwegian labor market</p>
     </div>
   </div>
 </header>
@@ -112,10 +125,11 @@
         each task is and how many in the occupation do it. A task's
         weight for a degree is importance × share who do it, weighted by
         how many with the degree hold the occupation. The ten with the
-        largest weight are shown. AI exposure is a score from 0 to 1 per
-        task, the mean of Eloundou et al.'s three ratings of whether a
-        language model can halve the time the task takes, and the group
-        the score falls in using the same five groups as the
+        largest weight are shown, at most three from the same occupation. AI exposure is Eloundou et al.'s GPT-4 rating of the
+        task: 1 when a language model alone can halve the time the task
+        takes, 0.5 when it needs extra software, 0 otherwise. It is the
+        same score as behind the occupations' exposure. The group is the
+        one the score falls in using the same five groups as the
         occupations: least exposed, low, medium, high, most exposed.
         Automation is Anthropic's bucketing, directive and feedback loop,
         as a share of Claude.ai conversations about the task. Tasks
@@ -233,14 +247,18 @@
       The AI Labor Market Index · Øystein Hernæs (Frisch Centre) and
       Andreas R. Kostøl (BI Norwegian Business School) ·
       Data: utdanning.no, O*NET, Eloundou et al. (2024), Anthropic Economic Index ·
-      <a href="/en/">The AI Labor Market Index</a> ·
+      <a href="/en/">Index</a> ·
+      <a href="/en/lab.html">Lab</a> ·
       <a href="/en/occupations.html">Occupations</a> ·
+      <a href="/en/education.html">Education</a> ·
+      <a href="/en/mcp.html">MCP</a> ·
+      <a href="/en/studio.html">Studio</a> ·
       <a href="/en/about.html">About</a>
     </p>
   </div>
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/panels.js?v=20261005a"></script>
+<script src="/panels.js?v=20261015a"></script>
 </body>
 </html>

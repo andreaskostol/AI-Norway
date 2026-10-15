@@ -28,6 +28,39 @@ site/
   fly.toml          # app "kiindeksen", region arn (Stockholm)
 ```
 
+## MCP-kobling (okt. 2026)
+
+Dataene nettstedet publiserer er også tilgjengelige som verktøy for Claude og
+egne script gjennom en MCP-server i `dashboard/mcp/` (egen Fly-app
+`kiindeksen-mcp`, endepunkt `https://kiindeksen-mcp.fly.dev/mcp`). Den henter
+JSON-filene fra `public/data/` på nettstedet ved oppstart og hver sjette time,
+så den trenger ingen ny utrulling ved månedlig release. Se `dashboard/mcp/README.md`.
+Siden `mcp.html` / `en/mcp.html` (tredje kort under Labben, 2026-10-15) forklarer
+koblingen med verktøytabell og eksempel. `public/mcp/client_example.py` er en kopi
+av `dashboard/mcp/client_example.py`; kopier på nytt når scriptet endres.
+
+## Labben og Studio (okt. 2026)
+
+Sidelenkene øverst er nå Indeksen | Labben | Studio | Om (engelsk:
+Index, Lab, Studio). Yrker og Utdanning er uendret som sider, men ligger
+under **Labben** (`labben.html`, `en/lab.html`): en kort side som sier
+hva verktøyene skal, med lenker. Tredje kort er MCP-koblingen (`mcp.html`). På `yrker.html` og `utdanning.html`
+er Labben aktiv i sidelenkene, og en undermeny (`.panel-subnav`) viser
+hvilket verktøy som er åpent.
+
+**Studio** (`studio.html`, `en/studio.html`) er under bygging:
+podkaster, videoer og nyheter om ny forskning, medregnet nye funn fra
+Anthropic. Siden har en
+artikkelsporing: `studio.js` leser `public/data/studio_papers.json` og
+fyller tabellen (dato, artikkel, kilde, status, plan), med knapper per
+type (forskning, Anthropic, andre rapporter). Lista vedlikeholdes for hånd
+i JSON-fila; feltene står i `_om` øverst i fila. Status: ny, notat, video,
+podkast, publisert. Plan: notat, notat+video, podkast, ingen. Startlista (2026-10-14) er
+bygget fra `literature/` og `literature/llm-selskapsrapporter/00-OVERSIKT.md`;
+lenker og måneder som ikke var sjekket, er utelatt.
+
+Nye sider må stå i `nginx.conf` (no-cache-regexene) og `sitemap.xml`.
+
 ## Sidene Yrker og Utdanning (sept. 2026)
 
 KI-indeksen er forsiden og navnet på nettstedet. Yrker og Utdanning er
@@ -65,7 +98,7 @@ oppdateres, ikke månedlig:
 
 Ny side eller ny JSON må også inn i `nginx.conf` (no-cache) og
 `sitemap.xml`. Cache-parameteren på `style.css` og `panels.js` er
-`v=20260907d` (bump i alle HTML-filer og i `V` i panels.js ved endring).
+`v=20261015a` (bump i alle HTML-filer og i `V` i panels.js ved endring).
 
 ## Månedlig oppdatering
 
