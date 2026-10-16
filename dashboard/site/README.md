@@ -28,6 +28,34 @@ site/
   fly.toml          # app "kiindeksen", region arn (Stockholm)
 ```
 
+## Landingsside og filmer (okt. 2026)
+
+`/` (`index.html`, engelsk `en/index.html`) er en kort landingsside: to animerte
+figurer (mest og minst eksponerte yrker, alle aldre og 21–30 år) med ChatGPT og
+agentisk KI som hendelser og KI-indeksen regnet som i `app.js` (`landing.js`),
+fire talltavler fra `headline_uncertainty_*`, knapp «Se hele indeksen her», tre
+kort (Indeksen, Labben, Studio) og en filmblokk. Den fulle indekssiden er
+`indeksen.html` / `en/the-index.html`; sidelenken «Indeksen» peker dit. Gamle
+dyplenker (`/#data` osv.) sendes videre av et lite skript øverst i `index.html`.
+
+**Filmer.** `landing.js` tegner filmblokken fra `public/data/videos.json`. Bare
+oppføringer med `status: "publisert"` vises; uten engelsk fil vises den norske på
+den engelske siden med `fallback_note`. Slik publiserer du en film:
+
+1. Legg MP4 og plakat (JPG) i `public/video/`. Resultatfilmen heter
+   `kiindeksen-resultater-<release>.mp4`, forklaringsfilmen `kiindeksen-eksponering.mp4`.
+   Plakat: `ffmpeg -ss 3 -i FILM.mp4 -frames:v 1 -q:v 4 PLAKAT.jpg`.
+2. Sett `src`, `poster` og `status: "publisert"` i `videos.json`, og `updated`.
+3. Deploy. `nginx.conf` cacher `/video/` i en uke og `videos.json` aldri.
+
+Stemmer: norsk resultatfilm for release 2026-10 er Andreas sin egen innlesning;
+fra neste oppdatering brukes stemmeklonen (ElevenLabs, profilen i
+`dashboard/video_voice.json`, som skal samsvare med det private stemmerepoet
+`andreas-stemme`). Engelske filmer bruker alltid Fish Audio-klonen. Filmkoden er
+Codex sin (`dashboard/build_results_video.py` m.fl., se `dashboard/README.md`).
+`video_voice.json` og råfilene i prosjektroten er gitignorert og skal ikke
+committes.
+
 ## MCP-kobling (okt. 2026)
 
 Dataene nettstedet publiserer er også tilgjengelige som verktøy for Claude og

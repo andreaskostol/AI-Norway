@@ -103,3 +103,35 @@ slides/aid-presentasjon/*_files/
 # Celledata bygd fra microdata-output (yrke x alder x maaned): holdes utenfor git som microdata-output/
 slides/data-pipeline/data/pipeline-data*.js
 slides/aid-presentasjon/modules/data/pipeline-data*.js
+slides/langsikt-seminar/*.html
+slides/langsikt-seminar/dist/
+slides/langsikt-seminar/.quarto/
+slides/langsikt-seminar/*_files/
+slides/langsikt-seminar/modules/data/pipeline-data*.js
+
+# Presentations/: LaTeX-byggartefakter
+Presentations/*/*.aux
+Presentations/*/*.log
+Presentations/*/*.nav
+Presentations/*/*.out
+Presentations/*/*.snm
+Presentations/*/*.toc
+Presentations/*/*.vrb
+Presentations/*/*.fdb_latexmk
+Presentations/*/*.fls
+Presentations/*/lyd/
+Presentations/*/*.mp4
+Presentations/*/*-169.*
+Presentations/*/preamble_169.tex
+Presentations/*/*.lyd.wav
+
+# Stemmeklone og uttaleregler er private (github.com/andreaskostol/andreas-stemme).
+# Aldri i dette offentlige repoet. Filmene som publiseres, ligger i dashboard/site/public/video/.
+dashboard/video_voice.json
+/kiindeksen-*uttale*
+/kiindeksen-*klone*
+/kiindeksen-andreas-stavanger-*
+/*.m4a
+/*.mp3
+/*.wav
+/*.mp4

@@ -1,0 +1,46 @@
+{
+ "_om": "Filmene paa landingssiden (index.html / en/index.html, tegnet av landing.js). Bare oppfoeringer med status 'publisert' vises. status: utkast | publisert. Per spraak: title, text, src (/video/...), poster, voice (hvem som leser). Mangler en engelsk src, vises den norske filmen paa den engelske siden med fallback_note. Filene legges i public/video/; resultatfilmen baerer release-maaneden i navnet. Rutine: dashboard/site/README.md, avsnittet 'Landingsside og filmer'.",
+ "updated": "2026-10-16",
+ "videos": [
+  {
+   "id": "resultater",
+   "status": "utkast",
+   "order": 1,
+   "no": {
+    "title": "Funnene på fire minutter",
+    "text": "Resultatene fra siste release, fortalt av Andreas R. Kostøl.",
+    "src": "/video/kiindeksen-resultater-2026-10.mp4",
+    "poster": "/video/kiindeksen-resultater-2026-10-poster.jpg",
+    "voice": "egen innlesning (neste oppdatering: stemmeklonen)"
+   },
+   "en": {
+    "title": "The findings in four minutes",
+    "text": "The results from the latest release, narrated by Andreas R. Kostøl.",
+    "src": "",
+    "poster": "",
+    "voice": "Fish Audio clone",
+    "fallback_note": "Norwegian narration; an English version follows."
+   }
+  },
+  {
+   "id": "eksponering",
+   "status": "utkast",
+   "order": 2,
+   "no": {
+    "title": "Hva er KI-eksponering?",
+    "text": "Hvordan arbeidsoppgaver blir til en skår for KI-eksponering, og hvordan skåren kobles til norske yrker.",
+    "src": "/video/kiindeksen-eksponering.mp4",
+    "poster": "/video/kiindeksen-eksponering-poster.jpg",
+    "voice": "stemmeklonen"
+   },
+   "en": {
+    "title": "What is AI exposure?",
+    "text": "How work tasks become an AI exposure score, and how the score is linked to Norwegian occupations.",
+    "src": "",
+    "poster": "",
+    "voice": "Fish Audio clone",
+    "fallback_note": "Norwegian narration; an English version follows."
+   }
+  }
+ ]
+}

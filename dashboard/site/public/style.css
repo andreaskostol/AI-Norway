@@ -25,7 +25,7 @@ body {
 .container {
   max-width: 1060px;
   margin: 0 auto;
-  padding: 0 1.25rem;
+  padding: 0 clamp(1.25rem, 4vw, 3rem);   /* 1.25rem paa mobil, opp til 3rem paa brede skjermer */
 }
 
 a { color: var(--accent); }
@@ -121,7 +121,7 @@ a { color: var(--accent); }
 
 /* Hero */
 .hero {
-  padding: 2.2rem 0 1.6rem;
+  padding: 3rem 0 1.6rem;    /* var 2.2rem: mer luft under toppfeltet (2026-10-16) */
 }
 .hero-title {
   max-width: 46rem;
@@ -130,7 +130,7 @@ a { color: var(--accent); }
   margin: 0 0 0.8rem;
 }
 .lede {
-  max-width: 56rem;
+  max-width: 38rem;          /* om lag 70 tegn per linje; var 56rem */
   font-size: 1.08rem;
   margin: 0 0 1rem;
 }
@@ -352,8 +352,8 @@ a { color: var(--accent); }
   grid-template-columns: 225px minmax(0, 1fr);
   gap: 0 2rem;
   max-width: 1300px;
-  margin: 0;
-  padding: 0 1.25rem;
+  margin: 0 auto;            /* sentrert, som resten av sidene (2026-10-16) */
+  padding: 0 clamp(1.25rem, 4vw, 3rem);
 }
 .layout .container {
   max-width: none;
@@ -363,7 +363,7 @@ a { color: var(--accent); }
 .content { min-width: 0; }
 .site-header .container, .site-footer .container {
   max-width: 1300px;
-  margin: 0;
+  margin: 0 auto;            /* sentrert paa brede skjermer (2026-10-16); var margin: 0 */
 }
 .toc {
   position: sticky;
@@ -580,8 +580,8 @@ a { color: var(--accent); }
 .occ-actions button:disabled { opacity: 0.45; cursor: default; }
 
 /* Prose & downloads */
-.prose-section p { max-width: 56rem; }
-.prose-section > ul { max-width: 56rem; padding-left: 1.2rem; }
+.prose-section p { max-width: 40rem; }   /* om lag 75 tegn per linje; var 56rem */
+.prose-section > ul { max-width: 40rem; padding-left: 1.2rem; }
 .prose-section > ul li { margin: 0.35rem 0; }
 .download-groups { margin-top: 0.6rem; }
 .download-group { border-top: 1px solid var(--line); padding: 0.2rem 0 0.6rem; }
@@ -1084,3 +1084,48 @@ code {
 .prose-section pre { margin: 0.4rem 0 1rem; padding: 0.7rem 0.9rem; background: #f5f5f3; border: 1px solid var(--line); border-radius: 6px; overflow-x: auto; font-size: 0.85rem; line-height: 1.45; }
 .prose-section pre code { font-size: inherit; }
 .prose-section ol li .table-wrap { margin: 0.5rem 0; }
+
+/* Landingssiden (okt. 2026) */
+.landing-main { padding-bottom: 2rem; }
+.landing-hero { padding-bottom: 0.6rem; }
+.landing-hero .hero-title { font-size: 1.9rem; max-width: 52rem; }
+.cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.2rem; margin: 0.2rem 0 1.2rem; }
+.cta-link {
+  display: inline-block; padding: 0.6rem 1.2rem; border-radius: 8px;
+  background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; font-size: 1.05rem;
+}
+.cta-link:hover { background: #0c3d68; }
+.cta-note { font-size: 0.85rem; color: var(--ink-soft); }
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.8rem; margin: 0.4rem 0 0.6rem; }
+.stat-tile { border: 0; border-radius: 8px; padding: 0.7rem 0.9rem 0.6rem; background: #f4f6f8; }
+.stat-label { font-size: 0.78rem; font-weight: 700; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.05em; }
+.stat-who { font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.1rem; }
+.stat-value { font-size: 2.2rem; font-weight: 800; line-height: 1.1; margin-top: 0.15rem; font-variant-numeric: tabular-nums; }
+.stat-value.pos { color: var(--pos); }
+.stat-value.neg { color: var(--neg); }
+.stat-unit { font-size: 0.8rem; color: var(--ink-soft); }
+.landing-figures { margin-top: 1.4rem; }
+.landing-figures h3, .landing-videos h3 { font-size: 1.2rem; margin: 0 0 0.3rem; }
+.landing-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1rem; margin-top: 0.6rem; }
+.landing-chart { border: 0; padding: 0.6rem 0 0.2rem; background: transparent; }
+.landing-chart h4 { margin: 0 0 0.2rem 0.6rem; font-size: 0.95rem; color: var(--ink-soft); }
+.landing-chart .chart { height: 320px; }
+.chart-actions { margin: 0.6rem 0 0.2rem; }
+.replay-btn {
+  font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--accent);
+  background: var(--accent-soft); border: 0; border-radius: 999px; padding: 0.35rem 0.95rem; cursor: pointer;
+}
+.replay-btn:hover { background: var(--accent); color: #fff; }
+.landing-videos { margin-top: 1.8rem; }
+.video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1.2rem; }
+.video-card video { width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 8px; display: block; }
+.video-card p { font-size: 0.92rem; color: var(--ink-soft); margin: 0.4rem 0 0; }
+.landing-more { margin-top: 1.8rem; }
+.landing-more .lab-cards { max-width: none; }
+.landing .lab-card { border: 0; background: #f4f6f8; }
+.landing .lab-card:hover { box-shadow: none; background: #ecf0f4; }
+@media (max-width: 860px) {
+  .hero { padding-top: 2rem; }
+  .landing-hero .hero-title { font-size: 1.45rem; }
+  .landing-chart .chart { height: 280px; }
+}
