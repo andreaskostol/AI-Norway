@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MCP connector — The AI Labor Market Index</title>
-<meta name="description" content="Connect Claude, Claude Code or your own script to the data behind the index, Occupations and Education through an MCP server. Sixteen tools, open aggregate numbers, no login.">
+<meta name="description" content="Connect Claude, Claude Code or your own script to the data behind the index, Occupations and Education through an MCP server. Seventeen tools, open aggregate numbers, no login.">
 <link rel="canonical" href="https://kiindeksen.no/en/mcp.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="The AI Labor Market Index">
 <meta property="og:locale" content="en_GB">
 <meta property="og:url" content="https://kiindeksen.no/en/mcp.html">
 <meta property="og:title" content="MCP connector — The AI Labor Market Index">
-<meta property="og:description" content="Connect Claude, Claude Code or your own script to the data behind the index, Occupations and Education through an MCP server. Sixteen tools, open aggregate numbers, no login.">
+<meta property="og:description" content="Connect Claude, Claude Code or your own script to the data behind the index, Occupations and Education through an MCP server. Seventeen tools, open aggregate numbers, no login.">
 <meta property="og:image" content="https://kiindeksen.no/assets/ki-logo.png">
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/mcp.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/mcp.html">
@@ -59,6 +59,8 @@
       scripts the same numbers as tools: the time series behind the index,
       every occupation with its tasks and Claude use, and every field of
       study. All of it is aggregate data that is already public. No login.
+      Errors and ideas: use the Feedback button at the bottom right, or the
+      <code>send_feedback</code> tool.
     </p>
 
     <h3>Connect</h3>
@@ -129,6 +131,7 @@ curl "https://kiindeksen-mcp.fly.dev/tools/compare_occupations?codes=4110,3312&a
         <tr><td><code>list_education_levels</code>, <code>search_education</code>, <code>get_education_group</code></td><td>Education: fields of study, the tasks in the jobs, the most common jobs</td></tr>
         <tr><td><code>list_downloads</code>, <code>get_data_dictionary</code></td><td>The release's CSV files and their documentation</td></tr>
         <tr><td><code>get_studio_papers</code></td><td>The Studio reading list</td></tr>
+        <tr><td><code>send_feedback</code></td><td>Send us feedback from Claude or a script; the same inbox as the Feedback button at the bottom right</td></tr>
       </tbody>
     </table>
     </div>
@@ -238,5 +241,6 @@ curl "https://kiindeksen-mcp.fly.dev/tools/compare_occupations?codes=4110,3312&a
     </p>
   </div>
 </footer>
+<script src="/feedback.js?v=20261016a" defer></script>
 </body>
 </html>

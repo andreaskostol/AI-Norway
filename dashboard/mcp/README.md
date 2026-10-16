@@ -76,6 +76,7 @@ python3 dashboard/mcp/client_example.py
 | `list_education_levels`, `search_education`, `get_education_group` | Utdanning: faggrupper, oppgavene i jobbene, vanligste jobber |
 | `list_downloads`, `get_data_dictionary` | CSV-ene for releasen og dokumentasjonen deres |
 | `get_studio_papers` | Arbeidslista i Studio |
+| `send_feedback` | Tilbakemelding til Andreas og Øystein (vis brukeren teksten først) |
 
 To ressurser (`kiindeksen://om`, `kiindeksen://konvensjoner`) og to prompter
 (`analyser_yrkespar`, `maanedsrapport`) følger med.
@@ -139,6 +140,21 @@ oppgavene i jobbene og de vanligste jobbene, regnskapsførere øverst.
 
 Alle tall over er lest fra serveren 2026-10-15 med release 2026-10. Nye
 releaser gir nye tall; kjør scriptet på nytt.
+
+## Tilbakemeldinger
+
+Knappen «Tilbakemelding» på `mcp.html` (`public/feedback.js`) og verktøyet
+`send_feedback` skriver til `/data/feedback/feedback.jsonl` på Fly-volumet
+`feedback_data` (se `[mounts]` i `fly.toml`). Lagret: tid, kilde, side, melding og
+valgfri kontakt. Ikke lagret: IP-adresse. Ratebegrensning: 20 per klient og time, 500
+per dag, med en saltet hash av adressen som slettes etter en time. Les meldingene:
+
+```bash
+python3 dashboard/mcp/feedback.py          # nye siden sist
+python3 dashboard/mcp/feedback.py --all
+```
+
+`GET /feedback` svarer `{"writable": true, "durable": true}` når volumet er på plass.
 
 ## Lokal kjøring og testing
 

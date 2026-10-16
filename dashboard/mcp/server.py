@@ -10,6 +10,7 @@ hvor som helst uten installasjon. Transporter (2026-10-15, for alle klienter og 
     GET /tools/<navn>         samme verktøy som vanlige HTTP-kall (REST), argumenter i spørrestrengen
     POST /tools/<navn>        samme med JSON-kropp
     GET /openapi.json         OpenAPI 3.1 for REST-kallene, til funksjonskall hos andre modeller og GPT-er
+    POST /feedback            tilbakemeldinger fra knappen paa nettstedet (lagres paa Fly-volumet, se feedback.py)
 
     python3 server.py                          # henter dataene fra https://kiindeksen.no/data/
     python3 server.py --data-dir ../site/public/data --port 8765   # lokale filer, til testing
@@ -31,7 +32,7 @@ Verktøyene står i TOOLS nederst; README.md i samme mappe forklarer dataene og 
 gjennomgått eksempel på en analyse.
 """
 import argparse, json, os, sys, threading, time, urllib.request
-import queue, uuid
+import queue, uuid, hashlib, secrets, fcntl, re
 from urllib.parse import parse_qs
 
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
@@ -495,6 +496,83 @@ def t_get_studio_papers(a):
     return {"updated": s.get("updated"), "n": len(papers), "papers": papers}
 
 
+# ---------------------------------------------------------------- tilbakemeldinger
+# Samme oppskrift som feedback/lib.php paa andreaskostol.no: én JSON-linje per melding i
+# FEEDBACK_DIR/feedback.jsonl paa Fly-volumet (/data). Lagret: tid, kilde, side, melding og
+# valgfri kontakt. Ikke lagret: IP-adresse eller nettleser. Ratebegrensningen holder en saltet
+# hash av adressen i én time. Andreas leser meldingene med feedback.py i samme mappe.
+FEEDBACK_DIR = os.environ.get("KIINDEKSEN_FEEDBACK_DIR", "/data/feedback")
+FEEDBACK_MAX_MESSAGE, FEEDBACK_MAX_CONTACT, FEEDBACK_MAX_PAGE = 5000, 200, 300
+FEEDBACK_PER_CLIENT_HOUR, FEEDBACK_PER_DAY = 20, 500
+FEEDBACK_LOCK = threading.Lock()
+_CTRL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
+
+
+def feedback_clean(s, n):
+    return _CTRL.sub("", str(s or "")).strip()[:n]
+
+
+def feedback_status():
+    """Volumet er varig bare naar /data er et monteringspunkt."""
+    d = FEEDBACK_DIR
+    try:
+        mounts = open("/proc/mounts", encoding="utf-8").read()
+    except OSError:
+        mounts = ""
+    return {"writable": os.path.isdir(d) and os.access(d, os.W_OK), "durable": " /data " in mounts}
+
+
+def feedback_save(source, message, contact="", page="", client=""):
+    """Returnerer (ok, melding til avsenderen)."""
+    message = feedback_clean(message, FEEDBACK_MAX_MESSAGE)
+    if len(message) < 3:
+        return False, "Skriv en melding først."
+    d = FEEDBACK_DIR
+    try:
+        os.makedirs(d, exist_ok=True)
+    except OSError:
+        pass
+    if not (os.path.isdir(d) and os.access(d, os.W_OK)):
+        return False, "Tilbakemeldingen kan ikke lagres nå. Send gjerne e-post til andreas.r.kostol@bi.no."
+    with FEEDBACK_LOCK, open(os.path.join(d, ".lock"), "a") as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        try:
+            now = time.time()
+            day, hour = time.strftime("%Y-%m-%d", time.gmtime(now)), time.strftime("%Y-%m-%d-%H", time.gmtime(now))
+            rate_path = os.path.join(d, "rate.json")
+            try:
+                rate = json.load(open(rate_path, encoding="utf-8"))
+            except (OSError, ValueError):
+                rate = {}
+            if rate.get("day") != day:
+                rate = {"day": day, "count": 0, "salt": secrets.token_hex(16), "clients": {}}
+            key = hashlib.sha256(f"{rate['salt']}|{client}|{hour}".encode("utf-8")).hexdigest()
+            rate["clients"] = {k: v for k, v in rate["clients"].items() if v.get("hour") == hour}
+            mine = rate["clients"].get(key, {}).get("n", 0)
+            if rate["count"] >= FEEDBACK_PER_DAY or mine >= FEEDBACK_PER_CLIENT_HOUR:
+                return False, "For mange meldinger. Prøv igjen senere."
+            entry = {"id": time.strftime("%Y%m%d-%H%M%S", time.gmtime(now)) + "-" + secrets.token_hex(3),
+                     "time": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime(now)),
+                     "source": feedback_clean(source, 40), "page": feedback_clean(page, FEEDBACK_MAX_PAGE),
+                     "contact": feedback_clean(contact, FEEDBACK_MAX_CONTACT), "message": message}
+            with open(os.path.join(d, "feedback.jsonl"), "a", encoding="utf-8") as f:
+                f.write(json.dumps(entry, ensure_ascii=False) + "\n")
+            rate["count"] += 1
+            rate["clients"][key] = {"hour": hour, "n": mine + 1}
+            with open(rate_path, "w", encoding="utf-8") as f:
+                json.dump(rate, f)
+            return True, "Takk. Andreas Kostøl og Øystein Hernæs leser alle tilbakemeldinger."
+        finally:
+            fcntl.flock(lock, fcntl.LOCK_UN)
+
+
+def t_send_feedback(a):
+    ok, msg = feedback_save("mcp", a.get("message", ""), a.get("contact", ""), "mcp:send_feedback")
+    if not ok:
+        raise ToolError(msg)
+    return {"ok": True, "message": msg}
+
+
 TOOLS = [
     ("get_release", "Release, periode, normaliseringsmåned, antall yrker og utdanninger, og hovedtallet (KI-indeksen) med usikkerhet. Start her.",
      {"type": "object", "properties": {}}, t_get_release),
@@ -544,6 +622,10 @@ TOOLS = [
      {"type": "object", "properties": {}}, t_list_downloads),
     ("get_data_dictionary", "Dokumentasjonen (data dictionary) for en nedlastbar pakke: konvensjoner, kolonner, kilder.",
      {"type": "object", "properties": {"package": {"type": "string", "default": "by_exposure"}}}, t_get_data_dictionary),
+    ("send_feedback", "Send en tilbakemelding til Andreas Kostøl og Øystein Hernæs: feil, uklarheter, ideer eller noe som fungerte. Vis brukeren teksten før du sender. Kontakt (e-post) er valgfritt. IP-adresse lagres ikke.",
+     {"type": "object", "properties": {"message": {"type": "string", "description": "meldingen, 3 til 5000 tegn"},
+                                       "contact": {"type": "string", "description": "e-post hvis avsenderen vil ha svar (valgfritt)"}},
+      "required": ["message"]}, t_send_feedback),
     ("get_studio_papers", "Arbeidslista i Studio: nye artikler og rapporter om KI og arbeid, med status og plan.",
      {"type": "object", "properties": {"type": {"type": "string", "enum": ["forskning", "anthropic", "rapport"]}}}, t_get_studio_papers),
 ]
@@ -793,7 +875,7 @@ class Handler(BaseHTTPRequestHandler):
             text = (f"KI-indeksen MCP-kobling {VERSION}. Release {rel}.\n"
                     "MCP: POST /mcp (Streamable HTTP, JSON-RPC 2.0). Eldre HTTP+SSE: GET /sse, POST /messages. "
                     "Stdio: python3 server.py --stdio.\n"
-                    "REST: GET /tools, GET eller POST /tools/<navn>, GET /openapi.json.\n"
+                    "REST: GET /tools, GET eller POST /tools/<navn>, GET /openapi.json. Tilbakemelding: POST /feedback.\n"
                     f"Verktøy: {', '.join(n for n, *_ in TOOLS)}.\n"
                     "Dokumentasjon: https://kiindeksen.no/mcp.html. Kode: https://github.com/andreaskostol/AI-Norway (dashboard/mcp).\n")
             self._send(200, text.encode("utf-8"), "text/plain; charset=utf-8")
@@ -825,6 +907,8 @@ class Handler(BaseHTTPRequestHandler):
             finally:
                 with SESSIONS_LOCK:
                     SESSIONS.pop(sid, None)
+        elif path == "/feedback":
+            self._send(200, json.dumps(feedback_status()).encode("utf-8"))
         elif path == "/openapi.json":
             self._send(200, json.dumps(openapi_spec(self._public_url()), ensure_ascii=False).encode("utf-8"))
         elif path == "/tools":
@@ -895,6 +979,22 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send(400, b'{"error": "ugyldig JSON"}')
             status, out = rest_call(path[len("/tools/"):], args if isinstance(args, dict) else {})
             return self._send(status, json.dumps(out, ensure_ascii=False).encode("utf-8"))
+        if path == "/feedback":                          # knappen «Tilbakemelding» paa nettstedet
+            raw = self._body()
+            if raw is None:
+                return
+            try:
+                data = json.loads(raw.decode("utf-8") or "{}")
+            except Exception:
+                return self._send(400, json.dumps({"ok": False, "message": "Kunne ikke lese meldingen."}, ensure_ascii=False).encode("utf-8"))
+            if not isinstance(data, dict) or len(raw) > 20000:
+                return self._send(400, json.dumps({"ok": False, "message": "Kunne ikke lese meldingen."}, ensure_ascii=False).encode("utf-8"))
+            if data.get("website"):                      # honningkrukke: roboter fyller den
+                return self._send(200, json.dumps({"ok": True, "message": "Takk."}, ensure_ascii=False).encode("utf-8"))
+            client = (self.headers.get("Fly-Client-IP") or (self.headers.get("X-Forwarded-For") or "").split(",")[0].strip()
+                      or self.client_address[0])
+            ok, msg = feedback_save("web", data.get("message", ""), data.get("contact", ""), data.get("page", ""), client)
+            return self._send(200 if ok else 400, json.dumps({"ok": ok, "message": msg}, ensure_ascii=False).encode("utf-8"))
         if path == "/messages":                          # eldre HTTP+SSE: svaret går på strømmen
             sid = (parse_qs(query).get("sessionId") or parse_qs(query).get("session_id") or [""])[0]
             with SESSIONS_LOCK:
@@ -951,6 +1051,10 @@ def main():
         DATA_DIR = a.data_dir
     if a.stdio:
         return serve_stdio()
+    try:                                                 # tilbakemeldingsmappa paa volumet
+        os.makedirs(FEEDBACK_DIR, exist_ok=True)
+    except OSError:
+        pass
     load_data()
     print(f"lastet release {STATE['data']['dashboard']['release']} fra {DATA_DIR or BASE}", flush=True)
     if not DATA_DIR:

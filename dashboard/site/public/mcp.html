@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MCP-kobling — KI-indeksen</title>
-<meta name="description" content="Koble Claude, Claude Code eller et eget script til dataene bak KI-indeksen, Yrker og Utdanning gjennom en MCP-server. Seksten verktøy, åpne aggregerte tall, ingen innlogging.">
+<meta name="description" content="Koble Claude, Claude Code eller et eget script til dataene bak KI-indeksen, Yrker og Utdanning gjennom en MCP-server. Sytten verktøy, åpne aggregerte tall, ingen innlogging.">
 <link rel="canonical" href="https://kiindeksen.no/mcp.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="KI-indeksen">
 <meta property="og:locale" content="nb_NO">
 <meta property="og:url" content="https://kiindeksen.no/mcp.html">
 <meta property="og:title" content="MCP-kobling — KI-indeksen">
-<meta property="og:description" content="Koble Claude, Claude Code eller et eget script til dataene bak KI-indeksen, Yrker og Utdanning gjennom en MCP-server. Seksten verktøy, åpne aggregerte tall, ingen innlogging.">
+<meta property="og:description" content="Koble Claude, Claude Code eller et eget script til dataene bak KI-indeksen, Yrker og Utdanning gjennom en MCP-server. Sytten verktøy, åpne aggregerte tall, ingen innlogging.">
 <meta property="og:image" content="https://kiindeksen.no/assets/ki-logo.png">
 <link rel="alternate" hreflang="nb" href="https://kiindeksen.no/mcp.html">
 <link rel="alternate" hreflang="en" href="https://kiindeksen.no/en/mcp.html">
@@ -58,7 +58,9 @@
       Context Protocol) gir Claude, Codex, Kimi, GLM og egne script de
       samme tallene som verktøy: tidsseriene bak indeksen, hvert yrke med
       oppgaver og Claude-bruk, og hver utdanning. Alt er aggregerte tall
-      som allerede er offentlige. Ingen innlogging.
+      som allerede er offentlige. Ingen innlogging. Feil og ideer: bruk
+      knappen «Tilbakemelding» nederst til høyre, eller verktøyet
+      <code>send_feedback</code>.
     </p>
 
     <h3>Koble til</h3>
@@ -129,6 +131,7 @@ curl "https://kiindeksen-mcp.fly.dev/tools/compare_occupations?codes=4110,3312&a
         <tr><td><code>list_education_levels</code>, <code>search_education</code>, <code>get_education_group</code></td><td>Utdanning: faggrupper, oppgavene i jobbene, vanligste jobber</td></tr>
         <tr><td><code>list_downloads</code>, <code>get_data_dictionary</code></td><td>CSV-ene for releasen og dokumentasjonen deres</td></tr>
         <tr><td><code>get_studio_papers</code></td><td>Arbeidslista i Studio</td></tr>
+        <tr><td><code>send_feedback</code></td><td>Send en tilbakemelding til oss fra Claude eller et script; samme postkasse som knappen «Tilbakemelding» nederst til høyre</td></tr>
       </tbody>
     </table>
     </div>
@@ -235,5 +238,6 @@ curl "https://kiindeksen-mcp.fly.dev/tools/compare_occupations?codes=4110,3312&a
     </p>
   </div>
 </footer>
+<script src="/feedback.js?v=20261016a" defer></script>
 </body>
 </html>
