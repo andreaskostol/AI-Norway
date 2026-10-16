@@ -1091,7 +1091,7 @@ code {
 .landing-hero .hero-title { font-size: 1.9rem; max-width: 52rem; }
 .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.2rem; margin: 0.2rem 0 1.2rem; }
 .cta-link {
-  display: inline-block; padding: 0.6rem 1.2rem; border-radius: 8px;
+  display: inline-block; padding: 0.45rem 1.1rem; border-radius: 999px;
   background: var(--accent); color: #fff; font-weight: 700; text-decoration: none; font-size: 1.05rem;
 }
 .cta-link:hover { background: #0c3d68; }
@@ -1105,7 +1105,6 @@ code {
 .stat-value.neg { color: var(--neg); }
 .stat-unit { font-size: 0.8rem; color: var(--ink-soft); }
 .landing-figures { margin-top: 1.6rem; }
-.landing-figures h2 { font-size: 1.35rem; margin: 0 0 0.4rem; }
 .landing-text { margin-top: 1.8rem; }
 .landing .lede { max-width: none; font-size: 1.1rem; }
 .landing-figures h3, .landing-videos h3 { font-size: 1.2rem; margin: 0 0 0.3rem; }
@@ -1113,7 +1112,7 @@ code {
 .landing-chart { border: 0; padding: 0.6rem 0 0.2rem; background: transparent; }
 .landing-chart h4 { margin: 0 0 0.2rem 0.6rem; font-size: 0.95rem; color: var(--ink-soft); }
 .landing-chart .chart { height: 320px; }
-.chart-actions { margin: 0.6rem 0 0.2rem; }
+.chart-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.7rem 1rem; margin: 0.8rem 0 0.2rem; }
 .replay-btn {
   font: inherit; font-size: 0.88rem; font-weight: 600; color: var(--accent);
   background: var(--accent-soft); border: 0; border-radius: 999px; padding: 0.35rem 0.95rem; cursor: pointer;
