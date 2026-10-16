@@ -1,5 +1,5 @@
 """Explicitly invoked ElevenLabs synthesis. Never called by the default offline build."""
-import argparse,base64,hashlib,json,os,re,subprocess,urllib.request
+import argparse,base64,hashlib,json,os,re,subprocess,time,urllib.request,urllib.error
 from pathlib import Path
 CONFIG=json.loads((Path(__file__).parent/'video_voice.json').read_text())
 VOICE=CONFIG['voice_id']
@@ -22,7 +22,13 @@ def synth(manifest,prefix):
   if not (meta.exists() and wav.exists() and json.loads(meta.read_text()).get('request_sha256')==digest):
    key=os.environ.get('ELEVENLABS_API_KEY') or (Path.home()/'.config/elevenlabs/key').read_text().strip()
    req=urllib.request.Request(f'https://api.elevenlabs.io/v1/text-to-speech/{VOICE}/with-timestamps?output_format=mp3_44100_128',data=json.dumps(body).encode(),headers={'xi-api-key':key,'Content-Type':'application/json'})
-   with urllib.request.urlopen(req,timeout=180) as r:d=json.load(r)
+   for attempt in range(5):
+    try:
+     with urllib.request.urlopen(req,timeout=180) as r:d=json.load(r)
+     break
+    except urllib.error.HTTPError as exc:
+     if exc.code != 429 or attempt == 4:raise
+     time.sleep(min(30, 5 * (attempt + 1)))
    a=d['alignment'];chars=''.join(a['characters'])
    if chars!=text:raise ValueError('Provider alignment differs from transcript. Inspect before rendering.')
    words=[{'word':w.group(),'start':a['character_start_times_seconds'][w.start()],'end':a['character_end_times_seconds'][w.end()-1]} for w in re.finditer(r'\S+',text)]
