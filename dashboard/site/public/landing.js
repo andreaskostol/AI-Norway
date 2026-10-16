@@ -159,6 +159,7 @@
 
   function option(panel, k, finished) {
     var range = yRange();
+    var narrow = charts[panel.id] && charts[panel.id].getWidth() < 480;
     // Sluttetikettene dyttes fra hverandre naar linjene ender naer hverandre.
     var l1 = panel.q1[k - 1], l5 = panel.q5[k - 1], dy1 = 0, dy5 = 0;
     if (l1 != null && l5 != null && Math.abs(l1 - l5) < 2.2) {
@@ -176,11 +177,15 @@
     }
     return {
       animation: false,
-      grid: { left: 44, right: 118, top: 60, bottom: 32 },
+      grid: { left: 44, right: narrow ? 100 : 118, top: 60, bottom: 32 },
       tooltip: { trigger: "axis", valueFormatter: function (v) { return v == null ? "–" : fmtLevel(v); },
                  axisPointer: { label: { formatter: function (p) { return fmtMonth(p.value); } } } },
       xAxis: { type: "category", data: dates, boundaryGap: false,
-               axisLabel: { interval: 0, formatter: function (v) { return v.slice(5, 7) === "01" ? v.slice(0, 4) : ""; } },
+               // Aarstall ved hver januar; paa smale figurer bare annethvert aar.
+               axisLabel: { hideOverlap: true, formatter: function (v) { return v.slice(0, 4); },
+                            interval: function (idx, v) {
+                              return v.slice(5, 7) === "01" && (narrow ? (+v.slice(0, 4)) % 2 === 1 : true);
+                            } },
                axisTick: { show: false }, axisLine: { lineStyle: { color: "#bdb9b0" } } },
       yAxis: { type: "value", min: range[0], max: range[1], splitLine: { lineStyle: { color: "#eee" } },
                axisLabel: { formatter: function (v) { return v; } } },

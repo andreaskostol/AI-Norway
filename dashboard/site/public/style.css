@@ -1096,7 +1096,7 @@ code {
 }
 .cta-link:hover { background: #0c3d68; }
 .cta-note { font-size: 0.85rem; color: var(--ink-soft); }
-.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.8rem; margin: 0.4rem 0 0.6rem; }
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 0.8rem; margin: 1rem 0 0.8rem; }
 .stat-tile { border: 0; border-radius: 8px; padding: 0.7rem 0.9rem 0.6rem; background: #f4f6f8; }
 .stat-label { font-size: 0.78rem; font-weight: 700; color: var(--ink-soft); text-transform: uppercase; letter-spacing: 0.05em; }
 .stat-who { font-size: 0.9rem; color: var(--ink-soft); margin-top: 0.1rem; }
@@ -1104,7 +1104,10 @@ code {
 .stat-value.pos { color: var(--pos); }
 .stat-value.neg { color: var(--neg); }
 .stat-unit { font-size: 0.8rem; color: var(--ink-soft); }
-.landing-figures { margin-top: 1.4rem; }
+.landing-figures { margin-top: 1.6rem; }
+.landing-figures h2 { font-size: 1.35rem; margin: 0 0 0.4rem; }
+.landing-text { margin-top: 1.8rem; }
+.landing .lede { max-width: none; font-size: 1.1rem; }
 .landing-figures h3, .landing-videos h3 { font-size: 1.2rem; margin: 0 0 0.3rem; }
 .landing-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)); gap: 1rem; margin-top: 0.6rem; }
 .landing-chart { border: 0; padding: 0.6rem 0 0.2rem; background: transparent; }
