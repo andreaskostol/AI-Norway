@@ -1,0 +1,1812 @@
+{
+  "schema_version": 1,
+  "film": "imas",
+  "facts": {
+    "month": "oktober 2026"
+  },
+  "scenes": [
+    {
+      "kind": "research_open",
+      "title": "Har KI endret arbeidsmarkedet?",
+      "text": "Alex Imas og Jacob Schaal har gått gjennom forskningen om KI og arbeidsmarkedet. Hovedbildet er blandet. Det finnes tegn til svakere rekruttering av unge i utsatte kontoryrker, men ingen tydelig, bred jobbkrise.",
+      "start": 0,
+      "duration": 12.16,
+      "audio": "/private/tmp/kiindeksen-video-build/imas-lyd-00.wav",
+      "sources": [
+        "https://aleximas.substack.com/p/has-ai-impacted-the-labor-market"
+      ],
+      "words": [
+        {
+          "word": "Alex",
+          "start": 0.0,
+          "end": 0.302
+        },
+        {
+          "word": "Imas",
+          "start": 0.383,
+          "end": 0.685
+        },
+        {
+          "word": "og",
+          "start": 0.743,
+          "end": 0.789
+        },
+        {
+          "word": "Jacob",
+          "start": 0.813,
+          "end": 1.115
+        },
+        {
+          "word": "Schaal",
+          "start": 1.184,
+          "end": 1.393
+        },
+        {
+          "word": "har",
+          "start": 1.44,
+          "end": 1.509
+        },
+        {
+          "word": "gått",
+          "start": 1.544,
+          "end": 1.73
+        },
+        {
+          "word": "gjennom",
+          "start": 1.753,
+          "end": 1.95
+        },
+        {
+          "word": "forskningen",
+          "start": 1.985,
+          "end": 2.392
+        },
+        {
+          "word": "om",
+          "start": 2.461,
+          "end": 2.543
+        },
+        {
+          "word": "KI",
+          "start": 2.624,
+          "end": 2.833
+        },
+        {
+          "word": "og",
+          "start": 2.902,
+          "end": 2.984
+        },
+        {
+          "word": "arbeidsmarkedet.",
+          "start": 3.007,
+          "end": 3.889
+        },
+        {
+          "word": "Hovedbildet",
+          "start": 4.54,
+          "end": 5.166
+        },
+        {
+          "word": "er",
+          "start": 5.201,
+          "end": 5.306
+        },
+        {
+          "word": "blandet.",
+          "start": 5.352,
+          "end": 5.886
+        },
+        {
+          "word": "Det",
+          "start": 6.304,
+          "end": 6.42
+        },
+        {
+          "word": "finnes",
+          "start": 6.444,
+          "end": 6.676
+        },
+        {
+          "word": "tegn",
+          "start": 6.734,
+          "end": 6.931
+        },
+        {
+          "word": "til",
+          "start": 6.989,
+          "end": 7.082
+        },
+        {
+          "word": "svakere",
+          "start": 7.105,
+          "end": 7.523
+        },
+        {
+          "word": "rekruttering",
+          "start": 7.57,
+          "end": 8.139
+        },
+        {
+          "word": "av",
+          "start": 8.208,
+          "end": 8.254
+        },
+        {
+          "word": "unge",
+          "start": 8.336,
+          "end": 8.556
+        },
+        {
+          "word": "i",
+          "start": 8.58,
+          "end": 8.603
+        },
+        {
+          "word": "utsatte",
+          "start": 8.672,
+          "end": 9.056
+        },
+        {
+          "word": "kontoryrker,",
+          "start": 9.102,
+          "end": 9.752
+        },
+        {
+          "word": "men",
+          "start": 9.775,
+          "end": 9.868
+        },
+        {
+          "word": "ingen",
+          "start": 9.938,
+          "end": 10.17
+        },
+        {
+          "word": "tydelig,",
+          "start": 10.217,
+          "end": 10.611
+        },
+        {
+          "word": "bred",
+          "start": 10.634,
+          "end": 10.832
+        },
+        {
+          "word": "jobbkrise.",
+          "start": 10.855,
+          "end": 11.842
+        }
+      ],
+      "display_text": "Alex Imas og Jacob Schaal har gått gjennom forskningen om KI og arbeidsmarkedet. Hovedbildet er blandet. Det finnes tegn til svakere rekruttering av unge i utsatte kontoryrker, men ingen tydelig, bred jobbkrise."
+    },
+    {
+      "kind": "flow",
+      "title": "Nyansettelser og ansatte er ulike mål",
+      "text": "Se for deg en bedrift som har ansatte, men som slutter å fylle ledige stillinger. I begynnelsen endrer antallet ansatte seg lite. Likevel møter jobbsøkere færre muligheter. Stillingsannonser og nyansettelser kan derfor varsle endringer tidligere enn antall ansatte samlet.",
+      "start": 12.16,
+      "duration": 15.2,
+      "audio": "/private/tmp/kiindeksen-video-build/imas-lyd-01.wav",
+      "sources": [
+        "https://aleximas.substack.com/p/has-ai-impacted-the-labor-market"
+      ],
+      "words": [
+        {
+          "word": "Se",
+          "start": 0.0,
+          "end": 0.221
+        },
+        {
+          "word": "for",
+          "start": 0.267,
+          "end": 0.36
+        },
+        {
+          "word": "deg",
+          "start": 0.383,
+          "end": 0.464
+        },
+        {
+          "word": "en",
+          "start": 0.488,
+          "end": 0.546
+        },
+        {
+          "word": "bedrift",
+          "start": 0.58,
+          "end": 0.952
+        },
+        {
+          "word": "som",
+          "start": 0.998,
+          "end": 1.091
+        },
+        {
+          "word": "har",
+          "start": 1.115,
+          "end": 1.196
+        },
+        {
+          "word": "ansatte,",
+          "start": 1.242,
+          "end": 1.916
+        },
+        {
+          "word": "men",
+          "start": 2.148,
+          "end": 2.229
+        },
+        {
+          "word": "som",
+          "start": 2.276,
+          "end": 2.38
+        },
+        {
+          "word": "slutter",
+          "start": 2.403,
+          "end": 2.752
+        },
+        {
+          "word": "å",
+          "start": 2.798,
+          "end": 2.821
+        },
+        {
+          "word": "fylle",
+          "start": 2.844,
+          "end": 3.065
+        },
+        {
+          "word": "ledige",
+          "start": 3.111,
+          "end": 3.425
+        },
+        {
+          "word": "stillinger.",
+          "start": 3.46,
+          "end": 4.04
+        },
+        {
+          "word": "I",
+          "start": 4.516,
+          "end": 4.574
+        },
+        {
+          "word": "begynnelsen",
+          "start": 4.644,
+          "end": 5.074
+        },
+        {
+          "word": "endrer",
+          "start": 5.143,
+          "end": 5.399
+        },
+        {
+          "word": "antallet",
+          "start": 5.457,
+          "end": 5.817
+        },
+        {
+          "word": "ansatte",
+          "start": 5.84,
+          "end": 6.211
+        },
+        {
+          "word": "seg",
+          "start": 6.246,
+          "end": 6.385
+        },
+        {
+          "word": "lite.",
+          "start": 6.42,
+          "end": 7.012
+        },
+        {
+          "word": "Likevel",
+          "start": 7.43,
+          "end": 7.802
+        },
+        {
+          "word": "møter",
+          "start": 7.86,
+          "end": 8.104
+        },
+        {
+          "word": "jobbsøkere",
+          "start": 8.127,
+          "end": 8.638
+        },
+        {
+          "word": "færre",
+          "start": 8.685,
+          "end": 8.929
+        },
+        {
+          "word": "muligheter.",
+          "start": 8.987,
+          "end": 9.567
+        },
+        {
+          "word": "Stillingsannonser",
+          "start": 9.869,
+          "end": 10.682
+        },
+        {
+          "word": "og",
+          "start": 10.705,
+          "end": 10.751
+        },
+        {
+          "word": "nyansettelser",
+          "start": 10.775,
+          "end": 11.552
+        },
+        {
+          "word": "kan",
+          "start": 11.599,
+          "end": 11.703
+        },
+        {
+          "word": "derfor",
+          "start": 11.738,
+          "end": 11.959
+        },
+        {
+          "word": "varsle",
+          "start": 11.994,
+          "end": 12.295
+        },
+        {
+          "word": "endringer",
+          "start": 12.33,
+          "end": 12.69
+        },
+        {
+          "word": "tidligere",
+          "start": 12.725,
+          "end": 13.189
+        },
+        {
+          "word": "enn",
+          "start": 13.236,
+          "end": 13.329
+        },
+        {
+          "word": "antall",
+          "start": 13.41,
+          "end": 13.712
+        },
+        {
+          "word": "ansatte",
+          "start": 13.758,
+          "end": 14.107
+        },
+        {
+          "word": "samlet.",
+          "start": 14.153,
+          "end": 14.908
+        }
+      ],
+      "display_text": "Se for deg en bedrift som har ansatte, men som slutter å fylle ledige stillinger. I begynnelsen endrer antallet ansatte seg lite. Likevel møter jobbsøkere færre muligheter. Stillingsannonser og nyansettelser kan derfor varsle endringer tidligere enn antall ansatte samlet."
+    },
+    {
+      "kind": "us",
+      "title": "Et tydelig amerikansk mønster",
+      "text": "Stanford-forskerne bruker amerikanske lønnsdata. I deres oppdatering til juni 2026 ligger sysselsettingen blant personer fra tjueto til tjuefem år i yrker som er utsatt for KI nitten prosent under banen vi sammenligner med. Den banen viser hvordan gruppen ville utviklet seg om den hadde fulgt mindre eksponerte jevnaldrende. Dette betyr ikke at nitten prosent har fått sparken. Forskjellen oppstår særlig gjennom færre nyansettelser. Forskerne beskriver mønsteret som et tidlig varselsignal, ikke som et sikkert mål på virkningen av KI. Noen forskjeller startet tidligere, og utdanningskontroller demper utslaget.",
+      "start": 27.36,
+      "duration": 35.84,
+      "audio": "/private/tmp/kiindeksen-video-build/imas-lyd-02.wav",
+      "sources": [
+        "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/"
+      ],
+      "words": [
+        {
+          "word": "Stanford-forskerne",
+          "start": 0.0,
+          "end": 0.917
+        },
+        {
+          "word": "bruker",
+          "start": 0.952,
+          "end": 1.219
+        },
+        {
+          "word": "amerikanske",
+          "start": 1.254,
+          "end": 1.823
+        },
+        {
+          "word": "lønnsdata.",
+          "start": 1.881,
+          "end": 2.554
+        },
+        {
+          "word": "I",
+          "start": 2.856,
+          "end": 2.914
+        },
+        {
+          "word": "deres",
+          "start": 2.972,
+          "end": 3.17
+        },
+        {
+          "word": "oppdatering",
+          "start": 3.228,
+          "end": 3.75
+        },
+        {
+          "word": "til",
+          "start": 3.796,
+          "end": 3.924
+        },
+        {
+          "word": "juni",
+          "start": 3.959,
+          "end": 4.307
+        },
+        {
+          "word": "2026",
+          "start": 4.331,
+          "end": 5.097
+        },
+        {
+          "word": "ligger",
+          "start": 5.166,
+          "end": 5.399
+        },
+        {
+          "word": "sysselsettingen",
+          "start": 5.445,
+          "end": 6.142
+        },
+        {
+          "word": "blant",
+          "start": 6.177,
+          "end": 6.339
+        },
+        {
+          "word": "personer",
+          "start": 6.374,
+          "end": 6.792
+        },
+        {
+          "word": "fra",
+          "start": 6.827,
+          "end": 6.943
+        },
+        {
+          "word": "tjueto",
+          "start": 6.966,
+          "end": 7.488
+        },
+        {
+          "word": "til",
+          "start": 7.721,
+          "end": 7.906
+        },
+        {
+          "word": "tjuefem",
+          "start": 7.93,
+          "end": 8.359
+        },
+        {
+          "word": "år",
+          "start": 8.44,
+          "end": 8.522
+        },
+        {
+          "word": "i",
+          "start": 8.568,
+          "end": 8.603
+        },
+        {
+          "word": "yrker",
+          "start": 8.684,
+          "end": 9.079
+        },
+        {
+          "word": "som",
+          "start": 9.148,
+          "end": 9.265
+        },
+        {
+          "word": "er",
+          "start": 9.311,
+          "end": 9.357
+        },
+        {
+          "word": "utsatt",
+          "start": 9.416,
+          "end": 9.752
+        },
+        {
+          "word": "for",
+          "start": 9.799,
+          "end": 9.926
+        },
+        {
+          "word": "KI",
+          "start": 9.996,
+          "end": 10.193
+        },
+        {
+          "word": "nitten",
+          "start": 10.251,
+          "end": 10.484
+        },
+        {
+          "word": "prosent",
+          "start": 10.53,
+          "end": 10.983
+        },
+        {
+          "word": "under",
+          "start": 11.064,
+          "end": 11.238
+        },
+        {
+          "word": "banen",
+          "start": 11.262,
+          "end": 11.494
+        },
+        {
+          "word": "vi",
+          "start": 11.517,
+          "end": 11.575
+        },
+        {
+          "word": "sammenligner",
+          "start": 11.633,
+          "end": 12.109
+        },
+        {
+          "word": "med.",
+          "start": 12.144,
+          "end": 12.527
+        },
+        {
+          "word": "Den",
+          "start": 13.421,
+          "end": 13.618
+        },
+        {
+          "word": "banen",
+          "start": 13.665,
+          "end": 13.897
+        },
+        {
+          "word": "viser",
+          "start": 13.932,
+          "end": 14.176
+        },
+        {
+          "word": "hvordan",
+          "start": 14.199,
+          "end": 14.408
+        },
+        {
+          "word": "gruppen",
+          "start": 14.454,
+          "end": 14.779
+        },
+        {
+          "word": "ville",
+          "start": 14.803,
+          "end": 14.953
+        },
+        {
+          "word": "utviklet",
+          "start": 15.012,
+          "end": 15.499
+        },
+        {
+          "word": "seg",
+          "start": 15.534,
+          "end": 15.685
+        },
+        {
+          "word": "om",
+          "start": 15.755,
+          "end": 15.836
+        },
+        {
+          "word": "den",
+          "start": 15.906,
+          "end": 15.998
+        },
+        {
+          "word": "hadde",
+          "start": 16.033,
+          "end": 16.196
+        },
+        {
+          "word": "fulgt",
+          "start": 16.231,
+          "end": 16.451
+        },
+        {
+          "word": "mindre",
+          "start": 16.498,
+          "end": 16.823
+        },
+        {
+          "word": "eksponerte",
+          "start": 16.858,
+          "end": 17.38
+        },
+        {
+          "word": "jevnaldrende.",
+          "start": 17.415,
+          "end": 18.262
+        },
+        {
+          "word": "Dette",
+          "start": 19.156,
+          "end": 19.4
+        },
+        {
+          "word": "betyr",
+          "start": 19.447,
+          "end": 19.737
+        },
+        {
+          "word": "ikke",
+          "start": 19.76,
+          "end": 19.865
+        },
+        {
+          "word": "at",
+          "start": 19.888,
+          "end": 19.957
+        },
+        {
+          "word": "nitten",
+          "start": 20.004,
+          "end": 20.236
+        },
+        {
+          "word": "prosent",
+          "start": 20.282,
+          "end": 20.677
+        },
+        {
+          "word": "har",
+          "start": 20.712,
+          "end": 20.782
+        },
+        {
+          "word": "fått",
+          "start": 20.817,
+          "end": 20.956
+        },
+        {
+          "word": "sparken.",
+          "start": 20.979,
+          "end": 21.687
+        },
+        {
+          "word": "Forskjellen",
+          "start": 22.105,
+          "end": 22.546
+        },
+        {
+          "word": "oppstår",
+          "start": 22.604,
+          "end": 22.906
+        },
+        {
+          "word": "særlig",
+          "start": 22.953,
+          "end": 23.254
+        },
+        {
+          "word": "gjennom",
+          "start": 23.278,
+          "end": 23.533
+        },
+        {
+          "word": "færre",
+          "start": 23.58,
+          "end": 23.8
+        },
+        {
+          "word": "nyansettelser.",
+          "start": 23.847,
+          "end": 24.717
+        },
+        {
+          "word": "Forskerne",
+          "start": 25.077,
+          "end": 25.507
+        },
+        {
+          "word": "beskriver",
+          "start": 25.542,
+          "end": 25.948
+        },
+        {
+          "word": "mønsteret",
+          "start": 25.983,
+          "end": 26.459
+        },
+        {
+          "word": "som",
+          "start": 26.505,
+          "end": 26.645
+        },
+        {
+          "word": "et",
+          "start": 26.703,
+          "end": 26.749
+        },
+        {
+          "word": "tidlig",
+          "start": 26.772,
+          "end": 27.097
+        },
+        {
+          "word": "varselsignal,",
+          "start": 27.121,
+          "end": 28.038
+        },
+        {
+          "word": "ikke",
+          "start": 28.34,
+          "end": 28.537
+        },
+        {
+          "word": "som",
+          "start": 28.572,
+          "end": 28.676
+        },
+        {
+          "word": "et",
+          "start": 28.734,
+          "end": 28.781
+        },
+        {
+          "word": "sikkert",
+          "start": 28.827,
+          "end": 29.141
+        },
+        {
+          "word": "mål",
+          "start": 29.199,
+          "end": 29.384
+        },
+        {
+          "word": "på",
+          "start": 29.454,
+          "end": 29.524
+        },
+        {
+          "word": "virkningen",
+          "start": 29.582,
+          "end": 30.058
+        },
+        {
+          "word": "av",
+          "start": 30.116,
+          "end": 30.162
+        },
+        {
+          "word": "KI.",
+          "start": 30.197,
+          "end": 30.615
+        },
+        {
+          "word": "Noen",
+          "start": 31.265,
+          "end": 31.532
+        },
+        {
+          "word": "forskjeller",
+          "start": 31.602,
+          "end": 32.008
+        },
+        {
+          "word": "startet",
+          "start": 32.032,
+          "end": 32.415
+        },
+        {
+          "word": "tidligere,",
+          "start": 32.438,
+          "end": 33.076
+        },
+        {
+          "word": "og",
+          "start": 33.239,
+          "end": 33.343
+        },
+        {
+          "word": "utdanningskontroller",
+          "start": 33.39,
+          "end": 34.307
+        },
+        {
+          "word": "demper",
+          "start": 34.342,
+          "end": 34.667
+        },
+        {
+          "word": "utslaget.",
+          "start": 34.713,
+          "end": 35.526
+        }
+      ],
+      "display_text": "Stanford-forskerne bruker amerikanske lønnsdata. I deres oppdatering til juni 2026 ligger sysselsettingen blant personer fra tjueto til tjuefem år i yrker som er utsatt for KI nitten prosent under banen vi sammenligner med. Den banen viser hvordan gruppen ville utviklet seg om den hadde fulgt mindre eksponerte jevnaldrende. Dette betyr ikke at nitten prosent har fått sparken. Forskjellen oppstår særlig gjennom færre nyansettelser. Forskerne beskriver mønsteret som et tidlig varselsignal, ikke som et sikkert mål på virkningen av KI. Noen forskjeller startet tidligere, og utdanningskontroller demper utslaget."
+    },
+    {
+      "kind": "nordic",
+      "title": "Resultatene varierer mellom land",
+      "text": "Gjennomgangen finner ikke det samme brede mønsteret i nordiske data for hele befolkningen. Norske og finske studier gir svakere støtte til at unge i yrker som er utsatt for KI taper generelt. Et fall blant unge utviklere kan eksistere samtidig som forskjellen mellom alle høyt og lavt eksponerte yrker er liten.",
+      "start": 63.2,
+      "duration": 18.24,
+      "audio": "/private/tmp/kiindeksen-video-build/imas-lyd-03.wav",
+      "sources": [
+        "https://aleximas.substack.com/p/has-ai-impacted-the-labor-market"
+      ],
+      "words": [
+        {
+          "word": "Gjennomgangen",
+          "start": 0.0,
+          "end": 0.615
+        },
+        {
+          "word": "finner",
+          "start": 0.662,
+          "end": 0.94
+        },
+        {
+          "word": "ikke",
+          "start": 0.964,
+          "end": 1.091
+        },
+        {
+          "word": "det",
+          "start": 1.126,
+          "end": 1.207
+        },
+        {
+          "word": "samme",
+          "start": 1.242,
+          "end": 1.486
+        },
+        {
+          "word": "brede",
+          "start": 1.533,
+          "end": 1.8
+        },
+        {
+          "word": "mønsteret",
+          "start": 1.858,
+          "end": 2.299
+        },
+        {
+          "word": "i",
+          "start": 2.461,
+          "end": 2.531
+        },
+        {
+          "word": "nordiske",
+          "start": 2.589,
+          "end": 3.053
+        },
+        {
+          "word": "data",
+          "start": 3.1,
+          "end": 3.355
+        },
+        {
+          "word": "for",
+          "start": 3.402,
+          "end": 3.483
+        },
+        {
+          "word": "hele",
+          "start": 3.518,
+          "end": 3.68
+        },
+        {
+          "word": "befolkningen.",
+          "start": 3.727,
+          "end": 4.423
+        },
+        {
+          "word": "Norske",
+          "start": 4.992,
+          "end": 5.387
+        },
+        {
+          "word": "og",
+          "start": 5.41,
+          "end": 5.457
+        },
+        {
+          "word": "finske",
+          "start": 5.48,
+          "end": 5.875
+        },
+        {
+          "word": "studier",
+          "start": 5.909,
+          "end": 6.246
+        },
+        {
+          "word": "gir",
+          "start": 6.269,
+          "end": 6.374
+        },
+        {
+          "word": "svakere",
+          "start": 6.409,
+          "end": 6.873
+        },
+        {
+          "word": "støtte",
+          "start": 6.92,
+          "end": 7.187
+        },
+        {
+          "word": "til",
+          "start": 7.245,
+          "end": 7.314
+        },
+        {
+          "word": "at",
+          "start": 7.349,
+          "end": 7.43
+        },
+        {
+          "word": "unge",
+          "start": 7.512,
+          "end": 7.732
+        },
+        {
+          "word": "i",
+          "start": 7.79,
+          "end": 7.813
+        },
+        {
+          "word": "yrker",
+          "start": 7.836,
+          "end": 8.278
+        },
+        {
+          "word": "som",
+          "start": 8.579,
+          "end": 8.719
+        },
+        {
+          "word": "er",
+          "start": 8.765,
+          "end": 8.823
+        },
+        {
+          "word": "utsatt",
+          "start": 8.881,
+          "end": 9.195
+        },
+        {
+          "word": "for",
+          "start": 9.23,
+          "end": 9.311
+        },
+        {
+          "word": "KI",
+          "start": 9.346,
+          "end": 9.52
+        },
+        {
+          "word": "taper",
+          "start": 9.578,
+          "end": 9.88
+        },
+        {
+          "word": "generelt.",
+          "start": 9.903,
+          "end": 10.646
+        },
+        {
+          "word": "Et",
+          "start": 11.215,
+          "end": 11.343
+        },
+        {
+          "word": "fall",
+          "start": 11.401,
+          "end": 11.575
+        },
+        {
+          "word": "blant",
+          "start": 11.633,
+          "end": 11.807
+        },
+        {
+          "word": "unge",
+          "start": 11.888,
+          "end": 12.051
+        },
+        {
+          "word": "utviklere",
+          "start": 12.097,
+          "end": 12.55
+        },
+        {
+          "word": "kan",
+          "start": 12.585,
+          "end": 12.701
+        },
+        {
+          "word": "eksistere",
+          "start": 12.759,
+          "end": 13.258
+        },
+        {
+          "word": "samtidig",
+          "start": 13.305,
+          "end": 13.711
+        },
+        {
+          "word": "som",
+          "start": 13.734,
+          "end": 13.839
+        },
+        {
+          "word": "forskjellen",
+          "start": 13.885,
+          "end": 14.28
+        },
+        {
+          "word": "mellom",
+          "start": 14.303,
+          "end": 14.501
+        },
+        {
+          "word": "alle",
+          "start": 14.559,
+          "end": 14.756
+        },
+        {
+          "word": "høyt",
+          "start": 14.802,
+          "end": 15.0
+        },
+        {
+          "word": "og",
+          "start": 15.081,
+          "end": 15.128
+        },
+        {
+          "word": "lavt",
+          "start": 15.151,
+          "end": 15.383
+        },
+        {
+          "word": "eksponerte",
+          "start": 15.418,
+          "end": 15.929
+        },
+        {
+          "word": "yrker",
+          "start": 15.963,
+          "end": 16.23
+        },
+        {
+          "word": "er",
+          "start": 16.289,
+          "end": 16.706
+        },
+        {
+          "word": "liten.",
+          "start": 17.124,
+          "end": 17.926
+        }
+      ],
+      "display_text": "Gjennomgangen finner ikke det samme brede mønsteret i nordiske data for hele befolkningen. Norske og finske studier gir svakere støtte til at unge i yrker som er utsatt for KI taper generelt. Et fall blant unge utviklere kan eksistere samtidig som forskjellen mellom alle høyt og lavt eksponerte yrker er liten."
+    },
+    {
+      "kind": "causes",
+      "title": "Flere mulige forklaringer",
+      "text": "Årsaken er omstridt. Hjemmekontor, renteøkninger og korreksjon etter pandemien kan påvirke de samme yrkene som KI. Forskningen forsøker å skille forklaringene, men resultatene avhenger av data og metode. Eksponering beskriver hva teknologien kan gjøre. Det er ikke et mål på hvor mye den faktisk brukes.",
+      "start": 81.44,
+      "duration": 18.88,
+      "audio": "/private/tmp/kiindeksen-video-build/imas-lyd-04.wav",
+      "sources": [
+        "https://aleximas.substack.com/p/has-ai-impacted-the-labor-market"
+      ],
+      "words": [
+        {
+          "word": "Årsaken",
+          "start": 0.0,
+          "end": 0.522
+        },
+        {
+          "word": "er",
+          "start": 0.557,
+          "end": 0.627
+        },
+        {
+          "word": "omstridt.",
+          "start": 0.697,
+          "end": 1.347
+        },
+        {
+          "word": "Hjemmekontor,",
+          "start": 1.823,
+          "end": 2.647
+        },
+        {
+          "word": "renteøkninger",
+          "start": 2.682,
+          "end": 3.529
+        },
+        {
+          "word": "og",
+          "start": 3.611,
+          "end": 3.715
+        },
+        {
+          "word": "korreksjon",
+          "start": 3.75,
+          "end": 4.226
+        },
+        {
+          "word": "etter",
+          "start": 4.284,
+          "end": 4.458
+        },
+        {
+          "word": "pandemien",
+          "start": 4.493,
+          "end": 5.027
+        },
+        {
+          "word": "kan",
+          "start": 5.329,
+          "end": 5.492
+        },
+        {
+          "word": "påvirke",
+          "start": 5.55,
+          "end": 5.968
+        },
+        {
+          "word": "de",
+          "start": 6.014,
+          "end": 6.072
+        },
+        {
+          "word": "samme",
+          "start": 6.13,
+          "end": 6.351
+        },
+        {
+          "word": "yrkene",
+          "start": 6.374,
+          "end": 6.687
+        },
+        {
+          "word": "som",
+          "start": 6.722,
+          "end": 6.838
+        },
+        {
+          "word": "KI.",
+          "start": 6.896,
+          "end": 7.361
+        },
+        {
+          "word": "Forskningen",
+          "start": 8.011,
+          "end": 8.475
+        },
+        {
+          "word": "forsøker",
+          "start": 8.522,
+          "end": 8.905
+        },
+        {
+          "word": "å",
+          "start": 8.951,
+          "end": 8.975
+        },
+        {
+          "word": "skille",
+          "start": 9.009,
+          "end": 9.242
+        },
+        {
+          "word": "forklaringene,",
+          "start": 9.288,
+          "end": 10.09
+        },
+        {
+          "word": "men",
+          "start": 10.252,
+          "end": 10.357
+        },
+        {
+          "word": "resultatene",
+          "start": 10.415,
+          "end": 11.076
+        },
+        {
+          "word": "avhenger",
+          "start": 11.134,
+          "end": 11.564
+        },
+        {
+          "word": "av",
+          "start": 11.622,
+          "end": 11.668
+        },
+        {
+          "word": "data",
+          "start": 11.703,
+          "end": 12.017
+        },
+        {
+          "word": "og",
+          "start": 12.063,
+          "end": 12.11
+        },
+        {
+          "word": "metode.",
+          "start": 12.133,
+          "end": 12.725
+        },
+        {
+          "word": "Eksponering",
+          "start": 13.294,
+          "end": 13.944
+        },
+        {
+          "word": "beskriver",
+          "start": 13.979,
+          "end": 14.408
+        },
+        {
+          "word": "hva",
+          "start": 14.432,
+          "end": 14.525
+        },
+        {
+          "word": "teknologien",
+          "start": 14.571,
+          "end": 15.14
+        },
+        {
+          "word": "kan",
+          "start": 15.198,
+          "end": 15.326
+        },
+        {
+          "word": "gjøre.",
+          "start": 15.349,
+          "end": 15.744
+        },
+        {
+          "word": "Det",
+          "start": 16.103,
+          "end": 16.208
+        },
+        {
+          "word": "er",
+          "start": 16.231,
+          "end": 16.289
+        },
+        {
+          "word": "ikke",
+          "start": 16.312,
+          "end": 16.44
+        },
+        {
+          "word": "et",
+          "start": 16.463,
+          "end": 16.521
+        },
+        {
+          "word": "mål",
+          "start": 16.58,
+          "end": 16.788
+        },
+        {
+          "word": "på",
+          "start": 16.847,
+          "end": 16.928
+        },
+        {
+          "word": "hvor",
+          "start": 16.951,
+          "end": 17.044
+        },
+        {
+          "word": "mye",
+          "start": 17.079,
+          "end": 17.206
+        },
+        {
+          "word": "den",
+          "start": 17.241,
+          "end": 17.323
+        },
+        {
+          "word": "faktisk",
+          "start": 17.357,
+          "end": 17.717
+        },
+        {
+          "word": "brukes.",
+          "start": 17.74,
+          "end": 18.576
+        }
+      ],
+      "display_text": "Årsaken er omstridt. Hjemmekontor, renteøkninger og korreksjon etter pandemien kan påvirke de samme yrkene som KI. Forskningen forsøker å skille forklaringene, men resultatene avhenger av data og metode. Eksponering beskriver hva teknologien kan gjøre. Det er ikke et mål på hvor mye den faktisk brukes."
+    },
+    {
+      "kind": "aggregate",
+      "title": "Hva viser arbeidsmarkedet samlet?",
+      "text": "Yales Budget Lab følger også utviklingen. I oppdateringen fra fjortende oktober 2026 finner de ikke et tydelig KI-mønster i sammensetningen av yrker. Bruksmålene deres henger heller ikke sammen med endringer i hvor mange som har jobb eller er ledige. Dette er funn om dagens data, ikke et løfte om framtiden. En bedrift kan spare tid på en oppgave uten å redusere bemanningen, for eksempel hvis den bruker tiden til flere leveranser. Slike muligheter gjør det nødvendig å undersøke hva som faktisk skjer med jobber og arbeidstid.",
+      "start": 100.32,
+      "duration": 28.04,
+      "audio": "/private/tmp/kiindeksen-video-build/imas-lyd-05.wav",
+      "sources": [
+        "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market"
+      ],
+      "words": [
+        {
+          "word": "Yales",
+          "start": 0.0,
+          "end": 0.348
+        },
+        {
+          "word": "Budget",
+          "start": 0.43,
+          "end": 0.743
+        },
+        {
+          "word": "Lab",
+          "start": 0.789,
+          "end": 0.952
+        },
+        {
+          "word": "følger",
+          "start": 1.01,
+          "end": 1.289
+        },
+        {
+          "word": "også",
+          "start": 1.335,
+          "end": 1.509
+        },
+        {
+          "word": "utviklingen.",
+          "start": 1.556,
+          "end": 2.206
+        },
+        {
+          "word": "I",
+          "start": 2.566,
+          "end": 2.612
+        },
+        {
+          "word": "oppdateringen",
+          "start": 2.682,
+          "end": 3.297
+        },
+        {
+          "word": "fra",
+          "start": 3.332,
+          "end": 3.437
+        },
+        {
+          "word": "fjortende",
+          "start": 3.46,
+          "end": 3.796
+        },
+        {
+          "word": "oktober",
+          "start": 3.82,
+          "end": 4.191
+        },
+        {
+          "word": "2026",
+          "start": 4.238,
+          "end": 4.899
+        },
+        {
+          "word": "finner",
+          "start": 5.004,
+          "end": 5.294
+        },
+        {
+          "word": "de",
+          "start": 5.317,
+          "end": 5.364
+        },
+        {
+          "word": "ikke",
+          "start": 5.399,
+          "end": 5.573
+        },
+        {
+          "word": "et",
+          "start": 5.596,
+          "end": 5.654
+        },
+        {
+          "word": "tydelig",
+          "start": 5.677,
+          "end": 6.002
+        },
+        {
+          "word": "KI-mønster",
+          "start": 6.037,
+          "end": 6.653
+        },
+        {
+          "word": "i",
+          "start": 6.722,
+          "end": 6.769
+        },
+        {
+          "word": "sammensetningen",
+          "start": 6.827,
+          "end": 7.43
+        },
+        {
+          "word": "av",
+          "start": 7.477,
+          "end": 7.535
+        },
+        {
+          "word": "yrker.",
+          "start": 7.581,
+          "end": 7.999
+        },
+        {
+          "word": "Bruksmålene",
+          "start": 8.359,
+          "end": 8.951
+        },
+        {
+          "word": "deres",
+          "start": 8.986,
+          "end": 9.241
+        },
+        {
+          "word": "henger",
+          "start": 9.288,
+          "end": 9.474
+        },
+        {
+          "word": "heller",
+          "start": 9.509,
+          "end": 9.718
+        },
+        {
+          "word": "ikke",
+          "start": 9.764,
+          "end": 9.892
+        },
+        {
+          "word": "sammen",
+          "start": 9.938,
+          "end": 10.17
+        },
+        {
+          "word": "med",
+          "start": 10.205,
+          "end": 10.298
+        },
+        {
+          "word": "endringer",
+          "start": 10.333,
+          "end": 10.728
+        },
+        {
+          "word": "i",
+          "start": 10.762,
+          "end": 10.786
+        },
+        {
+          "word": "hvor",
+          "start": 10.809,
+          "end": 10.902
+        },
+        {
+          "word": "mange",
+          "start": 10.937,
+          "end": 11.146
+        },
+        {
+          "word": "som",
+          "start": 11.192,
+          "end": 11.308
+        },
+        {
+          "word": "har",
+          "start": 11.331,
+          "end": 11.401
+        },
+        {
+          "word": "jobb",
+          "start": 11.447,
+          "end": 11.703
+        },
+        {
+          "word": "eller",
+          "start": 11.784,
+          "end": 11.993
+        },
+        {
+          "word": "er",
+          "start": 12.028,
+          "end": 12.074
+        },
+        {
+          "word": "ledige.",
+          "start": 12.109,
+          "end": 12.632
+        },
+        {
+          "word": "Dette",
+          "start": 13.282,
+          "end": 13.526
+        },
+        {
+          "word": "er",
+          "start": 13.549,
+          "end": 13.607
+        },
+        {
+          "word": "funn",
+          "start": 13.665,
+          "end": 13.874
+        },
+        {
+          "word": "om",
+          "start": 13.944,
+          "end": 14.002
+        },
+        {
+          "word": "dagens",
+          "start": 14.06,
+          "end": 14.408
+        },
+        {
+          "word": "data,",
+          "start": 14.443,
+          "end": 14.791
+        },
+        {
+          "word": "ikke",
+          "start": 14.826,
+          "end": 15.012
+        },
+        {
+          "word": "et",
+          "start": 15.035,
+          "end": 15.093
+        },
+        {
+          "word": "løfte",
+          "start": 15.151,
+          "end": 15.43
+        },
+        {
+          "word": "om",
+          "start": 15.453,
+          "end": 15.499
+        },
+        {
+          "word": "framtiden.",
+          "start": 15.546,
+          "end": 16.196
+        },
+        {
+          "word": "En",
+          "start": 16.672,
+          "end": 16.788
+        },
+        {
+          "word": "bedrift",
+          "start": 16.834,
+          "end": 17.183
+        },
+        {
+          "word": "kan",
+          "start": 17.218,
+          "end": 17.322
+        },
+        {
+          "word": "spare",
+          "start": 17.345,
+          "end": 17.624
+        },
+        {
+          "word": "tid",
+          "start": 17.67,
+          "end": 17.833
+        },
+        {
+          "word": "på",
+          "start": 17.879,
+          "end": 17.949
+        },
+        {
+          "word": "en",
+          "start": 17.972,
+          "end": 18.019
+        },
+        {
+          "word": "oppgave",
+          "start": 18.077,
+          "end": 18.471
+        },
+        {
+          "word": "uten",
+          "start": 18.529,
+          "end": 18.773
+        },
+        {
+          "word": "å",
+          "start": 18.796,
+          "end": 18.82
+        },
+        {
+          "word": "redusere",
+          "start": 18.855,
+          "end": 19.331
+        },
+        {
+          "word": "bemanningen,",
+          "start": 19.377,
+          "end": 20.062
+        },
+        {
+          "word": "for",
+          "start": 20.225,
+          "end": 20.341
+        },
+        {
+          "word": "eksempel",
+          "start": 20.375,
+          "end": 20.735
+        },
+        {
+          "word": "hvis",
+          "start": 20.758,
+          "end": 20.898
+        },
+        {
+          "word": "den",
+          "start": 20.921,
+          "end": 20.991
+        },
+        {
+          "word": "bruker",
+          "start": 21.025,
+          "end": 21.327
+        },
+        {
+          "word": "tiden",
+          "start": 21.351,
+          "end": 21.583
+        },
+        {
+          "word": "til",
+          "start": 21.618,
+          "end": 21.699
+        },
+        {
+          "word": "flere",
+          "start": 21.722,
+          "end": 21.966
+        },
+        {
+          "word": "leveranser.",
+          "start": 22.001,
+          "end": 22.639
+        },
+        {
+          "word": "Slike",
+          "start": 23.115,
+          "end": 23.464
+        },
+        {
+          "word": "muligheter",
+          "start": 23.51,
+          "end": 23.951
+        },
+        {
+          "word": "gjør",
+          "start": 23.974,
+          "end": 24.114
+        },
+        {
+          "word": "det",
+          "start": 24.137,
+          "end": 24.207
+        },
+        {
+          "word": "nødvendig",
+          "start": 24.23,
+          "end": 24.694
+        },
+        {
+          "word": "å",
+          "start": 24.752,
+          "end": 24.787
+        },
+        {
+          "word": "undersøke",
+          "start": 24.834,
+          "end": 25.298
+        },
+        {
+          "word": "hva",
+          "start": 25.321,
+          "end": 25.426
+        },
+        {
+          "word": "som",
+          "start": 25.472,
+          "end": 25.577
+        },
+        {
+          "word": "faktisk",
+          "start": 25.623,
+          "end": 25.983
+        },
+        {
+          "word": "skjer",
+          "start": 26.029,
+          "end": 26.204
+        },
+        {
+          "word": "med",
+          "start": 26.262,
+          "end": 26.366
+        },
+        {
+          "word": "jobber",
+          "start": 26.389,
+          "end": 26.691
+        },
+        {
+          "word": "og",
+          "start": 26.749,
+          "end": 26.807
+        },
+        {
+          "word": "arbeidstid.",
+          "start": 26.83,
+          "end": 27.724
+        }
+      ],
+      "display_text": "Yales Budget Lab følger også utviklingen. I oppdateringen fra fjortende oktober 2026 finner de ikke et tydelig KI-mønster i sammensetningen av yrker. Bruksmålene deres henger heller ikke sammen med endringer i hvor mange som har jobb eller er ledige. Dette er funn om dagens data, ikke et løfte om framtiden. En bedrift kan spare tid på en oppgave uten å redusere bemanningen, for eksempel hvis den bruker tiden til flere leveranser. Slike muligheter gjør det nødvendig å undersøke hva som faktisk skjer med jobber og arbeidstid."
+    }
+  ],
+  "duration": 128.35999999999999,
+  "timing": "aligned",
+  "review": {
+    "status": "pending"
+  },
+  "sources": {
+    "imas": "https://aleximas.substack.com/p/has-ai-impacted-the-labor-market",
+    "stanford": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+    "yale": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+    "anthropic": "https://www.anthropic.com/institute/econ-scenarios",
+    "model": "https://www-cdn.anthropic.com/files/4zrzovbb/website/cf58f84d46a4a76bf5a5b039ac695fba6b80041c.pdf"
+  },
+  "source_checked": "2026-10-16",
+  "voice": {
+    "name": "Kristine",
+    "id": "MULNGIATG7qUsJ0Sjuhy",
+    "speed": 1.07,
+    "stability": 0.35
+  }
+}

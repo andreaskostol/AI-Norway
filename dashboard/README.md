@@ -176,3 +176,116 @@ endres ikke; en ny måned blir en ny mappe.
 
 Spør gjerne hvis noe er uklart — Andreas / Claude kan hjelpe med
 `app.js`-logikken, som er den eneste virkelig tekniske biten.
+
+## Automatiserte filmer (15. oktober 2026)
+
+Videokoden ligger i denne mappen. Den bruker penn-og-tusj-motoren fra Suveren Intelligens,
+med egne scener og rullende tekst. `video_ink.js` er en uendret kopi av tegnemotoren.
+Norske filmer bruker nå Andreas sin stemmeklone fra ElevenLabs.
+`video_voice.json` er gjeldende kilde for stemme, dialekt og uttale. Kristine finnes bare i eldre prøveversjoner.
+
+### Folder context
+
+Dette er en del av AI-Norway og kiindeksen.no, ikke Suveren-nettstedet.
+Andreas har valgt eksisterende AI-Norway i Dropbox for filer, og dette GitHub-repoet for koden.
+Videokoden ligger i eksisterende `dashboard/`. Ferdige lokale gjennomgangsfiler ligger i prosjektroten.
+Midlertidige bilder lages i systemets midlertidige mappe og fjernes etter rendering.
+Ingen ny prosjektmappe ble opprettet. Ingen film er publisert.
+
+### Kjør etter en dataoppdatering
+
+Bygg først nettstedets data med den vanlige releaserutinen. Resultatfilmen leser
+`site/public/data/dashboard.json`, ikke presentasjonens gamle tall.
+Den beregner hovedindeksen som forholdet mellom vekstfaktorene for Q5 og Q1, minus én.
+Referansen er gjennomsnittet august–oktober 2022, sammenlignet med de siste tre månedene.
+Hovedtallet er prosent, ikke forskjellen mellom to prosentvise vekstrater i prosentpoeng.
+Yrkeseksemplene viser derimot per-innbygger-serier med november 2022 lik 100.
+
+Krav: Python 3, Node.js, ffmpeg, ffprobe og Playwright med Chromium.
+Fra dashboard-mappen installeres den fastsatte nettleseravhengigheten med `npm install`
+og Chromium med `npx playwright install chromium`. En eksisterende Chrome kan brukes
+med `CHROME_CHANNEL=chrome`. `PLAYWRIGHT_MODULE` kan peke på en eksisterende installasjon.
+Python-koden bruker standardbiblioteket.
+
+Kjør fra repoets rot. OUTPUT må være en eksisterende mappe:
+
+```sh
+python3 dashboard/build_results_video.py --out OUTPUT
+python3 dashboard/build_results_video.py --out OUTPUT --synthesize --render
+python3 dashboard/build_research_video.py imas --out OUTPUT --synthesize --render
+python3 dashboard/build_research_video.py anthropic --out OUTPUT --synthesize --render
+KI_VIDEO_DATA=dashboard/site/public/data/dashboard.json python3 dashboard/test_results_video.py
+```
+
+Uten `--synthesize` skjer ingen overføring til stemmetjenesten. `--synthesize` sender
+manus til ElevenLabs og bruker kontoen som er konfigurert med `ELEVENLABS_API_KEY`
+eller lokal nøkkelfil `~/.config/elevenlabs/key`. Nøkler lagres aldri i repoet.
+Uendrede lydopptak gjenbrukes etter kontroll av tekst og stemmeinnstillinger.
+Ord følger tidsstemplene fra lydtjenesten. Et annet transkript stopper byggingen.
+Allerede lagrede lydfiler kan brukes med `--audio OUTPUT/kiindeksen-resultatfilm-lyd`.
+
+Byggingen stopper ved manglende tall, ulike datamåneder, endret referanse eller
+usikkerhetsmål fra en annen måned. Konklusjonen velges fra det gjeldende intervallet,
+slik at et nytt resultat ikke arver en gammel påstand om null eller nedgang.
+Researchfilmene er redaksjonelle manus. De oppdateres ikke automatisk ved nye norske tall.
+Kildene og datoen for kildekontroll ligger i manusmodulen og hvert filmmanifest.
+
+MP4, manus, HTML, manifest og kontrollrapport får samme filstamme.
+`kiindeksen-resultatfilm` er resultatfilmen, `kiindeksen-imas-film` er forskningsoversikten,
+og `kiindeksen-anthropic-film` forklarer scenarioene for USA.
+De siste filmene er på norsk. Anslag fra scenarioverktøyet er ikke norske prognoser.
+HTML er en bilde- og tekstforhåndsvisning. MP4 inneholder lydsporet.
+
+### Kontroll og publisering
+
+Gjennomgangsutkast merkes «KI-assistert · venter på menneskelig kontroll».
+Andreas har bedt om merket «AI-assisted, human-validated» på den godkjente utgaven.
+Det skal først brukes når en person faktisk har kontrollert innholdet.
+Da oppdateres sluttbildet og sluttsetningen, og de berørte opptakene bygges på nytt.
+Filmen sier at helt menneskeskapt materiale planlegges dersom prosjektet får finansiering.
+
+Renderer kontrollerer tekstbredden og dekoder hele eksporten. Lytt til navn, tall og uttale
+før publisering. Modell- og datatolkningen må også kontrolleres av et menneske.
+Kommandoene publiserer ikke, laster ikke opp filmer og endrer ikke nettstedet.
+Git-commit og innsending venter på Andreas' gjennomgang etter prosjektets AGENTS.md.
+
+Resultatfilm, revidert manus 15. oktober: kortere kanarifuglsekvens og ingen gjentatt konklusjon.
+Agentisk sammenligning bruker november 2024–januar 2025 som referanse, begge eksponeringsmål og begge aldersutvalg.
+Revidert manus ligger i `kiindeksen-resultatfilm-revidert-manus.txt`. Eksisterende MP4 er fortsatt forrige versjon.
+Ny lyd venter på godkjenning av manusoverføring til ElevenLabs etter automatisk avvisning.
+
+Norske filmer er hovedversjonen. `video_voice.json` velger Andreas-klonen og Eleven v4.
+Felles stemmeregler for norsk og engelsk: https://github.com/andreaskostol/andreas-stemme (privat).
+Den norske profilen her skal samsvare med `norsk.json` i stemmerepoet.
+I lydmanuset endres vi → me, ikke → ikkje og bruker → bruge. Bøyningsendelsen -er uttales -e gjennom eksplisitte ordregler. Ingen -er → -a.
+Andreas sier mye, aldri mykje. Behold mye i både manus og tale. Ikke gjør andre ord om til nynorsk.
+KI uttales kå-Í, med åpen Å, trykk på I og fyldig klang fra magen. Det gjelder også KI-indeksen.
+`video_voice.json` styrer uttalestavingen. `synthesize_video.py` bruker den før hver syntese.
+`-talemanus.txt` inneholder ordene stemmen leser. `-manus.txt` og bildeteksten beholder bokmål.
+Den tidligere IPA-prøven ble senere avvist: den hørtes ut som KO-I. Referansen er Andreas sin egen innlesning fra 16. oktober.
+Send `kå-Í` til Eleven v4 for KI, og `kå-Í-indeksen` for KI-indeksen. Uttalen må kontrolleres i eksportert lyd.
+Dette er uttaleinstruksjon til stemmen. Vis alltid KI og KI-indeksen i skjermteksten.
+Bildeteksten beholdes på bokmål og kobles til tidsstemplene for de tilsvarende talte ordene.
+Manuell innlesning beholdes som egen versjon. Originalopptak endres aldri.
+
+Animasjonene i resultatfilmen følger ordtidene i hvert lydspor. Åpningen har bevegelige objekter og oppgaveark. Kodearbeid, sammenligningsperiode og yrkesgrupper bygges opp under forklaringen. Usikkerhetsintervallene tegnes fra anslaget til de faktiske grensene. Anslagene flyttes ikke. Rendereren tar flere bilder under bevegelsene og beholder teksttimingen.
+
+### Ny innlesning og yrkeseksempler, 16. oktober 2026
+
+Lesemanus: `../kiindeksen-nytt-lesemanus.html`. Visuelt utkast uten lyd: `../kiindeksen-resultatfilm-nye-figurer.html`. Yrkeseksempler og kurver kommer før gruppeforklaringen. Q1-eksempler er 7126 og 9112, Q5-eksempler er 2512 og 2411, kontrollert mot begge mappingfilene. Elektrikerkurven er merket Q1 hos Eloundou og Q2 hos Mouchel. Blyantkonturer og ny fugletegning bruker eksisterende tegnemotor. Blåfarge og skriftfamilie følger `site/public/style.css`. Dagens innlesning finnes i kiindeksen-resultatfilm-egen-ny.mp4. Studio viser denne ved siden av kloneversjonen. Ingen publisering.
+
+Uttaleregler oppdatert 16. oktober 2026: flere, aldri fleire. KI-indeksen og kiindeksen bruker samme åpne Å og trykk på I.
+Ord med -er som ikke er en bøyningsendelse, som her og mer, skal ikke endres automatisk.
+
+### Bygg resultatfilm med gjeldende stemmeregler
+
+`rebuild_results_clone.py` bruker et godkjent resultatmanus og `video_voice.json`.
+Velg en eksisterende arbeidsmappe med `--out` og resultatmanifestet med `--source`.
+`--synthesize --render` lager ny tale, klipper pauser og gjengir filmen med bokmålstekst.
+Originale innlesninger endres ikke. Kommandoen publiserer ikke filmen.
+
+### Filmfarge kontrollert mot nettstedet 16. oktober 2026
+
+Filmene skal bruke #002B7E, fra `.brand h1` og `.tagline` i nettstedets `style.css`.
+#0F4C81 er nettstedets aksentfarge, ikke den valgte filmfargen. Burgunder skal ikke brukes.
+Kontroller også eksporterte videobilder. En endring i HTML alene oppdaterer ikke en MP4.

@@ -1,0 +1,7 @@
+{
+  "name": "kiindeksen-video",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local, data-driven illustrated films for kiindeksen.no",
+  "dependencies": { "playwright": "1.56.1" }
+}
