@@ -1,0 +1,76 @@
+{
+  "date": "2026-10-18",
+  "project_root": "/Users/andreaskostol/Dropbox (Privat)/Labor Market/AI-Norway",
+  "videos": [
+    {
+      "title": "Arbeidsoppgaver og KI-eksponering",
+      "source": "../kiindeksen-metodefilm-andreas.mp4",
+      "poster": "../kiindeksen-metodefilm-andreas-poster.jpg",
+      "manifest": "../kiindeksen-metodefilm-andreas.json",
+      "validation": "../kiindeksen-metodefilm-andreas-validation.json",
+      "sha256": "810281f094825d9abe705bc3d724fe321f6e84d004d83abec54ab93f7a7ca98f",
+      "duration_seconds": 263.244,
+      "voice": "andreas-clone",
+      "pronunciation_reference_sha256": "11d625a91e8417f1de9ee1abf2d50f8acf1267346e7c6190a1bc22f58586fa71",
+      "pronunciation_replacements": 7,
+      "colour": "#002b7e",
+      "data_label": null,
+      "status": "ready_for_website_integration"
+    },
+    {
+      "title": "Hovedfunn og kanarifuglen",
+      "source": "../kiindeksen-resultatfilm-andreas.mp4",
+      "poster": "../kiindeksen-resultatfilm-andreas-poster.jpg",
+      "manifest": "../kiindeksen-resultatfilm-andreas.json",
+      "validation": "../kiindeksen-resultatfilm-andreas-validation.json",
+      "sha256": "1694cb2c791e0407fb2a25c15fef671559ba8375dbd3e814a7e0c4ead53dbf25",
+      "duration_seconds": 262.014667,
+      "voice": "andreas-clone",
+      "pronunciation_reference_sha256": "11d625a91e8417f1de9ee1abf2d50f8acf1267346e7c6190a1bc22f58586fa71",
+      "pronunciation_replacements": 10,
+      "colour": "#002b7e",
+      "data_label": "juli 2026",
+      "status": "ready_for_website_integration"
+    },
+    {
+      "title": "Imas og Schaal",
+      "source": "../kiindeksen-imas-film-andreas.mp4",
+      "poster": "../kiindeksen-imas-film-andreas-poster.jpg",
+      "manifest": "../kiindeksen-imas-film-andreas.json",
+      "validation": "../kiindeksen-imas-film-andreas-validation.json",
+      "sha256": "ccda0308d6ff2c4e8f2d6939673e8f192a91d7a57abe7014bd383c1e8e5b2df4",
+      "duration_seconds": 152.829333,
+      "voice": "andreas-clone",
+      "pronunciation_reference_sha256": "11d625a91e8417f1de9ee1abf2d50f8acf1267346e7c6190a1bc22f58586fa71",
+      "pronunciation_replacements": 6,
+      "colour": "#002b7e",
+      "data_label": "oktober 2026",
+      "status": "ready_for_website_integration"
+    },
+    {
+      "title": "Anthropics framtidsscenarioer",
+      "source": "../kiindeksen-anthropic-film-andreas.mp4",
+      "poster": "../kiindeksen-anthropic-film-andreas-poster.jpg",
+      "manifest": "../kiindeksen-anthropic-film-andreas.json",
+      "validation": "../kiindeksen-anthropic-film-andreas-validation.json",
+      "sha256": "2ee4acd0b79d5c0b93a71c783dcd99984197eaad9e642b66beb11ab60777729e",
+      "duration_seconds": 155.4,
+      "voice": "andreas-clone",
+      "pronunciation_reference_sha256": "11d625a91e8417f1de9ee1abf2d50f8acf1267346e7c6190a1bc22f58586fa71",
+      "pronunciation_replacements": 7,
+      "colour": "#002b7e",
+      "data_label": "oktober 2026",
+      "status": "ready_for_website_integration"
+    }
+  ],
+  "actual_recording": {
+    "file": "../kiindeksen-resultatfilm-egen-ny.mp4",
+    "sha256": "b717af3ba72c51c5750ae71d4bfabacb8709c8ed80746b01e1c2c564bd233170",
+    "status": "unchanged; content review flags remain",
+    "review_flags": "../kiindeksen-resultatfilm-egen-ny-provenance.json"
+  },
+  "review_page": "../kiindeksen-studio-review.html",
+  "code_pr": "https://github.com/andreaskostol/AI-Norway/pull/2",
+  "private_voice_repo": "https://github.com/andreaskostol/andreas-stemme",
+  "deployment_performed": false
+}

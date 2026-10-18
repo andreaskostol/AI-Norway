@@ -1,0 +1,1606 @@
+{
+  "schema_version": 1,
+  "film": "anthropic",
+  "facts": {
+    "month": "oktober 2026"
+  },
+  "scenes": [
+    {
+      "kind": "scenario_open",
+      "title": "Mulige økonomier i 2030",
+      "text": "Anthropics modell viser mulige framtider for USA fram mot 2030, der antakelsene om KI bestemmer utslagene for produksjon, lønn og jobber. Scenarioene er ikke prognoser. Forskerne har ikke gitt dem sannsynligheter.",
+      "start": 0,
+      "duration": 16.8,
+      "audio": "/private/tmp/kiindeksen-video-build/anthropic-lyd-00.wav",
+      "sources": [
+        "https://www-cdn.anthropic.com/files/4zrzovbb/website/cf58f84d46a4a76bf5a5b039ac695fba6b80041c.pdf"
+      ],
+      "words": [
+        {
+          "word": "Anthropics",
+          "start": 0.0,
+          "end": 0.65
+        },
+        {
+          "word": "modell",
+          "start": 0.697,
+          "end": 0.998
+        },
+        {
+          "word": "undersøker",
+          "start": 1.068,
+          "end": 1.486
+        },
+        {
+          "word": "mulige",
+          "start": 1.521,
+          "end": 1.823
+        },
+        {
+          "word": "økonomiske",
+          "start": 1.881,
+          "end": 2.438
+        },
+        {
+          "word": "framtider",
+          "start": 2.473,
+          "end": 2.914
+        },
+        {
+          "word": "fram",
+          "start": 2.961,
+          "end": 3.135
+        },
+        {
+          "word": "mot",
+          "start": 3.158,
+          "end": 3.286
+        },
+        {
+          "word": "2030.",
+          "start": 3.309,
+          "end": 3.947
+        },
+        {
+          "word": "Anton",
+          "start": 4.307,
+          "end": 4.598
+        },
+        {
+          "word": "Korinek",
+          "start": 4.656,
+          "end": 5.143
+        },
+        {
+          "word": "og",
+          "start": 5.19,
+          "end": 5.236
+        },
+        {
+          "word": "medforfattere",
+          "start": 5.259,
+          "end": 5.933
+        },
+        {
+          "word": "har",
+          "start": 5.991,
+          "end": 6.095
+        },
+        {
+          "word": "laget",
+          "start": 6.13,
+          "end": 6.374
+        },
+        {
+          "word": "modellen",
+          "start": 6.42,
+          "end": 6.734
+        },
+        {
+          "word": "for",
+          "start": 6.792,
+          "end": 6.896
+        },
+        {
+          "word": "USA,",
+          "start": 6.954,
+          "end": 7.407
+        },
+        {
+          "word": "og",
+          "start": 7.976,
+          "end": 8.057
+        },
+        {
+          "word": "de",
+          "start": 8.092,
+          "end": 8.15
+        },
+        {
+          "word": "har",
+          "start": 8.185,
+          "end": 8.301
+        },
+        {
+          "word": "ikke",
+          "start": 8.324,
+          "end": 8.452
+        },
+        {
+          "word": "satt",
+          "start": 8.498,
+          "end": 8.661
+        },
+        {
+          "word": "noen",
+          "start": 8.707,
+          "end": 8.812
+        },
+        {
+          "word": "sannsynlighet",
+          "start": 8.87,
+          "end": 9.52
+        },
+        {
+          "word": "på",
+          "start": 9.578,
+          "end": 9.636
+        },
+        {
+          "word": "at",
+          "start": 9.671,
+          "end": 9.717
+        },
+        {
+          "word": "de",
+          "start": 9.741,
+          "end": 9.787
+        },
+        {
+          "word": "ulike",
+          "start": 9.857,
+          "end": 10.147
+        },
+        {
+          "word": "scenarioene",
+          "start": 10.17,
+          "end": 10.623
+        },
+        {
+          "word": "vil",
+          "start": 10.658,
+          "end": 10.751
+        },
+        {
+          "word": "inntreffe.",
+          "start": 10.809,
+          "end": 11.389
+        },
+        {
+          "word": "Modellen",
+          "start": 11.807,
+          "end": 12.179
+        },
+        {
+          "word": "regner",
+          "start": 12.248,
+          "end": 12.492
+        },
+        {
+          "word": "ut",
+          "start": 12.539,
+          "end": 12.62
+        },
+        {
+          "word": "hva",
+          "start": 12.643,
+          "end": 12.713
+        },
+        {
+          "word": "bestemte",
+          "start": 12.759,
+          "end": 13.224
+        },
+        {
+          "word": "antakelser",
+          "start": 13.282,
+          "end": 13.839
+        },
+        {
+          "word": "om",
+          "start": 13.874,
+          "end": 13.92
+        },
+        {
+          "word": "KI",
+          "start": 13.99,
+          "end": 14.164
+        },
+        {
+          "word": "kan",
+          "start": 14.222,
+          "end": 14.338
+        },
+        {
+          "word": "bety",
+          "start": 14.373,
+          "end": 14.594
+        },
+        {
+          "word": "for",
+          "start": 14.64,
+          "end": 14.745
+        },
+        {
+          "word": "produksjon,",
+          "start": 14.768,
+          "end": 15.43
+        },
+        {
+          "word": "lønn",
+          "start": 15.511,
+          "end": 15.685
+        },
+        {
+          "word": "og",
+          "start": 15.743,
+          "end": 15.79
+        },
+        {
+          "word": "jobber.",
+          "start": 15.824,
+          "end": 16.486
+        }
+      ],
+      "display_text": "Anthropics modell viser mulige framtider for USA fram mot 2030, der antakelsene om KI bestemmer utslagene for produksjon, lønn og jobber. Scenarioene er ikke prognoser. Forskerne har ikke gitt dem sannsynligheter."
+    },
+    {
+      "kind": "task_machine",
+      "title": "Fra oppgaver til økonomi",
+      "text": "Start med arbeidsoppgavene. KI kan hjelpe en ansatt, overta en oppgave eller føre til nye oppgaver. Andre oppgaver forblir uendret. Det avgjørende er både hva KI kan gjøre og hvor mye bedrifter faktisk bruker teknologien. Evne og bruk er forskjellige ting.",
+      "start": 16.8,
+      "duration": 15.92,
+      "audio": "/private/tmp/kiindeksen-video-build/anthropic-lyd-01.wav",
+      "sources": [
+        "https://www.anthropic.com/institute/econ-scenarios"
+      ],
+      "words": [
+        {
+          "word": "Start",
+          "start": 0.0,
+          "end": 0.325
+        },
+        {
+          "word": "med",
+          "start": 0.383,
+          "end": 0.488
+        },
+        {
+          "word": "arbeidsoppgavene.",
+          "start": 0.522,
+          "end": 1.486
+        },
+        {
+          "word": "KI",
+          "start": 1.741,
+          "end": 1.904
+        },
+        {
+          "word": "kan",
+          "start": 1.974,
+          "end": 2.078
+        },
+        {
+          "word": "hjelpe",
+          "start": 2.125,
+          "end": 2.485
+        },
+        {
+          "word": "en",
+          "start": 2.531,
+          "end": 2.589
+        },
+        {
+          "word": "ansatt,",
+          "start": 2.659,
+          "end": 3.204
+        },
+        {
+          "word": "overta",
+          "start": 3.437,
+          "end": 3.762
+        },
+        {
+          "word": "en",
+          "start": 3.796,
+          "end": 3.843
+        },
+        {
+          "word": "oppgave",
+          "start": 3.913,
+          "end": 4.331
+        },
+        {
+          "word": "eller",
+          "start": 4.4,
+          "end": 4.586
+        },
+        {
+          "word": "føre",
+          "start": 4.609,
+          "end": 4.783
+        },
+        {
+          "word": "til",
+          "start": 4.83,
+          "end": 4.923
+        },
+        {
+          "word": "nye",
+          "start": 4.946,
+          "end": 5.12
+        },
+        {
+          "word": "oppgaver.",
+          "start": 5.155,
+          "end": 5.677
+        },
+        {
+          "word": "Andre",
+          "start": 6.153,
+          "end": 6.478
+        },
+        {
+          "word": "oppgaver",
+          "start": 6.525,
+          "end": 6.954
+        },
+        {
+          "word": "forblir",
+          "start": 7.024,
+          "end": 7.419
+        },
+        {
+          "word": "uendret.",
+          "start": 7.477,
+          "end": 8.046
+        },
+        {
+          "word": "Det",
+          "start": 8.522,
+          "end": 8.661
+        },
+        {
+          "word": "avgjørende",
+          "start": 8.696,
+          "end": 9.207
+        },
+        {
+          "word": "er",
+          "start": 9.253,
+          "end": 9.323
+        },
+        {
+          "word": "både",
+          "start": 9.369,
+          "end": 9.59
+        },
+        {
+          "word": "hva",
+          "start": 9.613,
+          "end": 9.706
+        },
+        {
+          "word": "KI",
+          "start": 9.764,
+          "end": 9.95
+        },
+        {
+          "word": "kan",
+          "start": 10.008,
+          "end": 10.147
+        },
+        {
+          "word": "gjøre",
+          "start": 10.194,
+          "end": 10.519
+        },
+        {
+          "word": "og",
+          "start": 10.588,
+          "end": 10.67
+        },
+        {
+          "word": "hvor",
+          "start": 10.693,
+          "end": 10.786
+        },
+        {
+          "word": "mye",
+          "start": 10.809,
+          "end": 10.937
+        },
+        {
+          "word": "bedrifter",
+          "start": 10.96,
+          "end": 11.39
+        },
+        {
+          "word": "faktisk",
+          "start": 11.424,
+          "end": 11.784
+        },
+        {
+          "word": "bruker",
+          "start": 11.807,
+          "end": 12.156
+        },
+        {
+          "word": "teknologien.",
+          "start": 12.179,
+          "end": 12.876
+        },
+        {
+          "word": "Evne",
+          "start": 13.63,
+          "end": 13.92
+        },
+        {
+          "word": "og",
+          "start": 13.944,
+          "end": 13.99
+        },
+        {
+          "word": "bruk",
+          "start": 14.025,
+          "end": 14.292
+        },
+        {
+          "word": "er",
+          "start": 14.327,
+          "end": 14.408
+        },
+        {
+          "word": "forskjellige",
+          "start": 14.547,
+          "end": 14.977
+        },
+        {
+          "word": "ting.",
+          "start": 15.023,
+          "end": 15.604
+        }
+      ],
+      "display_text": "Start med arbeidsoppgavene. KI kan hjelpe en ansatt, overta en oppgave eller føre til nye oppgaver. Andre oppgaver forblir uendret. Det avgjørende er både hva KI kan gjøre og hvor mye bedrifter faktisk bruker teknologien. Evne og bruk er forskjellige ting."
+    },
+    {
+      "kind": "levers",
+      "title": "Antakelsene styrer resultatet",
+      "text": "Modellen varierer hvor mange oppgaver KI berører, hvor utbredt bruken blir, og hvor store produktivitetsgevinstene er. Den skiller også mellom hjelp og automatisering, og tar med nye oppgaver. Så kommer arbeidsmarkedet: Hvor raskt kan en person som mister jobben finne annet arbeid?",
+      "start": 32.72,
+      "duration": 16.84,
+      "audio": "/private/tmp/kiindeksen-video-build/anthropic-lyd-02.wav",
+      "sources": [
+        "https://www.anthropic.com/institute/econ-scenarios"
+      ],
+      "words": [
+        {
+          "word": "Modellen",
+          "start": 0.0,
+          "end": 0.418
+        },
+        {
+          "word": "varierer",
+          "start": 0.453,
+          "end": 0.929
+        },
+        {
+          "word": "hvor",
+          "start": 0.952,
+          "end": 1.068
+        },
+        {
+          "word": "mange",
+          "start": 1.115,
+          "end": 1.289
+        },
+        {
+          "word": "oppgaver",
+          "start": 1.312,
+          "end": 1.741
+        },
+        {
+          "word": "KI",
+          "start": 1.8,
+          "end": 1.985
+        },
+        {
+          "word": "berører,",
+          "start": 2.055,
+          "end": 2.601
+        },
+        {
+          "word": "hvor",
+          "start": 2.798,
+          "end": 3.053
+        },
+        {
+          "word": "utbredt",
+          "start": 3.135,
+          "end": 3.576
+        },
+        {
+          "word": "bruken",
+          "start": 3.622,
+          "end": 3.959
+        },
+        {
+          "word": "blir,",
+          "start": 3.994,
+          "end": 4.319
+        },
+        {
+          "word": "og",
+          "start": 4.574,
+          "end": 4.667
+        },
+        {
+          "word": "hvor",
+          "start": 4.69,
+          "end": 4.783
+        },
+        {
+          "word": "store",
+          "start": 4.807,
+          "end": 5.178
+        },
+        {
+          "word": "produktivitetsgevinstene",
+          "start": 5.201,
+          "end": 6.42
+        },
+        {
+          "word": "er.",
+          "start": 6.444,
+          "end": 6.687
+        },
+        {
+          "word": "Den",
+          "start": 7.256,
+          "end": 7.396
+        },
+        {
+          "word": "skiller",
+          "start": 7.465,
+          "end": 7.709
+        },
+        {
+          "word": "også",
+          "start": 7.767,
+          "end": 7.93
+        },
+        {
+          "word": "mellom",
+          "start": 7.976,
+          "end": 8.185
+        },
+        {
+          "word": "hjelp",
+          "start": 8.231,
+          "end": 8.556
+        },
+        {
+          "word": "og",
+          "start": 8.591,
+          "end": 8.638
+        },
+        {
+          "word": "automatisering,",
+          "start": 8.661,
+          "end": 9.532
+        },
+        {
+          "word": "og",
+          "start": 9.613,
+          "end": 9.729
+        },
+        {
+          "word": "tar",
+          "start": 9.764,
+          "end": 9.926
+        },
+        {
+          "word": "med",
+          "start": 9.985,
+          "end": 10.077
+        },
+        {
+          "word": "nye",
+          "start": 10.101,
+          "end": 10.228
+        },
+        {
+          "word": "oppgaver.",
+          "start": 10.286,
+          "end": 10.844
+        },
+        {
+          "word": "Så",
+          "start": 11.262,
+          "end": 11.389
+        },
+        {
+          "word": "kommer",
+          "start": 11.447,
+          "end": 11.668
+        },
+        {
+          "word": "arbeidsmarkedet:",
+          "start": 11.714,
+          "end": 12.701
+        },
+        {
+          "word": "Hvor",
+          "start": 13.177,
+          "end": 13.433
+        },
+        {
+          "word": "raskt",
+          "start": 13.479,
+          "end": 13.804
+        },
+        {
+          "word": "kan",
+          "start": 13.851,
+          "end": 13.967
+        },
+        {
+          "word": "en",
+          "start": 14.025,
+          "end": 14.071
+        },
+        {
+          "word": "person",
+          "start": 14.106,
+          "end": 14.408
+        },
+        {
+          "word": "som",
+          "start": 14.466,
+          "end": 14.57
+        },
+        {
+          "word": "mister",
+          "start": 14.594,
+          "end": 14.837
+        },
+        {
+          "word": "jobben",
+          "start": 14.872,
+          "end": 15.151
+        },
+        {
+          "word": "finne",
+          "start": 15.197,
+          "end": 15.418
+        },
+        {
+          "word": "annet",
+          "start": 15.488,
+          "end": 15.766
+        },
+        {
+          "word": "arbeid?",
+          "start": 15.813,
+          "end": 16.533
+        }
+      ],
+      "display_text": "Modellen varierer hvor mange oppgaver KI berører, hvor utbredt bruken blir, og hvor store produktivitetsgevinstene er. Den skiller også mellom hjelp og automatisering, og tar med nye oppgaver. Så kommer arbeidsmarkedet: Hvor raskt kan en person som mister jobben finne annet arbeid?"
+    },
+    {
+      "kind": "scenario_bars",
+      "title": "Tre scenarioer, samme sammenligning",
+      "text": "I det moderate scenarioet er amerikansk BNP i 2030 én komma seks prosent høyere enn uten KI. I det betydelige scenarioet er forskjellen åtte komma tre prosent. I det ekstreme er den trettito komma fire prosent. Dette er forskjeller i nivå i 2030, ikke årlige vekstrater.",
+      "start": 49.56,
+      "duration": 17.84,
+      "audio": "/private/tmp/kiindeksen-video-build/anthropic-lyd-03.wav",
+      "sources": [
+        "https://www.anthropic.com/institute/econ-scenarios"
+      ],
+      "words": [
+        {
+          "word": "I",
+          "start": 0.0,
+          "end": 0.093
+        },
+        {
+          "word": "det",
+          "start": 0.163,
+          "end": 0.232
+        },
+        {
+          "word": "moderate",
+          "start": 0.255,
+          "end": 0.708
+        },
+        {
+          "word": "scenarioet",
+          "start": 0.755,
+          "end": 1.289
+        },
+        {
+          "word": "er",
+          "start": 1.324,
+          "end": 1.463
+        },
+        {
+          "word": "amerikansk",
+          "start": 1.509,
+          "end": 2.032
+        },
+        {
+          "word": "BNP",
+          "start": 2.055,
+          "end": 2.368
+        },
+        {
+          "word": "i",
+          "start": 2.566,
+          "end": 2.635
+        },
+        {
+          "word": "2030",
+          "start": 2.798,
+          "end": 3.111
+        },
+        {
+          "word": "én",
+          "start": 3.587,
+          "end": 3.796
+        },
+        {
+          "word": "komma",
+          "start": 3.866,
+          "end": 4.098
+        },
+        {
+          "word": "seks",
+          "start": 4.156,
+          "end": 4.389
+        },
+        {
+          "word": "prosent",
+          "start": 4.447,
+          "end": 4.783
+        },
+        {
+          "word": "høyere",
+          "start": 4.818,
+          "end": 5.178
+        },
+        {
+          "word": "enn",
+          "start": 5.236,
+          "end": 5.375
+        },
+        {
+          "word": "uten",
+          "start": 5.457,
+          "end": 5.735
+        },
+        {
+          "word": "KI.",
+          "start": 5.782,
+          "end": 6.269
+        },
+        {
+          "word": "I",
+          "start": 7.024,
+          "end": 7.094
+        },
+        {
+          "word": "det",
+          "start": 7.152,
+          "end": 7.221
+        },
+        {
+          "word": "betydelige",
+          "start": 7.256,
+          "end": 7.709
+        },
+        {
+          "word": "scenarioet",
+          "start": 7.744,
+          "end": 8.243
+        },
+        {
+          "word": "er",
+          "start": 8.266,
+          "end": 8.359
+        },
+        {
+          "word": "forskjellen",
+          "start": 8.417,
+          "end": 8.87
+        },
+        {
+          "word": "åtte",
+          "start": 8.975,
+          "end": 9.311
+        },
+        {
+          "word": "komma",
+          "start": 9.358,
+          "end": 9.567
+        },
+        {
+          "word": "tre",
+          "start": 9.602,
+          "end": 9.776
+        },
+        {
+          "word": "prosent.",
+          "start": 9.811,
+          "end": 10.461
+        },
+        {
+          "word": "I",
+          "start": 10.879,
+          "end": 10.937
+        },
+        {
+          "word": "det",
+          "start": 11.007,
+          "end": 11.076
+        },
+        {
+          "word": "ekstreme",
+          "start": 11.1,
+          "end": 11.564
+        },
+        {
+          "word": "er",
+          "start": 11.587,
+          "end": 11.68
+        },
+        {
+          "word": "den",
+          "start": 11.703,
+          "end": 11.785
+        },
+        {
+          "word": "trettito",
+          "start": 11.819,
+          "end": 12.214
+        },
+        {
+          "word": "komma",
+          "start": 12.272,
+          "end": 12.493
+        },
+        {
+          "word": "fire",
+          "start": 12.551,
+          "end": 12.806
+        },
+        {
+          "word": "prosent.",
+          "start": 12.841,
+          "end": 13.48
+        },
+        {
+          "word": "Dette",
+          "start": 13.898,
+          "end": 14.13
+        },
+        {
+          "word": "er",
+          "start": 14.153,
+          "end": 14.199
+        },
+        {
+          "word": "forskjeller",
+          "start": 14.246,
+          "end": 14.733
+        },
+        {
+          "word": "i",
+          "start": 14.791,
+          "end": 14.815
+        },
+        {
+          "word": "nivå",
+          "start": 14.861,
+          "end": 15.093
+        },
+        {
+          "word": "i",
+          "start": 15.14,
+          "end": 15.175
+        },
+        {
+          "word": "2030,",
+          "start": 15.337,
+          "end": 15.894
+        },
+        {
+          "word": "ikke",
+          "start": 16.034,
+          "end": 16.231
+        },
+        {
+          "word": "årlige",
+          "start": 16.312,
+          "end": 16.579
+        },
+        {
+          "word": "vekstrater.",
+          "start": 16.626,
+          "end": 17.555
+        }
+      ],
+      "display_text": "I det moderate scenarioet er amerikansk BNP i 2030 én komma seks prosent høyere enn uten KI. I det betydelige scenarioet er forskjellen åtte komma tre prosent. I det ekstreme er den trettito komma fire prosent. Dette er forskjeller i nivå i 2030, ikke årlige vekstrater."
+    },
+    {
+      "kind": "transition",
+      "title": "Mer produksjon, vanskelig omstilling",
+      "text": "En programmerer blir ikke elektriker over natten. Jobbsøking og opplæring tar tid. Derfor kan flere stå uten arbeid under omstillingen, selv om økonomien produserer mer.",
+      "start": 67.4,
+      "duration": 15.84,
+      "audio": "/private/tmp/kiindeksen-video-build/anthropic-lyd-04.wav",
+      "sources": [
+        "https://www-cdn.anthropic.com/files/4zrzovbb/website/cf58f84d46a4a76bf5a5b039ac695fba6b80041c.pdf"
+      ],
+      "words": [
+        {
+          "word": "Automatisering",
+          "start": 0.0,
+          "end": 0.801
+        },
+        {
+          "word": "kan",
+          "start": 0.824,
+          "end": 0.929
+        },
+        {
+          "word": "redusere",
+          "start": 0.987,
+          "end": 1.498
+        },
+        {
+          "word": "etterspørselen",
+          "start": 1.521,
+          "end": 2.136
+        },
+        {
+          "word": "etter",
+          "start": 2.206,
+          "end": 2.415
+        },
+        {
+          "word": "kunnskapsarbeid,",
+          "start": 2.45,
+          "end": 3.495
+        },
+        {
+          "word": "samtidig",
+          "start": 3.657,
+          "end": 4.087
+        },
+        {
+          "word": "som",
+          "start": 4.11,
+          "end": 4.214
+        },
+        {
+          "word": "økt",
+          "start": 4.284,
+          "end": 4.435
+        },
+        {
+          "word": "produksjon",
+          "start": 4.47,
+          "end": 4.923
+        },
+        {
+          "word": "løfter",
+          "start": 4.981,
+          "end": 5.213
+        },
+        {
+          "word": "etterspørselen",
+          "start": 5.248,
+          "end": 5.793
+        },
+        {
+          "word": "andre",
+          "start": 5.84,
+          "end": 6.049
+        },
+        {
+          "word": "steder.",
+          "start": 6.072,
+          "end": 6.536
+        },
+        {
+          "word": "Å",
+          "start": 7.291,
+          "end": 7.349
+        },
+        {
+          "word": "bytte",
+          "start": 7.43,
+          "end": 7.639
+        },
+        {
+          "word": "yrke",
+          "start": 7.686,
+          "end": 7.953
+        },
+        {
+          "word": "tar",
+          "start": 7.999,
+          "end": 8.15
+        },
+        {
+          "word": "tid.",
+          "start": 8.196,
+          "end": 8.568
+        },
+        {
+          "word": "En",
+          "start": 8.87,
+          "end": 8.974
+        },
+        {
+          "word": "programmerer",
+          "start": 8.997,
+          "end": 9.566
+        },
+        {
+          "word": "blir",
+          "start": 9.589,
+          "end": 9.764
+        },
+        {
+          "word": "ikke",
+          "start": 9.787,
+          "end": 9.903
+        },
+        {
+          "word": "elektriker",
+          "start": 9.926,
+          "end": 10.46
+        },
+        {
+          "word": "over",
+          "start": 10.495,
+          "end": 10.634
+        },
+        {
+          "word": "natten,",
+          "start": 10.669,
+          "end": 11.11
+        },
+        {
+          "word": "og",
+          "start": 11.366,
+          "end": 11.459
+        },
+        {
+          "word": "i",
+          "start": 11.482,
+          "end": 11.505
+        },
+        {
+          "word": "modellen",
+          "start": 11.54,
+          "end": 11.946
+        },
+        {
+          "word": "kan",
+          "start": 12.004,
+          "end": 12.109
+        },
+        {
+          "word": "denne",
+          "start": 12.144,
+          "end": 12.295
+        },
+        {
+          "word": "omstillingen",
+          "start": 12.318,
+          "end": 12.84
+        },
+        {
+          "word": "gi",
+          "start": 12.887,
+          "end": 12.933
+        },
+        {
+          "word": "ledighet",
+          "start": 13.003,
+          "end": 13.409
+        },
+        {
+          "word": "selv",
+          "start": 13.467,
+          "end": 13.665
+        },
+        {
+          "word": "om",
+          "start": 13.699,
+          "end": 13.757
+        },
+        {
+          "word": "økonomien",
+          "start": 13.804,
+          "end": 14.233
+        },
+        {
+          "word": "samlet",
+          "start": 14.292,
+          "end": 14.628
+        },
+        {
+          "word": "blir",
+          "start": 14.663,
+          "end": 14.814
+        },
+        {
+          "word": "rikere.",
+          "start": 14.837,
+          "end": 15.557
+        }
+      ],
+      "display_text": "En programmerer blir ikke elektriker over natten. Jobbsøking og opplæring tar tid. Derfor kan flere stå uten arbeid under omstillingen, selv om økonomien produserer mer."
+    },
+    {
+      "kind": "distribution",
+      "title": "Hvem får inntektene?",
+      "text": "Høyere BNP garanterer ikke høyere lønn for alle. I det ekstreme scenarioet går mer av inntekten til kapital. Kunnskapsarbeidernes lønn ligger under banen uten KI.",
+      "start": 83.24000000000001,
+      "duration": 15.2,
+      "audio": "/private/tmp/kiindeksen-video-build/anthropic-lyd-05.wav",
+      "sources": [
+        "https://www-cdn.anthropic.com/files/4zrzovbb/website/cf58f84d46a4a76bf5a5b039ac695fba6b80041c.pdf"
+      ],
+      "words": [
+        {
+          "word": "Høyere",
+          "start": 0.0,
+          "end": 0.372
+        },
+        {
+          "word": "BNP",
+          "start": 0.406,
+          "end": 0.685
+        },
+        {
+          "word": "garanterer",
+          "start": 0.801,
+          "end": 1.265
+        },
+        {
+          "word": "ikke",
+          "start": 1.3,
+          "end": 1.416
+        },
+        {
+          "word": "høyere",
+          "start": 1.451,
+          "end": 1.683
+        },
+        {
+          "word": "lønn",
+          "start": 1.73,
+          "end": 1.892
+        },
+        {
+          "word": "for",
+          "start": 1.962,
+          "end": 2.067
+        },
+        {
+          "word": "alle.",
+          "start": 2.113,
+          "end": 2.485
+        },
+        {
+          "word": "I",
+          "start": 3.053,
+          "end": 3.1
+        },
+        {
+          "word": "det",
+          "start": 3.158,
+          "end": 3.228
+        },
+        {
+          "word": "ekstreme",
+          "start": 3.251,
+          "end": 3.785
+        },
+        {
+          "word": "scenarioet",
+          "start": 3.831,
+          "end": 4.331
+        },
+        {
+          "word": "faller",
+          "start": 4.632,
+          "end": 4.957
+        },
+        {
+          "word": "kunnskapsarbeidernes",
+          "start": 4.981,
+          "end": 5.956
+        },
+        {
+          "word": "lønn",
+          "start": 6.026,
+          "end": 6.223
+        },
+        {
+          "word": "relativt",
+          "start": 6.304,
+          "end": 6.769
+        },
+        {
+          "word": "til",
+          "start": 6.792,
+          "end": 6.885
+        },
+        {
+          "word": "banen",
+          "start": 6.908,
+          "end": 7.245
+        },
+        {
+          "word": "uten",
+          "start": 7.349,
+          "end": 7.605
+        },
+        {
+          "word": "KI.",
+          "start": 7.663,
+          "end": 8.092
+        },
+        {
+          "word": "En",
+          "start": 8.568,
+          "end": 8.707
+        },
+        {
+          "word": "større",
+          "start": 8.754,
+          "end": 9.021
+        },
+        {
+          "word": "del",
+          "start": 9.067,
+          "end": 9.195
+        },
+        {
+          "word": "av",
+          "start": 9.241,
+          "end": 9.288
+        },
+        {
+          "word": "inntekten",
+          "start": 9.346,
+          "end": 9.752
+        },
+        {
+          "word": "går",
+          "start": 9.787,
+          "end": 9.915
+        },
+        {
+          "word": "til",
+          "start": 9.961,
+          "end": 10.043
+        },
+        {
+          "word": "kapital.",
+          "start": 10.066,
+          "end": 10.716
+        },
+        {
+          "word": "Hvor",
+          "start": 11.076,
+          "end": 11.215
+        },
+        {
+          "word": "lett",
+          "start": 11.25,
+          "end": 11.412
+        },
+        {
+          "word": "ny",
+          "start": 11.482,
+          "end": 11.61
+        },
+        {
+          "word": "kapital",
+          "start": 11.691,
+          "end": 12.086
+        },
+        {
+          "word": "kan",
+          "start": 12.144,
+          "end": 12.26
+        },
+        {
+          "word": "skaffes,",
+          "start": 12.295,
+          "end": 12.806
+        },
+        {
+          "word": "påvirker",
+          "start": 12.875,
+          "end": 13.317
+        },
+        {
+          "word": "fordelingen",
+          "start": 13.351,
+          "end": 13.827
+        },
+        {
+          "word": "av",
+          "start": 13.885,
+          "end": 13.932
+        },
+        {
+          "word": "gevinstene.",
+          "start": 13.955,
+          "end": 14.907
+        }
+      ],
+      "display_text": "Høyere BNP garanterer ikke høyere lønn for alle. I det ekstreme scenarioet går mer av inntekten til kapital. Kunnskapsarbeidernes lønn ligger under banen uten KI."
+    },
+    {
+      "kind": "unemployment",
+      "title": "Ledighet i USA i 2030",
+      "text": "Hva betyr dette for ledigheten? I det moderate scenarioet er samlet ledighet tre komma ni prosent. I det betydelige er den fire komma seks prosent. I det ekstreme er den elleve komma ni prosent. Dette er ledighetsnivåer, ikke økninger. Uten KI er nivået tre komma åtte prosent. I det ekstreme scenarioet er sytten komma ni prosent av dem som startet i kunnskapsyrker uten arbeid. Den gruppen må ikke forveksles med alle arbeidstakere.",
+      "display_text": "Hva betyr dette for ledigheten? I det moderate scenarioet er samlet ledighet tre komma ni prosent. I det betydelige er den fire komma seks prosent. I det ekstreme er den elleve komma ni prosent. Dette er ledighetsnivåer, ikke økninger. Uten KI er nivået tre komma åtte prosent. I det ekstreme scenarioet er sytten komma ni prosent av dem som startet i kunnskapsyrker uten arbeid. Den gruppen må ikke forveksles med alle arbeidstakere.",
+      "sources": [
+        "https://www-cdn.anthropic.com/files/4zrzovbb/website/cf58f84d46a4a76bf5a5b039ac695fba6b80041c.pdf"
+      ]
+    },
+    {
+      "kind": "limits",
+      "title": "Fra spart tid til jobber",
+      "text": "Spart arbeidstid er ikke det samme som tapte jobber. Et generelt produktivitetsløft og automatisering av bestemte oppgaver er heller ikke samme endring. Resultatet avhenger av hvordan bedriftene bruker den sparte tiden, om etterspørselen øker, om nye oppgaver oppstår, og hvor raskt folk som mister jobben finner annet arbeid. Tallene her gjelder USA. De kan ikke overføres direkte til Norge.",
+      "start": 98.44000000000001,
+      "duration": 16.32,
+      "audio": "/private/tmp/kiindeksen-video-build/anthropic-lyd-06.wav",
+      "sources": [
+        "https://www.ssb.no/nasjonalregnskap-og-konjunkturer/okonomiske-analyser/okonomiske-analyser-3-2026/_/attachment/inline/d4d8d116-010f-47dd-9199-a310afb82b0d:3cb1168f84743db8b67fdac3f2ebdc7e7eed2773/OA2026-3.pdf#page=36"
+      ],
+      "words": [
+        {
+          "word": "Dette",
+          "start": 0.0,
+          "end": 0.302
+        },
+        {
+          "word": "er",
+          "start": 0.325,
+          "end": 0.418
+        },
+        {
+          "word": "en",
+          "start": 0.464,
+          "end": 0.511
+        },
+        {
+          "word": "forenklet",
+          "start": 0.569,
+          "end": 1.033
+        },
+        {
+          "word": "økonomi.",
+          "start": 1.08,
+          "end": 1.695
+        },
+        {
+          "word": "Modellen",
+          "start": 2.264,
+          "end": 2.717
+        },
+        {
+          "word": "omfatter",
+          "start": 2.786,
+          "end": 3.204
+        },
+        {
+          "word": "ikke",
+          "start": 3.228,
+          "end": 3.344
+        },
+        {
+          "word": "raske",
+          "start": 3.379,
+          "end": 3.669
+        },
+        {
+          "word": "gjennombrudd",
+          "start": 3.704,
+          "end": 4.191
+        },
+        {
+          "word": "i",
+          "start": 4.226,
+          "end": 4.249
+        },
+        {
+          "word": "fysisk",
+          "start": 4.296,
+          "end": 4.702
+        },
+        {
+          "word": "robotikk,",
+          "start": 4.748,
+          "end": 5.248
+        },
+        {
+          "word": "og",
+          "start": 5.294,
+          "end": 5.352
+        },
+        {
+          "word": "den",
+          "start": 5.375,
+          "end": 5.48
+        },
+        {
+          "word": "beskriver",
+          "start": 5.515,
+          "end": 5.956
+        },
+        {
+          "word": "arbeidstakere",
+          "start": 6.002,
+          "end": 6.676
+        },
+        {
+          "word": "svært",
+          "start": 6.711,
+          "end": 6.966
+        },
+        {
+          "word": "grovt.",
+          "start": 7.012,
+          "end": 7.512
+        },
+        {
+          "word": "Den",
+          "start": 8.162,
+          "end": 8.313
+        },
+        {
+          "word": "utelater",
+          "start": 8.394,
+          "end": 8.824
+        },
+        {
+          "word": "også",
+          "start": 8.87,
+          "end": 9.01
+        },
+        {
+          "word": "flere",
+          "start": 9.056,
+          "end": 9.312
+        },
+        {
+          "word": "kriser",
+          "start": 9.358,
+          "end": 9.741
+        },
+        {
+          "word": "og",
+          "start": 9.799,
+          "end": 9.846
+        },
+        {
+          "word": "politiske",
+          "start": 9.869,
+          "end": 10.38
+        },
+        {
+          "word": "reaksjoner.",
+          "start": 10.426,
+          "end": 11.053
+        },
+        {
+          "word": "Tallene",
+          "start": 11.471,
+          "end": 11.819
+        },
+        {
+          "word": "bør",
+          "start": 11.866,
+          "end": 11.959
+        },
+        {
+          "word": "leses",
+          "start": 11.982,
+          "end": 12.261
+        },
+        {
+          "word": "sammen",
+          "start": 12.284,
+          "end": 12.551
+        },
+        {
+          "word": "med",
+          "start": 12.597,
+          "end": 12.667
+        },
+        {
+          "word": "antakelsene.",
+          "start": 12.69,
+          "end": 13.48
+        },
+        {
+          "word": "De",
+          "start": 13.781,
+          "end": 13.874
+        },
+        {
+          "word": "kan",
+          "start": 13.921,
+          "end": 14.025
+        },
+        {
+          "word": "ikke",
+          "start": 14.083,
+          "end": 14.223
+        },
+        {
+          "word": "overføres",
+          "start": 14.304,
+          "end": 14.78
+        },
+        {
+          "word": "direkte",
+          "start": 14.826,
+          "end": 15.186
+        },
+        {
+          "word": "til",
+          "start": 15.221,
+          "end": 15.302
+        },
+        {
+          "word": "Norge.",
+          "start": 15.326,
+          "end": 16.022
+        }
+      ],
+      "display_text": "Spart arbeidstid er ikke det samme som tapte jobber. Et generelt produktivitetsløft og automatisering av bestemte oppgaver er heller ikke samme endring. Resultatet avhenger av hvordan bedriftene bruker den sparte tiden, om etterspørselen øker, om nye oppgaver oppstår, og hvor raskt folk som mister jobben finner annet arbeid. Tallene her gjelder USA. De kan ikke overføres direkte til Norge."
+    }
+  ],
+  "duration": 114.76000000000002,
+  "timing": "aligned",
+  "review": {
+    "status": "pending"
+  },
+  "sources": {
+    "imas": "https://aleximas.substack.com/p/has-ai-impacted-the-labor-market",
+    "stanford": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine-six-facts-about-the-recent-employment-effects-of-artificial-intelligence/",
+    "yale": "https://budgetlab.yale.edu/research/tracking-impact-ai-labor-market",
+    "anthropic": "https://www.anthropic.com/institute/econ-scenarios",
+    "ssb": "https://www.ssb.no/nasjonalregnskap-og-konjunkturer/okonomiske-analyser/okonomiske-analyser-3-2026/_/attachment/inline/d4d8d116-010f-47dd-9199-a310afb82b0d:3cb1168f84743db8b67fdac3f2ebdc7e7eed2773/OA2026-3.pdf#page=36",
+    "model": "https://www-cdn.anthropic.com/files/4zrzovbb/website/cf58f84d46a4a76bf5a5b039ac695fba6b80041c.pdf"
+  },
+  "source_checked": "2026-10-16",
+  "voice": {
+    "name": "Kristine",
+    "id": "MULNGIATG7qUsJ0Sjuhy",
+    "speed": 1.07,
+    "stability": 0.35
+  }
+}

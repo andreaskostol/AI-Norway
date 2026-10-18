@@ -176,3 +176,156 @@ endres ikke; en ny måned blir en ny mappe.
 
 Spør gjerne hvis noe er uklart — Andreas / Claude kan hjelpe med
 `app.js`-logikken, som er den eneste virkelig tekniske biten.
+
+
+## Automatiserte filmer (15. oktober 2026)
+
+Videokoden ligger i denne mappen. Den bruker penn-og-tusj-motoren fra Suveren Intelligens,
+med egne scener og rullende tekst. `video_ink.js` er en uendret kopi av tegnemotoren.
+Norske filmer bruker nå Andreas sin stemmeklone fra ElevenLabs.
+`video_voice.json` er gjeldende kilde for stemme, dialekt og uttale. Kristine finnes bare i eldre prøveversjoner.
+
+### Folder context
+
+Dette er en del av AI-Norway og kiindeksen.no, ikke Suveren-nettstedet.
+Andreas har valgt eksisterende AI-Norway i Dropbox for filer, og dette GitHub-repoet for koden.
+Videokoden ligger i eksisterende `dashboard/`. Ferdige lokale gjennomgangsfiler ligger i prosjektroten.
+Midlertidige bilder lages i systemets midlertidige mappe og fjernes etter rendering.
+Ingen ny prosjektmappe ble opprettet. Ingen film er publisert.
+
+### Kjør etter en dataoppdatering
+
+Bygg først nettstedets data med den vanlige releaserutinen. Resultatfilmen leser
+`site/public/data/dashboard.json`, ikke presentasjonens gamle tall.
+Den beregner hovedindeksen som forholdet mellom vekstfaktorene for Q5 og Q1, minus én.
+Referansen er gjennomsnittet august–oktober 2022, sammenlignet med de siste tre månedene.
+Hovedtallet er prosent, ikke forskjellen mellom to prosentvise vekstrater i prosentpoeng.
+Yrkeseksemplene viser derimot per-innbygger-serier med november 2022 lik 100.
+
+Krav: Python 3, Node.js, ffmpeg, ffprobe og Playwright med Chromium.
+Fra dashboard-mappen installeres den fastsatte nettleseravhengigheten med `npm install`
+og Chromium med `npx playwright install chromium`. En eksisterende Chrome kan brukes
+med `CHROME_CHANNEL=chrome`. `PLAYWRIGHT_MODULE` kan peke på en eksisterende installasjon.
+Python-koden bruker standardbiblioteket.
+
+Kjør fra repoets rot. OUTPUT må være en eksisterende mappe:
+
+```sh
+python3 dashboard/build_results_video.py --out OUTPUT
+python3 dashboard/build_results_video.py --out OUTPUT --synthesize --render
+python3 dashboard/build_research_video.py imas --out OUTPUT --synthesize --render
+python3 dashboard/build_research_video.py anthropic --out OUTPUT --synthesize --render
+KI_VIDEO_DATA=dashboard/site/public/data/dashboard.json python3 dashboard/test_results_video.py
+```
+
+Uten `--synthesize` skjer ingen overføring til stemmetjenesten. `--synthesize` sender
+manus til ElevenLabs og bruker kontoen som er konfigurert med `ELEVENLABS_API_KEY`
+eller lokal nøkkelfil `~/.config/elevenlabs/key`. Nøkler lagres aldri i repoet.
+Uendrede lydopptak gjenbrukes etter kontroll av tekst og stemmeinnstillinger.
+Ord følger tidsstemplene fra lydtjenesten. Et annet transkript stopper byggingen.
+Allerede lagrede lydfiler kan brukes med `--audio OUTPUT/kiindeksen-resultatfilm-lyd`.
+
+Byggingen stopper ved manglende tall, ulike datamåneder, endret referanse eller
+usikkerhetsmål fra en annen måned. Konklusjonen velges fra det gjeldende intervallet,
+slik at et nytt resultat ikke arver en gammel påstand om null eller nedgang.
+Researchfilmene er redaksjonelle manus. De oppdateres ikke automatisk ved nye norske tall.
+Kildene og datoen for kildekontroll ligger i manusmodulen og hvert filmmanifest.
+
+MP4, manus, HTML, manifest og kontrollrapport får samme filstamme.
+`kiindeksen-resultatfilm` er resultatfilmen, `kiindeksen-imas-film` er forskningsoversikten,
+og `kiindeksen-anthropic-film` forklarer scenarioene for USA.
+De siste filmene er på norsk. Anslag fra scenarioverktøyet er ikke norske prognoser.
+HTML er en bilde- og tekstforhåndsvisning. MP4 inneholder lydsporet.
+
+### Kontroll og publisering
+
+Gjennomgangsutkast merkes «KI-assistert · venter på menneskelig kontroll».
+Andreas har bedt om merket «AI-assisted, human-validated» på den godkjente utgaven.
+Det skal først brukes når en person faktisk har kontrollert innholdet.
+Da oppdateres sluttbildet og sluttsetningen, og de berørte opptakene bygges på nytt.
+Filmen sier at helt menneskeskapt materiale planlegges dersom prosjektet får finansiering.
+
+Renderer kontrollerer tekstbredden og dekoder hele eksporten. Lytt til navn, tall og uttale
+før publisering. Modell- og datatolkningen må også kontrolleres av et menneske.
+Kommandoene publiserer ikke, laster ikke opp filmer og endrer ikke nettstedet.
+Git-commit og innsending venter på Andreas' gjennomgang etter prosjektets AGENTS.md.
+
+Resultatfilm, revidert manus 15. oktober: kortere kanarifuglsekvens og ingen gjentatt konklusjon.
+Agentisk sammenligning bruker november 2024–januar 2025 som referanse, begge eksponeringsmål og begge aldersutvalg.
+Revidert manus ligger i `kiindeksen-resultatfilm-revidert-manus.txt`. Eksisterende MP4 er fortsatt forrige versjon.
+Ny lyd venter på godkjenning av manusoverføring til ElevenLabs etter automatisk avvisning.
+
+Norske filmer er hovedversjonen. `video_voice.json` velger Andreas-klonen og Eleven v4.
+Felles stemmeregler for norsk og engelsk: https://github.com/andreaskostol/andreas-stemme (privat).
+Den norske profilen her skal samsvare med `norsk.json` i stemmerepoet.
+I lydmanuset endres vi → me, ikke → ikkje og bruker → bruge. Bøyningsendelsen -er uttales -e gjennom eksplisitte ordregler. Ingen -er → -a.
+Andreas sier mye, aldri mykje. Behold mye i både manus og tale. Ikke gjør andre ord om til nynorsk.
+KI uttales kå-Í, med åpen Å, trykk på I og fyldig klang fra magen. Det gjelder også KI-indeksen.
+`video_voice.json` styrer uttalestavingen. `synthesize_video.py` bruker den før hver syntese.
+`-talemanus.txt` inneholder ordene stemmen leser. `-manus.txt` og bildeteksten beholder bokmål.
+Den tidligere IPA-prøven ble senere avvist: den hørtes ut som KO-I. Referansen er Andreas sin egen innlesning fra 16. oktober.
+Send `kå-Í` til Eleven v4 for KI, og `kå-Í-indeksen` for KI-indeksen. Uttalen må kontrolleres i eksportert lyd.
+Dette er uttaleinstruksjon til stemmen. Vis alltid KI og KI-indeksen i skjermteksten.
+Bildeteksten beholdes på bokmål og kobles til tidsstemplene for de tilsvarende talte ordene.
+Manuell innlesning beholdes som egen versjon. Originalopptak endres aldri.
+
+Animasjonene i resultatfilmen følger ordtidene i hvert lydspor. Åpningen har bevegelige objekter og oppgaveark. Kodearbeid, sammenligningsperiode og yrkesgrupper bygges opp under forklaringen. Usikkerhetsintervallene tegnes fra anslaget til de faktiske grensene. Anslagene flyttes ikke. Rendereren tar flere bilder under bevegelsene og beholder teksttimingen.
+
+### Ny innlesning og yrkeseksempler, 16. oktober 2026
+
+Lesemanus: `../kiindeksen-nytt-lesemanus.html`. Visuelt utkast uten lyd: `../kiindeksen-resultatfilm-nye-figurer.html`. Yrkeseksempler og kurver kommer før gruppeforklaringen. Q1-eksempler er 7126 og 9112, Q5-eksempler er 2512 og 2411, kontrollert mot begge mappingfilene. Elektrikerkurven er merket Q1 hos Eloundou og Q2 hos Mouchel. Blyantkonturer og ny fugletegning bruker eksisterende tegnemotor. Blåfarge og skriftfamilie følger `site/public/style.css`. Dagens innlesning finnes i kiindeksen-resultatfilm-egen-ny.mp4. Studio viser denne ved siden av kloneversjonen. Ingen publisering.
+
+Uttaleregler oppdatert 16. oktober 2026: flere, aldri fleire. KI-indeksen og kiindeksen bruker samme åpne Å og trykk på I.
+Ord med -er som ikke er en bøyningsendelse, som her og mer, skal ikke endres automatisk.
+
+### Bygg resultatfilm med gjeldende stemmeregler
+
+`rebuild_results_clone.py` bruker et godkjent resultatmanus og `video_voice.json`.
+Velg en eksisterende arbeidsmappe med `--out` og resultatmanifestet med `--source`.
+`--synthesize --render` lager ny tale, klipper pauser og gjengir filmen med bokmålstekst.
+Originale innlesninger endres ikke. Kommandoen publiserer ikke filmen.
+
+### Filmfarge kontrollert mot nettstedet 16. oktober 2026
+
+Filmene skal bruke #002B7E, fra `.brand h1` og `.tagline` i nettstedets `style.css`.
+#0F4C81 er nettstedets aksentfarge, ikke den valgte filmfargen. Burgunder skal ikke brukes.
+Kontroller også eksporterte videobilder. En endring i HTML alene oppdaterer ikke en MP4.
+
+### Godkjent Andreas-uttale, 18. oktober 2026
+
+Andreas godkjente `kiindeksen-uttale-med-setningspause.mp3`. Profilen heter `andreas-clone`, med samme ElevenLabs-ID som før.
+`ki_pronunciation_approved.mp3` er den medfølgende referansen. `voice_pronunciation.py` bruker godkjente lydutsnitt for KI og KI-indeksen etter syntese.
+Hashkontroll hindrer utilsiktet bytte av referanse. Setningspauser bevares, og ordtidene justeres før bildeteksten bygges.
+Dette er lokal etterbehandling, ikke en endring av den hostede ElevenLabs-modellen. Nye versjoner må bruke dette trinnet.
+Kjør `python3 dashboard/test_voice_pronunciation.py` for kontroll av ordtider, setningspauser og referanse.
+
+Stemmeprofilen og godkjent lydreferanse tilhører det private repoet `andreas-stemme`. De skal ikke publiseres med nettsiden.
+Sett `ANDREAS_VOICE_PROFILE` til den private `norsk.json` ved bygging på en annen maskin. Referanselyden skal ligge ved siden av profilen.
+Den lokale `video_voice.json` er en privat arbeidskopi. Nettsiderepoet inneholder kode, men trenger ikke denne filen i Git.
+
+## Overlevering til Claude Code: Studio-filmer, 18. oktober 2026
+
+Andreas har bedt om overlevering til Claude Code-chatten Kiindeksen. Ferdige filer står i `video_delivery.json`, med varighet, sjekksummer og kontrollrapporter.
+Alle fire klonefilmer bruker den godkjente uttalen fra 18. oktober. De har norsk lyd, bokmålstekst og blåfargen #002B7E.
+
+| Film | Fil i prosjektroten | Varighet |
+|---|---|---|
+| Arbeidsoppgaver og KI-eksponering | `kiindeksen-metodefilm-andreas.mp4` | 4:23 |
+| Hovedfunn og kanarifuglen | `kiindeksen-resultatfilm-andreas.mp4` | 4:22 |
+| Imas og Schaal | `kiindeksen-imas-film-andreas.mp4` | 2:33 |
+| Anthropics framtidsscenarioer | `kiindeksen-anthropic-film-andreas.mp4` | 2:35 |
+
+Nettsidens nåværende `site/public/data/videos.json` beskriver bare resultater og eksponering, med status utkast. Claude eier videre integrasjon i Studio.
+Bruk eksisterende `site/public/video/` og rutinen i `site/README.md`. Ikke lag en ny prosjektmappe. Kontroller kopiene mot sjekksummene.
+Filmgeneratoren ligger i PR #2. Stemmeprofil og lydreferanse ligger i det private `andreas-stemme`, og skal ikke bygges inn i nettsiden.
+
+### Innhold og publisering
+
+Resultatfilmens synlige datomerking er juli 2026. Ikke omtal dette som oktoberdata uten kontroll mot resultatkilden.
+Egeninnlesningen `kiindeksen-resultatfilm-egen-ny.mp4` er uendret og finnes fortsatt ved siden av klonen i gjennomsynssiden.
+Før publisering av egeninnlesningen må omtalen av elektrikere hos Mouchel og Codex-datoen avklares. Se proveniensfilens tidsstempler.
+Klonen er standard for framtidige norske oppdateringer. Engelske versjoner skal bruke Andreas sin Fish Audio-klone.
+Ingen nye engelske filmer følger denne leveransen. Ingen publisering er gjort i denne overleveringen.
+Behold eksisterende tekster uten tidligere fjernet omtale av KI-generering og finansiering.
+
+Videre arbeid: kontroller filmvalg og datomerking, klargjør avspillere og plakater, og test på mobil og desktop. Publisering følger avklaringene i nettstedets egen chat.
