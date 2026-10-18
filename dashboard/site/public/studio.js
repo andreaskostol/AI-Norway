@@ -3,7 +3,7 @@
    Ingen avhengigheter. Lista vedlikeholdes for haand i JSON-fila. */
 (function () {
   "use strict";
-  var V = "20261014a";                       // samme noekkel som ?v= i HTML
+  var V = "20261018a";                       // samme noekkel som ?v= i HTML
   var LANG = document.documentElement.lang === "en" ? "en" : "nb";
   var T = {
     nb: {
@@ -75,6 +75,44 @@
       render();
     });
   }
+
+  // ---- Filmene (data/videos.json, samme manifest som forsiden). Seksjonen
+  // #filmer / #films har en liste over filmer under arbeid; naar manifestet
+  // har publiserte filmer for Studio, byttes lista ut med spillere.
+  // ?forhandsvis=1 viser ogsaa utkast, til gjennomsyn foer publisering.
+  function escv(s) { return esc(s); }
+  function renderFilms(man) {
+    var sec = document.getElementById(LANG === "en" ? "films" : "filmer");
+    if (!sec || !man || !man.videos) return;
+    var preview = /[?&]forhandsvis=1/.test(location.search), lang = LANG === "en" ? "en" : "no", html = "";
+    man.videos.slice().sort(function (a, b) { return (a.order || 0) - (b.order || 0); }).forEach(function (v) {
+      if ((v.placement || []).indexOf("studio") < 0) return;
+      if (v.status !== "publisert" && !(preview && v.status === "utkast")) return;
+      var t = v[lang] || {}, fb = v.no || {};
+      var src = t.src || fb.src, poster = t.poster || fb.poster, note = t.src ? "" : (t.fallback_note || "");
+      if (!src) return;
+      html += '<div class="video-card"><h3>' + escv(t.title || fb.title) + (v.status !== "publisert" ? ((LANG === "en") ? " (draft)" : " (utkast)") : "") + "</h3>" +
+        '<video controls preload="metadata" playsinline' + (poster ? ' poster="' + escv(poster) + '"' : "") + ">" +
+        '<source src="' + escv(src) + '" type="video/mp4">' +
+        (LANG === "en" ? "Your browser cannot play this video." : "Nettleseren din kan ikke spille av videoen.") + "</video>" +
+        "<p>" + escv(t.text || fb.text) + (v.duration ? " (" + escv(v.duration) + ")" : "") + (note ? " " + escv(note) : "") + "</p></div>";
+    });
+    if (!html) return;
+    sec.querySelector("h2").textContent = LANG === "en" ? "Films" : "Filmer";
+    var intro = sec.querySelector("p");
+    if (intro) intro.textContent = LANG === "en"
+      ? "Short films with the figures from this site. Norwegian narration."
+      : "Korte filmer med figurene fra nettstedet.";
+    var list = sec.querySelector("ul");
+    var grid = document.createElement("div");
+    grid.className = "video-grid";
+    grid.innerHTML = html;
+    if (list) list.replaceWith(grid); else sec.appendChild(grid);
+  }
+  fetch("/data/videos.json?v=" + V)
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(renderFilms)
+    .catch(function () { /* ingen filmer: lista over filmer under arbeid blir staaende */ });
 
   fetch("/data/studio_papers.json?v=" + V)
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })

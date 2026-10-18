@@ -273,13 +273,16 @@
   function renderVideos(man) {
     var sec = document.getElementById("landing-videos"), grid = document.getElementById("video-grid");
     if (!sec || !grid || !man || !man.videos) return;
+    // ?forhandsvis=1 viser ogsaa utkast, til gjennomsyn foer publisering.
+    var preview = /[?&]forhandsvis=1/.test(location.search);
     var lang = EN ? "en" : "no", html = "";
     man.videos.slice().sort(function (a, b) { return (a.order || 0) - (b.order || 0); }).forEach(function (v) {
-      if (v.status !== "publisert") return;
+      if ((v.placement || []).indexOf("landing") < 0) return;
+      if (v.status !== "publisert" && !(preview && v.status === "utkast")) return;
       var t = v[lang] || {}, fb = v.no || {};
       var src = t.src || fb.src, poster = t.poster || fb.poster, note = t.src ? "" : (t.fallback_note || "");
       if (!src) return;
-      html += '<div class="video-card"><h3>' + esc(t.title || fb.title) + "</h3>" +
+      html += '<div class="video-card"><h3>' + esc(t.title || fb.title) + (v.status !== "publisert" ? (EN ? " (draft)" : " (utkast)") : "") + "</h3>" +
         '<video controls preload="metadata" playsinline' + (poster ? ' poster="' + esc(poster) + '"' : "") + ">" +
         '<source src="' + esc(src) + '" type="video/mp4">' +
         (EN ? "Your browser cannot play this video." : "Nettleseren din kan ikke spille av videoen.") + "</video>" +

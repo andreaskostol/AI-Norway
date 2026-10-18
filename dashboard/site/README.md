@@ -38,23 +38,41 @@ kort (Indeksen, Labben, Studio) og en filmblokk. Den fulle indekssiden er
 `indeksen.html` / `en/the-index.html`; sidelenken «Indeksen» peker dit. Gamle
 dyplenker (`/#data` osv.) sendes videre av et lite skript øverst i `index.html`.
 
-**Filmer.** `landing.js` tegner filmblokken fra `public/data/videos.json`. Bare
-oppføringer med `status: "publisert"` vises; uten engelsk fil vises den norske på
-den engelske siden med `fallback_note`. Slik publiserer du en film:
+**Filmer.** `landing.js` (forsiden) og `studio.js` (Studio, seksjonen `#filmer` /
+`#films`) tegner filmene fra `public/data/videos.json`. Feltet `placement` sier hvor en
+film vises (`landing`, `studio`). Bare `status: "publisert"` vises; med `?forhandsvis=1`
+i adressen vises også utkast, til gjennomsyn før publisering. Uten engelsk fil vises den
+norske på den engelske siden med `fallback_note`.
 
-1. Legg MP4 og plakat (JPG) i `public/video/`. Resultatfilmen heter
-   `kiindeksen-resultater-<release>.mp4`, forklaringsfilmen `kiindeksen-eksponering.mp4`.
-   Plakat: `ffmpeg -ss 3 -i FILM.mp4 -frames:v 1 -q:v 4 PLAKAT.jpg`.
-2. Sett `src`, `poster` og `status: "publisert"` i `videos.json`, og `updated`.
+Leveransen fra Codex 18. oktober 2026 (`dashboard/video_delivery.json`, med SHA256 og
+varigheter; overleveringen står i `dashboard/README.md`) ligger kopiert og
+sjekksumkontrollert i `public/video/`:
+
+| Fil | Innhold | Stemme |
+|---|---|---|
+| `kiindeksen-resultater-2026-10.mp4` | Norske resultater etter agentisk KI, data til og med juli 2026 (4:22) | stemmeklonen |
+| `kiindeksen-resultater-2026-10-egen.mp4` | Samme film, egen innlesning 16. oktober (4:40). To innholdsflagg i `kiindeksen-resultatfilm-egen-ny-provenance.json` (elektrikere hos Mouchel ved 1:24, Codex-datoen ved 2:39) må avklares før publisering | egen innlesning |
+| `kiindeksen-eksponering.mp4` | Fra arbeidsoppgaver til KI-eksponering (4:23) | stemmeklonen |
+| `kiindeksen-studio-imas-schaal.mp4` | Imas og Schaal (2:33) | stemmeklonen |
+| `kiindeksen-studio-anthropic-scenarioer.mp4` | Anthropics framtidsscenarioer (2:35) | stemmeklonen |
+
+MP4-filene er ikke i git (`.gitignore`): de ligger i Dropbox og på Fly. Plakatene og
+manifestet er i git. `.dockerignore` holder MP4-filene utenfor Fly-bygget til Andreas sier
+publiser. Slik publiserer du:
+
+1. Fjern linja `public/video/*.mp4` fra `dashboard/site/.dockerignore`.
+2. Sett `status: "publisert"` på filmene som skal ut i `videos.json`, og `updated`.
 3. Deploy. `nginx.conf` cacher `/video/` i en uke og `videos.json` aldri.
 
-Stemmer: norsk resultatfilm for release 2026-10 er Andreas sin egen innlesning;
-fra neste oppdatering brukes stemmeklonen (ElevenLabs, profilen i
-`dashboard/video_voice.json`, som skal samsvare med det private stemmerepoet
-`andreas-stemme`). Engelske filmer bruker alltid Fish Audio-klonen. Filmkoden er
-Codex sin (`dashboard/build_results_video.py` m.fl., se `dashboard/README.md`).
-`video_voice.json` og råfilene i prosjektroten er gitignorert og skal ikke
-committes.
+Nye filmer: legg MP4 og plakat i `public/video/` (plakat:
+`ffmpeg -ss 3 -i FILM.mp4 -frames:v 1 -q:v 4 PLAKAT.jpg`), legg til en oppføring i
+`videos.json` med `placement`, og kontroller sjekksummen mot leveransen.
+
+Stemmer: norsk bruker stemmeklonen (ElevenLabs, godkjent uttale 18. oktober 2026; profil og
+lydreferanse i det private repoet `andreas-stemme`, ikke i dette repoet og ikke på
+nettstedet). Engelske filmer bruker alltid Fish Audio-klonen; ingen engelske filmer finnes
+ennå. Filmkoden er Codex sin (PR 2, `dashboard/build_results_video.py` m.fl., se
+`dashboard/README.md`).
 
 ## MCP-kobling (okt. 2026)
 

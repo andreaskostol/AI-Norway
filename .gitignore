@@ -135,3 +135,6 @@ dashboard/video_voice.json
 /*.mp3
 /*.wav
 /*.mp4
+
+# Filmene paa nettstedet (dashboard/site/public/video/*.mp4) ligger i Dropbox og paa Fly, ikke i det offentlige repoet. Plakater og manifest er i git.
+dashboard/site/public/video/*.mp4
