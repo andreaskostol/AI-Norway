@@ -380,10 +380,18 @@
   "display_language": "nb",
   "suffix_replacements": false,
   "pronunciation_notes": {
-    "KI": "KÅ-I: åpen Å, trykk på I, fyldig klang fra magen. Tidligere /koːˈiː/ ble avvist fordi det hørtes ut som KO-I. TTS-input: kå-Í. Akustisk sluttgodkjenning gjenstår.",
+    "KI": "Beste versjon så langt: kiindeksen-uttale-glidende-vokaler.mp3, valgt 18. oktober 2026. Å og I glir sammen uten opphold. Behold denne vokalkvaliteten. Neste justering: mer kraft og tydeligere trykk på I, jevn tonehøyde uten stigning på slutten. TTS-input er fortsatt kå-Í; referansefilen inneholder etterbehandling.",
     "dialect": "vi → me; ikke → ikkje; bruker → bruge; mye, aldri mykje; flere, aldri fleire. Uttal bøyningsendelsen -er som -e. Bruk eksplisitte ordregler, ikke en blind endring av alle ord som slutter på er. Ingen -er → -a.",
     "captions": "Bokmål: vi, ikke, KI og KI-indeksen. Uttalestaving skal aldri vises i bildeteksten.",
-    "brand": "Bruk kå-Í-indeksen i tale for KI-indeksen og kiindeksen. Vis fortsatt KI-indeksen i bokmålsteksten."
+    "brand": "KI-indeksen bruker samme sammenhengende Å–I og tydelige I. Behold KI og KI-indeksen i bokmålsteksten."
   },
-  "pronunciation_reference": "20261016 085008.m4a"
+  "pronunciation_reference": "kiindeksen-uttale-glidende-vokaler.mp3",
+  "pronunciation_reference_status": "Best version so far, selected by Andreas 2026-10-18; further refinement requested",
+  "pronunciation_reference_sha256": "a3c8b52ceb11ce788d08c61839f84e9479f2cbaf849f0e174d17417d3dde5d76",
+  "pronunciation_next_trial": {
+    "instruction": "Behold glidende Å–I fra beste prøve. Gi I mer kraft og jevn tonehøyde, uten stigning på slutten.",
+    "status": "building",
+    "baseline": "kiindeksen-uttale-glidende-vokaler.mp3",
+    "date": "2026-10-18"
+  }
 }
