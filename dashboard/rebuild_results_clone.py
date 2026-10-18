@@ -45,7 +45,8 @@ def build(stem):
   aa=list(map(float,re.findall(r'silence_start: ([\d.]+)',log)));bb=list(map(float,re.findall(r'silence_end: ([\d.]+)',log)));remove=[]
   for a,b in zip(aa,bb):
    if b-a<.35:continue
-   prev=[w for w in s['words'] if w['end']<=a+.08];keep=.28 if prev and prev[-1]['word'].endswith(('.','?','!')) else .17
+   prev=[w for w in s['words'] if w['end']<=a+.08];keep=.4 if prev and prev[-1]['word'].endswith(('.','?','!')) else .17
+   if b-a <= keep:continue
    remove.append((a+keep/2,b-keep/2))
   def mapped(t):return t-sum(max(0,min(t,b)-a) for a,b in remove if t>a)
   with wave.open(src,'rb') as w:params=w.getparams();data=w.readframes(w.getnframes())

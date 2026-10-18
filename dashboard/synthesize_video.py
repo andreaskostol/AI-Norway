@@ -1,13 +1,16 @@
 """Explicitly invoked ElevenLabs synthesis. Never called by the default offline build."""
 import argparse,base64,hashlib,json,os,re,subprocess,time,urllib.request,urllib.error
 from pathlib import Path
-CONFIG=json.loads((Path(__file__).parent/'video_voice.json').read_text())
+CONFIG_PATH=Path(os.environ.get('ANDREAS_VOICE_PROFILE',Path(__file__).parent/'video_voice.json'))
+CONFIG=json.loads(CONFIG_PATH.read_text())
 VOICE=CONFIG['voice_id']
 def speech_plan(display):
     tokens=display.split();pieces=[];spans=[]
     for token in tokens:
         pattern=r'\b(?:'+'|'.join(re.escape(k) for k in sorted(CONFIG['spoken_replacements'],key=len,reverse=True))+r')\b'
         spoken=re.sub(pattern,lambda m:CONFIG['spoken_replacements'][m.group()],token)
+        if spoken.startswith('kå-Í-') and not spoken.startswith('kå-Í-indeksen'):
+            spoken=spoken.replace('kå-Í-', 'kå-Í ', 1)
         begin=len(pieces);pieces.extend(spoken.split());spans.append((begin,len(pieces)))
     return ' '.join(pieces),tokens,spans
 
@@ -37,6 +40,10 @@ def synth(manifest,prefix):
    meta.write_text(json.dumps({'request_sha256':digest,'voice_id':VOICE,'words':words},ensure_ascii=False,indent=2))
   words=json.loads(meta.read_text())['words'];duration=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=nw=1:nk=1',str(wav)]))
   if [w['word'] for w in words]!=text.split():raise ValueError('Cached speech transcript mismatch')
+  from voice_pronunciation import apply_approved_pronunciation
+  wav,words,pronunciation=apply_approved_pronunciation(wav,words,CONFIG,CONFIG_PATH.parent)
+  duration=float(subprocess.check_output(['ffprobe','-v','error','-show_entries','format=duration','-of','default=nw=1:nk=1',str(wav)]))
+  s['approved_pronunciation']=pronunciation
   words=display_alignment(words,tokens,spans)
   s.update(text=display,display_text=display,spoken_text=text,audio=str(wav.resolve()),words=words,duration=round((duration+.3)*25)/25,start=total);total+=s['duration'];print(i,'ready',flush=True)
  m.update(duration=total,timing='aligned',voice={'name':CONFIG['name'],'id':VOICE,'model':CONFIG['model_id'],**CONFIG['voice_settings']},primary_language=CONFIG['primary_language'],pronunciation_notes=CONFIG.get('pronunciation_notes',{}))

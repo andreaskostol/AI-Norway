@@ -177,6 +177,7 @@ endres ikke; en ny måned blir en ny mappe.
 Spør gjerne hvis noe er uklart — Andreas / Claude kan hjelpe med
 `app.js`-logikken, som er den eneste virkelig tekniske biten.
 
+
 ## Automatiserte filmer (15. oktober 2026)
 
 Videokoden ligger i denne mappen. Den bruker penn-og-tusj-motoren fra Suveren Intelligens,
@@ -289,3 +290,15 @@ Originale innlesninger endres ikke. Kommandoen publiserer ikke filmen.
 Filmene skal bruke #002B7E, fra `.brand h1` og `.tagline` i nettstedets `style.css`.
 #0F4C81 er nettstedets aksentfarge, ikke den valgte filmfargen. Burgunder skal ikke brukes.
 Kontroller også eksporterte videobilder. En endring i HTML alene oppdaterer ikke en MP4.
+
+### Godkjent Andreas-uttale, 18. oktober 2026
+
+Andreas godkjente `kiindeksen-uttale-med-setningspause.mp3`. Profilen heter `andreas-clone`, med samme ElevenLabs-ID som før.
+`ki_pronunciation_approved.mp3` er den medfølgende referansen. `voice_pronunciation.py` bruker godkjente lydutsnitt for KI og KI-indeksen etter syntese.
+Hashkontroll hindrer utilsiktet bytte av referanse. Setningspauser bevares, og ordtidene justeres før bildeteksten bygges.
+Dette er lokal etterbehandling, ikke en endring av den hostede ElevenLabs-modellen. Nye versjoner må bruke dette trinnet.
+Kjør `python3 dashboard/test_voice_pronunciation.py` for kontroll av ordtider, setningspauser og referanse.
+
+Stemmeprofilen og godkjent lydreferanse tilhører det private repoet `andreas-stemme`. De skal ikke publiseres med nettsiden.
+Sett `ANDREAS_VOICE_PROFILE` til den private `norsk.json` ved bygging på en annen maskin. Referanselyden skal ligge ved siden av profilen.
+Den lokale `video_voice.json` er en privat arbeidskopi. Nettsiderepoet inneholder kode, men trenger ikke denne filen i Git.
