@@ -302,3 +302,30 @@ Kjør `python3 dashboard/test_voice_pronunciation.py` for kontroll av ordtider, 
 Stemmeprofilen og godkjent lydreferanse tilhører det private repoet `andreas-stemme`. De skal ikke publiseres med nettsiden.
 Sett `ANDREAS_VOICE_PROFILE` til den private `norsk.json` ved bygging på en annen maskin. Referanselyden skal ligge ved siden av profilen.
 Den lokale `video_voice.json` er en privat arbeidskopi. Nettsiderepoet inneholder kode, men trenger ikke denne filen i Git.
+
+## Overlevering til Claude Code: Studio-filmer, 18. oktober 2026
+
+Andreas har bedt om overlevering til Claude Code-chatten Kiindeksen. Ferdige filer står i `video_delivery.json`, med varighet, sjekksummer og kontrollrapporter.
+Alle fire klonefilmer bruker den godkjente uttalen fra 18. oktober. De har norsk lyd, bokmålstekst og blåfargen #002B7E.
+
+| Film | Fil i prosjektroten | Varighet |
+|---|---|---|
+| Arbeidsoppgaver og KI-eksponering | `kiindeksen-metodefilm-andreas.mp4` | 4:23 |
+| Hovedfunn og kanarifuglen | `kiindeksen-resultatfilm-andreas.mp4` | 4:22 |
+| Imas og Schaal | `kiindeksen-imas-film-andreas.mp4` | 2:33 |
+| Anthropics framtidsscenarioer | `kiindeksen-anthropic-film-andreas.mp4` | 2:35 |
+
+Nettsidens nåværende `site/public/data/videos.json` beskriver bare resultater og eksponering, med status utkast. Claude eier videre integrasjon i Studio.
+Bruk eksisterende `site/public/video/` og rutinen i `site/README.md`. Ikke lag en ny prosjektmappe. Kontroller kopiene mot sjekksummene.
+Filmgeneratoren ligger i PR #2. Stemmeprofil og lydreferanse ligger i det private `andreas-stemme`, og skal ikke bygges inn i nettsiden.
+
+### Innhold og publisering
+
+Resultatfilmens synlige datomerking er juli 2026. Ikke omtal dette som oktoberdata uten kontroll mot resultatkilden.
+Egeninnlesningen `kiindeksen-resultatfilm-egen-ny.mp4` er uendret og finnes fortsatt ved siden av klonen i gjennomsynssiden.
+Før publisering av egeninnlesningen må omtalen av elektrikere hos Mouchel og Codex-datoen avklares. Se proveniensfilens tidsstempler.
+Klonen er standard for framtidige norske oppdateringer. Engelske versjoner skal bruke Andreas sin Fish Audio-klone.
+Ingen nye engelske filmer følger denne leveransen. Ingen publisering er gjort i denne overleveringen.
+Behold eksisterende tekster uten tidligere fjernet omtale av KI-generering og finansiering.
+
+Videre arbeid: kontroller filmvalg og datomerking, klargjør avspillere og plakater, og test på mobil og desktop. Publisering følger avklaringene i nettstedets egen chat.
