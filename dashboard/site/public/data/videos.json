@@ -1,55 +1,127 @@
 {
- "_om": "Filmene paa nettstedet. Tegnes av landing.js (forsiden) og studio.js (Studio) etter feltet placement. Bare oppfoeringer med status 'publisert' vises; 'utkast' vises bare med ?forhandsvis=1 i adressen, til gjennomsyn. Per spraak: title, text, src (/video/...), poster, voice (hvem som leser). Mangler en engelsk src, vises den norske filmen paa den engelske siden med fallback_note. Filene ligger i public/video/ (mp4 er ikke i git, bare i Dropbox og paa Fly); resultatfilmen baerer release-maaneden i navnet. Leveransen 18. oktober 2026 er dokumentert i dashboard/video_delivery.json (SHA256, varighet, kontroller). Rutine: dashboard/site/README.md, avsnittet 'Landingsside og filmer'.",
- "updated": "2026-10-18",
- "videos": [
-  {"id": "resultater", "status": "utkast", "order": 1, "placement": ["landing", "studio"],
-   "duration": "4:22", "data_label": "juli 2026", "delivery": "kiindeksen-resultatfilm-andreas.mp4 (2026-10-18)",
-   "no": {"title": "Norske resultater etter agentisk KI",
-          "text": "Hovedfunnene fra siste release, med data til og med juli 2026, og kanarifuglen i arbeidsmarkedet. Fortalt med Andreas R. Kostøls stemmeklon.",
-          "src": "/video/kiindeksen-resultater-2026-10.mp4", "poster": "/video/kiindeksen-resultater-2026-10-poster.jpg",
-          "voice": "stemmeklonen (ElevenLabs, godkjent uttale 18. oktober 2026)"},
-   "en": {"title": "Norwegian results after agentic AI",
-          "text": "The main findings from the latest release, with data through July 2026, and the labour market canary. Narrated with Andreas R. Kostøl's voice clone.",
-          "src": "", "poster": "", "voice": "Fish Audio clone (not produced yet)",
-          "fallback_note": "Norwegian narration; an English version follows."}},
-  {"id": "resultater-egen", "status": "utkast", "order": 1, "placement": [],
-   "duration": "4:40", "data_label": "juli 2026", "delivery": "kiindeksen-resultatfilm-egen-ny.mp4 (2026-10-18), egen innlesning 16. oktober",
-   "review": "Ikke publiser foer to steder er avklart (kiindeksen-resultatfilm-egen-ny-provenance.json): ved 1:24-1:31 sier opptaket at elektrikere er i nederste grupper hos Mouchel, figuren viser gruppe 2; ved 2:39-2:44 sies det at Codex kom i februar 2025. Settes inn i placement og status publisert naar Andreas har avklart, eller lest inn paa nytt.",
-   "no": {"title": "Norske resultater etter agentisk KI (egen innlesning)",
-          "text": "Samme film, lest inn av Andreas R. Kostøl 16. oktober 2026.",
-          "src": "/video/kiindeksen-resultater-2026-10-egen.mp4", "poster": "/video/kiindeksen-resultater-2026-10-egen-poster.jpg",
-          "voice": "egen innlesning"},
-   "en": {"title": "Norwegian results after agentic AI (own recording)", "text": "The same film, read by Andreas R. Kostøl on 16 October 2026.",
-          "src": "", "poster": "", "voice": "", "fallback_note": "Norwegian narration; an English version follows."}},
-  {"id": "eksponering", "status": "utkast", "order": 2, "placement": ["landing", "studio"],
-   "duration": "4:23", "data_label": null, "delivery": "kiindeksen-metodefilm-andreas.mp4 (2026-10-18)",
-   "no": {"title": "Fra arbeidsoppgaver til KI-eksponering",
-          "text": "Hvordan arbeidsoppgaver blir til en skår for KI-eksponering hos Eloundou og Mouchel, og hvordan skåren kobles til norske yrker.",
-          "src": "/video/kiindeksen-eksponering.mp4", "poster": "/video/kiindeksen-eksponering-poster.jpg",
-          "voice": "stemmeklonen (ElevenLabs, godkjent uttale 18. oktober 2026)"},
-   "en": {"title": "From job tasks to AI exposure",
-          "text": "How work tasks become an AI exposure score in Eloundou and Mouchel, and how the score is linked to Norwegian occupations.",
-          "src": "", "poster": "", "voice": "Fish Audio clone (not produced yet)",
-          "fallback_note": "Norwegian narration; an English version follows."}},
-  {"id": "imas-schaal", "status": "utkast", "order": 3, "placement": ["studio"],
-   "duration": "2:33", "data_label": "oktober 2026", "delivery": "kiindeksen-imas-film-andreas.mp4 (2026-10-18)",
-   "no": {"title": "Imas og Schaal: Har KI endret arbeidsmarkedet?",
-          "text": "En gjennomgang av forskningsoversikten til Imas og Schaal (2026). Resultatene gjelder USA og skilles fra de norske tallene.",
-          "src": "/video/kiindeksen-studio-imas-schaal.mp4", "poster": "/video/kiindeksen-studio-imas-schaal-poster.jpg",
-          "voice": "stemmeklonen (ElevenLabs, godkjent uttale 18. oktober 2026)"},
-   "en": {"title": "Imas and Schaal: Has AI impacted the labor market yet?",
-          "text": "A walk through the research review by Imas and Schaal (2026). The results concern the US and are kept apart from the Norwegian numbers.",
-          "src": "", "poster": "", "voice": "Fish Audio clone (not produced yet)",
-          "fallback_note": "Norwegian narration; an English version follows."}},
-  {"id": "anthropic-scenarioer", "status": "utkast", "order": 4, "placement": ["studio"],
-   "duration": "2:35", "data_label": "oktober 2026", "delivery": "kiindeksen-anthropic-film-andreas.mp4 (2026-10-18)",
-   "no": {"title": "Anthropics økonomiske framtidsscenarioer",
-          "text": "Anthropics modell for økonomiske scenarioer med transformativ KI. Scenarioene er ikke norske prognoser, og skilles fra observasjonene.",
-          "src": "/video/kiindeksen-studio-anthropic-scenarioer.mp4", "poster": "/video/kiindeksen-studio-anthropic-scenarioer-poster.jpg",
-          "voice": "stemmeklonen (ElevenLabs, godkjent uttale 18. oktober 2026)"},
-   "en": {"title": "Anthropic's economic scenarios for the future",
-          "text": "Anthropic's model of economic scenarios with transformative AI. The scenarios are not Norwegian forecasts and are kept apart from the observations.",
-          "src": "", "poster": "", "voice": "Fish Audio clone (not produced yet)",
-          "fallback_note": "Norwegian narration; an English version follows."}}
- ]
+  "_om": "Tidligere filmer er trukket tilbake av Andreas 19. oktober 2026. Videoarbeidet ligger i ../KI-indeksen Studio. Ingen av de tidligere filmene skal vises eller publiseres.",
+  "updated": "2026-10-19",
+  "videos": [
+    {
+      "id": "resultater",
+      "status": "trukket_tilbake",
+      "order": 1,
+      "placement": [],
+      "duration": "4:22",
+      "data_label": "juli 2026",
+      "delivery": "kiindeksen-resultatfilm-andreas.mp4 (2026-10-18)",
+      "no": {
+        "title": "Norske resultater etter agentisk KI",
+        "text": "Hovedfunnene fra siste release, med data til og med juli 2026, og kanarifuglen i arbeidsmarkedet. Fortalt med Andreas R. Kostøls stemmeklon.",
+        "src": "/video/kiindeksen-resultater-2026-10.mp4",
+        "poster": "/video/kiindeksen-resultater-2026-10-poster.jpg",
+        "voice": "stemmeklonen (ElevenLabs, godkjent uttale 18. oktober 2026)"
+      },
+      "en": {
+        "title": "Norwegian results after agentic AI",
+        "text": "The main findings from the latest release, with data through July 2026, and the labour market canary. Narrated with Andreas R. Kostøl's voice clone.",
+        "src": "",
+        "poster": "",
+        "voice": "Fish Audio clone (not produced yet)",
+        "fallback_note": "Norwegian narration; an English version follows."
+      }
+    },
+    {
+      "id": "resultater-egen",
+      "status": "trukket_tilbake",
+      "order": 1,
+      "placement": [],
+      "duration": "4:40",
+      "data_label": "juli 2026",
+      "delivery": "kiindeksen-resultatfilm-egen-ny.mp4 (2026-10-18), egen innlesning 16. oktober",
+      "review": "Ikke publiser foer to steder er avklart (kiindeksen-resultatfilm-egen-ny-provenance.json): ved 1:24-1:31 sier opptaket at elektrikere er i nederste grupper hos Mouchel, figuren viser gruppe 2; ved 2:39-2:44 sies det at Codex kom i februar 2025. Settes inn i placement og status publisert naar Andreas har avklart, eller lest inn paa nytt.",
+      "no": {
+        "title": "Norske resultater etter agentisk KI (egen innlesning)",
+        "text": "Samme film, lest inn av Andreas R. Kostøl 16. oktober 2026.",
+        "src": "/video/kiindeksen-resultater-2026-10-egen.mp4",
+        "poster": "/video/kiindeksen-resultater-2026-10-egen-poster.jpg",
+        "voice": "egen innlesning"
+      },
+      "en": {
+        "title": "Norwegian results after agentic AI (own recording)",
+        "text": "The same film, read by Andreas R. Kostøl on 16 October 2026.",
+        "src": "",
+        "poster": "",
+        "voice": "",
+        "fallback_note": "Norwegian narration; an English version follows."
+      }
+    },
+    {
+      "id": "eksponering",
+      "status": "trukket_tilbake",
+      "order": 2,
+      "placement": [],
+      "duration": "4:23",
+      "data_label": null,
+      "delivery": "kiindeksen-metodefilm-andreas.mp4 (2026-10-18)",
+      "no": {
+        "title": "Fra arbeidsoppgaver til KI-eksponering",
+        "text": "Hvordan arbeidsoppgaver blir til en skår for KI-eksponering hos Eloundou og Mouchel, og hvordan skåren kobles til norske yrker.",
+        "src": "/video/kiindeksen-eksponering.mp4",
+        "poster": "/video/kiindeksen-eksponering-poster.jpg",
+        "voice": "stemmeklonen (ElevenLabs, godkjent uttale 18. oktober 2026)"
+      },
+      "en": {
+        "title": "From job tasks to AI exposure",
+        "text": "How work tasks become an AI exposure score in Eloundou and Mouchel, and how the score is linked to Norwegian occupations.",
+        "src": "",
+        "poster": "",
+        "voice": "Fish Audio clone (not produced yet)",
+        "fallback_note": "Norwegian narration; an English version follows."
+      }
+    },
+    {
+      "id": "imas-schaal",
+      "status": "trukket_tilbake",
+      "order": 3,
+      "placement": [],
+      "duration": "2:33",
+      "data_label": "oktober 2026",
+      "delivery": "kiindeksen-imas-film-andreas.mp4 (2026-10-18)",
+      "no": {
+        "title": "Imas og Schaal: Har KI endret arbeidsmarkedet?",
+        "text": "En gjennomgang av forskningsoversikten til Imas og Schaal (2026). Resultatene gjelder USA og skilles fra de norske tallene.",
+        "src": "/video/kiindeksen-studio-imas-schaal.mp4",
+        "poster": "/video/kiindeksen-studio-imas-schaal-poster.jpg",
+        "voice": "stemmeklonen (ElevenLabs, godkjent uttale 18. oktober 2026)"
+      },
+      "en": {
+        "title": "Imas and Schaal: Has AI impacted the labor market yet?",
+        "text": "A walk through the research review by Imas and Schaal (2026). The results concern the US and are kept apart from the Norwegian numbers.",
+        "src": "",
+        "poster": "",
+        "voice": "Fish Audio clone (not produced yet)",
+        "fallback_note": "Norwegian narration; an English version follows."
+      }
+    },
+    {
+      "id": "anthropic-scenarioer",
+      "status": "trukket_tilbake",
+      "order": 4,
+      "placement": [],
+      "duration": "2:35",
+      "data_label": "oktober 2026",
+      "delivery": "kiindeksen-anthropic-film-andreas.mp4 (2026-10-18)",
+      "no": {
+        "title": "Anthropics økonomiske framtidsscenarioer",
+        "text": "Anthropics modell for økonomiske scenarioer med transformativ KI. Scenarioene er ikke norske prognoser, og skilles fra observasjonene.",
+        "src": "/video/kiindeksen-studio-anthropic-scenarioer.mp4",
+        "poster": "/video/kiindeksen-studio-anthropic-scenarioer-poster.jpg",
+        "voice": "stemmeklonen (ElevenLabs, godkjent uttale 18. oktober 2026)"
+      },
+      "en": {
+        "title": "Anthropic's economic scenarios for the future",
+        "text": "Anthropic's model of economic scenarios with transformative AI. The scenarios are not Norwegian forecasts and are kept apart from the observations.",
+        "src": "",
+        "poster": "",
+        "voice": "Fish Audio clone (not produced yet)",
+        "fallback_note": "Norwegian narration; an English version follows."
+      }
+    }
+  ]
 }
