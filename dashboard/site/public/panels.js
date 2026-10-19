@@ -12,7 +12,7 @@
   var EN = (document.documentElement.lang || "nb")
              .toLowerCase().indexOf("en") === 0;
   var PANEL = document.body.getAttribute("data-panel");
-  var V = "20261019c";
+  var V = "20261019d";
 
   // ---------- Farger og etiketter ----------
 

@@ -29,7 +29,7 @@
     "All ages": "All ages"
   };
   // Bruksgruppene (figur 10-12) er delt etter ANDELEN automatiserende
-  // eller augmenterende samtaler, ikke etter hvor mye yrket bruker Claude.
+  // eller forsterkende samtaler, ikke etter hvor mye yrket bruker Claude.
   // Kolonnenavnene i dataene ("least usage") er misvisende og vises derfor
   // med egne etiketter paa begge spraak (2026-10-15, Oeysteins notat).
   var EN_LABELS = {
@@ -912,7 +912,7 @@
         points: rA, text: rowText(rA, "automatiserende", "automating") },
       { label: EN ? "Augmentation,<br>by usage group"
                   : "Augmentering,<br>etter bruksgruppe",
-        points: rB, text: rowText(rB, "augmenterende", "augmenting") }
+        points: rB, text: rowText(rB, "forsterkende", "augmenting") }
     ];
 
     var m1 = fmtMonth(dates[dates.length - 3]);
@@ -1102,9 +1102,9 @@
         "most automating (AI performs the task), the figure is " +
         fmtPct(autM) + ", versus " + fmtPct(autL) + " where it is least " +
         "automating."
-      : "der KI-bruken er mest augmenterende (KI hjelper arbeidstakeren) " +
+      : "der KI-bruken er mest forsterkende (KI hjelper arbeidstakeren) " +
         "har sysselsettingen " + growthVerb(augM) + " " + vs + ", mot " +
-        fmtPct(augL) + " der den er minst augmenterende. Der bruken er " +
+        fmtPct(augL) + " der den er minst forsterkende. Der bruken er " +
         "mest automatiserende (KI utfører oppgaven) er tallet " +
         fmtPct(autM) + ", mot " + fmtPct(autL) + " der den er minst " +
         "automatiserende."));
