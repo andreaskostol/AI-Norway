@@ -772,20 +772,18 @@ code {
   justify-content: flex-end;
   gap: 0 1.5rem;
 }
+/* Sidelenkene staar under taglinjen og i samme skrift og farge som den (2026-10-19). */
 .panel-nav a {
   display: block;
-  padding: 0.3rem 0 0.2rem;
+  padding: 0.15rem 0 0.1rem;
   font-size: 0.95rem;
-  color: var(--ink-soft);
+  font-weight: 600;
+  color: #002b7e;
   text-decoration: none;
   border-bottom: 2px solid transparent;
 }
-.panel-nav a:hover { color: var(--accent); }
-.panel-nav a.active {
-  color: var(--ink);
-  font-weight: 600;
-  border-bottom-color: var(--accent);
-}
+.panel-nav a:hover { text-decoration: underline; }
+.panel-nav a.active { border-bottom-color: #002b7e; }
 @media (max-width: 979px) {
   /* Under logoen paa smale skjermer: sidelenkene foerst, saa seksjonslenkene. */
   .site-header .brand { order: 2; width: 100%; }
