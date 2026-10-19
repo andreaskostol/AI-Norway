@@ -776,7 +776,7 @@ code {
 .panel-nav a {
   display: block;
   padding: 0.15rem 0 0.1rem;
-  font-size: 0.95rem;
+  font-size: 1.14rem;        /* 20 % stoerre enn taglinjen (Andreas 2026-10-19) */
   font-weight: 600;
   color: #002b7e;
   text-decoration: none;
