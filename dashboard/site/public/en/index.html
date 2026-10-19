@@ -16,7 +16,7 @@
 <meta property="og:title" content="The AI Labor Market Index — AI and the Norwegian labor market">
 <meta property="og:description" content="The AI Labor Market Index tracks employment in the most and the least AI-exposed occupations in Norway, month by month, since ChatGPT and since agentic AI.">
 <meta property="og:image" content="https://kiindeksen.no/assets/ki-logo.png">
-<link rel="stylesheet" href="/style.css?v=20261019b">
+<link rel="stylesheet" href="/style.css?v=20261019c">
 <link rel="icon" href="/assets/koja-mark.svg" type="image/svg+xml">
 <script>
 /* Old deep links to the front page (kiindeksen.no/en/#data etc.) go to the index page. */
@@ -53,6 +53,35 @@
 </header>
 
 <main class="container landing-main">
+
+  <section class="landing-intro">
+    <h2>How is working life affected by AI?</h2>
+    <p class="lede">
+      Some jobs can be strengthened or replaced by AI, while others are
+      much harder to replace. The index follows the difference between
+      them, month by month.
+    </p>
+    <details class="more">
+      <summary>What we mean by AI exposure, and how occupations are split into five groups</summary>
+      <p>Every occupation is a set of tasks. Eloundou et al. (2024) rated,
+        task by task, whether a language model can halve the time a task
+        takes. The share of such tasks is the occupation's AI exposure, a
+        score from 0 to 1. The score says what AI <em>can</em> do in the
+        job, not whether the job disappears. Many of the tasks can be
+        strengthened rather than replaced.</p>
+      <p>Highly exposed are occupations where much of the work is text,
+        numbers and code: software developers score 0.87, credit and loans
+        officers 0.61, general office clerks 0.60 and accountants 0.57. Low
+        exposure is found where the work is done by hand and on site:
+        electricians 0.13, health care assistants 0.11, plumbers 0.06 and
+        cleaners 0.03.</p>
+      <p>We rank 397 occupations by the score and split them into five
+        equal groups: least exposed, low, medium, high and most exposed.
+        The index compares employment in the most exposed fifth with the
+        least exposed. Look up your own occupation under
+        <a href="/en/occupations.html">Occupations</a>.</p>
+    </details>
+  </section>
 
   <section class="landing-figures">
     <p class="chart-intro">
@@ -124,6 +153,6 @@
 </footer>
 
 <script src="/vendor/echarts.min.js"></script>
-<script src="/landing.js?v=20261019b"></script>
+<script src="/landing.js?v=20261019c"></script>
 </body>
 </html>

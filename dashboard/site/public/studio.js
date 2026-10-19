@@ -3,7 +3,7 @@
    Ingen avhengigheter. Lista vedlikeholdes for haand i JSON-fila. */
 (function () {
   "use strict";
-  var V = "20261019b";                       // samme noekkel som ?v= i HTML
+  var V = "20261019c";                       // samme noekkel som ?v= i HTML
   var LANG = document.documentElement.lang === "en" ? "en" : "nb";
   var T = {
     nb: {

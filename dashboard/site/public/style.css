@@ -1085,6 +1085,11 @@ code {
 
 /* Landingssiden (okt. 2026) */
 .landing-main { padding-bottom: 2rem; }
+.landing-intro { margin-top: 1.8rem; }
+.landing-intro h2 { font-size: 1.6rem; line-height: 1.25; margin: 0 0 0.6rem; max-width: 46rem; }
+.landing-intro .lede { margin-bottom: 0.5rem; }
+.landing-intro details { max-width: 56rem; }
+.landing-intro details p { max-width: 56rem; }
 .landing-hero { padding-bottom: 0.6rem; }
 .landing-hero .hero-title { font-size: 1.9rem; max-width: 52rem; }
 .cta-row { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.2rem; margin: 0.2rem 0 1.2rem; }
